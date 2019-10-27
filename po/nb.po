@@ -1,0 +1,1618 @@
+# Norwegian Bokmal translation for unav
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the unav package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unav\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2018-10-15 18:38+0200\n"
+"PO-Revision-Date: 2018-06-11 20:51+0000\n"
+"Last-Translator: Sten Jørgen Pettersen <sten.retrogamer@gmail.com>\n"
+"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
+"X-Generator: Launchpad (build 18847)\n"
+
+#: nav/class/Navigator.js:131
+msgid "Turn left"
+msgstr "Sving til venstre"
+
+#: nav/class/Navigator.js:133
+msgid "Turn right"
+msgstr "Sving til høyre"
+
+#: nav/class/Navigator.js:135
+msgid "Make a sharp left"
+msgstr "Sving skarpt til venstre"
+
+#: nav/class/Navigator.js:137
+msgid "Make a sharp right"
+msgstr "Sving skarpt til høyre"
+
+#: nav/class/Navigator.js:139
+msgid "Bear left"
+msgstr "Hold til venstre"
+
+#: nav/class/Navigator.js:141
+msgid "Bear right"
+msgstr "Hold til høyre"
+
+#: nav/class/Navigator.js:143
+msgid "Continue on the road"
+msgstr "Fortsett på veien"
+
+#: nav/class/Navigator.js:145
+msgid "Enter the roundabout and take the designated exit"
+msgstr "Kjør inn i rundkjøringa og ta anvist avkjøring"
+
+#: nav/class/Navigator.js:147
+msgid "Enter the roundabout and take the first exit"
+msgstr "Kjør inn i rundkjøringa og ta første avkjøring"
+
+#: nav/class/Navigator.js:149
+msgid "Enter the roundabout and take the second exit"
+msgstr "Kjør inn i rundkjøringa og ta andre avkjøring"
+
+#: nav/class/Navigator.js:151
+msgid "Enter the roundabout and take the third exit"
+msgstr "Kjør inn i rundkjøringa og ta tredje avkjøring"
+
+#: nav/class/Navigator.js:153
+msgid "Enter the roundabout and take the fourth exit"
+msgstr "Kjør inn i rundkjøringa og ta fjerde avkjøring"
+
+#: nav/class/Navigator.js:155
+msgid "Enter the roundabout and take the fifth exit"
+msgstr "Kjør inn i rundkjøringa og ta femte avkjøring"
+
+#: nav/class/Navigator.js:157
+msgid "Enter the roundabout and take the sixth exit"
+msgstr "Kjør inn i rundkjøringa og ta sjette avkjøring"
+
+#: nav/class/Navigator.js:159
+msgid "Enter the roundabout and take the seventh exit"
+msgstr "Kjør inn i rundkjøringa og ta sjuende avkjøring"
+
+#: nav/class/Navigator.js:161
+msgid "Enter the roundabout and take the eighth exit"
+msgstr "Kjør inn i rundkjøringa og ta åttende avkjøring"
+
+#: nav/class/Navigator.js:163
+msgid "Enter the roundabout and take the ninth exit"
+msgstr "Kjør inn i rundkjøringa og ta niende avkjøring"
+
+#: nav/class/Navigator.js:165
+msgid "Make a U-turn"
+msgstr ""
+
+#: nav/class/Navigator.js:167 nav/class/UI.js:619
+msgid "You have arrived at your destination"
+msgstr "Du er fremme"
+
+#: nav/class/Navigator.js:171
+msgid "Keep left"
+msgstr ""
+
+#: nav/class/Navigator.js:173
+msgid "Keep right"
+msgstr ""
+
+#: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
+msgid "Current Position"
+msgstr "Gjeldende posisjon"
+
+#: nav/class/UI.js:47
+msgid "Current Start"
+msgstr "Gjeldende start"
+
+#: nav/class/UI.js:56
+msgid "Current End"
+msgstr "Gjeldende slutt"
+
+#: nav/class/UI.js:559
+msgid "Waiting for a GPS signal…"
+msgstr "Venter på GPS-signal …"
+
+#: nav/class/UI.js:566
+msgid "Searching for a route…"
+msgstr "Finner rute …"
+
+#: nav/class/UI.js:570
+msgid "Drawing route…"
+msgstr "Tegner rute …"
+
+#: nav/class/UI.js:574
+msgid "Trying search again soon…"
+msgstr "Prøver å søke på nytt snart …"
+
+#: nav/class/UI.js:578
+msgid "Recalculating route…"
+msgstr "Finner ny rute …"
+
+#: nav/class/UI.js:626
+msgid "Simulating route…"
+msgstr "Simulerer rute …"
+
+#: nav/index.html.strings:1
+msgid "Start"
+msgstr "Start"
+
+#: nav/index.html.strings:2 qml/Favorites.qml:248 qml/SettingsPage.qml:418
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: nav/index.html.strings:3
+msgid "Not found"
+msgstr "Finnes ikke"
+
+#: nav/index.html.strings:4
+msgid "Route so long"
+msgstr "Ruta er så lang"
+
+#: nav/index.html.strings:5
+msgid "More than 1000km could affect the performance"
+msgstr "Over 1000km kan påvirke ytelsen"
+
+#: nav/index.html.strings:6
+msgid "We recommend you a waypoint in the middle as destination"
+msgstr "Vi anbefaler å velge et mål midtveis"
+
+#: nav/index.html.strings:11 qml/Coordinate.qml:152 qml/Coordinate.qml:386
+#: qml/DownloadVoices.qml:250 qml/Favorites.qml:305 qml/Main.qml:1028
+msgid "Close"
+msgstr "Lukk"
+
+#: nav/index.html.strings:8
+msgid "GPS Denied"
+msgstr "GPS avvist"
+
+#: nav/index.html.strings:9
+msgid "Error reading the GPS status"
+msgstr "Feil under lesing av GPS-status"
+
+#: nav/index.html.strings:10
+msgid "Please review your device settings"
+msgstr "Kontroller enhetsinnstillingene"
+
+#: qml/AboutPage.qml:27 qml/SettingsPage.qml:44
+msgid "About"
+msgstr "Om"
+
+#: qml/AboutPage.qml:38 qml/AboutPage.qml:39 qml/AboutPage.qml:40
+#: qml/AboutPage.qml:41
+msgid "Resources"
+msgstr "Ressurser"
+
+#: qml/AboutPage.qml:38
+msgid "Translations"
+msgstr "Oversettelser"
+
+#: qml/AboutPage.qml:39
+msgid "Answers"
+msgstr "Svar"
+
+#: qml/AboutPage.qml:40
+msgid "Bugs"
+msgstr "Programfeil"
+
+#: qml/AboutPage.qml:41
+msgid "Contact"
+msgstr "Kontakt"
+
+#: qml/AboutPage.qml:44 qml/AboutPage.qml:45 qml/AboutPage.qml:46
+#: qml/AboutPage.qml:47 qml/AboutPage.qml:48
+msgid "Developers"
+msgstr "Utviklere"
+
+#: qml/AboutPage.qml:46
+msgid "Founder"
+msgstr "Grunnlegger"
+
+#: qml/AboutPage.qml:51
+msgid "Voice"
+msgstr "Tale"
+
+#: qml/AboutPage.qml:54
+msgid "Logo"
+msgstr "Logo"
+
+#: qml/AboutPage.qml:56 qml/AboutPage.qml:57 qml/AboutPage.qml:58
+msgid "Icons for empty states"
+msgstr "Ikoner for tomme felt"
+
+#: qml/AboutPage.qml:61
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Allan Nordhøy https://launchpad.net/~comradekingu\n"
+"  Harald H. https://launchpad.net/~haarektrans\n"
+"  Sten Jørgen Pettersen https://launchpad.net/~sten-retrogamer\n"
+"  Åka Sikrom https://launchpad.net/~akrosikam"
+
+#: qml/AboutPage.qml:63
+msgid "Translators"
+msgstr "Oversettere"
+
+#: qml/AboutPage.qml:67 qml/AboutPage.qml:68 qml/AboutPage.qml:69
+#: qml/AboutPage.qml:70 qml/AboutPage.qml:71 qml/AboutPage.qml:72
+#: qml/AboutPage.qml:73 qml/AboutPage.qml:74 qml/AboutPage.qml:75
+#: qml/AboutPage.qml:76 qml/AboutPage.qml:77 qml/AboutPage.qml:78
+#: qml/AboutPage.qml:79 qml/AboutPage.qml:80 qml/AboutPage.qml:81
+#: qml/AboutPage.qml:82
+msgid "Powered by"
+msgstr "Drevet av"
+
+#. TRANSLATORS: %1 and %2 are links that do not have to be translated: Year + Project + License
+#: qml/AboutPage.qml:124
+#, qt-format
+msgid "Version %1. Under license %2"
+msgstr "Versjon %1. Utgitt med lisens %2"
+
+#: qml/Coordinate.qml:35
+msgid "Decimal"
+msgstr "Desimal"
+
+#: qml/Coordinate.qml:48
+msgid "Sexagesimal"
+msgstr "Sexagesimal"
+
+#: qml/Coordinate.qml:77 qml/Coordinate.qml:171
+msgid "Lat:"
+msgstr "Br.gr.:"
+
+#: qml/Coordinate.qml:94 qml/Coordinate.qml:242
+msgid "Long:"
+msgstr "Le.gr.:"
+
+#: qml/Coordinate.qml:109 qml/Coordinate.qml:312
+msgid "Show on Map"
+msgstr "Vis på kart"
+
+#: qml/Coordinate.qml:149 qml/Coordinate.qml:383
+msgid "Coordinates are not valid"
+msgstr "Ugyldige koordinater"
+
+#: qml/Coordinate.qml:150
+msgid ""
+"Enter valid decimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Skriv inn gyldige desimal-koordinater\n"
+"\n"
+"Forventet format:"
+
+#: qml/Coordinate.qml:384
+msgid ""
+"Enter valid sexagesimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Skriv inn gyldige sexagesimal-koordinater\n"
+"\n"
+"Forventet format:"
+
+#: qml/DownloadVoices.qml:53
+msgid "Download voices"
+msgstr "Last ned stemmer"
+
+#: qml/DownloadVoices.qml:61
+msgid "Play current voice"
+msgstr "Spill av valgt stemme"
+
+#: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
+msgid "How to add a voice"
+msgstr "Hvordan legge til stemme"
+
+#: qml/DownloadVoices.qml:161
+msgid "By "
+msgstr "Ved "
+
+#: qml/DownloadVoices.qml:208
+msgid "Cancel Download"
+msgstr "Avbryt nedlasting"
+
+#: qml/DownloadVoices.qml:224
+msgid "About the voices"
+msgstr "Om stemmer"
+
+#: qml/DownloadVoices.qml:230
+msgid "The stars are for the recommended voices."
+msgstr "Anbefalte stemmer er markert med stjerne."
+
+#: qml/DownloadVoices.qml:238
+msgid "You can add a new voice to uNav following these steps:"
+msgstr "Du kan legge til en stemme til uNav med å følge disse stegene:"
+
+#: qml/Favorites.qml:74
+msgid "No favorites yet"
+msgstr "Ingen favoritter enda"
+
+#: qml/Favorites.qml:197 qml/SearchPage.qml:83
+msgid "Add Favorite"
+msgstr "Legg til favoritt"
+
+#: qml/Favorites.qml:197
+msgid "Edit Favorite"
+msgstr "Rediger favoritt"
+
+#: qml/Favorites.qml:198
+msgid ""
+"There is already a favorite with that name. You can either overwrite it or "
+"enter a different name."
+msgstr ""
+"Det finnes allerede en favoritt med dette navnet.  Du kan enten overskrive "
+"den, eller skrive inn et annet navn."
+
+#: qml/Favorites.qml:232
+msgid "Insert a favorite name"
+msgstr "Sett inn et favorittnavn"
+
+#: qml/Favorites.qml:255
+msgid "Overwrite"
+msgstr "Overskriv"
+
+#: qml/Favorites.qml:255
+msgid "Add"
+msgstr "Legg til"
+
+#: qml/Favorites.qml:255
+msgid "Update"
+msgstr "Oppdater"
+
+#: qml/Favorites.qml:277
+msgid "Favorite Coordinates"
+msgstr "Favorittkoordinater"
+
+#: qml/Favorites.qml:288
+msgid "Name: "
+msgstr "Navn: "
+
+#: qml/Favorites.qml:295
+msgid "Latitude: "
+msgstr "Breddegrad: "
+
+#: qml/Favorites.qml:302
+msgid "Longitude: "
+msgstr "Lengdegrad: "
+
+#: qml/Location.qml:45 qml/PoiListPage.qml:146
+msgid "Time out! Please try again"
+msgstr "Tidsavbrudd. Prøv igjen"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius.
+#: qml/Location.qml:53
+msgid "Sorry, nothing found. Try another search"
+msgstr "Ingen treff. Prøv å søke etter noe annet"
+
+#: qml/Location.qml:141 qml/Location.qml:352 qml/Location.qml:414
+msgid "Search history"
+msgstr "Søkehistorikk"
+
+#: qml/Location.qml:151 qml/Location.qml:358 qml/Location.qml:416
+msgid "Favorite history"
+msgstr "Favoritt-historikk"
+
+#: qml/Location.qml:161 qml/Location.qml:355 qml/Location.qml:371
+#: qml/Location.qml:382 qml/Location.qml:397 qml/Location.qml:404
+#: qml/Location.qml:436 qml/Location.qml:442
+msgid "Nearby history"
+msgstr "I nærheten-historikk"
+
+#: qml/Location.qml:187
+msgid "No history yet"
+msgstr "Ingen historikk enda"
+
+#: qml/Location.qml:187
+msgid "History is disabled"
+msgstr "Historikk er slått av"
+
+#: qml/Location.qml:200 qml/Location.qml:253 qml/PoiListPage.qml:163
+#: qml/components/POIQuickAccessGridView.qml:181
+msgid "Searching…"
+msgstr "Søker …"
+
+#: qml/Location.qml:249
+msgid "Search location"
+msgstr "Søk her"
+
+#: qml/Main.qml:235 qml/SettingsPage.qml:35
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: qml/Main.qml:246
+msgid "Center on Position"
+msgstr "Sentrer ved posisjon"
+
+#: qml/Main.qml:250 qml/Main.qml:571
+msgid "Searching your position… This could take a while"
+msgstr "Finner posisjon … Dette kan ta litt tid"
+
+#: qml/Main.qml:264 qml/PoiPage.qml:83 qml/SearchPage.qml:69
+msgid "Search"
+msgstr "Søk"
+
+#: qml/Main.qml:275
+msgid "Destination"
+msgstr "Mål"
+
+#: qml/Main.qml:437
+msgid "Error getting speed cameras!"
+msgstr "Feil under henting av fartskameraer."
+
+#: qml/Main.qml:440
+msgid "Error finding route! Retrying again in 1 minute…"
+msgstr ""
+
+#: qml/Main.qml:443
+msgid "Error finding route! Trying again…"
+msgstr "Feil under beregning av rute. Prøver igjen …"
+
+#: qml/Main.qml:488 qml/Main.qml:514
+msgid "Shared Position"
+msgstr "Delt posisjon"
+
+#: qml/Main.qml:762
+msgid "Near to destination"
+msgstr "I nærheten av mål"
+
+#: qml/Main.qml:763
+msgid "Cancel route"
+msgstr "Avbryt rute"
+
+#: qml/Main.qml:809
+#, qt-format
+msgid "Coord: %1, %2"
+msgstr "Koord.: %1, %2"
+
+#: qml/Main.qml:877 qml/PoiDetailsPage.qml:243
+msgid "Simulate from here! Now click on destination"
+msgstr "Simuler herfra. Trykk på mål"
+
+#: qml/Main.qml:894
+msgid "Set a different coordinates for simulating"
+msgstr "Velg andre koordinater for simulering"
+
+#: qml/Main.qml:1016
+msgid "Custom voices"
+msgstr "Tilpassede stemmer"
+
+#: qml/Main.qml:1017
+msgid ""
+"American English voice will be the unique voice installed by default.\n"
+"\n"
+"You can set a custom voice in your language from Settings: Download custom "
+"voices.\n"
+"\n"
+"The list of voices will be updated by the users. Please check them out in "
+"the future.\n"
+msgstr ""
+"Standardstemmen snakker på amerikansk-engelsk.\n"
+"\n"
+"Du kan velge en annnen stemme på ønsket språk i menyen Innstillinger: Last "
+"ned tilpassede stemmer.\n"
+"\n"
+"Lista over stemmer blir oppdatert av brukerne. Sjekk dem ut senere.\n"
+
+#: qml/Main.qml:1019
+msgid "Set a voice now"
+msgstr "Velg stemme nå"
+
+#: qml/PoiDetailsPage.qml:89
+msgid "Lat, Long:"
+msgstr "Bred,. Lengd.:"
+
+#: qml/PoiDetailsPage.qml:95 qml/PoiDetailsPage.qml:110
+msgid "Available"
+msgstr "Tilgjengelig"
+
+#: qml/PoiDetailsPage.qml:97 qml/PoiDetailsPage.qml:112
+msgid "Not Available"
+msgstr "Ikke tilgjengelig"
+
+#: qml/PoiDetailsPage.qml:99
+msgid "Wi-Fi Hotspot Available"
+msgstr "Åpent trådløst nett tilgjengelig"
+
+#: qml/PoiDetailsPage.qml:101
+msgid "Wired Connection Available (ethernet connection)"
+msgstr "Kablet tilkobling tilgjengelig (ethernet)"
+
+#: qml/PoiDetailsPage.qml:103
+msgid "Computer Terminal Available"
+msgstr "Dataterminal tilgjengelig"
+
+#: qml/PoiDetailsPage.qml:115
+msgid "Limited Availability"
+msgstr "Begrenset tilgjengelighet"
+
+#: qml/PoiDetailsPage.qml:174
+msgid "Loading POI details..."
+msgstr "Laster inn POI-detaljert …"
+
+#: qml/PoiListPage.qml:45
+msgid "Show POIs on map"
+msgstr "Vis POI-er på kart"
+
+#: qml/PoiListPage.qml:68
+msgid "Unknown current position"
+msgstr "Ukjent gjeldende posisjon"
+
+#: qml/PoiListPage.qml:84
+msgid "Something went wrong. Please, try again…"
+msgstr "Noe gikk galt. Prøv igjen …"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius. %1 is the POI type eg..Pub, Airport
+#. Example string, "Sorry, no Airport found nearby. Try again with a larger search radius"
+#: qml/PoiListPage.qml:153
+#, qt-format
+msgid "Sorry, no %1 found nearby. Try again with a larger search radius"
+msgstr "Fant ingen %1 i nærheten. Prøv igjen med større søkeradius"
+
+#. TRANSLATORS: Abbreviation for Public Holiday. This string is used while showing the opening hours
+#. of a place which might be closed during public holidays.
+#: qml/PoiListPage.qml:361
+msgid "PH"
+msgstr "PH"
+
+#. TRANSLATORS: This string indicates that a place is closed.
+#: qml/PoiListPage.qml:363
+msgid "Closed"
+msgstr "Stengt"
+
+#: qml/PoiPage.qml:64
+msgid "Back"
+msgstr "Tilbake"
+
+#: qml/PoiPage.qml:118
+msgid "Filter POI categories by name"
+msgstr "Filtrer POI-kategorier etter navn"
+
+#: qml/PoiPage.qml:128
+msgid "Nearby"
+msgstr "I nærheten"
+
+#: qml/PoiPage.qml:147
+msgid "Most recent"
+msgstr "Nylige"
+
+#: qml/PoiQuickAccessPage.qml:63
+msgid "Fast Nearest Editor: "
+msgstr "Rask nærhetsredigering: "
+
+#: qml/PoiQuickAccessPage.qml:201
+msgid "Selection"
+msgstr "Utvalg"
+
+#. TRANSLATORS: argument is a number > 1.
+#: qml/PoiQuickAccessPage.qml:203
+#, qt-format
+msgid "Max. %1 POIs can be selected."
+msgstr "Maks. %1 POI-er kan velges."
+
+#: qml/PoiQuickAccessPage.qml:206 qml/SettingsPage.qml:439
+msgid "OK"
+msgstr "OK"
+
+#: qml/RouteInfoListPage.qml:29
+msgid "Route Info"
+msgstr "Ruteinfo"
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: qml/SearchPage.qml:100
+msgid "Location"
+msgstr "Posisjon"
+
+#: qml/SearchPage.qml:100
+msgid "Favorites"
+msgstr "Favoritter"
+
+#: qml/SearchPage.qml:100
+msgid "Coordinates"
+msgstr "Koordinater"
+
+#: qml/SearchPage.qml:150
+msgid "Add Current Position"
+msgstr "Legg til gjeldende posisjon"
+
+#: qml/SearchPage.qml:160
+msgid "Add Current Destination"
+msgstr "Legg til gjeldende mål"
+
+#: qml/SearchPage.qml:172
+msgid "Add by clicking on Map"
+msgstr "Legg til ved å trykke på kart"
+
+#: qml/SettingsPage.qml:56
+msgid "A voice"
+msgstr "Stemme"
+
+#: qml/SettingsPage.qml:57
+msgid "A notification"
+msgstr "Varsling"
+
+#: qml/SettingsPage.qml:58
+msgid "None"
+msgstr "Ingen"
+
+#: qml/SettingsPage.qml:68
+msgid "Kilometres"
+msgstr "Kilometer"
+
+#: qml/SettingsPage.qml:69
+msgid "Miles"
+msgstr "Engelske mil"
+
+#: qml/SettingsPage.qml:95
+msgid "uNav link"
+msgstr ""
+
+#: qml/SettingsPage.qml:96
+msgid "Google Maps link"
+msgstr ""
+
+#: qml/SettingsPage.qml:97
+msgid "Standard GEO link"
+msgstr ""
+
+#: qml/SettingsPage.qml:107
+msgid "Online"
+msgstr "Tilkoblet"
+
+#: qml/SettingsPage.qml:108
+msgid "Offline"
+msgstr "Frakoblet"
+
+#: qml/SettingsPage.qml:130
+msgid "Navigation"
+msgstr "Navigasjon"
+
+#: qml/SettingsPage.qml:137
+msgid "Guidance"
+msgstr "Veivisning"
+
+#: qml/SettingsPage.qml:169
+msgid "Download custom voices"
+msgstr "Last ned tilpassede stemmer"
+
+#: qml/SettingsPage.qml:176
+msgid "Car Options"
+msgstr ""
+
+#: qml/SettingsPage.qml:183
+msgid "Avoid tolls"
+msgstr ""
+
+#: qml/SettingsPage.qml:200
+msgid "Speed camera alerts"
+msgstr "Varsle om fartskamera"
+
+#: qml/SettingsPage.qml:219
+msgid "Map"
+msgstr "Kart"
+
+#: qml/SettingsPage.qml:226
+msgid "Mode"
+msgstr "Modus"
+
+#: qml/SettingsPage.qml:261
+msgid "How to use offline maps"
+msgstr "Hvordan bruke frakoblet kart"
+
+#: qml/SettingsPage.qml:278
+msgid "Online style"
+msgstr "Nettstil"
+
+#: qml/SettingsPage.qml:312
+msgid "Units"
+msgstr "Enheter"
+
+#: qml/SettingsPage.qml:346
+msgid "Share position as"
+msgstr ""
+
+#: qml/SettingsPage.qml:376
+msgid "History"
+msgstr "Historikk"
+
+#: qml/SettingsPage.qml:383
+msgid "Store new searches"
+msgstr "Lagre nye søk"
+
+#: qml/SettingsPage.qml:395 qml/SettingsPage.qml:405
+msgid "Clear history"
+msgstr "Tøm historikk"
+
+#: qml/SettingsPage.qml:406
+msgid "You'll delete the current history"
+msgstr "Du er i ferd med å slette gjeldende historikk"
+
+#: qml/SettingsPage.qml:409
+msgid "Delete"
+msgstr "Slett"
+
+#: qml/SettingsPage.qml:428
+msgid "Speed Camera alerts and the law"
+msgstr "Fotoboks-varsler og juridisk"
+
+#: qml/SettingsPage.qml:429
+msgid ""
+"uNav is only reading the OpenStreetMap database.\n"
+"uNav will show a max speed notification and a Speed Camera marker (marker "
+"hidden for French users because of law).\n"
+"\n"
+"In a few countries Speed Camera alerts are illegal, then enable this option "
+"only if it's legal in the country."
+msgstr ""
+"uNav leser fra OpenStreetMap-databasen.\n"
+"uNav viser et maksfart-varsel og - bortsett fra i Frankrike - en fartskamera-"
+"markør.\n"
+"\n"
+"Fartskamera-varslere er ulovlig i enkelte land. Ikke slå på dette valget "
+"hvis det gjelder landet du kjører i."
+
+#: qml/SettingsPage.qml:435
+msgid "Read more about it"
+msgstr "Les mer"
+
+#: qml/Share.qml:33
+msgid "Share location to"
+msgstr "Del posisjon med"
+
+#: qml/components/POIQuickAccessGridView.qml:92
+msgid "Error getting results. Please, check your data connection."
+msgstr "Feil under henting av treff. Kontroller datatilkobling."
+
+#: qml/components/POIQuickAccessGridView.qml:97
+msgid "Sorry, no results found nearby."
+msgstr "Søket ga ingen treff i nærheten."
+
+#: qml/components/POIQuickAccessGridView.qml:175
+msgid "Current position unknown. Try again after a position update."
+msgstr "Gjeldende posisjon er ukjent. Prøv igjen etter henting av posisjon."
+
+#: qml/js/PoiCategories.js:4
+msgid "Transport"
+msgstr "Transport"
+
+#: qml/js/PoiCategories.js:6
+msgid "Airport"
+msgstr "Flyplass"
+
+#: qml/js/PoiCategories.js:7
+msgid "Bicycle Parking"
+msgstr "Sykkelparkering"
+
+#: qml/js/PoiCategories.js:8
+msgid "Bicycle Rental"
+msgstr "Sykkelutleie"
+
+#: qml/js/PoiCategories.js:9
+msgid "Bicycle Shop"
+msgstr "Sykkelbutikk"
+
+#: qml/js/PoiCategories.js:10
+msgid "Bus Station"
+msgstr "Busstasjon"
+
+#: qml/js/PoiCategories.js:11
+msgid "Bus Stop"
+msgstr "Bussholdeplass"
+
+#: qml/js/PoiCategories.js:12
+msgid "Car Rental"
+msgstr "Bilutleie"
+
+#: qml/js/PoiCategories.js:13
+msgid "Car Repair"
+msgstr "Bilverksted"
+
+#: qml/js/PoiCategories.js:14
+msgid "Car Wash"
+msgstr "Bilvask"
+
+#: qml/js/PoiCategories.js:15
+msgid "Ferry Terminal"
+msgstr "Fergeleie"
+
+#: qml/js/PoiCategories.js:16
+msgid "Gas Station"
+msgstr "Bensinstasjon"
+
+#: qml/js/PoiCategories.js:17
+msgid "Motorcycle Shop"
+msgstr "Motorsykkelbutikk"
+
+#: qml/js/PoiCategories.js:18
+msgid "Parking"
+msgstr "Parkering"
+
+#: qml/js/PoiCategories.js:19
+msgid "Subway Entrance"
+msgstr "T-baneinngang"
+
+#: qml/js/PoiCategories.js:20
+msgid "Taxi"
+msgstr "Drosje"
+
+#: qml/js/PoiCategories.js:21
+msgid "Train Station"
+msgstr "Jernbanestasjon"
+
+#: qml/js/PoiCategories.js:25
+msgid "Accommodation"
+msgstr "Overnatting"
+
+#: qml/js/PoiCategories.js:27
+msgid "Bed and Breakfasts"
+msgstr "Gjestehus (B&B)"
+
+#: qml/js/PoiCategories.js:28
+msgid "Campsite"
+msgstr "Campingplass"
+
+#: qml/js/PoiCategories.js:29
+msgid "Caravan Site"
+msgstr "Campingvogn-plass"
+
+#: qml/js/PoiCategories.js:30
+msgid "Guest House"
+msgstr "Vertshus"
+
+#: qml/js/PoiCategories.js:31
+msgid "Hostel"
+msgstr "Sovesal"
+
+#: qml/js/PoiCategories.js:32
+msgid "Hotel"
+msgstr "Hotell"
+
+#: qml/js/PoiCategories.js:33
+msgid "Motel"
+msgstr "Motell"
+
+#: qml/js/PoiCategories.js:37
+msgid "Food & Drink"
+msgstr "Mat og drikke"
+
+#: qml/js/PoiCategories.js:39
+msgid "Bakery"
+msgstr "Bakeri"
+
+#: qml/js/PoiCategories.js:40
+msgid "Bar"
+msgstr "Bar"
+
+#: qml/js/PoiCategories.js:41
+msgid "Butcher"
+msgstr "Slakter"
+
+#: qml/js/PoiCategories.js:42
+msgid "Cafe"
+msgstr "Kafé"
+
+#: qml/js/PoiCategories.js:43
+msgid "Convenience Store"
+msgstr "Minimarked"
+
+#: qml/js/PoiCategories.js:44
+msgid "Drinking water"
+msgstr "Drikkevann"
+
+#: qml/js/PoiCategories.js:45
+msgid "Fast Food"
+msgstr "Gatekjøkken"
+
+#: qml/js/PoiCategories.js:46
+msgid "Ice Cream"
+msgstr "Iskrem"
+
+#: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:64
+msgid "Picnic Site"
+msgstr "Piknik-sted"
+
+#: qml/js/PoiCategories.js:48
+msgid "Pub"
+msgstr "Pub"
+
+#: qml/js/PoiCategories.js:49
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#: qml/js/PoiCategories.js:53
+msgid "Tourism"
+msgstr ""
+
+#: qml/js/PoiCategories.js:55
+msgid "Alpine Hut"
+msgstr ""
+
+#: qml/js/PoiCategories.js:56
+msgid "Archaeological Site"
+msgstr "Arkeologisk plass"
+
+#: qml/js/PoiCategories.js:57 qml/js/PoiCategories.js:115
+msgid "Artwork"
+msgstr "Kunstverk"
+
+#: qml/js/PoiCategories.js:58
+msgid "Attraction"
+msgstr ""
+
+#: qml/js/PoiCategories.js:59
+msgid "Battlefield"
+msgstr "Slagmark"
+
+#: qml/js/PoiCategories.js:60
+msgid "Castle"
+msgstr "Slott"
+
+#: qml/js/PoiCategories.js:61
+msgid "Monument"
+msgstr "Monument"
+
+#: qml/js/PoiCategories.js:62 qml/js/PoiCategories.js:119
+msgid "Museum"
+msgstr "Museum"
+
+#: qml/js/PoiCategories.js:63
+msgid "Nature Reserve"
+msgstr "Naturreservat"
+
+#: qml/js/PoiCategories.js:65
+msgid "Ruin"
+msgstr "Ruiner"
+
+#: qml/js/PoiCategories.js:66
+msgid "Theme Park"
+msgstr "Fornøyelsespark"
+
+#: qml/js/PoiCategories.js:67
+msgid "Tourism Information"
+msgstr "Turistinformasjon"
+
+#: qml/js/PoiCategories.js:68
+msgid "Town Hall"
+msgstr "Rådhus"
+
+#: qml/js/PoiCategories.js:69
+msgid "Viewpoint"
+msgstr ""
+
+#: qml/js/PoiCategories.js:70
+msgid "Zoo"
+msgstr ""
+
+#: qml/js/PoiCategories.js:74
+msgid "Services"
+msgstr "Tjenester"
+
+#: qml/js/PoiCategories.js:76
+msgid "ATM"
+msgstr "Minibank"
+
+#: qml/js/PoiCategories.js:77
+msgid "Bank"
+msgstr "Bank"
+
+#: qml/js/PoiCategories.js:78
+msgid "Bureau de change"
+msgstr "Vekslingskontor"
+
+#: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
+msgid "Place of Worship"
+msgstr "Tilbedelsessted"
+
+#: qml/js/PoiCategories.js:80
+msgid "Post Box"
+msgstr "Postboks"
+
+#: qml/js/PoiCategories.js:81
+msgid "Post Office"
+msgstr "Postkontor"
+
+#: qml/js/PoiCategories.js:82
+msgid "Public Telephone"
+msgstr "Telefonboks"
+
+#: qml/js/PoiCategories.js:83
+msgid "Toilet"
+msgstr "Toalett"
+
+#: qml/js/PoiCategories.js:84
+msgid "Wi-Fi Point"
+msgstr "Trådløst nettverk"
+
+#: qml/js/PoiCategories.js:88
+msgid "Shopping"
+msgstr "Varehandel"
+
+#: qml/js/PoiCategories.js:90
+msgid "Books"
+msgstr "Bøker"
+
+#: qml/js/PoiCategories.js:91
+msgid "Charity"
+msgstr "Veldedighet"
+
+#: qml/js/PoiCategories.js:92
+msgid "Clothes"
+msgstr "Klær"
+
+#: qml/js/PoiCategories.js:93
+msgid "Computer Shop"
+msgstr "Databutikk"
+
+#: qml/js/PoiCategories.js:94
+msgid "Copy Shop"
+msgstr "Kopieringsbutikk"
+
+#: qml/js/PoiCategories.js:95
+msgid "Florist"
+msgstr "Blomsterhandel"
+
+#: qml/js/PoiCategories.js:96
+msgid "Gifts"
+msgstr "Gaver"
+
+#: qml/js/PoiCategories.js:97
+msgid "Hairdresser"
+msgstr "Frisør"
+
+#: qml/js/PoiCategories.js:98
+msgid "Jewelry"
+msgstr "Gullsmed"
+
+#: qml/js/PoiCategories.js:99
+msgid "Kiosk"
+msgstr "Kiosk"
+
+#: qml/js/PoiCategories.js:100
+msgid "Laundry"
+msgstr "Vaskeri"
+
+#: qml/js/PoiCategories.js:101
+msgid "Mall"
+msgstr "Kjøpesenter"
+
+#: qml/js/PoiCategories.js:102
+msgid "Mobile Phone"
+msgstr "Mobiltelefon"
+
+#: qml/js/PoiCategories.js:103
+msgid "Optician"
+msgstr "Optiker"
+
+#: qml/js/PoiCategories.js:104
+msgid "Public Market"
+msgstr "Markedsplass"
+
+#: qml/js/PoiCategories.js:105
+msgid "Shoes"
+msgstr "Sko"
+
+#: qml/js/PoiCategories.js:106
+msgid "Supermarket"
+msgstr "Supermarked"
+
+#: qml/js/PoiCategories.js:107
+msgid "Travel Agency"
+msgstr "Reisebyrå"
+
+#: qml/js/PoiCategories.js:108
+msgid "Vending Machine"
+msgstr "Salgsautomat"
+
+#: qml/js/PoiCategories.js:112
+msgid "Culture"
+msgstr "Kultur"
+
+#: qml/js/PoiCategories.js:114
+msgid "Art Center"
+msgstr "Kunstsenter"
+
+#: qml/js/PoiCategories.js:116
+msgid "Auditorium"
+msgstr "Auditorium"
+
+#: qml/js/PoiCategories.js:117
+msgid "Gallery"
+msgstr "Galleri"
+
+#: qml/js/PoiCategories.js:118
+msgid "Library"
+msgstr "Bibliotek"
+
+#: qml/js/PoiCategories.js:120
+msgid "Theatre"
+msgstr "Teater"
+
+#: qml/js/PoiCategories.js:124
+msgid "Entertainment"
+msgstr "Underholdning"
+
+#: qml/js/PoiCategories.js:126
+msgid "Casino"
+msgstr "Casino"
+
+#: qml/js/PoiCategories.js:127
+msgid "Children Playground"
+msgstr "Lekeplass"
+
+#: qml/js/PoiCategories.js:128
+msgid "Cinema"
+msgstr "Kino"
+
+#: qml/js/PoiCategories.js:129
+msgid "Gym"
+msgstr "Treningsseenter"
+
+#: qml/js/PoiCategories.js:130
+msgid "Night Club"
+msgstr "Nattklubb"
+
+#: qml/js/PoiCategories.js:131
+msgid "Park"
+msgstr "Park"
+
+#: qml/js/PoiCategories.js:135
+msgid "Education"
+msgstr "Utdanning"
+
+#: qml/js/PoiCategories.js:137
+msgid "College"
+msgstr "Høyskole/Universitet"
+
+#: qml/js/PoiCategories.js:138
+msgid "Nursery School"
+msgstr "Barnehage"
+
+#: qml/js/PoiCategories.js:139
+msgid "University"
+msgstr "Universitet"
+
+#: qml/js/PoiCategories.js:143
+msgid "Health"
+msgstr "Helse"
+
+#: qml/js/PoiCategories.js:145
+msgid "Dentist"
+msgstr "Tannlege"
+
+#: qml/js/PoiCategories.js:146
+msgid "Doctor"
+msgstr "Lege"
+
+#: qml/js/PoiCategories.js:147
+msgid "Hospital"
+msgstr "Sykehus"
+
+#: qml/js/PoiCategories.js:148
+msgid "Pharmacy"
+msgstr "Apotek"
+
+#: qml/js/PoiCategories.js:149
+msgid "Veterinary"
+msgstr "Veterinær"
+
+#: qml/js/PoiCategories.js:153
+msgid "Religious"
+msgstr "Religiøst"
+
+#: qml/js/PoiCategories.js:155
+msgid "Cemetery"
+msgstr "Kirkegård"
+
+#: qml/js/PoiCategories.js:156
+msgid "Church"
+msgstr "Kirke"
+
+#: qml/js/PoiCategories.js:157
+msgid "Crematorium"
+msgstr "Krematorium"
+
+#: qml/js/PoiCategories.js:162
+msgid "Emergency"
+msgstr "Nødetat"
+
+#: qml/js/PoiCategories.js:164
+msgid "Phone"
+msgstr "Telefon"
+
+#: qml/js/PoiCategories.js:165
+msgid "Police Station"
+msgstr "Politistasjon"
+
+#: qml/js/PoiCategories.js:169
+msgid "Sport"
+msgstr "Sport"
+
+#: qml/js/PoiCategories.js:171
+msgid "Sports Center"
+msgstr "Sportssenter"
+
+#: qml/js/PoiCategories.js:172
+msgid "Stadium"
+msgstr "Stadion"
+
+#: qml/js/PoiCategories.js:173
+msgid "Swimming Pool"
+msgstr "Svømmebasseng"
+
+#: qml/js/PoiCategories.js:174
+msgid "Track"
+msgstr "Spor"
+
+#: qml/js/PoiCategories.js:178
+msgid "Others"
+msgstr "Andre"
+
+#: qml/js/PoiCategories.js:180
+msgid "Courthouse"
+msgstr "Rettsbygning"
+
+#: qml/js/PoiCategories.js:181
+msgid "Embassy"
+msgstr "Ambassade"
+
+#: qml/js/PoiCategories.js:182
+msgid "Prison"
+msgstr "Fengsel"
+
+#: qml/js/PoiCategories.js:183
+msgid "Recycling"
+msgstr "Avfallsgjenvinning"
+
+#: qml/js/PoiCategories.js:184
+msgid "Town"
+msgstr "By"
+
+#: qml/js/utils.js:58
+msgid "Current Location"
+msgstr "Gjeldende sted"
+
+#: qml/tuto/Slide1.qml:40
+msgid "Welcome to uNav"
+msgstr "Velkommen til uNav"
+
+#: qml/tuto/Slide1.qml:48
+msgid ""
+"A map viewer & GPS navigator\n"
+"\n"
+"Let's look at a few features together :)"
+msgstr ""
+"En kartviser og GPS-veiviser\n"
+"\n"
+"Her er noen av funksjonene."
+
+#: qml/tuto/Slide2.qml:43
+msgid "Long Touch on Map"
+msgstr "Trykk og hold på kartet"
+
+#: qml/tuto/Slide2.qml:60
+msgid ""
+"Navigate, add to favorites, search nearby places, share points on the map or "
+"simulate a route"
+msgstr ""
+"Naviger, legg til favoritter, finn steder i nærheten, del punkter på kartet "
+"og simuler en rute"
+
+#: qml/tuto/Slide3.qml:43
+msgid "Swipe Results"
+msgstr "Dra søketreff"
+
+#: qml/tuto/Slide3.qml:60
+msgid ""
+"Navigate directly, call the place, share the location, open web page, delete "
+"favorites…"
+msgstr ""
+"Naviger direkte, ring sted, del plassering, åpne nettside, slett favoritter …"
+
+#: qml/tuto/Slide4.qml:43
+msgid "Touch Everything!"
+msgstr "Trykk på alt!"
+
+#: qml/tuto/Slide4.qml:61
+msgid ""
+"Touch summary to show current speed\n"
+"\n"
+"Touch step indications to review route steps"
+msgstr ""
+"Trykk på oppsummering for å vise gjeldende fart\n"
+"\n"
+"Trykk på sporindikasjoner for å gå gjennom rutepunkter"
+
+#: qml/tuto/Slide5.qml:43
+msgid "Simulate a route"
+msgstr "Simuler en rute"
+
+#: qml/tuto/Slide5.qml:61
+msgid ""
+"Set an origin: Click on map and click on simulate icon\n"
+"\n"
+"Set a destination: Then, click on map and click the same icon again"
+msgstr ""
+"Velg et startpunkt: Trykk på kart og deretter simuleringsikon\n"
+"\n"
+"Velg et mål: Trykk deretter på kartet og samme ikon igjen"
+
+#: qml/tuto/Slide6.qml:43
+msgid "uNav doesn't track you!"
+msgstr "uNav sporer deg ikke!"
+
+#: qml/tuto/Slide6.qml:60
+msgid ""
+"It is licensed under the GNU GPL\n"
+"\n"
+"and based completely on libre projects!"
+msgstr ""
+"Det er utgitt på vilkårene i GNU GPL\n"
+"\n"
+"og basert på frie prosjekter i sin helhet!"
+
+#: qml/tuto/Slide6.qml:74
+msgid "Enjoy the Freedom!"
+msgstr "Nyt friheten!"
+
+#: qml/tuto/components/Walkthrough.qml:89
+msgid "Skip"
+msgstr "Hopp over"
+
+#, qt-format
+#~ msgid "© 2015 %1. Under license %2"
+#~ msgstr "© 2015 %1. På vilkårene i lisens %2"
+
+#~ msgid "Developers:"
+#~ msgstr "Utviklere:"
+
+#~ msgid "This app is powered by:"
+#~ msgstr "Dette programmet drives av"
+
+#~ msgid "Support its future development:"
+#~ msgstr "Støtt videre programutvikling:"
+
+#~ msgid "Position unknown. Failed getting places nearby"
+#~ msgstr "Ukjent posisjon. Klarte ikke å finne steder i nærheten"
+
+#~ msgid "Add From Map"
+#~ msgstr "Legg til fra kart"
+
+#~ msgid "Route"
+#~ msgstr "Rute"
+
+#~ msgid "Follow"
+#~ msgstr "Følg"
+
+#, qt-format
+#~ msgid "Sorry, no result for %1"
+#~ msgstr "Søket %1 ga ingen treff"
+
+#~ msgid "Something was wrong. Please, try again…"
+#~ msgstr "Noe gikk galt. Prøv igjen …"
+
+#~ msgid "Where do we go?"
+#~ msgstr "Hvor går vi?"
+
+#~ msgid "A Notification"
+#~ msgstr "Varsel"
+
+#~ msgid "Kilometers"
+#~ msgstr "Kilometer"
+
+#~ msgid "Car"
+#~ msgstr "Bil"
+
+#~ msgid "Walking"
+#~ msgstr "Til fots"
+
+#~ msgid "Bicycle"
+#~ msgstr "Sykkel"
+
+#~ msgid "Favorite"
+#~ msgstr "Favoritt"
+
+#~ msgid "Continue"
+#~ msgstr "Fortsett"
+
+#~ msgid "Go There"
+#~ msgstr "Gå hit"
+
+#~ msgid "Cancel Route"
+#~ msgstr "Avbryt rute"
+
+#~ msgid "Kindergarten"
+#~ msgstr "Barnehage"
+
+#~ msgid "Toilets"
+#~ msgstr "Toaletter"
+
+#~ msgid "Translators:"
+#~ msgstr "Oversettere:"
+
+#~ msgid "Units:"
+#~ msgstr "Enheter:"
+
+#~ msgid "Voice:"
+#~ msgstr "Stemme:"
+
+#~ msgid "Buy Donate Version"
+#~ msgstr "Kjøp donorversjon"
+
+#~ msgid "Fullscreen"
+#~ msgstr "Fullskjerm"
+
+#~ msgid "Coord:"
+#~ msgstr "Koord.:"
+
+#~ msgid "Mo"
+#~ msgstr "ma."
+
+#, qt-format
+#~ msgid "Sorry, no %1 found nearby. Try again with another radius"
+#~ msgstr "Fant ingen %1 i nærheten. Prøv igjen med annen radius"
+
+#~ msgid "We"
+#~ msgstr "on."
+
+#~ msgid "Tu"
+#~ msgstr "ti."
+
+#~ msgid "Fr"
+#~ msgstr "fr."
+
+#~ msgid "Th"
+#~ msgstr "to."
+
+#~ msgid "off"
+#~ msgstr "av"
+
+#~ msgid "Su"
+#~ msgstr "sø."
+
+#~ msgid "Sa"
+#~ msgstr "lø."
+
+#~ msgid "No history yet…"
+#~ msgstr "Ingen historikk enda …"
+
+#~ msgid "Mode:"
+#~ msgstr "Modus:"
+
+#~ msgid "Avoid Tolls"
+#~ msgstr "Unngå bomveier"
+
+#~ msgid "A Voice"
+#~ msgstr "Stemme"
+
+#~ msgid "Indications:"
+#~ msgstr "Retningsanvisninger:"
+
+#~ msgid "Share Position"
+#~ msgstr "Del posisjon"
+
+#~ msgid "From Map"
+#~ msgstr "Fra kart"
+
+#~ msgid "Current"
+#~ msgstr "Gjeldende"
+
+#~ msgid "Share"
+#~ msgstr "Del"
+
+#~ msgid "B&B"
+#~ msgstr "Pensjonat"
+
+#~ msgid "Convenience"
+#~ msgstr "Dagligvare"
+
+#~ msgid "Historic"
+#~ msgstr "Historisk"
+
+#~ msgid "Pre-School"
+#~ msgstr "Førskole"
+
+#~ msgid "Nursery"
+#~ msgstr "Barnehage"
+
+#~ msgid "You are near to the destination"
+#~ msgstr "Du nærmer deg målet"
+
+#~ msgid "Go"
+#~ msgstr "Gå"
+
+#~ msgid "Go to your right"
+#~ msgstr "Gå til høyre"
+
+#~ msgid "Go to your left"
+#~ msgstr "Gå til venstre"
+
+#~ msgid "Make a left U-turn"
+#~ msgstr "Ta en U-sving mot venstre"
+
+#~ msgid "Make a right U-turn"
+#~ msgstr "Ta en U-sving mot høyre"
+
+#~ msgid "Current road becomes"
+#~ msgstr "Gjeldende vei blir"
+
+#~ msgid "Your destination is on the right"
+#~ msgstr "Målet er på din høyre side"
+
+#~ msgid "Your destination is on the left"
+#~ msgstr "Målet er på din venstre side"
+
+#~ msgid "Keep right at the fork"
+#~ msgstr "Hold til høyre"
+
+#~ msgid "Turn right on ramp"
+#~ msgstr "Sving til høyre"
+
+#~ msgid "Stay straight on ramp"
+#~ msgstr "Fortsett rett frem"
+
+#~ msgid "Take the exit on the right"
+#~ msgstr "Sving ut til høyre"
+
+#~ msgid "Turn left on ramp"
+#~ msgstr "Sving til venstre"
+
+#~ msgid "Keep straight at the fork"
+#~ msgstr "Fortsett rett frem"
+
+#~ msgid "Take the exit on the left"
+#~ msgstr "Sving ut til venstre"
+
+#~ msgid "Leave the Ferry"
+#~ msgstr "Gå av ferga"
+
+#, qt-format
+#~ msgid " toward %1"
+#~ msgstr " mot %1"
+
+#, qt-format
+#~ msgid " to take the %1"
+#~ msgstr " og ta %1"
+
+#, qt-format
+#~ msgid "Enter the roundabout and take the exit %1"
+#~ msgstr "Kjør inn i rundkjøringa og kjør ut %1"
+
+#~ msgid "Exit the roundabout"
+#~ msgstr "Kjør ut av rundkjøringa"
+
+#~ msgid "Take the Ferry"
+#~ msgstr "Ta ferga"
+
+#~ msgid "Merge"
+#~ msgstr "Fletting"
+
+#, qt-format
+#~ msgid ". Exit %1"
+#~ msgstr ". Utkjøring %1"
+
+#, qt-format
+#~ msgid " onto %1"
+#~ msgstr " på %1"
+
+#~ msgid "Keep left at the fork"
+#~ msgstr "Hold til venstre"
+
+#~ msgid "Waiting a good GPS signal…"
+#~ msgstr "Venter på GPS-dekning …"
+
+#~ msgid ""
+#~ "Error finding route between points. Check the connection and try again"
+#~ msgstr ""
+#~ "Fant ingen rute mellom punktene. Kontroller forbindelsen og prøv igjen"
+
+#~ msgid "Searching a route…"
+#~ msgstr "Finner rute …"
+
+#, qt-format
+#~ msgid ", %1"
+#~ msgstr ", %1"

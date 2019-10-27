@@ -1,0 +1,37 @@
+[
+	{
+		"protocol": "http",
+		"domain-suffix": "map.unav.me"
+	},
+	{
+		"protocol": "https",
+		"domain-suffix": "map.unav.me"
+	},
+	{
+		"protocol": "http",
+		"domain-suffix": "unav-go.github.io"
+	},
+	{
+		"protocol": "geo"
+	},
+	{
+		"protocol": "http",
+		"domain-suffix": "www.openstreetmap.org"
+	},
+	{
+		"protocol": "https",
+		"domain-suffix": "www.openstreetmap.org"
+	},
+	{
+		"protocol": "http",
+		"domain-suffix": "www.opencyclemap.org"
+	},
+	{
+		"protocol": "https",
+		"domain-suffix": "www.opencyclemap.org"
+	},
+	{
+		"protocol": "https",
+		"domain-suffix": "maps.google.com"
+	}
+]

@@ -1,0 +1,1632 @@
+# Hungarian translation for unav
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the unav package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unav\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2018-10-15 18:38+0200\n"
+"PO-Revision-Date: 2018-06-11 20:51+0000\n"
+"Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
+"Language-Team: Hungarian <hu@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
+"X-Generator: Launchpad (build 18847)\n"
+
+#: nav/class/Navigator.js:131
+msgid "Turn left"
+msgstr "Forduljon balra"
+
+#: nav/class/Navigator.js:133
+msgid "Turn right"
+msgstr "Forduljon jobbra"
+
+#: nav/class/Navigator.js:135
+msgid "Make a sharp left"
+msgstr "Élesen forduljon balra"
+
+#: nav/class/Navigator.js:137
+msgid "Make a sharp right"
+msgstr "Élesen forduljon jobbra"
+
+#: nav/class/Navigator.js:139
+msgid "Bear left"
+msgstr "Tartson balra"
+
+#: nav/class/Navigator.js:141
+msgid "Bear right"
+msgstr "Tartson jobbra"
+
+#: nav/class/Navigator.js:143
+msgid "Continue on the road"
+msgstr "Haladjon tovább"
+
+#: nav/class/Navigator.js:145
+msgid "Enter the roundabout and take the designated exit"
+msgstr "Hajtson be a körforgalomba és válassza a megfelelő kijáratot"
+
+#: nav/class/Navigator.js:147
+msgid "Enter the roundabout and take the first exit"
+msgstr "Hajtson be a körforgalomba és válassza az első kijáratot"
+
+#: nav/class/Navigator.js:149
+msgid "Enter the roundabout and take the second exit"
+msgstr "Hajtson be a körforgalomba és válassza az második kijáratot"
+
+#: nav/class/Navigator.js:151
+msgid "Enter the roundabout and take the third exit"
+msgstr "Hajtson be a körforgalomba és válassza az harmadik kijáratot"
+
+#: nav/class/Navigator.js:153
+msgid "Enter the roundabout and take the fourth exit"
+msgstr "Hajtson be a körforgalomba és válassza a negyedik kijáratot"
+
+#: nav/class/Navigator.js:155
+msgid "Enter the roundabout and take the fifth exit"
+msgstr "Hajtson be a körforgalomba és válassza az ötödik kijáratot"
+
+#: nav/class/Navigator.js:157
+msgid "Enter the roundabout and take the sixth exit"
+msgstr "Hajtson be a körforgalomba és válassza a hatodik kijáratot"
+
+#: nav/class/Navigator.js:159
+msgid "Enter the roundabout and take the seventh exit"
+msgstr "Hajtson be a körforgalomba és válassza a hetedik kijáratot"
+
+#: nav/class/Navigator.js:161
+msgid "Enter the roundabout and take the eighth exit"
+msgstr "Hajtson be a körforgalomba és válassza a nyolcadik kijáratot"
+
+#: nav/class/Navigator.js:163
+msgid "Enter the roundabout and take the ninth exit"
+msgstr "Hajtson be a körforgalomba és válassza a kilencedik kijáratot"
+
+#: nav/class/Navigator.js:165
+msgid "Make a U-turn"
+msgstr ""
+
+#: nav/class/Navigator.js:167 nav/class/UI.js:619
+msgid "You have arrived at your destination"
+msgstr "Megérkezett a célhoz"
+
+#: nav/class/Navigator.js:171
+msgid "Keep left"
+msgstr ""
+
+#: nav/class/Navigator.js:173
+msgid "Keep right"
+msgstr ""
+
+#: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
+msgid "Current Position"
+msgstr "Jelenlegi pozíció"
+
+#: nav/class/UI.js:47
+msgid "Current Start"
+msgstr "Kiinduló pont"
+
+#: nav/class/UI.js:56
+msgid "Current End"
+msgstr "Érkezési pont"
+
+#: nav/class/UI.js:559
+msgid "Waiting for a GPS signal…"
+msgstr "Várakozás a GPS jelére…"
+
+#: nav/class/UI.js:566
+msgid "Searching for a route…"
+msgstr "Útvonal keresése…"
+
+#: nav/class/UI.js:570
+msgid "Drawing route…"
+msgstr "Útvonal megrajzolása…"
+
+#: nav/class/UI.js:574
+msgid "Trying search again soon…"
+msgstr "Próbálja újra később…"
+
+#: nav/class/UI.js:578
+msgid "Recalculating route…"
+msgstr "Útvonal újrakalkulálása…"
+
+#: nav/class/UI.js:626
+msgid "Simulating route…"
+msgstr "Útvonal szimulálása…"
+
+#: nav/index.html.strings:1
+msgid "Start"
+msgstr "Indítás"
+
+#: nav/index.html.strings:2 qml/Favorites.qml:248 qml/SettingsPage.qml:418
+msgid "Cancel"
+msgstr "Mégse"
+
+#: nav/index.html.strings:3
+msgid "Not found"
+msgstr ""
+
+#: nav/index.html.strings:4
+msgid "Route so long"
+msgstr "Az út túl hosszú"
+
+#: nav/index.html.strings:5
+msgid "More than 1000km could affect the performance"
+msgstr "Több, mint 1000km hatással lehet a teljesítményre"
+
+#: nav/index.html.strings:6
+msgid "We recommend you a waypoint in the middle as destination"
+msgstr "Azt javasoljuk, iktasson be állomásokat az útjába."
+
+#: nav/index.html.strings:11 qml/Coordinate.qml:152 qml/Coordinate.qml:386
+#: qml/DownloadVoices.qml:250 qml/Favorites.qml:305 qml/Main.qml:1028
+msgid "Close"
+msgstr "Bezárás"
+
+#: nav/index.html.strings:8
+msgid "GPS Denied"
+msgstr "GPS megtagadva"
+
+#: nav/index.html.strings:9
+msgid "Error reading the GPS status"
+msgstr "Hiba a GPS állapotának kiolvasása közben"
+
+#: nav/index.html.strings:10
+msgid "Please review your device settings"
+msgstr "Ellenőrizze a készüléke beállításait"
+
+#: qml/AboutPage.qml:27 qml/SettingsPage.qml:44
+msgid "About"
+msgstr "Névjegy"
+
+#: qml/AboutPage.qml:38 qml/AboutPage.qml:39 qml/AboutPage.qml:40
+#: qml/AboutPage.qml:41
+msgid "Resources"
+msgstr "Hasznos linkek"
+
+#: qml/AboutPage.qml:38
+msgid "Translations"
+msgstr "Fordítások"
+
+#: qml/AboutPage.qml:39
+msgid "Answers"
+msgstr "Válaszok"
+
+#: qml/AboutPage.qml:40
+msgid "Bugs"
+msgstr "Hibák"
+
+#: qml/AboutPage.qml:41
+msgid "Contact"
+msgstr "Kapcsolat"
+
+#: qml/AboutPage.qml:44 qml/AboutPage.qml:45 qml/AboutPage.qml:46
+#: qml/AboutPage.qml:47 qml/AboutPage.qml:48
+msgid "Developers"
+msgstr "Fejlesztők"
+
+#: qml/AboutPage.qml:46
+msgid "Founder"
+msgstr "ötletgazda"
+
+#: qml/AboutPage.qml:51
+msgid "Voice"
+msgstr "Hang"
+
+#: qml/AboutPage.qml:54
+msgid "Logo"
+msgstr "Logó"
+
+#: qml/AboutPage.qml:56 qml/AboutPage.qml:57 qml/AboutPage.qml:58
+msgid "Icons for empty states"
+msgstr "Ikonok az üres oldalakhoz"
+
+#: qml/AboutPage.qml:61
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Báthory Péter https://launchpad.net/~bathory\n"
+"  Gábor Babos https://launchpad.net/~babos\n"
+"  Richard Somlói https://launchpad.net/~ricsipontaz"
+
+#: qml/AboutPage.qml:63
+msgid "Translators"
+msgstr "Fordítók"
+
+#: qml/AboutPage.qml:67 qml/AboutPage.qml:68 qml/AboutPage.qml:69
+#: qml/AboutPage.qml:70 qml/AboutPage.qml:71 qml/AboutPage.qml:72
+#: qml/AboutPage.qml:73 qml/AboutPage.qml:74 qml/AboutPage.qml:75
+#: qml/AboutPage.qml:76 qml/AboutPage.qml:77 qml/AboutPage.qml:78
+#: qml/AboutPage.qml:79 qml/AboutPage.qml:80 qml/AboutPage.qml:81
+#: qml/AboutPage.qml:82
+msgid "Powered by"
+msgstr "Felhasznált projektek"
+
+#. TRANSLATORS: %1 and %2 are links that do not have to be translated: Year + Project + License
+#: qml/AboutPage.qml:124
+#, qt-format
+msgid "Version %1. Under license %2"
+msgstr "Verzió: %1. Licenc: %2"
+
+#: qml/Coordinate.qml:35
+msgid "Decimal"
+msgstr "Decimális"
+
+#: qml/Coordinate.qml:48
+msgid "Sexagesimal"
+msgstr "Hatvanas számrendszer"
+
+#: qml/Coordinate.qml:77 qml/Coordinate.qml:171
+msgid "Lat:"
+msgstr "Szél.:"
+
+#: qml/Coordinate.qml:94 qml/Coordinate.qml:242
+msgid "Long:"
+msgstr "Hossz.:"
+
+#: qml/Coordinate.qml:109 qml/Coordinate.qml:312
+msgid "Show on Map"
+msgstr "Megjelenítés a térképen"
+
+#: qml/Coordinate.qml:149 qml/Coordinate.qml:383
+msgid "Coordinates are not valid"
+msgstr "A koordináták érvénytelenek"
+
+#: qml/Coordinate.qml:150
+msgid ""
+"Enter valid decimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Adjon megy egy érvényes decimális koordinátát\n"
+"\n"
+"Várt formátum:"
+
+#: qml/Coordinate.qml:384
+msgid ""
+"Enter valid sexagesimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Adjon megy egy érvényes koordinátát hatvanas számrendszerben\n"
+"\n"
+"Várt formátum:"
+
+#: qml/DownloadVoices.qml:53
+msgid "Download voices"
+msgstr ""
+
+#: qml/DownloadVoices.qml:61
+msgid "Play current voice"
+msgstr ""
+
+#: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
+msgid "How to add a voice"
+msgstr ""
+
+#: qml/DownloadVoices.qml:161
+msgid "By "
+msgstr ""
+
+#: qml/DownloadVoices.qml:208
+msgid "Cancel Download"
+msgstr ""
+
+#: qml/DownloadVoices.qml:224
+msgid "About the voices"
+msgstr ""
+
+#: qml/DownloadVoices.qml:230
+msgid "The stars are for the recommended voices."
+msgstr ""
+
+#: qml/DownloadVoices.qml:238
+msgid "You can add a new voice to uNav following these steps:"
+msgstr ""
+
+#: qml/Favorites.qml:74
+msgid "No favorites yet"
+msgstr "Nincsenek még kedvencek"
+
+#: qml/Favorites.qml:197 qml/SearchPage.qml:83
+msgid "Add Favorite"
+msgstr "Kedvenc hozzáadása"
+
+#: qml/Favorites.qml:197
+msgid "Edit Favorite"
+msgstr "Kedvenc szerkesztése"
+
+#: qml/Favorites.qml:198
+msgid ""
+"There is already a favorite with that name. You can either overwrite it or "
+"enter a different name."
+msgstr ""
+"Már adott hozzá kedvencet ilyen néven. Adjon meg egy új nevet vagy írja "
+"felül a régit."
+
+#: qml/Favorites.qml:232
+msgid "Insert a favorite name"
+msgstr "Kedvenc nevének megadása"
+
+#: qml/Favorites.qml:255
+msgid "Overwrite"
+msgstr "Felülírás"
+
+#: qml/Favorites.qml:255
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: qml/Favorites.qml:255
+msgid "Update"
+msgstr "Frissítés"
+
+#: qml/Favorites.qml:277
+msgid "Favorite Coordinates"
+msgstr ""
+
+#: qml/Favorites.qml:288
+msgid "Name: "
+msgstr ""
+
+#: qml/Favorites.qml:295
+msgid "Latitude: "
+msgstr ""
+
+#: qml/Favorites.qml:302
+msgid "Longitude: "
+msgstr ""
+
+#: qml/Location.qml:45 qml/PoiListPage.qml:146
+msgid "Time out! Please try again"
+msgstr "Időtúllépés! Kérjük próbálja újra"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius.
+#: qml/Location.qml:53
+msgid "Sorry, nothing found. Try another search"
+msgstr "Nincs találat, próbálja másképp."
+
+#: qml/Location.qml:141 qml/Location.qml:352 qml/Location.qml:414
+msgid "Search history"
+msgstr "Keresési előzmények"
+
+#: qml/Location.qml:151 qml/Location.qml:358 qml/Location.qml:416
+msgid "Favorite history"
+msgstr "Kedvenc előzmények"
+
+#: qml/Location.qml:161 qml/Location.qml:355 qml/Location.qml:371
+#: qml/Location.qml:382 qml/Location.qml:397 qml/Location.qml:404
+#: qml/Location.qml:436 qml/Location.qml:442
+msgid "Nearby history"
+msgstr "Közeli helyek előzményei"
+
+#: qml/Location.qml:187
+msgid "No history yet"
+msgstr "Nincsenek még előzmények"
+
+#: qml/Location.qml:187
+msgid "History is disabled"
+msgstr "Az előzmények letiltva"
+
+#: qml/Location.qml:200 qml/Location.qml:253 qml/PoiListPage.qml:163
+#: qml/components/POIQuickAccessGridView.qml:181
+msgid "Searching…"
+msgstr "Keresés…"
+
+#: qml/Location.qml:249
+msgid "Search location"
+msgstr "Hely keresése"
+
+#: qml/Main.qml:235 qml/SettingsPage.qml:35
+msgid "Settings"
+msgstr "Beállítások"
+
+#: qml/Main.qml:246
+msgid "Center on Position"
+msgstr "Pozíció rögzítése középre"
+
+#: qml/Main.qml:250 qml/Main.qml:571
+msgid "Searching your position… This could take a while"
+msgstr "Tartózkodási hely megállapítása… Ez hosszabb időt is igénybe vehet"
+
+#: qml/Main.qml:264 qml/PoiPage.qml:83 qml/SearchPage.qml:69
+msgid "Search"
+msgstr "Keresés"
+
+#: qml/Main.qml:275
+msgid "Destination"
+msgstr "Úti cél"
+
+#: qml/Main.qml:437
+msgid "Error getting speed cameras!"
+msgstr "Hiba a sebesség-ellenőrző kamerák letöltése közben!"
+
+#: qml/Main.qml:440
+msgid "Error finding route! Retrying again in 1 minute…"
+msgstr ""
+
+#: qml/Main.qml:443
+msgid "Error finding route! Trying again…"
+msgstr "Nem sikerült az útvonalkeresés. Próbálja újra…"
+
+#: qml/Main.qml:488 qml/Main.qml:514
+msgid "Shared Position"
+msgstr "Megosztott pozíció"
+
+#: qml/Main.qml:762
+msgid "Near to destination"
+msgstr "Már közel az úti cél"
+
+#: qml/Main.qml:763
+msgid "Cancel route"
+msgstr "Utazás leállítása"
+
+#: qml/Main.qml:809
+#, qt-format
+msgid "Coord: %1, %2"
+msgstr "Koord.: %1, %2"
+
+#: qml/Main.qml:877 qml/PoiDetailsPage.qml:243
+msgid "Simulate from here! Now click on destination"
+msgstr "Kiindulási pont megadva. Most adja meg az úti célt is"
+
+#: qml/Main.qml:894
+msgid "Set a different coordinates for simulating"
+msgstr "Adjon meg másik koordinátát a szimuláláshoz"
+
+#: qml/Main.qml:1016
+msgid "Custom voices"
+msgstr ""
+
+#: qml/Main.qml:1017
+msgid ""
+"American English voice will be the unique voice installed by default.\n"
+"\n"
+"You can set a custom voice in your language from Settings: Download custom "
+"voices.\n"
+"\n"
+"The list of voices will be updated by the users. Please check them out in "
+"the future.\n"
+msgstr ""
+
+#: qml/Main.qml:1019
+msgid "Set a voice now"
+msgstr ""
+
+#: qml/PoiDetailsPage.qml:89
+msgid "Lat, Long:"
+msgstr "Szél., Hossz.:"
+
+#: qml/PoiDetailsPage.qml:95 qml/PoiDetailsPage.qml:110
+msgid "Available"
+msgstr "Elérhető"
+
+#: qml/PoiDetailsPage.qml:97 qml/PoiDetailsPage.qml:112
+msgid "Not Available"
+msgstr "Nem elérhető"
+
+#: qml/PoiDetailsPage.qml:99
+msgid "Wi-Fi Hotspot Available"
+msgstr "Elérhető Wi-Fi Hotspot"
+
+#: qml/PoiDetailsPage.qml:101
+msgid "Wired Connection Available (ethernet connection)"
+msgstr "Elérhető vezetékes kapcsolat (Ethernet)"
+
+#: qml/PoiDetailsPage.qml:103
+msgid "Computer Terminal Available"
+msgstr "Elérhető számítógép terminál"
+
+#: qml/PoiDetailsPage.qml:115
+msgid "Limited Availability"
+msgstr "Korlátozott elérhetőség"
+
+#: qml/PoiDetailsPage.qml:174
+msgid "Loading POI details..."
+msgstr "POI részletek betöltése…"
+
+#: qml/PoiListPage.qml:45
+msgid "Show POIs on map"
+msgstr "POI-k megjelentése a térképen"
+
+#: qml/PoiListPage.qml:68
+msgid "Unknown current position"
+msgstr "Ismeretlen a jelenlegi pozíció"
+
+#: qml/PoiListPage.qml:84
+msgid "Something went wrong. Please, try again…"
+msgstr "Valami hiba történt. Próbálja újra…"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius. %1 is the POI type eg..Pub, Airport
+#. Example string, "Sorry, no Airport found nearby. Try again with a larger search radius"
+#: qml/PoiListPage.qml:153
+#, qt-format
+msgid "Sorry, no %1 found nearby. Try again with a larger search radius"
+msgstr ""
+"Elnézést, de nem található %1 a közelben. Próbálja meg a keresést nagyobb "
+"hatókörrel."
+
+#. TRANSLATORS: Abbreviation for Public Holiday. This string is used while showing the opening hours
+#. of a place which might be closed during public holidays.
+#: qml/PoiListPage.qml:361
+msgid "PH"
+msgstr "ünnep"
+
+#. TRANSLATORS: This string indicates that a place is closed.
+#: qml/PoiListPage.qml:363
+msgid "Closed"
+msgstr "Zárva"
+
+#: qml/PoiPage.qml:64
+msgid "Back"
+msgstr "Vissza"
+
+#: qml/PoiPage.qml:118
+msgid "Filter POI categories by name"
+msgstr "POI kategóriák szűrése név alapján"
+
+#: qml/PoiPage.qml:128
+msgid "Nearby"
+msgstr "Közeli helyek"
+
+#: qml/PoiPage.qml:147
+msgid "Most recent"
+msgstr "Legutóbbiak"
+
+#: qml/PoiQuickAccessPage.qml:63
+msgid "Fast Nearest Editor: "
+msgstr "Gyors közeli hely szerkesztő: "
+
+#: qml/PoiQuickAccessPage.qml:201
+msgid "Selection"
+msgstr "Kiválasztás"
+
+#. TRANSLATORS: argument is a number > 1.
+#: qml/PoiQuickAccessPage.qml:203
+#, qt-format
+msgid "Max. %1 POIs can be selected."
+msgstr "Maximum %1 POI-t választhat ki"
+
+#: qml/PoiQuickAccessPage.qml:206 qml/SettingsPage.qml:439
+msgid "OK"
+msgstr "OK"
+
+#: qml/RouteInfoListPage.qml:29
+msgid "Route Info"
+msgstr "Útvonal-információ"
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: qml/SearchPage.qml:100
+msgid "Location"
+msgstr "Hely"
+
+#: qml/SearchPage.qml:100
+msgid "Favorites"
+msgstr "Kedvencek"
+
+#: qml/SearchPage.qml:100
+msgid "Coordinates"
+msgstr "Koordináták"
+
+#: qml/SearchPage.qml:150
+msgid "Add Current Position"
+msgstr "Pozíció hozzáadása"
+
+#: qml/SearchPage.qml:160
+msgid "Add Current Destination"
+msgstr "Úti cél hozzáadása"
+
+#: qml/SearchPage.qml:172
+msgid "Add by clicking on Map"
+msgstr "Hozzáadás a térképről"
+
+#: qml/SettingsPage.qml:56
+msgid "A voice"
+msgstr "Hang"
+
+#: qml/SettingsPage.qml:57
+msgid "A notification"
+msgstr "Értesítés"
+
+#: qml/SettingsPage.qml:58
+msgid "None"
+msgstr "Nincs"
+
+#: qml/SettingsPage.qml:68
+msgid "Kilometres"
+msgstr "Kilométer"
+
+#: qml/SettingsPage.qml:69
+msgid "Miles"
+msgstr "Mérföld"
+
+#: qml/SettingsPage.qml:95
+msgid "uNav link"
+msgstr ""
+
+#: qml/SettingsPage.qml:96
+msgid "Google Maps link"
+msgstr ""
+
+#: qml/SettingsPage.qml:97
+msgid "Standard GEO link"
+msgstr ""
+
+#: qml/SettingsPage.qml:107
+msgid "Online"
+msgstr "Online"
+
+#: qml/SettingsPage.qml:108
+msgid "Offline"
+msgstr "Offline"
+
+#: qml/SettingsPage.qml:130
+msgid "Navigation"
+msgstr "Navigáció"
+
+#: qml/SettingsPage.qml:137
+msgid "Guidance"
+msgstr "Irányjelzések"
+
+#: qml/SettingsPage.qml:169
+msgid "Download custom voices"
+msgstr ""
+
+#: qml/SettingsPage.qml:176
+msgid "Car Options"
+msgstr ""
+
+#: qml/SettingsPage.qml:183
+msgid "Avoid tolls"
+msgstr ""
+
+#: qml/SettingsPage.qml:200
+msgid "Speed camera alerts"
+msgstr "Sebesség-ellenőrzés riasztások"
+
+#: qml/SettingsPage.qml:219
+msgid "Map"
+msgstr "Térkép"
+
+#: qml/SettingsPage.qml:226
+msgid "Mode"
+msgstr "Mód"
+
+#: qml/SettingsPage.qml:261
+msgid "How to use offline maps"
+msgstr "Offline térképek használata"
+
+#: qml/SettingsPage.qml:278
+msgid "Online style"
+msgstr "Online térkép stílusa"
+
+#: qml/SettingsPage.qml:312
+msgid "Units"
+msgstr "Mértékegységek"
+
+#: qml/SettingsPage.qml:346
+msgid "Share position as"
+msgstr ""
+
+#: qml/SettingsPage.qml:376
+msgid "History"
+msgstr "Előzmények"
+
+#: qml/SettingsPage.qml:383
+msgid "Store new searches"
+msgstr "Új keresések tárolása"
+
+#: qml/SettingsPage.qml:395 qml/SettingsPage.qml:405
+msgid "Clear history"
+msgstr "Előzmények törlése"
+
+#: qml/SettingsPage.qml:406
+msgid "You'll delete the current history"
+msgstr "Ezzel törölni fogja a jelenlegi előzményeket"
+
+#: qml/SettingsPage.qml:409
+msgid "Delete"
+msgstr "Törlés"
+
+#: qml/SettingsPage.qml:428
+msgid "Speed Camera alerts and the law"
+msgstr "Sebesség-ellenőrzés riasztások és a törvény"
+
+#: qml/SettingsPage.qml:429
+msgid ""
+"uNav is only reading the OpenStreetMap database.\n"
+"uNav will show a max speed notification and a Speed Camera marker (marker "
+"hidden for French users because of law).\n"
+"\n"
+"In a few countries Speed Camera alerts are illegal, then enable this option "
+"only if it's legal in the country."
+msgstr ""
+"A uNav csak az OpenStreetMap adatbázisát használja fel.\n"
+"A uNav meg fogja jeleníteni a sebesség-ellenőrző kamerákat és az "
+"engedélyezett maximális sebességet (előbbi a francia felhasználóknál "
+"rejtésre kerül a törvények miatt)."
+
+#: qml/SettingsPage.qml:435
+msgid "Read more about it"
+msgstr "További információk"
+
+#: qml/Share.qml:33
+msgid "Share location to"
+msgstr "Hely megosztása"
+
+#: qml/components/POIQuickAccessGridView.qml:92
+msgid "Error getting results. Please, check your data connection."
+msgstr ""
+"Nem sikerült a találatok letöltése. Ellenőrizze az internetkapcsolatát."
+
+#: qml/components/POIQuickAccessGridView.qml:97
+msgid "Sorry, no results found nearby."
+msgstr "Nem találhatóak közeli helyek."
+
+#: qml/components/POIQuickAccessGridView.qml:175
+msgid "Current position unknown. Try again after a position update."
+msgstr ""
+"A jelenlegi helyzete ismeretlen. Próbálja újra egy pozíciófrissítés után."
+
+#: qml/js/PoiCategories.js:4
+msgid "Transport"
+msgstr "Közlekedés"
+
+#: qml/js/PoiCategories.js:6
+msgid "Airport"
+msgstr "Repülőtér"
+
+#: qml/js/PoiCategories.js:7
+msgid "Bicycle Parking"
+msgstr "Kerékpártároló"
+
+#: qml/js/PoiCategories.js:8
+msgid "Bicycle Rental"
+msgstr "Kerékpárkölcsönző"
+
+#: qml/js/PoiCategories.js:9
+msgid "Bicycle Shop"
+msgstr "Biciklis-bolt"
+
+#: qml/js/PoiCategories.js:10
+msgid "Bus Station"
+msgstr "Autóbuszállomás"
+
+#: qml/js/PoiCategories.js:11
+msgid "Bus Stop"
+msgstr "Buszmegálló"
+
+#: qml/js/PoiCategories.js:12
+msgid "Car Rental"
+msgstr "Autókölcsönző"
+
+#: qml/js/PoiCategories.js:13
+msgid "Car Repair"
+msgstr "Gépjárműjavítás"
+
+#: qml/js/PoiCategories.js:14
+msgid "Car Wash"
+msgstr "Gépjárműmosás"
+
+#: qml/js/PoiCategories.js:15
+msgid "Ferry Terminal"
+msgstr "Kompkikötő"
+
+#: qml/js/PoiCategories.js:16
+msgid "Gas Station"
+msgstr "Benzinkút"
+
+#: qml/js/PoiCategories.js:17
+msgid "Motorcycle Shop"
+msgstr "Motorbiciklibolt"
+
+#: qml/js/PoiCategories.js:18
+msgid "Parking"
+msgstr "Parkolás"
+
+#: qml/js/PoiCategories.js:19
+msgid "Subway Entrance"
+msgstr "Metróállomás"
+
+#: qml/js/PoiCategories.js:20
+msgid "Taxi"
+msgstr "Taxi"
+
+#: qml/js/PoiCategories.js:21
+msgid "Train Station"
+msgstr "Vasútállomás"
+
+#: qml/js/PoiCategories.js:25
+msgid "Accommodation"
+msgstr "Szállások"
+
+#: qml/js/PoiCategories.js:27
+msgid "Bed and Breakfasts"
+msgstr "B&B"
+
+#: qml/js/PoiCategories.js:28
+msgid "Campsite"
+msgstr "Kemping"
+
+#: qml/js/PoiCategories.js:29
+msgid "Caravan Site"
+msgstr "Lakókocsi parkoló"
+
+#: qml/js/PoiCategories.js:30
+msgid "Guest House"
+msgstr "Vendégház"
+
+#: qml/js/PoiCategories.js:31
+msgid "Hostel"
+msgstr "Hostel"
+
+#: qml/js/PoiCategories.js:32
+msgid "Hotel"
+msgstr "Szálloda"
+
+#: qml/js/PoiCategories.js:33
+msgid "Motel"
+msgstr "Motel"
+
+#: qml/js/PoiCategories.js:37
+msgid "Food & Drink"
+msgstr "Étel és ital"
+
+#: qml/js/PoiCategories.js:39
+msgid "Bakery"
+msgstr "Pékség"
+
+#: qml/js/PoiCategories.js:40
+msgid "Bar"
+msgstr "Bár"
+
+#: qml/js/PoiCategories.js:41
+msgid "Butcher"
+msgstr "Hentes"
+
+#: qml/js/PoiCategories.js:42
+msgid "Cafe"
+msgstr "Kávézó"
+
+#: qml/js/PoiCategories.js:43
+msgid "Convenience Store"
+msgstr "Kisbolt"
+
+#: qml/js/PoiCategories.js:44
+msgid "Drinking water"
+msgstr "Ivóvíz"
+
+#: qml/js/PoiCategories.js:45
+msgid "Fast Food"
+msgstr "Gyorsétterem"
+
+#: qml/js/PoiCategories.js:46
+msgid "Ice Cream"
+msgstr "Fagylaltozó"
+
+#: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:64
+msgid "Picnic Site"
+msgstr "Piknikezőhely"
+
+#: qml/js/PoiCategories.js:48
+msgid "Pub"
+msgstr "Kocsma"
+
+#: qml/js/PoiCategories.js:49
+msgid "Restaurant"
+msgstr "Étterem"
+
+#: qml/js/PoiCategories.js:53
+msgid "Tourism"
+msgstr ""
+
+#: qml/js/PoiCategories.js:55
+msgid "Alpine Hut"
+msgstr ""
+
+#: qml/js/PoiCategories.js:56
+msgid "Archaeological Site"
+msgstr "Régészeti lelőhely"
+
+#: qml/js/PoiCategories.js:57 qml/js/PoiCategories.js:115
+msgid "Artwork"
+msgstr "Műalkotás"
+
+#: qml/js/PoiCategories.js:58
+msgid "Attraction"
+msgstr ""
+
+#: qml/js/PoiCategories.js:59
+msgid "Battlefield"
+msgstr "Csatamező"
+
+#: qml/js/PoiCategories.js:60
+msgid "Castle"
+msgstr "Kastély"
+
+#: qml/js/PoiCategories.js:61
+msgid "Monument"
+msgstr "Műemlék"
+
+#: qml/js/PoiCategories.js:62 qml/js/PoiCategories.js:119
+msgid "Museum"
+msgstr "Múzeum"
+
+#: qml/js/PoiCategories.js:63
+msgid "Nature Reserve"
+msgstr "Természetvédelmi terület"
+
+#: qml/js/PoiCategories.js:65
+msgid "Ruin"
+msgstr "Romok"
+
+#: qml/js/PoiCategories.js:66
+msgid "Theme Park"
+msgstr "Vidámpark"
+
+#: qml/js/PoiCategories.js:67
+msgid "Tourism Information"
+msgstr "Turisztikai Információ"
+
+#: qml/js/PoiCategories.js:68
+msgid "Town Hall"
+msgstr "Városháza"
+
+#: qml/js/PoiCategories.js:69
+msgid "Viewpoint"
+msgstr ""
+
+#: qml/js/PoiCategories.js:70
+msgid "Zoo"
+msgstr ""
+
+#: qml/js/PoiCategories.js:74
+msgid "Services"
+msgstr "Szolgáltatások"
+
+#: qml/js/PoiCategories.js:76
+msgid "ATM"
+msgstr "ATM"
+
+#: qml/js/PoiCategories.js:77
+msgid "Bank"
+msgstr "Bank"
+
+#: qml/js/PoiCategories.js:78
+msgid "Bureau de change"
+msgstr "Pénzváltó"
+
+#: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
+msgid "Place of Worship"
+msgstr "Istentiszteleti hely"
+
+#: qml/js/PoiCategories.js:80
+msgid "Post Box"
+msgstr "Postaláda"
+
+#: qml/js/PoiCategories.js:81
+msgid "Post Office"
+msgstr "Posta"
+
+#: qml/js/PoiCategories.js:82
+msgid "Public Telephone"
+msgstr "Nyilvános telefon"
+
+#: qml/js/PoiCategories.js:83
+msgid "Toilet"
+msgstr "WC"
+
+#: qml/js/PoiCategories.js:84
+msgid "Wi-Fi Point"
+msgstr "Wi-Fi pont"
+
+#: qml/js/PoiCategories.js:88
+msgid "Shopping"
+msgstr "Bevásárlás"
+
+#: qml/js/PoiCategories.js:90
+msgid "Books"
+msgstr "Könyvek"
+
+#: qml/js/PoiCategories.js:91
+msgid "Charity"
+msgstr "Jótékonyság"
+
+#: qml/js/PoiCategories.js:92
+msgid "Clothes"
+msgstr "Ruhák"
+
+#: qml/js/PoiCategories.js:93
+msgid "Computer Shop"
+msgstr "Számítógépes bolt"
+
+#: qml/js/PoiCategories.js:94
+msgid "Copy Shop"
+msgstr "Fénymásolás/nyomtatás"
+
+#: qml/js/PoiCategories.js:95
+msgid "Florist"
+msgstr "Virágüzlet"
+
+#: qml/js/PoiCategories.js:96
+msgid "Gifts"
+msgstr "Ajándékok"
+
+#: qml/js/PoiCategories.js:97
+msgid "Hairdresser"
+msgstr "Fodrász"
+
+#: qml/js/PoiCategories.js:98
+msgid "Jewelry"
+msgstr "Ékszerbolt"
+
+#: qml/js/PoiCategories.js:99
+msgid "Kiosk"
+msgstr "Trafik"
+
+#: qml/js/PoiCategories.js:100
+msgid "Laundry"
+msgstr "Mosoda"
+
+#: qml/js/PoiCategories.js:101
+msgid "Mall"
+msgstr "Bevásárlóközpont"
+
+#: qml/js/PoiCategories.js:102
+msgid "Mobile Phone"
+msgstr "Mobiltelefon"
+
+#: qml/js/PoiCategories.js:103
+msgid "Optician"
+msgstr "Optikus"
+
+#: qml/js/PoiCategories.js:104
+msgid "Public Market"
+msgstr "Piactér"
+
+#: qml/js/PoiCategories.js:105
+msgid "Shoes"
+msgstr "Cipőbolt"
+
+#: qml/js/PoiCategories.js:106
+msgid "Supermarket"
+msgstr "Szupermarket"
+
+#: qml/js/PoiCategories.js:107
+msgid "Travel Agency"
+msgstr "Utazási iroda"
+
+#: qml/js/PoiCategories.js:108
+msgid "Vending Machine"
+msgstr "Árusító automata"
+
+#: qml/js/PoiCategories.js:112
+msgid "Culture"
+msgstr "Kultúra"
+
+#: qml/js/PoiCategories.js:114
+msgid "Art Center"
+msgstr "Művészeti központ"
+
+#: qml/js/PoiCategories.js:116
+msgid "Auditorium"
+msgstr "Előadóterem"
+
+#: qml/js/PoiCategories.js:117
+msgid "Gallery"
+msgstr "Galéria"
+
+#: qml/js/PoiCategories.js:118
+msgid "Library"
+msgstr "Könyvtár"
+
+#: qml/js/PoiCategories.js:120
+msgid "Theatre"
+msgstr "Színház"
+
+#: qml/js/PoiCategories.js:124
+msgid "Entertainment"
+msgstr "Szórakozás"
+
+#: qml/js/PoiCategories.js:126
+msgid "Casino"
+msgstr "Kaszinó"
+
+#: qml/js/PoiCategories.js:127
+msgid "Children Playground"
+msgstr "Játszótér"
+
+#: qml/js/PoiCategories.js:128
+msgid "Cinema"
+msgstr "Mozi"
+
+#: qml/js/PoiCategories.js:129
+msgid "Gym"
+msgstr "Edzőterem"
+
+#: qml/js/PoiCategories.js:130
+msgid "Night Club"
+msgstr "Éjszakai mulató"
+
+#: qml/js/PoiCategories.js:131
+msgid "Park"
+msgstr "Park"
+
+#: qml/js/PoiCategories.js:135
+msgid "Education"
+msgstr "Oktatás"
+
+#: qml/js/PoiCategories.js:137
+msgid "College"
+msgstr "Főiskola"
+
+#: qml/js/PoiCategories.js:138
+msgid "Nursery School"
+msgstr "Óvoda"
+
+#: qml/js/PoiCategories.js:139
+msgid "University"
+msgstr "Egyetem"
+
+#: qml/js/PoiCategories.js:143
+msgid "Health"
+msgstr "Egészségügy"
+
+#: qml/js/PoiCategories.js:145
+msgid "Dentist"
+msgstr "Fogorvos"
+
+#: qml/js/PoiCategories.js:146
+msgid "Doctor"
+msgstr "Orvos"
+
+#: qml/js/PoiCategories.js:147
+msgid "Hospital"
+msgstr "Kórház"
+
+#: qml/js/PoiCategories.js:148
+msgid "Pharmacy"
+msgstr "Gyógyszertár"
+
+#: qml/js/PoiCategories.js:149
+msgid "Veterinary"
+msgstr "Állatorvos"
+
+#: qml/js/PoiCategories.js:153
+msgid "Religious"
+msgstr "Vallás"
+
+#: qml/js/PoiCategories.js:155
+msgid "Cemetery"
+msgstr "Temető"
+
+#: qml/js/PoiCategories.js:156
+msgid "Church"
+msgstr "Templom"
+
+#: qml/js/PoiCategories.js:157
+msgid "Crematorium"
+msgstr "Krematórium"
+
+#: qml/js/PoiCategories.js:162
+msgid "Emergency"
+msgstr "Vészhelyzet"
+
+#: qml/js/PoiCategories.js:164
+msgid "Phone"
+msgstr "Telefon"
+
+#: qml/js/PoiCategories.js:165
+msgid "Police Station"
+msgstr "Rendőrség"
+
+#: qml/js/PoiCategories.js:169
+msgid "Sport"
+msgstr "Sport"
+
+#: qml/js/PoiCategories.js:171
+msgid "Sports Center"
+msgstr "Sportközpont"
+
+#: qml/js/PoiCategories.js:172
+msgid "Stadium"
+msgstr "Stadion"
+
+#: qml/js/PoiCategories.js:173
+msgid "Swimming Pool"
+msgstr "Uszoda"
+
+#: qml/js/PoiCategories.js:174
+msgid "Track"
+msgstr "Pálya"
+
+#: qml/js/PoiCategories.js:178
+msgid "Others"
+msgstr "Egyebek"
+
+#: qml/js/PoiCategories.js:180
+msgid "Courthouse"
+msgstr "Bíróság"
+
+#: qml/js/PoiCategories.js:181
+msgid "Embassy"
+msgstr "Követség"
+
+#: qml/js/PoiCategories.js:182
+msgid "Prison"
+msgstr "Börtön"
+
+#: qml/js/PoiCategories.js:183
+msgid "Recycling"
+msgstr "Újrahasznosítás"
+
+#: qml/js/PoiCategories.js:184
+msgid "Town"
+msgstr "Város"
+
+#: qml/js/utils.js:58
+msgid "Current Location"
+msgstr "Jelenlegi hely"
+
+#: qml/tuto/Slide1.qml:40
+msgid "Welcome to uNav"
+msgstr "Üdvözli a uNav!"
+
+#: qml/tuto/Slide1.qml:48
+msgid ""
+"A map viewer & GPS navigator\n"
+"\n"
+"Let's look at a few features together :)"
+msgstr ""
+"Egy térkép és GPS navigációs alkalmazás\n"
+"\n"
+"Nézzük át az alkalmazás főbb funkcióit :)"
+
+#: qml/tuto/Slide2.qml:43
+msgid "Long Touch on Map"
+msgstr "Hosszan tartsa nyomva az ujját a térképen"
+
+#: qml/tuto/Slide2.qml:60
+msgid ""
+"Navigate, add to favorites, search nearby places, share points on the map or "
+"simulate a route"
+msgstr ""
+"Navigálás, hozzáadás a kedvencekhez, közeli helyek keresése, pozíció "
+"megosztása a térképen vagy útvonal szimulálása"
+
+#: qml/tuto/Slide3.qml:43
+msgid "Swipe Results"
+msgstr "Találatok elhúzása"
+
+#: qml/tuto/Slide3.qml:60
+msgid ""
+"Navigate directly, call the place, share the location, open web page, delete "
+"favorites…"
+msgstr ""
+"Navigáljon közvetlenül, hívja fel a helyet, ossza meg a helyzetét, nyissa "
+"meg a weboldalt vagy törölje a kedvencek közül…"
+
+#: qml/tuto/Slide4.qml:43
+msgid "Touch Everything!"
+msgstr "Koppintson bárhová!"
+
+#: qml/tuto/Slide4.qml:61
+msgid ""
+"Touch summary to show current speed\n"
+"\n"
+"Touch step indications to review route steps"
+msgstr ""
+"Koppintson az információkra az aktuális sebességhez\n"
+"\n"
+"Koppintson a következő irányváltoztatásra a teljes útvonalhoz"
+
+#: qml/tuto/Slide5.qml:43
+msgid "Simulate a route"
+msgstr "Útvonal szimulálása"
+
+#: qml/tuto/Slide5.qml:61
+msgid ""
+"Set an origin: Click on map and click on simulate icon\n"
+"\n"
+"Set a destination: Then, click on map and click the same icon again"
+msgstr ""
+"Adja meg az indulás helyét a térképen koppintva, majd válassza a szimulálás "
+"ikont.\n"
+"\n"
+"Adja meg az úti célt a térképen koppintva, majd válassza ismét a szimulálás "
+"ikont."
+
+#: qml/tuto/Slide6.qml:43
+msgid "uNav doesn't track you!"
+msgstr "A uNav nem követi Önt!"
+
+#: qml/tuto/Slide6.qml:60
+msgid ""
+"It is licensed under the GNU GPL\n"
+"\n"
+"and based completely on libre projects!"
+msgstr ""
+"A GNU GPL licenc feltételei alatt lett kiadva\n"
+"\n"
+"és teljesen szabad szoftverekre épít!"
+
+#: qml/tuto/Slide6.qml:74
+msgid "Enjoy the Freedom!"
+msgstr "Élvezze a szabadságot!"
+
+#: qml/tuto/components/Walkthrough.qml:89
+msgid "Skip"
+msgstr "Kihagyás"
+
+#~ msgid "Go There"
+#~ msgstr "Navigálás oda"
+
+#~ msgid "Add From Map"
+#~ msgstr "Hozzáadás a térképről"
+
+#~ msgid "Follow"
+#~ msgstr "Követés"
+
+#~ msgid "Kilometers"
+#~ msgstr "Kilométer"
+
+#~ msgid "This app is powered by:"
+#~ msgstr "Az alkalmazásnál felhasznált projektek:"
+
+#, qt-format
+#~ msgid "Sorry, no result for %1"
+#~ msgstr "Sajnáljuk, nincs találat ehhez: %1"
+
+#~ msgid "Route"
+#~ msgstr "Útvonal"
+
+#~ msgid "Developers:"
+#~ msgstr "Fejlesztők:"
+
+#~ msgid "Support its future development:"
+#~ msgstr "Támogassa a jövőbeli fejlesztést:"
+
+#~ msgid "Position unknown. Failed getting places nearby"
+#~ msgstr "Ismeretlen pozíció. Nem sikerült a közeli helyek lekérése."
+
+#~ msgid "Something was wrong. Please, try again…"
+#~ msgstr "Valami hiba lépett fel. Kérjük, próbálja újra…"
+
+#~ msgid "Where do we go?"
+#~ msgstr "Hova megyünk?"
+
+#~ msgid "Kindergarten"
+#~ msgstr "Óvoda"
+
+#~ msgid "Toilets"
+#~ msgstr "WC"
+
+#~ msgid "Searching a route…"
+#~ msgstr "Útvonal keresése…"
+
+#~ msgid "A Notification"
+#~ msgstr "Értesítés"
+
+#~ msgid "B&B"
+#~ msgstr "B&B"
+
+#~ msgid "Buy Donate Version"
+#~ msgstr "Támogatói verzió megvásárlása"
+
+#~ msgid "Units:"
+#~ msgstr "Mértékegységek:"
+
+#~ msgid "Mode:"
+#~ msgstr "Mód:"
+
+#~ msgid "Indications:"
+#~ msgstr "Jelzések:"
+
+#~ msgid "Continue"
+#~ msgstr "Haladjon tovább"
+
+#~ msgid "Mo"
+#~ msgstr "H"
+
+#~ msgid "Fr"
+#~ msgstr "P"
+
+#~ msgid "Th"
+#~ msgstr "Cs"
+
+#~ msgid "We"
+#~ msgstr "Sze"
+
+#~ msgid "Tu"
+#~ msgstr "K"
+
+#~ msgid "off"
+#~ msgstr "ki"
+
+#~ msgid "Su"
+#~ msgstr "V"
+
+#~ msgid "Sa"
+#~ msgstr "Szo"
+
+#~ msgid "You are near to the destination"
+#~ msgstr "Már közel van"
+
+#~ msgid "Your destination is on the right"
+#~ msgstr "Az úti cél jobb oldalon van"
+
+#~ msgid "Your destination is on the left"
+#~ msgstr "Az úti cél bal oldalon van"
+
+#~ msgid "Make a left U-turn"
+#~ msgstr "Forduljon vissza balra"
+
+#~ msgid "Make a right U-turn"
+#~ msgstr "Forduljon vissza jobbra"
+
+#~ msgid "Turn right on ramp"
+#~ msgstr "Forduljon jobbra a feljárón"
+
+#~ msgid "Stay straight on ramp"
+#~ msgstr "Haladjon egyenesen a feljárón"
+
+#~ msgid "Turn left on ramp"
+#~ msgstr "Forduljon balra a feljárón"
+
+#~ msgid "Leave the Ferry"
+#~ msgstr "Hajtson le a kompról"
+
+#~ msgid "Exit the roundabout"
+#~ msgstr "Hagyja el a körforgalmat"
+
+#~ msgid "Take the Ferry"
+#~ msgstr "Hajtson fel a kompra"
+
+#, qt-format
+#~ msgid ". Exit %1"
+#~ msgstr ". Hagyja el: %1"
+
+#~ msgid "Keep straight at the fork"
+#~ msgstr "Haladjon egyesen az elágazásnál"
+
+#~ msgid "Take the exit on the left"
+#~ msgstr "Válassz a baloldali kijáratot"
+
+#~ msgid "Keep left at the fork"
+#~ msgstr "Haladjon balra az elágazásnál"
+
+#~ msgid "Bicycle"
+#~ msgstr "Kerékpár"
+
+#~ msgid "Car"
+#~ msgstr "Gépkocsi"
+
+#~ msgid "Favorite"
+#~ msgstr "Kedvencek"
+
+#~ msgid "Waiting a good GPS signal…"
+#~ msgstr "Várakozás erősebb GPS jelre…"
+
+#, qt-format
+#~ msgid " to take the %1"
+#~ msgstr " ide: %1"
+
+#, qt-format
+#~ msgid " toward %1"
+#~ msgstr " egyenesen ide: %1"
+
+#~ msgid "Merge"
+#~ msgstr "Összevonás"
+
+#~ msgid "Keep right at the fork"
+#~ msgstr "Haladjon jobbra az elágazásnál"
+
+#, qt-format
+#~ msgid "© 2015 %1. Under license %2"
+#~ msgstr "© 2015 %1. Licenc: %2"
+
+#~ msgid "Walking"
+#~ msgstr "Gyaloglás"
+
+#~ msgid "Take the exit on the right"
+#~ msgstr "Válassza a jobb oldali kijáratot"
+
+#~ msgid "Translators:"
+#~ msgstr "Fordítók:"
+
+#~ msgid "Avoid Tolls"
+#~ msgstr "Fizetős utak elkerülése"
+
+#~ msgid "A Voice"
+#~ msgstr "Hang"
+
+#~ msgid "Go"
+#~ msgstr "Menjen"
+
+#~ msgid "Go to your right"
+#~ msgstr "Menjen jobbra"
+
+#~ msgid "Go to your left"
+#~ msgstr "Menjen balra"
+
+#~ msgid "Current road becomes"
+#~ msgstr "Az úti cél a jelenlegi úton lesz"
+
+#, qt-format
+#~ msgid "Enter the roundabout and take the exit %1"
+#~ msgstr "A körforgalomnál válassza a(z) %1. kijáratot"
+
+#, qt-format
+#~ msgid " onto %1"
+#~ msgstr " erre: %1"
+
+#, qt-format
+#~ msgid ", %1"
+#~ msgstr ", %1"
+
+#~ msgid "Convenience"
+#~ msgstr "Kényelem"
+
+#~ msgid "Ruins"
+#~ msgstr "Romok"
+
+#~ msgid ""
+#~ "Error finding route between points. Check the connection and try again"
+#~ msgstr ""
+#~ "Nem sikerült útvonalat találni a pontok között. Ellenőrizze a kapcsolatát és "
+#~ "próbálja újra."
+
+#~ msgid "Voice:"
+#~ msgstr "Hang:"
+
+#~ msgid "Privacy"
+#~ msgstr "Adatvédelem"
+
+#~ msgid "Fullscreen"
+#~ msgstr "Teljes képernyő"
+
+#~ msgid "Delete history"
+#~ msgstr "Előzmények törlése"
+
+#~ msgid "Coord:"
+#~ msgstr "Koord.:"
+
+#~ msgid "From Map"
+#~ msgstr "Térképről"
+
+#~ msgid "Share"
+#~ msgstr "Megosztás"
+
+#~ msgid "Share Position"
+#~ msgstr "Pozíció megosztása"
+
+#~ msgid "Current"
+#~ msgstr "Jelenlegi"
+
+#~ msgid "No history yet…"
+#~ msgstr "Nincsenek előzmények egyelőre…"
+
+#, qt-format
+#~ msgid "Sorry, no %1 found nearby. Try again with another radius"
+#~ msgstr "Sajnáljuk, nem található %1 a közelben. Próbálja nagyobb sugárral"
+
+#~ msgid "Nursery"
+#~ msgstr "Óvoda"
+
+#~ msgid "Pre-School"
+#~ msgstr "Iskolai felkészítő"
+
+#~ msgid "Station"
+#~ msgstr "Állomás"
+
+#~ msgid "Wi-Fi Points"
+#~ msgstr "Wi-Fi pontok"
+
+#~ msgid "Historic"
+#~ msgstr "Történelmi nevezetesség"
+
+#~ msgid "Cancel Route"
+#~ msgstr "Úti cél törlése"

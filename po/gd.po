@@ -1,0 +1,1612 @@
+# Gaelic; Scottish translation for unav
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the unav package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# GunChleoc <fios@foramnagaidhlig.net>, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: unav\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2018-10-15 18:38+0200\n"
+"PO-Revision-Date: 2018-06-11 20:51+0000\n"
+"Last-Translator: costales <Unknown>\n"
+"Language-Team: Fòram na Gàidhlig\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
+"X-Generator: Launchpad (build 18847)\n"
+"Language: gd\n"
+
+#: nav/class/Navigator.js:131
+msgid "Turn left"
+msgstr "Tionndaidh gun làimh chlì"
+
+#: nav/class/Navigator.js:133
+msgid "Turn right"
+msgstr "Tionndaidh gun làimh dheas"
+
+#: nav/class/Navigator.js:135
+msgid "Make a sharp left"
+msgstr "Tionndaidh gun làimh dheas gu grad"
+
+#: nav/class/Navigator.js:137
+msgid "Make a sharp right"
+msgstr "Tionndaidh gun làimh dheas gu grad"
+
+#: nav/class/Navigator.js:139
+msgid "Bear left"
+msgstr "Cum a-steach air an làimh chlì"
+
+#: nav/class/Navigator.js:141
+msgid "Bear right"
+msgstr "Cum a-steach air an làimh dheas"
+
+#: nav/class/Navigator.js:143
+msgid "Continue on the road"
+msgstr "Lean air adhart air an rathad seo"
+
+#: nav/class/Navigator.js:145
+msgid "Enter the roundabout and take the designated exit"
+msgstr "A-steach dhan timcheallan is gabh an rathad a-mach ainmichte"
+
+#: nav/class/Navigator.js:147
+msgid "Enter the roundabout and take the first exit"
+msgstr "A-steach dhan timcheallan is gabh a' chiad rathad a-mach"
+
+#: nav/class/Navigator.js:149
+msgid "Enter the roundabout and take the second exit"
+msgstr "A-steach dhan timcheallan is gabh an dàrna rathad a-mach"
+
+#: nav/class/Navigator.js:151
+msgid "Enter the roundabout and take the third exit"
+msgstr "A-steach dhan timcheallan is gabh an treas rathad a-mach"
+
+#: nav/class/Navigator.js:153
+msgid "Enter the roundabout and take the fourth exit"
+msgstr "A-steach dhan timcheallan is gabh an ceathramh rathad a-mach"
+
+#: nav/class/Navigator.js:155
+msgid "Enter the roundabout and take the fifth exit"
+msgstr "A-steach dhan timcheallan is gabh an còigeamh rathad a-mach"
+
+#: nav/class/Navigator.js:157
+msgid "Enter the roundabout and take the sixth exit"
+msgstr "A-steach dhan timcheallan is gabh an siathamh rathad a-mach"
+
+#: nav/class/Navigator.js:159
+msgid "Enter the roundabout and take the seventh exit"
+msgstr "A-steach dhan timcheallan is gabh an seachdamh rathad a-mach"
+
+#: nav/class/Navigator.js:161
+msgid "Enter the roundabout and take the eighth exit"
+msgstr "A-steach dhan timcheallan is gabh an t-ochdamh rathad a-mach"
+
+#: nav/class/Navigator.js:163
+msgid "Enter the roundabout and take the ninth exit"
+msgstr "A-steach dhan timcheallan is gabh an naoidheamh rathad a-mach"
+
+#: nav/class/Navigator.js:165
+msgid "Make a U-turn"
+msgstr ""
+
+#: nav/class/Navigator.js:167 nav/class/UI.js:619
+msgid "You have arrived at your destination"
+msgstr "Ràinig thu do cheann-uidhe"
+
+#: nav/class/Navigator.js:171
+msgid "Keep left"
+msgstr ""
+
+#: nav/class/Navigator.js:173
+msgid "Keep right"
+msgstr ""
+
+#: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
+msgid "Current Position"
+msgstr "Far a bheil thu an-dràsta"
+
+#: nav/class/UI.js:47
+msgid "Current Start"
+msgstr "An tòiseachadh làithreach"
+
+#: nav/class/UI.js:56
+msgid "Current End"
+msgstr "An deireadh làithreach"
+
+#: nav/class/UI.js:559
+msgid "Waiting for a GPS signal…"
+msgstr "A’ feitheamh ri siognail GPS..."
+
+#: nav/class/UI.js:566
+msgid "Searching for a route…"
+msgstr "A’ lorg slighe"
+
+#: nav/class/UI.js:570
+msgid "Drawing route…"
+msgstr "A’ tarraing na slighe..."
+
+#: nav/class/UI.js:574
+msgid "Trying search again soon…"
+msgstr "Feuch an lorg thu a-rithist e an ceann greis…"
+
+#: nav/class/UI.js:578
+msgid "Recalculating route…"
+msgstr "Ag ath-rannsachadh na slighe..."
+
+#: nav/class/UI.js:626
+msgid "Simulating route…"
+msgstr "A’ cruthachadh slighe mas fhìor..."
+
+#: nav/index.html.strings:1
+msgid "Start"
+msgstr "Tòisich"
+
+#: nav/index.html.strings:2 qml/Favorites.qml:248 qml/SettingsPage.qml:418
+msgid "Cancel"
+msgstr "Sguir dheth"
+
+#: nav/index.html.strings:3
+msgid "Not found"
+msgstr "Cha deach a lorg"
+
+#: nav/index.html.strings:4
+msgid "Route so long"
+msgstr "Tha an t-slighe ro fhada"
+
+#: nav/index.html.strings:5
+msgid "More than 1000km could affect the performance"
+msgstr "Dh'fhaoidte gum bi buaidh aig corr is 1000km air an dèanadas"
+
+#: nav/index.html.strings:6
+msgid "We recommend you a waypoint in the middle as destination"
+msgstr "Mholamaid puing-thurais mar cheann-uidhe sa mheadhan am badeigin"
+
+#: nav/index.html.strings:11 qml/Coordinate.qml:152 qml/Coordinate.qml:386
+#: qml/DownloadVoices.qml:250 qml/Favorites.qml:305 qml/Main.qml:1028
+msgid "Close"
+msgstr "Dùin"
+
+#: nav/index.html.strings:8
+msgid "GPS Denied"
+msgstr "Chaidh an GPS a dhiùltadh"
+
+#: nav/index.html.strings:9
+msgid "Error reading the GPS status"
+msgstr "Mearachd a’ leughadh staid a’ GPS"
+
+#: nav/index.html.strings:10
+msgid "Please review your device settings"
+msgstr "Thoir sùil air roghainnean an uidheim agad"
+
+#: qml/AboutPage.qml:27 qml/SettingsPage.qml:44
+msgid "About"
+msgstr "Mu dhèidhinn"
+
+#: qml/AboutPage.qml:38 qml/AboutPage.qml:39 qml/AboutPage.qml:40
+#: qml/AboutPage.qml:41
+msgid "Resources"
+msgstr "Goireasan"
+
+#: qml/AboutPage.qml:38
+msgid "Translations"
+msgstr "Eadar-theangachaidhean"
+
+#: qml/AboutPage.qml:39
+msgid "Answers"
+msgstr "Freagairtean"
+
+#: qml/AboutPage.qml:40
+msgid "Bugs"
+msgstr "Bugaichean"
+
+#: qml/AboutPage.qml:41
+msgid "Contact"
+msgstr "Neach-aithne"
+
+#: qml/AboutPage.qml:44 qml/AboutPage.qml:45 qml/AboutPage.qml:46
+#: qml/AboutPage.qml:47 qml/AboutPage.qml:48
+msgid "Developers"
+msgstr "Luchd-leasachaidh"
+
+#: qml/AboutPage.qml:46
+msgid "Founder"
+msgstr "Neach-stèidheachaidh"
+
+#: qml/AboutPage.qml:51
+msgid "Voice"
+msgstr "Guth"
+
+#: qml/AboutPage.qml:54
+msgid "Logo"
+msgstr "Suaicheantas"
+
+#: qml/AboutPage.qml:56 qml/AboutPage.qml:57 qml/AboutPage.qml:58
+msgid "Icons for empty states"
+msgstr "Ìomhaigheagan airson staidean falamh"
+
+#: qml/AboutPage.qml:61
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Akerbeltz https://launchpad.net/~fios\n"
+"  GunChleoc https://launchpad.net/~gunchleoc\n"
+"  costales https://launchpad.net/~costales"
+
+#: qml/AboutPage.qml:63
+msgid "Translators"
+msgstr "Eadar-theangadairean"
+
+#: qml/AboutPage.qml:67 qml/AboutPage.qml:68 qml/AboutPage.qml:69
+#: qml/AboutPage.qml:70 qml/AboutPage.qml:71 qml/AboutPage.qml:72
+#: qml/AboutPage.qml:73 qml/AboutPage.qml:74 qml/AboutPage.qml:75
+#: qml/AboutPage.qml:76 qml/AboutPage.qml:77 qml/AboutPage.qml:78
+#: qml/AboutPage.qml:79 qml/AboutPage.qml:80 qml/AboutPage.qml:81
+#: qml/AboutPage.qml:82
+msgid "Powered by"
+msgstr "Le cumhachd"
+
+#. TRANSLATORS: %1 and %2 are links that do not have to be translated: Year + Project + License
+#: qml/AboutPage.qml:124
+#, qt-format
+msgid "Version %1. Under license %2"
+msgstr "Tionndadh %1. Fo cheadachas %2"
+
+#: qml/Coordinate.qml:35
+msgid "Decimal"
+msgstr "Deicheach"
+
+#: qml/Coordinate.qml:48
+msgid "Sexagesimal"
+msgstr "Seasgadach"
+
+#: qml/Coordinate.qml:77 qml/Coordinate.qml:171
+msgid "Lat:"
+msgstr "Leud:"
+
+#: qml/Coordinate.qml:94 qml/Coordinate.qml:242
+msgid "Long:"
+msgstr "Fad:"
+
+#: qml/Coordinate.qml:109 qml/Coordinate.qml:312
+msgid "Show on Map"
+msgstr "Seall air a’ mhapa"
+
+#: qml/Coordinate.qml:149 qml/Coordinate.qml:383
+msgid "Coordinates are not valid"
+msgstr "Chan eil na co-chomharran seo dligheach"
+
+#: qml/Coordinate.qml:150
+msgid ""
+"Enter valid decimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Cuir a-steach co-chomharran deicheach dligheach\n"
+"\n"
+"Seo am fòrmat ris a bheil dùil:"
+
+#: qml/Coordinate.qml:384
+msgid ""
+"Enter valid sexagesimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Cuir a-steach co-chomharran seasgadach dligheach\n"
+"\n"
+"Seo am fòrmat ris a bheil dùil:"
+
+#: qml/DownloadVoices.qml:53
+msgid "Download voices"
+msgstr "Luchdaich a-nuas guthan"
+
+#: qml/DownloadVoices.qml:61
+msgid "Play current voice"
+msgstr "Cluich an guth làithreach"
+
+#: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
+msgid "How to add a voice"
+msgstr "Mar a chuireas tu guth ris"
+
+#: qml/DownloadVoices.qml:161
+msgid "By "
+msgstr "Le "
+
+#: qml/DownloadVoices.qml:208
+msgid "Cancel Download"
+msgstr "Sgur dhen luchdadh a-nuas"
+
+#: qml/DownloadVoices.qml:224
+msgid "About the voices"
+msgstr "Mu na guthan"
+
+#: qml/DownloadVoices.qml:230
+msgid "The stars are for the recommended voices."
+msgstr "Tha rionnag ris na guthan a mholamaid."
+
+#: qml/DownloadVoices.qml:238
+msgid "You can add a new voice to uNav following these steps:"
+msgstr "Seo na nì thu gus guth ùr a chur ri uNav:"
+
+#: qml/Favorites.qml:74
+msgid "No favorites yet"
+msgstr "Chan eil annsachd ann fhathast"
+
+#: qml/Favorites.qml:197 qml/SearchPage.qml:83
+msgid "Add Favorite"
+msgstr "Cuir annsachd ris"
+
+#: qml/Favorites.qml:197
+msgid "Edit Favorite"
+msgstr "Deasach an annsachd"
+
+#: qml/Favorites.qml:198
+msgid ""
+"There is already a favorite with that name. You can either overwrite it or "
+"enter a different name."
+msgstr ""
+"Tha an t-ainm sin air annsachd eile mu thràth. ’S urrainn dhut sgrìobhadh "
+"thairis air no ainm eile a chur a-steach."
+
+#: qml/Favorites.qml:232
+msgid "Insert a favorite name"
+msgstr "Cuir ainm ris 'na annsachd"
+
+#: qml/Favorites.qml:255
+msgid "Overwrite"
+msgstr "Sgrìobh thairis air"
+
+#: qml/Favorites.qml:255
+msgid "Add"
+msgstr "Cuir ris"
+
+#: qml/Favorites.qml:255
+msgid "Update"
+msgstr "Ùraich"
+
+#: qml/Favorites.qml:277
+msgid "Favorite Coordinates"
+msgstr ""
+
+#: qml/Favorites.qml:288
+msgid "Name: "
+msgstr ""
+
+#: qml/Favorites.qml:295
+msgid "Latitude: "
+msgstr ""
+
+#: qml/Favorites.qml:302
+msgid "Longitude: "
+msgstr ""
+
+#: qml/Location.qml:45 qml/PoiListPage.qml:146
+msgid "Time out! Please try again"
+msgstr "Dh'fhalbh an ùine air! Feuch ris a-rithist"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius.
+#: qml/Location.qml:53
+msgid "Sorry, nothing found. Try another search"
+msgstr "Duilich ach cha do lorg sinn dad. Feuch lorg eile"
+
+#: qml/Location.qml:141 qml/Location.qml:352 qml/Location.qml:414
+msgid "Search history"
+msgstr "Lorg san eachdraidh"
+
+#: qml/Location.qml:151 qml/Location.qml:358 qml/Location.qml:416
+msgid "Favorite history"
+msgstr "Eachdraidh nan annsachdan"
+
+#: qml/Location.qml:161 qml/Location.qml:355 qml/Location.qml:371
+#: qml/Location.qml:382 qml/Location.qml:397 qml/Location.qml:404
+#: qml/Location.qml:436 qml/Location.qml:442
+msgid "Nearby history"
+msgstr "Eachdraidh am fagas"
+
+#: qml/Location.qml:187
+msgid "No history yet"
+msgstr "Chan eil eachdraidh ann fhathast"
+
+#: qml/Location.qml:187
+msgid "History is disabled"
+msgstr "Tha an eachdraidh à comas"
+
+#: qml/Location.qml:200 qml/Location.qml:253 qml/PoiListPage.qml:163
+#: qml/components/POIQuickAccessGridView.qml:181
+msgid "Searching…"
+msgstr "'Ga lorg..."
+
+#: qml/Location.qml:249
+msgid "Search location"
+msgstr "Lorg san ionad seo"
+
+#: qml/Main.qml:235 qml/SettingsPage.qml:35
+msgid "Settings"
+msgstr "Roghainnean"
+
+#: qml/Main.qml:246
+msgid "Center on Position"
+msgstr "M’ ionad sa mheadhan"
+
+#: qml/Main.qml:250 qml/Main.qml:571
+msgid "Searching your position… This could take a while"
+msgstr "A' lorg d' ionad… Dh'fhaoidte gun doir seo greis"
+
+#: qml/Main.qml:264 qml/PoiPage.qml:83 qml/SearchPage.qml:69
+msgid "Search"
+msgstr "Lorg"
+
+#: qml/Main.qml:275
+msgid "Destination"
+msgstr "Ceann-uidhe"
+
+#: qml/Main.qml:437
+msgid "Error getting speed cameras!"
+msgstr "Mearachd a' faighinn camarathan-astair!"
+
+#: qml/Main.qml:440
+msgid "Error finding route! Retrying again in 1 minute…"
+msgstr ""
+
+#: qml/Main.qml:443
+msgid "Error finding route! Trying again…"
+msgstr "Mearachd le lorg slighe! Feuch ris a-rithist…"
+
+#: qml/Main.qml:488 qml/Main.qml:514
+msgid "Shared Position"
+msgstr "Ionad co-roinnte"
+
+#: qml/Main.qml:762
+msgid "Near to destination"
+msgstr "Faisg air a' cheann-uidhe"
+
+#: qml/Main.qml:763
+msgid "Cancel route"
+msgstr "Sguir dhen t-slighe"
+
+#: qml/Main.qml:809
+#, qt-format
+msgid "Coord: %1, %2"
+msgstr "Co-chomharran: %1, %2"
+
+#: qml/Main.qml:877 qml/PoiDetailsPage.qml:243
+msgid "Simulate from here! Now click on destination"
+msgstr "Atharrais on a sheo! Nise, briog air a' cheann-uidhe"
+
+#: qml/Main.qml:894
+msgid "Set a different coordinates for simulating"
+msgstr "Suidhich co-chomharran eile airson na h-atharrais"
+
+#: qml/Main.qml:1016
+msgid "Custom voices"
+msgstr "Guthan gnàthaichte"
+
+#: qml/Main.qml:1017
+msgid ""
+"American English voice will be the unique voice installed by default.\n"
+"\n"
+"You can set a custom voice in your language from Settings: Download custom "
+"voices.\n"
+"\n"
+"The list of voices will be updated by the users. Please check them out in "
+"the future.\n"
+msgstr ""
+"Cha dèid ach guth Beurla na h-Aimeireaga a stàladh o thùs.\n"
+"\n"
+"'S urrainn dhut guth gnàthaichte a shuidheachadh sa chànan agad ann an "
+"Roghainnean: Luchdaich a-nuas guthan gnàthaichte.\n"
+"\n"
+"Ùraichidh an luchd-cleachdaidh na guthan. Thoir sùil orra a-rithist o àm gu "
+"àm.\n"
+
+#: qml/Main.qml:1019
+msgid "Set a voice now"
+msgstr "Suidhich guth an-dràsta"
+
+#: qml/PoiDetailsPage.qml:89
+msgid "Lat, Long:"
+msgstr "Domhan-fhad/leud:"
+
+#: qml/PoiDetailsPage.qml:95 qml/PoiDetailsPage.qml:110
+msgid "Available"
+msgstr "Ri fhaighinn"
+
+#: qml/PoiDetailsPage.qml:97 qml/PoiDetailsPage.qml:112
+msgid "Not Available"
+msgstr "Chan eil seo ri fhaighinn"
+
+#: qml/PoiDetailsPage.qml:99
+msgid "Wi-Fi Hotspot Available"
+msgstr "Tha hotspot WiFi ri fhaighinn"
+
+#: qml/PoiDetailsPage.qml:101
+msgid "Wired Connection Available (ethernet connection)"
+msgstr "Tha ceangal uèirichte ri fhaighinn (ceangal Ethernet)"
+
+#: qml/PoiDetailsPage.qml:103
+msgid "Computer Terminal Available"
+msgstr "Tha tèirmineal coimpiutair ri fhaighinn"
+
+#: qml/PoiDetailsPage.qml:115
+msgid "Limited Availability"
+msgstr "Grunnan ri fhaighinn a-mhàin"
+
+#: qml/PoiDetailsPage.qml:174
+msgid "Loading POI details..."
+msgstr "A’ luchdadh mion-fhiosrachadh an àite inntinnich seo..."
+
+#: qml/PoiListPage.qml:45
+msgid "Show POIs on map"
+msgstr "Seall àitichean inntinneach air a’ mhapa"
+
+#: qml/PoiListPage.qml:68
+msgid "Unknown current position"
+msgstr "Chan eil fhios càit a bheil thu"
+
+#: qml/PoiListPage.qml:84
+msgid "Something went wrong. Please, try again…"
+msgstr "Chaidh rudeigin cearr. Am feuch thu ris a-rithist?"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius. %1 is the POI type eg..Pub, Airport
+#. Example string, "Sorry, no Airport found nearby. Try again with a larger search radius"
+#: qml/PoiListPage.qml:153
+#, qt-format
+msgid "Sorry, no %1 found nearby. Try again with a larger search radius"
+msgstr ""
+"Tha sinn duilich ach cha deach %1 a lorg am fagas. Feuch ris a-rithist ann "
+"an sgìre nas motha."
+
+#. TRANSLATORS: Abbreviation for Public Holiday. This string is used while showing the opening hours
+#. of a place which might be closed during public holidays.
+#: qml/PoiListPage.qml:361
+msgid "PH"
+msgstr "Làithean-saora"
+
+#. TRANSLATORS: This string indicates that a place is closed.
+#: qml/PoiListPage.qml:363
+msgid "Closed"
+msgstr "Dùine"
+
+#: qml/PoiPage.qml:64
+msgid "Back"
+msgstr "Air ais"
+
+#: qml/PoiPage.qml:118
+msgid "Filter POI categories by name"
+msgstr "Criathraich roinnean nan àitichean inntinneach a-rèir ainm"
+
+#: qml/PoiPage.qml:128
+msgid "Nearby"
+msgstr "Am fagas"
+
+#: qml/PoiPage.qml:147
+msgid "Most recent"
+msgstr "O chionn goirid"
+
+#: qml/PoiQuickAccessPage.qml:63
+msgid "Fast Nearest Editor: "
+msgstr "Deasaiche nan grad-ionadan: "
+
+#: qml/PoiQuickAccessPage.qml:201
+msgid "Selection"
+msgstr "Taghadh"
+
+#. TRANSLATORS: argument is a number > 1.
+#: qml/PoiQuickAccessPage.qml:203
+#, qt-format
+msgid "Max. %1 POIs can be selected."
+msgstr "Cha ghabh barrachd air %1 àite inntinneach a thaghadh."
+
+#: qml/PoiQuickAccessPage.qml:206 qml/SettingsPage.qml:439
+msgid "OK"
+msgstr "Ceart ma-thà"
+
+#: qml/RouteInfoListPage.qml:29
+msgid "Route Info"
+msgstr "Fiosrachadh na slighe"
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: qml/SearchPage.qml:100
+msgid "Location"
+msgstr "Ionad"
+
+#: qml/SearchPage.qml:100
+msgid "Favorites"
+msgstr "Annsachdan"
+
+#: qml/SearchPage.qml:100
+msgid "Coordinates"
+msgstr "Co-chomharran"
+
+#: qml/SearchPage.qml:150
+msgid "Add Current Position"
+msgstr "Cuir ris far a bheil thu an-dràsta"
+
+#: qml/SearchPage.qml:160
+msgid "Add Current Destination"
+msgstr "Cuir an ceann-uidhe làithreach ris"
+
+#: qml/SearchPage.qml:172
+msgid "Add by clicking on Map"
+msgstr "Briog air a’ mhapa airson a chur ris"
+
+#: qml/SettingsPage.qml:56
+msgid "A voice"
+msgstr "Guth"
+
+#: qml/SettingsPage.qml:57
+msgid "A notification"
+msgstr "Brath"
+
+#: qml/SettingsPage.qml:58
+msgid "None"
+msgstr "Chan eil gin"
+
+#: qml/SettingsPage.qml:68
+msgid "Kilometres"
+msgstr "Cilemeatairean"
+
+#: qml/SettingsPage.qml:69
+msgid "Miles"
+msgstr "Mìle"
+
+#: qml/SettingsPage.qml:95
+msgid "uNav link"
+msgstr ""
+
+#: qml/SettingsPage.qml:96
+msgid "Google Maps link"
+msgstr ""
+
+#: qml/SettingsPage.qml:97
+msgid "Standard GEO link"
+msgstr ""
+
+#: qml/SettingsPage.qml:107
+msgid "Online"
+msgstr "Air loidhne"
+
+#: qml/SettingsPage.qml:108
+msgid "Offline"
+msgstr "Far loidhne"
+
+#: qml/SettingsPage.qml:130
+msgid "Navigation"
+msgstr "Seòladaireachd"
+
+#: qml/SettingsPage.qml:137
+msgid "Guidance"
+msgstr "Stiùireadh"
+
+#: qml/SettingsPage.qml:169
+msgid "Download custom voices"
+msgstr "Luchdaich a-nuas guthan gnàthaichte"
+
+#: qml/SettingsPage.qml:176
+msgid "Car Options"
+msgstr ""
+
+#: qml/SettingsPage.qml:183
+msgid "Avoid tolls"
+msgstr ""
+
+#: qml/SettingsPage.qml:200
+msgid "Speed camera alerts"
+msgstr "Caismeachdan mu chamarathan-astair"
+
+#: qml/SettingsPage.qml:219
+msgid "Map"
+msgstr "Mapa"
+
+#: qml/SettingsPage.qml:226
+msgid "Mode"
+msgstr "Am modh"
+
+#: qml/SettingsPage.qml:261
+msgid "How to use offline maps"
+msgstr "Mar a chleachdas tu mapaichean far loidhne"
+
+#: qml/SettingsPage.qml:278
+msgid "Online style"
+msgstr "Stoidhle air loidhne"
+
+#: qml/SettingsPage.qml:312
+msgid "Units"
+msgstr "Aonadan"
+
+#: qml/SettingsPage.qml:346
+msgid "Share position as"
+msgstr ""
+
+#: qml/SettingsPage.qml:376
+msgid "History"
+msgstr "An eachdraidh"
+
+#: qml/SettingsPage.qml:383
+msgid "Store new searches"
+msgstr "Glèidh luirg ùra"
+
+#: qml/SettingsPage.qml:395 qml/SettingsPage.qml:405
+msgid "Clear history"
+msgstr "Falamhaich an eachdraidh"
+
+#: qml/SettingsPage.qml:406
+msgid "You'll delete the current history"
+msgstr "Sguabaidh tu às an eachdraidh làithreach"
+
+#: qml/SettingsPage.qml:409
+msgid "Delete"
+msgstr "Sguab às"
+
+#: qml/SettingsPage.qml:428
+msgid "Speed Camera alerts and the law"
+msgstr "Caismeachdan mu chamarathan-astair is an lagh"
+
+#: qml/SettingsPage.qml:429
+msgid ""
+"uNav is only reading the OpenStreetMap database.\n"
+"uNav will show a max speed notification and a Speed Camera marker (marker "
+"hidden for French users because of law).\n"
+"\n"
+"In a few countries Speed Camera alerts are illegal, then enable this option "
+"only if it's legal in the country."
+msgstr ""
+"Chan eil uNav ach a' leughadh stòr-dàta OpenStreetMap.\n"
+"Seallaidh uNav brath mun astar as motha a tha ceadaichte agus camara astair "
+"(am falach do luchd-cleachdaidh na Fraingise ri linn laghan).\n"
+"\n"
+"Tha rabhaidhean mu chamarathan astair an aghaidh an lagha ann an cuid a "
+"dhùthchannan. Na cleachd seo ach ma tha e laghail ’nad dhùthaich."
+
+#: qml/SettingsPage.qml:435
+msgid "Read more about it"
+msgstr "Barrachd fiosrachaidh air"
+
+#: qml/Share.qml:33
+msgid "Share location to"
+msgstr "Co-roinn an t-ionad air"
+
+#: qml/components/POIQuickAccessGridView.qml:92
+msgid "Error getting results. Please, check your data connection."
+msgstr ""
+"Mearachd a' faighinn nan toraidhean. Thoir sùil air a' cheangal dàta agad."
+
+#: qml/components/POIQuickAccessGridView.qml:97
+msgid "Sorry, no results found nearby."
+msgstr "Tha sinn duilich ach cha do lorg sinn toradh am fagas."
+
+#: qml/components/POIQuickAccessGridView.qml:175
+msgid "Current position unknown. Try again after a position update."
+msgstr ""
+"Chan eil fios càit a bheil thu. Feuch ris a-rithist às dèidh ùrachadh an "
+"ionaid."
+
+#: qml/js/PoiCategories.js:4
+msgid "Transport"
+msgstr "Còmhdhail"
+
+#: qml/js/PoiCategories.js:6
+msgid "Airport"
+msgstr "Port-adhair"
+
+#: qml/js/PoiCategories.js:7
+msgid "Bicycle Parking"
+msgstr "Pairceadh rothairean"
+
+#: qml/js/PoiCategories.js:8
+msgid "Bicycle Rental"
+msgstr "Rothairean air mhàl"
+
+#: qml/js/PoiCategories.js:9
+msgid "Bicycle Shop"
+msgstr "Bùth bhaidhseagalan"
+
+#: qml/js/PoiCategories.js:10
+msgid "Bus Station"
+msgstr "Stèisean-bhusaichean"
+
+#: qml/js/PoiCategories.js:11
+msgid "Bus Stop"
+msgstr "Stad-bhusaichean"
+
+#: qml/js/PoiCategories.js:12
+msgid "Car Rental"
+msgstr "Càraichean air mhàl"
+
+#: qml/js/PoiCategories.js:13
+msgid "Car Repair"
+msgstr "Càradh chàraichean"
+
+#: qml/js/PoiCategories.js:14
+msgid "Car Wash"
+msgstr "Nighe chàraichean"
+
+#: qml/js/PoiCategories.js:15
+msgid "Ferry Terminal"
+msgstr "Ionad aiseig"
+
+#: qml/js/PoiCategories.js:16
+msgid "Gas Station"
+msgstr "Stèisean peatroil"
+
+#: qml/js/PoiCategories.js:17
+msgid "Motorcycle Shop"
+msgstr "Bùth mhotar-baidhseagalan"
+
+#: qml/js/PoiCategories.js:18
+msgid "Parking"
+msgstr "Pàirceadh"
+
+#: qml/js/PoiCategories.js:19
+msgid "Subway Entrance"
+msgstr "Doras meatro"
+
+#: qml/js/PoiCategories.js:20
+msgid "Taxi"
+msgstr "Tacsaidh"
+
+#: qml/js/PoiCategories.js:21
+msgid "Train Station"
+msgstr "Stèisean-rèile"
+
+#: qml/js/PoiCategories.js:25
+msgid "Accommodation"
+msgstr "Cuid-oidhche"
+
+#: qml/js/PoiCategories.js:27
+msgid "Bed and Breakfasts"
+msgstr "Leabaidh ⁊ Lite"
+
+#: qml/js/PoiCategories.js:28
+msgid "Campsite"
+msgstr "Làrach-champachaidh"
+
+#: qml/js/PoiCategories.js:29
+msgid "Caravan Site"
+msgstr "Làrach charabhanaichean"
+
+#: qml/js/PoiCategories.js:30
+msgid "Guest House"
+msgstr "Taigh-aoigheachd"
+
+#: qml/js/PoiCategories.js:31
+msgid "Hostel"
+msgstr "Ostail"
+
+#: qml/js/PoiCategories.js:32
+msgid "Hotel"
+msgstr "Taigh-òsta"
+
+#: qml/js/PoiCategories.js:33
+msgid "Motel"
+msgstr "Motel"
+
+#: qml/js/PoiCategories.js:37
+msgid "Food & Drink"
+msgstr "Biadh ⁊ Deoch"
+
+#: qml/js/PoiCategories.js:39
+msgid "Bakery"
+msgstr "Bèicear"
+
+#: qml/js/PoiCategories.js:40
+msgid "Bar"
+msgstr "Bàr"
+
+#: qml/js/PoiCategories.js:41
+msgid "Butcher"
+msgstr "Feòladair"
+
+#: qml/js/PoiCategories.js:42
+msgid "Cafe"
+msgstr "Cafaidh"
+
+#: qml/js/PoiCategories.js:43
+msgid "Convenience Store"
+msgstr "Bùth a' bhaile"
+
+#: qml/js/PoiCategories.js:44
+msgid "Drinking water"
+msgstr "Uisge-òil"
+
+#: qml/js/PoiCategories.js:45
+msgid "Fast Food"
+msgstr "Biadh luath"
+
+#: qml/js/PoiCategories.js:46
+msgid "Ice Cream"
+msgstr "Uachdar-reòite"
+
+#: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:64
+msgid "Picnic Site"
+msgstr "Làrach cuirm-chnuic"
+
+#: qml/js/PoiCategories.js:48
+msgid "Pub"
+msgstr "Taigh-seinnse"
+
+#: qml/js/PoiCategories.js:49
+msgid "Restaurant"
+msgstr "Taigh-bìdh"
+
+#: qml/js/PoiCategories.js:53
+msgid "Tourism"
+msgstr ""
+
+#: qml/js/PoiCategories.js:55
+msgid "Alpine Hut"
+msgstr ""
+
+#: qml/js/PoiCategories.js:56
+msgid "Archaeological Site"
+msgstr "Làrach àrc-eòlasach"
+
+#: qml/js/PoiCategories.js:57 qml/js/PoiCategories.js:115
+msgid "Artwork"
+msgstr "Obair-ealain"
+
+#: qml/js/PoiCategories.js:58
+msgid "Attraction"
+msgstr ""
+
+#: qml/js/PoiCategories.js:59
+msgid "Battlefield"
+msgstr "Blàr-catha"
+
+#: qml/js/PoiCategories.js:60
+msgid "Castle"
+msgstr "Caisteal"
+
+#: qml/js/PoiCategories.js:61
+msgid "Monument"
+msgstr "Carragh-chuimhne"
+
+#: qml/js/PoiCategories.js:62 qml/js/PoiCategories.js:119
+msgid "Museum"
+msgstr "Taigh-tasgaidh"
+
+#: qml/js/PoiCategories.js:63
+msgid "Nature Reserve"
+msgstr "Tèarmann nàdair"
+
+#: qml/js/PoiCategories.js:65
+msgid "Ruin"
+msgstr "Tobhta"
+
+#: qml/js/PoiCategories.js:66
+msgid "Theme Park"
+msgstr "Theme Park"
+
+#: qml/js/PoiCategories.js:67
+msgid "Tourism Information"
+msgstr "Ionad luchd-turais"
+
+#: qml/js/PoiCategories.js:68
+msgid "Town Hall"
+msgstr "Talla a’ bhaile"
+
+#: qml/js/PoiCategories.js:69
+msgid "Viewpoint"
+msgstr ""
+
+#: qml/js/PoiCategories.js:70
+msgid "Zoo"
+msgstr ""
+
+#: qml/js/PoiCategories.js:74
+msgid "Services"
+msgstr "Seirbheisean"
+
+#: qml/js/PoiCategories.js:76
+msgid "ATM"
+msgstr "Toll-airgid"
+
+#: qml/js/PoiCategories.js:77
+msgid "Bank"
+msgstr "Banca"
+
+#: qml/js/PoiCategories.js:78
+msgid "Bureau de change"
+msgstr "Taigh-iomlaid airgid"
+
+#: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
+msgid "Place of Worship"
+msgstr "Àite-adhraidh"
+
+#: qml/js/PoiCategories.js:80
+msgid "Post Box"
+msgstr "Bogsa-puist"
+
+#: qml/js/PoiCategories.js:81
+msgid "Post Office"
+msgstr "Oifis a’ phuist"
+
+#: qml/js/PoiCategories.js:82
+msgid "Public Telephone"
+msgstr "Fòn poblach"
+
+#: qml/js/PoiCategories.js:83
+msgid "Toilet"
+msgstr "Taigh-beag"
+
+#: qml/js/PoiCategories.js:84
+msgid "Wi-Fi Point"
+msgstr "Puing WiFi"
+
+#: qml/js/PoiCategories.js:88
+msgid "Shopping"
+msgstr "Seopadaireachd"
+
+#: qml/js/PoiCategories.js:90
+msgid "Books"
+msgstr "Leabhraichean"
+
+#: qml/js/PoiCategories.js:91
+msgid "Charity"
+msgstr "Carthannas"
+
+#: qml/js/PoiCategories.js:92
+msgid "Clothes"
+msgstr "Aodach"
+
+#: qml/js/PoiCategories.js:93
+msgid "Computer Shop"
+msgstr "Bùth coimpiutaireachd"
+
+#: qml/js/PoiCategories.js:94
+msgid "Copy Shop"
+msgstr "Bùth lethbhreacan"
+
+#: qml/js/PoiCategories.js:95
+msgid "Florist"
+msgstr "Bùth fhlùraichean"
+
+#: qml/js/PoiCategories.js:96
+msgid "Gifts"
+msgstr "Prèasantan"
+
+#: qml/js/PoiCategories.js:97
+msgid "Hairdresser"
+msgstr "Gruagaire"
+
+#: qml/js/PoiCategories.js:98
+msgid "Jewelry"
+msgstr "Seudraidh"
+
+#: qml/js/PoiCategories.js:99
+msgid "Kiosk"
+msgstr "Kiosk"
+
+#: qml/js/PoiCategories.js:100
+msgid "Laundry"
+msgstr "Nigheadaireachd"
+
+#: qml/js/PoiCategories.js:101
+msgid "Mall"
+msgstr "Ionad-seopadaireachd"
+
+#: qml/js/PoiCategories.js:102
+msgid "Mobile Phone"
+msgstr "Fòn-làimhe"
+
+#: qml/js/PoiCategories.js:103
+msgid "Optician"
+msgstr "Speuclairiche"
+
+#: qml/js/PoiCategories.js:104
+msgid "Public Market"
+msgstr "Margadh poblach"
+
+#: qml/js/PoiCategories.js:105
+msgid "Shoes"
+msgstr "Brògan"
+
+#: qml/js/PoiCategories.js:106
+msgid "Supermarket"
+msgstr "Oll-mhargadh"
+
+#: qml/js/PoiCategories.js:107
+msgid "Travel Agency"
+msgstr "Buidheann-siubhail"
+
+#: qml/js/PoiCategories.js:108
+msgid "Vending Machine"
+msgstr "Inneal-reic"
+
+#: qml/js/PoiCategories.js:112
+msgid "Culture"
+msgstr "Cultar"
+
+#: qml/js/PoiCategories.js:114
+msgid "Art Center"
+msgstr "Ionad ealain"
+
+#: qml/js/PoiCategories.js:116
+msgid "Auditorium"
+msgstr "Ionad-èisteachd"
+
+#: qml/js/PoiCategories.js:117
+msgid "Gallery"
+msgstr "Gailearaidh"
+
+#: qml/js/PoiCategories.js:118
+msgid "Library"
+msgstr "Leabhar-lann"
+
+#: qml/js/PoiCategories.js:120
+msgid "Theatre"
+msgstr "Taigh-cluiche"
+
+#: qml/js/PoiCategories.js:124
+msgid "Entertainment"
+msgstr "Fèisteas"
+
+#: qml/js/PoiCategories.js:126
+msgid "Casino"
+msgstr "Casino"
+
+#: qml/js/PoiCategories.js:127
+msgid "Children Playground"
+msgstr "Raon-cluiche cloinne"
+
+#: qml/js/PoiCategories.js:128
+msgid "Cinema"
+msgstr "Taigh-dhealbh"
+
+#: qml/js/PoiCategories.js:129
+msgid "Gym"
+msgstr "Taigh-sunntais"
+
+#: qml/js/PoiCategories.js:130
+msgid "Night Club"
+msgstr "Club-oidhche"
+
+#: qml/js/PoiCategories.js:131
+msgid "Park"
+msgstr "Pàirc"
+
+#: qml/js/PoiCategories.js:135
+msgid "Education"
+msgstr "Foghlam"
+
+#: qml/js/PoiCategories.js:137
+msgid "College"
+msgstr "Colaiste"
+
+#: qml/js/PoiCategories.js:138
+msgid "Nursery School"
+msgstr "Sgoil-àraich"
+
+#: qml/js/PoiCategories.js:139
+msgid "University"
+msgstr "Oilthigh"
+
+#: qml/js/PoiCategories.js:143
+msgid "Health"
+msgstr "Slàinte"
+
+#: qml/js/PoiCategories.js:145
+msgid "Dentist"
+msgstr "Fiaclair"
+
+#: qml/js/PoiCategories.js:146
+msgid "Doctor"
+msgstr "Dotair"
+
+#: qml/js/PoiCategories.js:147
+msgid "Hospital"
+msgstr "Ospadal"
+
+#: qml/js/PoiCategories.js:148
+msgid "Pharmacy"
+msgstr "Bùth-cheimigeir"
+
+#: qml/js/PoiCategories.js:149
+msgid "Veterinary"
+msgstr "Lighiche-sprèidh"
+
+#: qml/js/PoiCategories.js:153
+msgid "Religious"
+msgstr "Rud cràbhach"
+
+#: qml/js/PoiCategories.js:155
+msgid "Cemetery"
+msgstr "Cladh"
+
+#: qml/js/PoiCategories.js:156
+msgid "Church"
+msgstr "Eaglais"
+
+#: qml/js/PoiCategories.js:157
+msgid "Crematorium"
+msgstr "Luaithreachan"
+
+#: qml/js/PoiCategories.js:162
+msgid "Emergency"
+msgstr "Ionad èiginneachd"
+
+#: qml/js/PoiCategories.js:164
+msgid "Phone"
+msgstr "Fòn"
+
+#: qml/js/PoiCategories.js:165
+msgid "Police Station"
+msgstr "Stèisean a’ phoileis"
+
+#: qml/js/PoiCategories.js:169
+msgid "Sport"
+msgstr "Spòrs"
+
+#: qml/js/PoiCategories.js:171
+msgid "Sports Center"
+msgstr "Ionad spòrs"
+
+#: qml/js/PoiCategories.js:172
+msgid "Stadium"
+msgstr "Stèideam"
+
+#: qml/js/PoiCategories.js:173
+msgid "Swimming Pool"
+msgstr "Amar-snàmh"
+
+#: qml/js/PoiCategories.js:174
+msgid "Track"
+msgstr "Raon-ruith"
+
+#: qml/js/PoiCategories.js:178
+msgid "Others"
+msgstr "Eile"
+
+#: qml/js/PoiCategories.js:180
+msgid "Courthouse"
+msgstr "Taigh-cùirte"
+
+#: qml/js/PoiCategories.js:181
+msgid "Embassy"
+msgstr "Ambasaid"
+
+#: qml/js/PoiCategories.js:182
+msgid "Prison"
+msgstr "Prìosan"
+
+#: qml/js/PoiCategories.js:183
+msgid "Recycling"
+msgstr "Ath-chuairteachadh"
+
+#: qml/js/PoiCategories.js:184
+msgid "Town"
+msgstr "Baile"
+
+#: qml/js/utils.js:58
+msgid "Current Location"
+msgstr "An t-àite làithreach"
+
+#: qml/tuto/Slide1.qml:40
+msgid "Welcome to uNav"
+msgstr "Fàilte gu uNav"
+
+#: qml/tuto/Slide1.qml:48
+msgid ""
+"A map viewer & GPS navigator\n"
+"\n"
+"Let's look at a few features together :)"
+msgstr ""
+"Mapa ⁊ uidheam-stiùiridh GPS\n"
+"\n"
+"Tiugainn, seallaidh mi dhut na tha againn dhut!"
+
+#: qml/tuto/Slide2.qml:43
+msgid "Long Touch on Map"
+msgstr "Brùthadh fada air a’ mhapa"
+
+#: qml/tuto/Slide2.qml:60
+msgid ""
+"Navigate, add to favorites, search nearby places, share points on the map or "
+"simulate a route"
+msgstr ""
+"Faigh stiùireadh, cruthaich annsachdan, fidir àitichean faisg ort, co-roinn "
+"ionadan air a’ mhapa no cruthaich slighe mas fhìor"
+
+#: qml/tuto/Slide3.qml:43
+msgid "Swipe Results"
+msgstr "Grad-shlaighd tro na toraidhean"
+
+#: qml/tuto/Slide3.qml:60
+msgid ""
+"Navigate directly, call the place, share the location, open web page, delete "
+"favorites…"
+msgstr ""
+"Faigh stiùireadh, cuir fòn gu àite, co-roinn an t-ionad, fosgail duilleag-"
+"lìn, sguab às annsachdan..."
+
+#: qml/tuto/Slide4.qml:43
+msgid "Touch Everything!"
+msgstr "Suath ri rud sam bith!"
+
+#: qml/tuto/Slide4.qml:61
+msgid ""
+"Touch summary to show current speed\n"
+"\n"
+"Touch step indications to review route steps"
+msgstr ""
+"Suath ris a’ ghearr-chunntas a dh’fhaicinn an t-astar làithreach\n"
+"\n"
+"Suath ri comharran ceuma airson sùil eile a thoirt air ceuman na slighe"
+
+#: qml/tuto/Slide5.qml:43
+msgid "Simulate a route"
+msgstr "Cruthaich slighe mas fhìor"
+
+#: qml/tuto/Slide5.qml:61
+msgid ""
+"Set an origin: Click on map and click on simulate icon\n"
+"\n"
+"Set a destination: Then, click on map and click the same icon again"
+msgstr ""
+"Suidhich ionad tòiseachaidh: Briog no thoir gnogag air a’ mhapa is briog air "
+"an ìomhaigheag atharrais\n"
+"\n"
+"Suidhich ceann-uidhe: Briog no thoir gnogag air a’ mhapa is air an dearbh-"
+"ìomhaigheag a-rithist an uairsin."
+
+#: qml/tuto/Slide6.qml:43
+msgid "uNav doesn't track you!"
+msgstr "Cha dèan uNav tracadh ort!"
+
+#: qml/tuto/Slide6.qml:60
+msgid ""
+"It is licensed under the GNU GPL\n"
+"\n"
+"and based completely on libre projects!"
+msgstr ""
+"Tha e fo cheadachas GNU GPL\n"
+"\n"
+"agus gu tur air pròiseactan libre!"
+
+#: qml/tuto/Slide6.qml:74
+msgid "Enjoy the Freedom!"
+msgstr "Saoirse!"
+
+#: qml/tuto/components/Walkthrough.qml:89
+msgid "Skip"
+msgstr "Gearr leum"
+
+#~ msgid "Follow"
+#~ msgstr "Lean air"
+
+#~ msgid "off"
+#~ msgstr "dheth"
+
+#~ msgid "Mode:"
+#~ msgstr "Modh:"
+
+#~ msgid "Car"
+#~ msgstr "Càr"
+
+#~ msgid "Bicycle"
+#~ msgstr "Baidhseagal"
+
+#~ msgid "Kilometers"
+#~ msgstr "Cilemeatair"
+
+#~ msgid "Favorite"
+#~ msgstr "Annsachd"
+
+#~ msgid "Continue"
+#~ msgstr "Lean air adhart"
+
+#~ msgid "Merge"
+#~ msgstr "Co-aonaich"
+
+#, qt-format
+#~ msgid "© 2015 %1. Under license %2"
+#~ msgstr "© 2015 %1. Fo cheadachas %2"
+
+#~ msgid "Translators:"
+#~ msgstr "Eadar-theangadairean:"
+
+#~ msgid "This app is powered by:"
+#~ msgstr "Gheibh an aplacaid seo taic o:"
+
+#~ msgid "Developers:"
+#~ msgstr "Luchd-leasachaidh:"
+
+#~ msgid "Voice:"
+#~ msgstr "Guth:"
+
+#~ msgid "Position unknown. Failed getting places nearby"
+#~ msgstr ""
+#~ "Chan aithne dhuinn an t-ionad. Cha deach leinn àiteachan 'na fhagas fhaighinn"
+
+#~ msgid "Add From Map"
+#~ msgstr "Cuir ris on mhapa"
+
+#~ msgid "Route"
+#~ msgstr "Slighe"
+
+#~ msgid "Fullscreen"
+#~ msgstr "Làn-sgrìn"
+
+#~ msgid "Mo"
+#~ msgstr "DiL"
+
+#~ msgid "Something was wrong. Please, try again…"
+#~ msgstr "Chaidh rudeigin cearr. Feuch ris a-rithist…"
+
+#, qt-format
+#~ msgid "Sorry, no %1 found nearby. Try again with another radius"
+#~ msgstr ""
+#~ "Duilich ach cha deach %1 a lorg am fagas. Feuch ris a-rithist le rèideas eile"
+
+#~ msgid "Fr"
+#~ msgstr "Dih"
+
+#~ msgid "Th"
+#~ msgstr "Dia"
+
+#~ msgid "We"
+#~ msgstr "DiC"
+
+#~ msgid "Tu"
+#~ msgstr "DiM"
+
+#~ msgid "Sa"
+#~ msgstr "DiS"
+
+#~ msgid "Su"
+#~ msgstr "DiD"
+
+#~ msgid "No history yet…"
+#~ msgstr "Chan eil eachdraidh ann fhathast…"
+
+#~ msgid "Where do we go?"
+#~ msgstr "Cà dèid sinn?"
+
+#~ msgid "Avoid Tolls"
+#~ msgstr "Seachnaich càintean"
+
+#, qt-format
+#~ msgid "Sorry, no result for %1"
+#~ msgstr "Duilich ach cha do lorg sinn %1"
+
+#~ msgid "A Notification"
+#~ msgstr "Brath"
+
+#~ msgid "A Voice"
+#~ msgstr "Guth"
+
+#~ msgid "Units:"
+#~ msgstr "Aonadan:"
+
+#~ msgid "Privacy"
+#~ msgstr "Prìobhaideachd"
+
+#~ msgid "Walking"
+#~ msgstr "A' coiseachd"
+
+#~ msgid "From Map"
+#~ msgstr "O mhapa"
+
+#~ msgid "Current"
+#~ msgstr "Làithreach"
+
+#~ msgid "Share"
+#~ msgstr "Co-roinn"
+
+#~ msgid "Share Position"
+#~ msgstr "Co-roinn an t-ionad"
+
+#~ msgid "Go There"
+#~ msgstr "Rach ann"
+
+#~ msgid "Cancel Route"
+#~ msgstr "Sguir dhen t-slighe"
+
+#~ msgid "Delete history"
+#~ msgstr "Sguab às an eachdraidh"
+
+#~ msgid "Buy Donate Version"
+#~ msgstr "Ceannaich e mar thìodhlac"
+
+#~ msgid "Coord:"
+#~ msgstr "Co-comh:"
+
+#~ msgid "B&B"
+#~ msgstr "L⁊L"
+
+#~ msgid "Historic"
+#~ msgstr "Rud eachdraidheil"
+
+#~ msgid "You are near to the destination"
+#~ msgstr "Tha thu faisg air do cheann-uidhe"
+
+#~ msgid "Go"
+#~ msgstr "Rach"
+
+#~ msgid "Go to your right"
+#~ msgstr "Rach gun taobh deas"
+
+#~ msgid "Go to your left"
+#~ msgstr "Rach gun taobh chlì"
+
+#~ msgid "Your destination is on the right"
+#~ msgstr "Tha do cheann-uidhe air do làimh dheas"
+
+#~ msgid "Your destination is on the left"
+#~ msgstr "Tha do cheann-uidhe air do làimh chlì"
+
+#~ msgid "Make a left U-turn"
+#~ msgstr "Dèan car iomlan gun làimh chlì"
+
+#~ msgid "Make a right U-turn"
+#~ msgstr "Dèan car iomlan gun làimh dheas"
+
+#~ msgid "Take the exit on the left"
+#~ msgstr "Gabh an rathad a-mach air an làimh chlì"
+
+#~ msgid "Turn right on ramp"
+#~ msgstr "Tionndaidh gun làimh dheas air an rampa"
+
+#~ msgid "Stay straight on ramp"
+#~ msgstr "Cum a’ dol dìreach air adhart air an rampa"
+
+#~ msgid "Take the exit on the right"
+#~ msgstr "Gabh an rathad a-mach air an làimh dheas"
+
+#~ msgid "Turn left on ramp"
+#~ msgstr "Tionndaidh gun làimh chlì air an rampa"
+
+#~ msgid "Leave the Ferry"
+#~ msgstr "Rach far an aiseig"
+
+#~ msgid "Keep right at the fork"
+#~ msgstr "Cum ris an taobh deas aig a’ ghobhal"
+
+#~ msgid "Take the Ferry"
+#~ msgstr "Gabh an t-aiseag"
+
+#, qt-format
+#~ msgid " onto %1"
+#~ msgstr " a-steach air %1"
+
+#~ msgid "Keep straight at the fork"
+#~ msgstr "Cum a’ dol dìreach air adhart aig a’ ghobhal"
+
+#~ msgid "Keep left at the fork"
+#~ msgstr "Cum ris an taobh chlì aig a’ ghobhal"
+
+#~ msgid ""
+#~ "Error finding route between points. Check the connection and try again"
+#~ msgstr ""
+#~ "Cha b’ urrainn dhuinn slighe a lorg eadar na puingean. Thoir sùil air a’ "
+#~ "cheangal is feuch ris a-rithist."
+
+#, qt-format
+#~ msgid ", %1"
+#~ msgstr ", %1"
+
+#~ msgid "Convenience"
+#~ msgstr "Bùth"
+
+#, qt-format
+#~ msgid " toward %1"
+#~ msgstr " a dh’ionnsaigh %1"
+
+#, qt-format
+#~ msgid " to take the %1"
+#~ msgstr " a ghabhail an %1"
+
+#, qt-format
+#~ msgid ". Exit %1"
+#~ msgstr ". Rathad a-mach %1"
+
+#~ msgid "Exit the roundabout"
+#~ msgstr "Fàg an timcheallan"
+
+#, qt-format
+#~ msgid "Enter the roundabout and take the exit %1"
+#~ msgstr "A-steach dhan timcheallan is gabh an rathad a-mach %1"
+
+#~ msgid "Current road becomes"
+#~ msgstr "Thèid an rathad làithreach na"

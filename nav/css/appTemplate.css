@@ -1,0 +1,2063 @@
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>
+ */
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>
+ */
+/*
+ * Colours
+ */
+/*
+ * Font family
+ */
+/*
+ * Slider
+ */
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>
+ */
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>
+ */
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as 
+ * published by the Free Software Foundation; either version 3 of the 
+ * License, or
+ * (at your option) any later version.
+ 
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ 
+ * You should have received a copy of the GNU Lesser General Public 
+ * License along with this program. If not, see 
+ * <http://www.gnu.org/licenses/>.
+ */
+/* Hard reset
+-------------------------------------------------- */
+* {
+  outline: none;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+section,
+summary,
+time,
+audio,
+video {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>
+ */
+/* ----------------------------------
+ * Tabs
+ * ---------------------------------- */
+/* Workarround to load the Ubuntu Light font pad.lv/1186372 */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url(ubuntu-light.woff) format("woff");
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Ubuntu Light"), local("Ubuntu-Light"), url(ubuntu-light.woff) format("woff");
+}
+[data-role="header"] {
+  background: #ededed;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+[data-role="header"]:after {
+  background: #c2c2c2;
+  content: "";
+  border-top: 1px solid #afafaf;
+  height: 15px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 60px;
+}
+
+[data-role="tabs"] {
+  background: #ededed;
+  -webkit-box-shadow: 0 0px 10px rgba(140, 140, 140, 0.3);
+  box-shadow: 0 0px 10px rgba(140, 140, 140, 0.3);
+  width: 160px;
+  max-height: 250px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  left: 0;
+  top: 61px;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+[data-role="tabs"].opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+[data-role="tabitem"] {
+  position: relative;
+  padding: 16px 16px;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+[data-role="tabitem"]:only-child {
+  border-bottom: 0;
+}
+[data-role="tabitem"].active {
+  display: none;
+}
+[data-role="tabitem"].inactive {
+  display: block;
+}
+[data-role="tabitem"]:active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-role="back-btn"] {
+  background: #ededed;
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  cursor: pointer;
+  border: none;
+  position: relative;
+}
+[data-role="back-btn"]:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: transparent url("/usr/share/icons/suru/actions/scalable/back.svg") no-repeat center center;
+  background-size: 100%;
+  margin: 0 auto;
+}
+[data-role="back-btn"]:disabled {
+  background: transparent;
+  width: 0;
+}
+[data-role="back-btn"]:active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-role="tabs-btn"] {
+  background: #ededed;
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  z-index: 10;
+}
+[data-role="tabs-btn"]:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: transparent url("/usr/share/icons/suru/actions/scalable/navigation-menu.svg") no-repeat center center;
+  background-size: 100%;
+  margin: 0 auto;
+}
+[data-role="tabs-btn"]:active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-role="back-btn"]:disabled + [data-role="tabtitle"],
+[data-role="back-btn"] + [data-role="tabtitle"],
+[data-role="tabs-btn"] + [data-role="tabtitle"],
+[data-role="tabs"] + [data-role="tabtitle"] {
+  width: calc(100% - 140px);
+}
+
+[data-role="tabtitle"] {
+  font-family: "Ubuntu";
+  font-size: x-large;
+  font-weight: 300;
+  text-decoration: none;
+  background: #ededed;
+  color: #5d5d5d;
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 10;
+}
+
+[data-role="tab"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+[data-role="tab"]:first-child {
+  display: block;
+}
+
+[data-role="actions"] {
+  float: right;
+  height: 60px;
+  display: inline-block;
+  padding-right: 8px;
+  background: #ededed;
+  position: relative;
+  z-index: 10;
+}
+[data-role="actions"] button {
+  border: 0;
+  padding: 0;
+  width: 40px;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  float: left;
+  background: transparent;
+}
+[data-role="actions"] button img {
+  position: relative;
+  top: 5px;
+}
+[data-role="actions"] button:disabled {
+  opacity: 0.3;
+}
+[data-role="actions"] button:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  background-size: 100%;
+  margin: 0 auto;
+}
+[data-role="actions"] button:active {
+  background: rgba(0, 0, 0, 0.05);
+}
+[data-role="actions"] [data-role="actions-wrapper"] {
+  display: none;
+}
+[data-role="actions"] [data-role="actions-wrapper"]:first-child {
+  display: block;
+}
+
+[data-role="actions-overflow-icon"] {
+  background: transparent;
+}
+[data-role="actions-overflow-icon"]:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: transparent url("/usr/share/icons/suru/actions/scalable/contextual-menu.svg") no-repeat center center !important;
+  background-size: 100% !important;
+  margin: 0 auto;
+}
+[data-role="actions-overflow-icon"]:active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-role="actions-overflow-list"] {
+  background: #ededed;
+  -webkit-box-shadow: 0 0px 10px rgba(140, 140, 140, 0.3);
+  box-shadow: 0 0px 10px rgba(140, 140, 140, 0.3);
+  width: 160px;
+  max-height: 250px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  right: 0;
+  top: 61px;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+}
+[data-role="actions-overflow-list"].opened {
+  visibility: visible;
+  opacity: 1;
+}
+[data-role="actions-overflow-list"] li {
+  position: relative;
+  padding: 16px 16px;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: left;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 45px;
+  cursor: pointer;
+  background: transparent no-repeat center left;
+  background-size: 20px;
+  background-position-x: 10px;
+}
+[data-role="actions-overflow-list"] li:only-child {
+  border-bottom: 0;
+}
+[data-role="actions-overflow-list"] li:active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-role="overlay"] {
+  position: fixed;
+  top: 75px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: transparent;
+  display: none;
+}
+[data-role="overlay"].active {
+  display: block;
+}
+
+/*
+ * Copyright (C) 2013, 2014 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+* Icons
+* ---------------------------------- */
+[data-role="icon"] {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+[data-role="icon"][data-icon="call"] {
+  background: url("/usr/share/icons/suru/actions/scalable/icon-call.svg") no-repeat scroll center center transparent;
+  background-size: 26px;
+}
+[data-role="icon"][data-icon="caret"] {
+  background: url(../img/toolkit/chevron_down@30.png) no-repeat scroll center center transparent;
+  background-size: 26px;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Pagestack
+ * ---------------------------------- */
+[data-role="pagestack"] {
+  position: relative;
+  -webkit-transition: all 0 linear;
+  transition: all 0 linear;
+}
+
+[data-role="page"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+[data-role="pagestack"] > [data-role="page"]:first-child,
+[data-role="mainview"] > [data-role="page"] {
+  display: block;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Text inputs
+ * ---------------------------------- */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
+input[type="number"],
+textarea {
+  -webkit-box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.1);
+  background: #cfcfcf;
+  border: 0;
+  border-radius: 6px;
+  color: #757373;
+  font-family: Ubuntu;
+  font-size: 0.8rem;
+  padding: 8px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  background: #fff;
+  color: #757373;
+  font-family: Ubuntu;
+}
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="email"][disabled],
+input[type="tel"][disabled],
+input[type="search"][disabled],
+input[type="url"][disabled],
+input[type="number"][disabled],
+textarea[disabled] {
+  background: rgba(255, 255, 255, 0.1);
+  color: darkgray;
+}
+input[type="text"]:not([value]),
+input[type="password"]:not([value]),
+input[type="email"]:not([value]),
+input[type="tel"]:not([value]),
+input[type="search"]:not([value]),
+input[type="url"]:not([value]),
+input[type="number"]:not([value]),
+textarea:not([value]) {
+  color: #757373;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+  width: 190px;
+}
+
+.textfield.clear:focus {
+  background: url(artwork/icon_clear@20.png) no-repeat 97% center white;
+  background-size: 12%;
+}
+
+.textfield.label,
+.textarea.label {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: none !important;
+  font-size: 12px;
+  padding: 0 !important;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Progress + activities
+ * ---------------------------------- */
+progress {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 100%;
+  position: relative;
+  background: #b2b2b2;
+  border-radius: 6px;
+  overflow: hidden;
+  /* Bigger Spinner */
+  /* Progress bar */
+}
+progress:after {
+  content: attr(data-percentage);
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  top: -28px;
+  opacity: 1;
+}
+progress:not([value]) {
+  background: url(../img/toolkit/spinner@8.png) no-repeat center center/100% auto;
+  -webkit-animation: 1s rotate infinite steps(30);
+  animation: 1s rotate infinite steps(30);
+  width: 24px;
+  height: 24px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+progress.bigger:not([value]) {
+  background: url(../img/toolkit/spinner@30.png) no-repeat center center/100% auto;
+  width: 90px;
+  height: 90px;
+}
+progress:not([value])::-webkit-progress-bar {
+  background: none;
+  -webkit-box-shadow: none;
+}
+progress[value]::-webkit-progress-value {
+  width: 100%;
+  background: #2ab7ec;
+  border: none;
+  display: block;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+progress[value]::-webkit-progress-bar {
+  padding: 1px;
+  background-color: rgba(192, 192, 192, 0.1);
+  width: 100%;
+  height: 35px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 0;
+  -webkit-box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+progress[value].infinite::-webkit-progress-value {
+  -webkit-appearance: none;
+}
+progress.infinite:after {
+  content: "In progress";
+  -webkit-animation: 1.3s fade-in-out infinite;
+  animation: 1.3s fade-in-out infinite;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* Animations */
+@-webkit-keyframes rotate {
+  from {
+	-webkit-transform: rotate(1deg);
+  }
+
+  to {
+	-webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fade-in-out {
+  0% {
+	opacity: 0;
+  }
+
+  50% {
+	opacity: 1;
+  }
+
+  100% {
+	opacity: 0;
+  }
+}
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Dialog
+ * ---------------------------------- */
+[data-role="dialog"] {
+  background: #000;
+  opacity: 0.9;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  font-size: 0;
+  /* Using font-size: 0; we avoid the unwanted visual space (about 3px)
+  created by white-spaces and break lines in the code betewen inline-block elements */
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  display: none;
+}
+[data-role="dialog"].active {
+  display: block;
+}
+[data-role="dialog"] > section {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  color: #FAFAFA;
+  width: 100%;
+  display: inline-block;
+  /*overflow-y: scroll;*/
+  vertical-align: middle;
+  white-space: normal;
+}
+[data-role="dialog"]:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.1rem;
+  height: 100%;
+  margin-left: -0.1rem;
+}
+[data-role="dialog"] h1 {
+  font-size: 1.3rem;
+  line-height: 1.5em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+[data-role="dialog"] p {
+  font-size: 0.9rem;
+  line-height: 1.8em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+[data-role="dialog"] menu {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: nowrap;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+}
+[data-role="dialog"] menu [data-role="button"] {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 200px;
+}
+[data-role="dialog"] menu [data-role="button"]:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet */
+@media only screen and (min-width: 870px) {
+  [data-role="dialog"] {
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 1;
+  }
+  [data-role="dialog"] > section {
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	width: 18.7rem;
+	padding: 1.8rem;
+  }
+  [data-role="dialog"] input[type="text"],
+  [data-role="dialog"] input[type="password"],
+  [data-role="dialog"] input[type="email"],
+  [data-role="dialog"] input[type="tel"],
+  [data-role="dialog"] input[type="search"],
+  [data-role="dialog"] input[type="url"],
+  [data-role="dialog"] input[type="number"] {
+	width: 14rem;
+  }
+  [data-role="dialog"] menu [data-role="button"] {
+	width: 100%;
+	max-width: 100%;
+  }
+
+  @keyframes shake {
+	0% {
+	  -webkit-transform: translate3d(0, 0, 0);
+	}
+
+	10% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	20% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	30% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	40% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	50% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	60% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	70% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	80% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	90% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	100% {
+	  -webkit-transform: translate3d(0, 0, 0);
+	}
+  }
+  @-webkit-keyframes shake {
+	0% {
+	  -webkit-transform: translate3d(0, 0, 0);
+	}
+
+	10% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	20% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	30% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	40% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	50% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	60% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	70% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	80% {
+	  -webkit-transform: translate3d(20px, 0, 0);
+	}
+
+	90% {
+	  -webkit-transform: translate3d(-20px, 0, 0);
+	}
+
+	100% {
+	  -webkit-transform: translate3d(0, 0, 0);
+	}
+  }
+  .shake {
+	-webkit-animation: shakeIt .9s ease-in;
+	animation: shakeIt .9s ease-in;
+  }
+}
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>
+ */
+/* ----------------------------------
+ * Buttons
+ * ---------------------------------- */
+[data-role="button"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  height: 42px;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #dd4814;
+  border: 2px solid #dd4814;
+  border-radius: 6px;
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+[data-role="button"].positive {
+  background: #38b44a;
+  color: white;
+  border-color: #38b44a;
+}
+[data-role="button"].information {
+  background: #2ab7ec;
+  color: white;
+  border-color: #2ab7ec;
+}
+[data-role="button"].secondary {
+  background: white;
+  color: #888888;
+}
+[data-role="button"].negative {
+  background: #929292;
+  color: white;
+  border-color: #929292;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Sliders
+ * ---------------------------------- */
+input[type=range] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, rgba(175, 175, 175, 0.3) 0%, rgba(175, 175, 175, 0.3) 100%);
+  background-position: center;
+  background-size: 99% 4px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  width: auto;
+  height: 36px;
+  border-radius: 1px;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /*&::-moz-range-thumb:before {
+	  position: absolute;
+	  top: ($range-slider-height / 2) - ($range-track-height / 2);
+	  left: -2000px;
+	  width: 2000px;
+	  height: $range-track-height;
+	  background: $ubuntu_orange;
+	  content: ' ';
+  }*/
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  background-color: #fff;
+  pointer-events: none;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+input[type=range]::-webkit-slider-thumb:before {
+  /* what creates the colorful line on the left side of the slider */
+  position: absolute;
+  top: 6px;
+  left: -2000px;
+  width: 2000px;
+  height: 4px;
+  background: #dd4814;
+  content: ' ';
+}
+input[type=range]::-moz-range-track {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -moz-linear-gradient(to right, rgba(175, 175, 175, 0.3) 0%, rgba(175, 175, 175, 0.3) 100%);
+  background-position: center;
+  background-size: 99% 4px;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 36px;
+  border: 0;
+  border-radius: 1px;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+input[type=range]::-moz-range-thumb {
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  pointer-events: none;
+  border: 0;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+label:not([for]) {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.25rem;
+  height: 2.2rem;
+  position: relative;
+  background: none;
+}
+label:not([for]) input[type="checkbox"] {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+label:not([for]) input[type="checkbox"] + span {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -1.1rem 0 0 -1.1rem;
+  width: 2rem;
+  height: 2rem;
+  pointer-events: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  background-position-y: 30px;
+  -webkit-transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, background-position 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, background-position 0.3s ease-in-out;
+}
+label:not([for]) input[type="checkbox"]:checked + span {
+  background: #dd4814 url(../img/toolkit/tick-white@30.png) no-repeat 0.3rem 0.3rem;
+  background-size: 75% 75%;
+  background-position-y: 5px;
+  -webkit-transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, background-position 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in-out, background-position 0.3s ease-in-out;
+}
+label:not([for]) input[type="checkbox"]:disabled + span {
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+label:not([for]) input[type="checkbox"]:disabled:checked + span {
+  background: rgba(221, 72, 20, 0.5) url(../img/toolkit/tick-white@30.png) no-repeat 0.3rem 0.3rem !important;
+  background-size: 75% 75% !important;
+}
+
+label input[type="checkbox"][data-type="switch"] + span.toggle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -0.6rem 0 0 -1.1rem;
+  width: 2.25rem;
+  height: 1.1rem;
+  pointer-events: none;
+  overflow: hidden;
+  background: rgba(136, 136, 136, 0.3);
+}
+label input[type="checkbox"][data-type="switch"] + span.toggle > span.toggle-bg {
+  background: transparent url(../img/toolkit/unCheckbox.png) no-repeat 0.2rem 0.17rem;
+  background-size: 90% 75%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 2.25rem;
+  height: 1.05rem;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+}
+label input[type="checkbox"][data-type="switch"] + span.toggle > span.toggle-handle {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 2;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: background 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+label input[type="checkbox"][data-type="switch"]:checked + span.toggle {
+  background: rgba(136, 136, 136, 0.3) !important;
+}
+label input[type="checkbox"][data-type="switch"]:checked + span.toggle > span.toggle-bg {
+  background: transparent url(../img/toolkit/Checkbox.png) no-repeat 0.2rem 0.17rem;
+  background-size: 90% 75%;
+}
+label input[type="checkbox"][data-type="switch"]:checked + span.toggle > span.toggle-handle {
+  background: #00a132;
+  -webkit-transform: translate3d(19px, 0, 0);
+  transform: translate3d(19px, 0, 0);
+}
+
+label input[data-type="switch"]:disabled + span.toggle {
+  background: rgba(136, 136, 136, 0.3) !important;
+}
+label input[data-type="switch"]:disabled + span.toggle > span.toggle-handle {
+  opacity: 0.4;
+}
+label input[data-type="switch"]:disabled:checked + span.toggle > span.toggle-handle {
+  opacity: 0.4;
+  -webkit-transform: translate3d(19px, 0, 0);
+  transform: translate3d(19px, 0, 0);
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+.has_actions {
+  top: 65px !important;
+  left: 10px !important;
+  right: 10px;
+}
+.has_actions li {
+  text-align: left !important;
+  padding-left: 45px !important;
+  cursor: pointer;
+  background: transparent no-repeat center left;
+  background-size: 25px;
+  background-position-x: 10px;
+}
+.has_actions:before {
+  right: 5px;
+  left: auto !important;
+}
+
+.popover,
+[data-role="popover"] {
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.98);
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  z-index: 110;
+  left: 0;
+  top: 0;
+  color: #787878;
+  font-size: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+}
+.popover.active,
+[data-role="popover"].active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+.popover .list,
+.popover ul,
+[data-role="popover"] .list,
+[data-role="popover"] ul {
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  width: auto;
+  max-height: 250px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.popover .list li,
+.popover ul li,
+[data-role="popover"] .list li,
+[data-role="popover"] ul li {
+  position: relative;
+  padding: 16px 20px;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.popover .list li a,
+.popover ul li a,
+[data-role="popover"] .list li a,
+[data-role="popover"] ul li a {
+  color: #787878;
+  text-decoration: none;
+}
+.popover .list li.active,
+.popover ul li.active,
+[data-role="popover"] .list li.active,
+[data-role="popover"] ul li.active {
+  background: #ebebeb;
+  border-top: 1px solid #fcfcfc;
+}
+.popover .list li.active a,
+.popover ul li.active a,
+[data-role="popover"] .list li.active a,
+[data-role="popover"] ul li.active a {
+  color: #dd4814;
+  text-decoration: none;
+}
+.popover .list li:only-child,
+.popover ul li:only-child,
+[data-role="popover"] .list li:only-child,
+[data-role="popover"] ul li:only-child {
+  border-bottom: 0;
+}
+
+/* Caret */
+.popover[data-gravity]:before,
+.popover[data-gravity]:after,
+[data-role="popover"][data-gravity]:before,
+[data-role="popover"][data-gravity]:after {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: '';
+}
+
+.popover[data-gravity="n"]:before,
+[data-role="popover"][data-gravity="n"]:before {
+  top: -15px;
+  margin-left: -18px;
+  background: transparent url(../img/toolkit/UpArrow@18.png) no-repeat 0.5rem 0.5rem;
+  background-size: 50% 50%;
+  width: 28px;
+  height: 15px;
+}
+
+.popover[data-gravity="w"]:before,
+[data-role="popover"][data-gravity="w"]:before {
+  top: 50%;
+  margin-left: -17px;
+  margin-top: -18px;
+  background: transparent url(../img/toolkit/LeftArrow@18.png) no-repeat 0.5rem 0.5rem;
+  background-size: 50% 50%;
+  width: 18px;
+  height: 37px;
+  left: 0;
+}
+
+.popover[data-gravity="s"]:after,
+[data-role="popover"][data-gravity="s"]:after {
+  bottom: -9px;
+  margin-left: -18px;
+  background: transparent url(../img/toolkit/DownArrow@18.png) no-repeat 0.5rem 0.5rem;
+  background-size: 50% 50%;
+  width: 37px;
+  height: 18px;
+}
+
+.popover[data-gravity="e"]:before,
+[data-role="popover"][data-gravity="e"]:before {
+  top: 50%;
+  margin-right: -10px;
+  margin-top: -18px;
+  background: transparent url(../img/toolkit/RightArrow@18.png) no-repeat 0.5rem 0.5rem;
+  background-size: 50% 50%;
+  width: 18px;
+  height: 37px;
+  right: 0;
+  left: initial;
+}
+
+.has_tabs {
+  top: 65px;
+  left: 10px;
+  right: 10px;
+}
+.has_tabs li {
+  text-align: left !important;
+  padding-left: 20px !important;
+  cursor: pointer;
+}
+.has_tabs:before {
+  left: 30px !important;
+}
+
+/* Tablet */
+@media only screen and (min-width: 870px) {
+  .popover,
+  [data-role="popover"] {
+	width: 320px;
+  }
+
+  .has_actions {
+	left: auto !important;
+	right: 10px !important;
+  }
+}
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Lists
+ * ---------------------------------- */
+[data-role="list"] {
+  border-top: 1px solid #f0f0f0;
+}
+[data-role="list"] header {
+  border-bottom: 0.1rem solid #c9c9c9;
+  line-height: 1.8rem;
+  color: #787878;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+[data-role="list"] ul {
+  list-style: none;
+  overflow: hidden;
+}
+[data-role="list"] ul li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 3.1rem;
+  border-bottom: solid 0.1rem #c7c7c7;
+  color: #787878;
+  position: relative;
+}
+[data-role="list"] ul li > a {
+  text-decoration: none;
+  color: #787878;
+  display: block;
+  height: 3rem;
+  position: relative;
+  border: none;
+  line-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  border-top: 1px solid #ebebeb;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+[data-role="list"] ul li > a:after {
+  content: "";
+  background: transparent url(../img/toolkit/chevron@27.png) no-repeat 0.5rem 0.5rem;
+  background-size: 40% 75%;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 50%;
+  right: 0;
+  margin-top: -1.2rem;
+  z-index: 0;
+}
+[data-role="list"] ul li > a:active {
+  background: #e6e6e6;
+  border-color: #ebebeb;
+}
+[data-role="list"] ul li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  display: block;
+  color: #787878;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  line-height: 1rem;
+}
+[data-role="list"] ul li p:only-child, [data-role="list"] ul li p:first-of-type:last-of-type {
+  line-height: 2.1rem;
+}
+[data-role="list"] ul li p + p {
+  color: rgba(136, 136, 136, 0.8);
+  padding-top: 0.1rem;
+  font-size: 0.8rem;
+}
+[data-role="list"] ul li > label {
+  z-index: 9;
+  width: 4.5rem;
+  height: 2.2rem;
+  right: 0.5rem;
+  margin-top: -1.1rem;
+  position: absolute;
+  top: 50%;
+}
+[data-role="list"] aside {
+  float: left;
+  margin: -1.2em 0 0 0;
+  max-width: 100%;
+  vertical-align: bottom;
+  position: relative;
+  top: 50%;
+  z-index: 2;
+}
+[data-role="list"] aside img {
+  border-radius: 6px;
+  margin-bottom: 0;
+  float: left;
+}
+[data-role="list"] aside:after {
+  background: url(../img/toolkit/ubuntushape_medium_radius_idle@18.png) no-repeat;
+  background-size: 100% 100%;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[data-role="list"] > header + ul li {
+  padding-left: 20px;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Toolbars
+ * ---------------------------------- */
+[data-role="footer"] {
+  background: transparent url("../img/toolkit/toolbar_dropshadow@20.png") repeat-x top left;
+  height: 85px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  bottom: -65px;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
+  display: none;
+}
+[data-role="footer"].revealed {
+  -webkit-transform: translate3d(0, -65px, 0);
+  transform: translate3d(0, -65px, 0);
+}
+[data-role="footer"] nav {
+  background: #fdfdfd;
+  margin-top: 20px;
+  display: block;
+  height: 55px;
+  padding-top: 10px;
+}
+[data-role="footer"] nav ul {
+  list-style: none;
+  text-align: right;
+}
+[data-role="footer"] nav ul li,
+[data-role="footer"] nav ul li a {
+  color: #7d767b;
+  font-size: 0.6rem;
+  text-align: center;
+  width: 60px;
+  display: inline-block;
+  text-decoration: none;
+}
+[data-role="footer"] nav ul li {
+  padding-top: 4px;
+}
+[data-role="footer"] nav ul li img {
+  width: 16px;
+  height: 16px;
+}
+[data-role="footer"] nav ul li span {
+  display: block;
+}
+[data-role="footer"] nav ul li:last-child {
+  float: left;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Toolbars
+ * ---------------------------------- */
+[data-role="shape"] {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: bottom;
+  position: relative;
+  z-index: 100;
+}
+[data-role="shape"]:after {
+  background: url(../img/toolkit/ubuntushape.png) no-repeat;
+  background-size: 100% 100%;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[data-role="shape"] img {
+  height: 100%;
+  width: 100%;
+  max-width: 100% !important;
+  margin-bottom: 0;
+  display: inline-block;
+}
+[data-role="shape"] div {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+/* ----------------------------------
+ * Lists
+ * ----------------------------------
+   ================================================== */
+[data-role="indexbar"] {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  bottom: 0;
+}
+[data-role="indexbar"] ol {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.3rem 0;
+  margin: 5.5rem 0;
+  width: 2rem;
+  border-radius: 4rem;
+  opacity: 0.6;
+  list-style: none;
+  background: #c2c2c2;
+}
+[data-role="indexbar"] ol li {
+  font-size: 1rem;
+  line-height: 1.4em;
+  text-align: center;
+  text-transform: uppercase;
+}
+[data-role="indexbar"] ol li a {
+  display: block;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+[data-role="option-selector"] {
+  -webkit-box-shadow: inset 0 2px 2px 0 #d5d5d5;
+  box-shadow: inset 0 2px 2px 0 #d5d5d5;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #C7C7C7;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+[data-role="option-selector"] li {
+  text-decoration: none;
+  color: #787878;
+  display: block;
+  height: 3rem;
+  position: relative;
+  line-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  border: none;
+  border-top: 1px solid #C7C7C7;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+[data-role="option-selector"] li.active:after {
+  background: transparent url(../img/toolkit/tick@30.png) no-repeat center center;
+  background-size: 15px 15px;
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 3rem;
+  right: 0.5rem;
+  content: "";
+  top: 0;
+}
+[data-role="option-selector"] li.closed:after {
+  background: transparent url(../img/toolkit/chevron_down@30.png) no-repeat center center;
+  background-size: 15px 15px;
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 3rem;
+  right: 0.5rem;
+  content: "";
+  top: 0;
+}
+[data-role="option-selector"] li aside {
+  float: left;
+  margin: -1.2em 0 0 0;
+  max-width: 100%;
+  vertical-align: bottom;
+  position: relative;
+  top: 50%;
+  z-index: 2;
+}
+[data-role="option-selector"] li aside img {
+  border-radius: 6px;
+  margin-bottom: 0;
+  float: left;
+}
+[data-role="option-selector"] li aside:after {
+  background: url(../img/toolkit/ubuntushape_medium_radius_idle@18.png) no-repeat;
+  background-size: 100% 100%;
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+[data-role="option-selector"] li aside + p {
+  padding-left: 1rem;
+}
+[data-role="option-selector"] li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  display: block;
+  color: #787878;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  line-height: 1rem;
+}
+[data-role="option-selector"] li p:only-child, [data-role="option-selector"] li p:first-of-type:last-of-type {
+  line-height: 2rem;
+}
+[data-role="option-selector"] li p + p {
+  padding-top: 0.2rem;
+  font-size: 0.7rem;
+}
+[data-role="option-selector"] li:first-child {
+  border-top: 0 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body,
+[data-role="mainview"],
+[data-role="content"] {
+  position: relative;
+  width: 100%;
+}
+
+body {
+  background: #ededed;
+  font-family: "Ubuntu";
+  font-weight: normal;
+  color: #787878;
+}
+
+[data-role="content"] {
+  background: #ededed;
+  border-top: 1px solid #f0f0f0;
+  font-size: 1rem "Ubuntu";
+  min-height: calc(100% - 75px);
+  color: #787878;
+}
+
+[data-role="content"] p {
+  font: 0.9rem "Ubuntu";
+  color: #787878;
+  line-height: 1.33;
+}
+
+[data-role="content"] h1,
+[data-role="content"] h2,
+[data-role="content"] h3 {
+  color: #747278;
+  font: 1.3rem "Ubuntu";
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+[data-role="content"] h2 {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+[data-role="content"] h3 {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+[data-role="content"] img {
+  margin: 0 auto;
+  max-width: 98%;
+}
+
+.inset {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  clear: both;
+  overflow: hidden;
+}
+
+/**
+   To be factored out
+  */
+.xlarge-font {
+  font-size: 33px;
+  line-height: 1.3;
+}
+
+.large-font {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.medium-font {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.small-font {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.xsmall-font {
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.xxsmall-font {
+  font-size: 8px;
+  line-height: 1.3;
+}
+
+

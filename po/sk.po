@@ -1,0 +1,1562 @@
+# Slovak translation for unav
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the unav package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unav\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2018-10-15 18:38+0200\n"
+"PO-Revision-Date: 2018-06-11 20:52+0000\n"
+"Last-Translator: costales <Unknown>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
+"X-Generator: Launchpad (build 18847)\n"
+
+#: nav/class/Navigator.js:131
+msgid "Turn left"
+msgstr "Odbočte vľavo"
+
+#: nav/class/Navigator.js:133
+msgid "Turn right"
+msgstr "Odbočte vpravo"
+
+#: nav/class/Navigator.js:135
+msgid "Make a sharp left"
+msgstr "Prudko doľava"
+
+#: nav/class/Navigator.js:137
+msgid "Make a sharp right"
+msgstr "Prudko doprava"
+
+#: nav/class/Navigator.js:139
+msgid "Bear left"
+msgstr "Držte sa vľavo"
+
+#: nav/class/Navigator.js:141
+msgid "Bear right"
+msgstr "Držte sa vpravo"
+
+#: nav/class/Navigator.js:143
+msgid "Continue on the road"
+msgstr ""
+
+#: nav/class/Navigator.js:145
+msgid "Enter the roundabout and take the designated exit"
+msgstr ""
+
+#: nav/class/Navigator.js:147
+msgid "Enter the roundabout and take the first exit"
+msgstr ""
+
+#: nav/class/Navigator.js:149
+msgid "Enter the roundabout and take the second exit"
+msgstr ""
+
+#: nav/class/Navigator.js:151
+msgid "Enter the roundabout and take the third exit"
+msgstr ""
+
+#: nav/class/Navigator.js:153
+msgid "Enter the roundabout and take the fourth exit"
+msgstr ""
+
+#: nav/class/Navigator.js:155
+msgid "Enter the roundabout and take the fifth exit"
+msgstr ""
+
+#: nav/class/Navigator.js:157
+msgid "Enter the roundabout and take the sixth exit"
+msgstr ""
+
+#: nav/class/Navigator.js:159
+msgid "Enter the roundabout and take the seventh exit"
+msgstr ""
+
+#: nav/class/Navigator.js:161
+msgid "Enter the roundabout and take the eighth exit"
+msgstr ""
+
+#: nav/class/Navigator.js:163
+msgid "Enter the roundabout and take the ninth exit"
+msgstr ""
+
+#: nav/class/Navigator.js:165
+msgid "Make a U-turn"
+msgstr ""
+
+#: nav/class/Navigator.js:167 nav/class/UI.js:619
+msgid "You have arrived at your destination"
+msgstr "Dorazili ste do cieľa"
+
+#: nav/class/Navigator.js:171
+msgid "Keep left"
+msgstr ""
+
+#: nav/class/Navigator.js:173
+msgid "Keep right"
+msgstr ""
+
+#: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
+msgid "Current Position"
+msgstr "Aktuálna poloha"
+
+#: nav/class/UI.js:47
+msgid "Current Start"
+msgstr ""
+
+#: nav/class/UI.js:56
+msgid "Current End"
+msgstr ""
+
+#: nav/class/UI.js:559
+msgid "Waiting for a GPS signal…"
+msgstr ""
+
+#: nav/class/UI.js:566
+msgid "Searching for a route…"
+msgstr ""
+
+#: nav/class/UI.js:570
+msgid "Drawing route…"
+msgstr "Vykresľovanie trasy.."
+
+#: nav/class/UI.js:574
+msgid "Trying search again soon…"
+msgstr ""
+
+#: nav/class/UI.js:578
+msgid "Recalculating route…"
+msgstr "Prepočítavanie trasy.."
+
+#: nav/class/UI.js:626
+msgid "Simulating route…"
+msgstr ""
+
+#: nav/index.html.strings:1
+msgid "Start"
+msgstr "Štart"
+
+#: nav/index.html.strings:2 qml/Favorites.qml:248 qml/SettingsPage.qml:418
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: nav/index.html.strings:3
+msgid "Not found"
+msgstr ""
+
+#: nav/index.html.strings:4
+msgid "Route so long"
+msgstr ""
+
+#: nav/index.html.strings:5
+msgid "More than 1000km could affect the performance"
+msgstr ""
+
+#: nav/index.html.strings:6
+msgid "We recommend you a waypoint in the middle as destination"
+msgstr ""
+
+#: nav/index.html.strings:11 qml/Coordinate.qml:152 qml/Coordinate.qml:386
+#: qml/DownloadVoices.qml:250 qml/Favorites.qml:305 qml/Main.qml:1028
+msgid "Close"
+msgstr "Zavrieť"
+
+#: nav/index.html.strings:8
+msgid "GPS Denied"
+msgstr ""
+
+#: nav/index.html.strings:9
+msgid "Error reading the GPS status"
+msgstr ""
+
+#: nav/index.html.strings:10
+msgid "Please review your device settings"
+msgstr ""
+
+#: qml/AboutPage.qml:27 qml/SettingsPage.qml:44
+msgid "About"
+msgstr "O aplikácii"
+
+#: qml/AboutPage.qml:38 qml/AboutPage.qml:39 qml/AboutPage.qml:40
+#: qml/AboutPage.qml:41
+msgid "Resources"
+msgstr "Zdroje"
+
+#: qml/AboutPage.qml:38
+msgid "Translations"
+msgstr "Preklady"
+
+#: qml/AboutPage.qml:39
+msgid "Answers"
+msgstr "Odpovede"
+
+#: qml/AboutPage.qml:40
+msgid "Bugs"
+msgstr "Chyby"
+
+#: qml/AboutPage.qml:41
+msgid "Contact"
+msgstr "Kontakt"
+
+#: qml/AboutPage.qml:44 qml/AboutPage.qml:45 qml/AboutPage.qml:46
+#: qml/AboutPage.qml:47 qml/AboutPage.qml:48
+msgid "Developers"
+msgstr "Vývojári"
+
+#: qml/AboutPage.qml:46
+msgid "Founder"
+msgstr "Zakladateľ"
+
+#: qml/AboutPage.qml:51
+msgid "Voice"
+msgstr "Hlas"
+
+#: qml/AboutPage.qml:54
+msgid "Logo"
+msgstr "Logo"
+
+#: qml/AboutPage.qml:56 qml/AboutPage.qml:57 qml/AboutPage.qml:58
+msgid "Icons for empty states"
+msgstr ""
+
+#: qml/AboutPage.qml:61
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Ján Dráb https://launchpad.net/~cortex\n"
+"  P_E_T_O https://launchpad.net/~peto-bena\n"
+"  costales https://launchpad.net/~costales"
+
+#: qml/AboutPage.qml:63
+msgid "Translators"
+msgstr "Prekladatelia"
+
+#: qml/AboutPage.qml:67 qml/AboutPage.qml:68 qml/AboutPage.qml:69
+#: qml/AboutPage.qml:70 qml/AboutPage.qml:71 qml/AboutPage.qml:72
+#: qml/AboutPage.qml:73 qml/AboutPage.qml:74 qml/AboutPage.qml:75
+#: qml/AboutPage.qml:76 qml/AboutPage.qml:77 qml/AboutPage.qml:78
+#: qml/AboutPage.qml:79 qml/AboutPage.qml:80 qml/AboutPage.qml:81
+#: qml/AboutPage.qml:82
+msgid "Powered by"
+msgstr "Vyvýjané"
+
+#. TRANSLATORS: %1 and %2 are links that do not have to be translated: Year + Project + License
+#: qml/AboutPage.qml:124
+#, qt-format
+msgid "Version %1. Under license %2"
+msgstr ""
+
+#: qml/Coordinate.qml:35
+msgid "Decimal"
+msgstr "Desiatkové"
+
+#: qml/Coordinate.qml:48
+msgid "Sexagesimal"
+msgstr "Sexagesimálne"
+
+#: qml/Coordinate.qml:77 qml/Coordinate.qml:171
+msgid "Lat:"
+msgstr "Šírka:"
+
+#: qml/Coordinate.qml:94 qml/Coordinate.qml:242
+msgid "Long:"
+msgstr "Dĺžka:"
+
+#: qml/Coordinate.qml:109 qml/Coordinate.qml:312
+msgid "Show on Map"
+msgstr "Zobraziť na mape"
+
+#: qml/Coordinate.qml:149 qml/Coordinate.qml:383
+msgid "Coordinates are not valid"
+msgstr "Súradnice sú neplatné"
+
+#: qml/Coordinate.qml:150
+msgid ""
+"Enter valid decimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Zadajte platné decimálne súradnice\n"
+"\n"
+"Očakávaný formát je:"
+
+#: qml/Coordinate.qml:384
+msgid ""
+"Enter valid sexagesimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Zadajte platné sexagesimálne súradnice\n"
+"\n"
+"Očakávaný formát je:"
+
+#: qml/DownloadVoices.qml:53
+msgid "Download voices"
+msgstr ""
+
+#: qml/DownloadVoices.qml:61
+msgid "Play current voice"
+msgstr ""
+
+#: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
+msgid "How to add a voice"
+msgstr ""
+
+#: qml/DownloadVoices.qml:161
+msgid "By "
+msgstr ""
+
+#: qml/DownloadVoices.qml:208
+msgid "Cancel Download"
+msgstr ""
+
+#: qml/DownloadVoices.qml:224
+msgid "About the voices"
+msgstr ""
+
+#: qml/DownloadVoices.qml:230
+msgid "The stars are for the recommended voices."
+msgstr ""
+
+#: qml/DownloadVoices.qml:238
+msgid "You can add a new voice to uNav following these steps:"
+msgstr ""
+
+#: qml/Favorites.qml:74
+msgid "No favorites yet"
+msgstr "Zatiaľ žiadne obľúbené"
+
+#: qml/Favorites.qml:197 qml/SearchPage.qml:83
+msgid "Add Favorite"
+msgstr "Pridať obľúbené"
+
+#: qml/Favorites.qml:197
+msgid "Edit Favorite"
+msgstr "Upraviť obľúbené"
+
+#: qml/Favorites.qml:198
+msgid ""
+"There is already a favorite with that name. You can either overwrite it or "
+"enter a different name."
+msgstr ""
+"Obľúbené s týmto názvom je už k dispozícii . Môžete ho prepísať alebo zadať "
+"iný názov."
+
+#: qml/Favorites.qml:232
+msgid "Insert a favorite name"
+msgstr "Zadajte obľúbený názov"
+
+#: qml/Favorites.qml:255
+msgid "Overwrite"
+msgstr "Prepísať"
+
+#: qml/Favorites.qml:255
+msgid "Add"
+msgstr "Pridať"
+
+#: qml/Favorites.qml:255
+msgid "Update"
+msgstr "Aktualizovať"
+
+#: qml/Favorites.qml:277
+msgid "Favorite Coordinates"
+msgstr ""
+
+#: qml/Favorites.qml:288
+msgid "Name: "
+msgstr ""
+
+#: qml/Favorites.qml:295
+msgid "Latitude: "
+msgstr ""
+
+#: qml/Favorites.qml:302
+msgid "Longitude: "
+msgstr ""
+
+#: qml/Location.qml:45 qml/PoiListPage.qml:146
+msgid "Time out! Please try again"
+msgstr "Čas vypršal. Prosím, skúste znova"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius.
+#: qml/Location.qml:53
+msgid "Sorry, nothing found. Try another search"
+msgstr "Prepáčte, nič nenájdené. Skúste nové hľadanie"
+
+#: qml/Location.qml:141 qml/Location.qml:352 qml/Location.qml:414
+msgid "Search history"
+msgstr "História hľadania"
+
+#: qml/Location.qml:151 qml/Location.qml:358 qml/Location.qml:416
+msgid "Favorite history"
+msgstr "História obľúbených"
+
+#: qml/Location.qml:161 qml/Location.qml:355 qml/Location.qml:371
+#: qml/Location.qml:382 qml/Location.qml:397 qml/Location.qml:404
+#: qml/Location.qml:436 qml/Location.qml:442
+msgid "Nearby history"
+msgstr "História blízkych bodov"
+
+#: qml/Location.qml:187
+msgid "No history yet"
+msgstr ""
+
+#: qml/Location.qml:187
+msgid "History is disabled"
+msgstr "História je vypnutá"
+
+#: qml/Location.qml:200 qml/Location.qml:253 qml/PoiListPage.qml:163
+#: qml/components/POIQuickAccessGridView.qml:181
+msgid "Searching…"
+msgstr "Hľadám..."
+
+#: qml/Location.qml:249
+msgid "Search location"
+msgstr "Vyhľadať miesto"
+
+#: qml/Main.qml:235 qml/SettingsPage.qml:35
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: qml/Main.qml:246
+msgid "Center on Position"
+msgstr "Centrovať na polohu"
+
+#: qml/Main.qml:250 qml/Main.qml:571
+msgid "Searching your position… This could take a while"
+msgstr "Hľadám vašu polohu... Môže to chvíľu trvať"
+
+#: qml/Main.qml:264 qml/PoiPage.qml:83 qml/SearchPage.qml:69
+msgid "Search"
+msgstr "Hľadať"
+
+#: qml/Main.qml:275
+msgid "Destination"
+msgstr "Cieľ"
+
+#: qml/Main.qml:437
+msgid "Error getting speed cameras!"
+msgstr "Chyba pri získavaní rýchlostných kamier!"
+
+#: qml/Main.qml:440
+msgid "Error finding route! Retrying again in 1 minute…"
+msgstr ""
+
+#: qml/Main.qml:443
+msgid "Error finding route! Trying again…"
+msgstr "Chyba pri hľadaní cesty! Skúste znova..."
+
+#: qml/Main.qml:488 qml/Main.qml:514
+msgid "Shared Position"
+msgstr "Spoločná pozícia"
+
+#: qml/Main.qml:762
+msgid "Near to destination"
+msgstr ""
+
+#: qml/Main.qml:763
+msgid "Cancel route"
+msgstr ""
+
+#: qml/Main.qml:809
+#, qt-format
+msgid "Coord: %1, %2"
+msgstr "Súradnice: %1, %2"
+
+#: qml/Main.qml:877 qml/PoiDetailsPage.qml:243
+msgid "Simulate from here! Now click on destination"
+msgstr "Simulovať odtiaľ! Teraz kliknite na cieľ"
+
+#: qml/Main.qml:894
+msgid "Set a different coordinates for simulating"
+msgstr "Nastavte rôzne súradnice pre simuláciu"
+
+#: qml/Main.qml:1016
+msgid "Custom voices"
+msgstr ""
+
+#: qml/Main.qml:1017
+msgid ""
+"American English voice will be the unique voice installed by default.\n"
+"\n"
+"You can set a custom voice in your language from Settings: Download custom "
+"voices.\n"
+"\n"
+"The list of voices will be updated by the users. Please check them out in "
+"the future.\n"
+msgstr ""
+
+#: qml/Main.qml:1019
+msgid "Set a voice now"
+msgstr ""
+
+#: qml/PoiDetailsPage.qml:89
+msgid "Lat, Long:"
+msgstr "Šír, Dĺž:"
+
+#: qml/PoiDetailsPage.qml:95 qml/PoiDetailsPage.qml:110
+msgid "Available"
+msgstr "K dispozícii"
+
+#: qml/PoiDetailsPage.qml:97 qml/PoiDetailsPage.qml:112
+msgid "Not Available"
+msgstr "Nedostupné"
+
+#: qml/PoiDetailsPage.qml:99
+msgid "Wi-Fi Hotspot Available"
+msgstr "Dostupný Wifi Hotspot"
+
+#: qml/PoiDetailsPage.qml:101
+msgid "Wired Connection Available (ethernet connection)"
+msgstr "Dostupné káblové pripojenie (Ethernet)"
+
+#: qml/PoiDetailsPage.qml:103
+msgid "Computer Terminal Available"
+msgstr "Dostupný počítačový terminál"
+
+#: qml/PoiDetailsPage.qml:115
+msgid "Limited Availability"
+msgstr "Obmedzená dostupnosť"
+
+#: qml/PoiDetailsPage.qml:174
+msgid "Loading POI details..."
+msgstr "Načítanie POI detailov..."
+
+#: qml/PoiListPage.qml:45
+msgid "Show POIs on map"
+msgstr "Zobraziť POI na mape"
+
+#: qml/PoiListPage.qml:68
+msgid "Unknown current position"
+msgstr "Neznáma aktuálna poloha"
+
+#: qml/PoiListPage.qml:84
+msgid "Something went wrong. Please, try again…"
+msgstr "Niečo zlyhalo. Prosím. skúste znova..."
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius. %1 is the POI type eg..Pub, Airport
+#. Example string, "Sorry, no Airport found nearby. Try again with a larger search radius"
+#: qml/PoiListPage.qml:153
+#, qt-format
+msgid "Sorry, no %1 found nearby. Try again with a larger search radius"
+msgstr ""
+"Prepáčte, %1 v blízkosti nenájdené. Skúste znova s väčším polomerom "
+"vyhľadávania"
+
+#. TRANSLATORS: Abbreviation for Public Holiday. This string is used while showing the opening hours
+#. of a place which might be closed during public holidays.
+#: qml/PoiListPage.qml:361
+msgid "PH"
+msgstr "Sviatok"
+
+#. TRANSLATORS: This string indicates that a place is closed.
+#: qml/PoiListPage.qml:363
+msgid "Closed"
+msgstr "Zatvorené"
+
+#: qml/PoiPage.qml:64
+msgid "Back"
+msgstr "Späť"
+
+#: qml/PoiPage.qml:118
+msgid "Filter POI categories by name"
+msgstr "Filtrovať POI kategórie podľa mena"
+
+#: qml/PoiPage.qml:128
+msgid "Nearby"
+msgstr "V blízkosti"
+
+#: qml/PoiPage.qml:147
+msgid "Most recent"
+msgstr "Najnovšie"
+
+#: qml/PoiQuickAccessPage.qml:63
+msgid "Fast Nearest Editor: "
+msgstr ""
+
+#: qml/PoiQuickAccessPage.qml:201
+msgid "Selection"
+msgstr "Výber"
+
+#. TRANSLATORS: argument is a number > 1.
+#: qml/PoiQuickAccessPage.qml:203
+#, qt-format
+msgid "Max. %1 POIs can be selected."
+msgstr "Môžu byť vybrané max. %1 POI."
+
+#: qml/PoiQuickAccessPage.qml:206 qml/SettingsPage.qml:439
+msgid "OK"
+msgstr "OK"
+
+#: qml/RouteInfoListPage.qml:29
+msgid "Route Info"
+msgstr "Informácie o trase"
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: qml/SearchPage.qml:100
+msgid "Location"
+msgstr "Poloha"
+
+#: qml/SearchPage.qml:100
+msgid "Favorites"
+msgstr "Obľúbené"
+
+#: qml/SearchPage.qml:100
+msgid "Coordinates"
+msgstr "Súradnice"
+
+#: qml/SearchPage.qml:150
+msgid "Add Current Position"
+msgstr "Pridať aktuálnu polohu"
+
+#: qml/SearchPage.qml:160
+msgid "Add Current Destination"
+msgstr "Pridať aktuálny cieľ"
+
+#: qml/SearchPage.qml:172
+msgid "Add by clicking on Map"
+msgstr "Pridať kliknutím na mapu"
+
+#: qml/SettingsPage.qml:56
+msgid "A voice"
+msgstr ""
+
+#: qml/SettingsPage.qml:57
+msgid "A notification"
+msgstr ""
+
+#: qml/SettingsPage.qml:58
+msgid "None"
+msgstr "Žiadne"
+
+#: qml/SettingsPage.qml:68
+msgid "Kilometres"
+msgstr "Kilometre"
+
+#: qml/SettingsPage.qml:69
+msgid "Miles"
+msgstr "Míle"
+
+#: qml/SettingsPage.qml:95
+msgid "uNav link"
+msgstr ""
+
+#: qml/SettingsPage.qml:96
+msgid "Google Maps link"
+msgstr ""
+
+#: qml/SettingsPage.qml:97
+msgid "Standard GEO link"
+msgstr ""
+
+#: qml/SettingsPage.qml:107
+msgid "Online"
+msgstr "Online"
+
+#: qml/SettingsPage.qml:108
+msgid "Offline"
+msgstr "Offline"
+
+#: qml/SettingsPage.qml:130
+msgid "Navigation"
+msgstr "Navigácia"
+
+#: qml/SettingsPage.qml:137
+msgid "Guidance"
+msgstr "Navádzanie"
+
+#: qml/SettingsPage.qml:169
+msgid "Download custom voices"
+msgstr ""
+
+#: qml/SettingsPage.qml:176
+msgid "Car Options"
+msgstr ""
+
+#: qml/SettingsPage.qml:183
+msgid "Avoid tolls"
+msgstr ""
+
+#: qml/SettingsPage.qml:200
+msgid "Speed camera alerts"
+msgstr ""
+
+#: qml/SettingsPage.qml:219
+msgid "Map"
+msgstr "Mapa"
+
+#: qml/SettingsPage.qml:226
+msgid "Mode"
+msgstr "Režim"
+
+#: qml/SettingsPage.qml:261
+msgid "How to use offline maps"
+msgstr "Ako používať offline mapy"
+
+#: qml/SettingsPage.qml:278
+msgid "Online style"
+msgstr ""
+
+#: qml/SettingsPage.qml:312
+msgid "Units"
+msgstr "Jednotky"
+
+#: qml/SettingsPage.qml:346
+msgid "Share position as"
+msgstr ""
+
+#: qml/SettingsPage.qml:376
+msgid "History"
+msgstr "História"
+
+#: qml/SettingsPage.qml:383
+msgid "Store new searches"
+msgstr "Ukladať nové vyhľadávania"
+
+#: qml/SettingsPage.qml:395 qml/SettingsPage.qml:405
+msgid "Clear history"
+msgstr ""
+
+#: qml/SettingsPage.qml:406
+msgid "You'll delete the current history"
+msgstr "Chcete vymazať aktuálnu históriu"
+
+#: qml/SettingsPage.qml:409
+msgid "Delete"
+msgstr "Vymazať"
+
+#: qml/SettingsPage.qml:428
+msgid "Speed Camera alerts and the law"
+msgstr ""
+
+#: qml/SettingsPage.qml:429
+msgid ""
+"uNav is only reading the OpenStreetMap database.\n"
+"uNav will show a max speed notification and a Speed Camera marker (marker "
+"hidden for French users because of law).\n"
+"\n"
+"In a few countries Speed Camera alerts are illegal, then enable this option "
+"only if it's legal in the country."
+msgstr ""
+
+#: qml/SettingsPage.qml:435
+msgid "Read more about it"
+msgstr ""
+
+#: qml/Share.qml:33
+msgid "Share location to"
+msgstr ""
+
+#: qml/components/POIQuickAccessGridView.qml:92
+msgid "Error getting results. Please, check your data connection."
+msgstr ""
+
+#: qml/components/POIQuickAccessGridView.qml:97
+msgid "Sorry, no results found nearby."
+msgstr ""
+
+#: qml/components/POIQuickAccessGridView.qml:175
+msgid "Current position unknown. Try again after a position update."
+msgstr ""
+
+#: qml/js/PoiCategories.js:4
+msgid "Transport"
+msgstr "Preprava"
+
+#: qml/js/PoiCategories.js:6
+msgid "Airport"
+msgstr "Letisko"
+
+#: qml/js/PoiCategories.js:7
+msgid "Bicycle Parking"
+msgstr ""
+
+#: qml/js/PoiCategories.js:8
+msgid "Bicycle Rental"
+msgstr "Požičovňa bicyklov"
+
+#: qml/js/PoiCategories.js:9
+msgid "Bicycle Shop"
+msgstr ""
+
+#: qml/js/PoiCategories.js:10
+msgid "Bus Station"
+msgstr ""
+
+#: qml/js/PoiCategories.js:11
+msgid "Bus Stop"
+msgstr "Autobusová zastávka"
+
+#: qml/js/PoiCategories.js:12
+msgid "Car Rental"
+msgstr "Požičovňa áut"
+
+#: qml/js/PoiCategories.js:13
+msgid "Car Repair"
+msgstr ""
+
+#: qml/js/PoiCategories.js:14
+msgid "Car Wash"
+msgstr "Autoumyváreň"
+
+#: qml/js/PoiCategories.js:15
+msgid "Ferry Terminal"
+msgstr ""
+
+#: qml/js/PoiCategories.js:16
+msgid "Gas Station"
+msgstr "Čerpacia stanica"
+
+#: qml/js/PoiCategories.js:17
+msgid "Motorcycle Shop"
+msgstr ""
+
+#: qml/js/PoiCategories.js:18
+msgid "Parking"
+msgstr "Parkovisko"
+
+#: qml/js/PoiCategories.js:19
+msgid "Subway Entrance"
+msgstr "Vchod do metra"
+
+#: qml/js/PoiCategories.js:20
+msgid "Taxi"
+msgstr "Taxi"
+
+#: qml/js/PoiCategories.js:21
+msgid "Train Station"
+msgstr ""
+
+#: qml/js/PoiCategories.js:25
+msgid "Accommodation"
+msgstr "Ubytovanie"
+
+#: qml/js/PoiCategories.js:27
+msgid "Bed and Breakfasts"
+msgstr ""
+
+#: qml/js/PoiCategories.js:28
+msgid "Campsite"
+msgstr "Kemp"
+
+#: qml/js/PoiCategories.js:29
+msgid "Caravan Site"
+msgstr ""
+
+#: qml/js/PoiCategories.js:30
+msgid "Guest House"
+msgstr ""
+
+#: qml/js/PoiCategories.js:31
+msgid "Hostel"
+msgstr "Ubytovňa"
+
+#: qml/js/PoiCategories.js:32
+msgid "Hotel"
+msgstr "Hotel"
+
+#: qml/js/PoiCategories.js:33
+msgid "Motel"
+msgstr "Motel"
+
+#: qml/js/PoiCategories.js:37
+msgid "Food & Drink"
+msgstr "Jedlo a nápoje"
+
+#: qml/js/PoiCategories.js:39
+msgid "Bakery"
+msgstr "Pekáreň"
+
+#: qml/js/PoiCategories.js:40
+msgid "Bar"
+msgstr "Bar"
+
+#: qml/js/PoiCategories.js:41
+msgid "Butcher"
+msgstr "Mäsiareň"
+
+#: qml/js/PoiCategories.js:42
+msgid "Cafe"
+msgstr "Kaviareň"
+
+#: qml/js/PoiCategories.js:43
+msgid "Convenience Store"
+msgstr ""
+
+#: qml/js/PoiCategories.js:44
+msgid "Drinking water"
+msgstr ""
+
+#: qml/js/PoiCategories.js:45
+msgid "Fast Food"
+msgstr "Rýchle občerstvenie"
+
+#: qml/js/PoiCategories.js:46
+msgid "Ice Cream"
+msgstr ""
+
+#: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:64
+msgid "Picnic Site"
+msgstr ""
+
+#: qml/js/PoiCategories.js:48
+msgid "Pub"
+msgstr "Krčma"
+
+#: qml/js/PoiCategories.js:49
+msgid "Restaurant"
+msgstr "Reštaurácia"
+
+#: qml/js/PoiCategories.js:53
+msgid "Tourism"
+msgstr ""
+
+#: qml/js/PoiCategories.js:55
+msgid "Alpine Hut"
+msgstr ""
+
+#: qml/js/PoiCategories.js:56
+msgid "Archaeological Site"
+msgstr ""
+
+#: qml/js/PoiCategories.js:57 qml/js/PoiCategories.js:115
+msgid "Artwork"
+msgstr "Grafický dizajn"
+
+#: qml/js/PoiCategories.js:58
+msgid "Attraction"
+msgstr ""
+
+#: qml/js/PoiCategories.js:59
+msgid "Battlefield"
+msgstr "Bojisko"
+
+#: qml/js/PoiCategories.js:60
+msgid "Castle"
+msgstr "Hrad"
+
+#: qml/js/PoiCategories.js:61
+msgid "Monument"
+msgstr "Pamätihodnosť, pamätník"
+
+#: qml/js/PoiCategories.js:62 qml/js/PoiCategories.js:119
+msgid "Museum"
+msgstr "Múzeum"
+
+#: qml/js/PoiCategories.js:63
+msgid "Nature Reserve"
+msgstr "Prírodná rezervácia"
+
+#: qml/js/PoiCategories.js:65
+msgid "Ruin"
+msgstr "Ruina"
+
+#: qml/js/PoiCategories.js:66
+msgid "Theme Park"
+msgstr ""
+
+#: qml/js/PoiCategories.js:67
+msgid "Tourism Information"
+msgstr ""
+
+#: qml/js/PoiCategories.js:68
+msgid "Town Hall"
+msgstr "Radnica (obecný úrad)"
+
+#: qml/js/PoiCategories.js:69
+msgid "Viewpoint"
+msgstr ""
+
+#: qml/js/PoiCategories.js:70
+msgid "Zoo"
+msgstr ""
+
+#: qml/js/PoiCategories.js:74
+msgid "Services"
+msgstr "Služby"
+
+#: qml/js/PoiCategories.js:76
+msgid "ATM"
+msgstr "Bankomat"
+
+#: qml/js/PoiCategories.js:77
+msgid "Bank"
+msgstr "Banka"
+
+#: qml/js/PoiCategories.js:78
+msgid "Bureau de change"
+msgstr ""
+
+#: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
+msgid "Place of Worship"
+msgstr ""
+
+#: qml/js/PoiCategories.js:80
+msgid "Post Box"
+msgstr ""
+
+#: qml/js/PoiCategories.js:81
+msgid "Post Office"
+msgstr "Pošta"
+
+#: qml/js/PoiCategories.js:82
+msgid "Public Telephone"
+msgstr ""
+
+#: qml/js/PoiCategories.js:83
+msgid "Toilet"
+msgstr ""
+
+#: qml/js/PoiCategories.js:84
+msgid "Wi-Fi Point"
+msgstr ""
+
+#: qml/js/PoiCategories.js:88
+msgid "Shopping"
+msgstr "Nakupovanie"
+
+#: qml/js/PoiCategories.js:90
+msgid "Books"
+msgstr "Knihy"
+
+#: qml/js/PoiCategories.js:91
+msgid "Charity"
+msgstr ""
+
+#: qml/js/PoiCategories.js:92
+msgid "Clothes"
+msgstr "Oblečenie"
+
+#: qml/js/PoiCategories.js:93
+msgid "Computer Shop"
+msgstr ""
+
+#: qml/js/PoiCategories.js:94
+msgid "Copy Shop"
+msgstr "Kopírovacia služba"
+
+#: qml/js/PoiCategories.js:95
+msgid "Florist"
+msgstr "Kvetinárstvo"
+
+#: qml/js/PoiCategories.js:96
+msgid "Gifts"
+msgstr "Darčeky"
+
+#: qml/js/PoiCategories.js:97
+msgid "Hairdresser"
+msgstr ""
+
+#: qml/js/PoiCategories.js:98
+msgid "Jewelry"
+msgstr "Šperky"
+
+#: qml/js/PoiCategories.js:99
+msgid "Kiosk"
+msgstr "Stánok"
+
+#: qml/js/PoiCategories.js:100
+msgid "Laundry"
+msgstr "Práčovňa"
+
+#: qml/js/PoiCategories.js:101
+msgid "Mall"
+msgstr "Obchodné centrum"
+
+#: qml/js/PoiCategories.js:102
+msgid "Mobile Phone"
+msgstr "Mobilný telefón"
+
+#: qml/js/PoiCategories.js:103
+msgid "Optician"
+msgstr "Optika"
+
+#: qml/js/PoiCategories.js:104
+msgid "Public Market"
+msgstr "Trhovisko"
+
+#: qml/js/PoiCategories.js:105
+msgid "Shoes"
+msgstr "Obuv"
+
+#: qml/js/PoiCategories.js:106
+msgid "Supermarket"
+msgstr "Supermarket"
+
+#: qml/js/PoiCategories.js:107
+msgid "Travel Agency"
+msgstr "Cestovná kancelária"
+
+#: qml/js/PoiCategories.js:108
+msgid "Vending Machine"
+msgstr "Predajný automat"
+
+#: qml/js/PoiCategories.js:112
+msgid "Culture"
+msgstr "Kultúra"
+
+#: qml/js/PoiCategories.js:114
+msgid "Art Center"
+msgstr ""
+
+#: qml/js/PoiCategories.js:116
+msgid "Auditorium"
+msgstr ""
+
+#: qml/js/PoiCategories.js:117
+msgid "Gallery"
+msgstr "Galéria"
+
+#: qml/js/PoiCategories.js:118
+msgid "Library"
+msgstr "Knižnica"
+
+#: qml/js/PoiCategories.js:120
+msgid "Theatre"
+msgstr "Divadlo"
+
+#: qml/js/PoiCategories.js:124
+msgid "Entertainment"
+msgstr "Zábava"
+
+#: qml/js/PoiCategories.js:126
+msgid "Casino"
+msgstr "Kasíno"
+
+#: qml/js/PoiCategories.js:127
+msgid "Children Playground"
+msgstr ""
+
+#: qml/js/PoiCategories.js:128
+msgid "Cinema"
+msgstr "Kino"
+
+#: qml/js/PoiCategories.js:129
+msgid "Gym"
+msgstr ""
+
+#: qml/js/PoiCategories.js:130
+msgid "Night Club"
+msgstr "Nočný klub"
+
+#: qml/js/PoiCategories.js:131
+msgid "Park"
+msgstr "Park"
+
+#: qml/js/PoiCategories.js:135
+msgid "Education"
+msgstr "Vzdelávanie"
+
+#: qml/js/PoiCategories.js:137
+msgid "College"
+msgstr "Stredná škola"
+
+#: qml/js/PoiCategories.js:138
+msgid "Nursery School"
+msgstr ""
+
+#: qml/js/PoiCategories.js:139
+msgid "University"
+msgstr "Univerzita (Vysoká škola)"
+
+#: qml/js/PoiCategories.js:143
+msgid "Health"
+msgstr "Zdravie"
+
+#: qml/js/PoiCategories.js:145
+msgid "Dentist"
+msgstr "Zubný lekár"
+
+#: qml/js/PoiCategories.js:146
+msgid "Doctor"
+msgstr "Doktor"
+
+#: qml/js/PoiCategories.js:147
+msgid "Hospital"
+msgstr "Nemocnica"
+
+#: qml/js/PoiCategories.js:148
+msgid "Pharmacy"
+msgstr "Lekáreň"
+
+#: qml/js/PoiCategories.js:149
+msgid "Veterinary"
+msgstr "Veterinár"
+
+#: qml/js/PoiCategories.js:153
+msgid "Religious"
+msgstr ""
+
+#: qml/js/PoiCategories.js:155
+msgid "Cemetery"
+msgstr "Cintorín"
+
+#: qml/js/PoiCategories.js:156
+msgid "Church"
+msgstr "Kostol"
+
+#: qml/js/PoiCategories.js:157
+msgid "Crematorium"
+msgstr "Krematórium"
+
+#: qml/js/PoiCategories.js:162
+msgid "Emergency"
+msgstr "Pohotovosť"
+
+#: qml/js/PoiCategories.js:164
+msgid "Phone"
+msgstr "Telefón"
+
+#: qml/js/PoiCategories.js:165
+msgid "Police Station"
+msgstr "Policajná stanica"
+
+#: qml/js/PoiCategories.js:169
+msgid "Sport"
+msgstr "Šport"
+
+#: qml/js/PoiCategories.js:171
+msgid "Sports Center"
+msgstr ""
+
+#: qml/js/PoiCategories.js:172
+msgid "Stadium"
+msgstr "Štadión"
+
+#: qml/js/PoiCategories.js:173
+msgid "Swimming Pool"
+msgstr ""
+
+#: qml/js/PoiCategories.js:174
+msgid "Track"
+msgstr ""
+
+#: qml/js/PoiCategories.js:178
+msgid "Others"
+msgstr "Iné"
+
+#: qml/js/PoiCategories.js:180
+msgid "Courthouse"
+msgstr ""
+
+#: qml/js/PoiCategories.js:181
+msgid "Embassy"
+msgstr "Veľvyslanectvo"
+
+#: qml/js/PoiCategories.js:182
+msgid "Prison"
+msgstr "Väznica"
+
+#: qml/js/PoiCategories.js:183
+msgid "Recycling"
+msgstr ""
+
+#: qml/js/PoiCategories.js:184
+msgid "Town"
+msgstr "Mesto"
+
+#: qml/js/utils.js:58
+msgid "Current Location"
+msgstr ""
+
+#: qml/tuto/Slide1.qml:40
+msgid "Welcome to uNav"
+msgstr ""
+
+#: qml/tuto/Slide1.qml:48
+msgid ""
+"A map viewer & GPS navigator\n"
+"\n"
+"Let's look at a few features together :)"
+msgstr ""
+
+#: qml/tuto/Slide2.qml:43
+msgid "Long Touch on Map"
+msgstr ""
+
+#: qml/tuto/Slide2.qml:60
+msgid ""
+"Navigate, add to favorites, search nearby places, share points on the map or "
+"simulate a route"
+msgstr ""
+
+#: qml/tuto/Slide3.qml:43
+msgid "Swipe Results"
+msgstr ""
+
+#: qml/tuto/Slide3.qml:60
+msgid ""
+"Navigate directly, call the place, share the location, open web page, delete "
+"favorites…"
+msgstr ""
+
+#: qml/tuto/Slide4.qml:43
+msgid "Touch Everything!"
+msgstr ""
+
+#: qml/tuto/Slide4.qml:61
+msgid ""
+"Touch summary to show current speed\n"
+"\n"
+"Touch step indications to review route steps"
+msgstr ""
+
+#: qml/tuto/Slide5.qml:43
+msgid "Simulate a route"
+msgstr ""
+
+#: qml/tuto/Slide5.qml:61
+msgid ""
+"Set an origin: Click on map and click on simulate icon\n"
+"\n"
+"Set a destination: Then, click on map and click the same icon again"
+msgstr ""
+
+#: qml/tuto/Slide6.qml:43
+msgid "uNav doesn't track you!"
+msgstr ""
+
+#: qml/tuto/Slide6.qml:60
+msgid ""
+"It is licensed under the GNU GPL\n"
+"\n"
+"and based completely on libre projects!"
+msgstr ""
+
+#: qml/tuto/Slide6.qml:74
+msgid "Enjoy the Freedom!"
+msgstr ""
+
+#: qml/tuto/components/Walkthrough.qml:89
+msgid "Skip"
+msgstr "Preskočiť"
+
+#, qt-format
+#~ msgid "© 2015 %1. Under license %2"
+#~ msgstr "© 2015 %1. Licencované poľa %2"
+
+#~ msgid "Translators:"
+#~ msgstr "Prekladatelia:"
+
+#~ msgid "Developers:"
+#~ msgstr "Vývojári:"
+
+#~ msgid "This app is powered by:"
+#~ msgstr "Aplikácia využíva:"
+
+#~ msgid "Support its future development:"
+#~ msgstr "Podporte jej budúci vývoj:"
+
+#~ msgid "Follow"
+#~ msgstr "Sledovať"
+
+#~ msgid "Route"
+#~ msgstr "Trasa"
+
+#~ msgid "Add From Map"
+#~ msgstr "Pridať z mapy"
+
+#~ msgid "Position unknown. Failed getting places nearby"
+#~ msgstr "Neznáma poloha. Nepodarilo sa získať miesta v okolí."
+
+#~ msgid "Mo"
+#~ msgstr "Po"
+
+#~ msgid "Something was wrong. Please, try again…"
+#~ msgstr "Niečo je zle. Prosím, skúste znova."
+
+#~ msgid "Fr"
+#~ msgstr "Pi"
+
+#~ msgid "Th"
+#~ msgstr "Št"
+
+#~ msgid "We"
+#~ msgstr "St"
+
+#~ msgid "Tu"
+#~ msgstr "Ut"
+
+#, qt-format
+#~ msgid "Sorry, no result for %1"
+#~ msgstr "Žiadne výsledky pre %1"
+
+#~ msgid "off"
+#~ msgstr "vypnuté"
+
+#~ msgid "Su"
+#~ msgstr "Ne"
+
+#~ msgid "Where do we go?"
+#~ msgstr "Kam pôjdeme?"
+
+#~ msgid "Sa"
+#~ msgstr "So"
+
+#~ msgid "Avoid Tolls"
+#~ msgstr "Obísť spoplatnené cesty"
+
+#~ msgid "A Notification"
+#~ msgstr "Oznámenie"
+
+#~ msgid "Mode:"
+#~ msgstr "Režim:"
+
+#~ msgid "Car"
+#~ msgstr "Automobil"
+
+#~ msgid "Walking"
+#~ msgstr "Chôdza"
+
+#~ msgid "Bicycle"
+#~ msgstr "Bicykel"
+
+#~ msgid "Favorite"
+#~ msgstr "Obľúbené"
+
+#~ msgid "A Voice"
+#~ msgstr "Hlas"
+
+#~ msgid "Go There"
+#~ msgstr "Ísť tam"
+
+#~ msgid "Cancel Route"
+#~ msgstr "Zrušiť cestu"
+
+#~ msgid "Kilometers"
+#~ msgstr "Kilometre"
+
+#~ msgid "Units:"
+#~ msgstr "Jednotky:"
+
+#~ msgid "B&B"
+#~ msgstr "Ubytovanie - B&B"
+
+#~ msgid "Kindergarten"
+#~ msgstr "Škôlka"
+
+#~ msgid "Toilets"
+#~ msgstr "Toalety"
+
+#~ msgid "Go"
+#~ msgstr "Ísť"
+
+#~ msgid "You are near to the destination"
+#~ msgstr "Ste blízko cieľa"
+
+#~ msgid "Continue"
+#~ msgstr "Pokračovať"
+
+#~ msgid "Go to your right"
+#~ msgstr "Držte sa vpravo"
+
+#~ msgid "Go to your left"
+#~ msgstr "Držte sa vľavo"
+
+#~ msgid "Your destination is on the right"
+#~ msgstr "Váš cieľ je vpravo"
+
+#~ msgid "Your destination is on the left"
+#~ msgstr "Váš cieľ je vľavo"
+
+#~ msgid "Current road becomes"
+#~ msgstr "Z cesty sa stane"
+
+#~ msgid "Make a right U-turn"
+#~ msgstr "Otočte sa vpravo"
+
+#~ msgid "Make a left U-turn"
+#~ msgstr "Otočte sa vľavo"
+
+#~ msgid "Indications:"
+#~ msgstr "Ukazovatele:"
+
+#~ msgid "Stay straight on ramp"
+#~ msgstr "Na nájazde zostante rovno"
+
+#~ msgid "Turn right on ramp"
+#~ msgstr "Odbočte vpravo na nájazd"
+
+#~ msgid "Take the exit on the right"
+#~ msgstr "Zíďte zjazdom vpravo"
+
+#~ msgid "Turn left on ramp"
+#~ msgstr "Odbočte vľavo na nájazd"
+
+#~ msgid "Take the exit on the left"
+#~ msgstr "Zíďte zjazdom vľavo"
+
+#, qt-format
+#~ msgid " to take the %1"
+#~ msgstr " použite %1"
+
+#~ msgid "Leave the Ferry"
+#~ msgstr "Opustite trajekt"
+
+#, qt-format
+#~ msgid "Enter the roundabout and take the exit %1"
+#~ msgstr "Na kruhovom objazde použite %1 výjazd"
+
+#~ msgid "Keep right at the fork"
+#~ msgstr "Na rázcestí sa držte vpravo"
+
+#~ msgid "Exit the roundabout"
+#~ msgstr "Opustite kruhový objazd"
+
+#~ msgid "Take the Ferry"
+#~ msgstr "Nastúpte na trajekt"
+
+#~ msgid "Merge"
+#~ msgstr "Zliatie"
+
+#, qt-format
+#~ msgid ". Exit %1"
+#~ msgstr ". %1 výjazd"
+
+#, qt-format
+#~ msgid " onto %1"
+#~ msgstr " po %1"
+
+#~ msgid "Keep left at the fork"
+#~ msgstr "Na rázcestí sa držte vľavo"
+
+#~ msgid "Waiting a good GPS signal…"
+#~ msgstr "Čakanie na GPS signál.."
+
+#, qt-format
+#~ msgid " toward %1"
+#~ msgstr " ku %1"
+
+#~ msgid "Searching a route…"
+#~ msgstr "Vyhľadávanie trasy.."
+
+#~ msgid "Keep straight at the fork"
+#~ msgstr "Na rázcestí rovno"
+
+#~ msgid "Buy Donate Version"
+#~ msgstr "Zakúpiť príspevkovú verziu"
+
+#~ msgid "Fullscreen"
+#~ msgstr "Celá obrazovka"
+
+#~ msgid "Current"
+#~ msgstr "Aktuálne"
+
+#~ msgid "Coord:"
+#~ msgstr "Súradnice:"
+
+#~ msgid "Share"
+#~ msgstr "Zdieľať"
+
+#, qt-format
+#~ msgid ", %1"
+#~ msgstr ", %1"
+
+#~ msgid "No history yet…"
+#~ msgstr "Žiadna história..."

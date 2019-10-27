@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!--
+   uNav http://launchpad.net/unav
+   Copyright (C) 2015-2018 Marcos Alvarez Costales https://launchpad.net/~costales
+   Copyright (C) 2015-2016 JkB https://launchpad.net/~joergberroth
+
+   uNav is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   uNav is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+-->
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	<link rel="stylesheet" type="text/css" href="css/ol.css" />
+	<link rel="stylesheet" type="text/css" href="css/appTemplate.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+	<link rel="stylesheet" type="text/css" href="css/unav.css" />
+
+	<script>
+		document.addEventListener("ExecuteJavascript", function (event) { eval(event.detail); });
+	</script>
+</head>
+
+<body>
+	<!-- HTML section (map + panel + voices) -->
+	<!-- Map -->
+	<div id="map" class="map"></div>
+	
+	<!-- Panel for msg -->
+	<table class="tg" id="panel_msg" style="display:none;">
+	  <tr>
+		<th class="tg-yw4l" id="p_msg">Loading</th>
+	  </tr>
+	</table>
+
+	<!-- Panel confirm route -->
+	<div id="panel_review" style="display:none;">
+		<table class="tg" id="panel_review_btns">
+		  <tr>
+			<th class="tg-yw4l">
+				<button data-role='button' id='btn1_set_car' class='btns1_mode_route negative' onClick='javascript:set_nav_mode(0)'><img class="img1_btn_route" src="img/mode/car.svg"></button>
+				<button data-role='button' id='btn1_set_walk' class='btns1_mode_route negative' onClick='javascript:set_nav_mode(1)'><img class="img1_btn_route" src="img/mode/walk.svg"></button>
+				<button data-role='button' id='btn1_set_bike' class='btns1_mode_route negative' onClick='javascript:set_nav_mode(2)'><img class="img1_btn_route" src="img/mode/bike.svg"></button>
+			</th>
+		  </tr>
+		  
+		  <tr>
+			<th class="tg-yw4l">
+				<button data-role='button' id='btn_start' class='btns_route positive' onClick='javascript:agree_review()' data-localize="Start">Start</button>
+				<button data-role='button' id='btn_cancel' class='btns_route negative' onClick='javascript:click_cancel_route()' data-localize="Cancel">Cancel</button>
+				<button style="display:none;" data-role='button' id='btn_notfound' class='btns_route negative' data-localize="Not found">Not found</button>
+			</th>
+		  </tr>
+		</table>
+		<table class="tg" id="panel_review_summary">
+		  <tr>
+			<th class="tg-yw4l" id="p_review_time2left">25min</th>
+			<th class="tg-yw4l" id="p_review_total_dist">700km</th>
+			<th class="tg-yw4l" id="p_review_time2arrive">16:40</th>
+		  </tr>
+		</table>
+	</div>
+
+	<!-- Panel navigating -->
+	<div id="panel_navigation" style="display:none;">
+		<table class="tg" id="panel_summary" onClick='javascript:qml_switchUISpeed()'>
+		  <tr>
+			<th class="tg-yw4l" id="p_time2left">25min</th>
+			<th class="tg-yw4l" id="p_total_dist">700km</th>
+			<th class="tg-yw4l" id="p_speed">120km/h</th>
+			<th class="tg-yw4l" id="p_time2arrive">16:40</th>
+		  </tr>
+		</table>
+		
+		<table class="tg" id="panel_indication">
+		  <tr>
+			<th class="tg-yw4l">
+				<img id="p_img_ind" src="img/steps/15.svg" onclick="qml_getRouteInfoList()">
+			</th>
+		  </tr>
+		  <tr>
+			<td class="tg-yw4l" id="p_next_dist">600m</td>
+		  </tr>
+		</table>
+		
+		<table class="tg" id="panel_txt_ind">
+		  <tr>
+			<th class="tg-yw4l" id="p_txt_ind">Turn right onto Xixon St.</th>
+		  </tr>
+		</table>
+	</div>
+	
+	<!-- Map attribution -->
+	<div id="map_attribution" style="display:none;"></div>
+	
+	<!-- Where is the North -->
+	<div id="map_north" style="display:none;">
+		<img id="img_north" src="img/marker/north.svg">
+	</div>
+	
+	<!-- Max speed radar alert -->
+	<div id="max_speed_alert" style="display:none;">
+		<img id="img_maxspeed" src="img/marker/maxspeed.svg">
+		<span id="txt_mapspeed"></span>
+	</div>
+	
+	<!-- Warning for long routes -->
+	<div id="popup_longroute" style="display:none;" data-role="dialog">
+	  <section>
+		<h1 data-localize="Route so long">Route so long</h1>
+		<p>
+			<span data-localize="More than 1000km could affect the performance">More than 1000km could affect the performance</span><br>
+			<span data-localize="We recommend you a waypoint in the middle as destination">We recommend you a waypoint in the middle as destination</span>
+		</p>
+		<menu>
+		  <button id="no_longroute" data-role="button" onclick="$('#popup_longroute').hide()" data-localize="Close">Close</button>
+		</menu>
+	  </section>
+	</div>
+
+
+	<!-- Error GPS denied -->
+	<div id="gps_denied" style="display:none;" data-role="dialog">
+	  <section>
+		<h1 data-localize="GPS Denied">GPS Denied</h1>
+		<p>
+			<span data-localize="Error reading the GPS status">Error reading the GPS status</span><br>
+			<span data-localize="Please review your device settings">Please review your device settings</span><br>
+		</p>
+		<menu>
+		  <button id="no_gps" data-role="button" onclick="$('#gps_denied').hide()" data-localize="Close">Close</button>
+		</menu>
+	  </section>
+	</div>
+
+	<!-- js -->
+	<script src="libraries/jquery.min.js"></script>
+	
+	
+	<!-- Markers -->
+	<img class="unav_markers" id="marker_pos" src="img/marker/car.png" style="display:none;">
+	<img class="unav_markers" id="marker_pos_start" src="img/marker/start.png" style="display:none;">
+	<img class="unav_markers" id="marker_pos_end" src="img/marker/finish.png" style="display:none;">
+	<script>
+		for (i=0 ; i<50; i++) {
+			$(document.body).append('<div id="POI'+i+'"><img class="POI_img" src="img/marker/POI_img.png" style="display:none;"><img class="POI_img_inside" src="img/poi/Artwork.svg" style="display:none;"></div>');
+		}
+		for (i=0 ; i<100; i++) {
+			$(document.body).append('<img id="radar'+i+'" src="img/marker/radar.png" style="display:none;">');
+		}
+	</script>
+
+
+	<!-- i18n -->
+	<script src="libraries/i18n.js"></script>
+	<script>
+		// User language
+		var lang_country = navigator.language;                             // Example: pt-BR
+		var lang_root    = navigator.language.split('-')[0].toLowerCase(); // Example: pt
+		// Exists exactly language? (Example pt-BR)
+		$.ajax({
+			url:"locales/json/messages-"+lang_country+".json",
+			type:'HEAD',
+			error: function() { // Not exists = Default
+				lang_country = 'en-US';
+			},
+			success: function() {}
+		});
+		if (lang_country == 'en-US') {
+			// Exists similar language? (Example: pt)
+			$.ajax({
+				url:"locales/json/messages-"+lang_root+".json",
+				type:'HEAD',
+				error: function() { // Not exists = Default
+					lang_root = 'en';
+				},
+				success: function() {
+					lang_country = lang_root;
+				}
+			});
+		}
+		console.log('Lang-Country: ' + lang_country + '. Root: ' + lang_root);
+		// Load language
+		$("[data-localize]").localize("locales/json/messages", { language: lang_country });
+		// Localize strings
+		function t(key) {
+			if (typeof $.localize.data["locales/json/messages"][key] !== 'undefined')
+				return $.localize.data["locales/json/messages"][key];
+			else
+				return key;
+		}
+	</script>
+
+
+	<!-- Map -->
+	<script src="libraries/ol.js"></script>
+	<script>
+		var map_layers = [];
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.OSM({url: 'http://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'}),
+				visible: false
+			})
+		);
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.OSM({url: 'http://api.tiles.mapbox.com/v4/costales.03e98a7c/{z}/{x}/{y}.png?access_token=unav_api'}),
+				visible: false
+			})
+		);
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.Stamen({layer: 'terrain'}),
+				visible: false
+			})
+		);
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.Stamen({layer: 'toner-lite'}),
+				visible: false
+			})
+		);
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.OSM({url: 'http://{a-c}.tile.opentopomap.org/{z}/{x}/{y}.png'}),
+				visible: false
+			})
+		);
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.OSM({url: 'http://{a-z}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png'}),
+				visible: false
+			})
+		);
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.OSM({url: 'http://{a-z}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'}),
+				visible: false
+			})
+		);
+		map_layers.push(
+			new ol.layer.Tile({
+				source: new ol.source.OSM({url: '/home/phablet/.local/share/navigator.costales/maps/{z}/{x}/{y}.png'}),
+				visible: false
+			})
+		);
+		
+		var map = new ol.Map({
+		  layers: map_layers,
+		  controls: [],
+		  target: 'map',
+		  view: new ol.View({
+			center: ol.proj.transform([4.666389, 50.009167], 'EPSG:4326', 'EPSG:3857'),
+			zoom: 4,
+			minZoom: 3,
+			maxZoom: 18
+		  })
+		});
+	</script>
+	
+	<script src="libraries/turf.min.js"></script>
+	<script src="libraries/geolib.js"></script>
+	<script src="toolkit/buttons.js"></script>
+	<script src="toolkit/dialogs.js"></script>
+
+	<!-- Objects -->
+	<script src="class/Settings.js"></script>
+	<script src="class/Navigator.js"></script>
+	<script src="class/WebAPI.js"></script>
+	<script src="class/UI.js"></script>
+	<script src="class/Maths.js"></script>
+	<script>
+		var settings = new Settings();
+		var maths    = new Maths();
+		var nav      = new Navigator(maths, lang_root);
+		var ui       = new UI(map, nav, settings, maths, lang_root);
+		var webapi   = new WebAPI(nav, ui, settings);
+		
+		// Navigation (map in review mode by default, without read GPS for not drain battery)
+		var id_gps = 0;
+		var confirm_route = true;
+		
+		function center_pos() {
+			ui.set_center_1st_pos(true);
+			ui.set_map_stretched(true);
+			if (id_gps === 0) // GPS will run forever
+				gps_start();
+		}
+		
+		
+		function gps_start() {
+
+			console.log('Starting GPS...');
+			
+			if (!navigator.geolocation) {
+				qml_set_center_onpos(0);
+				$('#gps_denied').show();
+				return;
+			}
+			
+			/** TESTING BEGIN **/
+			var route = [
+                [39.555550,3.087692], [39.555550,3.087692], [39.555550,3.087692], [39.555550,3.087692], [39.555550,3.087692], [39.556311,3.088636], [39.556311,3.088636], [39.556311,3.088636], [39.556311,3.088636], [39.557403,3.089365], [39.558230,3.090137], [39.558230,3.090137], [39.558230,3.090137], [39.558426,3.090643], [39.558757,3.090064], [39.559237,3.089978], [39.560146,3.089785], [39.561073,3.089592], [39.561668,3.089528], [39.561950,3.089634], [39.562099,3.090535], [39.562115,3.091135], [39.562264,3.091843], [39.562247,3.092530], [39.562281,3.093280], [39.562297,3.094031], [39.562496,3.095061], [39.562793,3.096004], [39.562959,3.096648], [39.563372,3.097463]
+			];
+			var z1 = 0;
+			id_gps = setInterval(function(){
+				accuracy = 300;
+				speed = 2;
+				z1++;
+				latitude = route[z1][0];
+				longitude = route[z1][1];
+				nav.set_gps_data(latitude, longitude, accuracy, speed);
+				gps_loop(nav.get_route_status());
+			},500);
+			return;
+			/** TESTING END **/
+			
+			var t_prev_run = 0;
+			id_gps = navigator.geolocation.watchPosition(
+				function (pos) {
+					if (t_prev_run < $.now()) { // Device bug #1500539 There are 3 positions at the same time
+						t_prev_run = $.now() + 450;
+						
+						nav.set_gps_data(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, pos.coords.speed);
+						gps_loop(nav.get_route_status());
+					}
+				},
+				function (error) {
+					if (error.code == 1) { // Denied?
+						console.log('GPS Denied!');
+						navigator.geolocation.clearWatch(id_gps);
+						id_gps = 0;
+						nav.set_route_status('no');
+						ui.update();
+						ui.markers_radar_clear();
+						ui.route(false);
+						qml_set_center_onpos(0);
+						$('#gps_denied').show();
+					}
+				},
+				{
+					enableHighAccuracy: true
+				}
+			);
+		}
+		
+		
+		// Dragons here! The 'status' is critical in the app, it will pass for states that will determine how to work the app
+		function gps_loop(status) {
+			
+			switch(status) {
+				case 'no':
+				case 'yes':
+				case 'ended':
+				case 'simulate_calculating':
+				case 'simulate_done_car':
+				case 'simulate_done_bike':
+				case 'simulate_done_walk':
+				case 'simulate_drawing':
+				case 'simulate_error':
+				case '2review':
+				case 'calculating':
+				case 'calculating_error':
+				case 'calculating_from_out':
+					break;
+				case 'drawing':
+					var route_indication = nav.get_route_indication();
+					if (confirm_route) {
+						if (route_indication['distance_total'] > 1000000)
+							$('#popup_longroute').show();
+						ui.set_center_onpos(false);
+						ui.set_center_1st_pos(false);
+						ui.set_zoom_unav(false);
+						ui.btns_confirm_route(true);
+						ui.route(true);
+						nav.set_route_status('2review');
+						qml_set_center_onpos(1);
+					}
+					else {
+						ui.route(false);
+						nav.set_route_status('yes');
+					}
+					webapi.set_radars();
+					break;
+				case 'waiting4signal':
+					confirm_route = true;
+					ui.set_confirm_btn_color(settings.get_routing_mode());
+					nav.set_route_status('calc');
+					// Not use here break for calc route now
+				case 'calc':
+				case 'calc_from_out':
+				case 'errorAPI':
+					var gps_data = nav.get_pos_data();
+					webapi.set_route(gps_data['now_lat'], gps_data['now_lng'], gps_data['end_lat'], gps_data['end_lng'], confirm_route);
+					break;
+				case 'out':
+					confirm_route = false;
+					nav.set_route_status('calc_from_out');
+					break;
+			}
+			
+			nav.update();
+			ui.update();
+			
+		}
+		
+		
+		// Map events
+		// Clicks
+		map.on('singleclick', function(evt) {
+				var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+				
+				while (coord[0] > 180) // Fix bug ol3 #4522
+					coord[0] = coord[0] - 360;
+				while (coord[0] < -180)
+					coord[0] = coord[0] + 360;
+
+				ui.markers_POI_set([{title: '', lat: coord[1], lng: coord[0]}]);
+
+				window.location = 'http://clicked_on_map?nofollow/' + coord[1] + '/' + coord[0] + '/none/none/none/none'; // Show popup
+		});
+
+		map.on('dblclick', function(evt) {
+			ui.set_zoom_unav(false); // custom zoom too
+			if (id_gps != 0 && ui.get_center_onpos()) { // Unfocus center if GPS ON
+				ui.set_center_onpos(false);
+				if (ui.get_center_1st_pos())
+					qml_set_center_onpos(2);
+				else
+					qml_set_center_onpos(1);
+			}
+			window.location = 'http://hide_popup?';
+		});
+
+		map.on('moveend', function () {
+			ui.set_north(maths._toDeg(map.getView().getRotation()));
+		});
+		
+		// Drag
+		map.on('pointerdrag', function(evt) {
+			ui.set_zoom_unav(false); // Pinch zoom or drag = custom zoom too
+			
+			if (id_gps != 0 && ui.get_center_onpos()) { // Unfocus center if GPS ON
+				ui.set_center_onpos(false);
+				if (ui.get_center_1st_pos())
+					qml_set_center_onpos(2);
+				else
+					qml_set_center_onpos(1);
+			}
+		});
+		
+		// Zoom
+		function custom_zoom(value) {
+			ui.set_zoom_unav(false);
+			
+			var zoom = ol.animation.zoom({duration: 300, resolution: map.getView().getResolution(), easing: ol.easing.linear});
+			map.beforeRender(zoom);
+			map.getView().setZoom(map.getView().getZoom() + value);
+			
+			if (id_gps != 0) {
+				if (ui.get_center_1st_pos())
+					qml_set_center_onpos(2);
+				else
+					qml_set_center_onpos(1);
+			}
+		}
+
+		// QML events
+		function qml_go_url(url) {
+			window.location = 'http://go?' + url;
+		}
+		
+		function qml_getRouteInfoList() {
+			if (nav.get_route_status() == 'yes' || nav.get_route_status().startsWith('simulate_done'))
+				window.location = 'http://get_routeinfo_list?' + JSON.stringify(nav.get_route_tracks());
+		}
+		
+		function qml_set_route_status() {
+			var gps_data = nav.get_pos_data();
+			window.location = 'http://route_status?'+ gps_data['now_lat'] + '/' +
+													  gps_data['now_lng'] + '/' +
+													  gps_data['end_lat'] + '/' +
+													  gps_data['end_lng'] + '/' +
+													  nav.get_route_status();
+		}
+		
+		function qml_set_center_onpos(status) {
+			window.location = 'http://set_center_onpos?' + status.toString();
+		}
+		
+		function qml_switchUISpeed() {
+			if (nav.get_route_status().startsWith('simulate')) {
+				return;
+			}
+			
+			if (settings.get_ui_speed()) {
+				settings.set_ui_speed(false);
+				$('#p_speed').hide();
+			}
+			else {
+				settings.set_ui_speed(true);
+				$('#p_speed').show();
+			}
+			window.location = 'http://set_ui_speed?' + settings.get_ui_speed().toString();
+		}
+		
+		function qml_save_data() { // Position & Last route mode
+			if (ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1].toFixed(6) == 50.009167 && ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0].toFixed(6) == 4.666389)
+				return;
+			window.location = 'http://save_data?' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1] + '/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0] + '/' + map.getView().getZoom() + '/' + settings.get_routing_mode();
+		}
+
+		function qml_show_notification(mode, message) {
+			window.location = 'http://show_notification?' + mode.toString() + '/' + message.toString();
+		}
+
+		// QML events returning
+		function calc2coord(lat, lng) {
+			nav.calc2coord(lat, lng);
+			ui.update();
+			center_pos();
+		}
+
+		function simulate2coord(lat1, lng1, lat2, lng2) {
+			nav.set_route_status('simulate_calculating');
+			webapi.simulate(lat1, lng1, lat2, lng2);
+			ui.update();
+			ui.markers_radar_clear();
+			ui.route(false);
+		}
+		
+		function click_cancel_route() {
+			nav.cancel_route();
+			
+			ui.update();
+			ui.markers_radar_clear();
+			ui.route(false);
+			
+			window.location = 'http://cancel_route?yes';
+		}
+		
+		function agree_review() {
+			center_pos();
+			nav.set_route_status('yes');
+			ui.update();
+			qml_set_center_onpos(2);
+		}
+		
+		function set_nav_mode(mode) {
+			if (mode == settings.get_routing_mode())
+				return;
+			
+			if (settings.get_routing_mode() == 0) // If previously was car, clear previous radars
+				ui.markers_radar_clear();
+			
+			settings.set_routing_mode(mode);
+			nav.set_route_status('waiting4signal');
+			gps_loop('waiting4signal');
+		}
+		
+		function set_simulate_mode(mode) {
+			if (mode == settings.get_routing_mode())
+				return;
+			
+			settings.set_routing_mode(mode);
+			window.location = 'http://simulate_again?';
+		}
+		
+		function load_custom_voices(play) {
+			$.ajax({
+				url:"/home/phablet/.local/share/navigator.costales/0.ogg",
+				type:'HEAD',
+				error: function() {
+					console.log("No voices");
+					if (play)
+						$('#10').trigger('play');
+				},
+				success: function() {
+					$('#0').attr('src',  '/home/phablet/.local/share/navigator.costales/0.ogg'  + '?' + Date.now());
+					$('#1').attr('src',  '/home/phablet/.local/share/navigator.costales/1.ogg'  + '?' + Date.now());
+					$('#2').attr('src',  '/home/phablet/.local/share/navigator.costales/2.ogg'  + '?' + Date.now());
+					$('#3').attr('src',  '/home/phablet/.local/share/navigator.costales/3.ogg'  + '?' + Date.now());
+					$('#4').attr('src',  '/home/phablet/.local/share/navigator.costales/4.ogg'  + '?' + Date.now());
+					$('#5').attr('src',  '/home/phablet/.local/share/navigator.costales/5.ogg'  + '?' + Date.now());
+					$('#6').attr('src',  '/home/phablet/.local/share/navigator.costales/6.ogg'  + '?' + Date.now());
+					$('#9').attr('src',  '/home/phablet/.local/share/navigator.costales/9.ogg'  + '?' + Date.now());
+					$('#10').attr('src', '/home/phablet/.local/share/navigator.costales/10.ogg' + '?' + Date.now());
+					$('#11').attr('src', '/home/phablet/.local/share/navigator.costales/11.ogg' + '?' + Date.now());
+					$('#70').attr('src', '/home/phablet/.local/share/navigator.costales/70.ogg' + '?' + Date.now());
+					$('#71').attr('src', '/home/phablet/.local/share/navigator.costales/71.ogg' + '?' + Date.now());
+					$('#72').attr('src', '/home/phablet/.local/share/navigator.costales/72.ogg' + '?' + Date.now());
+					$('#73').attr('src', '/home/phablet/.local/share/navigator.costales/73.ogg' + '?' + Date.now());
+					$('#74').attr('src', '/home/phablet/.local/share/navigator.costales/74.ogg' + '?' + Date.now());
+					console.log("Loaded custom voices");
+					if (play)
+						$('#10').trigger('play');
+				}
+			});
+		}
+	</script>
+
+
+
+	<!-- Notifications -->
+	<audio id="voice_notif" type="audio/ogg" src="sounds/notification.ogg" preload="none"/>
+	<audio id="radar_alert" type="audio/ogg" src="sounds/radar.ogg"        preload="none"/>
+	<audio id="error_alert" type="audio/ogg" src="sounds/error.ogg"        preload="none"/>
+
+	<audio id="0"  type="audio/ogg" src="voices/0.ogg"  preload="none"/>
+	<audio id="1"  type="audio/ogg" src="voices/1.ogg"  preload="none"/>
+	<audio id="2"  type="audio/ogg" src="voices/2.ogg"  preload="none"/>
+	<audio id="3"  type="audio/ogg" src="voices/3.ogg"  preload="none"/>
+	<audio id="4"  type="audio/ogg" src="voices/4.ogg"  preload="none"/>
+	<audio id="5"  type="audio/ogg" src="voices/5.ogg"  preload="none"/>
+	<audio id="6"  type="audio/ogg" src="voices/6.ogg"  preload="none"/>
+	<audio id="9"  type="audio/ogg" src="voices/9.ogg"  preload="none"/>
+	<audio id="10" type="audio/ogg" src="voices/10.ogg" preload="none"/>
+	<audio id="11" type="audio/ogg" src="voices/11.ogg" preload="none"/>
+	<audio id="70" type="audio/ogg" src="voices/70.ogg" preload="none"/>
+	<audio id="71" type="audio/ogg" src="voices/71.ogg" preload="none"/>
+	<audio id="72" type="audio/ogg" src="voices/72.ogg" preload="none"/>
+	<audio id="73" type="audio/ogg" src="voices/73.ogg" preload="none"/>
+	<audio id="74" type="audio/ogg" src="voices/74.ogg" preload="none"/>
+
+	<script>
+		load_custom_voices(false);
+		
+		$(document).on('visibilitychange', function() { // Hack white map
+			if(document.visibilityState !== 'hidden')
+				map.updateSize();
+		});
+	</script>
+</body>
+</html>

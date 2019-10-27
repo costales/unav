@@ -1,0 +1,1654 @@
+# Italian translation for unav
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the unav package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unav\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2018-10-15 18:38+0200\n"
+"PO-Revision-Date: 2018-06-11 20:51+0000\n"
+"Last-Translator: Matteo <mattbel10@hotmail.com>\n"
+"Language-Team: Italian <it@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
+"X-Generator: Launchpad (build 18847)\n"
+
+#: nav/class/Navigator.js:131
+msgid "Turn left"
+msgstr "Gira a sinistra"
+
+#: nav/class/Navigator.js:133
+msgid "Turn right"
+msgstr "Gira a destra"
+
+#: nav/class/Navigator.js:135
+msgid "Make a sharp left"
+msgstr "Fai una curva stretta a sinistra"
+
+#: nav/class/Navigator.js:137
+msgid "Make a sharp right"
+msgstr "Fai una curva stretta a destra"
+
+#: nav/class/Navigator.js:139
+msgid "Bear left"
+msgstr "Tieni la sinistra"
+
+#: nav/class/Navigator.js:141
+msgid "Bear right"
+msgstr "Tieni la destra"
+
+#: nav/class/Navigator.js:143
+msgid "Continue on the road"
+msgstr "Continuare sulla strada"
+
+#: nav/class/Navigator.js:145
+msgid "Enter the roundabout and take the designated exit"
+msgstr "Entrare nella rotonda e prendere l'uscita designata"
+
+#: nav/class/Navigator.js:147
+msgid "Enter the roundabout and take the first exit"
+msgstr "Entrare nella rotonda e prendere la prima uscita"
+
+#: nav/class/Navigator.js:149
+msgid "Enter the roundabout and take the second exit"
+msgstr "Entrare nella rotonda e prendere la seconda uscita"
+
+#: nav/class/Navigator.js:151
+msgid "Enter the roundabout and take the third exit"
+msgstr "Entrare nella rotonda e prendere la terza uscita"
+
+#: nav/class/Navigator.js:153
+msgid "Enter the roundabout and take the fourth exit"
+msgstr "Entrare nella rotonda e prendere la quarta uscita"
+
+#: nav/class/Navigator.js:155
+msgid "Enter the roundabout and take the fifth exit"
+msgstr "Entrare nella rotonda e prendere la quinta uscita"
+
+#: nav/class/Navigator.js:157
+msgid "Enter the roundabout and take the sixth exit"
+msgstr "Entrare nella rotonda e prendere la sesta uscita"
+
+#: nav/class/Navigator.js:159
+msgid "Enter the roundabout and take the seventh exit"
+msgstr "Entrare nella rotonda e prendere la settima uscita"
+
+#: nav/class/Navigator.js:161
+msgid "Enter the roundabout and take the eighth exit"
+msgstr "Entrare nella rotonda e prendere l'ottava uscita"
+
+#: nav/class/Navigator.js:163
+msgid "Enter the roundabout and take the ninth exit"
+msgstr "Entrare nella rotonda e prendere la nona uscita"
+
+#: nav/class/Navigator.js:165
+msgid "Make a U-turn"
+msgstr "Fai un'inversione di marcia"
+
+#: nav/class/Navigator.js:167 nav/class/UI.js:619
+msgid "You have arrived at your destination"
+msgstr "La tua destinazione è stata raggiunta"
+
+#: nav/class/Navigator.js:171
+msgid "Keep left"
+msgstr ""
+
+#: nav/class/Navigator.js:173
+msgid "Keep right"
+msgstr ""
+
+#: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
+msgid "Current Position"
+msgstr "Posizione attuale"
+
+#: nav/class/UI.js:47
+msgid "Current Start"
+msgstr "Partenza attuale"
+
+#: nav/class/UI.js:56
+msgid "Current End"
+msgstr "Arrivo attuale"
+
+#: nav/class/UI.js:559
+msgid "Waiting for a GPS signal…"
+msgstr "In attesa del segnale GPS…"
+
+#: nav/class/UI.js:566
+msgid "Searching for a route…"
+msgstr "Ricerca del percorso..."
+
+#: nav/class/UI.js:570
+msgid "Drawing route…"
+msgstr "Tracciamento del percorso…"
+
+#: nav/class/UI.js:574
+msgid "Trying search again soon…"
+msgstr "Nuovo tentativo di ricerca a breve..."
+
+#: nav/class/UI.js:578
+msgid "Recalculating route…"
+msgstr "Rielaborazione del percorso..."
+
+#: nav/class/UI.js:626
+msgid "Simulating route…"
+msgstr "Simulazione del percorso…"
+
+#: nav/index.html.strings:1
+msgid "Start"
+msgstr "Avvia"
+
+#: nav/index.html.strings:2 qml/Favorites.qml:248 qml/SettingsPage.qml:418
+msgid "Cancel"
+msgstr "Annulla"
+
+#: nav/index.html.strings:3
+msgid "Not found"
+msgstr "Non trovato"
+
+#: nav/index.html.strings:4
+msgid "Route so long"
+msgstr "Percorso molto lungo"
+
+#: nav/index.html.strings:5
+msgid "More than 1000km could affect the performance"
+msgstr "Più di 1000 Km potrebbero influenzare le prestazioni"
+
+#: nav/index.html.strings:6
+msgid "We recommend you a waypoint in the middle as destination"
+msgstr "Si raccomanda una sosta intermedia a metà del percorso"
+
+#: nav/index.html.strings:11 qml/Coordinate.qml:152 qml/Coordinate.qml:386
+#: qml/DownloadVoices.qml:250 qml/Favorites.qml:305 qml/Main.qml:1028
+msgid "Close"
+msgstr "Chiudi"
+
+#: nav/index.html.strings:8
+msgid "GPS Denied"
+msgstr "GPS non consentito"
+
+#: nav/index.html.strings:9
+msgid "Error reading the GPS status"
+msgstr "Errore nel leggere lo stato del GPS"
+
+#: nav/index.html.strings:10
+msgid "Please review your device settings"
+msgstr "Controllare le impostazioni del dispostivo"
+
+#: qml/AboutPage.qml:27 qml/SettingsPage.qml:44
+msgid "About"
+msgstr "Informazioni"
+
+#: qml/AboutPage.qml:38 qml/AboutPage.qml:39 qml/AboutPage.qml:40
+#: qml/AboutPage.qml:41
+msgid "Resources"
+msgstr "Risorse"
+
+#: qml/AboutPage.qml:38
+msgid "Translations"
+msgstr "Traduzioni"
+
+#: qml/AboutPage.qml:39
+msgid "Answers"
+msgstr "Risposte"
+
+#: qml/AboutPage.qml:40
+msgid "Bugs"
+msgstr "Errori"
+
+#: qml/AboutPage.qml:41
+msgid "Contact"
+msgstr "Contatti"
+
+#: qml/AboutPage.qml:44 qml/AboutPage.qml:45 qml/AboutPage.qml:46
+#: qml/AboutPage.qml:47 qml/AboutPage.qml:48
+msgid "Developers"
+msgstr "Sviluppatori"
+
+#: qml/AboutPage.qml:46
+msgid "Founder"
+msgstr "Fondatore"
+
+#: qml/AboutPage.qml:51
+msgid "Voice"
+msgstr "Voce"
+
+#: qml/AboutPage.qml:54
+msgid "Logo"
+msgstr "Logo"
+
+#: qml/AboutPage.qml:56 qml/AboutPage.qml:57 qml/AboutPage.qml:58
+msgid "Icons for empty states"
+msgstr "Icone per gli stati vuoti"
+
+#: qml/AboutPage.qml:61
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Carla Sella https://launchpad.net/~carla-sella\n"
+"  Claudio Arseni https://launchpad.net/~claudio.arseni\n"
+"  Emanuele Antonio Faraone https://launchpad.net/~emanueleant03\n"
+"  Gabriele https://launchpad.net/~gabrielemartelli\n"
+"  Gavril https://launchpad.net/~durdu69\n"
+"  Gio https://launchpad.net/~gio-scino\n"
+"  Giovanni https://launchpad.net/~gi9vanni\n"
+"  Leon083 https://launchpad.net/~leon083\n"
+"  Luca Ciavatta https://launchpad.net/~cialu\n"
+"  Marco Ciampa https://launchpad.net/~ciampix\n"
+"  Marco Graziotti https://launchpad.net/~graziottimarco\n"
+"  Matteo https://launchpad.net/~mattbel10\n"
+"  Milo Casagrande https://launchpad.net/~milo\n"
+"  Silvia Bindelli https://launchpad.net/~silvia-bindelli\n"
+"  alexisme https://launchpad.net/~alexanderc-spa\n"
+"  aury88 https://launchpad.net/~spacedriver88"
+
+#: qml/AboutPage.qml:63
+msgid "Translators"
+msgstr "Traduttori"
+
+#: qml/AboutPage.qml:67 qml/AboutPage.qml:68 qml/AboutPage.qml:69
+#: qml/AboutPage.qml:70 qml/AboutPage.qml:71 qml/AboutPage.qml:72
+#: qml/AboutPage.qml:73 qml/AboutPage.qml:74 qml/AboutPage.qml:75
+#: qml/AboutPage.qml:76 qml/AboutPage.qml:77 qml/AboutPage.qml:78
+#: qml/AboutPage.qml:79 qml/AboutPage.qml:80 qml/AboutPage.qml:81
+#: qml/AboutPage.qml:82
+msgid "Powered by"
+msgstr "Basato su"
+
+#. TRANSLATORS: %1 and %2 are links that do not have to be translated: Year + Project + License
+#: qml/AboutPage.qml:124
+#, qt-format
+msgid "Version %1. Under license %2"
+msgstr "Versione %1. Secondo i termini della licenza %2"
+
+#: qml/Coordinate.qml:35
+msgid "Decimal"
+msgstr "Decimali"
+
+#: qml/Coordinate.qml:48
+msgid "Sexagesimal"
+msgstr "Sessagesimali"
+
+#: qml/Coordinate.qml:77 qml/Coordinate.qml:171
+msgid "Lat:"
+msgstr "Lat:"
+
+#: qml/Coordinate.qml:94 qml/Coordinate.qml:242
+msgid "Long:"
+msgstr "Long:"
+
+#: qml/Coordinate.qml:109 qml/Coordinate.qml:312
+msgid "Show on Map"
+msgstr "Mostra sulla mappa"
+
+#: qml/Coordinate.qml:149 qml/Coordinate.qml:383
+msgid "Coordinates are not valid"
+msgstr "Coordinate non valide"
+
+#: qml/Coordinate.qml:150
+msgid ""
+"Enter valid decimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Inserire coordinate decimali valide\n"
+"\n"
+"Il formato previsto è:"
+
+#: qml/Coordinate.qml:384
+msgid ""
+"Enter valid sexagesimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"Inserire coordinate sessagesimali valide\n"
+"\n"
+"Il formato previsto è:"
+
+#: qml/DownloadVoices.qml:53
+msgid "Download voices"
+msgstr "Scarica voci"
+
+#: qml/DownloadVoices.qml:61
+msgid "Play current voice"
+msgstr "Usa voce corrente"
+
+#: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
+msgid "How to add a voice"
+msgstr "Come aggiungere una voce"
+
+#: qml/DownloadVoices.qml:161
+msgid "By "
+msgstr "Di "
+
+#: qml/DownloadVoices.qml:208
+msgid "Cancel Download"
+msgstr "Annulla scaricamento"
+
+#: qml/DownloadVoices.qml:224
+msgid "About the voices"
+msgstr "Informazioni sulla voce"
+
+#: qml/DownloadVoices.qml:230
+msgid "The stars are for the recommended voices."
+msgstr "Le stelle sono per le voci raccomandate"
+
+#: qml/DownloadVoices.qml:238
+msgid "You can add a new voice to uNav following these steps:"
+msgstr "Puoi aggiungere una nuova voce in uNav seguendo questi passaggi:"
+
+#: qml/Favorites.qml:74
+msgid "No favorites yet"
+msgstr "Non ci sono preferiti"
+
+#: qml/Favorites.qml:197 qml/SearchPage.qml:83
+msgid "Add Favorite"
+msgstr "Aggiungi preferito"
+
+#: qml/Favorites.qml:197
+msgid "Edit Favorite"
+msgstr "Modifica preferiti"
+
+#: qml/Favorites.qml:198
+msgid ""
+"There is already a favorite with that name. You can either overwrite it or "
+"enter a different name."
+msgstr ""
+"Esiste già un preferito con questo nome. È possibile soprascriverlo o "
+"inserire un nome differente."
+
+#: qml/Favorites.qml:232
+msgid "Insert a favorite name"
+msgstr "Inserisci un nome preferito"
+
+#: qml/Favorites.qml:255
+msgid "Overwrite"
+msgstr "Sovrascrivi"
+
+#: qml/Favorites.qml:255
+msgid "Add"
+msgstr "Aggiungi"
+
+#: qml/Favorites.qml:255
+msgid "Update"
+msgstr "Aggiorna"
+
+#: qml/Favorites.qml:277
+msgid "Favorite Coordinates"
+msgstr "Coordinate preferite"
+
+#: qml/Favorites.qml:288
+msgid "Name: "
+msgstr "Nome: "
+
+#: qml/Favorites.qml:295
+msgid "Latitude: "
+msgstr "Latitudine: "
+
+#: qml/Favorites.qml:302
+msgid "Longitude: "
+msgstr "Longitudine: "
+
+#: qml/Location.qml:45 qml/PoiListPage.qml:146
+msgid "Time out! Please try again"
+msgstr "Tempo scaduto. Riprovare"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius.
+#: qml/Location.qml:53
+msgid "Sorry, nothing found. Try another search"
+msgstr "Non è stato trovato nulla. Provare con un'altra ricerca"
+
+#: qml/Location.qml:141 qml/Location.qml:352 qml/Location.qml:414
+msgid "Search history"
+msgstr "Cronologia ricerche"
+
+#: qml/Location.qml:151 qml/Location.qml:358 qml/Location.qml:416
+msgid "Favorite history"
+msgstr "Cronologia preferiti"
+
+#: qml/Location.qml:161 qml/Location.qml:355 qml/Location.qml:371
+#: qml/Location.qml:382 qml/Location.qml:397 qml/Location.qml:404
+#: qml/Location.qml:436 qml/Location.qml:442
+msgid "Nearby history"
+msgstr "Cronologia nelle vicinanze"
+
+#: qml/Location.qml:187
+msgid "No history yet"
+msgstr "Ancora nessuna cronologia"
+
+#: qml/Location.qml:187
+msgid "History is disabled"
+msgstr "La cronologia è disabilitata"
+
+#: qml/Location.qml:200 qml/Location.qml:253 qml/PoiListPage.qml:163
+#: qml/components/POIQuickAccessGridView.qml:181
+msgid "Searching…"
+msgstr "Ricerca..."
+
+#: qml/Location.qml:249
+msgid "Search location"
+msgstr "Cerca posizione"
+
+#: qml/Main.qml:235 qml/SettingsPage.qml:35
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: qml/Main.qml:246
+msgid "Center on Position"
+msgstr "Centra sulla posizione"
+
+#: qml/Main.qml:250 qml/Main.qml:571
+msgid "Searching your position… This could take a while"
+msgstr "Ricerca della posizione...Potrebbe richiedere del tempo"
+
+#: qml/Main.qml:264 qml/PoiPage.qml:83 qml/SearchPage.qml:69
+msgid "Search"
+msgstr "Cerca"
+
+#: qml/Main.qml:275
+msgid "Destination"
+msgstr "Destinazione"
+
+#: qml/Main.qml:437
+msgid "Error getting speed cameras!"
+msgstr "Errore nell'acquisire gli autovelox."
+
+#: qml/Main.qml:440
+msgid "Error finding route! Retrying again in 1 minute…"
+msgstr "Errore nel trovare la strada. Nuova ricerca in 1 minuto ..."
+
+#: qml/Main.qml:443
+msgid "Error finding route! Trying again…"
+msgstr "Errore nel calcolo del percorso. Nuovo tentativo..."
+
+#: qml/Main.qml:488 qml/Main.qml:514
+msgid "Shared Position"
+msgstr "Posizione condivisa"
+
+#: qml/Main.qml:762
+msgid "Near to destination"
+msgstr "Vicino alla destinazione"
+
+#: qml/Main.qml:763
+msgid "Cancel route"
+msgstr "Annulla il percorso"
+
+#: qml/Main.qml:809
+#, qt-format
+msgid "Coord: %1, %2"
+msgstr "Coord: %1, %2"
+
+#: qml/Main.qml:877 qml/PoiDetailsPage.qml:243
+msgid "Simulate from here! Now click on destination"
+msgstr "Simula da qui. Ora fare clic sulla destinazione"
+
+#: qml/Main.qml:894
+msgid "Set a different coordinates for simulating"
+msgstr "Impostare coordinate differenti per la simulazione"
+
+#: qml/Main.qml:1016
+msgid "Custom voices"
+msgstr "Voci personalizzate"
+
+#: qml/Main.qml:1017
+msgid ""
+"American English voice will be the unique voice installed by default.\n"
+"\n"
+"You can set a custom voice in your language from Settings: Download custom "
+"voices.\n"
+"\n"
+"The list of voices will be updated by the users. Please check them out in "
+"the future.\n"
+msgstr ""
+"La voce Inglese Americano sarà l'unica installata di default\n"
+"Puoi selezionare una voce personalizzata nella tua lingua dalle "
+"Impostazioni: Scarica voci personalizzate.\n"
+"La lista delle voci sarà aggiornata dagli utenti. Per favore controlla le "
+"uscite in futuro\n"
+
+#: qml/Main.qml:1019
+msgid "Set a voice now"
+msgstr "Imposta una voce ora"
+
+#: qml/PoiDetailsPage.qml:89
+msgid "Lat, Long:"
+msgstr "Lat, Long:"
+
+#: qml/PoiDetailsPage.qml:95 qml/PoiDetailsPage.qml:110
+msgid "Available"
+msgstr "Disponibile"
+
+#: qml/PoiDetailsPage.qml:97 qml/PoiDetailsPage.qml:112
+msgid "Not Available"
+msgstr "Non disponibile"
+
+#: qml/PoiDetailsPage.qml:99
+msgid "Wi-Fi Hotspot Available"
+msgstr "Disponibile hotspot Wi-Fi"
+
+#: qml/PoiDetailsPage.qml:101
+msgid "Wired Connection Available (ethernet connection)"
+msgstr "Disponibile connessione via cavo (connessione Ethernet)"
+
+#: qml/PoiDetailsPage.qml:103
+msgid "Computer Terminal Available"
+msgstr "Disponibile terminale computer"
+
+#: qml/PoiDetailsPage.qml:115
+msgid "Limited Availability"
+msgstr "Disponibilità limitata"
+
+#: qml/PoiDetailsPage.qml:174
+msgid "Loading POI details..."
+msgstr "Caricamento dettagli..."
+
+#: qml/PoiListPage.qml:45
+msgid "Show POIs on map"
+msgstr "Mostra POI sulla mappa"
+
+#: qml/PoiListPage.qml:68
+msgid "Unknown current position"
+msgstr "Posizione attuale sconosciuta"
+
+#: qml/PoiListPage.qml:84
+msgid "Something went wrong. Please, try again…"
+msgstr "Qualcosa non ha funzionato. Riprovare..."
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius. %1 is the POI type eg..Pub, Airport
+#. Example string, "Sorry, no Airport found nearby. Try again with a larger search radius"
+#: qml/PoiListPage.qml:153
+#, qt-format
+msgid "Sorry, no %1 found nearby. Try again with a larger search radius"
+msgstr ""
+"Nessun «%1» trovato nelle vicinanze. Provare nuovamente aumentando il raggio "
+"di ricerca."
+
+#. TRANSLATORS: Abbreviation for Public Holiday. This string is used while showing the opening hours
+#. of a place which might be closed during public holidays.
+#: qml/PoiListPage.qml:361
+msgid "PH"
+msgstr "FP"
+
+#. TRANSLATORS: This string indicates that a place is closed.
+#: qml/PoiListPage.qml:363
+msgid "Closed"
+msgstr "Chiuso"
+
+#: qml/PoiPage.qml:64
+msgid "Back"
+msgstr "Indietro"
+
+#: qml/PoiPage.qml:118
+msgid "Filter POI categories by name"
+msgstr "Filtra categorie per nome"
+
+#: qml/PoiPage.qml:128
+msgid "Nearby"
+msgstr "Nelle vicinanze"
+
+#: qml/PoiPage.qml:147
+msgid "Most recent"
+msgstr "Più recenti"
+
+#: qml/PoiQuickAccessPage.qml:63
+msgid "Fast Nearest Editor: "
+msgstr "Editore veloce dei punti più vicini "
+
+#: qml/PoiQuickAccessPage.qml:201
+msgid "Selection"
+msgstr "Selezione"
+
+#. TRANSLATORS: argument is a number > 1.
+#: qml/PoiQuickAccessPage.qml:203
+#, qt-format
+msgid "Max. %1 POIs can be selected."
+msgstr "Possono essere selezionati al massimo %1 punti di interesse."
+
+#: qml/PoiQuickAccessPage.qml:206 qml/SettingsPage.qml:439
+msgid "OK"
+msgstr "OK"
+
+#: qml/RouteInfoListPage.qml:29
+msgid "Route Info"
+msgstr "Informazioni percorso"
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: qml/SearchPage.qml:100
+msgid "Location"
+msgstr "Posizione"
+
+#: qml/SearchPage.qml:100
+msgid "Favorites"
+msgstr "Preferiti"
+
+#: qml/SearchPage.qml:100
+msgid "Coordinates"
+msgstr "Coordinate"
+
+#: qml/SearchPage.qml:150
+msgid "Add Current Position"
+msgstr "Aggiungi posizione attuale"
+
+#: qml/SearchPage.qml:160
+msgid "Add Current Destination"
+msgstr "Aggiungi destinazione attuale"
+
+#: qml/SearchPage.qml:172
+msgid "Add by clicking on Map"
+msgstr "Aggiungi facendo clic sulla mappa"
+
+#: qml/SettingsPage.qml:56
+msgid "A voice"
+msgstr "Una voce"
+
+#: qml/SettingsPage.qml:57
+msgid "A notification"
+msgstr "Una notifica"
+
+#: qml/SettingsPage.qml:58
+msgid "None"
+msgstr "Nessuna"
+
+#: qml/SettingsPage.qml:68
+msgid "Kilometres"
+msgstr "Chilometri"
+
+#: qml/SettingsPage.qml:69
+msgid "Miles"
+msgstr "Miglia"
+
+#: qml/SettingsPage.qml:95
+msgid "uNav link"
+msgstr ""
+
+#: qml/SettingsPage.qml:96
+msgid "Google Maps link"
+msgstr ""
+
+#: qml/SettingsPage.qml:97
+msgid "Standard GEO link"
+msgstr ""
+
+#: qml/SettingsPage.qml:107
+msgid "Online"
+msgstr "In linea"
+
+#: qml/SettingsPage.qml:108
+msgid "Offline"
+msgstr "Non in linea"
+
+#: qml/SettingsPage.qml:130
+msgid "Navigation"
+msgstr "Navigazione"
+
+#: qml/SettingsPage.qml:137
+msgid "Guidance"
+msgstr "Guida"
+
+#: qml/SettingsPage.qml:169
+msgid "Download custom voices"
+msgstr "Scarica voci personalizzate"
+
+#: qml/SettingsPage.qml:176
+msgid "Car Options"
+msgstr "Opzioni per l'auto"
+
+#: qml/SettingsPage.qml:183
+msgid "Avoid tolls"
+msgstr "Evitare pedaggi"
+
+#: qml/SettingsPage.qml:200
+msgid "Speed camera alerts"
+msgstr "Avvisi per autovelox"
+
+#: qml/SettingsPage.qml:219
+msgid "Map"
+msgstr "Mappa"
+
+#: qml/SettingsPage.qml:226
+msgid "Mode"
+msgstr "Modalità"
+
+#: qml/SettingsPage.qml:261
+msgid "How to use offline maps"
+msgstr "Come usare le mappe non in linea"
+
+#: qml/SettingsPage.qml:278
+msgid "Online style"
+msgstr "Stile online"
+
+#: qml/SettingsPage.qml:312
+msgid "Units"
+msgstr "Unità"
+
+#: qml/SettingsPage.qml:346
+msgid "Share position as"
+msgstr "condividi la posizione come"
+
+#: qml/SettingsPage.qml:376
+msgid "History"
+msgstr "Cronologia"
+
+#: qml/SettingsPage.qml:383
+msgid "Store new searches"
+msgstr "Memorizza le nuove ricerche"
+
+#: qml/SettingsPage.qml:395 qml/SettingsPage.qml:405
+msgid "Clear history"
+msgstr "Cancella cronologia"
+
+#: qml/SettingsPage.qml:406
+msgid "You'll delete the current history"
+msgstr "Verrà eliminata la cronologia attuale"
+
+#: qml/SettingsPage.qml:409
+msgid "Delete"
+msgstr "Elimina"
+
+#: qml/SettingsPage.qml:428
+msgid "Speed Camera alerts and the law"
+msgstr "La legge e gli avvisi per gli autovelox"
+
+#: qml/SettingsPage.qml:429
+msgid ""
+"uNav is only reading the OpenStreetMap database.\n"
+"uNav will show a max speed notification and a Speed Camera marker (marker "
+"hidden for French users because of law).\n"
+"\n"
+"In a few countries Speed Camera alerts are illegal, then enable this option "
+"only if it's legal in the country."
+msgstr ""
+"uNav utilizza solamente i dati di OpenStreetMap.\n"
+"uNav mostra una notifica per la velocità massima e un indicatore di "
+"autovelox (indicatore non disponibile per gli utenti francesi).\n"
+"\n"
+"In alcuni Paesi, gli avvisi per la presenza di autovelox sono illegali: "
+"abilitare questa opzione solo se è consentito nel proprio Paese."
+
+#: qml/SettingsPage.qml:435
+msgid "Read more about it"
+msgstr "Ulteriori informazioni"
+
+#: qml/Share.qml:33
+msgid "Share location to"
+msgstr "Condividi posizione su"
+
+#: qml/components/POIQuickAccessGridView.qml:92
+msgid "Error getting results. Please, check your data connection."
+msgstr ""
+"Errore nell'acquisizione dei risultati. Controllare la connessione dati."
+
+#: qml/components/POIQuickAccessGridView.qml:97
+msgid "Sorry, no results found nearby."
+msgstr "Nessun risultato trovato nelle vicinanze."
+
+#: qml/components/POIQuickAccessGridView.qml:175
+msgid "Current position unknown. Try again after a position update."
+msgstr ""
+"Posizione attuale sconosciuta. Provare nuovamente dopo aver aggiornato la "
+"posizione."
+
+#: qml/js/PoiCategories.js:4
+msgid "Transport"
+msgstr "Trasporto"
+
+#: qml/js/PoiCategories.js:6
+msgid "Airport"
+msgstr "Aeroporto"
+
+#: qml/js/PoiCategories.js:7
+msgid "Bicycle Parking"
+msgstr "Parcheggio biciclette"
+
+#: qml/js/PoiCategories.js:8
+msgid "Bicycle Rental"
+msgstr "Noleggio biciclette"
+
+#: qml/js/PoiCategories.js:9
+msgid "Bicycle Shop"
+msgstr "Negozio di biciclette"
+
+#: qml/js/PoiCategories.js:10
+msgid "Bus Station"
+msgstr "Stazione degli autobus"
+
+#: qml/js/PoiCategories.js:11
+msgid "Bus Stop"
+msgstr "Fermata dell'autobus"
+
+#: qml/js/PoiCategories.js:12
+msgid "Car Rental"
+msgstr "Noleggio autoveicoli"
+
+#: qml/js/PoiCategories.js:13
+msgid "Car Repair"
+msgstr "Riparazione auto"
+
+#: qml/js/PoiCategories.js:14
+msgid "Car Wash"
+msgstr "Autolavaggio"
+
+#: qml/js/PoiCategories.js:15
+msgid "Ferry Terminal"
+msgstr "Terminal traghetti"
+
+#: qml/js/PoiCategories.js:16
+msgid "Gas Station"
+msgstr "Distributore di carburante"
+
+#: qml/js/PoiCategories.js:17
+msgid "Motorcycle Shop"
+msgstr "Negozio di motocicli"
+
+#: qml/js/PoiCategories.js:18
+msgid "Parking"
+msgstr "Parcheggio"
+
+#: qml/js/PoiCategories.js:19
+msgid "Subway Entrance"
+msgstr "Ingresso metropolitana"
+
+#: qml/js/PoiCategories.js:20
+msgid "Taxi"
+msgstr "Taxi"
+
+#: qml/js/PoiCategories.js:21
+msgid "Train Station"
+msgstr "Stazione ferroviaria"
+
+#: qml/js/PoiCategories.js:25
+msgid "Accommodation"
+msgstr "Alloggio"
+
+#: qml/js/PoiCategories.js:27
+msgid "Bed and Breakfasts"
+msgstr "Bed and Breakfast"
+
+#: qml/js/PoiCategories.js:28
+msgid "Campsite"
+msgstr "Campeggio"
+
+#: qml/js/PoiCategories.js:29
+msgid "Caravan Site"
+msgstr "Ccampeggio per roulotte"
+
+#: qml/js/PoiCategories.js:30
+msgid "Guest House"
+msgstr "Pensione"
+
+#: qml/js/PoiCategories.js:31
+msgid "Hostel"
+msgstr "Ostello"
+
+#: qml/js/PoiCategories.js:32
+msgid "Hotel"
+msgstr "Hotel"
+
+#: qml/js/PoiCategories.js:33
+msgid "Motel"
+msgstr "Motel"
+
+#: qml/js/PoiCategories.js:37
+msgid "Food & Drink"
+msgstr "Cibo e bevande"
+
+#: qml/js/PoiCategories.js:39
+msgid "Bakery"
+msgstr "Panificio"
+
+#: qml/js/PoiCategories.js:40
+msgid "Bar"
+msgstr "Bar"
+
+#: qml/js/PoiCategories.js:41
+msgid "Butcher"
+msgstr "Macelleria"
+
+#: qml/js/PoiCategories.js:42
+msgid "Cafe"
+msgstr "Caffetteria"
+
+#: qml/js/PoiCategories.js:43
+msgid "Convenience Store"
+msgstr "Piccolo supermercato"
+
+#: qml/js/PoiCategories.js:44
+msgid "Drinking water"
+msgstr "Acqua potabile"
+
+#: qml/js/PoiCategories.js:45
+msgid "Fast Food"
+msgstr "Fast food"
+
+#: qml/js/PoiCategories.js:46
+msgid "Ice Cream"
+msgstr "Gelateria"
+
+#: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:64
+msgid "Picnic Site"
+msgstr "Area picnic"
+
+#: qml/js/PoiCategories.js:48
+msgid "Pub"
+msgstr "Pub"
+
+#: qml/js/PoiCategories.js:49
+msgid "Restaurant"
+msgstr "Ristorante"
+
+#: qml/js/PoiCategories.js:53
+msgid "Tourism"
+msgstr ""
+
+#: qml/js/PoiCategories.js:55
+msgid "Alpine Hut"
+msgstr ""
+
+#: qml/js/PoiCategories.js:56
+msgid "Archaeological Site"
+msgstr "Sito archeologico"
+
+#: qml/js/PoiCategories.js:57 qml/js/PoiCategories.js:115
+msgid "Artwork"
+msgstr "Opera d'arte"
+
+#: qml/js/PoiCategories.js:58
+msgid "Attraction"
+msgstr ""
+
+#: qml/js/PoiCategories.js:59
+msgid "Battlefield"
+msgstr "Campo di battaglia"
+
+#: qml/js/PoiCategories.js:60
+msgid "Castle"
+msgstr "Castello"
+
+#: qml/js/PoiCategories.js:61
+msgid "Monument"
+msgstr "Monumento"
+
+#: qml/js/PoiCategories.js:62 qml/js/PoiCategories.js:119
+msgid "Museum"
+msgstr "Museo"
+
+#: qml/js/PoiCategories.js:63
+msgid "Nature Reserve"
+msgstr "Riserva naturale"
+
+#: qml/js/PoiCategories.js:65
+msgid "Ruin"
+msgstr "Rovine"
+
+#: qml/js/PoiCategories.js:66
+msgid "Theme Park"
+msgstr "Parco tematico"
+
+#: qml/js/PoiCategories.js:67
+msgid "Tourism Information"
+msgstr "Informazioni turistiche"
+
+#: qml/js/PoiCategories.js:68
+msgid "Town Hall"
+msgstr "Municipio"
+
+#: qml/js/PoiCategories.js:69
+msgid "Viewpoint"
+msgstr ""
+
+#: qml/js/PoiCategories.js:70
+msgid "Zoo"
+msgstr ""
+
+#: qml/js/PoiCategories.js:74
+msgid "Services"
+msgstr "Servizi"
+
+#: qml/js/PoiCategories.js:76
+msgid "ATM"
+msgstr "ATM"
+
+#: qml/js/PoiCategories.js:77
+msgid "Bank"
+msgstr "Banca"
+
+#: qml/js/PoiCategories.js:78
+msgid "Bureau de change"
+msgstr "Cambiavalute"
+
+#: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
+msgid "Place of Worship"
+msgstr "Luogo di culto"
+
+#: qml/js/PoiCategories.js:80
+msgid "Post Box"
+msgstr "Casella postale"
+
+#: qml/js/PoiCategories.js:81
+msgid "Post Office"
+msgstr "Ufficio postale"
+
+#: qml/js/PoiCategories.js:82
+msgid "Public Telephone"
+msgstr "Telefono pubblico"
+
+#: qml/js/PoiCategories.js:83
+msgid "Toilet"
+msgstr "Toilette"
+
+#: qml/js/PoiCategories.js:84
+msgid "Wi-Fi Point"
+msgstr "Zona Wi-Fi"
+
+#: qml/js/PoiCategories.js:88
+msgid "Shopping"
+msgstr "Acquisti"
+
+#: qml/js/PoiCategories.js:90
+msgid "Books"
+msgstr "Libri"
+
+#: qml/js/PoiCategories.js:91
+msgid "Charity"
+msgstr "Beneficenza"
+
+#: qml/js/PoiCategories.js:92
+msgid "Clothes"
+msgstr "Abbigliamento"
+
+#: qml/js/PoiCategories.js:93
+msgid "Computer Shop"
+msgstr "Negozio di computer"
+
+#: qml/js/PoiCategories.js:94
+msgid "Copy Shop"
+msgstr "Copisteria"
+
+#: qml/js/PoiCategories.js:95
+msgid "Florist"
+msgstr "Fioraio"
+
+#: qml/js/PoiCategories.js:96
+msgid "Gifts"
+msgstr "Regali"
+
+#: qml/js/PoiCategories.js:97
+msgid "Hairdresser"
+msgstr "Parrucchiere"
+
+#: qml/js/PoiCategories.js:98
+msgid "Jewelry"
+msgstr "Gioielleria"
+
+#: qml/js/PoiCategories.js:99
+msgid "Kiosk"
+msgstr "Chiosco"
+
+#: qml/js/PoiCategories.js:100
+msgid "Laundry"
+msgstr "Lavanderia"
+
+#: qml/js/PoiCategories.js:101
+msgid "Mall"
+msgstr "Centro commerciale"
+
+#: qml/js/PoiCategories.js:102
+msgid "Mobile Phone"
+msgstr "Telefoni cellulari"
+
+#: qml/js/PoiCategories.js:103
+msgid "Optician"
+msgstr "Ottico"
+
+#: qml/js/PoiCategories.js:104
+msgid "Public Market"
+msgstr "Mercato pubblico"
+
+#: qml/js/PoiCategories.js:105
+msgid "Shoes"
+msgstr "Calzature"
+
+#: qml/js/PoiCategories.js:106
+msgid "Supermarket"
+msgstr "Supermercato"
+
+#: qml/js/PoiCategories.js:107
+msgid "Travel Agency"
+msgstr "Agenzia di viaggi"
+
+#: qml/js/PoiCategories.js:108
+msgid "Vending Machine"
+msgstr "Distributore automatico"
+
+#: qml/js/PoiCategories.js:112
+msgid "Culture"
+msgstr "Cultura"
+
+#: qml/js/PoiCategories.js:114
+msgid "Art Center"
+msgstr "Centro d'arte"
+
+#: qml/js/PoiCategories.js:116
+msgid "Auditorium"
+msgstr "Auditorium"
+
+#: qml/js/PoiCategories.js:117
+msgid "Gallery"
+msgstr "Galleria"
+
+#: qml/js/PoiCategories.js:118
+msgid "Library"
+msgstr "Biblioteca"
+
+#: qml/js/PoiCategories.js:120
+msgid "Theatre"
+msgstr "Teatro"
+
+#: qml/js/PoiCategories.js:124
+msgid "Entertainment"
+msgstr "Intrattenimento"
+
+#: qml/js/PoiCategories.js:126
+msgid "Casino"
+msgstr "Casinò"
+
+#: qml/js/PoiCategories.js:127
+msgid "Children Playground"
+msgstr "Parco giochi per bambini"
+
+#: qml/js/PoiCategories.js:128
+msgid "Cinema"
+msgstr "Cinema"
+
+#: qml/js/PoiCategories.js:129
+msgid "Gym"
+msgstr "Palestra"
+
+#: qml/js/PoiCategories.js:130
+msgid "Night Club"
+msgstr "Locale notturno"
+
+#: qml/js/PoiCategories.js:131
+msgid "Park"
+msgstr "Parco"
+
+#: qml/js/PoiCategories.js:135
+msgid "Education"
+msgstr "Istruzione"
+
+#: qml/js/PoiCategories.js:137
+msgid "College"
+msgstr "Università"
+
+#: qml/js/PoiCategories.js:138
+msgid "Nursery School"
+msgstr "Asilo"
+
+#: qml/js/PoiCategories.js:139
+msgid "University"
+msgstr "Università"
+
+#: qml/js/PoiCategories.js:143
+msgid "Health"
+msgstr "Salute"
+
+#: qml/js/PoiCategories.js:145
+msgid "Dentist"
+msgstr "Dentista"
+
+#: qml/js/PoiCategories.js:146
+msgid "Doctor"
+msgstr "Dottore"
+
+#: qml/js/PoiCategories.js:147
+msgid "Hospital"
+msgstr "Ospedale"
+
+#: qml/js/PoiCategories.js:148
+msgid "Pharmacy"
+msgstr "Farmacia"
+
+#: qml/js/PoiCategories.js:149
+msgid "Veterinary"
+msgstr "Veterinario"
+
+#: qml/js/PoiCategories.js:153
+msgid "Religious"
+msgstr "Religioso"
+
+#: qml/js/PoiCategories.js:155
+msgid "Cemetery"
+msgstr "Cimitero"
+
+#: qml/js/PoiCategories.js:156
+msgid "Church"
+msgstr "Chiesa"
+
+#: qml/js/PoiCategories.js:157
+msgid "Crematorium"
+msgstr "Crematorio"
+
+#: qml/js/PoiCategories.js:162
+msgid "Emergency"
+msgstr "Emergenza"
+
+#: qml/js/PoiCategories.js:164
+msgid "Phone"
+msgstr "Telefono"
+
+#: qml/js/PoiCategories.js:165
+msgid "Police Station"
+msgstr "Stazione di polizia"
+
+#: qml/js/PoiCategories.js:169
+msgid "Sport"
+msgstr "Attività sportiva"
+
+#: qml/js/PoiCategories.js:171
+msgid "Sports Center"
+msgstr "Centro sportivo"
+
+#: qml/js/PoiCategories.js:172
+msgid "Stadium"
+msgstr "Stadio"
+
+#: qml/js/PoiCategories.js:173
+msgid "Swimming Pool"
+msgstr "Piscina"
+
+#: qml/js/PoiCategories.js:174
+msgid "Track"
+msgstr "Pista"
+
+#: qml/js/PoiCategories.js:178
+msgid "Others"
+msgstr "Altro"
+
+#: qml/js/PoiCategories.js:180
+msgid "Courthouse"
+msgstr "Tribunale"
+
+#: qml/js/PoiCategories.js:181
+msgid "Embassy"
+msgstr "Ambasciata"
+
+#: qml/js/PoiCategories.js:182
+msgid "Prison"
+msgstr "Carcere"
+
+#: qml/js/PoiCategories.js:183
+msgid "Recycling"
+msgstr "Centro di raccolta"
+
+#: qml/js/PoiCategories.js:184
+msgid "Town"
+msgstr "Città"
+
+#: qml/js/utils.js:58
+msgid "Current Location"
+msgstr "Posizione attuale"
+
+#: qml/tuto/Slide1.qml:40
+msgid "Welcome to uNav"
+msgstr "Benvenuti in uNav"
+
+#: qml/tuto/Slide1.qml:48
+msgid ""
+"A map viewer & GPS navigator\n"
+"\n"
+"Let's look at a few features together :)"
+msgstr ""
+"Un visualizzatore di mappe e navigatore GPS\n"
+"\n"
+"Ecco alcune delle funzionalità presenti"
+
+#: qml/tuto/Slide2.qml:43
+msgid "Long Touch on Map"
+msgstr "Premere a lungo sullo mappa"
+
+#: qml/tuto/Slide2.qml:60
+msgid ""
+"Navigate, add to favorites, search nearby places, share points on the map or "
+"simulate a route"
+msgstr ""
+"Naviga, aggiungi ai preferiti, cerca posti nei paraggi, condividi i punti "
+"sulla mappa o simula un percorso"
+
+#: qml/tuto/Slide3.qml:43
+msgid "Swipe Results"
+msgstr "Scorri i risultati"
+
+#: qml/tuto/Slide3.qml:60
+msgid ""
+"Navigate directly, call the place, share the location, open web page, delete "
+"favorites…"
+msgstr ""
+"Ottieni le indicazioni direttamente, chiama il posto, condividi la "
+"posizione, apri pagine web, cancella i preferiti…"
+
+#: qml/tuto/Slide4.qml:43
+msgid "Touch Everything!"
+msgstr "Tocca ogni cosa"
+
+#: qml/tuto/Slide4.qml:61
+msgid ""
+"Touch summary to show current speed\n"
+"\n"
+"Touch step indications to review route steps"
+msgstr ""
+"Tocca il sommario per mostrare la velocità attuale\n"
+"\n"
+"Tocca le indicazioni per modificarle"
+
+#: qml/tuto/Slide5.qml:43
+msgid "Simulate a route"
+msgstr "Simula un percorso"
+
+#: qml/tuto/Slide5.qml:61
+msgid ""
+"Set an origin: Click on map and click on simulate icon\n"
+"\n"
+"Set a destination: Then, click on map and click the same icon again"
+msgstr ""
+"Impostare un punto di partenza: fai clic sulla mappa e sull'icona di "
+"simulazione\n"
+"\n"
+"Impostare una destinazione: quindi fai clic sulla mappa e di nuovo sulla "
+"stessa icona"
+
+#: qml/tuto/Slide6.qml:43
+msgid "uNav doesn't track you!"
+msgstr "uNav non ti traccia!"
+
+#: qml/tuto/Slide6.qml:60
+msgid ""
+"It is licensed under the GNU GPL\n"
+"\n"
+"and based completely on libre projects!"
+msgstr ""
+"È sotto licenza GNU GPL\n"
+"\n"
+"e basato completamente su progetti liberi."
+
+#: qml/tuto/Slide6.qml:74
+msgid "Enjoy the Freedom!"
+msgstr "Goditi la libertà!"
+
+#: qml/tuto/components/Walkthrough.qml:89
+msgid "Skip"
+msgstr "Salta"
+
+#~ msgid "Cancel Route"
+#~ msgstr "Annulla percorso"
+
+#~ msgid "This app is powered by:"
+#~ msgstr "Questa app è basata su:"
+
+#~ msgid "Go There"
+#~ msgstr "Indicazioni per questo luogo"
+
+#~ msgid "Favorite"
+#~ msgstr "Preferiti"
+
+#~ msgid "Kilometers"
+#~ msgstr "Chilometri"
+
+#~ msgid "Follow"
+#~ msgstr "Segui"
+
+#~ msgid "Add From Map"
+#~ msgstr "Aggiungi dalla mappa"
+
+#~ msgid "Route"
+#~ msgstr "Percorso"
+
+#, qt-format
+#~ msgid "Sorry, no result for %1"
+#~ msgstr "Nessun risultato per %1"
+
+#, qt-format
+#~ msgid "© 2015 %1. Under license %2"
+#~ msgstr "© 2015 %1. Secondo i termini della licenza %2"
+
+#~ msgid "Bicycle"
+#~ msgstr "In bicicletta"
+
+#~ msgid "Walking"
+#~ msgstr "A piedi"
+
+#~ msgid "Car"
+#~ msgstr "In auto"
+
+#~ msgid "Continue"
+#~ msgstr "Continua"
+
+#~ msgid "Position unknown. Failed getting places nearby"
+#~ msgstr "Posizione sconosciuta. Impossibile rilevare i luoghi nelle vicinanze"
+
+#~ msgid "Something was wrong. Please, try again…"
+#~ msgstr "Qualcosa non ha funzionato. Riprovare..."
+
+#~ msgid "Waiting a good GPS signal…"
+#~ msgstr "In attesa di un buon segnale GPS..."
+
+#~ msgid "Searching a route…"
+#~ msgstr "Ricerca del percorso..."
+
+#~ msgid "A Notification"
+#~ msgstr "Una notifica"
+
+#~ msgid "Toilets"
+#~ msgstr "Servizi igienici"
+
+#~ msgid "Where do we go?"
+#~ msgstr "Dove si desidera andare?"
+
+#~ msgid "Support its future development:"
+#~ msgstr "Supporta lo sviluppo:"
+
+#~ msgid "Units:"
+#~ msgstr "Unità:"
+
+#~ msgid "Kindergarten"
+#~ msgstr "Asilo"
+
+#~ msgid "Go"
+#~ msgstr "Vai"
+
+#~ msgid "Exit the roundabout"
+#~ msgstr "Esci dalla rotonda"
+
+#~ msgid "Mode:"
+#~ msgstr "Modalità:"
+
+#~ msgid "Translators:"
+#~ msgstr "Traduttori:"
+
+#~ msgid "Mo"
+#~ msgstr "Lun"
+
+#~ msgid "Fr"
+#~ msgstr "Ven"
+
+#~ msgid "Th"
+#~ msgstr "Gio"
+
+#~ msgid "We"
+#~ msgstr "Mer"
+
+#~ msgid "Tu"
+#~ msgstr "Mar"
+
+#~ msgid "off"
+#~ msgstr "off"
+
+#~ msgid "Su"
+#~ msgstr "Dom"
+
+#~ msgid "Sa"
+#~ msgstr "Sab"
+
+#~ msgid "Indications:"
+#~ msgstr "Indicazioni:"
+
+#~ msgid "Turn right on ramp"
+#~ msgstr "Gira a destra sulla rampa"
+
+#~ msgid "Take the exit on the right"
+#~ msgstr "Prendi l'uscita a destra"
+
+#~ msgid "Turn left on ramp"
+#~ msgstr "Gira a sinistra sulla rampa"
+
+#~ msgid "Take the exit on the left"
+#~ msgstr "Prendi l'uscita a sinistra"
+
+#~ msgid "Your destination is on the left"
+#~ msgstr "La tua destinazione si trova a sinistra"
+
+#~ msgid "Your destination is on the right"
+#~ msgstr "La tua destinazione si trova a destra"
+
+#~ msgid "Leave the Ferry"
+#~ msgstr "Scendi dal traghetto"
+
+#~ msgid "Keep right at the fork"
+#~ msgstr "Al bivio, tieni la destra"
+
+#~ msgid "Keep left at the fork"
+#~ msgstr "Al bivio, tieni la sinistra"
+
+#~ msgid "Take the Ferry"
+#~ msgstr "Prendi il traghetto"
+
+#~ msgid "Stay straight on ramp"
+#~ msgstr "Proseguire dritti sulla rampa"
+
+#~ msgid "Keep straight at the fork"
+#~ msgstr "Al bivio, proseguire dritti"
+
+#~ msgid "Go to your right"
+#~ msgstr "Vai a destra"
+
+#~ msgid "Go to your left"
+#~ msgstr "Vai a sinistra"
+
+#~ msgid "B&B"
+#~ msgstr "B&B"
+
+#, qt-format
+#~ msgid "Enter the roundabout and take the exit %1"
+#~ msgstr "Entra nella rotanda e prendi l'uscita %1"
+
+#~ msgid "Current road becomes"
+#~ msgstr "La strada attuale diventa"
+
+#, qt-format
+#~ msgid " to take the %1"
+#~ msgstr " per immettersi in %1"
+
+#~ msgid "You are near to the destination"
+#~ msgstr "La tua destinazione è nelle vicinanze"
+
+#, qt-format
+#~ msgid " onto %1"
+#~ msgstr " in %1"
+
+#~ msgid "Buy Donate Version"
+#~ msgstr "Acquista"
+
+#~ msgid "Merge"
+#~ msgstr "Unisci"
+
+#~ msgid "Make a right U-turn"
+#~ msgstr "Esegui un'inversion di marcia a destra"
+
+#, qt-format
+#~ msgid " toward %1"
+#~ msgstr " verso %1"
+
+#~ msgid "A Voice"
+#~ msgstr "Una voce"
+
+#~ msgid "Avoid Tolls"
+#~ msgstr "Evitare strade con pedaggio"
+
+#, qt-format
+#~ msgid ", %1"
+#~ msgstr ", %1"
+
+#~ msgid "Developers:"
+#~ msgstr "Sviluppatori:"
+
+#~ msgid "Make a left U-turn"
+#~ msgstr "Esegui un'inversione di marcia a sinistra"
+
+#, qt-format
+#~ msgid ". Exit %1"
+#~ msgstr ". Esci da %1"
+
+#~ msgid "Ruins"
+#~ msgstr "Rovine"
+
+#~ msgid "No history yet…"
+#~ msgstr "Ancora nessuna cronologia..."
+
+#~ msgid "Voice:"
+#~ msgstr "Voce:"
+
+#~ msgid "Privacy"
+#~ msgstr "Privacy"
+
+#~ msgid "Historic"
+#~ msgstr "Luogo di interesse storico"
+
+#~ msgid ""
+#~ "Error finding route between points. Check the connection and try again"
+#~ msgstr ""
+#~ "Errore nella ricerca del percorso tra i punti. Verificare la connessione e "
+#~ "riprovare"
+
+#~ msgid "Convenience"
+#~ msgstr "Minimarket"
+
+#~ msgid "Fullscreen"
+#~ msgstr "Schermo intero"
+
+#~ msgid "Current"
+#~ msgstr "Attuale"
+
+#~ msgid "Share"
+#~ msgstr "Condividi"
+
+#~ msgid "Share Position"
+#~ msgstr "Condividi posizione"
+
+#~ msgid "Delete history"
+#~ msgstr "Elimina cronologia"
+
+#~ msgid "From Map"
+#~ msgstr "Dalla mappa"
+
+#~ msgid "Coord:"
+#~ msgstr "Coord:"
+
+#~ msgid "Pre-School"
+#~ msgstr "Scuola materna"
+
+#~ msgid "Station"
+#~ msgstr "Stazione"
+
+#~ msgid "Nursery"
+#~ msgstr "Asilo nido"
+
+#~ msgid "Wi-Fi Points"
+#~ msgstr "Hotspot"
+
+#, qt-format
+#~ msgid "Sorry, no %1 found nearby. Try again with another radius"
+#~ msgstr ""
+#~ "%1 nelle vicinanze inesistente. Provare con un raggio di ricerca differente"

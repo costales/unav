@@ -1,0 +1,1546 @@
+# Chinese (Simplified) translation for unav
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
+# This file is distributed under the same license as the unav package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unav\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2018-10-15 18:38+0200\n"
+"PO-Revision-Date: 2018-06-11 20:52+0000\n"
+"Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
+"X-Generator: Launchpad (build 18847)\n"
+
+#: nav/class/Navigator.js:131
+msgid "Turn left"
+msgstr "左转"
+
+#: nav/class/Navigator.js:133
+msgid "Turn right"
+msgstr "右转"
+
+#: nav/class/Navigator.js:135
+msgid "Make a sharp left"
+msgstr "急左转"
+
+#: nav/class/Navigator.js:137
+msgid "Make a sharp right"
+msgstr "急右转"
+
+#: nav/class/Navigator.js:139
+msgid "Bear left"
+msgstr "靠左"
+
+#: nav/class/Navigator.js:141
+msgid "Bear right"
+msgstr "靠右"
+
+#: nav/class/Navigator.js:143
+msgid "Continue on the road"
+msgstr "请在当前道路继续行驶"
+
+#: nav/class/Navigator.js:145
+msgid "Enter the roundabout and take the designated exit"
+msgstr "进入环岛然后在指定出口驶出"
+
+#: nav/class/Navigator.js:147
+msgid "Enter the roundabout and take the first exit"
+msgstr "进入环岛然后在第一个路口驶出"
+
+#: nav/class/Navigator.js:149
+msgid "Enter the roundabout and take the second exit"
+msgstr "进入环岛然后在第二个路口驶出"
+
+#: nav/class/Navigator.js:151
+msgid "Enter the roundabout and take the third exit"
+msgstr "进入环岛然后在第三个路口驶出"
+
+#: nav/class/Navigator.js:153
+msgid "Enter the roundabout and take the fourth exit"
+msgstr "进入环岛然后在第四个路口驶出"
+
+#: nav/class/Navigator.js:155
+msgid "Enter the roundabout and take the fifth exit"
+msgstr "进入环岛然后在第五个路口驶出"
+
+#: nav/class/Navigator.js:157
+msgid "Enter the roundabout and take the sixth exit"
+msgstr "进入环岛然后在第六个路口驶出"
+
+#: nav/class/Navigator.js:159
+msgid "Enter the roundabout and take the seventh exit"
+msgstr "进入环岛然后在第七个路口驶出"
+
+#: nav/class/Navigator.js:161
+msgid "Enter the roundabout and take the eighth exit"
+msgstr "进入环岛然后在第八个路口驶出"
+
+#: nav/class/Navigator.js:163
+msgid "Enter the roundabout and take the ninth exit"
+msgstr "进入环岛然后在第九个路口驶出"
+
+#: nav/class/Navigator.js:165
+msgid "Make a U-turn"
+msgstr ""
+
+#: nav/class/Navigator.js:167 nav/class/UI.js:619
+msgid "You have arrived at your destination"
+msgstr "您已经抵达目标"
+
+#: nav/class/Navigator.js:171
+msgid "Keep left"
+msgstr ""
+
+#: nav/class/Navigator.js:173
+msgid "Keep right"
+msgstr ""
+
+#: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
+msgid "Current Position"
+msgstr "目前的位置"
+
+#: nav/class/UI.js:47
+msgid "Current Start"
+msgstr "目前起点"
+
+#: nav/class/UI.js:56
+msgid "Current End"
+msgstr "目前终点"
+
+#: nav/class/UI.js:559
+msgid "Waiting for a GPS signal…"
+msgstr "等待 GPS 信号..."
+
+#: nav/class/UI.js:566
+msgid "Searching for a route…"
+msgstr "搜寻路线中..."
+
+#: nav/class/UI.js:570
+msgid "Drawing route…"
+msgstr "画出路径..."
+
+#: nav/class/UI.js:574
+msgid "Trying search again soon…"
+msgstr "即将尝试再次搜索……"
+
+#: nav/class/UI.js:578
+msgid "Recalculating route…"
+msgstr "正在重新规划路径..."
+
+#: nav/class/UI.js:626
+msgid "Simulating route…"
+msgstr "正在规划路线……"
+
+#: nav/index.html.strings:1
+msgid "Start"
+msgstr "起始点"
+
+#: nav/index.html.strings:2 qml/Favorites.qml:248 qml/SettingsPage.qml:418
+msgid "Cancel"
+msgstr "取消"
+
+#: nav/index.html.strings:3
+msgid "Not found"
+msgstr ""
+
+#: nav/index.html.strings:4
+msgid "Route so long"
+msgstr "路径太长"
+
+#: nav/index.html.strings:5
+msgid "More than 1000km could affect the performance"
+msgstr "超过 1000 公里会影响性能"
+
+#: nav/index.html.strings:6
+msgid "We recommend you a waypoint in the middle as destination"
+msgstr "我们建议以中间点作为目的地"
+
+#: nav/index.html.strings:11 qml/Coordinate.qml:152 qml/Coordinate.qml:386
+#: qml/DownloadVoices.qml:250 qml/Favorites.qml:305 qml/Main.qml:1028
+msgid "Close"
+msgstr "关闭"
+
+#: nav/index.html.strings:8
+msgid "GPS Denied"
+msgstr "请求GPS 被拒绝"
+
+#: nav/index.html.strings:9
+msgid "Error reading the GPS status"
+msgstr "读取 GPS 状态错误"
+
+#: nav/index.html.strings:10
+msgid "Please review your device settings"
+msgstr "请检查您你的设备设置"
+
+#: qml/AboutPage.qml:27 qml/SettingsPage.qml:44
+msgid "About"
+msgstr "关于"
+
+#: qml/AboutPage.qml:38 qml/AboutPage.qml:39 qml/AboutPage.qml:40
+#: qml/AboutPage.qml:41
+msgid "Resources"
+msgstr "资源"
+
+#: qml/AboutPage.qml:38
+msgid "Translations"
+msgstr "翻译"
+
+#: qml/AboutPage.qml:39
+msgid "Answers"
+msgstr "答案"
+
+#: qml/AboutPage.qml:40
+msgid "Bugs"
+msgstr "Bugs"
+
+#: qml/AboutPage.qml:41
+msgid "Contact"
+msgstr "联系"
+
+#: qml/AboutPage.qml:44 qml/AboutPage.qml:45 qml/AboutPage.qml:46
+#: qml/AboutPage.qml:47 qml/AboutPage.qml:48
+msgid "Developers"
+msgstr "开发人员"
+
+#: qml/AboutPage.qml:46
+msgid "Founder"
+msgstr "创建者"
+
+#: qml/AboutPage.qml:51
+msgid "Voice"
+msgstr "配音"
+
+#: qml/AboutPage.qml:54
+msgid "Logo"
+msgstr "Logo"
+
+#: qml/AboutPage.qml:56 qml/AboutPage.qml:57 qml/AboutPage.qml:58
+msgid "Icons for empty states"
+msgstr "空状态图标"
+
+#: qml/AboutPage.qml:61
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Aron Xu https://launchpad.net/~happyaron\n"
+"  Cheng Lu https://launchpad.net/~dawndiy\n"
+"  FanJun Kong - ( BH1SCW ) https://launchpad.net/~fjkong\n"
+"  Luo Lei https://launchpad.net/~luolei\n"
+"  Rex Tsai https://launchpad.net/~chihchun"
+
+#: qml/AboutPage.qml:63
+msgid "Translators"
+msgstr "译者"
+
+#: qml/AboutPage.qml:67 qml/AboutPage.qml:68 qml/AboutPage.qml:69
+#: qml/AboutPage.qml:70 qml/AboutPage.qml:71 qml/AboutPage.qml:72
+#: qml/AboutPage.qml:73 qml/AboutPage.qml:74 qml/AboutPage.qml:75
+#: qml/AboutPage.qml:76 qml/AboutPage.qml:77 qml/AboutPage.qml:78
+#: qml/AboutPage.qml:79 qml/AboutPage.qml:80 qml/AboutPage.qml:81
+#: qml/AboutPage.qml:82
+msgid "Powered by"
+msgstr ""
+
+#. TRANSLATORS: %1 and %2 are links that do not have to be translated: Year + Project + License
+#: qml/AboutPage.qml:124
+#, qt-format
+msgid "Version %1. Under license %2"
+msgstr "版本 %1，许可协议 %2"
+
+#: qml/Coordinate.qml:35
+msgid "Decimal"
+msgstr "十进制"
+
+#: qml/Coordinate.qml:48
+msgid "Sexagesimal"
+msgstr "六十进制"
+
+#: qml/Coordinate.qml:77 qml/Coordinate.qml:171
+msgid "Lat:"
+msgstr "纬度："
+
+#: qml/Coordinate.qml:94 qml/Coordinate.qml:242
+msgid "Long:"
+msgstr "经度："
+
+#: qml/Coordinate.qml:109 qml/Coordinate.qml:312
+msgid "Show on Map"
+msgstr "在地图上展示"
+
+#: qml/Coordinate.qml:149 qml/Coordinate.qml:383
+msgid "Coordinates are not valid"
+msgstr "坐标不正确"
+
+#: qml/Coordinate.qml:150
+msgid ""
+"Enter valid decimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"输入正确的十进制坐标\n"
+"\n"
+"预期格式为："
+
+#: qml/Coordinate.qml:384
+msgid ""
+"Enter valid sexagesimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr ""
+"输入正确的六十进制坐标\n"
+"\n"
+"预期格式为："
+
+#: qml/DownloadVoices.qml:53
+msgid "Download voices"
+msgstr "下载配音"
+
+#: qml/DownloadVoices.qml:61
+msgid "Play current voice"
+msgstr "播放当前配音"
+
+#: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
+msgid "How to add a voice"
+msgstr "如何增加其他配音"
+
+#: qml/DownloadVoices.qml:161
+msgid "By "
+msgstr "来自 "
+
+#: qml/DownloadVoices.qml:208
+msgid "Cancel Download"
+msgstr "取消下载"
+
+#: qml/DownloadVoices.qml:224
+msgid "About the voices"
+msgstr "关于该配音"
+
+#: qml/DownloadVoices.qml:230
+msgid "The stars are for the recommended voices."
+msgstr "带星号为推荐的配音。"
+
+#: qml/DownloadVoices.qml:238
+msgid "You can add a new voice to uNav following these steps:"
+msgstr "您可以通过以下步骤为 uNav 添加新的配音："
+
+#: qml/Favorites.qml:74
+msgid "No favorites yet"
+msgstr "未有收藏"
+
+#: qml/Favorites.qml:197 qml/SearchPage.qml:83
+msgid "Add Favorite"
+msgstr "添加收藏"
+
+#: qml/Favorites.qml:197
+msgid "Edit Favorite"
+msgstr "编辑收藏夹"
+
+#: qml/Favorites.qml:198
+msgid ""
+"There is already a favorite with that name. You can either overwrite it or "
+"enter a different name."
+msgstr "已经存在一个该名称的收藏。您可以覆盖它或者输入一个不同的名称。"
+
+#: qml/Favorites.qml:232
+msgid "Insert a favorite name"
+msgstr "加入收藏名称"
+
+#: qml/Favorites.qml:255
+msgid "Overwrite"
+msgstr "覆盖"
+
+#: qml/Favorites.qml:255
+msgid "Add"
+msgstr "添加"
+
+#: qml/Favorites.qml:255
+msgid "Update"
+msgstr "更新"
+
+#: qml/Favorites.qml:277
+msgid "Favorite Coordinates"
+msgstr ""
+
+#: qml/Favorites.qml:288
+msgid "Name: "
+msgstr ""
+
+#: qml/Favorites.qml:295
+msgid "Latitude: "
+msgstr ""
+
+#: qml/Favorites.qml:302
+msgid "Longitude: "
+msgstr ""
+
+#: qml/Location.qml:45 qml/PoiListPage.qml:146
+msgid "Time out! Please try again"
+msgstr "超时，请重试！"
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius.
+#: qml/Location.qml:53
+msgid "Sorry, nothing found. Try another search"
+msgstr "对不起，没有查找到。请尝试再次搜索"
+
+#: qml/Location.qml:141 qml/Location.qml:352 qml/Location.qml:414
+msgid "Search history"
+msgstr "查找历史记录"
+
+#: qml/Location.qml:151 qml/Location.qml:358 qml/Location.qml:416
+msgid "Favorite history"
+msgstr "收藏历史"
+
+#: qml/Location.qml:161 qml/Location.qml:355 qml/Location.qml:371
+#: qml/Location.qml:382 qml/Location.qml:397 qml/Location.qml:404
+#: qml/Location.qml:436 qml/Location.qml:442
+msgid "Nearby history"
+msgstr "附近历史"
+
+#: qml/Location.qml:187
+msgid "No history yet"
+msgstr "没有历史信息"
+
+#: qml/Location.qml:187
+msgid "History is disabled"
+msgstr "历史纪录已关闭"
+
+#: qml/Location.qml:200 qml/Location.qml:253 qml/PoiListPage.qml:163
+#: qml/components/POIQuickAccessGridView.qml:181
+msgid "Searching…"
+msgstr "搜索中..."
+
+#: qml/Location.qml:249
+msgid "Search location"
+msgstr "查找位置"
+
+#: qml/Main.qml:235 qml/SettingsPage.qml:35
+msgid "Settings"
+msgstr "设置"
+
+#: qml/Main.qml:246
+msgid "Center on Position"
+msgstr "置中位置"
+
+#: qml/Main.qml:250 qml/Main.qml:571
+msgid "Searching your position… This could take a while"
+msgstr "正在查找您的位置... 这可能需要一段时间"
+
+#: qml/Main.qml:264 qml/PoiPage.qml:83 qml/SearchPage.qml:69
+msgid "Search"
+msgstr "搜索"
+
+#: qml/Main.qml:275
+msgid "Destination"
+msgstr "目的地"
+
+#: qml/Main.qml:437
+msgid "Error getting speed cameras!"
+msgstr "获取超速拍照错误！"
+
+#: qml/Main.qml:440
+msgid "Error finding route! Retrying again in 1 minute…"
+msgstr ""
+
+#: qml/Main.qml:443
+msgid "Error finding route! Trying again…"
+msgstr "路线规划失败！正在重试……"
+
+#: qml/Main.qml:488 qml/Main.qml:514
+msgid "Shared Position"
+msgstr "已分享位置"
+
+#: qml/Main.qml:762
+msgid "Near to destination"
+msgstr "接近目的地"
+
+#: qml/Main.qml:763
+msgid "Cancel route"
+msgstr "取消路径"
+
+#: qml/Main.qml:809
+#, qt-format
+msgid "Coord: %1, %2"
+msgstr "坐标：%1, %2"
+
+#: qml/Main.qml:877 qml/PoiDetailsPage.qml:243
+msgid "Simulate from here! Now click on destination"
+msgstr "从这里出发！现在请点击选择目的地"
+
+#: qml/Main.qml:894
+msgid "Set a different coordinates for simulating"
+msgstr "选择其他坐标位置以计算路线"
+
+#: qml/Main.qml:1016
+msgid "Custom voices"
+msgstr "自定义配音"
+
+#: qml/Main.qml:1017
+msgid ""
+"American English voice will be the unique voice installed by default.\n"
+"\n"
+"You can set a custom voice in your language from Settings: Download custom "
+"voices.\n"
+"\n"
+"The list of voices will be updated by the users. Please check them out in "
+"the future.\n"
+msgstr ""
+"系统自带美式英语配音。\n"
+"\n"
+"您可以通过“下载自定义配音”来设置其他语言的配音。\n"
+"\n"
+"支持的配音类型会不断增加，请您定期检查更新。\n"
+
+#: qml/Main.qml:1019
+msgid "Set a voice now"
+msgstr "马上设置配音"
+
+#: qml/PoiDetailsPage.qml:89
+msgid "Lat, Long:"
+msgstr "纬度，经度："
+
+#: qml/PoiDetailsPage.qml:95 qml/PoiDetailsPage.qml:110
+msgid "Available"
+msgstr "连接可用"
+
+#: qml/PoiDetailsPage.qml:97 qml/PoiDetailsPage.qml:112
+msgid "Not Available"
+msgstr "连接不可用"
+
+#: qml/PoiDetailsPage.qml:99
+msgid "Wi-Fi Hotspot Available"
+msgstr "Wi-Fi 热点可用"
+
+#: qml/PoiDetailsPage.qml:101
+msgid "Wired Connection Available (ethernet connection)"
+msgstr "有线连接可用(以太网)"
+
+#: qml/PoiDetailsPage.qml:103
+msgid "Computer Terminal Available"
+msgstr "计算机终端可用"
+
+#: qml/PoiDetailsPage.qml:115
+msgid "Limited Availability"
+msgstr "受限的连接"
+
+#: qml/PoiDetailsPage.qml:174
+msgid "Loading POI details..."
+msgstr "正在加载目的地详情……"
+
+#: qml/PoiListPage.qml:45
+msgid "Show POIs on map"
+msgstr "在地图显示 POIs"
+
+#: qml/PoiListPage.qml:68
+msgid "Unknown current position"
+msgstr "未知现有位置"
+
+#: qml/PoiListPage.qml:84
+msgid "Something went wrong. Please, try again…"
+msgstr "出错了！ 请再次尝试..."
+
+#. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius. %1 is the POI type eg..Pub, Airport
+#. Example string, "Sorry, no Airport found nearby. Try again with a larger search radius"
+#: qml/PoiListPage.qml:153
+#, qt-format
+msgid "Sorry, no %1 found nearby. Try again with a larger search radius"
+msgstr "抱歉，在附近没有发现%1。请尝试使用更大的搜索半径"
+
+#. TRANSLATORS: Abbreviation for Public Holiday. This string is used while showing the opening hours
+#. of a place which might be closed during public holidays.
+#: qml/PoiListPage.qml:361
+msgid "PH"
+msgstr "法休日"
+
+#. TRANSLATORS: This string indicates that a place is closed.
+#: qml/PoiListPage.qml:363
+msgid "Closed"
+msgstr "已下班"
+
+#: qml/PoiPage.qml:64
+msgid "Back"
+msgstr "返回"
+
+#: qml/PoiPage.qml:118
+msgid "Filter POI categories by name"
+msgstr "按名称过滤目标位置类型"
+
+#: qml/PoiPage.qml:128
+msgid "Nearby"
+msgstr "附近"
+
+#: qml/PoiPage.qml:147
+msgid "Most recent"
+msgstr "最近的"
+
+#: qml/PoiQuickAccessPage.qml:63
+msgid "Fast Nearest Editor: "
+msgstr "兴趣点快速编辑器： "
+
+#: qml/PoiQuickAccessPage.qml:201
+msgid "Selection"
+msgstr "选择"
+
+#. TRANSLATORS: argument is a number > 1.
+#: qml/PoiQuickAccessPage.qml:203
+#, qt-format
+msgid "Max. %1 POIs can be selected."
+msgstr "最多可以选择 %1 个目的地"
+
+#: qml/PoiQuickAccessPage.qml:206 qml/SettingsPage.qml:439
+msgid "OK"
+msgstr "确定"
+
+#: qml/RouteInfoListPage.qml:29
+msgid "Route Info"
+msgstr "路径资讯"
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: qml/SearchPage.qml:100
+msgid "Location"
+msgstr "位置"
+
+#: qml/SearchPage.qml:100
+msgid "Favorites"
+msgstr "收藏"
+
+#: qml/SearchPage.qml:100
+msgid "Coordinates"
+msgstr "坐标"
+
+#: qml/SearchPage.qml:150
+msgid "Add Current Position"
+msgstr "添加当前位置"
+
+#: qml/SearchPage.qml:160
+msgid "Add Current Destination"
+msgstr "加入目标位置"
+
+#: qml/SearchPage.qml:172
+msgid "Add by clicking on Map"
+msgstr "在地图上点击添加"
+
+#: qml/SettingsPage.qml:56
+msgid "A voice"
+msgstr "播放语音"
+
+#: qml/SettingsPage.qml:57
+msgid "A notification"
+msgstr "声音提示"
+
+#: qml/SettingsPage.qml:58
+msgid "None"
+msgstr "无"
+
+#: qml/SettingsPage.qml:68
+msgid "Kilometres"
+msgstr "公里"
+
+#: qml/SettingsPage.qml:69
+msgid "Miles"
+msgstr "英里"
+
+#: qml/SettingsPage.qml:95
+msgid "uNav link"
+msgstr ""
+
+#: qml/SettingsPage.qml:96
+msgid "Google Maps link"
+msgstr ""
+
+#: qml/SettingsPage.qml:97
+msgid "Standard GEO link"
+msgstr ""
+
+#: qml/SettingsPage.qml:107
+msgid "Online"
+msgstr "在线"
+
+#: qml/SettingsPage.qml:108
+msgid "Offline"
+msgstr "离线"
+
+#: qml/SettingsPage.qml:130
+msgid "Navigation"
+msgstr "导航"
+
+#: qml/SettingsPage.qml:137
+msgid "Guidance"
+msgstr "导航播报"
+
+#: qml/SettingsPage.qml:169
+msgid "Download custom voices"
+msgstr "下载自定义配音"
+
+#: qml/SettingsPage.qml:176
+msgid "Car Options"
+msgstr ""
+
+#: qml/SettingsPage.qml:183
+msgid "Avoid tolls"
+msgstr ""
+
+#: qml/SettingsPage.qml:200
+msgid "Speed camera alerts"
+msgstr "超速相机提醒"
+
+#: qml/SettingsPage.qml:219
+msgid "Map"
+msgstr "地图"
+
+#: qml/SettingsPage.qml:226
+msgid "Mode"
+msgstr "模式"
+
+#: qml/SettingsPage.qml:261
+msgid "How to use offline maps"
+msgstr "如何使用离线地图"
+
+#: qml/SettingsPage.qml:278
+msgid "Online style"
+msgstr "在线式"
+
+#: qml/SettingsPage.qml:312
+msgid "Units"
+msgstr "单位"
+
+#: qml/SettingsPage.qml:346
+msgid "Share position as"
+msgstr ""
+
+#: qml/SettingsPage.qml:376
+msgid "History"
+msgstr "历史"
+
+#: qml/SettingsPage.qml:383
+msgid "Store new searches"
+msgstr "收藏新搜寻"
+
+#: qml/SettingsPage.qml:395 qml/SettingsPage.qml:405
+msgid "Clear history"
+msgstr "清除历史记录"
+
+#: qml/SettingsPage.qml:406
+msgid "You'll delete the current history"
+msgstr "你将删除现有纪录"
+
+#: qml/SettingsPage.qml:409
+msgid "Delete"
+msgstr "删除"
+
+#: qml/SettingsPage.qml:428
+msgid "Speed Camera alerts and the law"
+msgstr "超速相机警告与法规"
+
+#: qml/SettingsPage.qml:429
+msgid ""
+"uNav is only reading the OpenStreetMap database.\n"
+"uNav will show a max speed notification and a Speed Camera marker (marker "
+"hidden for French users because of law).\n"
+"\n"
+"In a few countries Speed Camera alerts are illegal, then enable this option "
+"only if it's legal in the country."
+msgstr ""
+"uNav 仅读取了 OpenStreetMap 数据库。\n"
+"uNav 将会显示最高限速通知和超速拍照时速(因为法律原因在法国标记会被隐藏)。\n"
+"\n"
+"在少数几个国家超速摄像提醒是违法的，在合法国家开启这个选项。"
+
+#: qml/SettingsPage.qml:435
+msgid "Read more about it"
+msgstr "了解更多"
+
+#: qml/Share.qml:33
+msgid "Share location to"
+msgstr "分享位置到"
+
+#: qml/components/POIQuickAccessGridView.qml:92
+msgid "Error getting results. Please, check your data connection."
+msgstr "获取结果出错，请检查您的数据连接。"
+
+#: qml/components/POIQuickAccessGridView.qml:97
+msgid "Sorry, no results found nearby."
+msgstr "对不起，附近没有找到您需要的结果"
+
+#: qml/components/POIQuickAccessGridView.qml:175
+msgid "Current position unknown. Try again after a position update."
+msgstr "未知地点，请在位置更新后重试。"
+
+#: qml/js/PoiCategories.js:4
+msgid "Transport"
+msgstr "传输"
+
+#: qml/js/PoiCategories.js:6
+msgid "Airport"
+msgstr "机场"
+
+#: qml/js/PoiCategories.js:7
+msgid "Bicycle Parking"
+msgstr "自行车停车场"
+
+#: qml/js/PoiCategories.js:8
+msgid "Bicycle Rental"
+msgstr "自行车租赁"
+
+#: qml/js/PoiCategories.js:9
+msgid "Bicycle Shop"
+msgstr "自行车店"
+
+#: qml/js/PoiCategories.js:10
+msgid "Bus Station"
+msgstr "公交车车站"
+
+#: qml/js/PoiCategories.js:11
+msgid "Bus Stop"
+msgstr "公交车停靠站"
+
+#: qml/js/PoiCategories.js:12
+msgid "Car Rental"
+msgstr "汽车租赁"
+
+#: qml/js/PoiCategories.js:13
+msgid "Car Repair"
+msgstr "汽车维修点"
+
+#: qml/js/PoiCategories.js:14
+msgid "Car Wash"
+msgstr "洗车"
+
+#: qml/js/PoiCategories.js:15
+msgid "Ferry Terminal"
+msgstr "渡轮端点"
+
+#: qml/js/PoiCategories.js:16
+msgid "Gas Station"
+msgstr "加油站"
+
+#: qml/js/PoiCategories.js:17
+msgid "Motorcycle Shop"
+msgstr "摩托车店"
+
+#: qml/js/PoiCategories.js:18
+msgid "Parking"
+msgstr "停车场"
+
+#: qml/js/PoiCategories.js:19
+msgid "Subway Entrance"
+msgstr "地铁入口"
+
+#: qml/js/PoiCategories.js:20
+msgid "Taxi"
+msgstr "出租车"
+
+#: qml/js/PoiCategories.js:21
+msgid "Train Station"
+msgstr "火车站"
+
+#: qml/js/PoiCategories.js:25
+msgid "Accommodation"
+msgstr "住宿"
+
+#: qml/js/PoiCategories.js:27
+msgid "Bed and Breakfasts"
+msgstr "民宿"
+
+#: qml/js/PoiCategories.js:28
+msgid "Campsite"
+msgstr "车露营地"
+
+#: qml/js/PoiCategories.js:29
+msgid "Caravan Site"
+msgstr "房车露营地"
+
+#: qml/js/PoiCategories.js:30
+msgid "Guest House"
+msgstr "旅馆"
+
+#: qml/js/PoiCategories.js:31
+msgid "Hostel"
+msgstr "经济型旅馆"
+
+#: qml/js/PoiCategories.js:32
+msgid "Hotel"
+msgstr "旅馆"
+
+#: qml/js/PoiCategories.js:33
+msgid "Motel"
+msgstr "汽车旅馆"
+
+#: qml/js/PoiCategories.js:37
+msgid "Food & Drink"
+msgstr "饮食"
+
+#: qml/js/PoiCategories.js:39
+msgid "Bakery"
+msgstr "面包店"
+
+#: qml/js/PoiCategories.js:40
+msgid "Bar"
+msgstr "酒吧"
+
+#: qml/js/PoiCategories.js:41
+msgid "Butcher"
+msgstr "屠宰"
+
+#: qml/js/PoiCategories.js:42
+msgid "Cafe"
+msgstr "咖啡馆"
+
+#: qml/js/PoiCategories.js:43
+msgid "Convenience Store"
+msgstr "便利店"
+
+#: qml/js/PoiCategories.js:44
+msgid "Drinking water"
+msgstr "饮水"
+
+#: qml/js/PoiCategories.js:45
+msgid "Fast Food"
+msgstr "快餐"
+
+#: qml/js/PoiCategories.js:46
+msgid "Ice Cream"
+msgstr "冰淇淋"
+
+#: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:64
+msgid "Picnic Site"
+msgstr "野餐区"
+
+#: qml/js/PoiCategories.js:48
+msgid "Pub"
+msgstr "酒吧"
+
+#: qml/js/PoiCategories.js:49
+msgid "Restaurant"
+msgstr "餐馆"
+
+#: qml/js/PoiCategories.js:53
+msgid "Tourism"
+msgstr ""
+
+#: qml/js/PoiCategories.js:55
+msgid "Alpine Hut"
+msgstr ""
+
+#: qml/js/PoiCategories.js:56
+msgid "Archaeological Site"
+msgstr "考古遗址"
+
+#: qml/js/PoiCategories.js:57 qml/js/PoiCategories.js:115
+msgid "Artwork"
+msgstr "艺术品"
+
+#: qml/js/PoiCategories.js:58
+msgid "Attraction"
+msgstr ""
+
+#: qml/js/PoiCategories.js:59
+msgid "Battlefield"
+msgstr "战场"
+
+#: qml/js/PoiCategories.js:60
+msgid "Castle"
+msgstr "城堡"
+
+#: qml/js/PoiCategories.js:61
+msgid "Monument"
+msgstr "纪念建筑"
+
+#: qml/js/PoiCategories.js:62 qml/js/PoiCategories.js:119
+msgid "Museum"
+msgstr "博物馆"
+
+#: qml/js/PoiCategories.js:63
+msgid "Nature Reserve"
+msgstr "自然保护区"
+
+#: qml/js/PoiCategories.js:65
+msgid "Ruin"
+msgstr "遗迹"
+
+#: qml/js/PoiCategories.js:66
+msgid "Theme Park"
+msgstr "主题公园"
+
+#: qml/js/PoiCategories.js:67
+msgid "Tourism Information"
+msgstr "游客中心"
+
+#: qml/js/PoiCategories.js:68
+msgid "Town Hall"
+msgstr "市政厅"
+
+#: qml/js/PoiCategories.js:69
+msgid "Viewpoint"
+msgstr ""
+
+#: qml/js/PoiCategories.js:70
+msgid "Zoo"
+msgstr ""
+
+#: qml/js/PoiCategories.js:74
+msgid "Services"
+msgstr "服务"
+
+#: qml/js/PoiCategories.js:76
+msgid "ATM"
+msgstr "自动取款机"
+
+#: qml/js/PoiCategories.js:77
+msgid "Bank"
+msgstr "银行"
+
+#: qml/js/PoiCategories.js:78
+msgid "Bureau de change"
+msgstr "外汇兑换店"
+
+#: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
+msgid "Place of Worship"
+msgstr "宗教场所"
+
+#: qml/js/PoiCategories.js:80
+msgid "Post Box"
+msgstr "邮箱"
+
+#: qml/js/PoiCategories.js:81
+msgid "Post Office"
+msgstr "邮局"
+
+#: qml/js/PoiCategories.js:82
+msgid "Public Telephone"
+msgstr "公用电话"
+
+#: qml/js/PoiCategories.js:83
+msgid "Toilet"
+msgstr "厕所"
+
+#: qml/js/PoiCategories.js:84
+msgid "Wi-Fi Point"
+msgstr "WiFi 热点"
+
+#: qml/js/PoiCategories.js:88
+msgid "Shopping"
+msgstr "购物"
+
+#: qml/js/PoiCategories.js:90
+msgid "Books"
+msgstr "图书"
+
+#: qml/js/PoiCategories.js:91
+msgid "Charity"
+msgstr "慈善"
+
+#: qml/js/PoiCategories.js:92
+msgid "Clothes"
+msgstr "服装店"
+
+#: qml/js/PoiCategories.js:93
+msgid "Computer Shop"
+msgstr "电脑店"
+
+#: qml/js/PoiCategories.js:94
+msgid "Copy Shop"
+msgstr "复印店"
+
+#: qml/js/PoiCategories.js:95
+msgid "Florist"
+msgstr "花店"
+
+#: qml/js/PoiCategories.js:96
+msgid "Gifts"
+msgstr "礼物店"
+
+#: qml/js/PoiCategories.js:97
+msgid "Hairdresser"
+msgstr "美发店"
+
+#: qml/js/PoiCategories.js:98
+msgid "Jewelry"
+msgstr "珠宝店"
+
+#: qml/js/PoiCategories.js:99
+msgid "Kiosk"
+msgstr "信息亭"
+
+#: qml/js/PoiCategories.js:100
+msgid "Laundry"
+msgstr "洗衣店"
+
+#: qml/js/PoiCategories.js:101
+msgid "Mall"
+msgstr "购物中心"
+
+#: qml/js/PoiCategories.js:102
+msgid "Mobile Phone"
+msgstr "移动电话"
+
+#: qml/js/PoiCategories.js:103
+msgid "Optician"
+msgstr "眼镜店"
+
+#: qml/js/PoiCategories.js:104
+msgid "Public Market"
+msgstr "公共市场"
+
+#: qml/js/PoiCategories.js:105
+msgid "Shoes"
+msgstr "鞋店"
+
+#: qml/js/PoiCategories.js:106
+msgid "Supermarket"
+msgstr "超级市场"
+
+#: qml/js/PoiCategories.js:107
+msgid "Travel Agency"
+msgstr "旅行社"
+
+#: qml/js/PoiCategories.js:108
+msgid "Vending Machine"
+msgstr "自动售货机"
+
+#: qml/js/PoiCategories.js:112
+msgid "Culture"
+msgstr "文化"
+
+#: qml/js/PoiCategories.js:114
+msgid "Art Center"
+msgstr "艺术中心"
+
+#: qml/js/PoiCategories.js:116
+msgid "Auditorium"
+msgstr "音乐厅"
+
+#: qml/js/PoiCategories.js:117
+msgid "Gallery"
+msgstr "美术展览馆"
+
+#: qml/js/PoiCategories.js:118
+msgid "Library"
+msgstr "图书馆"
+
+#: qml/js/PoiCategories.js:120
+msgid "Theatre"
+msgstr "剧院"
+
+#: qml/js/PoiCategories.js:124
+msgid "Entertainment"
+msgstr "娱乐"
+
+#: qml/js/PoiCategories.js:126
+msgid "Casino"
+msgstr "赌场"
+
+#: qml/js/PoiCategories.js:127
+msgid "Children Playground"
+msgstr "小孩游乐场"
+
+#: qml/js/PoiCategories.js:128
+msgid "Cinema"
+msgstr "电影院"
+
+#: qml/js/PoiCategories.js:129
+msgid "Gym"
+msgstr "健身中心"
+
+#: qml/js/PoiCategories.js:130
+msgid "Night Club"
+msgstr "夜店"
+
+#: qml/js/PoiCategories.js:131
+msgid "Park"
+msgstr "公园"
+
+#: qml/js/PoiCategories.js:135
+msgid "Education"
+msgstr "教育"
+
+#: qml/js/PoiCategories.js:137
+msgid "College"
+msgstr "大专"
+
+#: qml/js/PoiCategories.js:138
+msgid "Nursery School"
+msgstr "幼儿园"
+
+#: qml/js/PoiCategories.js:139
+msgid "University"
+msgstr "大学"
+
+#: qml/js/PoiCategories.js:143
+msgid "Health"
+msgstr "健康"
+
+#: qml/js/PoiCategories.js:145
+msgid "Dentist"
+msgstr "牙医"
+
+#: qml/js/PoiCategories.js:146
+msgid "Doctor"
+msgstr "医生"
+
+#: qml/js/PoiCategories.js:147
+msgid "Hospital"
+msgstr "医院"
+
+#: qml/js/PoiCategories.js:148
+msgid "Pharmacy"
+msgstr "药店"
+
+#: qml/js/PoiCategories.js:149
+msgid "Veterinary"
+msgstr "兽医"
+
+#: qml/js/PoiCategories.js:153
+msgid "Religious"
+msgstr "宗教"
+
+#: qml/js/PoiCategories.js:155
+msgid "Cemetery"
+msgstr "公墓"
+
+#: qml/js/PoiCategories.js:156
+msgid "Church"
+msgstr "教会"
+
+#: qml/js/PoiCategories.js:157
+msgid "Crematorium"
+msgstr "火葬场"
+
+#: qml/js/PoiCategories.js:162
+msgid "Emergency"
+msgstr "紧急"
+
+#: qml/js/PoiCategories.js:164
+msgid "Phone"
+msgstr "手机"
+
+#: qml/js/PoiCategories.js:165
+msgid "Police Station"
+msgstr "警察局"
+
+#: qml/js/PoiCategories.js:169
+msgid "Sport"
+msgstr "运动"
+
+#: qml/js/PoiCategories.js:171
+msgid "Sports Center"
+msgstr "运动中心"
+
+#: qml/js/PoiCategories.js:172
+msgid "Stadium"
+msgstr "竞技场"
+
+#: qml/js/PoiCategories.js:173
+msgid "Swimming Pool"
+msgstr "游泳池"
+
+#: qml/js/PoiCategories.js:174
+msgid "Track"
+msgstr "轨道"
+
+#: qml/js/PoiCategories.js:178
+msgid "Others"
+msgstr "其他"
+
+#: qml/js/PoiCategories.js:180
+msgid "Courthouse"
+msgstr "法院"
+
+#: qml/js/PoiCategories.js:181
+msgid "Embassy"
+msgstr "大使馆"
+
+#: qml/js/PoiCategories.js:182
+msgid "Prison"
+msgstr "监狱"
+
+#: qml/js/PoiCategories.js:183
+msgid "Recycling"
+msgstr "回收"
+
+#: qml/js/PoiCategories.js:184
+msgid "Town"
+msgstr "城镇"
+
+#: qml/js/utils.js:58
+msgid "Current Location"
+msgstr "当前位置"
+
+#: qml/tuto/Slide1.qml:40
+msgid "Welcome to uNav"
+msgstr "欢迎使用 uNav"
+
+#: qml/tuto/Slide1.qml:48
+msgid ""
+"A map viewer & GPS navigator\n"
+"\n"
+"Let's look at a few features together :)"
+msgstr ""
+"地图显示与 GPS 导航\n"
+"\n"
+"我们一起来看新功能 :-)"
+
+#: qml/tuto/Slide2.qml:43
+msgid "Long Touch on Map"
+msgstr "长按地图"
+
+#: qml/tuto/Slide2.qml:60
+msgid ""
+"Navigate, add to favorites, search nearby places, share points on the map or "
+"simulate a route"
+msgstr "导航、添至收藏，搜索周边，大头针地图分享或自动生成路线"
+
+#: qml/tuto/Slide3.qml:43
+msgid "Swipe Results"
+msgstr "滑动结果"
+
+#: qml/tuto/Slide3.qml:60
+msgid ""
+"Navigate directly, call the place, share the location, open web page, delete "
+"favorites…"
+msgstr "直接导航、拨打电话、分享地点、开启网页、删除收藏"
+
+#: qml/tuto/Slide4.qml:43
+msgid "Touch Everything!"
+msgstr "点击所有东西"
+
+#: qml/tuto/Slide4.qml:61
+msgid ""
+"Touch summary to show current speed\n"
+"\n"
+"Touch step indications to review route steps"
+msgstr ""
+"选择摘要来显示速度\n"
+"\n"
+"选择路线提示以查看路线详情"
+
+#: qml/tuto/Slide5.qml:43
+msgid "Simulate a route"
+msgstr "规划路线"
+
+#: qml/tuto/Slide5.qml:61
+msgid ""
+"Set an origin: Click on map and click on simulate icon\n"
+"\n"
+"Set a destination: Then, click on map and click the same icon again"
+msgstr ""
+"设置起点：点击地图并点击”路线“图标\n"
+"\n"
+"设置终点：点击地图并再次点击相同的图标"
+
+#: qml/tuto/Slide6.qml:43
+msgid "uNav doesn't track you!"
+msgstr "uNav 不会追踪你！"
+
+#: qml/tuto/Slide6.qml:60
+msgid ""
+"It is licensed under the GNU GPL\n"
+"\n"
+"and based completely on libre projects!"
+msgstr ""
+"使用 GNU GPL 授权\n"
+"\n"
+"完全基于自由软件项目！"
+
+#: qml/tuto/Slide6.qml:74
+msgid "Enjoy the Freedom!"
+msgstr "享受自由！"
+
+#: qml/tuto/components/Walkthrough.qml:89
+msgid "Skip"
+msgstr "跳过"
+
+#~ msgid "Fullscreen"
+#~ msgstr "全屏"
+
+#~ msgid "Add From Map"
+#~ msgstr "从地图新增"
+
+#~ msgid "Position unknown. Failed getting places nearby"
+#~ msgstr "未知位置。无法取得附近位置"
+
+#~ msgid "Route"
+#~ msgstr "线路"
+
+#~ msgid "Something was wrong. Please, try again…"
+#~ msgstr "发生错误，请再试一次"
+
+#, qt-format
+#~ msgid "Sorry, no %1 found nearby. Try again with another radius"
+#~ msgstr "抱歉，未找到附近的 %1。请用其他范围再试一次"
+
+#~ msgid "Where do we go?"
+#~ msgstr "我们要去哪？"
+
+#~ msgid "off"
+#~ msgstr "关闭"
+
+#, qt-format
+#~ msgid "Sorry, no result for %1"
+#~ msgstr "抱歉，没有 %1 结果"
+
+#~ msgid "No history yet…"
+#~ msgstr "未有历史纪录"
+
+#~ msgid "Car"
+#~ msgstr "汽车"
+
+#~ msgid "Walking"
+#~ msgstr "步行"
+
+#~ msgid "Mode:"
+#~ msgstr "模式："
+
+#~ msgid "Avoid Tolls"
+#~ msgstr "避免收费站"
+
+#~ msgid "A Voice"
+#~ msgstr "一个语音"
+
+#~ msgid "A Notification"
+#~ msgstr "一个提示"
+
+#~ msgid "Kilometers"
+#~ msgstr "公里"
+
+#~ msgid "Units:"
+#~ msgstr "单位："
+
+#~ msgid "Bicycle"
+#~ msgstr "自行车"
+
+#~ msgid "Indications:"
+#~ msgstr "提示:"
+
+#~ msgid "Share Position"
+#~ msgstr "分享位置"
+
+#~ msgid "From Map"
+#~ msgstr "从地图"
+
+#~ msgid "Current"
+#~ msgstr "当前"
+
+#~ msgid "Share"
+#~ msgstr "分享"
+
+#~ msgid "Cancel Route"
+#~ msgstr "取消路径"
+
+#~ msgid "B&B"
+#~ msgstr "B&B"
+
+#~ msgid "Convenience"
+#~ msgstr "会议中心"
+
+#~ msgid "Historic"
+#~ msgstr "历史性"
+
+#~ msgid "Go"
+#~ msgstr "前往"
+
+#~ msgid "Go to your right"
+#~ msgstr "往右走"
+
+#~ msgid "Go to your left"
+#~ msgstr "往左走"
+
+#~ msgid "Continue"
+#~ msgstr "继续"
+
+#~ msgid "Your destination is on the right"
+#~ msgstr "您的目标在右方"
+
+#~ msgid "Current road becomes"
+#~ msgstr "目前道路变成"
+
+#~ msgid "Take the exit on the right"
+#~ msgstr "靠右侧出口"
+
+#~ msgid "Turn right on ramp"
+#~ msgstr "高架道路右转"
+
+#~ msgid "Stay straight on ramp"
+#~ msgstr "高架道路直行"
+
+#~ msgid "Turn left on ramp"
+#~ msgstr "高架道路左转"
+
+#~ msgid "Keep straight at the fork"
+#~ msgstr "叉路直走"
+
+#~ msgid "Take the exit on the left"
+#~ msgstr "靠左侧出口"
+
+#~ msgid "Leave the Ferry"
+#~ msgstr "离开渡轮"
+
+#, qt-format
+#~ msgid " to take the %1"
+#~ msgstr " 使用%1"
+
+#, qt-format
+#~ msgid "Enter the roundabout and take the exit %1"
+#~ msgstr "进入回旋道路矢离出口 %1"
+
+#~ msgid "Keep right at the fork"
+#~ msgstr "叉路靠右"
+
+#~ msgid "Take the Ferry"
+#~ msgstr "搭乘渡轮"
+
+#~ msgid "Merge"
+#~ msgstr "合并"
+
+#, qt-format
+#~ msgid " onto %1"
+#~ msgstr " 进入 %1"
+
+#~ msgid "Keep left at the fork"
+#~ msgstr "叉路靠左"
+
+#, qt-format
+#~ msgid ". Exit %1"
+#~ msgstr ". 离开 %1"
+
+#, qt-format
+#~ msgid " toward %1"
+#~ msgstr " 朝向 %1"
+
+#~ msgid ""
+#~ "Error finding route between points. Check the connection and try again"
+#~ msgstr "无法找到点间的路线，请重新搜索一次"
+
+#~ msgid "Searching a route…"
+#~ msgstr "搜索路径..."
+
+#, qt-format
+#~ msgid ", %1"
+#~ msgstr ", %1"
+
+#~ msgid "Buy Donate Version"
+#~ msgstr "购买赞助版本"
+
+#~ msgid "Coord:"
+#~ msgstr "坐标："
+
+#~ msgid "Your destination is on the left"
+#~ msgstr "您的目标在左方"
+
+#~ msgid "You are near to the destination"
+#~ msgstr "您已接近目标"
+
+#~ msgid "Make a left U-turn"
+#~ msgstr "左转调头"
+
+#~ msgid "Make a right U-turn"
+#~ msgstr "右转调头"
+
+#~ msgid "Exit the roundabout"
+#~ msgstr "驶出环岛"
