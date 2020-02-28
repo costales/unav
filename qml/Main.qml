@@ -181,6 +181,7 @@ Window {
             // Workaround: as long as map keeps a webcontainer this function handles js events to the webview.
             function executeJavaScript(code) {
               console.log(code)
+
               _webview.runJavaScript(code);
             }
 
@@ -455,7 +456,7 @@ Window {
                       console.log(msg)
                     }
                     Connections {
-                        target: _webview.touchSelectionController
+                        // target: _webview.touchSelectionController
                         onLoadingChanged: {
                           if (loadRequest.status == WebEngineView.LoadSucceededStatus && !mainPageStack.onLoadingExecuted) {
                               mainPageStack.onLoadingExecuted = true;
@@ -483,13 +484,15 @@ Window {
                               navApp.checkReceivedCoordinates(url_dispatcher);
                           }
                         }
-                        onInsertionHandleTapped: quickMenu.visible = !quickMenu.visible
+                        // onInsertionHandleTapped: quickMenu.visible = !quickMenu.visible
                         onContextMenuRequested: quickMenu.visible = true
+                        onFeaturePermissionRequested: {
+                            console.log("grantFeaturePermission", feature)
+                            _webview.grantFeaturePermission(securityOrigin, feature, true);
+                        }
                     }
 
-                    onFeaturePermissionRequested: {
-                        grantFeaturePermission(securityOrigin, feature, true);
-                    }
+
                 }
 
                 Connections {
