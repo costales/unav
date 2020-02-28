@@ -8,7 +8,7 @@
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation; either version 2 of the License, or
    (at your option) any later version.
-   
+
    uNav is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -34,7 +34,7 @@
 	<!-- HTML section (map + panel + voices) -->
 	<!-- Map -->
 	<div id="map" class="map"></div>
-	
+
 	<!-- Panel for msg -->
 	<table class="tg" id="panel_msg" style="display:none;">
 	  <tr>
@@ -52,7 +52,7 @@
 				<button data-role='button' id='btn1_set_bike' class='btns1_mode_route negative' onClick='javascript:set_nav_mode(2)'><img class="img1_btn_route" src="img/mode/bike.svg"></button>
 			</th>
 		  </tr>
-		  
+
 		  <tr>
 			<th class="tg-yw4l">
 				<button data-role='button' id='btn_start' class='btns_route positive' onClick='javascript:agree_review()' data-localize="Start">Start</button>
@@ -80,7 +80,7 @@
 			<th class="tg-yw4l" id="p_time2arrive">16:40</th>
 		  </tr>
 		</table>
-		
+
 		<table class="tg" id="panel_indication">
 		  <tr>
 			<th class="tg-yw4l">
@@ -91,28 +91,28 @@
 			<td class="tg-yw4l" id="p_next_dist">600m</td>
 		  </tr>
 		</table>
-		
+
 		<table class="tg" id="panel_txt_ind">
 		  <tr>
 			<th class="tg-yw4l" id="p_txt_ind">Turn right onto Xixon St.</th>
 		  </tr>
 		</table>
 	</div>
-	
+
 	<!-- Map attribution -->
 	<div id="map_attribution" style="display:none;"></div>
-	
+
 	<!-- Where is the North -->
 	<div id="map_north" style="display:none;">
 		<img id="img_north" src="img/marker/north.svg">
 	</div>
-	
+
 	<!-- Max speed radar alert -->
 	<div id="max_speed_alert" style="display:none;">
 		<img id="img_maxspeed" src="img/marker/maxspeed.svg">
 		<span id="txt_mapspeed"></span>
 	</div>
-	
+
 	<!-- Warning for long routes -->
 	<div id="popup_longroute" style="display:none;" data-role="dialog">
 	  <section>
@@ -144,8 +144,8 @@
 
 	<!-- js -->
 	<script src="libraries/jquery.min.js"></script>
-	
-	
+
+
 	<!-- Markers -->
 	<img class="unav_markers" id="marker_pos" src="img/marker/car.png" style="display:none;">
 	<img class="unav_markers" id="marker_pos_start" src="img/marker/start.png" style="display:none;">
@@ -253,7 +253,7 @@
 				visible: false
 			})
 		);
-		
+
 		var map = new ol.Map({
 		  layers: map_layers,
 		  controls: [],
@@ -266,7 +266,7 @@
 		  })
 		});
 	</script>
-	
+
 	<script src="libraries/turf.min.js"></script>
 	<script src="libraries/geolib.js"></script>
 	<script src="toolkit/buttons.js"></script>
@@ -284,29 +284,29 @@
 		var nav      = new Navigator(maths, lang_root);
 		var ui       = new UI(map, nav, settings, maths, lang_root);
 		var webapi   = new WebAPI(nav, ui, settings);
-		
+
 		// Navigation (map in review mode by default, without read GPS for not drain battery)
 		var id_gps = 0;
 		var confirm_route = true;
-		
+
 		function center_pos() {
 			ui.set_center_1st_pos(true);
 			ui.set_map_stretched(true);
 			if (id_gps === 0) // GPS will run forever
 				gps_start();
 		}
-		
-		
+
+
 		function gps_start() {
 
 			console.log('Starting GPS...');
-			
+
 			if (!navigator.geolocation) {
 				qml_set_center_onpos(0);
 				$('#gps_denied').show();
 				return;
 			}
-			
+
 			/** TESTING BEGIN **/
 			var route = [
                 [39.555550,3.087692], [39.555550,3.087692], [39.555550,3.087692], [39.555550,3.087692], [39.555550,3.087692], [39.556311,3.088636], [39.556311,3.088636], [39.556311,3.088636], [39.556311,3.088636], [39.557403,3.089365], [39.558230,3.090137], [39.558230,3.090137], [39.558230,3.090137], [39.558426,3.090643], [39.558757,3.090064], [39.559237,3.089978], [39.560146,3.089785], [39.561073,3.089592], [39.561668,3.089528], [39.561950,3.089634], [39.562099,3.090535], [39.562115,3.091135], [39.562264,3.091843], [39.562247,3.092530], [39.562281,3.093280], [39.562297,3.094031], [39.562496,3.095061], [39.562793,3.096004], [39.562959,3.096648], [39.563372,3.097463]
@@ -316,20 +316,22 @@
 				accuracy = 300;
 				speed = 2;
 				z1++;
-				latitude = route[z1][0];
-				longitude = route[z1][1];
+				if(typeof route[z1]!="undefined"){
+					latitude = route[z1][0];
+					longitude = route[z1][1];
+				}
 				nav.set_gps_data(latitude, longitude, accuracy, speed);
 				gps_loop(nav.get_route_status());
 			},500);
 			return;
 			/** TESTING END **/
-			
+
 			var t_prev_run = 0;
 			id_gps = navigator.geolocation.watchPosition(
 				function (pos) {
 					if (t_prev_run < $.now()) { // Device bug #1500539 There are 3 positions at the same time
 						t_prev_run = $.now() + 450;
-						
+
 						nav.set_gps_data(pos.coords.latitude, pos.coords.longitude, pos.coords.accuracy, pos.coords.speed);
 						gps_loop(nav.get_route_status());
 					}
@@ -352,11 +354,11 @@
 				}
 			);
 		}
-		
-		
+
+
 		// Dragons here! The 'status' is critical in the app, it will pass for states that will determine how to work the app
 		function gps_loop(status) {
-			
+
 			switch(status) {
 				case 'no':
 				case 'yes':
@@ -407,18 +409,18 @@
 					nav.set_route_status('calc_from_out');
 					break;
 			}
-			
+
 			nav.update();
 			ui.update();
-			
+
 		}
-		
-		
+
+
 		// Map events
 		// Clicks
 		map.on('singleclick', function(evt) {
 				var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
-				
+
 				while (coord[0] > 180) // Fix bug ol3 #4522
 					coord[0] = coord[0] - 360;
 				while (coord[0] < -180)
@@ -444,11 +446,11 @@
 		map.on('moveend', function () {
 			ui.set_north(maths._toDeg(map.getView().getRotation()));
 		});
-		
+
 		// Drag
 		map.on('pointerdrag', function(evt) {
 			ui.set_zoom_unav(false); // Pinch zoom or drag = custom zoom too
-			
+
 			if (id_gps != 0 && ui.get_center_onpos()) { // Unfocus center if GPS ON
 				ui.set_center_onpos(false);
 				if (ui.get_center_1st_pos())
@@ -457,15 +459,15 @@
 					qml_set_center_onpos(1);
 			}
 		});
-		
+
 		// Zoom
 		function custom_zoom(value) {
 			ui.set_zoom_unav(false);
-			
+
 			var zoom = ol.animation.zoom({duration: 300, resolution: map.getView().getResolution(), easing: ol.easing.linear});
 			map.beforeRender(zoom);
 			map.getView().setZoom(map.getView().getZoom() + value);
-			
+
 			if (id_gps != 0) {
 				if (ui.get_center_1st_pos())
 					qml_set_center_onpos(2);
@@ -478,12 +480,12 @@
 		function qml_go_url(url) {
 			window.location = 'http://go?' + url;
 		}
-		
+
 		function qml_getRouteInfoList() {
 			if (nav.get_route_status() == 'yes' || nav.get_route_status().startsWith('simulate_done'))
 				window.location = 'http://get_routeinfo_list?' + JSON.stringify(nav.get_route_tracks());
 		}
-		
+
 		function qml_set_route_status() {
 			var gps_data = nav.get_pos_data();
 			window.location = 'http://route_status?'+ gps_data['now_lat'] + '/' +
@@ -492,16 +494,16 @@
 													  gps_data['end_lng'] + '/' +
 													  nav.get_route_status();
 		}
-		
+
 		function qml_set_center_onpos(status) {
 			window.location = 'http://set_center_onpos?' + status.toString();
 		}
-		
+
 		function qml_switchUISpeed() {
 			if (nav.get_route_status().startsWith('simulate')) {
 				return;
 			}
-			
+
 			if (settings.get_ui_speed()) {
 				settings.set_ui_speed(false);
 				$('#p_speed').hide();
@@ -512,7 +514,7 @@
 			}
 			window.location = 'http://set_ui_speed?' + settings.get_ui_speed().toString();
 		}
-		
+
 		function qml_save_data() { // Position & Last route mode
 			if (ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1].toFixed(6) == 50.009167 && ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0].toFixed(6) == 4.666389)
 				return;
@@ -537,44 +539,44 @@
 			ui.markers_radar_clear();
 			ui.route(false);
 		}
-		
+
 		function click_cancel_route() {
 			nav.cancel_route();
-			
+
 			ui.update();
 			ui.markers_radar_clear();
 			ui.route(false);
-			
+
 			window.location = 'http://cancel_route?yes';
 		}
-		
+
 		function agree_review() {
 			center_pos();
 			nav.set_route_status('yes');
 			ui.update();
 			qml_set_center_onpos(2);
 		}
-		
+
 		function set_nav_mode(mode) {
 			if (mode == settings.get_routing_mode())
 				return;
-			
+
 			if (settings.get_routing_mode() == 0) // If previously was car, clear previous radars
 				ui.markers_radar_clear();
-			
+
 			settings.set_routing_mode(mode);
 			nav.set_route_status('waiting4signal');
 			gps_loop('waiting4signal');
 		}
-		
+
 		function set_simulate_mode(mode) {
 			if (mode == settings.get_routing_mode())
 				return;
-			
+
 			settings.set_routing_mode(mode);
 			window.location = 'http://simulate_again?';
 		}
-		
+
 		function load_custom_voices(play) {
 			$.ajax({
 				url:"/home/phablet/.local/share/navigator.costales/0.ogg",
@@ -633,7 +635,7 @@
 
 	<script>
 		load_custom_voices(false);
-		
+
 		$(document).on('visibilitychange', function() { // Hack white map
 			if(document.visibilityState !== 'hidden')
 				map.updateSize();

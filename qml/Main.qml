@@ -16,12 +16,9 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Web 0.2
 import Ubuntu.Components 1.3
 import QtQuick.Layouts 1.1
 import Ubuntu.Components.Popups 1.3
-import Qt.labs.settings 1.0
-import com.canonical.Oxide 1.9 as Oxide
 import Ubuntu.Content 1.1
 import QtMultimedia 5.0
 import QtFeedback 5.0
@@ -32,6 +29,8 @@ import "js/utils.js" as QmlJs
 import "js/db.js" as UnavDB
 import QtQuick.LocalStorage 2.0
 import QtQuick.Window 2.2
+import QtWebEngine 1.6
+import Qt.labs.settings 1.0
 
 Window {
     id: unavWindow
@@ -181,13 +180,8 @@ Window {
             property string usContext: "messaging://"
             // Workaround: as long as map keeps a webcontainer this function handles js events to the webview.
             function executeJavaScript(code) {
-                var req = webview.rootFrame.sendMessage(mainPageStack.usContext, "EXECUTE", {code: code});
-                //req.onreply = function (msg) {
-                //console.log(msg.str);
-                //}
-                req.onerror = function (code, explanation) {
-                    console.log("Error " + code + ": " + explanation)
-                }
+              console.log(code)
+              _webview.runJavaScript(code);
             }
 
             Page {
@@ -292,28 +286,28 @@ Window {
                 The panel stays in html5, too, for ease of integration.
                 **/
 
-                WebContext {
+                WebEngineProfile {
                     id: webcontext
-                    userAgent: navApp.appUA
+                    httpUserAgent: navApp.appUA
                     userScripts: [
-                        Oxide.UserScript {
-                            context: mainPageStack.usContext
-                            url: Qt.resolvedUrl("js/oxide.js")
-                        }
+                        // WebEngineScript {
+                        //     // context: mainPageStack.usContext
+                        //     sourceUrl: Qt.resolvedUrl("js/oxide.js")
+                        // }
                     ]
                 }
 
-                WebView {
-                    id: webview
+                WebEngineView {
+                    property alias context: _webview.profile
+
+                    id: _webview
                     anchors.fill: parent
                     z: -6
-                    context: webcontext
+                    profile: webcontext
                     url: navApp.mapUrl
-                    preferences.allowFileAccessFromFileUrls: true
-                    preferences.allowUniversalAccessFromFileUrls: true
-                    preferences.appCacheEnabled: true
-                    preferences.javascriptCanAccessClipboard: true
-                    preferences.javascriptEnabled: true
+                    settings.localContentCanAccessFileUrls: true
+                    settings.javascriptCanAccessClipboard: true
+                    settings.javascriptEnabled: true
                     //not used right now:
                     //filePicker: filePickerLoader.item
 
@@ -322,7 +316,10 @@ Window {
                     onNavigationRequested:{
                         // We could start to clean this up a bit by writing functions on that...
                         var url = request.url.toString().split("?");
+                        if(typeof url[1]!="undefined")
                         var params = url[1].split("/");
+                        else var params = []
+                        console.log(url, params);
                         switch (url[0]) {
                         case "http://go/":
                             Qt.openUrlExternally(url[1]);
@@ -444,43 +441,55 @@ Window {
                             }
                             notificationBarTimer.start();
                         }
-
-                        request.action = Oxide.NavigationRequest.ActionReject;
-                    }
-
-                    Component.onCompleted: {
-                        preferences.localStorageEnabled = true
-                    }
-
-                    onLoadingStateChanged: {
-                        if (!loading && !mainPageStack.onLoadingExecuted) {
-                            mainPageStack.onLoadingExecuted = true;
-                            //send saved Setting states:
-                            mainPageStack.executeJavaScript("settings.set_sound(" + navApp.settings.soundIndications + ")");
-                            mainPageStack.executeJavaScript("settings.set_unit(\'" + ( navApp.settings.unit === 0 ? "km" : "mi" ) +"\')");
-                            mainPageStack.executeJavaScript("ui.set_scale_unit(\'" + ( navApp.settings.unit === 0 ? "km" : "mi" ) +"\')");
-                            mainPageStack.executeJavaScript("settings.set_routing_mode(" + navApp.settings.routingMode + ")");
-                            mainPageStack.executeJavaScript("settings.set_alert_radars(" + navApp.settings.alertRadars + ")");
-                            mainPageStack.executeJavaScript("settings.set_ui_speed(" + navApp.settings.uiShowSpeed + ")");
-                            // Center map in last position
-                            if (navApp.settings.prevLat !== '' && navApp.settings.prevLng !== '' && navApp.settings.prevLat !== null && navApp.settings.prevLng !== null && navApp.settings.prevZoom !== 9999)
-                                mainPageStack.executeJavaScript("map.getView().setCenter(ol.proj.transform([" + navApp.settings.prevLng + "," + navApp.settings.prevLat + "], 'EPSG:4326', 'EPSG:3857')); map.getView().setZoom(" + navApp.settings.prevZoom + ")");
-                            // This always after previous instruction!
-                            if (!navApp.settings.layer)
-                                mainPageStack.executeJavaScript("ui.set_map_layer(" + navApp.settings.onlineLayer + ")");
-                            else
-                                mainPageStack.executeJavaScript("ui.set_map_layer(99)");
-
-                            // Hack: If user click so fast in buttons, app breaks sometimes
-                            navigationPage.buttonsEnabled = true;
-
-                            // Catching urls
-                            var url_dispatcher = Qt.application.arguments[1];
-                            navApp.checkReceivedCoordinates(url_dispatcher);
+                        //allow loading of file:// but dissallow http because it's used for navigation
+                        if(typeof url[0]!="undefined" && url[0].includes("http")){
+                          request.action = WebEngineNavigationRequest.IgnoreRequest;
                         }
                     }
 
-                    onGeolocationPermissionRequested: { request.allow() }
+                    Component.onCompleted: {
+                        settings.localStorageEnabled = true
+                    }
+                    onJavaScriptConsoleMessage: {
+                      var msg = "[JS] (%1:%2) %3".arg(sourceID).arg(lineNumber).arg(message)
+                      console.log(msg)
+                    }
+                    Connections {
+                        target: _webview.touchSelectionController
+                        onLoadingChanged: {
+                          if (loadRequest.status == WebEngineView.LoadSucceededStatus && !mainPageStack.onLoadingExecuted) {
+                              mainPageStack.onLoadingExecuted = true;
+                              //send saved Setting states:
+                              mainPageStack.executeJavaScript("settings.set_sound(" + navApp.settings.soundIndications + ")");
+                              mainPageStack.executeJavaScript("settings.set_unit(\'" + ( navApp.settings.unit === 0 ? "km" : "mi" ) +"\')");
+                              mainPageStack.executeJavaScript("ui.set_scale_unit(\'" + ( navApp.settings.unit === 0 ? "km" : "mi" ) +"\')");
+                              mainPageStack.executeJavaScript("settings.set_routing_mode(" + navApp.settings.routingMode + ")");
+                              mainPageStack.executeJavaScript("settings.set_alert_radars(" + navApp.settings.alertRadars + ")");
+                              mainPageStack.executeJavaScript("settings.set_ui_speed(" + navApp.settings.uiShowSpeed + ")");
+                              // Center map in last position
+                              if (navApp.settings.prevLat !== '' && navApp.settings.prevLng !== '' && navApp.settings.prevLat !== null && navApp.settings.prevLng !== null && navApp.settings.prevZoom !== 9999)
+                                  mainPageStack.executeJavaScript("map.getView().setCenter(ol.proj.transform([" + navApp.settings.prevLng + "," + navApp.settings.prevLat + "], 'EPSG:4326', 'EPSG:3857')); map.getView().setZoom(" + navApp.settings.prevZoom + ")");
+                              // This always after previous instruction!
+                              if (!navApp.settings.layer)
+                                  mainPageStack.executeJavaScript("ui.set_map_layer(" + navApp.settings.onlineLayer + ")");
+                              else
+                                  mainPageStack.executeJavaScript("ui.set_map_layer(99)");
+
+                              // Hack: If user click so fast in buttons, app breaks sometimes
+                              navigationPage.buttonsEnabled = true;
+
+                              // Catching urls
+                              var url_dispatcher = Qt.application.arguments[1];
+                              navApp.checkReceivedCoordinates(url_dispatcher);
+                          }
+                        }
+                        onInsertionHandleTapped: quickMenu.visible = !quickMenu.visible
+                        onContextMenuRequested: quickMenu.visible = true
+                    }
+
+                    onFeaturePermissionRequested: {
+                        grantFeaturePermission(securityOrigin, feature, true);
+                    }
                 }
 
                 Connections {
@@ -993,7 +1002,7 @@ Window {
             target: Qt.application
             onStateChanged:
                 if(Qt.application.state !== Qt.ApplicationActive) {
-                    mainPageStack.executeJavaScript("qml_save_data()");
+                    _webview.runJavaScript("window.qml_save_data()");
                 }
         }
 
