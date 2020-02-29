@@ -178,7 +178,6 @@ Window {
             property bool onLoadingExecuted: false
 
             property string usContext: "messaging://"
-            // Workaround: as long as map keeps a webcontainer this function handles js events to the webview.
             function executeJavaScript(code) {
               console.log(code)
 
@@ -290,12 +289,6 @@ Window {
                 WebEngineProfile {
                     id: webcontext
                     httpUserAgent: navApp.appUA
-                    userScripts: [
-                        // WebEngineScript {
-                        //     // context: mainPageStack.usContext
-                        //     sourceUrl: Qt.resolvedUrl("js/oxide.js")
-                        // }
-                    ]
                 }
 
                 WebEngineView {
@@ -456,7 +449,6 @@ Window {
                       console.log(msg)
                     }
                     Connections {
-                        // target: _webview.touchSelectionController
                         onLoadingChanged: {
                           if (loadRequest.status == WebEngineView.LoadSucceededStatus && !mainPageStack.onLoadingExecuted) {
                               mainPageStack.onLoadingExecuted = true;
