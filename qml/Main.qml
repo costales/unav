@@ -179,8 +179,7 @@ Window {
 
             property string usContext: "messaging://"
             function executeJavaScript(code) {
-              console.log(code)
-
+              // console.log(code)
               _webview.runJavaScript(code);
             }
 
@@ -313,7 +312,6 @@ Window {
                         if(typeof url[1]!="undefined")
                         var params = url[1].split("/");
                         else var params = []
-                        console.log(url, params);
                         switch (url[0]) {
                         case "http://go/":
                             Qt.openUrlExternally(url[1]);
@@ -446,7 +444,7 @@ Window {
                     }
                     onJavaScriptConsoleMessage: {
                       var msg = "[JS] (%1:%2) %3".arg(sourceID).arg(lineNumber).arg(message)
-                      console.log(msg)
+                      // console.log(msg)
                     }
                     Connections {
                         onLoadingChanged: {
