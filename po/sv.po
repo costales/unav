@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-10-15 18:38+0200\n"
-"PO-Revision-Date: 2018-06-11 20:52+0000\n"
-"Last-Translator: costales <Unknown>\n"
+"PO-Revision-Date: 2019-05-17 13:29+0000\n"
+"Last-Translator: Josef Andersson <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
-"X-Generator: Launchpad (build 18847)\n"
+"X-Launchpad-Export-Date: 2020-03-06 15:21+0000\n"
+"X-Generator: Launchpad (build e0878392dc799b267dea80578fa65500a5d74155)\n"
 
 #: nav/class/Navigator.js:131
 msgid "Turn left"
@@ -27,67 +27,67 @@ msgstr "Sväng höger"
 
 #: nav/class/Navigator.js:135
 msgid "Make a sharp left"
-msgstr "Sväng kraftig åt vänster"
+msgstr "Sväng kraftigt åt vänster"
 
 #: nav/class/Navigator.js:137
 msgid "Make a sharp right"
-msgstr "Gör en skarp sväng högerut"
+msgstr "Gör en skarp sväng åt höger"
 
 #: nav/class/Navigator.js:139
 msgid "Bear left"
-msgstr "Smått åt vänster"
+msgstr "Håll till vänster"
 
 #: nav/class/Navigator.js:141
 msgid "Bear right"
-msgstr "Smått åt höger"
+msgstr "Håll till höger"
 
 #: nav/class/Navigator.js:143
 msgid "Continue on the road"
-msgstr ""
+msgstr "Följ vägen"
 
 #: nav/class/Navigator.js:145
 msgid "Enter the roundabout and take the designated exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den markerade utfarten"
 
 #: nav/class/Navigator.js:147
 msgid "Enter the roundabout and take the first exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den första utfarten"
 
 #: nav/class/Navigator.js:149
 msgid "Enter the roundabout and take the second exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den andra utfarten"
 
 #: nav/class/Navigator.js:151
 msgid "Enter the roundabout and take the third exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den tredje utfarten"
 
 #: nav/class/Navigator.js:153
 msgid "Enter the roundabout and take the fourth exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den fjärde utfarten"
 
 #: nav/class/Navigator.js:155
 msgid "Enter the roundabout and take the fifth exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den femte utfarten"
 
 #: nav/class/Navigator.js:157
 msgid "Enter the roundabout and take the sixth exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den sjätte utfarten"
 
 #: nav/class/Navigator.js:159
 msgid "Enter the roundabout and take the seventh exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den sjunde utfarten"
 
 #: nav/class/Navigator.js:161
 msgid "Enter the roundabout and take the eighth exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den åttonde utfarten"
 
 #: nav/class/Navigator.js:163
 msgid "Enter the roundabout and take the ninth exit"
-msgstr ""
+msgstr "Kör in i cirkulationen och ta den nionde utfarten"
 
 #: nav/class/Navigator.js:165
 msgid "Make a U-turn"
-msgstr ""
+msgstr "Gör en U-sväng"
 
 #: nav/class/Navigator.js:167 nav/class/UI.js:619
 msgid "You have arrived at your destination"
@@ -95,11 +95,11 @@ msgstr "Du har kommit fram till din destination"
 
 #: nav/class/Navigator.js:171
 msgid "Keep left"
-msgstr ""
+msgstr "Håll till vänster"
 
 #: nav/class/Navigator.js:173
 msgid "Keep right"
-msgstr ""
+msgstr "Håll till höger"
 
 #: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
 msgid "Current Position"
@@ -147,7 +147,7 @@ msgstr "Avbryt"
 
 #: nav/index.html.strings:3
 msgid "Not found"
-msgstr ""
+msgstr "Hittades inte"
 
 #: nav/index.html.strings:4
 msgid "Route so long"
@@ -168,7 +168,7 @@ msgstr "Stäng"
 
 #: nav/index.html.strings:8
 msgid "GPS Denied"
-msgstr "GPE nekad"
+msgstr "GPS-åtkomst nekad"
 
 #: nav/index.html.strings:9
 msgid "Error reading the GPS status"
@@ -222,7 +222,7 @@ msgstr "Logotyp"
 
 #: qml/AboutPage.qml:56 qml/AboutPage.qml:57 qml/AboutPage.qml:58
 msgid "Icons for empty states"
-msgstr ""
+msgstr "Ikoner för tomma stater"
 
 #: qml/AboutPage.qml:61
 msgid "translator-credits"
@@ -230,6 +230,7 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  Josef Andersson https://launchpad.net/~northar\n"
 "  Knut Funkel https://launchpad.net/~knut-funkel\n"
+"  Patrik Sonestad https://launchpad.net/~patrik-g\n"
 "  costales https://launchpad.net/~costales"
 
 #: qml/AboutPage.qml:63
@@ -249,7 +250,7 @@ msgstr "Drivs med"
 #: qml/AboutPage.qml:124
 #, qt-format
 msgid "Version %1. Under license %2"
-msgstr ""
+msgstr "Version %1. Licensvillkor %2"
 
 #: qml/Coordinate.qml:35
 msgid "Decimal"
@@ -297,35 +298,35 @@ msgstr ""
 
 #: qml/DownloadVoices.qml:53
 msgid "Download voices"
-msgstr ""
+msgstr "Hämta röster"
 
 #: qml/DownloadVoices.qml:61
 msgid "Play current voice"
-msgstr ""
+msgstr "Spela upp nuvarande röst"
 
 #: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
 msgid "How to add a voice"
-msgstr ""
+msgstr "Hur du lägger till en röst"
 
 #: qml/DownloadVoices.qml:161
 msgid "By "
-msgstr ""
+msgstr "Av "
 
 #: qml/DownloadVoices.qml:208
 msgid "Cancel Download"
-msgstr ""
+msgstr "Avbryt hämtning"
 
 #: qml/DownloadVoices.qml:224
 msgid "About the voices"
-msgstr ""
+msgstr "Om rösterna"
 
 #: qml/DownloadVoices.qml:230
 msgid "The stars are for the recommended voices."
-msgstr ""
+msgstr "Stjärna visar rekommenderade röster."
 
 #: qml/DownloadVoices.qml:238
 msgid "You can add a new voice to uNav following these steps:"
-msgstr ""
+msgstr "Du kan lägga till en ny röst till uNav genom att följa dessa steg:"
 
 #: qml/Favorites.qml:74
 msgid "No favorites yet"
@@ -365,19 +366,19 @@ msgstr "Uppdatera"
 
 #: qml/Favorites.qml:277
 msgid "Favorite Coordinates"
-msgstr ""
+msgstr "Favoritkoordinater"
 
 #: qml/Favorites.qml:288
 msgid "Name: "
-msgstr ""
+msgstr "Namn: "
 
 #: qml/Favorites.qml:295
 msgid "Latitude: "
-msgstr ""
+msgstr "Latitud: "
 
 #: qml/Favorites.qml:302
 msgid "Longitude: "
-msgstr ""
+msgstr "Longitud: "
 
 #: qml/Location.qml:45 qml/PoiListPage.qml:146
 msgid "Time out! Please try again"
@@ -404,7 +405,7 @@ msgstr "Närliggandehistorik"
 
 #: qml/Location.qml:187
 msgid "No history yet"
-msgstr ""
+msgstr "Ännu ingen historik"
 
 #: qml/Location.qml:187
 msgid "History is disabled"
@@ -445,7 +446,7 @@ msgstr "Fel vid hämtning av fartkameror!"
 
 #: qml/Main.qml:440
 msgid "Error finding route! Retrying again in 1 minute…"
-msgstr ""
+msgstr "Fel vid beräkning av rutt! Försöker igen om en minut..."
 
 #: qml/Main.qml:443
 msgid "Error finding route! Trying again…"
@@ -457,11 +458,11 @@ msgstr "Delad position"
 
 #: qml/Main.qml:762
 msgid "Near to destination"
-msgstr ""
+msgstr "Nära din destination"
 
 #: qml/Main.qml:763
 msgid "Cancel route"
-msgstr ""
+msgstr "Avbryt vägledning"
 
 #: qml/Main.qml:809
 #, qt-format
@@ -478,7 +479,7 @@ msgstr "Ange andra koordinater för simulering"
 
 #: qml/Main.qml:1016
 msgid "Custom voices"
-msgstr ""
+msgstr "Valbara röster"
 
 #: qml/Main.qml:1017
 msgid ""
@@ -490,10 +491,17 @@ msgid ""
 "The list of voices will be updated by the users. Please check them out in "
 "the future.\n"
 msgstr ""
+"Amerikansk engelska kommer vara standardröst.\n"
+"\n"
+"Du kan välja en röst för ditt språk från Inställningar: Hämta valbara "
+"röster\n"
+"\n"
+"Listan över röster kommer bli uppdaterad av andra användare. Håll koll på "
+"listan i framtiden.\n"
 
 #: qml/Main.qml:1019
 msgid "Set a voice now"
-msgstr ""
+msgstr "Välj en röst nu"
 
 #: qml/PoiDetailsPage.qml:89
 msgid "Lat, Long:"
@@ -550,7 +558,7 @@ msgstr "Fann inga/inget %1 i närheten. Försök igen med en större sökradie"
 #. of a place which might be closed during public holidays.
 #: qml/PoiListPage.qml:361
 msgid "PH"
-msgstr "HD"
+msgstr "Röd dag"
 
 #. TRANSLATORS: This string indicates that a place is closed.
 #: qml/PoiListPage.qml:363
@@ -575,7 +583,7 @@ msgstr "Senaste"
 
 #: qml/PoiQuickAccessPage.qml:63
 msgid "Fast Nearest Editor: "
-msgstr ""
+msgstr "Redigera snabbval: "
 
 #: qml/PoiQuickAccessPage.qml:201
 msgid "Selection"
@@ -623,11 +631,11 @@ msgstr "Lägg till genom att klicka på kartan"
 
 #: qml/SettingsPage.qml:56
 msgid "A voice"
-msgstr ""
+msgstr "En röst"
 
 #: qml/SettingsPage.qml:57
 msgid "A notification"
-msgstr ""
+msgstr "En avisering"
 
 #: qml/SettingsPage.qml:58
 msgid "None"
@@ -643,15 +651,15 @@ msgstr "Engelska mil"
 
 #: qml/SettingsPage.qml:95
 msgid "uNav link"
-msgstr ""
+msgstr "uNav-länk"
 
 #: qml/SettingsPage.qml:96
 msgid "Google Maps link"
-msgstr ""
+msgstr "Google Maps-länk"
 
 #: qml/SettingsPage.qml:97
 msgid "Standard GEO link"
-msgstr ""
+msgstr "Standard GEO-länk"
 
 #: qml/SettingsPage.qml:107
 msgid "Online"
@@ -671,19 +679,19 @@ msgstr "Guidning"
 
 #: qml/SettingsPage.qml:169
 msgid "Download custom voices"
-msgstr ""
+msgstr "Hämta röster"
 
 #: qml/SettingsPage.qml:176
 msgid "Car Options"
-msgstr ""
+msgstr "Biltillval"
 
 #: qml/SettingsPage.qml:183
 msgid "Avoid tolls"
-msgstr ""
+msgstr "Undvik vägtullar"
 
 #: qml/SettingsPage.qml:200
 msgid "Speed camera alerts"
-msgstr ""
+msgstr "Varningar för hastighetskamera"
 
 #: qml/SettingsPage.qml:219
 msgid "Map"
@@ -699,7 +707,7 @@ msgstr "Hur man använder frånkopplade kartor"
 
 #: qml/SettingsPage.qml:278
 msgid "Online style"
-msgstr ""
+msgstr "Online-stil"
 
 #: qml/SettingsPage.qml:312
 msgid "Units"
@@ -707,7 +715,7 @@ msgstr "Enheter"
 
 #: qml/SettingsPage.qml:346
 msgid "Share position as"
-msgstr ""
+msgstr "Dela position som"
 
 #: qml/SettingsPage.qml:376
 msgid "History"
@@ -719,7 +727,7 @@ msgstr "Lagra nya sökningar"
 
 #: qml/SettingsPage.qml:395 qml/SettingsPage.qml:405
 msgid "Clear history"
-msgstr ""
+msgstr "Rensa historik"
 
 #: qml/SettingsPage.qml:406
 msgid "You'll delete the current history"
@@ -744,9 +752,9 @@ msgid ""
 msgstr ""
 "uNav läser endast databasen i OpenStreetMap\n"
 "uNav kommer att visa en avisering för högsta hastighet och en markör för "
-"fartkamera (markören är dold för franska använda på grund av lagen).\n"
+"fartkamera (markören är dold för franska användare på grund av lagen).\n"
 "\n"
-"I en del länder är varning för hastihetskamera förbjudna - aktivera endast "
+"I en del länder är varning för hastighetskamera förbjudna - aktivera endast "
 "detta alternativ om det är lagligt."
 
 #: qml/SettingsPage.qml:435
@@ -759,15 +767,15 @@ msgstr "Dela plats till"
 
 #: qml/components/POIQuickAccessGridView.qml:92
 msgid "Error getting results. Please, check your data connection."
-msgstr ""
+msgstr "Fel vid hämtning av resultat. Kontrollera din uppkoppling."
 
 #: qml/components/POIQuickAccessGridView.qml:97
 msgid "Sorry, no results found nearby."
-msgstr ""
+msgstr "Tyvärr, inga resultat funna i närheten."
 
 #: qml/components/POIQuickAccessGridView.qml:175
 msgid "Current position unknown. Try again after a position update."
-msgstr ""
+msgstr "Nuvarande position okänd. Försök igen när positionen hittats."
 
 #: qml/js/PoiCategories.js:4
 msgid "Transport"
@@ -787,7 +795,7 @@ msgstr "Cykeluthyrning"
 
 #: qml/js/PoiCategories.js:9
 msgid "Bicycle Shop"
-msgstr ""
+msgstr "Cykelaffär"
 
 #: qml/js/PoiCategories.js:10
 msgid "Bus Station"
@@ -803,7 +811,7 @@ msgstr "Biluthyrning"
 
 #: qml/js/PoiCategories.js:13
 msgid "Car Repair"
-msgstr "Bilreparatör"
+msgstr "Bilverkstad"
 
 #: qml/js/PoiCategories.js:14
 msgid "Car Wash"
@@ -819,7 +827,7 @@ msgstr "Bensinstation"
 
 #: qml/js/PoiCategories.js:17
 msgid "Motorcycle Shop"
-msgstr ""
+msgstr "Motorcykelaffär"
 
 #: qml/js/PoiCategories.js:18
 msgid "Parking"
@@ -839,11 +847,11 @@ msgstr "Tågstation"
 
 #: qml/js/PoiCategories.js:25
 msgid "Accommodation"
-msgstr "Boende"
+msgstr "Logi"
 
 #: qml/js/PoiCategories.js:27
 msgid "Bed and Breakfasts"
-msgstr "Säng och frukost"
+msgstr "Rum och frukost"
 
 #: qml/js/PoiCategories.js:28
 msgid "Campsite"
@@ -895,7 +903,7 @@ msgstr "Närköp"
 
 #: qml/js/PoiCategories.js:44
 msgid "Drinking water"
-msgstr "Drickvatten"
+msgstr "Dricksvatten"
 
 #: qml/js/PoiCategories.js:45
 msgid "Fast Food"
@@ -919,11 +927,11 @@ msgstr "Restaurang"
 
 #: qml/js/PoiCategories.js:53
 msgid "Tourism"
-msgstr ""
+msgstr "Turism"
 
 #: qml/js/PoiCategories.js:55
 msgid "Alpine Hut"
-msgstr ""
+msgstr "Alphydda"
 
 #: qml/js/PoiCategories.js:56
 msgid "Archaeological Site"
@@ -935,7 +943,7 @@ msgstr "Konstverk"
 
 #: qml/js/PoiCategories.js:58
 msgid "Attraction"
-msgstr ""
+msgstr "Sevärdhet"
 
 #: qml/js/PoiCategories.js:59
 msgid "Battlefield"
@@ -959,7 +967,7 @@ msgstr "Naturreservat"
 
 #: qml/js/PoiCategories.js:65
 msgid "Ruin"
-msgstr "ruin"
+msgstr "Ruin"
 
 #: qml/js/PoiCategories.js:66
 msgid "Theme Park"
@@ -975,15 +983,15 @@ msgstr "Stadshus/kommunsäte"
 
 #: qml/js/PoiCategories.js:69
 msgid "Viewpoint"
-msgstr ""
+msgstr "Utsiktsplats"
 
 #: qml/js/PoiCategories.js:70
 msgid "Zoo"
-msgstr ""
+msgstr "Zoo"
 
 #: qml/js/PoiCategories.js:74
 msgid "Services"
-msgstr "Tjänster"
+msgstr "Vägtjänster"
 
 #: qml/js/PoiCategories.js:76
 msgid "ATM"
@@ -995,11 +1003,11 @@ msgstr "Bank"
 
 #: qml/js/PoiCategories.js:78
 msgid "Bureau de change"
-msgstr "Växelbyrå"
+msgstr "Växlingskontor"
 
 #: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
 msgid "Place of Worship"
-msgstr "Helgedom"
+msgstr "Religiös helgedom"
 
 #: qml/js/PoiCategories.js:80
 msgid "Post Box"
@@ -1023,11 +1031,11 @@ msgstr "Wi-Fi-punkt"
 
 #: qml/js/PoiCategories.js:88
 msgid "Shopping"
-msgstr "Handel"
+msgstr "Shopping"
 
 #: qml/js/PoiCategories.js:90
 msgid "Books"
-msgstr "Böcker"
+msgstr "Bokhandel"
 
 #: qml/js/PoiCategories.js:91
 msgid "Charity"
@@ -1051,15 +1059,15 @@ msgstr "Florist"
 
 #: qml/js/PoiCategories.js:96
 msgid "Gifts"
-msgstr "Gåvor"
+msgstr "Presenter"
 
 #: qml/js/PoiCategories.js:97
 msgid "Hairdresser"
-msgstr ""
+msgstr "Frisör"
 
 #: qml/js/PoiCategories.js:98
 msgid "Jewelry"
-msgstr "Juveler"
+msgstr "Juvelerare"
 
 #: qml/js/PoiCategories.js:99
 msgid "Kiosk"
@@ -1099,7 +1107,7 @@ msgstr "Resebyrå"
 
 #: qml/js/PoiCategories.js:108
 msgid "Vending Machine"
-msgstr "Försäljningsautomat"
+msgstr "Varuautomat"
 
 #: qml/js/PoiCategories.js:112
 msgid "Culture"
@@ -1163,7 +1171,7 @@ msgstr "Högskola"
 
 #: qml/js/PoiCategories.js:138
 msgid "Nursery School"
-msgstr "Sjukvårdsutbildning"
+msgstr "Daghem"
 
 #: qml/js/PoiCategories.js:139
 msgid "University"
@@ -1195,7 +1203,7 @@ msgstr "Veterinär"
 
 #: qml/js/PoiCategories.js:153
 msgid "Religious"
-msgstr "Religion"
+msgstr "Religiös"
 
 #: qml/js/PoiCategories.js:155
 msgid "Cemetery"
@@ -1211,7 +1219,7 @@ msgstr "Krematorium"
 
 #: qml/js/PoiCategories.js:162
 msgid "Emergency"
-msgstr "Nödfall"
+msgstr "Akutmottagning"
 
 #: qml/js/PoiCategories.js:164
 msgid "Phone"
@@ -1223,11 +1231,11 @@ msgstr "Polisstation"
 
 #: qml/js/PoiCategories.js:169
 msgid "Sport"
-msgstr "Idrott"
+msgstr "Sport"
 
 #: qml/js/PoiCategories.js:171
 msgid "Sports Center"
-msgstr "Idrottcenter"
+msgstr "Sporthall"
 
 #: qml/js/PoiCategories.js:172
 msgid "Stadium"
@@ -1267,7 +1275,7 @@ msgstr "Stad"
 
 #: qml/js/utils.js:58
 msgid "Current Location"
-msgstr ""
+msgstr "Aktuell plats"
 
 #: qml/tuto/Slide1.qml:40
 msgid "Welcome to uNav"
@@ -1309,7 +1317,7 @@ msgstr ""
 
 #: qml/tuto/Slide4.qml:43
 msgid "Touch Everything!"
-msgstr "Berör allt!"
+msgstr "Peka på allt!"
 
 #: qml/tuto/Slide4.qml:61
 msgid ""

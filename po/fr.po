@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2018-10-15 18:38+0200\n"
-"PO-Revision-Date: 2018-11-03 09:15+0000\n"
-"Last-Translator: Anne017 <anneonyme017@netcourrier.com>\n"
+"PO-Revision-Date: 2019-03-03 17:27+0000\n"
+"Last-Translator: Anne017 <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2019-01-05 15:28+0000\n"
-"X-Generator: Launchpad (build 18847)\n"
+"X-Launchpad-Export-Date: 2020-03-06 15:20+0000\n"
+"X-Generator: Launchpad (build e0878392dc799b267dea80578fa65500a5d74155)\n"
 
 #: nav/class/Navigator.js:131
 msgid "Turn left"
@@ -1313,31 +1313,31 @@ msgstr ""
 
 #: qml/tuto/Slide2.qml:43
 msgid "Long Touch on Map"
-msgstr "Appuyez longuement sur la carte"
+msgstr "Appuyer longtemps sur la carte"
 
 #: qml/tuto/Slide2.qml:60
 msgid ""
 "Navigate, add to favorites, search nearby places, share points on the map or "
 "simulate a route"
 msgstr ""
-"Naviguer, ajouter aux favoris, rechercher des emplacements à proximité, "
-"partager des points sur la carte ou simuler un itinéraire"
+"Naviguez, ajoutez aux favoris, recherchez des emplacements à proximité, "
+"partagez des points sur la carte ou simulez un itinéraire"
 
 #: qml/tuto/Slide3.qml:43
 msgid "Swipe Results"
-msgstr "Balayage des résultats"
+msgstr "Balayer les résultats"
 
 #: qml/tuto/Slide3.qml:60
 msgid ""
 "Navigate directly, call the place, share the location, open web page, delete "
 "favorites…"
 msgstr ""
-"Naviguer directement, appeler l'établissement, partager l'emplacement, "
-"ouvrir la page Web, supprimer les favoris..."
+"Naviguez directement, appelez l'établissement, partagez l'emplacement, "
+"ouvrez la page Internet, supprimez des favoris..."
 
 #: qml/tuto/Slide4.qml:43
 msgid "Touch Everything!"
-msgstr "Touchez à tout!"
+msgstr "Toucher à tout !"
 
 #: qml/tuto/Slide4.qml:61
 msgid ""
@@ -1359,11 +1359,11 @@ msgid ""
 "\n"
 "Set a destination: Then, click on map and click the same icon again"
 msgstr ""
-"Définir un point de départ : cliquez sur la carte et cliquez sur l'icône "
+"Définissez un point de départ : cliquez sur la carte et cliquez sur l'icône "
 "simulation\n"
 "\n"
-"Définir une destination : puis cliquez sur la carte et cliquez de nouveau "
-"sur la même icône"
+"Définissez une destination : cliquez ensuite sur la carte et cliquez de "
+"nouveau sur la même icône"
 
 #: qml/tuto/Slide6.qml:43
 msgid "uNav doesn't track you!"
