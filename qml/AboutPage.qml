@@ -44,7 +44,7 @@ Page {
             creditsModel.append({ category: i18n.tr("Developers"), name: "Aaron", link: "https://nanu-c.org/" })
             creditsModel.append({ category: i18n.tr("Developers"), name: "Dan Chapman", link: "https://launchpad.net/~dpniel" })
             creditsModel.append({ category: i18n.tr("Developers"), name: "JkB", link: "https://launchpad.net/~joergberroth" })
-            creditsModel.append({ category: i18n.tr("Developers"), name: "Marcos Costales (" + i18n.tr("Founder") + ")", link: "https://wiki.ubuntu.com/costales" })
+            creditsModel.append({ category: i18n.tr("Developers"), name: "Marcos Costales (" + i18n.tr("Founder") + ")", link: "https://costales.github.io/" })
             creditsModel.append({ category: i18n.tr("Developers"), name: "Nekhelesh Ramananthan", link: "https://launchpad.net/~nik90" })
             creditsModel.append({ category: i18n.tr("Developers"), name: "Olivier Tilloy", link: "https://launchpad.net/~osomon" })
 
