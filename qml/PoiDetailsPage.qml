@@ -54,7 +54,7 @@ Page {
     XmlListModel {
         id: poiDetailsModel
 
-        readonly property string baseUrl: "https://nominatim.openstreetmap.org/reverse?format=xml&addressdetails=1&email=costales.marcos@gmail.com&extratags=1"
+        readonly property string baseUrl: "https://nominatim.openstreetmap.org/reverse?format=xml&addressdetails=1&email=marcos.costales@gmail.com&extratags=1"
         readonly property string url: baseUrl + "&osm_type=" + osm_type + "&osm_id=" + osm_id
 
         property string lat

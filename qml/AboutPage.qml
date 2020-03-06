@@ -38,7 +38,7 @@ Page {
             creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Translations"), link: "https://translations.launchpad.net/unav" })
             creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Answers"), link: "https://answers.launchpad.net/unav" })
             creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Bugs"), link: "https://bugs.launchpad.net/unav" })
-            creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Contact"), link: "mailto:costales.marcos@gmail.com" })
+            creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Contact"), link: "mailto:marcos.costales@gmail.com" })
 
             // Developers
             creditsModel.append({ category: i18n.tr("Developers"), name: "Aaron", link: "https://nanu-c.org/" })

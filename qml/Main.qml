@@ -603,7 +603,7 @@ Window {
                 XmlListModel {
                     id: reverseXmlModel
 
-                    readonly property string baseUrl: "https://nominatim.openstreetmap.org/reverse?format=xml&email=costales.marcos@gmail.com&addressdetails=0&extratags=1&zoom=18&namedetails=1&"
+                    readonly property string baseUrl: "https://nominatim.openstreetmap.org/reverse?format=xml&email=marcos.costales@gmail.com&addressdetails=0&extratags=1&zoom=18&namedetails=1&"
 
                     function reverseSearch(lat, lon) {
                         source = (baseUrl + "lat=" + lat + "&lon=" + lon) ;

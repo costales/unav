@@ -65,7 +65,7 @@ Item {
             }
         }
 
-        readonly property string searchUrl: "https://nominatim.openstreetmap.org/search?format=xml&email=costales.marcos@gmail.com&limit=50&q="
+        readonly property string searchUrl: "https://nominatim.openstreetmap.org/search?format=xml&email=marcos.costales@gmail.com&limit=50&q="
         property string searchString
 
         function search() {

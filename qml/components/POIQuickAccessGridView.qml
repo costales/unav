@@ -105,7 +105,7 @@ Grid {
             }
         }
 
-        readonly property string baseUrl: "https://nominatim.openstreetmap.org/search?format=xml&bounded=1&limit=50&email=costales.marcos@gmail.com&extratags=1"
+        readonly property string baseUrl: "https://nominatim.openstreetmap.org/search?format=xml&bounded=1&limit=50&email=marcos.costales@gmail.com&extratags=1"
         readonly property double geoDist: navApp.settings.unit === 0 ? 0.01 : 0.01 / 0.621371192
         // geographic distance ~1.1km / ~1.1mi
         // rough estimation only. Could be redefined.
