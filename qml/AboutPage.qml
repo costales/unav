@@ -1,6 +1,6 @@
 /*
  * uNav http://launchpad.net/unav
- * Copyright (C) 2015-2018 Marcos Alvarez Costales https://launchpad.net/~costales
+ * Copyright (C) 2015-2020 Marcos Alvarez Costales https://costales.github.io
  * Copyright (C) 2015-2016 JkB https://launchpad.net/~joergberroth
  * Copyright (C) 2016 Nekhelesh Ramananthan https://launchpad.net/~nik90
  *
@@ -36,8 +36,8 @@ Page {
         function initialize() {
             // Resources
             creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Translations"), link: "https://translations.launchpad.net/unav" })
-            creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Answers"), link: "https://answers.launchpad.net/unav" })
-            creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Bugs"), link: "https://bugs.launchpad.net/unav" })
+            creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Code"), link: "https://github.com/costales/unav" })
+            creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Bugs"), link: "https://github.com/costales/unav/issues" })
             creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Contact"), link: "mailto:marcos.costales@gmail.com" })
 
             // Developers

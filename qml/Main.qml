@@ -1,6 +1,6 @@
 /*
  * uNav http://launchpad.net/unav
- * Copyright (C) 2015-2018 Marcos Alvarez Costales https://launchpad.net/~costales
+ * Copyright (C) 2015-2020 Marcos Alvarez Costales https://costales.github.io
  * Copyright (C) 2015-2016 JkB https://launchpad.net/~joergberroth
  * Copyright (C) 2016 Nekhelesh Ramananthan https://launchpad.net/~nik90
  *
@@ -60,7 +60,7 @@ Window {
         width: unavWindow.width + units.gu(0.1) //TODO: Investigate why this is needed
         height: unavWindow.height + units.gu(0.1) //TODO: Investigate why this is needed
 
-        property string applicationVersion: "2.4"
+        property string applicationVersion: "2.5"
         property string mapUrl: "../nav/index.html"
         property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 

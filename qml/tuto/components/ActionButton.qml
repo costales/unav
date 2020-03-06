@@ -1,6 +1,6 @@
 /*
  * uNav http://launchpad.net/unav
- * Copyright (C) 2015-2018 Marcos Alvarez Costales https://launchpad.net/~costales
+ * Copyright (C) 2015-2020 Marcos Alvarez Costales https://costales.github.io
  * This code is based on Podbird app code
  *
  * uNav is free software; you can redistribute it and/or modify
