@@ -41,6 +41,7 @@ Page {
             creditsModel.append({ category: i18n.tr("Resources"), name: i18n.tr("Contact"), link: "mailto:costales.marcos@gmail.com" })
 
             // Developers
+            creditsModel.append({ category: i18n.tr("Developers"), name: "Aaron", link: "https://nanu-c.org/" })
             creditsModel.append({ category: i18n.tr("Developers"), name: "Dan Chapman", link: "https://launchpad.net/~dpniel" })
             creditsModel.append({ category: i18n.tr("Developers"), name: "JkB", link: "https://launchpad.net/~joergberroth" })
             creditsModel.append({ category: i18n.tr("Developers"), name: "Marcos Costales (" + i18n.tr("Founder") + ")", link: "https://wiki.ubuntu.com/costales" })
