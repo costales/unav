@@ -1,7 +1,7 @@
 {
 	"architecture": "all",
 	"description": "Turn-by-turn GPS Navigation",
-	"framework": "ubuntu-sdk-16.04",
+	"framework": "ubuntu-sdk-16.04.2",
 	"hooks": {
 		"navigator": {
 			"apparmor": "app-armor.json",
