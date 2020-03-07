@@ -28,7 +28,6 @@ import "components"
 import "js/utils.js" as QmlJs
 import "js/db.js" as UnavDB
 import QtQuick.LocalStorage 2.0
-import QtQuick.Window 2.2
 import QtWebEngine 1.6
 import Qt.labs.settings 1.0
 
