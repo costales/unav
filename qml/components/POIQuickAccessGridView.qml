@@ -159,6 +159,7 @@ Grid {
                 source: model.label !== "add" ? Qt.resolvedUrl("../../nav/img/poi/" + model.en_label + ".svg"): "../../nav/img/header/poiConfig.svg"
                 opacity: 0.6 //model.label === "add" ? 1 :0.6
                 width: units.gu(3.25)
+                height: width
                 enabled: navigationPage.buttonsEnabled
 
                 anchors.centerIn: parent
