@@ -183,10 +183,10 @@ MainView {
                     return true;
 
                 // tablet
-                if ( (Screen.width == 800  && Screen.height == 1280) ||
-                     (Screen.width == 1280 && Screen.height == 800)  ||
-                     (Screen.width == 1920 && Screen.height == 1200) ||
-                     (Screen.width == 1200 && Screen.height == 1920) )
+                if ( (navApp.width == 800  && navApp.height == 1280) ||
+                     (navApp.width == 1280 && navApp.height == 800)  ||
+                     (navApp.width == 1920 && navApp.height == 1200) ||
+                     (navApp.width == 1200 && navApp.height == 1920) )
                     return true;
 
                 if (navApp.width < navApp.height) // portraid
