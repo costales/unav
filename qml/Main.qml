@@ -33,7 +33,7 @@ import Qt.labs.settings 1.0
 
 MainView {
     id: navApp
-    
+
     width: units.gu(150)
     height: units.gu(100)
 
@@ -470,7 +470,7 @@ MainView {
                     }
                 }
 
-
+                zoomFactor: 2.75
             }
 
             Connections {

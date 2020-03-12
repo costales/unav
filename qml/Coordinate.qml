@@ -56,7 +56,11 @@ Item {
 
     Loader {
         id: coordinateLoader
-        anchors.centerIn: parent
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            top: parent.top
+            topMargin: abstractButton.height + units.gu(4)
+        }
         height: units.gu(10)
         width: coordinateLoader.sourceComponent === colCoordDecComponent ? units.gu(28) : units.gu(35)
         Component.onCompleted: sourceComponent = colCoordDecComponent
@@ -117,7 +121,7 @@ Item {
 
                     navApp.settings.default_coord_0a = lat1.text;
                     navApp.settings.default_coord_1a = lng1.text;
-                    
+
                     try {
                         var aux_lat = lat1.text;
                         var aux_lng = lng1.text;
@@ -156,7 +160,7 @@ Item {
             }
         }
     }
-    
+
     Component {
         id: colCoordPolarComponent
 
@@ -321,7 +325,7 @@ Item {
                     lng2b.text === "" ? lng2b.text = lng2b.placeholderText : undefined;
                     lat2c.text === "" ? lat2c.text = lat2c.placeholderText : undefined;
                     lng2c.text === "" ? lng2c.text = lng2c.placeholderText : undefined;
-                    
+
                     navApp.settings.default_coord_2a = lat2a.text;
                     navApp.settings.default_coord_2b = lat2b.text;
                     navApp.settings.default_coord_2c = lat2c.text;
@@ -330,7 +334,7 @@ Item {
                     navApp.settings.default_coord_3b = lng2b.text;
                     navApp.settings.default_coord_3c = lng2c.text;
                     navApp.settings.default_coord_3d = lng2d.text.toUpperCase();
-                    
+
                     try {
                         var aux_lat_day = parseInt(lat2a.text);
                         var aux_lat_min = parseFloat(lat2b.text);

@@ -166,6 +166,7 @@ Item {
                 Icon {
                     name: "starred"
                     width: units.gu(2.5)
+                    height: width
                     color: UbuntuColors.jet
                     SlotsLayout.position: SlotsLayout.First
                     SlotsLayout.overrideVerticalPositioning: true
@@ -267,19 +268,19 @@ Item {
             }
         }
     }
-    
+
     Component {
         id: infoFav
-        
+
         Dialog {
-        
+
             id: infoFavDialog
             title: i18n.tr("Favorite Coordinates")
-            
+
             property string name: ""
             property string lat: ""
             property string lng: ""
-            
+
             Label {
                 width: parent.width
                 color: UbuntuColors.slate
