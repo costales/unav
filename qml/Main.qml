@@ -280,6 +280,8 @@ MainView {
 
             WebEngineView {
                 property alias context: _webview.profile
+                //This factor should be around 2.75 for mobile
+                property real factor: units.gu(1) / 8.4
 
                 id: _webview
                 anchors.fill: parent
@@ -470,7 +472,7 @@ MainView {
                     }
                 }
 
-                zoomFactor: 2.75
+                zoomFactor: factor
             }
 
             Connections {
