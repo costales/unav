@@ -25,6 +25,7 @@ import "components"
 
 Item {
     id: container
+    anchors.fill: parent
 
     signal favorited(string lat, string lng, string name)
 
@@ -269,12 +270,11 @@ Item {
                 }
             }
         }
+    }
 
-        Scrollbar {
-            visible: listView.model === sortedSearchModel
-            flickableItem: listView
-            align: Qt.AlignTrailing
-        }
+    ScrollView {
+        anchors.fill: parent
+        contentItem: listView
     }
 
     Component {
@@ -436,6 +436,7 @@ Item {
                 Icon {
                     id: progressionIcon
                     height: units.gu(2.5)
+                    width: height
                     name: "next"
                     visible: model.title === i18n.tr("Nearby history")
                     SlotsLayout.position: SlotsLayout.Last
