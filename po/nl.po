@@ -6,16 +6,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-15 18:38+0200\n"
-"PO-Revision-Date: 2018-06-11 20:51+0000\n"
-"Last-Translator: costales <Unknown>\n"
+"PO-Revision-Date: 2020-07-05 19:57+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2020-03-06 15:20+0000\n"
-"X-Generator: Launchpad (build e0878392dc799b267dea80578fa65500a5d74155)\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: nav/class/Navigator.js:131
 msgid "Turn left"
@@ -39,7 +40,7 @@ msgstr "Houd links aan"
 
 #: nav/class/Navigator.js:141
 msgid "Bear right"
-msgstr "Rechts aanhouden"
+msgstr "Houd rechts aan"
 
 #: nav/class/Navigator.js:143
 msgid "Continue on the road"
@@ -87,19 +88,19 @@ msgstr "Rij de rotonde op en neem de negende afslag"
 
 #: nav/class/Navigator.js:165
 msgid "Make a U-turn"
-msgstr ""
+msgstr "Maak een U-bocht"
 
 #: nav/class/Navigator.js:167 nav/class/UI.js:619
 msgid "You have arrived at your destination"
-msgstr "U bent aangekomen op uw bestemming"
+msgstr "Je bent aangekomen op je bestemming"
 
 #: nav/class/Navigator.js:171
 msgid "Keep left"
-msgstr ""
+msgstr "Houd links aan"
 
 #: nav/class/Navigator.js:173
 msgid "Keep right"
-msgstr ""
+msgstr "Houd rechts aan"
 
 #: nav/class/UI.js:38 qml/Favorites.qml:233 qml/Main.qml:820
 msgid "Current Position"
@@ -115,7 +116,7 @@ msgstr "Huidig eindpunt"
 
 #: nav/class/UI.js:559
 msgid "Waiting for a GPS signal…"
-msgstr "Aan het wachten op een gps-signaal…"
+msgstr "Bezig met wachten op gps-signaal…"
 
 #: nav/class/UI.js:566
 msgid "Searching for a route…"
@@ -123,27 +124,27 @@ msgstr "Bezig met zoeken naar een route…"
 
 #: nav/class/UI.js:570
 msgid "Drawing route…"
-msgstr "Route tekenen…"
+msgstr "Bezig met uitstippelen…"
 
 #: nav/class/UI.js:574
 msgid "Trying search again soon…"
-msgstr "Er zal opnieuw gezocht worden over enkele ogenblikken…"
+msgstr "Er wordt spoedig opnieuw gezocht…"
 
 #: nav/class/UI.js:578
 msgid "Recalculating route…"
-msgstr "Route herberekenen…"
+msgstr "Bezig met herberekenen…"
 
 #: nav/class/UI.js:626
 msgid "Simulating route…"
-msgstr "Bezig met simuleren route…"
+msgstr "Bezig met simuleren…"
 
 #: nav/index.html.strings:1
 msgid "Start"
-msgstr "Start"
+msgstr "Starten"
 
 #: nav/index.html.strings:2 qml/Favorites.qml:248 qml/SettingsPage.qml:418
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Afbreken"
 
 #: nav/index.html.strings:3
 msgid "Not found"
@@ -151,11 +152,11 @@ msgstr "Niet gevonden"
 
 #: nav/index.html.strings:4
 msgid "Route so long"
-msgstr "Route te lang"
+msgstr "De route is te lang"
 
 #: nav/index.html.strings:5
 msgid "More than 1000km could affect the performance"
-msgstr "Meer dan 1000km kan de prestatie beïnvloeden"
+msgstr "Meer dan 1000km kan je prestaties beïnvloeden"
 
 #: nav/index.html.strings:6
 msgid "We recommend you a waypoint in the middle as destination"
@@ -168,19 +169,19 @@ msgstr "Sluiten"
 
 #: nav/index.html.strings:8
 msgid "GPS Denied"
-msgstr "Gps niet beschikbaar"
+msgstr "GPS is niet beschikbaar"
 
 #: nav/index.html.strings:9
 msgid "Error reading the GPS status"
-msgstr "Fout opgetreden bij verkrijgen gps-status"
+msgstr "De gps-status kan niet worden opgevraagd"
 
 #: nav/index.html.strings:10
 msgid "Please review your device settings"
-msgstr "Controleer a.u.b. uw apparaatinstellingen"
+msgstr "Controleer je apparaatinstellingen"
 
 #: qml/AboutPage.qml:27 qml/SettingsPage.qml:44
 msgid "About"
-msgstr "Info"
+msgstr "Over"
 
 #: qml/AboutPage.qml:38 qml/AboutPage.qml:39 qml/AboutPage.qml:40
 #: qml/AboutPage.qml:41
@@ -259,7 +260,7 @@ msgstr "Maakt gebruik van"
 #: qml/AboutPage.qml:124
 #, qt-format
 msgid "Version %1. Under license %2"
-msgstr "Versie %1. Onder licentie %2"
+msgstr "Versie %1, onder licentie %2"
 
 #: qml/Coordinate.qml:35
 msgid "Decimal"
@@ -279,11 +280,11 @@ msgstr "Lengtegraad:"
 
 #: qml/Coordinate.qml:109 qml/Coordinate.qml:312
 msgid "Show on Map"
-msgstr "Tonen op de kaart"
+msgstr "Tonen op kaart"
 
 #: qml/Coordinate.qml:149 qml/Coordinate.qml:383
 msgid "Coordinates are not valid"
-msgstr "Coördinaten zijn ongeldig"
+msgstr "De coördinaten zijn ongeldig"
 
 #: qml/Coordinate.qml:150
 msgid ""
@@ -293,7 +294,7 @@ msgid ""
 msgstr ""
 "Voer geldige decimale coördinaten in\n"
 "\n"
-"Het juiste formaat moet zijn:"
+"De juiste opmaak is:"
 
 #: qml/Coordinate.qml:384
 msgid ""
@@ -303,7 +304,7 @@ msgid ""
 msgstr ""
 "Voer geldige sexagesimale coördinaten in\n"
 "\n"
-"Het juiste formaat moet zijn:"
+"De juiste opmaak is:"
 
 #: qml/DownloadVoices.qml:53
 msgid "Download voices"
@@ -311,11 +312,11 @@ msgstr "Stemmen downloaden"
 
 #: qml/DownloadVoices.qml:61
 msgid "Play current voice"
-msgstr "Huidige stem gebruiken"
+msgstr "Huidige stem afspelen"
 
 #: qml/DownloadVoices.qml:70 qml/DownloadVoices.qml:246
 msgid "How to add a voice"
-msgstr "Hoe u een stem toevoegt"
+msgstr "Hoe voeg ik een stem toe?"
 
 #: qml/DownloadVoices.qml:161
 msgid "By "
@@ -327,7 +328,7 @@ msgstr "Download afbreken"
 
 #: qml/DownloadVoices.qml:224
 msgid "About the voices"
-msgstr "Info over de stemmen"
+msgstr "Informatie over de stemmen"
 
 #: qml/DownloadVoices.qml:230
 msgid "The stars are for the recommended voices."
@@ -335,11 +336,11 @@ msgstr "De sterren zijn voor de aanbevolen stemmen."
 
 #: qml/DownloadVoices.qml:238
 msgid "You can add a new voice to uNav following these steps:"
-msgstr "Via deze stappen kunt u een nieuwe stem toevoegen aan uNav:"
+msgstr "Volg deze stappen om een nieuwe stem toe te voegen aan uNav:"
 
 #: qml/Favorites.qml:74
 msgid "No favorites yet"
-msgstr "Nog geen favorieten"
+msgstr "Je hebt nog geen favorieten"
 
 #: qml/Favorites.qml:197 qml/SearchPage.qml:83
 msgid "Add Favorite"
@@ -354,12 +355,12 @@ msgid ""
 "There is already a favorite with that name. You can either overwrite it or "
 "enter a different name."
 msgstr ""
-"Er bestaat al een favoriet met deze naam. U kunt deze overschrijven of de "
-"naam wijzigen."
+"Er is al een favoriet met deze naam. Je kunt deze overschrijven of een "
+"andere naam opgeven."
 
 #: qml/Favorites.qml:232
 msgid "Insert a favorite name"
-msgstr "Geef uw favoriet een naam"
+msgstr "Geef een naam op"
 
 #: qml/Favorites.qml:255
 msgid "Overwrite"
@@ -371,33 +372,32 @@ msgstr "Toevoegen"
 
 #: qml/Favorites.qml:255
 msgid "Update"
-msgstr "Updaten"
+msgstr "Bijwerken"
 
 #: qml/Favorites.qml:277
 msgid "Favorite Coordinates"
-msgstr ""
+msgstr "Favoriete coördinaten"
 
 #: qml/Favorites.qml:288
 msgid "Name: "
-msgstr ""
+msgstr "Naam: "
 
 #: qml/Favorites.qml:295
 msgid "Latitude: "
-msgstr ""
+msgstr "Breedtegraad: "
 
 #: qml/Favorites.qml:302
 msgid "Longitude: "
-msgstr ""
+msgstr "Lengtegraad: "
 
 #: qml/Location.qml:45 qml/PoiListPage.qml:146
 msgid "Time out! Please try again"
-msgstr "Time out! Probeer het opnieuw"
+msgstr "Verlopen! Probeer het opnieuw."
 
 #. TRANSLATORS: This string is search shown when no POIs are found with the chosen search radius.
 #: qml/Location.qml:53
 msgid "Sorry, nothing found. Try another search"
-msgstr ""
-"Sorry, niets gevonden. Probeer het opnieuw met een andere zoekopdracht"
+msgstr "Geen zoekresultaat. Probeer een andere zoekopdracht."
 
 #: qml/Location.qml:141 qml/Location.qml:352 qml/Location.qml:414
 msgid "Search history"
@@ -405,7 +405,7 @@ msgstr "Zoekgeschiedenis"
 
 #: qml/Location.qml:151 qml/Location.qml:358 qml/Location.qml:416
 msgid "Favorite history"
-msgstr "Favoriet-geschiedenis"
+msgstr "Favorietgeschiedenis"
 
 #: qml/Location.qml:161 qml/Location.qml:355 qml/Location.qml:371
 #: qml/Location.qml:382 qml/Location.qml:397 qml/Location.qml:404
@@ -415,16 +415,16 @@ msgstr "In de buurt-geschiedenis"
 
 #: qml/Location.qml:187
 msgid "No history yet"
-msgstr "Nog geen geschiedenis"
+msgstr "Je hebt nog geen geschiedenis"
 
 #: qml/Location.qml:187
 msgid "History is disabled"
-msgstr "Geschiedenis uitgeschakeld"
+msgstr "Geschiedenis is uitgeschakeld"
 
 #: qml/Location.qml:200 qml/Location.qml:253 qml/PoiListPage.qml:163
 #: qml/components/POIQuickAccessGridView.qml:181
 msgid "Searching…"
-msgstr "Zoeken…"
+msgstr "Bezig met zoeken…"
 
 #: qml/Location.qml:249
 msgid "Search location"
@@ -440,7 +440,7 @@ msgstr "Centreren op positie"
 
 #: qml/Main.qml:250 qml/Main.qml:571
 msgid "Searching your position… This could take a while"
-msgstr "Bezig met zoeken naar uw positie… Dit kan enige tijd duren"
+msgstr "Bezig met zoeken naar je positie… - dit kan enige tijd duren"
 
 #: qml/Main.qml:264 qml/PoiPage.qml:83 qml/SearchPage.qml:69
 msgid "Search"
@@ -452,16 +452,17 @@ msgstr "Bestemming"
 
 #: qml/Main.qml:437
 msgid "Error getting speed cameras!"
-msgstr "Fout opgetreden bij verkrijgen van snelheidscameralocaties!"
+msgstr "De flitspaallocaties kunnen niet worden opgehaald!"
 
 #: qml/Main.qml:440
 msgid "Error finding route! Retrying again in 1 minute…"
 msgstr ""
+"De route kan niet worden uitgestippeld! Het wordt over 1 minuut opnieuw "
+"geprobeerd…"
 
 #: qml/Main.qml:443
 msgid "Error finding route! Trying again…"
-msgstr ""
-"Fout opgetreden bij vinden van route! Bezig om het opnieuw te proberen…"
+msgstr "De route kan niet worden uitgestippeld! Bezig met opnieuw proberen…"
 
 #: qml/Main.qml:488 qml/Main.qml:514
 msgid "Shared Position"
@@ -469,20 +470,20 @@ msgstr "Gedeelde positie"
 
 #: qml/Main.qml:762
 msgid "Near to destination"
-msgstr "U nadert de bestemming"
+msgstr "Je nadert de bestemming"
 
 #: qml/Main.qml:763
 msgid "Cancel route"
-msgstr "Route annuleren"
+msgstr "Route afbreken"
 
 #: qml/Main.qml:809
 #, qt-format
 msgid "Coord: %1, %2"
-msgstr "Coord: %1, %2"
+msgstr "Coörd.: %1, %2"
 
 #: qml/Main.qml:877 qml/PoiDetailsPage.qml:243
 msgid "Simulate from here! Now click on destination"
-msgstr "Simulatie vanaf hier starten! Klik nu op de bestemming"
+msgstr "Simulatie vanaf hier starten - druk nu op de bestemming"
 
 #: qml/Main.qml:894
 msgid "Set a different coordinates for simulating"
@@ -502,18 +503,17 @@ msgid ""
 "The list of voices will be updated by the users. Please check them out in "
 "the future.\n"
 msgstr ""
-"De Amerikaans-Engelse stem is de enige stem die standaard wordt "
-"geïnstalleerd.\n"
+"De Amerikaans-Engelse stem is de enige die is voorgeïnstalleerd.\n"
 "\n"
-"U kunt een aangepaste stem in uw taal instellen via Instellingen: Aangepaste "
+"Je kunt een stem in je eigen taal instellen via Instellingen --> Aangepaste "
 "stemmen downloaden.\n"
 "\n"
-"De lijst met stemmen zal door de gebruikers worden bijgewerkt. Controleer "
-"deze regelmatig.\n"
+"De lijst met stemmen wordt regelmatig door gebruikers bijgewerkt. Controleer "
+"zo nu en dan dus op updates.\n"
 
 #: qml/Main.qml:1019
 msgid "Set a voice now"
-msgstr "Nu een stem instellen"
+msgstr "Stem instellen"
 
 #: qml/PoiDetailsPage.qml:89
 msgid "Lat, Long:"
@@ -529,7 +529,7 @@ msgstr "Niet beschikbaar"
 
 #: qml/PoiDetailsPage.qml:99
 msgid "Wi-Fi Hotspot Available"
-msgstr "Wifi-hotspot beschikbaar"
+msgstr "Wi-Fi-hotspot beschikbaar"
 
 #: qml/PoiDetailsPage.qml:101
 msgid "Wired Connection Available (ethernet connection)"
@@ -545,15 +545,15 @@ msgstr "Beperkte beschikbaarheid"
 
 #: qml/PoiDetailsPage.qml:174
 msgid "Loading POI details..."
-msgstr "POI-details laden..."
+msgstr "Bezig met laden van informatie…"
 
 #: qml/PoiListPage.qml:45
 msgid "Show POIs on map"
-msgstr "POI's tonen op de kaart"
+msgstr "Nuttige plaatsen tonen op kaart"
 
 #: qml/PoiListPage.qml:68
 msgid "Unknown current position"
-msgstr "Huidige positie onbekend"
+msgstr "De huidige positie is onbekend"
 
 #: qml/PoiListPage.qml:84
 msgid "Something went wrong. Please, try again…"
@@ -565,8 +565,8 @@ msgstr "Er is iets misgegaan. Probeer het opnieuw…"
 #, qt-format
 msgid "Sorry, no %1 found nearby. Try again with a larger search radius"
 msgstr ""
-"Er is helaas geen %1 gevonden in de buurt. Probeer het opnieuw met een "
-"grotere zoekradius"
+"Er is helaas geen %1 in de buurt. Probeer het opnieuw met een groter "
+"zoekgebied."
 
 #. TRANSLATORS: Abbreviation for Public Holiday. This string is used while showing the opening hours
 #. of a place which might be closed during public holidays.
@@ -585,7 +585,7 @@ msgstr "Vorige"
 
 #: qml/PoiPage.qml:118
 msgid "Filter POI categories by name"
-msgstr "POI-categorieën op naam filteren"
+msgstr "Nuttige plaats-categorieën filteren op naam"
 
 #: qml/PoiPage.qml:128
 msgid "Nearby"
@@ -593,11 +593,11 @@ msgstr "In de buurt"
 
 #: qml/PoiPage.qml:147
 msgid "Most recent"
-msgstr "Meest recente"
+msgstr "Meest recent"
 
 #: qml/PoiQuickAccessPage.qml:63
 msgid "Fast Nearest Editor: "
-msgstr "Snelle editor voor dichtstbijzijnde: "
+msgstr "Snelle bewerker voor dichtstbijzijnde: "
 
 #: qml/PoiQuickAccessPage.qml:201
 msgid "Selection"
@@ -607,11 +607,11 @@ msgstr "Selectie"
 #: qml/PoiQuickAccessPage.qml:203
 #, qt-format
 msgid "Max. %1 POIs can be selected."
-msgstr "Er kunnen maximaal %1 POI's geselecteerd worden."
+msgstr "Je kunt max. %1 nuttige plaatsen selecteren."
 
 #: qml/PoiQuickAccessPage.qml:206 qml/SettingsPage.qml:439
 msgid "OK"
-msgstr "OK"
+msgstr "Oké"
 
 #: qml/RouteInfoListPage.qml:29
 msgid "Route Info"
@@ -641,39 +641,39 @@ msgstr "Huidige bestemming toevoegen"
 
 #: qml/SearchPage.qml:172
 msgid "Add by clicking on Map"
-msgstr "Toevoegen door op de kaart te klikken"
+msgstr "Voeg toe door op de kaart te drukken"
 
 #: qml/SettingsPage.qml:56
 msgid "A voice"
-msgstr "Een stem"
+msgstr "Stem"
 
 #: qml/SettingsPage.qml:57
 msgid "A notification"
-msgstr "Een notificatie"
+msgstr "Melding"
 
 #: qml/SettingsPage.qml:58
 msgid "None"
-msgstr "Geen"
+msgstr "Geen begeleiding"
 
 #: qml/SettingsPage.qml:68
 msgid "Kilometres"
-msgstr "Kilometer"
+msgstr "Kilometers"
 
 #: qml/SettingsPage.qml:69
 msgid "Miles"
-msgstr "Mijl"
+msgstr "Mijlen"
 
 #: qml/SettingsPage.qml:95
 msgid "uNav link"
-msgstr ""
+msgstr "uNav-link"
 
 #: qml/SettingsPage.qml:96
 msgid "Google Maps link"
-msgstr ""
+msgstr "Google Maps-link"
 
 #: qml/SettingsPage.qml:97
 msgid "Standard GEO link"
-msgstr ""
+msgstr "Standaard GEO-link"
 
 #: qml/SettingsPage.qml:107
 msgid "Online"
@@ -697,11 +697,11 @@ msgstr "Aangepaste stemmen downloaden"
 
 #: qml/SettingsPage.qml:176
 msgid "Car Options"
-msgstr ""
+msgstr "Auto-opties"
 
 #: qml/SettingsPage.qml:183
 msgid "Avoid tolls"
-msgstr ""
+msgstr "Tolwegen vermijden"
 
 #: qml/SettingsPage.qml:200
 msgid "Speed camera alerts"
@@ -717,7 +717,7 @@ msgstr "Modus"
 
 #: qml/SettingsPage.qml:261
 msgid "How to use offline maps"
-msgstr "Hoe kaarten offline gebruiken"
+msgstr "Hoe gebruik ik offline-kaarten?"
 
 #: qml/SettingsPage.qml:278
 msgid "Online style"
@@ -729,7 +729,7 @@ msgstr "Eenheden"
 
 #: qml/SettingsPage.qml:346
 msgid "Share position as"
-msgstr ""
+msgstr "Positie delen als"
 
 #: qml/SettingsPage.qml:376
 msgid "History"
@@ -745,7 +745,7 @@ msgstr "Geschiedenis wissen"
 
 #: qml/SettingsPage.qml:406
 msgid "You'll delete the current history"
-msgstr "U zult de huidige geschiedenis verwijderen"
+msgstr "Je wist hiermee de huidige geschiedenis"
 
 #: qml/SettingsPage.qml:409
 msgid "Delete"
@@ -764,17 +764,17 @@ msgid ""
 "In a few countries Speed Camera alerts are illegal, then enable this option "
 "only if it's legal in the country."
 msgstr ""
-"uNav leest alleen de OPenStreetMap-database.\n"
-"uNav zal een melding van de maximum snelheid tonen, evenals  een "
-"flitspaalwaarschuwing (waarschuwing verborgen voor Franse gebruikers vanwege "
-"de wet).\n"
+"uNav leest alleen de OpenStreetMap-databank uit.\n"
+"uNav toont een melding van de maximumsnelheid, evenals een "
+"flitspaalwaarschuwing (deze is verborgen voor Franse gebruikers vanwege de "
+"wet).\n"
 "\n"
-"In sommige landen is het verboden te waarschuwen voor flitspalen; schakel "
+"In sommige landen is het verboden te waarschuwen voor flitspalen. Schakel "
 "deze optie alleen in als het in het land is toegestaan."
 
 #: qml/SettingsPage.qml:435
 msgid "Read more about it"
-msgstr "Meer info hierover"
+msgstr "Meer informatie"
 
 #: qml/Share.qml:33
 msgid "Share location to"
@@ -783,20 +783,20 @@ msgstr "Locatie delen met"
 #: qml/components/POIQuickAccessGridView.qml:92
 msgid "Error getting results. Please, check your data connection."
 msgstr ""
-"Fout bij het verkrijgen van resultaten. Gelieve uw dataverbinding te "
-"controleren."
+"De resultaten kunnen niet worden opgehaald. Controleer je internetverbinding."
 
 #: qml/components/POIQuickAccessGridView.qml:97
 msgid "Sorry, no results found nearby."
-msgstr "Sorry, geen resultaten gevonden in de buurt."
+msgstr "Geen resultaten gevonden in de buurt."
 
 #: qml/components/POIQuickAccessGridView.qml:175
 msgid "Current position unknown. Try again after a position update."
-msgstr "Huidige positie onbekend. Probeer opnieuw na een positie-update."
+msgstr ""
+"De huidige positie is onbekend. Werk je positie bij en probeer het opnieuw."
 
 #: qml/js/PoiCategories.js:4
 msgid "Transport"
-msgstr "Transport"
+msgstr "Vervoer"
 
 #: qml/js/PoiCategories.js:6
 msgid "Airport"
@@ -868,7 +868,7 @@ msgstr "Accommodatie"
 
 #: qml/js/PoiCategories.js:27
 msgid "Bed and Breakfasts"
-msgstr "Logies met ontbijt"
+msgstr "Bed en breakfast"
 
 #: qml/js/PoiCategories.js:28
 msgid "Campsite"
@@ -896,7 +896,7 @@ msgstr "Motel"
 
 #: qml/js/PoiCategories.js:37
 msgid "Food & Drink"
-msgstr "Eten & Drinken"
+msgstr "Eten en drinken"
 
 #: qml/js/PoiCategories.js:39
 msgid "Bakery"
@@ -916,7 +916,7 @@ msgstr "Café"
 
 #: qml/js/PoiCategories.js:43
 msgid "Convenience Store"
-msgstr "Buurt-supermarkt"
+msgstr "Buurtsupermarkt"
 
 #: qml/js/PoiCategories.js:44
 msgid "Drinking water"
@@ -928,7 +928,7 @@ msgstr "Fastfood"
 
 #: qml/js/PoiCategories.js:46
 msgid "Ice Cream"
-msgstr "Ijsje"
+msgstr "IJssalon"
 
 #: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:64
 msgid "Picnic Site"
@@ -944,15 +944,15 @@ msgstr "Restaurant"
 
 #: qml/js/PoiCategories.js:53
 msgid "Tourism"
-msgstr ""
+msgstr "Toerisme"
 
 #: qml/js/PoiCategories.js:55
 msgid "Alpine Hut"
-msgstr ""
+msgstr "Berghut"
 
 #: qml/js/PoiCategories.js:56
 msgid "Archaeological Site"
-msgstr "Archeologische plaats"
+msgstr "Archeologische vindplaats"
 
 #: qml/js/PoiCategories.js:57 qml/js/PoiCategories.js:115
 msgid "Artwork"
@@ -960,7 +960,7 @@ msgstr "Kunstwerk"
 
 #: qml/js/PoiCategories.js:58
 msgid "Attraction"
-msgstr ""
+msgstr "Attractie"
 
 #: qml/js/PoiCategories.js:59
 msgid "Battlefield"
@@ -1000,11 +1000,11 @@ msgstr "Gemeentehuis"
 
 #: qml/js/PoiCategories.js:69
 msgid "Viewpoint"
-msgstr ""
+msgstr "Uitzichtpunt"
 
 #: qml/js/PoiCategories.js:70
 msgid "Zoo"
-msgstr ""
+msgstr "Dierentuin"
 
 #: qml/js/PoiCategories.js:74
 msgid "Services"
@@ -1020,7 +1020,7 @@ msgstr "Bank"
 
 #: qml/js/PoiCategories.js:78
 msgid "Bureau de change"
-msgstr "Wisselkantoor"
+msgstr "Geldwisselkantoor"
 
 #: qml/js/PoiCategories.js:79 qml/js/PoiCategories.js:158
 msgid "Place of Worship"
@@ -1036,7 +1036,7 @@ msgstr "Postkantoor"
 
 #: qml/js/PoiCategories.js:82
 msgid "Public Telephone"
-msgstr "Openbare telefoon"
+msgstr "Telefooncel"
 
 #: qml/js/PoiCategories.js:83
 msgid "Toilet"
@@ -1044,7 +1044,7 @@ msgstr "Toilet"
 
 #: qml/js/PoiCategories.js:84
 msgid "Wi-Fi Point"
-msgstr "Wifipunt"
+msgstr "Wi-Fi-punt"
 
 #: qml/js/PoiCategories.js:88
 msgid "Shopping"
@@ -1060,7 +1060,7 @@ msgstr "Liefdadigheidsinstelling"
 
 #: qml/js/PoiCategories.js:92
 msgid "Clothes"
-msgstr "Kleding"
+msgstr "Kledingwinkel"
 
 #: qml/js/PoiCategories.js:93
 msgid "Computer Shop"
@@ -1100,11 +1100,11 @@ msgstr "Winkelcentrum"
 
 #: qml/js/PoiCategories.js:102
 msgid "Mobile Phone"
-msgstr "Mobiele telefoon"
+msgstr "Telefoonwinkel"
 
 #: qml/js/PoiCategories.js:103
 msgid "Optician"
-msgstr "Opticien"
+msgstr "Opticiën"
 
 #: qml/js/PoiCategories.js:104
 msgid "Public Market"
@@ -1124,7 +1124,7 @@ msgstr "Reisbureau"
 
 #: qml/js/PoiCategories.js:108
 msgid "Vending Machine"
-msgstr "Verkoopautomaten"
+msgstr "Verkoopautomaat"
 
 #: qml/js/PoiCategories.js:112
 msgid "Culture"
@@ -1136,7 +1136,7 @@ msgstr "Kunsthal"
 
 #: qml/js/PoiCategories.js:116
 msgid "Auditorium"
-msgstr "Auditorium"
+msgstr "Gehoorzaal"
 
 #: qml/js/PoiCategories.js:117
 msgid "Gallery"
@@ -1152,7 +1152,7 @@ msgstr "Theater"
 
 #: qml/js/PoiCategories.js:124
 msgid "Entertainment"
-msgstr "Amusement"
+msgstr "Vermaak"
 
 #: qml/js/PoiCategories.js:126
 msgid "Casino"
@@ -1220,7 +1220,7 @@ msgstr "Dierenarts"
 
 #: qml/js/PoiCategories.js:153
 msgid "Religious"
-msgstr "Religieus"
+msgstr "Religie"
 
 #: qml/js/PoiCategories.js:155
 msgid "Cemetery"
@@ -1304,13 +1304,13 @@ msgid ""
 "\n"
 "Let's look at a few features together :)"
 msgstr ""
-"Kaartviewer & Gps-navigatiesysteem\n"
+"Kaartweergave en gps-navigatiesysteem\n"
 "\n"
-"Laten we samen kijken naar enkele mogelijkheden :)"
+"Laten we samen de mogelijkheden bekijken :)"
 
 #: qml/tuto/Slide2.qml:43
 msgid "Long Touch on Map"
-msgstr "Druk lang op de kaart"
+msgstr "Houd de kaart lang ingedrukt"
 
 #: qml/tuto/Slide2.qml:60
 msgid ""
@@ -1342,7 +1342,7 @@ msgid ""
 "\n"
 "Touch step indications to review route steps"
 msgstr ""
-"Druk op samenvatting om de huidige snelheid te tonen\n"
+"Druk op de samenvatting om de huidige snelheid te tonen\n"
 "\n"
 "Druk op indicaties om de route stap voor stap te bekijken"
 
@@ -1356,15 +1356,15 @@ msgid ""
 "\n"
 "Set a destination: Then, click on map and click the same icon again"
 msgstr ""
-"Een beginpunt instellen: klik op de kaart en daarna op het "
+"Een beginpunt instellen: druk op de kaart en daarna op het "
 "simulatiepictogram\n"
 "\n"
-"Een eindpunt instellen: klik op de kaart en daarna opnieuw op het "
+"Een eindpunt instellen: klik op de kaart en daarna nogmaals op het "
 "simulatiepictogram"
 
 #: qml/tuto/Slide6.qml:43
 msgid "uNav doesn't track you!"
-msgstr "uNav houdt geen gegevens van u bij!"
+msgstr "uNav houdt geen gegevens van bij!"
 
 #: qml/tuto/Slide6.qml:60
 msgid ""
@@ -1393,7 +1393,6 @@ msgstr "Overslaan"
 #~ msgid "This app is powered by:"
 #~ msgstr "Deze app maakt gebruik van:"
 
-#, qt-format
 #~ msgid "© 2015 %1. Under license %2"
 #~ msgstr "© 2015 %1. Onder licentie %2"
 
@@ -1505,19 +1504,15 @@ msgstr "Overslaan"
 #~ msgid "Merge"
 #~ msgstr "Invoegen"
 
-#, qt-format
 #~ msgid ". Exit %1"
 #~ msgstr ". Afrit %1"
 
-#, qt-format
 #~ msgid " onto %1"
 #~ msgstr " naar %1"
 
-#, qt-format
 #~ msgid " toward %1"
 #~ msgstr " naar %1"
 
-#, qt-format
 #~ msgid " to take the %1"
 #~ msgstr " om de %1 te nemen"
 
@@ -1536,7 +1531,6 @@ msgstr "Overslaan"
 #~ msgid "Translators:"
 #~ msgstr "Vertalers:"
 
-#, qt-format
 #~ msgid "Enter the roundabout and take the exit %1"
 #~ msgstr "Neem op de rotonde de %1e afslag"
 
@@ -1591,7 +1585,6 @@ msgstr "Overslaan"
 #~ msgid "Privacy"
 #~ msgstr "Privacy"
 
-#, qt-format
 #~ msgid ", %1"
 #~ msgstr ", %1"
 
@@ -1601,7 +1594,6 @@ msgstr "Overslaan"
 #~ msgid "Support its future development:"
 #~ msgstr "Ondersteun toekomstige ontwikkelingen:"
 
-#, qt-format
 #~ msgid "Sorry, no result for %1"
 #~ msgstr "Helaas, geen resultaat voor %1"
 
@@ -1617,7 +1609,6 @@ msgstr "Overslaan"
 #~ msgid "Wi-Fi Points"
 #~ msgstr "Wifi punten"
 
-#, qt-format
 #~ msgid "Sorry, no %1 found nearby. Try again with another radius"
 #~ msgstr ""
 #~ "Sorry, geen %1 dichtbij gevonden. Probeer het opnieuw in een nieuwe straal"
