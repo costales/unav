@@ -1,0 +1,6 @@
+To update the translation template, cd to the root of the source tree,
+and run `make po/unav.pot`.
+
+To compile translation catalogs for use by the application in QML, HTML and
+javascript files, cd to the root of the source tree,
+and run `make translations`.

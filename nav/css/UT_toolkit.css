@@ -1,0 +1,64 @@
+
+/*
+ * Copyright (C) 2013 Adnane Belmadiaf <daker@ubuntu.com>
+ * License granted by Canonical Limited
+ *
+ * This file is part of ubuntu-html5-ui-toolkit.
+ *
+ * This package is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or
+ * (at your option) any later version.
+
+ * This package is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, see
+ * <http://www.gnu.org/licenses/>
+ */
+/* ----------------------------------
+ * Buttons
+ * ---------------------------------- */
+[data-role="button"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  height: 42px;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #dd4814;
+  border: 2px solid #dd4814;
+  border-radius: 6px;
+  color: white;
+  font-family: "Ubuntu";
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
+[data-role="button"].positive {
+  background: #0E8420;
+  color: white;
+  border-color: #38b44a;
+}
+[data-role="button"].information {
+  background: #2ab7ec;
+  color: white;
+  border-color: #2ab7ec;
+}
+[data-role="button"].secondary {
+  background: white;
+  color: #888888;
+}
+[data-role="button"].negative {
+  background: #666666;
+  color: white;
+  border-color: #929292;
+}

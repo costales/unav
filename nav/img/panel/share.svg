@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="96" viewBox="0 0 96 96.000001" width="96" version="1.1">
+ <g transform="translate(67.86 -78.51)">
+  <g transform="matrix(0 -1 -1 0 373.5 516.5)">
+   <g transform="matrix(-.9996 0 0 1 575.9 -611)">
+    <g transform="matrix(-1 0 0 1 576 611)">
+     <g transform="matrix(0 -.9996 1 0 -3.534 783.2)">
+      <rect opacity="0" style="color-rendering:auto;color:#000000;isolation:auto;mix-blend-mode:normal;paint-order:stroke fill markers;shape-rendering:auto;solid-color:#000000;image-rendering:auto" transform="scale(1,-1)" height="96" width="96.04" y="-441.4" x="342" stroke-width="2"/>
+      <rect opacity="0" style="color:#000000" transform="matrix(0,-1,-1,0,0,0)" height="96.04" width="96" y="-438" x="-441.4" stroke-width="4"/>
+      <rect style="color:#000000" transform="scale(-1,1)" height="96" width="96.04" y="345.4" x="-438" fill="none"/>
+      <g transform="matrix(1.161 0 0 1.161 -62.89 -63.43)" fill="#4d4d4d">
+       <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:none;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;solid-color:#000000;isolation:auto;text-transform:none" d="m363 406.4c-7.158 0-13-5.843-13-13s5.846-13 13-13c7.158 0 13.01 5.843 13.01 13s-5.848 13-13.01 13zm0-4c4.997 0 9.004-4.006 9.004-9s-4.007-9-9.004-9-9.004 4.006-9.004 9 4.007 9 9.004 9z"/>
+       <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:none;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;solid-color:#000000;isolation:auto;text-transform:none" d="m417 379.4c-7.158 0-13-5.843-13-13s5.846-13 13-13c7.158 0 13.01 5.843 13.01 13s-5.848 13-13.01 13zm0-4c4.997 0 9.004-4.006 9.004-9s-4.007-9-9.004-9-9.004 4.006-9.004 9 4.007 9 9.004 9z"/>
+       <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:none;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;solid-color:#000000;isolation:auto;text-transform:none" d="m417 433.4c-7.158 0-13-5.843-13-13s5.846-13 13-13c7.158 0 13.01 5.843 13.01 13s-5.848 13-13.01 13zm0-4c4.997 0 9.004-4.006 9.004-9s-4.007-8.998-9.004-8.998-9.004 4.004-9.004 8.998 4.007 9 9.004 9z"/>
+       <path style="shape-padding:0;color-rendering:auto;text-decoration-color:#000000;color:#000000;isolation:auto;mix-blend-mode:normal;shape-rendering:auto;solid-color:#000000;text-decoration-line:none;text-decoration-style:solid;image-rendering:auto;white-space:normal;text-indent:0;text-transform:none" d="m31.21 36.96c-1.117 0.7219-2.314 1.323-3.57 1.801l13.66 27.31 3.58-1.79zm34.1 0.3184-14.02 27.04 3.551 1.84 14.1-27.19c-1.274-0.4372-2.485-1.009-3.625-1.695z" transform="matrix(0 -1 -1 0 438 441.4)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

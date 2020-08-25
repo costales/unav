@@ -1,0 +1,759 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: uNav\n"
+"Language: ca\n"
+
+#: build/all/app/install/qml/About.qml:26
+#: build/all/app/install/qml/Settings.qml:48 qml/About.qml:26
+#: qml/Settings.qml:48
+msgid "About"
+msgstr "Quant a"
+
+#: build/all/app/install/qml/About.qml:37
+#: build/all/app/install/qml/About.qml:38
+#: build/all/app/install/qml/About.qml:39 qml/About.qml:37 qml/About.qml:38
+#: qml/About.qml:39
+msgid "Resources"
+msgstr "Fonts"
+
+#: build/all/app/install/qml/About.qml:37 qml/About.qml:37
+msgid "Translations"
+msgstr "Traduccions"
+
+#: build/all/app/install/qml/About.qml:39 qml/About.qml:39
+msgid "Bugs"
+msgstr "Errors"
+
+#: build/all/app/install/qml/About.qml:42
+#: build/all/app/install/qml/About.qml:43
+#: build/all/app/install/qml/About.qml:44
+#: build/all/app/install/qml/About.qml:45
+#: build/all/app/install/qml/About.qml:46
+#: build/all/app/install/qml/About.qml:47
+#: build/all/app/install/qml/About.qml:48 qml/About.qml:42 qml/About.qml:43
+#: qml/About.qml:44 qml/About.qml:45 qml/About.qml:46 qml/About.qml:47
+#: qml/About.qml:48
+msgid "Developers"
+msgstr "Desenvolupament"
+
+#: build/all/app/install/qml/About.qml:46 qml/About.qml:46
+msgid "Founder"
+msgstr "Fundador"
+
+#: build/all/app/install/qml/About.qml:51 qml/About.qml:51
+msgid "Voice"
+msgstr "Veu"
+
+#: build/all/app/install/qml/About.qml:54 qml/About.qml:54
+msgid "Logo"
+msgstr "Logotip"
+
+#: build/all/app/install/qml/About.qml:57 qml/About.qml:57
+msgid "Translators"
+msgstr "Traducció"
+
+#: build/all/app/install/qml/About.qml:60
+#: build/all/app/install/qml/About.qml:61
+#: build/all/app/install/qml/About.qml:62
+#: build/all/app/install/qml/About.qml:63
+#: build/all/app/install/qml/About.qml:64
+#: build/all/app/install/qml/About.qml:65
+#: build/all/app/install/qml/About.qml:66
+#: build/all/app/install/qml/About.qml:67
+#: build/all/app/install/qml/About.qml:68
+#: build/all/app/install/qml/About.qml:69
+#: build/all/app/install/qml/About.qml:70
+#: build/all/app/install/qml/About.qml:71
+#: build/all/app/install/qml/About.qml:72
+#: build/all/app/install/qml/About.qml:73
+#: build/all/app/install/qml/About.qml:74 qml/About.qml:60 qml/About.qml:61
+#: qml/About.qml:62 qml/About.qml:63 qml/About.qml:64 qml/About.qml:65
+#: qml/About.qml:66 qml/About.qml:67 qml/About.qml:68 qml/About.qml:69
+#: qml/About.qml:70 qml/About.qml:71 qml/About.qml:72 qml/About.qml:73
+#: qml/About.qml:74
+msgid "Powered by"
+msgstr "Basat en"
+
+#: build/all/app/install/qml/Coordinate.qml:34 qml/Coordinate.qml:34
+msgid "Decimal"
+msgstr "Decimal"
+
+#: build/all/app/install/qml/Coordinate.qml:46 qml/Coordinate.qml:46
+msgid "Sexagesimal"
+msgstr "Sexagesimal"
+
+#: build/all/app/install/qml/Coordinate.qml:78
+#: build/all/app/install/qml/Coordinate.qml:166 qml/Coordinate.qml:78
+#: qml/Coordinate.qml:166
+msgid "Lat:"
+msgstr "Lat.:"
+
+#: build/all/app/install/qml/Coordinate.qml:95
+#: build/all/app/install/qml/Coordinate.qml:237 qml/Coordinate.qml:95
+#: qml/Coordinate.qml:237
+msgid "Long:"
+msgstr "Long.:"
+
+#: build/all/app/install/qml/Coordinate.qml:110
+#: build/all/app/install/qml/Coordinate.qml:307 qml/Coordinate.qml:110
+#: qml/Coordinate.qml:307
+msgid "Show on Map"
+msgstr "Mostra al mapa"
+
+#: build/all/app/install/qml/Coordinate.qml:144
+#: build/all/app/install/qml/Coordinate.qml:372 qml/Coordinate.qml:144
+#: qml/Coordinate.qml:372
+msgid "Coordinates are not valid"
+msgstr "Les coordenades no són vàlides"
+
+#: build/all/app/install/qml/Coordinate.qml:145 qml/Coordinate.qml:145
+msgid "Enter valid decimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr "Introduïu unes coordenades decimals vàlides\n"
+"\n"
+"S'espera el format:"
+
+#: build/all/app/install/qml/Coordinate.qml:147
+#: build/all/app/install/qml/Coordinate.qml:375
+#: build/all/app/install/qml/Settings.qml:309
+#: build/all/app/install/qml/Voices.qml:241 qml/Coordinate.qml:147
+#: qml/Coordinate.qml:375 qml/Settings.qml:309 qml/Voices.qml:241
+msgid "Close"
+msgstr "Tanca"
+
+#: build/all/app/install/qml/Coordinate.qml:373 qml/Coordinate.qml:373
+msgid "Enter valid sexagesimal coordinates\n"
+"\n"
+"Expected format is:"
+msgstr "Introduïu unes coordenades sexagesimals vàlides\n"
+"\n"
+"S'espera el format:"
+
+#: build/all/app/install/qml/Voices.qml:53 qml/Voices.qml:53
+msgid "Download voices"
+msgstr "Descarrega les veus"
+
+#: build/all/app/install/qml/Voices.qml:61 qml/Voices.qml:61
+msgid "Play current voice"
+msgstr "Reprodueix la veu actual"
+
+#: build/all/app/install/qml/Voices.qml:70
+#: build/all/app/install/qml/Voices.qml:237 qml/Voices.qml:70
+#: qml/Voices.qml:237
+msgid "How to add a voice"
+msgstr "Com afegir una veu"
+
+#: build/all/app/install/qml/Voices.qml:161 qml/Voices.qml:161
+msgid "By "
+msgstr "Per "
+
+#: build/all/app/install/qml/Voices.qml:207 qml/Voices.qml:207
+msgid "Cancel Download"
+msgstr "Cancel·la la descàrrega"
+
+#: build/all/app/install/qml/Voices.qml:223 qml/Voices.qml:223
+msgid "About the voices"
+msgstr "Quant a les veus"
+
+#: build/all/app/install/qml/Voices.qml:229 qml/Voices.qml:229
+msgid "You can add a new voice to uNav following these steps:"
+msgstr "Podeu afegir una veu nova seguint els passos següents:"
+
+#: build/all/app/install/qml/Favorites.qml:141 qml/Favorites.qml:141
+msgid "Edit Favorite"
+msgstr "Edita favorit"
+
+#: build/all/app/install/qml/Favorites.qml:142 qml/Favorites.qml:142
+msgid "There is already a favorite with that name. You can either overwrite it or enter a different name."
+msgstr "Ja hi ha un preferit amb aquest nom. Podeu sobreescriure'l o posar-li un altre nom."
+
+#: build/all/app/install/qml/Favorites.qml:192
+#: build/all/app/install/qml/Main.qml:315 nav/index.html.strings:1
+#: qml/Favorites.qml:192 qml/Main.qml:315
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: build/all/app/install/qml/Favorites.qml:199
+#: build/all/app/install/qml/Main.qml:322 qml/Favorites.qml:199
+#: qml/Main.qml:322
+msgid "Overwrite"
+msgstr "Sobreescriu"
+
+#: build/all/app/install/qml/Favorites.qml:199 qml/Favorites.qml:199
+msgid "Update"
+msgstr "Actualitza"
+
+#: build/all/app/install/qml/Main.qml:322 qml/Main.qml:322
+msgid "Add"
+msgstr "Afegeix"
+
+#: build/all/app/install/qml/Search.qml:45 qml/Search.qml:45
+msgid "Search"
+msgstr "Cerca"
+
+#: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
+msgid "Favorites"
+msgstr "Preferits"
+
+#: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
+msgid "Coordinates"
+msgstr "Coordenades"
+
+#: build/all/app/install/qml/Settings.qml:39 qml/Settings.qml:39
+msgid "Settings"
+msgstr "Paràmetres"
+
+#: build/all/app/install/qml/Settings.qml:60 qml/Settings.qml:60
+msgid "Kilometres"
+msgstr "Quilòmetres"
+
+#: build/all/app/install/qml/Settings.qml:61 qml/Settings.qml:61
+msgid "Miles"
+msgstr "Milles"
+
+#: build/all/app/install/qml/Settings.qml:94 qml/Settings.qml:94
+msgid "Map"
+msgstr "Mapa"
+
+#: build/all/app/install/qml/Settings.qml:102 qml/Settings.qml:102
+msgid "Online"
+msgstr "En línia"
+
+#: build/all/app/install/qml/Settings.qml:140 qml/Settings.qml:140
+msgid "Units"
+msgstr "Unitats"
+
+#: build/all/app/install/qml/Settings.qml:171 qml/Settings.qml:171
+msgid "Navigation"
+msgstr "Navegació"
+
+#: build/all/app/install/qml/Settings.qml:272 qml/Settings.qml:272
+msgid "Download custom voices"
+msgstr "Descarrega veus personalitzades"
+
+#: build/all/app/install/qml/Share.qml:32 qml/Share.qml:32
+msgid "Share location to"
+msgstr "Comparteix aquesta ubicació amb"
+
+#: qml/js/PoiCategories.js:5
+msgid "Transport"
+msgstr "Transport"
+
+#: qml/js/PoiCategories.js:7
+msgid "Airport"
+msgstr "Aeroport"
+
+#: qml/js/PoiCategories.js:8
+msgid "Bicycle Shop"
+msgstr "Botiga de bicicletes"
+
+#: qml/js/PoiCategories.js:9
+msgid "Bus Station"
+msgstr "Estació d'autobusos"
+
+#: qml/js/PoiCategories.js:10
+msgid "Car Rental"
+msgstr "Lloguer de cotxes"
+
+#: qml/js/PoiCategories.js:11
+msgid "Car Repair"
+msgstr "Reparació de cotxes"
+
+#: qml/js/PoiCategories.js:12
+msgid "Car Wash"
+msgstr "Rentat de cotxes"
+
+#: qml/js/PoiCategories.js:14
+msgid "Gas Station"
+msgstr "Benzinera"
+
+#: qml/js/PoiCategories.js:15
+msgid "Parking"
+msgstr "Aparcament"
+
+#: qml/js/PoiCategories.js:16
+msgid "Subway Entrance"
+msgstr "Boca de metro"
+
+#: qml/js/PoiCategories.js:17
+msgid "Taxi"
+msgstr "Taxi"
+
+#: qml/js/PoiCategories.js:18
+msgid "Train Station"
+msgstr "Estació de tren"
+
+#: qml/js/PoiCategories.js:22
+msgid "Accommodation"
+msgstr "Allotjament"
+
+#: qml/js/PoiCategories.js:24
+msgid "Campsite"
+msgstr "Càmping"
+
+#: qml/js/PoiCategories.js:25
+msgid "Caravan Site"
+msgstr "Càmping de caravanes"
+
+#: qml/js/PoiCategories.js:26
+msgid "Guest House"
+msgstr "Casa de convidats"
+
+#: qml/js/PoiCategories.js:27
+msgid "Hostel"
+msgstr "Alberg"
+
+#: qml/js/PoiCategories.js:28
+msgid "Hotel"
+msgstr "Hotel"
+
+#: qml/js/PoiCategories.js:29
+msgid "Motel"
+msgstr "Motel"
+
+#: qml/js/PoiCategories.js:33
+msgid "Food & Drink"
+msgstr "Menjar i beguda"
+
+#: qml/js/PoiCategories.js:35
+msgid "Bar"
+msgstr "Bar"
+
+#: qml/js/PoiCategories.js:36
+msgid "Cafe"
+msgstr "Cafè"
+
+#: qml/js/PoiCategories.js:38
+msgid "Fast Food"
+msgstr "Menjar ràpid"
+
+#: qml/js/PoiCategories.js:39
+msgid "Ice Cream"
+msgstr "Gelateria"
+
+#: qml/js/PoiCategories.js:40
+msgid "Pub"
+msgstr "Pub"
+
+#: qml/js/PoiCategories.js:41
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#: qml/js/PoiCategories.js:45
+msgid "Tourism"
+msgstr "Turisme"
+
+#: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:85
+msgid "Museum"
+msgstr "Museu"
+
+#: qml/js/PoiCategories.js:48
+msgid "Tourism Information"
+msgstr "Informació turística"
+
+#: qml/js/PoiCategories.js:49
+msgid "Town Hall"
+msgstr "Ajuntament"
+
+#: qml/js/PoiCategories.js:53
+msgid "Services"
+msgstr "Àrea de servei"
+
+#: qml/js/PoiCategories.js:55
+msgid "ATM"
+msgstr "Caixer automàtic"
+
+#: qml/js/PoiCategories.js:56
+msgid "Bank"
+msgstr "Banc"
+
+#: qml/js/PoiCategories.js:58
+msgid "Post Box"
+msgstr "Bústia"
+
+#: qml/js/PoiCategories.js:59
+msgid "Post Office"
+msgstr "Oficina de Correus"
+
+#: qml/js/PoiCategories.js:60
+msgid "Toilet"
+msgstr "Lavabo"
+
+#: qml/js/PoiCategories.js:64
+msgid "Shopping"
+msgstr "Botigues"
+
+#: qml/js/PoiCategories.js:66
+msgid "Books"
+msgstr "Llibres"
+
+#: qml/js/PoiCategories.js:67
+msgid "Computer Shop"
+msgstr "Botiga d'informàtica"
+
+#: qml/js/PoiCategories.js:68
+msgid "Copy Shop"
+msgstr "Copisteria"
+
+#: qml/js/PoiCategories.js:69
+msgid "Florist"
+msgstr "Floristeria"
+
+#: qml/js/PoiCategories.js:70
+msgid "Gifts"
+msgstr "Regals"
+
+#: qml/js/PoiCategories.js:71
+msgid "Kiosk"
+msgstr "Quiosc"
+
+#: qml/js/PoiCategories.js:72
+msgid "Laundry"
+msgstr "Bugaderia"
+
+#: qml/js/PoiCategories.js:73
+msgid "Mall"
+msgstr "Centre comercial"
+
+#: qml/js/PoiCategories.js:74
+msgid "Mobile Phone"
+msgstr "Telèfon mòbil"
+
+#: qml/js/PoiCategories.js:75
+msgid "Optician"
+msgstr "Òptica"
+
+#: qml/js/PoiCategories.js:76
+msgid "Supermarket"
+msgstr "Supermercat"
+
+#: qml/js/PoiCategories.js:77
+msgid "Travel Agency"
+msgstr "Agència de viatges"
+
+#: qml/js/PoiCategories.js:81
+msgid "Culture"
+msgstr "Cultura"
+
+#: qml/js/PoiCategories.js:84
+msgid "Library"
+msgstr "Biblioteca"
+
+#: qml/js/PoiCategories.js:86
+msgid "Theatre"
+msgstr "Teatre"
+
+#: qml/js/PoiCategories.js:90
+msgid "Entertainment"
+msgstr "Entreteniment"
+
+#: qml/js/PoiCategories.js:92
+msgid "Casino"
+msgstr "Casino"
+
+#: qml/js/PoiCategories.js:93
+msgid "Cinema"
+msgstr "Cinema"
+
+#: qml/js/PoiCategories.js:129
+msgid "Gym"
+msgstr "Gimnàs"
+
+#: qml/js/PoiCategories.js:97
+msgid "Education"
+msgstr "Educació"
+
+#: qml/js/PoiCategories.js:100
+msgid "University"
+msgstr "Universitat"
+
+#: qml/js/PoiCategories.js:104
+msgid "Health"
+msgstr "Salut"
+
+#: qml/js/PoiCategories.js:106
+msgid "Dentist"
+msgstr "Dentista"
+
+#: qml/js/PoiCategories.js:107
+msgid "Doctor"
+msgstr "Metge"
+
+#: qml/js/PoiCategories.js:108
+msgid "Hospital"
+msgstr "Hospital"
+
+#: qml/js/PoiCategories.js:109
+msgid "Pharmacy"
+msgstr "Farmàcia"
+
+#: qml/js/PoiCategories.js:110
+msgid "Veterinary"
+msgstr "Veterinari"
+
+#: qml/js/PoiCategories.js:114
+msgid "Religious"
+msgstr "Religiós"
+
+#: qml/js/PoiCategories.js:116
+msgid "Cemetery"
+msgstr "Cementiri"
+
+#: qml/js/PoiCategories.js:117
+msgid "Church"
+msgstr "Església"
+
+#: qml/js/PoiCategories.js:121
+msgid "Emergency"
+msgstr "Emergències"
+
+#: qml/js/PoiCategories.js:123
+msgid "Police Station"
+msgstr "Comissaria de policia"
+
+#: qml/js/PoiCategories.js:127
+msgid "Sport"
+msgstr "Esport"
+
+#: qml/js/PoiCategories.js:131
+msgid "Stadium"
+msgstr "Estadi"
+
+#: qml/js/PoiCategories.js:132
+msgid "Swimming Pool"
+msgstr "Piscina"
+
+#: build/all/app/install/qml/Settings.qml:179 qml/Settings.qml:179
+msgid "Mode"
+msgstr "Mode"
+
+#: build/all/app/install/qml/About.qml:38 qml/About.qml:38
+msgid "Code"
+msgstr "Codi"
+
+#: build/all/app/install/qml/About.qml:114 qml/About.qml:114
+msgid "Version %1. Licensed under %2"
+msgstr "Versió %1. Llicenciada sota %2"
+
+#: build/all/app/install/qml/About.qml:121 qml/About.qml:121
+msgid "Dedicated to the memory of"
+msgstr "Dedicada a la memòria de"
+
+#: build/all/app/install/qml/Favorites.qml:176 qml/Favorites.qml:176
+msgid "Favorite Name"
+msgstr "Nom preferit"
+
+#: build/all/app/install/qml/Main.qml:281 qml/Main.qml:281
+msgid "Adding Favorite"
+msgstr "Afegit preferit"
+
+#: build/all/app/install/qml/Main.qml:301 qml/Main.qml:301
+msgid "Insert name"
+msgstr "Inseriu nom"
+
+#: build/all/app/install/qml/POIs.qml:54 qml/POIs.qml:54
+msgid "Last used"
+msgstr "Usats abans"
+
+#: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
+msgid "POIs"
+msgstr "Punts d'interés"
+
+#: build/all/app/install/qml/Settings.qml:256 qml/Settings.qml:256
+msgid "Speak instructions"
+msgstr "Instruccions de veu"
+
+#: build/all/app/install/qml/Settings.qml:283 qml/Settings.qml:283
+msgid "How to use uNav offline"
+msgstr "Com usar l'uNav sense connexió"
+
+#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+msgid "<b>Step 1</b> Install"
+msgstr "<b>Pas 1</> Instal·leu"
+
+#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+msgid "In its wizard, set profile to <i>Default</i>, disable <i>Automatic activation</i> and download a map."
+msgstr "Al seu configurador, seleccioneu <i>Per defecte</i>, desactiveu <i>Activació automàtica</i> i descarregueu un mapa"
+
+#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+msgid "<b>Step 2</b> Install"
+msgstr "<b>Pas 2</b> Instal·leu"
+
+#: build/all/app/install/qml/offlineLocation/Location.qml:106
+#: qml/offlineLocation/Location.qml:106
+msgid "Searching..."
+msgstr "Cercant…"
+
+#: build/all/app/install/qml/offlineLocation/Location.qml:136
+#: build/all/app/install/qml/onlineLocation/Location.qml:50
+#: qml/offlineLocation/Location.qml:136 qml/onlineLocation/Location.qml:50
+msgid "Nothing found"
+msgstr "No s'ha trobat res"
+
+#: build/all/app/install/qml/offlineLocation/Location.qml:142
+#: build/all/app/install/qml/onlineLocation/Location.qml:45
+#: qml/offlineLocation/Location.qml:142 qml/onlineLocation/Location.qml:45
+msgid "Time out!"
+msgstr "Temps esgotat!"
+
+#: qml/js/PoiCategories.js:130
+msgid "Sports Centre"
+msgstr "Centre d'esports"
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
+msgid "Places"
+msgstr "Llocs"
+
+#: build/all/app/install/qml/Settings.qml:70 qml/Settings.qml:70
+msgid "Car"
+msgstr "Cotxe"
+
+#: build/all/app/install/qml/Settings.qml:71 qml/Settings.qml:71
+msgid "Walk"
+msgstr "Caminant"
+
+#: build/all/app/install/qml/Settings.qml:72 qml/Settings.qml:72
+msgid "Bicycle"
+msgstr "Bicicleta"
+
+#: build/all/app/install/qml/Settings.qml:119 qml/Settings.qml:119
+msgid "Instructions for offline mode"
+msgstr "Instruccions pel mode sense connexió"
+
+#: build/all/app/install/qml/Settings.qml:222 qml/Settings.qml:222
+msgid "View optimized for car"
+msgstr "Visualització òptima per cotxe"
+
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
+msgid "Will rotate the marker and not the map"
+msgstr "Girarà els marcador i no el mapa"
+
+#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+msgid "Set <i>Prevent app suspension</i> for OSM Scout Server."
+msgstr "Activeu <i>Inhabilita la suspensió de l'app</i> per l'OSM Scout Server"
+
+#: build/all/app/install/qml/Settings.qml:305 qml/Settings.qml:305
+msgid "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
+msgstr "<b>Pas per cada ús</b>: Inicieu l'OSM Scout Server abans de l'uNav"
+
+#: build/all/app/install/qml/offlineLocation/Location.qml:101
+#: build/all/app/install/qml/onlineLocation/Location.qml:167
+#: qml/offlineLocation/Location.qml:101 qml/onlineLocation/Location.qml:167
+msgid "Place or location"
+msgstr "Lloc o localització"
+
+#: nav/class/Navigator.js:239
+msgid "Your destination is near"
+msgstr "La vostra destinació és a prop"
+
+#: nav/class/Navigator.js:241
+msgid "Enter the roundabout"
+msgstr "Entreu a la rotonda"
+
+#: nav/class/Navigator.js:243
+msgid "Enter the roundabout and take 1st exit"
+msgstr "Entreu a la rotonda i agafeu la primera sortida"
+
+#: nav/class/Navigator.js:245
+msgid "Enter the roundabout and take 2nd exit"
+msgstr "Entreu a la rotonda i agafeu la segona sortida"
+
+#: nav/class/Navigator.js:247
+msgid "Enter the roundabout and take 3th exit"
+msgstr "Entreu a la rotonda i agafeu la tercera sortida"
+
+#: nav/class/Navigator.js:249
+msgid "Enter the roundabout and take 4th exit"
+msgstr "Entreu a la rotonda i agafeu la quarta sortida"
+
+#: nav/class/Navigator.js:251
+msgid "Follow the route line"
+msgstr "Seguiu la línia de ruta"
+
+#: nav/class/Navigator.js:254
+msgid "Exit at"
+msgstr "Sortiu a"
+
+#: nav/class/Navigator.js:256
+msgid "Exit the roundabout"
+msgstr "Sortiu de la rotonda"
+
+#: nav/class/WebAPI.js:162 nav/class/WebAPI.js:230
+msgid "POIs loaded"
+msgstr "Punts d'interès carregats"
+
+#: nav/class/WebAPI.js:165 nav/class/WebAPI.js:233
+msgid "Not POIs found"
+msgstr "No s'han trobat punts d'interès"
+
+#: nav/class/WebAPI.js:169 nav/class/WebAPI.js:237
+msgid "There was an error"
+msgstr "Hi ha hagut un error"
+
+#: nav/index.html.strings:2
+msgid "Center"
+msgstr "Centra"
+
+#: qml/js/PoiCategories.js:13
+msgid "Charging Station"
+msgstr "Estació de càrrega"
+
+#: qml/js/PoiCategories.js:37
+msgid "Drinking Water"
+msgstr "Aigua potable"
+
+#: qml/js/PoiCategories.js:57
+msgid "Bureau de Change"
+msgstr "Canvi de divises"
+
+#: qml/js/PoiCategories.js:83
+msgid "Arts Centre"
+msgstr "Centre artístic"
+
+#: qml/js/PoiCategories.js:99
+msgid "School"
+msgstr "Escola"
+
+#: nav/class/Maths.js:61 nav/class/Maths.js:76
+msgid "Now"
+msgstr "Ara"
+
+#: nav/index.html:162
+msgid "Waiting for GPS"
+msgstr "Esperant el GPS"
+
+#: nav/index.html:219 nav/index.html:226
+msgid "GPS is ready"
+msgstr "El GPS està llest"
+
+#: nav/index.html:238 nav/index.html:426
+msgid "Calculating route"
+msgstr "Calculant la ruta"
+
+#: nav/index.html:248
+msgid "Error searching route"
+msgstr "Error cercant la ruta"
+
+#: nav/index.html:285
+msgid "Out of route. Recalculating"
+msgstr "Fora de ruta. Recalculant"
+
+#: nav/index.html:300
+msgid "Error. Recalculating again"
+msgstr "Error. Tornant a recalcular"
+
+#: nav/index.html:438
+msgid "Route canceled"
+msgstr "Ruta cancel·lada"
+
+#: nav/index.html:485
+msgid "Use more zoom for POIs"
+msgstr "Augmenteu per veure més punts d'interés"
+

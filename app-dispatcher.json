@@ -1,0 +1,9 @@
+[
+	{
+		"protocol": "https",
+		"domain-suffix": "map.unav.me"
+	},
+	{
+		"protocol": "geo"
+	}
+]
