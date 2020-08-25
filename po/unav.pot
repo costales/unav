@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-23 11:30+0200\n"
+"POT-Creation-Date: 2020-08-25 16:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,11 +240,11 @@ msgid "Car"
 msgstr ""
 
 #: build/all/app/install/qml/Settings.qml:71 qml/Settings.qml:71
-msgid "Walk"
+msgid "Bicycle"
 msgstr ""
 
 #: build/all/app/install/qml/Settings.qml:72 qml/Settings.qml:72
-msgid "Bicycle"
+msgid "Walk"
 msgstr ""
 
 #: build/all/app/install/qml/Settings.qml:94 qml/Settings.qml:94
@@ -374,39 +374,39 @@ msgstr ""
 msgid "Now"
 msgstr ""
 
-#: nav/class/Navigator.js:239
+#: nav/class/Navigator.js:240
 msgid "Your destination is near"
 msgstr ""
 
-#: nav/class/Navigator.js:241
+#: nav/class/Navigator.js:242
 msgid "Enter the roundabout"
 msgstr ""
 
-#: nav/class/Navigator.js:243
+#: nav/class/Navigator.js:244
 msgid "Enter the roundabout and take 1st exit"
 msgstr ""
 
-#: nav/class/Navigator.js:245
+#: nav/class/Navigator.js:246
 msgid "Enter the roundabout and take 2nd exit"
 msgstr ""
 
-#: nav/class/Navigator.js:247
+#: nav/class/Navigator.js:248
 msgid "Enter the roundabout and take 3th exit"
 msgstr ""
 
-#: nav/class/Navigator.js:249
+#: nav/class/Navigator.js:250
 msgid "Enter the roundabout and take 4th exit"
 msgstr ""
 
-#: nav/class/Navigator.js:251
+#: nav/class/Navigator.js:252
 msgid "Follow the route line"
 msgstr ""
 
-#: nav/class/Navigator.js:254
+#: nav/class/Navigator.js:255
 msgid "Exit at"
 msgstr ""
 
-#: nav/class/Navigator.js:256
+#: nav/class/Navigator.js:257
 msgid "Exit the roundabout"
 msgstr ""
 
@@ -422,35 +422,39 @@ msgstr ""
 msgid "There was an error"
 msgstr ""
 
-#: nav/index.html:162
+#: nav/index.html:172 nav/index.html:183
 msgid "Waiting for GPS"
 msgstr ""
 
-#: nav/index.html:219 nav/index.html:226
+#: nav/index.html:239 nav/index.html:246
 msgid "GPS is ready"
 msgstr ""
 
-#: nav/index.html:238 nav/index.html:426
+#: nav/index.html:258 nav/index.html:450
 msgid "Calculating route"
 msgstr ""
 
-#: nav/index.html:248
+#: nav/index.html:268
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:285
+#: nav/index.html:305
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:300
+#: nav/index.html:320
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:438
+#: nav/index.html:346
+msgid "You have arrived"
+msgstr ""
+
+#: nav/index.html:462
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:485
+#: nav/index.html:509
 msgid "Use more zoom for POIs"
 msgstr ""
 
