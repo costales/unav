@@ -172,7 +172,7 @@
 					ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
 				}
 				else {
-					if (mapUI.get_map_zoom() < ui.ZOOM-3)
+					if (mapUI.get_map_zoom() < ui.ZOOM-2)
 						mapUI.set_map_zoom(ui.ZOOM-1);
 					mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
 				}
