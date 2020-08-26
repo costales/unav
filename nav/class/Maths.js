@@ -39,6 +39,8 @@ Maths.prototype.rad2deg = function(radians) {
 }
 
 Maths.prototype.get_angle = function(rotate_map, long1, lat1, long2, lat2) {
+	if (turf.distance(turf.point([long1, lat1]), turf.point([long2, lat2])) < 0.00083333) // 3km/h
+		return null;
 	var angle = Math.trunc(turf.bearing(turf.point([long1, lat1]), turf.point([long2, lat2])));
 	if (rotate_map)
 		angle = (-angle + 360) % 360;
