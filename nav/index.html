@@ -284,7 +284,7 @@
 					$("#panelConfirmRoute").show();
 				case 'route_confirm':
 					var nav_navigation= nav.get_data_navigation();
-					ui.set_confirm_btn(settings.get_route_mode());
+					ui.set_confirm_btns(settings.get_route_mode());
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
 					break;
@@ -471,6 +471,12 @@
 			ui.set_center_pos(true);
 			nav.set_data({mode: 'route_driving'});
 		}
+		function mode_navigation(value) {
+			settings.set_route_mode(value);
+			ui.set_confirm_btns(value);
+			BtnGo(nav.get_data().lng_end, nav.get_data().lat_end);
+			window.location = 'http://routemode/' + value;
+		}
 
 		// Calls from QML
 		function import_marker(plng, plat, description, boundingbox, favorite) {
@@ -607,9 +613,14 @@
 	<!-- Confirm route panel -->
 	<div id="panelConfirmRoute">
 		<div id="topPanelConfirm">
-			<div id="btns">
-				<button data-role='button' class='btns_mode_route negative' onClick='route_cancel()' data-localize="Cancel">Cancel</button>
-				<button id="startBtn" data-role='button' class='btns_mode_route positive' onClick='route_start()'>Start</button>
+			<div id="modeConfirm">
+				<img class="btnsModeConfirm" id="btnModeCarConfirm" src="img/mode/car.svg" onClick='mode_navigation("car")'>
+				<img class="btnsModeConfirm" id="btnModeBikeConfirm" src="img/mode/bike.svg" onClick='mode_navigation("bike")'>
+				<img class="btnsModeConfirm" id="btnModeWalkConfirm" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
+			</div>
+			<div id="btnsConfirm">
+				<button data-role='button' class='btns2_mode_route negative' onClick='route_cancel()' data-localize="Cancel">Cancel</button>
+				<button data-role='button' class='btns2_mode_route positive' onClick='route_start()' data-localize="Start">Start</button>
 			</div>
 		</div>
 		<div id="bottomPanelConfirm">

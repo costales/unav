@@ -13,8 +13,8 @@ X-Ayatana-Appmenu-Show-Stubs=false
 X-Ubuntu-Single-Instance=true
 X-Ubuntu-Splash-Show-Header=false
 X-Ubuntu-Splash-Image=iconLaunch.png
-X-Ubuntu-Splash-Color-Header=#5846c5
-X-Ubuntu-Splash-Color=#5846c5
-X-Ubuntu-Splash-Color-Footer=#5846c5
+X-Ubuntu-Splash-Color-Header=#F7F7F7
+X-Ubuntu-Splash-Color=#F7F7F7
+X-Ubuntu-Splash-Color-Footer=#F7F7F7
 
 X-Ubuntu-Supported-Orientations=portrait

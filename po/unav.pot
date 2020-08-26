@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-25 16:14+0200\n"
+"POT-Creation-Date: 2020-08-26 12:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,9 +142,9 @@ msgstr ""
 
 #: build/all/app/install/qml/Coordinate.qml:147
 #: build/all/app/install/qml/Coordinate.qml:375
-#: build/all/app/install/qml/Settings.qml:309
+#: build/all/app/install/qml/Settings.qml:255
 #: build/all/app/install/qml/Voices.qml:241 qml/Coordinate.qml:147
-#: qml/Coordinate.qml:375 qml/Settings.qml:309 qml/Voices.qml:241
+#: qml/Coordinate.qml:375 qml/Settings.qml:255 qml/Voices.qml:241
 msgid "Close"
 msgstr ""
 
@@ -170,14 +170,14 @@ msgid "Favorite Name"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:315 nav/index.html.strings:1
-#: qml/Favorites.qml:192 qml/Main.qml:315
+#: build/all/app/install/qml/Main.qml:318 nav/index.html.strings:1
+#: qml/Favorites.qml:192 qml/Main.qml:318
 msgid "Cancel"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:199
-#: build/all/app/install/qml/Main.qml:322 qml/Favorites.qml:199
-#: qml/Main.qml:322
+#: build/all/app/install/qml/Main.qml:325 qml/Favorites.qml:199
+#: qml/Main.qml:325
 msgid "Overwrite"
 msgstr ""
 
@@ -185,15 +185,15 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:281 qml/Main.qml:281
+#: build/all/app/install/qml/Main.qml:284 qml/Main.qml:284
 msgid "Adding Favorite"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:301 qml/Main.qml:301
+#: build/all/app/install/qml/Main.qml:304 qml/Main.qml:304
 msgid "Insert name"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:322 qml/Main.qml:322
+#: build/all/app/install/qml/Main.qml:325 qml/Main.qml:325
 msgid "Add"
 msgstr ""
 
@@ -235,81 +235,65 @@ msgstr ""
 msgid "Miles"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:70 qml/Settings.qml:70
-msgid "Car"
-msgstr ""
-
-#: build/all/app/install/qml/Settings.qml:71 qml/Settings.qml:71
-msgid "Bicycle"
-msgstr ""
-
-#: build/all/app/install/qml/Settings.qml:72 qml/Settings.qml:72
-msgid "Walk"
-msgstr ""
-
-#: build/all/app/install/qml/Settings.qml:94 qml/Settings.qml:94
+#: build/all/app/install/qml/Settings.qml:83 qml/Settings.qml:83
 msgid "Map"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:102 qml/Settings.qml:102
+#: build/all/app/install/qml/Settings.qml:91 qml/Settings.qml:91
 msgid "Online"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:119 qml/Settings.qml:119
+#: build/all/app/install/qml/Settings.qml:108 qml/Settings.qml:108
 msgid "Instructions for offline mode"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:140 qml/Settings.qml:140
+#: build/all/app/install/qml/Settings.qml:129 qml/Settings.qml:129
 msgid "Units"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:171 qml/Settings.qml:171
+#: build/all/app/install/qml/Settings.qml:160 qml/Settings.qml:160
 msgid "Navigation"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:179 qml/Settings.qml:179
-msgid "Mode"
-msgstr ""
-
-#: build/all/app/install/qml/Settings.qml:222 qml/Settings.qml:222
+#: build/all/app/install/qml/Settings.qml:168 qml/Settings.qml:168
 msgid "View optimized for car"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
+#: build/all/app/install/qml/Settings.qml:181 qml/Settings.qml:181
 msgid "Will rotate the marker and not the map"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:256 qml/Settings.qml:256
+#: build/all/app/install/qml/Settings.qml:202 qml/Settings.qml:202
 msgid "Speak instructions"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:272 qml/Settings.qml:272
+#: build/all/app/install/qml/Settings.qml:218 qml/Settings.qml:218
 msgid "Download custom voices"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:283 qml/Settings.qml:283
+#: build/all/app/install/qml/Settings.qml:229 qml/Settings.qml:229
 msgid "How to use uNav offline"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid "<b>Step 1</b> Install"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid ""
 "In its wizard, set profile to <i>Default</i>, disable <i>Automatic "
 "activation</i> and download a map."
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+#: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "<b>Step 2</b> Install"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+#: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "Set <i>Prevent app suspension</i> for OSM Scout Server."
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:305 qml/Settings.qml:305
+#: build/all/app/install/qml/Settings.qml:251 qml/Settings.qml:251
 msgid "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
 msgstr ""
 
@@ -426,39 +410,43 @@ msgstr ""
 msgid "Waiting for GPS"
 msgstr ""
 
-#: nav/index.html:239 nav/index.html:246
+#: nav/index.html:240 nav/index.html:247
 msgid "GPS is ready"
 msgstr ""
 
-#: nav/index.html:258 nav/index.html:450
+#: nav/index.html:259 nav/index.html:451
 msgid "Calculating route"
 msgstr ""
 
-#: nav/index.html:268
+#: nav/index.html:269
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:305
+#: nav/index.html:306
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:320
+#: nav/index.html:321
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:346
+#: nav/index.html:347
 msgid "You have arrived"
 msgstr ""
 
-#: nav/index.html:462
+#: nav/index.html:463
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:509
+#: nav/index.html:516
 msgid "Use more zoom for POIs"
 msgstr ""
 
 #: nav/index.html.strings:2
+msgid "Start"
+msgstr ""
+
+#: nav/index.html.strings:3
 msgid "Center"
 msgstr ""
 

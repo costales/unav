@@ -139,16 +139,22 @@ UI.prototype.POIPanel = function(data) {
 	}
 }
 
-UI.prototype.set_confirm_btn = function(mode) {
+UI.prototype.set_confirm_btns = function(mode) {
 	switch(mode) {
 		case 'car':
-			$('#startBtn').html('<img src="img/mode/car.svg" height="25px">');
+			$("#btnModeCarConfirm").css("background-color", "#335280");
+			$("#btnModeBikeConfirm").css("background-color", "#CDCDCD");
+			$("#btnModeWalkConfirm").css("background-color", "#CDCDCD");
 			break;
 		case 'bike':
-			$('#startBtn').html('<img src="img/mode/bike.svg" height="25px">');
+			$("#btnModeCarConfirm").css("background-color", "#CDCDCD");
+			$("#btnModeBikeConfirm").css("background-color", "#335280");
+			$("#btnModeWalkConfirm").css("background-color", "#CDCDCD");
 			break;
 		case 'walk':
-			$('#startBtn').html('<img src="img/mode/walk.svg" height="25px">');
+			$("#btnModeCarConfirm").css("background-color", "#CDCDCD");
+			$("#btnModeBikeConfirm").css("background-color", "#CDCDCD");
+			$("#btnModeWalkConfirm").css("background-color", "#335280");
 			break;
 		}
 }

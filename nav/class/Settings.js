@@ -30,13 +30,9 @@ function Settings() {
 Settings.prototype.get_online = function() {
 	return this.online;
 }
-Settings.prototype.set_online = function(value, first_running) {
-	var first_run = first_running || false;
+Settings.prototype.set_online = function(value) {
 	this.online = value;
 
-	if (first_run && !value) // With map offline, call 2 times here and breaks switch layers
-		return;
-	
 	// Remove all layers except someones, then append the right
 	try {
 		map.getLayers().forEach(function(layer) {
@@ -57,10 +53,7 @@ Settings.prototype.set_online = function(value, first_running) {
 		$('#mapCredits').text("© OpenStreetMap contributors © CARTO");
 	}
 	else {
-		if (this.route_mode == "car")
-			olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright-car'); // Shows gas stations for car
-		else
-			olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');
+		olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');
 		$('#mapCredits').text("© OpenStreetMap contributors © OSM Scout Server");
 	}
 }
@@ -108,36 +101,6 @@ Settings.prototype.get_route_mode = function() {
 	return this.route_mode;
 }
 Settings.prototype.set_route_mode = function(value) {
-	var previous_route_mode = this.route_mode;
-
-	switch(value) {
-		case 0:
-			this.route_mode = 'car';
-			break;
-		case 1:
-			this.route_mode = 'bike';
-			break;
-		case 2:
-			this.route_mode = 'walk';
-			break;
-	}
-
-	if (!this.online && (previous_route_mode == 'car' || value == 0))
-		this.set_online(this.online); // Force refresh map set map type when change from/to car
-
-	var nav_data = nav.get_data();
-    switch(nav_data.mode) {
-	    case 'calculating_call_API':
-	    case 'calculating_waiting_result':
-	    case 'drawing':
-	    case 'route_confirm':
-	    case 'route_driving':
-	    case 'route_out':
-	    case 'route_out_returned':
-	    case 'route_out_waiting_result':
-	    case 'route_out_calculating_error':
-	    case 'route_out_drawing':
-			BtnGo(nav_data.lng_end, nav_data.lat_end);
-	}
+	this.route_mode = value;
 }
 

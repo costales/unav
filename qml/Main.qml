@@ -51,7 +51,7 @@ MainView {
 		property bool online: true
 		property int unit: 0
 		property bool rotateMap: true
-		property int routeMode: 0
+		property string routeModes: "car"
 		property bool speak: true
 		property string speakVoice: 'Nathan Haines'
 		property int lastSearchTab: 0
@@ -200,6 +200,9 @@ MainView {
 							navApp.settings.lastLat = url[4];
 							navApp.settings.lastZoom = url[5];
 							break;
+						case "routemode":
+							navApp.settings.routeModes = url[3];
+							break;
 					}
 					// Allow loading of file:// but dissallow http because it's used for navigation
 					if (typeof url[0] != "undefined" && url[0].includes("http"))
@@ -217,10 +220,10 @@ MainView {
 							mainPageStack.onLoadingExecuted = true;
 							
 							// Restore settings into webview
-							mainPageStack.executeJavaScript("settings.set_online(" + navApp.settings.online + ", true)");
+							mainPageStack.executeJavaScript("settings.set_online(" + navApp.settings.online + ")");
 							mainPageStack.executeJavaScript("settings.set_unit(" + navApp.settings.unit + ")");
 							mainPageStack.executeJavaScript("settings.set_rotate_map(" + navApp.settings.rotateMap + ")");
-							mainPageStack.executeJavaScript("settings.set_route_mode(" + navApp.settings.routeMode + ")");
+							mainPageStack.executeJavaScript("settings.set_route_mode(\"" + navApp.settings.routeModes + "\")");
 							mainPageStack.executeJavaScript("settings.set_speak(" + navApp.settings.speak + ")");
 							mainPageStack.executeJavaScript("settings.set_speak_voice(\"" + navApp.settings.speakVoice + "\")");
 							mainPageStack.executeJavaScript("mapUI.set_map_center(" + navApp.settings.lastLng + "," + navApp.settings.lastLat + ")");

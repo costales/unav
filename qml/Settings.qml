@@ -63,17 +63,6 @@ Page {
             unitList.subText.text = unitModel.get(navApp.settings.unit).unit
         }
     }
-    ListModel {
-        id: routeModeModel
-        Component.onCompleted: initialize()
-        function initialize() {
-            routeModeModel.append({ "mode": i18n.tr("Car"), "index": 0 })
-            routeModeModel.append({ "mode": i18n.tr("Bicycle"), "index": 1 })
-            routeModeModel.append({ "mode": i18n.tr("Walk"), "index": 2 })
-
-            routeModeList.subText.text = routeModeModel.get(navApp.settings.routeMode).mode
-        }
-    }
 
     Flickable {
         id: flickable
@@ -170,49 +159,6 @@ Page {
                  id: navigationListHeader
                  title: i18n.tr("Navigation")
                  color: theme.palette.normal.background
-            }
-
-           ExpandableListItem {
-               id: routeModeList
-
-               listViewHeight: units.gu(14)
-               titleText.text: i18n.tr("Mode")
-
-               model: routeModeModel
-
-               delegate: ListItem {
-                    divider.visible: false
-                    height: routeModeListItemLayout.height
-                    ListItemLayout {
-                        id: routeModeListItemLayout
-                        title.text: model.mode
-                        title.color: "#5D5D5D"
-                        padding { top: units.gu(1); bottom: units.gu(1) }
-                        Icon {
-                            SlotsLayout.position: SlotsLayout.Trailing
-                            width: units.gu(2)
-                            name: "tick"
-                            visible: navApp.settings.routeMode === model.index
-                        }
-                    }
-
-                    onClicked: {
-                        navApp.settings.routeMode = model.index;
-                        mainPageStack.executeJavaScript("settings.set_route_mode(" + navApp.settings.routeMode + ")");
-                        if (navApp.settings.routeMode == 0 && !navApp.settings.rotateMap) {
-                            navApp.settings.rotateMap = true;
-                            navRotateSwitch.checked = true;
-                            mainPageStack.executeJavaScript("settings.set_rotate_map(true)");
-                        }
-                        if (navApp.settings.routeMode > 0 && navApp.settings.rotateMap) {
-                            navApp.settings.rotateMap = false;
-                            navRotateSwitch.checked = false;
-                            mainPageStack.executeJavaScript("settings.set_rotate_map(false)");
-                        }
-                        routeModeList.subText.text = routeModeModel.get(model.index).mode;
-                        routeModeList.toggleExpansion();
-                   }
-               }
             }
 
             ListItem {
