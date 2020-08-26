@@ -120,9 +120,9 @@ msgstr "Introduïu unes coordenades decimals vàlides\n"
 
 #: build/all/app/install/qml/Coordinate.qml:147
 #: build/all/app/install/qml/Coordinate.qml:375
-#: build/all/app/install/qml/Settings.qml:309
+#: build/all/app/install/qml/Settings.qml:255
 #: build/all/app/install/qml/Voices.qml:241 qml/Coordinate.qml:147
-#: qml/Coordinate.qml:375 qml/Settings.qml:309 qml/Voices.qml:241
+#: qml/Coordinate.qml:375 qml/Settings.qml:255 qml/Voices.qml:241
 msgid "Close"
 msgstr "Tanca"
 
@@ -173,14 +173,14 @@ msgid "There is already a favorite with that name. You can either overwrite it o
 msgstr "Ja hi ha un preferit amb aquest nom. Podeu sobreescriure'l o posar-li un altre nom."
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:315 nav/index.html.strings:1
-#: qml/Favorites.qml:192 qml/Main.qml:315
+#: build/all/app/install/qml/Main.qml:318 nav/index.html.strings:1
+#: qml/Favorites.qml:192 qml/Main.qml:318
 msgid "Cancel"
 msgstr "Cancel·la"
 
 #: build/all/app/install/qml/Favorites.qml:199
-#: build/all/app/install/qml/Main.qml:322 qml/Favorites.qml:199
-#: qml/Main.qml:322
+#: build/all/app/install/qml/Main.qml:325 qml/Favorites.qml:199
+#: qml/Main.qml:325
 msgid "Overwrite"
 msgstr "Sobreescriu"
 
@@ -188,7 +188,7 @@ msgstr "Sobreescriu"
 msgid "Update"
 msgstr "Actualitza"
 
-#: build/all/app/install/qml/Main.qml:322 qml/Main.qml:322
+#: build/all/app/install/qml/Main.qml:325 qml/Main.qml:325
 msgid "Add"
 msgstr "Afegeix"
 
@@ -216,23 +216,23 @@ msgstr "Quilòmetres"
 msgid "Miles"
 msgstr "Milles"
 
-#: build/all/app/install/qml/Settings.qml:94 qml/Settings.qml:94
+#: build/all/app/install/qml/Settings.qml:83 qml/Settings.qml:83
 msgid "Map"
 msgstr "Mapa"
 
-#: build/all/app/install/qml/Settings.qml:102 qml/Settings.qml:102
+#: build/all/app/install/qml/Settings.qml:91 qml/Settings.qml:91
 msgid "Online"
 msgstr "En línia"
 
-#: build/all/app/install/qml/Settings.qml:140 qml/Settings.qml:140
+#: build/all/app/install/qml/Settings.qml:129 qml/Settings.qml:129
 msgid "Units"
 msgstr "Unitats"
 
-#: build/all/app/install/qml/Settings.qml:171 qml/Settings.qml:171
+#: build/all/app/install/qml/Settings.qml:160 qml/Settings.qml:160
 msgid "Navigation"
 msgstr "Navegació"
 
-#: build/all/app/install/qml/Settings.qml:272 qml/Settings.qml:272
+#: build/all/app/install/qml/Settings.qml:218 qml/Settings.qml:218
 msgid "Download custom voices"
 msgstr "Descarrega veus personalitzades"
 
@@ -528,10 +528,6 @@ msgstr "Estadi"
 msgid "Swimming Pool"
 msgstr "Piscina"
 
-#: build/all/app/install/qml/Settings.qml:179 qml/Settings.qml:179
-msgid "Mode"
-msgstr "Mode"
-
 #: build/all/app/install/qml/About.qml:38 qml/About.qml:38
 msgid "Code"
 msgstr "Codi"
@@ -548,11 +544,11 @@ msgstr "Dedicada a la memòria de"
 msgid "Favorite Name"
 msgstr "Nom preferit"
 
-#: build/all/app/install/qml/Main.qml:281 qml/Main.qml:281
+#: build/all/app/install/qml/Main.qml:284 qml/Main.qml:284
 msgid "Adding Favorite"
 msgstr "Afegit preferit"
 
-#: build/all/app/install/qml/Main.qml:301 qml/Main.qml:301
+#: build/all/app/install/qml/Main.qml:304 qml/Main.qml:304
 msgid "Insert name"
 msgstr "Inseriu nom"
 
@@ -564,23 +560,23 @@ msgstr "Usats abans"
 msgid "POIs"
 msgstr "Punts d'interés"
 
-#: build/all/app/install/qml/Settings.qml:256 qml/Settings.qml:256
+#: build/all/app/install/qml/Settings.qml:202 qml/Settings.qml:202
 msgid "Speak instructions"
 msgstr "Instruccions de veu"
 
-#: build/all/app/install/qml/Settings.qml:283 qml/Settings.qml:283
+#: build/all/app/install/qml/Settings.qml:229 qml/Settings.qml:229
 msgid "How to use uNav offline"
 msgstr "Com usar l'uNav sense connexió"
 
-#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid "<b>Step 1</b> Install"
 msgstr "<b>Pas 1</> Instal·leu"
 
-#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid "In its wizard, set profile to <i>Default</i>, disable <i>Automatic activation</i> and download a map."
 msgstr "Al seu configurador, seleccioneu <i>Per defecte</i>, desactiveu <i>Activació automàtica</i> i descarregueu un mapa"
 
-#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+#: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "<b>Step 2</b> Install"
 msgstr "<b>Pas 2</b> Instal·leu"
 
@@ -611,35 +607,23 @@ msgstr "Centre d'esports"
 msgid "Places"
 msgstr "Llocs"
 
-#: build/all/app/install/qml/Settings.qml:70 qml/Settings.qml:70
-msgid "Car"
-msgstr "Cotxe"
-
-#: build/all/app/install/qml/Settings.qml:71 qml/Settings.qml:71
-msgid "Walk"
-msgstr "Caminant"
-
-#: build/all/app/install/qml/Settings.qml:72 qml/Settings.qml:72
-msgid "Bicycle"
-msgstr "Bicicleta"
-
-#: build/all/app/install/qml/Settings.qml:119 qml/Settings.qml:119
+#: build/all/app/install/qml/Settings.qml:108 qml/Settings.qml:108
 msgid "Instructions for offline mode"
 msgstr "Instruccions pel mode sense connexió"
 
-#: build/all/app/install/qml/Settings.qml:222 qml/Settings.qml:222
+#: build/all/app/install/qml/Settings.qml:168 qml/Settings.qml:168
 msgid "View optimized for car"
 msgstr "Visualització òptima per cotxe"
 
-#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
+#: build/all/app/install/qml/Settings.qml:181 qml/Settings.qml:181
 msgid "Will rotate the marker and not the map"
 msgstr "Girarà els marcador i no el mapa"
 
-#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+#: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "Set <i>Prevent app suspension</i> for OSM Scout Server."
 msgstr "Activeu <i>Inhabilita la suspensió de l'app</i> per l'OSM Scout Server"
 
-#: build/all/app/install/qml/Settings.qml:305 qml/Settings.qml:305
+#: build/all/app/install/qml/Settings.qml:251 qml/Settings.qml:251
 msgid "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
 msgstr "<b>Pas per cada ús</b>: Inicieu l'OSM Scout Server abans de l'uNav"
 
@@ -649,39 +633,39 @@ msgstr "<b>Pas per cada ús</b>: Inicieu l'OSM Scout Server abans de l'uNav"
 msgid "Place or location"
 msgstr "Lloc o localització"
 
-#: nav/class/Navigator.js:239
+#: nav/class/Navigator.js:240
 msgid "Your destination is near"
 msgstr "La vostra destinació és a prop"
 
-#: nav/class/Navigator.js:241
+#: nav/class/Navigator.js:242
 msgid "Enter the roundabout"
 msgstr "Entreu a la rotonda"
 
-#: nav/class/Navigator.js:243
+#: nav/class/Navigator.js:244
 msgid "Enter the roundabout and take 1st exit"
 msgstr "Entreu a la rotonda i agafeu la primera sortida"
 
-#: nav/class/Navigator.js:245
+#: nav/class/Navigator.js:246
 msgid "Enter the roundabout and take 2nd exit"
 msgstr "Entreu a la rotonda i agafeu la segona sortida"
 
-#: nav/class/Navigator.js:247
+#: nav/class/Navigator.js:248
 msgid "Enter the roundabout and take 3th exit"
 msgstr "Entreu a la rotonda i agafeu la tercera sortida"
 
-#: nav/class/Navigator.js:249
+#: nav/class/Navigator.js:250
 msgid "Enter the roundabout and take 4th exit"
 msgstr "Entreu a la rotonda i agafeu la quarta sortida"
 
-#: nav/class/Navigator.js:251
+#: nav/class/Navigator.js:252
 msgid "Follow the route line"
 msgstr "Seguiu la línia de ruta"
 
-#: nav/class/Navigator.js:254
+#: nav/class/Navigator.js:255
 msgid "Exit at"
 msgstr "Sortiu a"
 
-#: nav/class/Navigator.js:256
+#: nav/class/Navigator.js:257
 msgid "Exit the roundabout"
 msgstr "Sortiu de la rotonda"
 
@@ -697,7 +681,7 @@ msgstr "No s'han trobat punts d'interès"
 msgid "There was an error"
 msgstr "Hi ha hagut un error"
 
-#: nav/index.html.strings:2
+#: nav/index.html.strings:3
 msgid "Center"
 msgstr "Centra"
 
@@ -725,35 +709,43 @@ msgstr "Escola"
 msgid "Now"
 msgstr "Ara"
 
-#: nav/index.html:162
+#: nav/index.html:172 nav/index.html:183
 msgid "Waiting for GPS"
 msgstr "Esperant el GPS"
 
-#: nav/index.html:219 nav/index.html:226
+#: nav/index.html:240 nav/index.html:247
 msgid "GPS is ready"
 msgstr "El GPS està llest"
 
-#: nav/index.html:238 nav/index.html:426
+#: nav/index.html:259 nav/index.html:451
 msgid "Calculating route"
 msgstr "Calculant la ruta"
 
-#: nav/index.html:248
+#: nav/index.html:269
 msgid "Error searching route"
 msgstr "Error cercant la ruta"
 
-#: nav/index.html:285
+#: nav/index.html:306
 msgid "Out of route. Recalculating"
 msgstr "Fora de ruta. Recalculant"
 
-#: nav/index.html:300
+#: nav/index.html:321
 msgid "Error. Recalculating again"
 msgstr "Error. Tornant a recalcular"
 
-#: nav/index.html:438
+#: nav/index.html:463
 msgid "Route canceled"
 msgstr "Ruta cancel·lada"
 
-#: nav/index.html:485
+#: nav/index.html:516
 msgid "Use more zoom for POIs"
 msgstr "Augmenteu per veure més punts d'interés"
+
+#: nav/index.html:347
+msgid "You have arrived"
+msgstr "You have arrived"
+
+#: nav/index.html.strings:2
+msgid "Start"
+msgstr "Start"
 

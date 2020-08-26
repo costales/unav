@@ -120,9 +120,9 @@ msgstr "Enter valid decimal coordinates\n"
 
 #: build/all/app/install/qml/Coordinate.qml:147
 #: build/all/app/install/qml/Coordinate.qml:375
-#: build/all/app/install/qml/Settings.qml:309
+#: build/all/app/install/qml/Settings.qml:255
 #: build/all/app/install/qml/Voices.qml:241 qml/Coordinate.qml:147
-#: qml/Coordinate.qml:375 qml/Settings.qml:309 qml/Voices.qml:241
+#: qml/Coordinate.qml:375 qml/Settings.qml:255 qml/Voices.qml:241
 msgid "Close"
 msgstr "Close"
 
@@ -173,14 +173,14 @@ msgid "There is already a favorite with that name. You can either overwrite it o
 msgstr "There is already a favorite with that name. You can either overwrite it or enter a different name."
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:315 nav/index.html.strings:1
-#: qml/Favorites.qml:192 qml/Main.qml:315
+#: build/all/app/install/qml/Main.qml:318 nav/index.html.strings:1
+#: qml/Favorites.qml:192 qml/Main.qml:318
 msgid "Cancel"
 msgstr "Cancel"
 
 #: build/all/app/install/qml/Favorites.qml:199
-#: build/all/app/install/qml/Main.qml:322 qml/Favorites.qml:199
-#: qml/Main.qml:322
+#: build/all/app/install/qml/Main.qml:325 qml/Favorites.qml:199
+#: qml/Main.qml:325
 msgid "Overwrite"
 msgstr "Overwrite"
 
@@ -188,7 +188,7 @@ msgstr "Overwrite"
 msgid "Update"
 msgstr "Update"
 
-#: build/all/app/install/qml/Main.qml:322 qml/Main.qml:322
+#: build/all/app/install/qml/Main.qml:325 qml/Main.qml:325
 msgid "Add"
 msgstr "Add"
 
@@ -216,23 +216,23 @@ msgstr "Kilometres"
 msgid "Miles"
 msgstr "Miles"
 
-#: build/all/app/install/qml/Settings.qml:94 qml/Settings.qml:94
+#: build/all/app/install/qml/Settings.qml:83 qml/Settings.qml:83
 msgid "Map"
 msgstr "Map"
 
-#: build/all/app/install/qml/Settings.qml:102 qml/Settings.qml:102
+#: build/all/app/install/qml/Settings.qml:91 qml/Settings.qml:91
 msgid "Online"
 msgstr "Online"
 
-#: build/all/app/install/qml/Settings.qml:140 qml/Settings.qml:140
+#: build/all/app/install/qml/Settings.qml:129 qml/Settings.qml:129
 msgid "Units"
 msgstr "Units"
 
-#: build/all/app/install/qml/Settings.qml:171 qml/Settings.qml:171
+#: build/all/app/install/qml/Settings.qml:160 qml/Settings.qml:160
 msgid "Navigation"
 msgstr "Navigation"
 
-#: build/all/app/install/qml/Settings.qml:272 qml/Settings.qml:272
+#: build/all/app/install/qml/Settings.qml:218 qml/Settings.qml:218
 msgid "Download custom voices"
 msgstr "Download custom voices"
 
@@ -528,10 +528,6 @@ msgstr "Stadium"
 msgid "Swimming Pool"
 msgstr "Swimming Pool"
 
-#: build/all/app/install/qml/Settings.qml:179 qml/Settings.qml:179
-msgid "Mode"
-msgstr "Mode"
-
 #: build/all/app/install/qml/About.qml:38 qml/About.qml:38
 msgid "Code"
 msgstr "Code"
@@ -548,11 +544,11 @@ msgstr "Dedicated to the memory of"
 msgid "Favorite Name"
 msgstr "Favorite Name"
 
-#: build/all/app/install/qml/Main.qml:281 qml/Main.qml:281
+#: build/all/app/install/qml/Main.qml:284 qml/Main.qml:284
 msgid "Adding Favorite"
 msgstr "Adding Favorite"
 
-#: build/all/app/install/qml/Main.qml:301 qml/Main.qml:301
+#: build/all/app/install/qml/Main.qml:304 qml/Main.qml:304
 msgid "Insert name"
 msgstr "Insert name"
 
@@ -564,23 +560,23 @@ msgstr "Last used"
 msgid "POIs"
 msgstr "POIs"
 
-#: build/all/app/install/qml/Settings.qml:256 qml/Settings.qml:256
+#: build/all/app/install/qml/Settings.qml:202 qml/Settings.qml:202
 msgid "Speak instructions"
 msgstr "Speak instructions"
 
-#: build/all/app/install/qml/Settings.qml:283 qml/Settings.qml:283
+#: build/all/app/install/qml/Settings.qml:229 qml/Settings.qml:229
 msgid "How to use uNav offline"
 msgstr "How to use uNav offline"
 
-#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid "<b>Step 1</b> Install"
 msgstr "<b>Step 1</b> Install"
 
-#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid "In its wizard, set profile to <i>Default</i>, disable <i>Automatic activation</i> and download a map."
 msgstr "In its wizard, set profile to <i>Default</i>, disable <i>Automatic activation</i> and download a map."
 
-#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+#: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "<b>Step 2</b> Install"
 msgstr "<b>Step 2</b> Install"
 
@@ -611,35 +607,23 @@ msgstr "Sports Centre"
 msgid "Places"
 msgstr "Places"
 
-#: build/all/app/install/qml/Settings.qml:70 qml/Settings.qml:70
-msgid "Car"
-msgstr "Car"
-
-#: build/all/app/install/qml/Settings.qml:71 qml/Settings.qml:71
-msgid "Walk"
-msgstr "Walk"
-
-#: build/all/app/install/qml/Settings.qml:72 qml/Settings.qml:72
-msgid "Bicycle"
-msgstr "Bicycle"
-
-#: build/all/app/install/qml/Settings.qml:119 qml/Settings.qml:119
+#: build/all/app/install/qml/Settings.qml:108 qml/Settings.qml:108
 msgid "Instructions for offline mode"
 msgstr "Instructions for offline mode"
 
-#: build/all/app/install/qml/Settings.qml:222 qml/Settings.qml:222
+#: build/all/app/install/qml/Settings.qml:168 qml/Settings.qml:168
 msgid "View optimized for car"
 msgstr "View optimized for car"
 
-#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
+#: build/all/app/install/qml/Settings.qml:181 qml/Settings.qml:181
 msgid "Will rotate the marker and not the map"
 msgstr "Will rotate the marker and not the map"
 
-#: build/all/app/install/qml/Settings.qml:297 qml/Settings.qml:297
+#: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "Set <i>Prevent app suspension</i> for OSM Scout Server."
 msgstr "Set <i>Prevent app suspension</i> for OSM Scout Server."
 
-#: build/all/app/install/qml/Settings.qml:305 qml/Settings.qml:305
+#: build/all/app/install/qml/Settings.qml:251 qml/Settings.qml:251
 msgid "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
 msgstr "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
 
@@ -649,39 +633,39 @@ msgstr "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
 msgid "Place or location"
 msgstr "Place or location"
 
-#: nav/class/Navigator.js:239
+#: nav/class/Navigator.js:240
 msgid "Your destination is near"
 msgstr "Your destination is near"
 
-#: nav/class/Navigator.js:241
+#: nav/class/Navigator.js:242
 msgid "Enter the roundabout"
 msgstr "Enter the roundabout"
 
-#: nav/class/Navigator.js:243
+#: nav/class/Navigator.js:244
 msgid "Enter the roundabout and take 1st exit"
 msgstr "Enter the roundabout and take 1st exit"
 
-#: nav/class/Navigator.js:245
+#: nav/class/Navigator.js:246
 msgid "Enter the roundabout and take 2nd exit"
 msgstr "Enter the roundabout and take 2nd exit"
 
-#: nav/class/Navigator.js:247
+#: nav/class/Navigator.js:248
 msgid "Enter the roundabout and take 3th exit"
 msgstr "Enter the roundabout and take 3th exit"
 
-#: nav/class/Navigator.js:249
+#: nav/class/Navigator.js:250
 msgid "Enter the roundabout and take 4th exit"
 msgstr "Enter the roundabout and take 4th exit"
 
-#: nav/class/Navigator.js:251
+#: nav/class/Navigator.js:252
 msgid "Follow the route line"
 msgstr "Follow the route line"
 
-#: nav/class/Navigator.js:254
+#: nav/class/Navigator.js:255
 msgid "Exit at"
 msgstr "Exit at"
 
-#: nav/class/Navigator.js:256
+#: nav/class/Navigator.js:257
 msgid "Exit the roundabout"
 msgstr "Exit the roundabout"
 
@@ -697,7 +681,7 @@ msgstr "Not POIs found"
 msgid "There was an error"
 msgstr "There was an error"
 
-#: nav/index.html.strings:2
+#: nav/index.html.strings:3
 msgid "Center"
 msgstr "Center"
 
@@ -725,35 +709,43 @@ msgstr "School"
 msgid "Now"
 msgstr "Now"
 
-#: nav/index.html:162
+#: nav/index.html:172 nav/index.html:183
 msgid "Waiting for GPS"
 msgstr "Waiting for GPS"
 
-#: nav/index.html:219 nav/index.html:226
+#: nav/index.html:240 nav/index.html:247
 msgid "GPS is ready"
 msgstr "GPS is ready"
 
-#: nav/index.html:238 nav/index.html:426
+#: nav/index.html:259 nav/index.html:451
 msgid "Calculating route"
 msgstr "Calculating route"
 
-#: nav/index.html:248
+#: nav/index.html:269
 msgid "Error searching route"
 msgstr "Error searching route"
 
-#: nav/index.html:285
+#: nav/index.html:306
 msgid "Out of route. Recalculating"
 msgstr "Out of route. Recalculating"
 
-#: nav/index.html:300
+#: nav/index.html:321
 msgid "Error. Recalculating again"
 msgstr "Error. Recalculating again"
 
-#: nav/index.html:438
+#: nav/index.html:463
 msgid "Route canceled"
 msgstr "Route canceled"
 
-#: nav/index.html:485
+#: nav/index.html:516
 msgid "Use more zoom for POIs"
 msgstr "Use more zoom for POIs"
+
+#: nav/index.html:347
+msgid "You have arrived"
+msgstr "You have arrived"
+
+#: nav/index.html.strings:2
+msgid "Start"
+msgstr "Start"
 

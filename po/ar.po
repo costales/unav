@@ -5,28 +5,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: uNav\n"
-"Language: ast\n"
+"Language: ar\n"
 
 #: build/all/app/install/qml/About.qml:26
 #: build/all/app/install/qml/Settings.qml:48 qml/About.qml:26
 #: qml/Settings.qml:48
 msgid "About"
-msgstr "Tocante a"
+msgstr "حول"
 
 #: build/all/app/install/qml/About.qml:37
 #: build/all/app/install/qml/About.qml:38
 #: build/all/app/install/qml/About.qml:39 qml/About.qml:37 qml/About.qml:38
 #: qml/About.qml:39
 msgid "Resources"
-msgstr "Recursos"
+msgstr "المصادر"
 
 #: build/all/app/install/qml/About.qml:37 qml/About.qml:37
 msgid "Translations"
-msgstr "Tornes"
+msgstr "الترجمات"
 
 #: build/all/app/install/qml/About.qml:39 qml/About.qml:39
 msgid "Bugs"
-msgstr "Fallos"
+msgstr "خلل"
 
 #: build/all/app/install/qml/About.qml:42
 #: build/all/app/install/qml/About.qml:43
@@ -38,23 +38,23 @@ msgstr "Fallos"
 #: qml/About.qml:44 qml/About.qml:45 qml/About.qml:46 qml/About.qml:47
 #: qml/About.qml:48
 msgid "Developers"
-msgstr "Desendolcadores"
+msgstr "المطورون"
 
 #: build/all/app/install/qml/About.qml:46 qml/About.qml:46
 msgid "Founder"
-msgstr "Fundador"
+msgstr "المؤسس"
 
 #: build/all/app/install/qml/About.qml:51 qml/About.qml:51
 msgid "Voice"
-msgstr "Voz"
+msgstr "الصوت"
 
 #: build/all/app/install/qml/About.qml:54 qml/About.qml:54
 msgid "Logo"
-msgstr "Logo"
+msgstr "شعار"
 
 #: build/all/app/install/qml/About.qml:57 qml/About.qml:57
 msgid "Translators"
-msgstr "Traductores"
+msgstr "المترجمون"
 
 #: build/all/app/install/qml/About.qml:60
 #: build/all/app/install/qml/About.qml:61
@@ -76,47 +76,47 @@ msgstr "Traductores"
 #: qml/About.qml:70 qml/About.qml:71 qml/About.qml:72 qml/About.qml:73
 #: qml/About.qml:74
 msgid "Powered by"
-msgstr "Basao en"
+msgstr "مدعوم من"
 
 #: build/all/app/install/qml/Coordinate.qml:34 qml/Coordinate.qml:34
 msgid "Decimal"
-msgstr "Decimal"
+msgstr "عشري"
 
 #: build/all/app/install/qml/Coordinate.qml:46 qml/Coordinate.qml:46
 msgid "Sexagesimal"
-msgstr "Sesaxesimal"
+msgstr "ستيني"
 
 #: build/all/app/install/qml/Coordinate.qml:78
 #: build/all/app/install/qml/Coordinate.qml:166 qml/Coordinate.qml:78
 #: qml/Coordinate.qml:166
 msgid "Lat:"
-msgstr "Llat:"
+msgstr "خط العرض"
 
 #: build/all/app/install/qml/Coordinate.qml:95
 #: build/all/app/install/qml/Coordinate.qml:237 qml/Coordinate.qml:95
 #: qml/Coordinate.qml:237
 msgid "Long:"
-msgstr "Llon:"
+msgstr "خط الطول"
 
 #: build/all/app/install/qml/Coordinate.qml:110
 #: build/all/app/install/qml/Coordinate.qml:307 qml/Coordinate.qml:110
 #: qml/Coordinate.qml:307
 msgid "Show on Map"
-msgstr "Mostrar nel mapa"
+msgstr "اظهر على الخارطة"
 
 #: build/all/app/install/qml/Coordinate.qml:144
 #: build/all/app/install/qml/Coordinate.qml:372 qml/Coordinate.qml:144
 #: qml/Coordinate.qml:372
 msgid "Coordinates are not valid"
-msgstr "Coordenaes non son válides"
+msgstr "الإحداثيات غير صالحة"
 
 #: build/all/app/install/qml/Coordinate.qml:145 qml/Coordinate.qml:145
 msgid "Enter valid decimal coordinates\n"
 "\n"
 "Expected format is:"
-msgstr "Introduz unes coordenaes decimales válides\n"
+msgstr "أدخل إحداثيات عشرية صالحة\n"
 "\n"
-"El formatu esperáu ye:"
+"الشكل المتوقع :"
 
 #: build/all/app/install/qml/Coordinate.qml:147
 #: build/all/app/install/qml/Coordinate.qml:375
@@ -124,437 +124,438 @@ msgstr "Introduz unes coordenaes decimales válides\n"
 #: build/all/app/install/qml/Voices.qml:241 qml/Coordinate.qml:147
 #: qml/Coordinate.qml:375 qml/Settings.qml:255 qml/Voices.qml:241
 msgid "Close"
-msgstr "Zarrar"
+msgstr "اغلاق"
 
 #: build/all/app/install/qml/Coordinate.qml:373 qml/Coordinate.qml:373
 msgid "Enter valid sexagesimal coordinates\n"
 "\n"
 "Expected format is:"
-msgstr "Introduz unes coordenaes sesaxesimales válides\n"
+msgstr "أدخل إحداثيات ستينية صالحة\n"
 "\n"
-"El formatu esperáu ye:"
+"الشكل المتوقع :"
 
 #: build/all/app/install/qml/Voices.qml:53 qml/Voices.qml:53
 msgid "Download voices"
-msgstr "Descargar voces"
+msgstr "تحميل ملفات الصوت"
 
 #: build/all/app/install/qml/Voices.qml:61 qml/Voices.qml:61
 msgid "Play current voice"
-msgstr "Prebar voz actual"
+msgstr "تشغيل الصوت الحالي"
 
 #: build/all/app/install/qml/Voices.qml:70
 #: build/all/app/install/qml/Voices.qml:237 qml/Voices.qml:70
 #: qml/Voices.qml:237
 msgid "How to add a voice"
-msgstr "Cómo amestar una voz"
+msgstr "كيفية إضافة صوت"
 
 #: build/all/app/install/qml/Voices.qml:161 qml/Voices.qml:161
 msgid "By "
-msgstr "Por "
+msgstr "بواسطة"
 
 #: build/all/app/install/qml/Voices.qml:207 qml/Voices.qml:207
 msgid "Cancel Download"
-msgstr "Encaboxar la descarga"
+msgstr "الغاء التحميل"
 
 #: build/all/app/install/qml/Voices.qml:223 qml/Voices.qml:223
 msgid "About the voices"
-msgstr "Tocante a les voces"
+msgstr "عن الاصوات"
 
 #: build/all/app/install/qml/Voices.qml:229 qml/Voices.qml:229
 msgid "You can add a new voice to uNav following these steps:"
-msgstr "Puedes amestar una voz nueva a uNav siguiendo estos pasos:"
+msgstr "يمكنك إضافة صوت جديد إلى uNav باتباع الخطوات التالية:"
 
 #: build/all/app/install/qml/Favorites.qml:141 qml/Favorites.qml:141
 msgid "Edit Favorite"
-msgstr "Editar favoritu"
+msgstr "تعديل المفضلة"
 
 #: build/all/app/install/qml/Favorites.qml:142 qml/Favorites.qml:142
 msgid "There is already a favorite with that name. You can either overwrite it or enter a different name."
-msgstr "Yá hai un favoritu con esi nome. Puedes sobreescribirlu o usar otru nome."
+msgstr "يوجد بالفعل مفضل بهذا الاسم. يمكنك إما استبداله أو إدخال اسم مختلف."
 
 #: build/all/app/install/qml/Favorites.qml:192
 #: build/all/app/install/qml/Main.qml:318 nav/index.html.strings:1
 #: qml/Favorites.qml:192 qml/Main.qml:318
 msgid "Cancel"
-msgstr "Encaboxar"
+msgstr "الغاء"
 
 #: build/all/app/install/qml/Favorites.qml:199
 #: build/all/app/install/qml/Main.qml:325 qml/Favorites.qml:199
 #: qml/Main.qml:325
 msgid "Overwrite"
-msgstr "Sobrescribir"
+msgstr "استبدال"
 
 #: build/all/app/install/qml/Favorites.qml:199 qml/Favorites.qml:199
 msgid "Update"
-msgstr "Anovar"
+msgstr "تحديث"
 
 #: build/all/app/install/qml/Main.qml:325 qml/Main.qml:325
 msgid "Add"
-msgstr "Amestar"
+msgstr "اضافة"
 
 #: build/all/app/install/qml/Search.qml:45 qml/Search.qml:45
 msgid "Search"
-msgstr "Buscar"
+msgstr "بحث"
 
 #: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
 msgid "Favorites"
-msgstr "Favoritos"
+msgstr "المفضلة"
 
 #: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
 msgid "Coordinates"
-msgstr "Coordenaes"
+msgstr "إحداثيات"
 
 #: build/all/app/install/qml/Settings.qml:39 qml/Settings.qml:39
 msgid "Settings"
-msgstr "Preferencies"
+msgstr "اعدادات"
 
 #: build/all/app/install/qml/Settings.qml:60 qml/Settings.qml:60
 msgid "Kilometres"
-msgstr "Kilómetros"
+msgstr "كيلومتر"
 
 #: build/all/app/install/qml/Settings.qml:61 qml/Settings.qml:61
 msgid "Miles"
-msgstr "Milles"
+msgstr "ميل"
 
 #: build/all/app/install/qml/Settings.qml:83 qml/Settings.qml:83
 msgid "Map"
-msgstr "Mapa"
+msgstr "الخارطة"
 
 #: build/all/app/install/qml/Settings.qml:91 qml/Settings.qml:91
 msgid "Online"
-msgstr "Online"
+msgstr "متصل"
 
 #: build/all/app/install/qml/Settings.qml:129 qml/Settings.qml:129
 msgid "Units"
-msgstr "Unidaes"
+msgstr "وحدة"
 
 #: build/all/app/install/qml/Settings.qml:160 qml/Settings.qml:160
 msgid "Navigation"
-msgstr "Navegación"
+msgstr "التنقل"
 
 #: build/all/app/install/qml/Settings.qml:218 qml/Settings.qml:218
 msgid "Download custom voices"
-msgstr "Descargar voces personalizaes"
+msgstr "تحميل الأصوات المخصصة"
 
 #: build/all/app/install/qml/Share.qml:32 qml/Share.qml:32
 msgid "Share location to"
-msgstr "Compartir ubicación con"
+msgstr "مشاركة الموقع مع"
 
 #: qml/js/PoiCategories.js:5
 msgid "Transport"
-msgstr "Tresporte"
+msgstr "مواصلات"
 
 #: qml/js/PoiCategories.js:7
 msgid "Airport"
-msgstr "Aeropuertu"
+msgstr "مطار"
 
 #: qml/js/PoiCategories.js:8
 msgid "Bicycle Shop"
-msgstr "Tienda de bicicletes"
+msgstr "متجر دراجات"
 
 #: qml/js/PoiCategories.js:9
 msgid "Bus Station"
-msgstr "Estación d'autobús"
+msgstr "محطة حافلة"
 
 #: qml/js/PoiCategories.js:10
 msgid "Car Rental"
-msgstr "Alquiler d'automóviles"
+msgstr "كراء السيارات"
 
 #: qml/js/PoiCategories.js:11
 msgid "Car Repair"
-msgstr "Reparación de coches"
+msgstr "اصلاح السيارات"
 
 #: qml/js/PoiCategories.js:12
 msgid "Car Wash"
-msgstr "Llaváu de coches"
+msgstr "غسيل السيارات"
 
 #: qml/js/PoiCategories.js:14
 msgid "Gas Station"
-msgstr "Gasolinera"
+msgstr "محطة وقود"
 
 #: qml/js/PoiCategories.js:15
 msgid "Parking"
-msgstr "Aparcamientu"
+msgstr "موقف سيارات"
 
 #: qml/js/PoiCategories.js:16
 msgid "Subway Entrance"
-msgstr "Boca de metru"
+msgstr "مدخل المترو"
 
 #: qml/js/PoiCategories.js:17
 msgid "Taxi"
-msgstr "Taxi"
+msgstr "سيارة اجرة"
 
 #: qml/js/PoiCategories.js:18
 msgid "Train Station"
-msgstr "Estación de tren"
+msgstr "محطة القطار"
 
 #: qml/js/PoiCategories.js:22
 msgid "Accommodation"
-msgstr "Agospiamientu"
+msgstr "إقامة"
 
 #: qml/js/PoiCategories.js:24
 msgid "Campsite"
-msgstr "Camping"
+msgstr "مخيم"
 
 #: qml/js/PoiCategories.js:25
 msgid "Caravan Site"
-msgstr "Camping de caravanes"
+msgstr "موقع قافلة"
 
 #: qml/js/PoiCategories.js:26
 msgid "Guest House"
-msgstr "Casa de güespedes"
+msgstr "دار الضيافة"
 
 #: qml/js/PoiCategories.js:27
 msgid "Hostel"
-msgstr "Albergue"
+msgstr "نزل"
 
 #: qml/js/PoiCategories.js:28
 msgid "Hotel"
-msgstr "Hotel"
+msgstr "فندق"
 
 #: qml/js/PoiCategories.js:29
 msgid "Motel"
-msgstr "Motel"
+msgstr "فندق صغير"
 
 #: qml/js/PoiCategories.js:33
 msgid "Food & Drink"
-msgstr "Comida y bebida"
+msgstr "أطعمة و مشروبات\n"
+""
 
 #: qml/js/PoiCategories.js:35
 msgid "Bar"
-msgstr "Bar"
+msgstr "حانة"
 
 #: qml/js/PoiCategories.js:36
 msgid "Cafe"
-msgstr "Cafetería"
+msgstr "مقهى"
 
 #: qml/js/PoiCategories.js:38
 msgid "Fast Food"
-msgstr "Comida rápida"
+msgstr "وجبات سريعة"
 
 #: qml/js/PoiCategories.js:39
 msgid "Ice Cream"
-msgstr "Helaos"
+msgstr "مثلجات"
 
 #: qml/js/PoiCategories.js:40
 msgid "Pub"
-msgstr "Pub"
+msgstr "حانة"
 
 #: qml/js/PoiCategories.js:41
 msgid "Restaurant"
-msgstr "Restaurante"
+msgstr "مطعم"
 
 #: qml/js/PoiCategories.js:45
 msgid "Tourism"
-msgstr "Turismu"
+msgstr "سياحة"
 
 #: qml/js/PoiCategories.js:47 qml/js/PoiCategories.js:85
 msgid "Museum"
-msgstr "Muséu"
+msgstr "متحف"
 
 #: qml/js/PoiCategories.js:48
 msgid "Tourism Information"
-msgstr "Información turística"
+msgstr "معلومات سياحية"
 
 #: qml/js/PoiCategories.js:49
 msgid "Town Hall"
-msgstr "Ayuntamientu"
+msgstr "مبنى البلدية"
 
 #: qml/js/PoiCategories.js:53
 msgid "Services"
-msgstr "Servicios"
+msgstr "خدمات"
 
 #: qml/js/PoiCategories.js:55
 msgid "ATM"
-msgstr "Caxeru"
+msgstr "صراف آلي"
 
 #: qml/js/PoiCategories.js:56
 msgid "Bank"
-msgstr "Bancu"
+msgstr "بنك"
 
 #: qml/js/PoiCategories.js:58
 msgid "Post Box"
-msgstr "Buzón de correos"
+msgstr "صندوق بريد"
 
 #: qml/js/PoiCategories.js:59
 msgid "Post Office"
-msgstr "Oficina de correos"
+msgstr "مكتب البريد"
 
 #: qml/js/PoiCategories.js:60
 msgid "Toilet"
-msgstr "Bañu"
+msgstr "حمام"
 
 #: qml/js/PoiCategories.js:64
 msgid "Shopping"
-msgstr "Compres"
+msgstr "تسوق"
 
 #: qml/js/PoiCategories.js:66
 msgid "Books"
-msgstr "Llibros"
+msgstr "كتب"
 
 #: qml/js/PoiCategories.js:67
 msgid "Computer Shop"
-msgstr "Tienda informática"
+msgstr "محل كمبيوتر"
 
 #: qml/js/PoiCategories.js:68
 msgid "Copy Shop"
-msgstr "Fotocopiadora"
+msgstr "محل حلوى"
 
 #: qml/js/PoiCategories.js:69
 msgid "Florist"
-msgstr "Floristería"
+msgstr "بائع زهور"
 
 #: qml/js/PoiCategories.js:70
 msgid "Gifts"
-msgstr "Regalos"
+msgstr "هدايا"
 
 #: qml/js/PoiCategories.js:71
 msgid "Kiosk"
-msgstr "Quioscu"
+msgstr "كشك"
 
 #: qml/js/PoiCategories.js:72
 msgid "Laundry"
-msgstr "Llavandería"
+msgstr "مغسلة"
 
 #: qml/js/PoiCategories.js:73
 msgid "Mall"
-msgstr "Centru comercial"
+msgstr "مجمع تجاري"
 
 #: qml/js/PoiCategories.js:74
 msgid "Mobile Phone"
-msgstr "Telefonía móvil"
+msgstr "جوال"
 
 #: qml/js/PoiCategories.js:75
 msgid "Optician"
-msgstr "Óptica"
+msgstr "اخصائي نظارات"
 
 #: qml/js/PoiCategories.js:76
 msgid "Supermarket"
-msgstr "Supermercáu"
+msgstr "سوبر ماركت"
 
 #: qml/js/PoiCategories.js:77
 msgid "Travel Agency"
-msgstr "Axencia de viaxes"
+msgstr "وكالة سفر"
 
 #: qml/js/PoiCategories.js:81
 msgid "Culture"
-msgstr "Cultura"
+msgstr "ثقافة"
 
 #: qml/js/PoiCategories.js:84
 msgid "Library"
-msgstr "Biblioteca"
+msgstr "مكتبة"
 
 #: qml/js/PoiCategories.js:86
 msgid "Theatre"
-msgstr "Teatru"
+msgstr "مسرح"
 
 #: qml/js/PoiCategories.js:90
 msgid "Entertainment"
-msgstr "Entretenimientu"
+msgstr "ترفيه"
 
 #: qml/js/PoiCategories.js:92
 msgid "Casino"
-msgstr "Casinu"
+msgstr "كازينو"
 
 #: qml/js/PoiCategories.js:93
 msgid "Cinema"
-msgstr "Cine"
+msgstr "سينما"
 
 #: qml/js/PoiCategories.js:129
 msgid "Gym"
-msgstr "Ximnasiu"
+msgstr "قاعة رياضة"
 
 #: qml/js/PoiCategories.js:97
 msgid "Education"
-msgstr "Educación"
+msgstr "تربية"
 
 #: qml/js/PoiCategories.js:100
 msgid "University"
-msgstr "Universidá"
+msgstr "جامعة"
 
 #: qml/js/PoiCategories.js:104
 msgid "Health"
-msgstr "Salú"
+msgstr "صحة"
 
 #: qml/js/PoiCategories.js:106
 msgid "Dentist"
-msgstr "Dentista"
+msgstr "طبيب اسنان"
 
 #: qml/js/PoiCategories.js:107
 msgid "Doctor"
-msgstr "Médicu"
+msgstr "طبيب"
 
 #: qml/js/PoiCategories.js:108
 msgid "Hospital"
-msgstr "Hospital"
+msgstr "مستشفى"
 
 #: qml/js/PoiCategories.js:109
 msgid "Pharmacy"
-msgstr "Farmacia"
+msgstr "صيدلية"
 
 #: qml/js/PoiCategories.js:110
 msgid "Veterinary"
-msgstr "Veterinariu"
+msgstr "بيطري"
 
 #: qml/js/PoiCategories.js:114
 msgid "Religious"
-msgstr "Relixosu"
+msgstr "ديني"
 
 #: qml/js/PoiCategories.js:116
 msgid "Cemetery"
-msgstr "Campusantu"
+msgstr "مقبرة"
 
 #: qml/js/PoiCategories.js:117
 msgid "Church"
-msgstr "Ilesia"
+msgstr "كنيسة"
 
 #: qml/js/PoiCategories.js:121
 msgid "Emergency"
-msgstr "Emerxencia"
+msgstr "طارئ"
 
 #: qml/js/PoiCategories.js:123
 msgid "Police Station"
-msgstr "Comisaría"
+msgstr "قسم امن"
 
 #: qml/js/PoiCategories.js:127
 msgid "Sport"
-msgstr "Deportes"
+msgstr "رياضة"
 
 #: qml/js/PoiCategories.js:131
 msgid "Stadium"
-msgstr "Estadiu"
+msgstr "ملعب"
 
 #: qml/js/PoiCategories.js:132
 msgid "Swimming Pool"
-msgstr "Piscina"
+msgstr "بركة سباحة"
 
 #: build/all/app/install/qml/About.qml:38 qml/About.qml:38
 msgid "Code"
-msgstr "Códigu"
+msgstr "رمز"
 
 #: build/all/app/install/qml/About.qml:114 qml/About.qml:114
 msgid "Version %1. Licensed under %2"
-msgstr "Versión %1. Baxo llicencia %2"
+msgstr "النسخة 1. مُرخص بموجب٪ 2"
 
 #: build/all/app/install/qml/About.qml:121 qml/About.qml:121
 msgid "Dedicated to the memory of"
-msgstr "Dedicáu a la memoria de"
+msgstr "مكرس لذكرى"
 
 #: build/all/app/install/qml/Favorites.qml:176 qml/Favorites.qml:176
 msgid "Favorite Name"
-msgstr "Nome del favoritu"
+msgstr "الاسم المفضل"
 
 #: build/all/app/install/qml/Main.qml:284 qml/Main.qml:284
 msgid "Adding Favorite"
-msgstr "Amestando favoritu"
+msgstr "اضافة مفضلة"
 
 #: build/all/app/install/qml/Main.qml:304 qml/Main.qml:304
 msgid "Insert name"
-msgstr "Introduz un nome"
+msgstr "ادخل الاسم"
 
 #: build/all/app/install/qml/POIs.qml:54 qml/POIs.qml:54
 msgid "Last used"
-msgstr "Caberu usáu"
+msgstr "آخر أستخدام"
 
 #: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
 msgid "POIs"
@@ -562,190 +563,192 @@ msgstr "POIs"
 
 #: build/all/app/install/qml/Settings.qml:202 qml/Settings.qml:202
 msgid "Speak instructions"
-msgstr "Falar instrucciones"
+msgstr "نطق التعليمات"
 
 #: build/all/app/install/qml/Settings.qml:229 qml/Settings.qml:229
 msgid "How to use uNav offline"
-msgstr "Cómo usar uNav n'offline"
+msgstr "كيفية استخدام uNav دون اتصال"
 
 #: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid "<b>Step 1</b> Install"
-msgstr "<b>Pasu 1</b> Instala"
+msgstr "<b>الخطوة 1</b> تثبيت"
 
 #: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:235
 msgid "In its wizard, set profile to <i>Default</i>, disable <i>Automatic activation</i> and download a map."
-msgstr "Nel asistente, afita profile a <i>Default</i>, desmarca <i>Automatic activation</i> y baxa un mapa."
+msgstr " اضبط ملف التعريف على <i> افتراضي </ i> ، وقم بتعطيل <i> التنشيط التلقائي </ i> و حمل الخريطة."
 
 #: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "<b>Step 2</b> Install"
-msgstr "<b>Pasu 2</b> Instala"
+msgstr "<b>الخطوة 2</b> تثبيت"
 
 #: build/all/app/install/qml/offlineLocation/Location.qml:106
 #: qml/offlineLocation/Location.qml:106
 msgid "Searching..."
-msgstr "Buscando..."
+msgstr "جاري البحث..."
 
 #: build/all/app/install/qml/offlineLocation/Location.qml:136
 #: build/all/app/install/qml/onlineLocation/Location.qml:50
 #: qml/offlineLocation/Location.qml:136 qml/onlineLocation/Location.qml:50
 msgid "Nothing found"
-msgstr "Nada atopao"
+msgstr "لم يتم العثور على شيء"
 
 #: build/all/app/install/qml/offlineLocation/Location.qml:142
 #: build/all/app/install/qml/onlineLocation/Location.qml:45
 #: qml/offlineLocation/Location.qml:142 qml/onlineLocation/Location.qml:45
 msgid "Time out!"
-msgstr "¡Time out!"
+msgstr "نفذ الوقت!"
 
 #: qml/js/PoiCategories.js:130
 msgid "Sports Centre"
-msgstr "Centru deportivu"
+msgstr "مركز رياضة"
 
 #. TRANSLATORS: These are section headers. Please keep their translations short and not
 #. longer than their original string lengths.
 #: build/all/app/install/qml/Search.qml:65 qml/Search.qml:65
 msgid "Places"
-msgstr "Llugares"
+msgstr "اماكن"
 
 #: build/all/app/install/qml/Settings.qml:108 qml/Settings.qml:108
 msgid "Instructions for offline mode"
-msgstr "Instrucciones pa mou offline"
+msgstr "تعليمات لوضع غير متصل بالشبكة"
 
 #: build/all/app/install/qml/Settings.qml:168 qml/Settings.qml:168
 msgid "View optimized for car"
-msgstr "Vista optimizada pa coche"
+msgstr "عرض الأمثل للسيارة"
 
 #: build/all/app/install/qml/Settings.qml:181 qml/Settings.qml:181
 msgid "Will rotate the marker and not the map"
-msgstr "Rotará'l marcador y non el mapa"
+msgstr "سيتم تدوير العلامة وليس الخريطة\n"
+""
 
 #: build/all/app/install/qml/Settings.qml:243 qml/Settings.qml:243
 msgid "Set <i>Prevent app suspension</i> for OSM Scout Server."
-msgstr "Afita <i>Prevent app suspension</i> pa OSM Scout Server."
+msgstr "قم بتعيين <i> منع تعليق التطبيق </ i> لخادم OSM Scout.\n"
+""
 
 #: build/all/app/install/qml/Settings.qml:251 qml/Settings.qml:251
 msgid "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
-msgstr "<b>Pasu con cada usu</b>: Executa OSM Scout Server enantes qu'uNav."
+msgstr "قم بتعيين <i> منع تعليق التطبيق </i>  لـ  OSM Scout Server."
 
 #: build/all/app/install/qml/offlineLocation/Location.qml:101
 #: build/all/app/install/qml/onlineLocation/Location.qml:167
 #: qml/offlineLocation/Location.qml:101 qml/onlineLocation/Location.qml:167
 msgid "Place or location"
-msgstr "Llugar o localización"
+msgstr "المكان أو الموقع"
 
 #: nav/class/Navigator.js:240
 msgid "Your destination is near"
-msgstr "El to destín ta cerca"
+msgstr "وجهتك قريبة"
 
 #: nav/class/Navigator.js:242
 msgid "Enter the roundabout"
-msgstr "Entra na rotonda"
+msgstr "Enter the roundabout"
 
 #: nav/class/Navigator.js:244
 msgid "Enter the roundabout and take 1st exit"
-msgstr "Entra na rotonda y toma la 1er salida"
+msgstr "Enter the roundabout and take 1st exit"
 
 #: nav/class/Navigator.js:246
 msgid "Enter the roundabout and take 2nd exit"
-msgstr "Entra na rotonda y toma la 2ª salida"
+msgstr "Enter the roundabout and take 2nd exit"
 
 #: nav/class/Navigator.js:248
 msgid "Enter the roundabout and take 3th exit"
-msgstr "Entra na rotonda y toma la 3er salida"
+msgstr "Enter the roundabout and take 3th exit"
 
 #: nav/class/Navigator.js:250
 msgid "Enter the roundabout and take 4th exit"
-msgstr "Entra na rotonda y toma la 4ª salida"
+msgstr "Enter the roundabout and take 4th exit"
 
 #: nav/class/Navigator.js:252
 msgid "Follow the route line"
-msgstr "Siguí la llínea de la ruta"
+msgstr "Follow the route line"
 
 #: nav/class/Navigator.js:255
 msgid "Exit at"
-msgstr "Sal en"
+msgstr "Exit at"
 
 #: nav/class/Navigator.js:257
 msgid "Exit the roundabout"
-msgstr "Sal de la rotonda"
+msgstr "Exit the roundabout"
 
 #: nav/class/WebAPI.js:162 nav/class/WebAPI.js:230
 msgid "POIs loaded"
-msgstr "POIs cargados"
+msgstr "POIs loaded"
 
 #: nav/class/WebAPI.js:165 nav/class/WebAPI.js:233
 msgid "Not POIs found"
-msgstr "POIs non atopaos"
+msgstr "Not POIs found"
 
 #: nav/class/WebAPI.js:169 nav/class/WebAPI.js:237
 msgid "There was an error"
-msgstr "Hebo un fallu"
+msgstr "There was an error"
 
 #: nav/index.html.strings:3
 msgid "Center"
-msgstr "Centrar"
+msgstr "Center"
 
 #: qml/js/PoiCategories.js:13
 msgid "Charging Station"
-msgstr "Carga ellétrica"
+msgstr "Charging Station"
 
 #: qml/js/PoiCategories.js:37
 msgid "Drinking Water"
-msgstr "Agua potable"
+msgstr "Drinking Water"
 
 #: qml/js/PoiCategories.js:57
 msgid "Bureau de Change"
-msgstr "Cambíu de divisa"
+msgstr "Bureau de Change"
 
 #: qml/js/PoiCategories.js:83
 msgid "Arts Centre"
-msgstr "Centru d'arte"
+msgstr "Arts Centre"
 
 #: qml/js/PoiCategories.js:99
 msgid "School"
-msgstr "Escuela"
+msgstr "School"
 
 #: nav/class/Maths.js:61 nav/class/Maths.js:76
 msgid "Now"
-msgstr "Agora"
+msgstr "Now"
 
 #: nav/index.html:172 nav/index.html:183
 msgid "Waiting for GPS"
-msgstr "Esperando pol GPS"
+msgstr "Waiting for GPS"
 
 #: nav/index.html:240 nav/index.html:247
 msgid "GPS is ready"
-msgstr "GPS llistu"
+msgstr "GPS is ready"
 
 #: nav/index.html:259 nav/index.html:451
 msgid "Calculating route"
-msgstr "Calculando ruta"
+msgstr "Calculating route"
 
 #: nav/index.html:269
 msgid "Error searching route"
-msgstr "Fallu buscando ruta"
+msgstr "Error searching route"
 
 #: nav/index.html:306
 msgid "Out of route. Recalculating"
-msgstr "Fuera de ruta. Recalculando"
+msgstr "Out of route. Recalculating"
 
 #: nav/index.html:321
 msgid "Error. Recalculating again"
-msgstr "Fallu. Recalculando de nueves"
+msgstr "Error. Recalculating again"
 
 #: nav/index.html:463
 msgid "Route canceled"
-msgstr "Ruta cancelada"
+msgstr "Route canceled"
 
 #: nav/index.html:516
 msgid "Use more zoom for POIs"
-msgstr "Usa más zoom pa POIs"
+msgstr "Use more zoom for POIs"
 
 #: nav/index.html:347
 msgid "You have arrived"
-msgstr "Llegaste"
+msgstr "You have arrived"
 
 #: nav/index.html.strings:2
 msgid "Start"
-msgstr "Entamar"
+msgstr "Start"
 
