@@ -16,8 +16,8 @@
 Navigator.prototype.IS_IN_ROUTE = 60;
 Navigator.prototype.DIST4INDICATION = 110;
 Navigator.prototype.CITY = 58;
-Navigator.prototype.HIGHWAY = 94;
-Navigator.prototype.HIGHSPEED = 105;
+Navigator.prototype.HIGHWAY = 80;
+Navigator.prototype.HIGHSPEED = 100;
 
 function Navigator() {
 	this.pos = new Object();
