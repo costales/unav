@@ -175,6 +175,7 @@ Item {
             }
             onTextChanged: {
                 navApp.settings.lastSearchString = text;
+                sortedSearchModel.clear();
             }
         }
     }

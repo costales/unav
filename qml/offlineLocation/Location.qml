@@ -109,6 +109,7 @@ Item {
             }
             onTextChanged: {
                 navApp.settings.lastSearchString = text;
+                searchModel.clear();
             }
         }
     }
