@@ -28,8 +28,8 @@ Item {
     property ListView flickable: listView
 
     Component.onCompleted: {
-        if (mainPageStack.lastSearchResultsOffline) {
-            var json = JSON.parse(mainPageStack.lastSearchResultsOffline);
+        if (navApp.settings.lastSearchResultsOffline) {
+            var json = JSON.parse(navApp.settings.lastSearchResultsOffline);
             searchModel.loadList(json.result);
         }
     }
@@ -128,17 +128,17 @@ Item {
                 statusLabel.text = "";
                 var json = JSON.parse(request.responseText);
                 if (json.result.length > 0) {
-                    mainPageStack.lastSearchResultsOffline = request.responseText;
+                    navApp.settings.lastSearchResultsOffline = request.responseText;
                     searchModel.loadList(json.result);
                 }
                 else {
-                    mainPageStack.lastSearchResultsOffline = "";
+                    navApp.settings.lastSearchResultsOffline = "";
                     statusLabel.text = i18n.tr("Nothing found");
                 }
             }
         }
         request.onerror = function () {
-            mainPageStack.lastSearchResultsOffline = "";
+            navApp.settings.lastSearchResultsOffline = "";
             statusLabel.text = i18n.tr("Time out!");
         };
         request.send();

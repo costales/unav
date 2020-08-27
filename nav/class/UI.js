@@ -17,6 +17,7 @@ UI.prototype.ZOOM = 17;
 
 function UI() {
 	this.center_pos = false;
+	this.follow_pos = false;
 	this.searchPageWith2Columns = 1;
 }
 
@@ -31,8 +32,18 @@ UI.prototype.get_center_pos = function() {
 	return this.center_pos;
 }
 
+UI.prototype.get_follow_pos = function() {
+	return this.follow_pos;
+}
+
+UI.prototype.set_follow_pos = function(status) {
+	this.follow_pos = status;
+}
+
 UI.prototype.set_center_pos = function(status) {
-	this.center_pos = status; 
+	this.center_pos = status;
+	this.follow_pos = status;
+
 	if (status) {
 		$("#pulsePosBtn").css("background", "white");
 		$("#geo").attr("src", "img/ui/geoEnabled.svg");
@@ -44,6 +55,9 @@ UI.prototype.set_center_pos = function(status) {
 		$("#geo").attr("src", "img/ui/geoDisabled.svg");
 		$("#pulsePosBtn").css("animation", "");
 	}
+
+	if (!status && nav.get_data().mode.startsWith('route_'))
+		$("#panelRecenterRoute").show();	
 }		
 
 UI.prototype.play_test = function() {
@@ -157,6 +171,9 @@ UI.prototype.set_confirm_btns = function(mode) {
 			$("#btnModeWalkConfirm").css("background-color", "#335280");
 			break;
 		}
+		$("#btnCenter").html(t("Center"));
+		$("#btnCancel").html(t("Cancel"));
+		$("#btnStart").html(t("Start"));
 }
 
 // Search page has a big height and the panels are hidden
@@ -213,7 +230,7 @@ UI.prototype.map_resize = function(percentage) {
 
 UI.prototype.update_map_view = function(nav_data) {
 	// Center map?
-	if (ui.get_center_pos())
+	if (this.get_center_pos() || this.get_follow_pos())
 		mapUI.set_map_center(nav_data.lng, nav_data.lat);
 	
 	// Compass
@@ -250,7 +267,7 @@ UI.prototype.update_map_view = function(nav_data) {
 			// Rotate
 			if (settings.get_rotate_map()) {
 				this.map_resize("140%");
-				if (ui.get_center_pos()) {
+				if (this.get_center_pos()) {
 					var rotation = maths.get_angle(true, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
 					if (rotation != null)
 						mapUI.set_map_rotate(rotation);
@@ -272,7 +289,7 @@ UI.prototype.update_map_view = function(nav_data) {
 			}
 			
 			// Zoom
-			if (ui.get_center_pos()) {
+			if (this.get_center_pos()) {
 				var max_zoom = this.ZOOM;
 				if (nav_data.speed > nav.CITY)
 					max_zoom--; 

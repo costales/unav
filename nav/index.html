@@ -166,7 +166,6 @@
 			if (ui.get_center_pos())
 				return;
 			
-			ui.set_center_pos(true);
 			if (id_gps) {
 				if (nav.get_data().lng === null) {
 					ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
@@ -183,6 +182,7 @@
 				ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
 				gps_start();
 			}
+			ui.set_center_pos(true);
 		}
 		
 		function gps_start() {
@@ -192,6 +192,7 @@
 				return;
 			}
 			/** TESTING BEGIN
+			**/
 			var route = [
 			[43.52964291495124,-5.659250590269857], [43.529588464721115,-5.659379336302572], [43.5295184572102,-5.659550997679525], [43.52939399921233,-5.659733387892538], [43.529316212833265,-5.659819218581014], [43.52926954095767,-5.659872862761312], [43.52922286904595,-5.660044524138265], [43.52918397575859,-5.66017327017098], [43.52916841843663,-5.660355660383993], [43.52916841843663,-5.660527321760946], [43.52918397575859,-5.660656067793661], [43.52922286904595,-5.660795542662435], [43.52923680759756,-5.661649703979492], [43.52937066330915,-5.661868426268392], [43.52980626534662,-5.661846968596273], [43.53014852188334,-5.661696764891439], [43.530576339823085,-5.661535832350546], [43.5310430468418,-5.66141781515389], [43.531494193527,-5.661278340285116], [43.531929780227784,-5.6611388654163415], [43.53232647252165,-5.660999390547567], [43.53228661229405,-5.660849186842733], [43.532403286078676,-5.660752627318197], [43.53254329432227,-5.660634610121542], [43.53304887694023,-5.660591694777303], [43.53328222133438,-5.660774084990316] 			
 			]
@@ -209,7 +210,6 @@
 			}, 700);
 			return;
 			/** TESTING END **/
-
 			id_gps = navigator.geolocation.watchPosition(
 				function (pos) {
 					if (pos.coords.longitude == nav.pos.lng && pos.coords.latitude == nav.pos.lat) // Same as previous
@@ -356,8 +356,7 @@
 		// Map events
 		var longtouch_id = 0; // Know when recovery georeverse data is the same point
 		var LongTouch = new ol.interaction.LongTouch({	
-			handleLongTouchEvent: function(evt)
-			{
+			handleLongTouchEvent: function(evt)	{
 				longtouch_id++;
 				if (longtouch_id > 20)
 					longtouch_id = 0;
@@ -376,15 +375,14 @@
 		});
 		map.addInteraction(LongTouch);
 		map.on('pointerdrag', function(evt) {
-			if (!ui.get_center_pos())
+			if (!ui.get_center_pos() && !ui.get_follow_pos())
 				return;
+			if (!ui.get_center_pos() && ui.get_follow_pos()) {
+				ui.set_follow_pos(false);
+				return;
+			}
 			mapUI.set_map_rotate(0);
 			ui.set_center_pos(false);
-			if (nav.get_data().mode.startsWith('route_'))
-				$("#panelRecenterRoute").show();	
-		});
-		map.on('dblclick', function(evt) {
-			// Nothing
 		});
 		map.on('singleclick', function(evt) {
 			// Attempt to find a feature in one of the visible vector layers
@@ -400,6 +398,7 @@
 						longtouch_id++;
 						var coords_aux = ol.proj.transform(mapUI.posFeature.getGeometry().getCoordinates(), 'EPSG:3857', 'EPSG:4326');
 						mapUI.set_map_center(coords_aux[0], coords_aux[1], true);
+						ui.set_follow_pos(true);
 						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsClickedOwnPos: true, iconsLng: coords_aux[0], iconsLat: coords_aux[1]});
 					}
 					if (props.name.startsWith("poi-")) {
@@ -446,7 +445,9 @@
 			}
 			else {
 				nav.set_data({mode: 'calculating_call_API', lng_start: nav.get_data().lng, lat_start: nav.get_data().lat, lng_end: lng, lat_end: lat});
+				set_new_pos();
 			}
+			qml_save_last_pos(lng, lat, mapUI.get_map_zoom());
 		}
 		function route_cancel() {
 			mapUI.clear_layer('route');
@@ -466,8 +467,8 @@
 			$("#panelConfirmRoute").hide();
 			$("#panelsNav").show();
 			ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-			ui.set_center_pos(true);
 			nav.set_data({mode: 'route_driving'});
+			ui.set_center_pos(true);
 		}
 		function mode_navigation(value) {
 			settings.set_route_mode(value);
@@ -513,8 +514,8 @@
 				ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Use more zoom for POIs"), iconsShow: 'no'});
 			}
 		}
-		function qml_save_last_pos() {
-			window.location = 'http://savelastpos/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0] + '/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1] + '/' + map.getView().getZoom();
+		function qml_save_last_pos(lng, lat, zoom) {
+			window.location = 'http://savelastpos/' + parseFloat(lng).toFixed(6) + '/' + parseFloat(lat).toFixed(6) + '/' + zoom;
 		}
 
 		function parse_gpx(gpx_content) {
@@ -617,8 +618,8 @@
 				<img class="btnsModeConfirm" id="btnModeWalkConfirm" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
 			</div>
 			<div id="btnsConfirm">
-				<button data-role='button' class='btns2_mode_route negative' onClick='route_cancel()' data-localize="Cancel">Cancel</button>
-				<button data-role='button' class='btns2_mode_route positive' onClick='route_start()' data-localize="Start">Start</button>
+				<button id="btnCancel" data-role='button' class='btns2_mode_route negative' onClick='route_cancel()'>Cancel</button>
+				<button id="btnStart" data-role='button' class='btns2_mode_route positive' onClick='route_start()'>Start</button>
 			</div>
 		</div>
 		<div id="bottomPanelConfirm">
@@ -630,7 +631,7 @@
 	<!-- Recenter route panel -->
 	<div id="panelRecenterRoute" onclick="center_pos()">
 		<img src="img/marker/car.svg">
-		<p data-localize="Center">Center</p>
+		<p id="btnCenter">Center</p>
 	</div>
 	
 

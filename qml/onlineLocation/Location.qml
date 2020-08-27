@@ -28,8 +28,8 @@ Item {
     property ListView flickable: listView
 
     Component.onCompleted: {
-        if (mainPageStack.lastSearchResultsOnline) {
-            var json = JSON.parse(mainPageStack.lastSearchResultsOnline);
+        if (navApp.settings.lastSearchResultsOnline) {
+            var json = JSON.parse(navApp.settings.lastSearchResultsOnline);
             sortedSearchModel.loadLastResults(json.results);
             listView.model = sortedSearchModel
             listView.delegate = searchDelegateComponent
@@ -41,12 +41,12 @@ Item {
 
         onStatusChanged: {
             if (status === XmlListModel.Error) {
-                mainPageStack.lastSearchResultsOnline = "";
+                navApp.settings.lastSearchResultsOnline = "";
                 statusLabel.text = i18n.tr("Time out!");
                 notFound.visible = true;
             }
             else if (status === XmlListModel.Ready && count === 0) {
-                mainPageStack.lastSearchResultsOnline = "";
+                navApp.settings.lastSearchResultsOnline = "";
                 statusLabel.text = i18n.tr("Nothing found")
                 notFound.visible = true;
             }
@@ -86,7 +86,7 @@ Item {
 
         function sortXmlList(){
             sortedSearchModel.clear();
-            mainPageStack.lastSearchResultsOnline = '{ "results": [';
+            navApp.settings.lastSearchResultsOnline = '{ "results": [';
             for (var i = 0; i < xmlSearchModel.count; i++) {
                 var item  = {
                     "name": xmlSearchModel.get(i).name,
@@ -97,11 +97,11 @@ Item {
                 };
                 sortedSearchModel.append(item);
                 if (i > 0)
-                    mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + ',';
-                mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + JSON.stringify(item);
+                    navApp.settings.lastSearchResultsOnline = navApp.settings.lastSearchResultsOnline + ',';
+                navApp.settings.lastSearchResultsOnline = navApp.settings.lastSearchResultsOnline + JSON.stringify(item);
             }
             xmlSearchModel.clear();
-            mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + "]}";
+            navApp.settings.lastSearchResultsOnline = navApp.settings.lastSearchResultsOnline + "]}";
         }
         function loadLastResults(json_results) {
             sortedSearchModel.clear();
