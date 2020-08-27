@@ -17,7 +17,6 @@ UI.prototype.ZOOM = 17;
 
 function UI() {
 	this.center_pos = false;
-	this.follow_pos = false;
 	this.searchPageWith2Columns = 1;
 }
 
@@ -32,17 +31,8 @@ UI.prototype.get_center_pos = function() {
 	return this.center_pos;
 }
 
-UI.prototype.get_follow_pos = function() {
-	return this.follow_pos;
-}
-
-UI.prototype.set_follow_pos = function(status) {
-	this.follow_pos = status;
-}
-
 UI.prototype.set_center_pos = function(status) {
 	this.center_pos = status;
-	this.follow_pos = status;
 
 	if (status) {
 		$("#pulsePosBtn").css("background", "white");
@@ -230,7 +220,7 @@ UI.prototype.map_resize = function(percentage) {
 
 UI.prototype.update_map_view = function(nav_data) {
 	// Center map?
-	if (this.get_center_pos() || this.get_follow_pos())
+	if (this.get_center_pos())
 		mapUI.set_map_center(nav_data.lng, nav_data.lat);
 	
 	// Compass

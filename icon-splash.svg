@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg style="enable-background:new" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" height="1024" width="1024" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+ <g style="enable-background:new" transform="translate(256 254)">
+  <g transform="translate(0,212)">
+   <g display="none">
+    <text id="context" style="enable-background:new" xml:space="preserve" display="inline" line-height="0%" y="-262.74414" x="-0.99316311" font-family="&apos;DejaVu Sans&apos;" fill="#000000"><tspan font-size="18px" line-height="1.25" y="-262.74414" x="-0.99316311" font-family="&apos;DejaVu Sans&apos;">apps</tspan></text>
+    <rect style="enable-background:accumulate" height="512" width="512" display="inline" y="-212" x="9.617e-7" fill="#666"/>
+    <text id="icon-name" style="enable-background:new" font-weight="bold" xml:space="preserve" display="inline" line-height="0%" y="-262.74414" x="94.488281" font-family="&apos;DejaVu Sans&apos;" fill="#000000"><tspan font-weight="bold" font-size="18px" line-height="1.25" y="-262.74414" x="94.488281" font-family="&apos;DejaVu Sans&apos;">icon-name</tspan></text>
+   </g>
+   <g>
+    <path opacity=".8" d="m340.9-40.85-198 84.85 84.8 28.28 28.3 84.82z" fill-rule="evenodd" fill="#fff"/>
+    <path opacity=".5" d="m340.9-40.85-198 84.85 84.8 28.28z" fill-rule="evenodd" fill="#fff"/>
+    <g fill-opacity=".08118" transform="matrix(.6592 0 0 .6592 -1143 -206.1)" stroke="#00f" display="none" fill="#00f">
+     <path d="m166 576.4h179.9c145.3 0 166 20.74 166 165.9v144.2c0 145.2-20.76 165.9-166 165.9h-179.9c-145.2 0-166-20-166-165.6v-144.2c0-145.1 20.76-165.9 166-165.9z" display="inline"/>
+     <circle style="color:#000000;enable-background:accumulate" cx="256" transform="matrix(1.2 0 0 1.2 -51.2 528.8)" display="inline" cy="238" r="120" stroke-width=".8333"/>
+     <rect stroke-linejoin="round" style="color:#000000;enable-background:accumulate" display="inline" height="272" width="272" stroke-linecap="round" y="678.4" x="120"/>
+     <rect stroke-linejoin="round" style="color:#000000;enable-background:accumulate" display="inline" height="240" width="304" stroke-linecap="round" y="694.4" x="104"/>
+     <rect stroke-linejoin="round" style="color:#000000;enable-background:accumulate" display="inline" height="304" width="240" stroke-linecap="round" y="662.4" x="136"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
