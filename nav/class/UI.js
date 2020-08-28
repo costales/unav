@@ -243,7 +243,7 @@ UI.prototype.update_map_view = function(nav_data) {
 		case 'route_ended':		
 			// Rotate
 			this.map_resize("100%");
-			var rotation = maths.get_angle(nav_data.mode, false, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
+			var rotation = maths.get_angle(false, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
 			mapUI.set_map_rotate(0);
 			if (rotation != null)
 				mapUI.set_marker_rotate(rotation);
@@ -257,13 +257,13 @@ UI.prototype.update_map_view = function(nav_data) {
 			if (settings.get_rotate_map()) {
 				this.map_resize("140%");
 				if (this.get_center_pos()) {
-					var rotation = maths.get_angle(nav_data.mode, true, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
+					var rotation = maths.get_angle(true, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
 					if (rotation != null)
 						mapUI.set_map_rotate(rotation);
 					mapUI.set_marker_rotate(0);
 				}
 				else {
-					var rotation = maths.get_angle(nav_data.mode, false, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
+					var rotation = maths.get_angle(false, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
 					mapUI.set_map_rotate(0);
 					if (rotation != null)
 						mapUI.set_marker_rotate(rotation);
@@ -271,7 +271,7 @@ UI.prototype.update_map_view = function(nav_data) {
 			}
 			else {
 				this.map_resize("100%");
-				var rotation = maths.get_angle(nav_data.mode, false, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
+				var rotation = maths.get_angle(false, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);
 				mapUI.set_map_rotate(0);
 				if (rotation != null)
 					mapUI.set_marker_rotate(rotation);

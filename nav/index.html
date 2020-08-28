@@ -278,6 +278,7 @@
 					for (k=0; k<route_line.points.length; k++)
 						for (l=0; l<route_line.points[k].length; l++)
 							coords_aux.push(route_line.points[k][l]);
+					poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
 					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
 					mapUI.show_route(coords_aux, 'route', true);
 					nav.set_data({mode: 'route_confirm'});
@@ -373,7 +374,7 @@
 					webapi.georeverse_online(coord[0], coord[1], longtouch_id);
 				else
 					webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
-			}, delay: 500
+			}, delay: 350
 		});
 		map.addInteraction(LongTouch);
 		map.on('pointerdrag', function(evt) {
