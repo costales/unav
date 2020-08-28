@@ -70,7 +70,6 @@
 
 
 	<!-- Map -->
-	<script src="libraries/polyfill.min.js?features=fetch,Promise"></script>
 	<script src="libraries/ol.js"></script>
 	<script src="libraries/ol-ext.min.js"></script>
 	<script src="libraries/olms.js"></script>
@@ -188,7 +187,7 @@
 		function gps_start() {
 			console.log('Starting GPS...');
 			if (!navigator.geolocation) {
-				ui.POIPanel({msgShow: 'yes', msgText: t("ERROR: No geolocation"), msgAutohide: true, msgBGColor: 'error', iconsShow: 'no'});
+				ui.POIPanel({msgShow: 'yes', msgText: t("ERROR: No geolocation"), msgBGColor: 'error', iconsShow: 'no'});
 				return;
 			}
 			/** TESTING BEGIN
@@ -256,7 +255,9 @@
 						webapi.route_online(nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
 					else
 						webapi.route_offline(nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
-					ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+					// Avoid animations
+					if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>')
+						ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
 					break;
 				case 'calculating_waiting_result':
 					break;
@@ -279,7 +280,6 @@
 							coords_aux.push(route_line.points[k][l]);
 					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
 					mapUI.show_route(coords_aux, 'route', true);
-
 					nav.set_data({mode: 'route_confirm'});
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 					$("#panelConfirmRoute").show();
@@ -466,6 +466,8 @@
 			ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 			nav.set_data({mode: 'route_driving'});
 			ui.set_center_pos(true);
+			ui.update_pos(nav.get_data());
+			ui.update_map_view(nav.get_data());
 		}
 		function mode_navigation(value) {
 			settings.set_route_mode(value);
@@ -628,7 +630,7 @@
 	<!-- Recenter route panel -->
 	<div id="panelRecenterRoute" onclick="center_pos()">
 		<img src="img/marker/car.svg">
-		<p id="btnCenter">Center</p>
+		<p id="btnCenter" data-localize="Center">Center</p>
 	</div>
 	
 

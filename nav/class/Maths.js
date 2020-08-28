@@ -38,9 +38,14 @@ Maths.prototype.rad2deg = function(radians) {
 	return turf.radiansToDegrees(radians);
 }
 
-Maths.prototype.get_angle = function(rotate_map, long1, lat1, long2, lat2) {
-	if (turf.distance(turf.point([long1, lat1]), turf.point([long2, lat2])) < 0.00138889) // 1m
-		return null;
+Maths.prototype.get_angle = function(mode, rotate_map, long1, lat1, long2, lat2) {
+	// Avoid rotations when stop
+	dist_btw_points = turf.point([long1, lat1], turf.point([long2, lat2]));
+	if (mode == 'car' && dist_btw_points < 0.00277778) // 10km/h
+		return;
+	if (mode == 'bike' && dist_btw_points < 0.00152778) // 5.5km/h
+		return;
+	
 	var angle = Math.trunc(turf.bearing(turf.point([long1, lat1]), turf.point([long2, lat2])));
 	if (rotate_map)
 		angle = (-angle + 360) % 360;
