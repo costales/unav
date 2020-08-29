@@ -160,6 +160,7 @@ WebAPI.prototype.OK_POIsOffline = function(data, icon) {
 			}], 'poi');
 		}
 		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("POIs loaded"), iconsShow: 'no'});
+		ui.set_center_pos(false);
 	}
 	else {
 		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Not POIs found"), iconsShow: 'no'});
@@ -228,6 +229,7 @@ WebAPI.prototype.OK_POIsOnline = function(data, icon) {
 			}], 'poi');
 		}
 		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("POIs loaded"), iconsShow: 'no'});
+		ui.set_center_pos(false);
 	}
 	else {
 		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Not POIs found"), iconsShow: 'no'});

@@ -165,6 +165,7 @@
 			if (ui.get_center_pos())
 				return;
 			
+			ui.set_center_pos(true);
 			if (id_gps) {
 				if (nav.get_data().lng === null) {
 					ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
@@ -172,7 +173,7 @@
 				else {
 					if (mapUI.get_map_zoom() < ui.ZOOM-2)
 						mapUI.set_map_zoom(ui.ZOOM-1);
-					mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
+					ui.update_map_view(nav.get_data());
 				}
 			}
 			else {
@@ -181,7 +182,6 @@
 				ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
 				gps_start();
 			}
-			ui.set_center_pos(true);
 		}
 		
 		function gps_start() {
@@ -331,7 +331,6 @@
 					mapUI.show_route(coords_aux, 'route');
 					poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
 					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
-
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 					var nav_navigation = nav.get_data_navigation();
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
@@ -351,7 +350,6 @@
 				case 'route_ended': // Wait for user to cancel it or start another one
 					break;
 			}
-
 			ui.update_pos(nav_data);
 			ui.update_map_view(nav_data);
 		}
@@ -365,9 +363,9 @@
 					longtouch_id = 0;
 				var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 				coord[0] = utils.fix_lng(coord[0]);
+				poiClick.show(evt.coordinate);
 				mapUI.clear_layer('poi');
 				ui.set_center_pos(false);
-				poiClick.show(evt.coordinate);
 				mapUI.set_map_center(coord[0], coord[1], true);
 				ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
 				if (settings.get_online())
@@ -380,7 +378,6 @@
 		map.on('pointerdrag', function(evt) {
 			if (!ui.get_center_pos())
 				return;
-			mapUI.set_map_rotate(0);
 			ui.set_center_pos(false);
 		});
 		map.on('singleclick', function(evt) {
@@ -401,6 +398,7 @@
 					}
 					if (props.name.startsWith("poi-")) {
 						longtouch_id++;
+						ui.set_center_pos(false);
 						mapUI.set_map_center(coord[0], coord[1], true);
 						if (props.title)
 							ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: props.title, iconsShow: 'yes', iconsLng: props.lng, iconsLat: props.lat, iconsPhone: props.phone, iconsWebsite: props.website, iconsEmail: props.email});
@@ -460,6 +458,7 @@
 			else
 				ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 			nav.set_data({mode: 'exploring'});
+			ui.update_map_view(nav.get_data());
 		}
 		function route_start() {
 			$("#panelConfirmRoute").hide();
@@ -467,7 +466,6 @@
 			ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 			nav.set_data({mode: 'route_driving'});
 			ui.set_center_pos(true);
-			ui.update_pos(nav.get_data());
 			ui.update_map_view(nav.get_data());
 		}
 		function mode_navigation(value) {
@@ -485,8 +483,8 @@
 			var bounding = boundingbox || "";
 			var is_favorite = favorite || false;
 
-			ui.set_center_pos(false);
 			mapUI.clear_layer('poi');
+			ui.set_center_pos(false);
 			if (bounding) {
 				var coords_bound = boundingbox.split(',');
 				mapUI.set_map_fit_box(parseFloat(coords_bound[2]), parseFloat(coords_bound[0]), parseFloat(coords_bound[3]), parseFloat(coords_bound[1]));

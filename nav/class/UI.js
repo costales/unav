@@ -44,10 +44,13 @@ UI.prototype.set_center_pos = function(status) {
 		$("#pulsePosBtn").css("background", "#4d4d4d");
 		$("#geo").attr("src", "img/ui/geoDisabled.svg");
 		$("#pulsePosBtn").css("animation", "");
+
+		mapUI.set_map_rotate(0);
+		this.map_resize("100%");
 	}
 
 	if (!status && nav.get_data().mode.startsWith('route_'))
-		$("#panelRecenterRoute").show();	
+		$("#panelRecenterRoute").show();
 }		
 
 UI.prototype.play_test = function() {
@@ -254,7 +257,7 @@ UI.prototype.update_map_view = function(nav_data) {
 		case 'route_out_waiting_result':
 		case 'route_out_calculating_error':
 			// Rotate
-			if (settings.get_rotate_map()) {
+			if (settings.get_rotate_map() && this.get_center_pos()) {
 				this.map_resize("140%");
 				if (this.get_center_pos()) {
 					var rotation = maths.get_angle(true, nav_data.lng_prev, nav_data.lat_prev, nav_data.lng, nav_data.lat);

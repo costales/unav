@@ -16,11 +16,27 @@
  MapUI.prototype.TIME_ANIMATION = 400;
 
 function MapUI() {
-    this.markerPOISource = new ol.source.Vector({});
-	this.layerPOI = new ol.layer.Vector({source: this.markerPOISource});
-	map.addLayer(this.layerPOI);
-	this.layerPOI.setZIndex(100);
-	this.layerPOI.set('name', 'poi');
+	this.GPXSource = new ol.source.Vector({});
+	this.layerGPX = new ol.layer.Vector({
+		source: this.GPXSource,
+		style: [
+			new ol.style.Style({
+				stroke: new ol.style.Stroke({
+					color: '#ffdbde',
+					width: 6
+				})
+			}),
+			new ol.style.Style({
+				stroke: new ol.style.Stroke({
+					color: '#ff0015',
+					width: 4
+				})
+			})
+		]
+	});
+	map.addLayer(this.layerGPX);
+	this.layerGPX.setZIndex(100);
+	this.layerGPX.set('name', 'gpx');
 
 	this.RouteSource = new ol.source.Vector({});
 	this.layerRoute = new ol.layer.Vector({
@@ -43,28 +59,12 @@ function MapUI() {
 	map.addLayer(this.layerRoute);
 	this.layerRoute.setZIndex(101);
 	this.layerRoute.set('name', 'route');
-	
-	this.GPXSource = new ol.source.Vector({});
-	this.layerGPX = new ol.layer.Vector({
-		source: this.GPXSource,
-		style: [
-			new ol.style.Style({
-				stroke: new ol.style.Stroke({
-					color: '#ffdbde',
-					width: 6
-				})
-			}),
-			new ol.style.Style({
-				stroke: new ol.style.Stroke({
-					color: '#ff0015',
-					width: 4
-				})
-			})
-		]
-	});
-	map.addLayer(this.layerGPX);
-	this.layerGPX.setZIndex(102);
-	this.layerGPX.set('name', 'gpx');
+
+	this.markerPOISource = new ol.source.Vector({});
+	this.layerPOI = new ol.layer.Vector({source: this.markerPOISource});
+	map.addLayer(this.layerPOI);
+	this.layerPOI.setZIndex(102);
+	this.layerPOI.set('name', 'poi');
 
 	this.posFeature = new ol.Feature({
         geometry: new ol.geom.Point(ol.proj.fromLonLat([-5.7,43.533333])),
