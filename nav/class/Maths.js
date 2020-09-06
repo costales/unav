@@ -96,7 +96,7 @@ Maths.prototype.time2human = function(seconds, ETA) {
 			else
 				return ("< 1min");
 		else
-			return (h.toString() + 'h' + m.toString() + 'min');
+			return (h.toString() + 'h ' + m.toString() + 'min');
 	}
 }
 
