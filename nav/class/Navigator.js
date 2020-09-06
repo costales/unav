@@ -13,8 +13,8 @@
  * GNU General Public License for more details.
  */
 
-Navigator.prototype.IS_IN_ROUTE = 60;
-Navigator.prototype.DIST4INDICATION = 110;
+Navigator.prototype.IS_IN_ROUTE = 75;
+Navigator.prototype.DIST4INDICATION = 100;
 Navigator.prototype.CITY = 58;
 Navigator.prototype.HIGHWAY = 80;
 Navigator.prototype.HIGHSPEED = 100;
@@ -403,19 +403,19 @@ Navigator.prototype.update = function() {
 	// Calculate distance to end of step for end of route and speak depeding of speed and mode route
 	switch(settings.get_route_mode()) {
 		case 'car':
-			var speak4speed = 1.0;
-			if (this.speed > this.CITY)
-				speak4speed = 2.7;
-			if (this.speed > this.HIGHWAY)
-				speak4speed = 3.5;
-			if (this.speed > this.HIGHSPEED)
-				speak4speed = 4.2;
+			var speak4speed = 1.2;
+			if (this.pos.speed > this.CITY)
+				speak4speed = 3;
+			if (this.pos.speed > this.HIGHWAY)
+				speak4speed = 5;
+			if (this.pos.speed > this.HIGHSPEED)
+				speak4speed = 7;
 			break;
 		case 'bike':
-			var speak4speed = 0.60;
+			var speak4speed = 0.75;
 			break;
 		case 'walk':
-			var speak4speed = 0.35;
+			var speak4speed = 0.40;
 			break;
 		}
 	var dist4indication_aux = this.DIST4INDICATION * speak4speed;

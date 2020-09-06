@@ -101,10 +101,7 @@ Maths.prototype.time2human = function(seconds, ETA) {
 }
 
 Maths.prototype.speed2human = function(ms) {
-	if (ms !== null)
-		return Math.trunc(ms * this.MS2KMH);
-	else
-		return 0;
+	return Math.trunc(ms * this.MS2KMH);
 }
 
 Maths.prototype.decode_API_line = function(encoded) {
