@@ -22,14 +22,8 @@ function MapUI() {
 		style: [
 			new ol.style.Style({
 				stroke: new ol.style.Stroke({
-					color: '#ffdbde',
-					width: 6
-				})
-			}),
-			new ol.style.Style({
-				stroke: new ol.style.Stroke({
 					color: '#ff0015',
-					width: 4
+					width: 5
 				})
 			})
 		]
@@ -44,14 +38,8 @@ function MapUI() {
 		style: [
 			new ol.style.Style({
 				stroke: new ol.style.Stroke({
-					color: '#9d8cff',
-					width: 6
-				})
-			}),
-			new ol.style.Style({
-				stroke: new ol.style.Stroke({
 					color: '#5846c5',
-					width: 4
+					width: 5
 				})
 			})
 		]
