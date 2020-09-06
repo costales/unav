@@ -28,42 +28,9 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs38">
-    <filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Drop Shadow"
-       id="filter210">
-      <feFlood
-         flood-opacity="0.498039"
-         flood-color="rgb(0,0,0)"
-         result="flood"
-         id="feFlood200" />
-      <feComposite
-         in="flood"
-         in2="SourceGraphic"
-         operator="in"
-         result="composite1"
-         id="feComposite202" />
-      <feGaussianBlur
-         in="composite1"
-         stdDeviation="1"
-         result="blur"
-         id="feGaussianBlur204" />
-      <feOffset
-         dx="1"
-         dy="1"
-         result="offset"
-         id="feOffset206" />
-      <feComposite
-         in="SourceGraphic"
-         in2="offset"
-         operator="over"
-         result="composite2"
-         id="feComposite208" />
-    </filter>
-  </defs>
+     id="defs38" />
   <sodipodi:namedview
-     pagecolor="#d0d0d0"
+     pagecolor="#bcbcbc"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
@@ -75,243 +42,227 @@
      inkscape:window-height="824"
      id="namedview36"
      showgrid="false"
-     inkscape:zoom="1.3037281"
-     inkscape:cx="632.31801"
-     inkscape:cy="529.04759"
+     inkscape:zoom="0.32593203"
+     inkscape:cx="111.99007"
+     inkscape:cy="405.64953"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg34" />
   <g
-     style="enable-background:new;filter:url(#filter210)"
-     transform="translate(256 254)"
+     style="enable-background:new"
+     transform="matrix(1.45,0,0,1.45,161.245,120.31875)"
      id="g32">
     <g
        transform="translate(0,212)"
        id="g30">
       <g
          display="none"
-         id="g10">
+         id="g10"
+         style="display:none">
         <text
            id="context"
-           style="enable-background:new"
-           xml:space="preserve"
+           style="line-height:0%;font-family:'DejaVu Sans';display:inline;fill:#000000;enable-background:new"
            display="inline"
-           line-height="0%"
+           xml:space="preserve"
            y="-262.74414"
            x="-0.99316311"
-           font-family="'DejaVu Sans'"
-           fill="#000000"><tspan
+           line-height="0%"><tspan
              font-size="18px"
-             line-height="1.25"
              y="-262.74414"
              x="-0.99316311"
-             font-family="'DejaVu Sans'"
-             id="tspan2">apps</tspan></text>
+             line-height="1.25"
+             id="tspan2"
+             style="font-size:18px;line-height:1.25;font-family:'DejaVu Sans'">apps</tspan></text>
         <rect
-           style="enable-background:accumulate"
+           style="display:inline;fill:#666666;enable-background:accumulate"
            height="512"
            width="512"
-           display="inline"
            y="-212"
-           x="9.617e-7"
-           fill="#666"
+           x="9.6170004e-07"
+           display="inline"
            id="rect5" />
         <text
            id="icon-name"
-           style="enable-background:new"
-           font-weight="bold"
-           xml:space="preserve"
+           style="font-weight:bold;line-height:0%;font-family:'DejaVu Sans';display:inline;fill:#000000;enable-background:new"
            display="inline"
-           line-height="0%"
+           xml:space="preserve"
            y="-262.74414"
            x="94.488281"
-           font-family="'DejaVu Sans'"
-           fill="#000000"><tspan
-             font-weight="bold"
+           font-weight="bold"
+           line-height="0%"><tspan
              font-size="18px"
-             line-height="1.25"
              y="-262.74414"
              x="94.488281"
-             font-family="'DejaVu Sans'"
-             id="tspan7">icon-name</tspan></text>
+             font-weight="bold"
+             line-height="1.25"
+             id="tspan7"
+             style="font-weight:bold;font-size:18px;line-height:1.25;font-family:'DejaVu Sans'">icon-name</tspan></text>
       </g>
       <g
          id="g28">
         <path
-           opacity=".8"
-           d="m340.9-40.85-198 84.85 84.8 28.28 28.3 84.82z"
-           fill-rule="evenodd"
-           fill="#fff"
-           id="path12" />
+           d="M 340.9,-40.85 142.9,44 227.7,72.28 256,157.1 Z"
+           id="path12"
+           inkscape:connector-curvature="0"
+           style="opacity:0.8;fill:#ffffff;fill-rule:evenodd" />
         <path
-           opacity=".5"
-           d="m340.9-40.85-198 84.85 84.8 28.28z"
-           fill-rule="evenodd"
-           fill="#fff"
-           id="path14" />
+           d="M 340.9,-40.85 142.9,44 227.7,72.28 Z"
+           id="path14"
+           inkscape:connector-curvature="0"
+           style="opacity:0.5;fill:#ffffff;fill-rule:evenodd" />
         <g
-           fill-opacity=".08118"
-           transform="matrix(.6592 0 0 .6592 -1143 -206.1)"
-           stroke="#00f"
+           transform="matrix(0.6592,0,0,0.6592,-1143,-206.1)"
            display="none"
-           fill="#00f"
-           id="g26">
+           id="g26"
+           style="display:none;fill:#0000ff;fill-opacity:0.08117999;stroke:#0000ff">
           <path
-             d="m166 576.4h179.9c145.3 0 166 20.74 166 165.9v144.2c0 145.2-20.76 165.9-166 165.9h-179.9c-145.2 0-166-20-166-165.6v-144.2c0-145.1 20.76-165.9 166-165.9z"
+             d="m 166,576.4 h 179.9 c 145.3,0 166,20.74 166,165.9 v 144.2 c 0,145.2 -20.76,165.9 -166,165.9 H 166 C 20.8,1052.4 0,1032.4 0,887.2 V 743 C 0,597.9 20.76,577.1 166,577.1 Z"
              display="inline"
-             id="path16" />
+             id="path16"
+             inkscape:connector-curvature="0"
+             style="display:inline" />
           <circle
-             style="color:#000000;enable-background:accumulate"
+             style="color:#000000;display:inline;stroke-width:0.83329999;enable-background:accumulate"
              cx="256"
-             transform="matrix(1.2 0 0 1.2 -51.2 528.8)"
-             display="inline"
+             transform="matrix(1.2,0,0,1.2,-51.2,528.8)"
              cy="238"
              r="120"
-             stroke-width=".8333"
+             display="inline"
              id="circle18" />
           <rect
-             stroke-linejoin="round"
-             style="color:#000000;enable-background:accumulate"
-             display="inline"
+             style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate"
              height="272"
              width="272"
-             stroke-linecap="round"
-             y="678.4"
+             y="678.40002"
              x="120"
+             display="inline"
              id="rect20" />
           <rect
-             stroke-linejoin="round"
-             style="color:#000000;enable-background:accumulate"
-             display="inline"
+             style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate"
              height="240"
              width="304"
-             stroke-linecap="round"
-             y="694.4"
+             y="694.40002"
              x="104"
+             display="inline"
              id="rect22" />
           <rect
-             stroke-linejoin="round"
-             style="color:#000000;enable-background:accumulate"
-             display="inline"
+             style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate"
              height="304"
              width="240"
-             stroke-linecap="round"
-             y="662.4"
+             y="662.40002"
              x="136"
+             display="inline"
              id="rect24" />
         </g>
       </g>
     </g>
   </g>
   <g
-     id="g267">
+     style="enable-background:new"
+     transform="matrix(1.45,0,0,1.45,161.245,120.31875)"
+     id="g32-3">
     <g
-       id="g32-3"
-       transform="translate(256,254)"
-       style="enable-background:new">
+       transform="translate(0,212)"
+       id="g30-6">
       <g
-         id="g30-6"
-         transform="translate(0,212)">
-        <g
-           id="g10-7"
-           display="none"
-           style="display:none">
-          <text
+         style="display:none"
+         display="none"
+         id="g10-7">
+        <text
+           id="context-5"
+           style="line-height:0%;font-family:'DejaVu Sans';display:inline;fill:#000000;enable-background:new"
+           display="inline"
+           xml:space="preserve"
+           y="-262.74414"
+           x="-0.99316311"
+           line-height="0%"><tspan
+             style="font-size:18px;line-height:1.25;font-family:'DejaVu Sans'"
+             font-size="18px"
+             y="-262.74414"
              x="-0.99316311"
+             line-height="1.25"
+             id="tspan2-3">apps</tspan></text>
+        <rect
+           style="display:inline;fill:#666666;enable-background:accumulate"
+           height="512"
+           width="512"
+           y="-212"
+           x="9.6170004e-07"
+           display="inline"
+           id="rect5-5" />
+        <text
+           id="icon-name-6"
+           style="font-weight:bold;line-height:0%;font-family:'DejaVu Sans';display:inline;fill:#000000;enable-background:new"
+           display="inline"
+           xml:space="preserve"
+           y="-262.74414"
+           x="94.488281"
+           font-weight="bold"
+           line-height="0%"><tspan
+             style="font-weight:bold;font-size:18px;line-height:1.25;font-family:'DejaVu Sans'"
+             font-size="18px"
              y="-262.74414"
-             line-height="0%"
-             display="inline"
-             xml:space="preserve"
-             style="line-height:0%;font-family:'DejaVu Sans';display:inline;fill:#000000;enable-background:new"
-             id="context-5"><tspan
-               id="tspan2-3"
-               x="-0.99316311"
-               y="-262.74414"
-               line-height="1.25"
-               font-size="18px"
-               style="font-size:18px;line-height:1.25;font-family:'DejaVu Sans'">apps</tspan></text>
-          <rect
-             id="rect5-5"
-             x="9.6170004e-07"
-             y="-212"
-             display="inline"
-             width="512"
-             height="512"
-             style="display:inline;fill:#666666;enable-background:accumulate" />
-          <text
              x="94.488281"
-             y="-262.74414"
-             line-height="0%"
-             display="inline"
-             xml:space="preserve"
              font-weight="bold"
-             style="font-weight:bold;line-height:0%;font-family:'DejaVu Sans';display:inline;fill:#000000;enable-background:new"
-             id="icon-name-6"><tspan
-               id="tspan7-2"
-               x="94.488281"
-               y="-262.74414"
-               line-height="1.25"
-               font-size="18px"
-               font-weight="bold"
-               style="font-weight:bold;font-size:18px;line-height:1.25;font-family:'DejaVu Sans'">icon-name</tspan></text>
-        </g>
+             line-height="1.25"
+             id="tspan7-2">icon-name</tspan></text>
+      </g>
+      <g
+         id="g28-9">
+        <path
+           style="opacity:0.8;fill:#ffffff;fill-rule:evenodd"
+           inkscape:connector-curvature="0"
+           d="M 340.9,-40.85 142.9,44 227.7,72.28 256,157.1 Z"
+           id="path12-1" />
+        <path
+           style="opacity:0.5;fill:#ffffff;fill-rule:evenodd"
+           inkscape:connector-curvature="0"
+           d="M 340.9,-40.85 142.9,44 227.7,72.28 Z"
+           id="path14-2" />
         <g
-           id="g28-9">
+           style="display:none;fill:#0000ff;fill-opacity:0.08117999;stroke:#0000ff"
+           transform="matrix(0.6592,0,0,0.6592,-1143,-206.1)"
+           display="none"
+           id="g26-7">
           <path
-             id="path12-1"
-             d="M 340.9,-40.85 142.9,44 227.7,72.28 256,157.1 Z"
+             style="display:inline"
              inkscape:connector-curvature="0"
-             style="opacity:0.8;fill:#ffffff;fill-rule:evenodd" />
-          <path
-             id="path14-2"
-             d="M 340.9,-40.85 142.9,44 227.7,72.28 Z"
-             inkscape:connector-curvature="0"
-             style="opacity:0.5;fill:#ffffff;fill-rule:evenodd" />
-          <g
-             id="g26-7"
-             display="none"
-             transform="matrix(0.6592,0,0,0.6592,-1143,-206.1)"
-             style="display:none;fill:#0000ff;fill-opacity:0.08117999;stroke:#0000ff">
-            <path
-               id="path16-0"
-               display="inline"
-               d="m 166,576.4 h 179.9 c 145.3,0 166,20.74 166,165.9 v 144.2 c 0,145.2 -20.76,165.9 -166,165.9 H 166 C 20.8,1052.4 0,1032.4 0,886.8 V 742.6 C 0,597.5 20.76,576.7 166,576.7 Z"
-               inkscape:connector-curvature="0"
-               style="display:inline" />
-            <circle
-               id="circle18-9"
-               r="120"
-               cy="238"
-               display="inline"
-               transform="matrix(1.2,0,0,1.2,-51.2,528.8)"
-               cx="256"
-               style="color:#000000;display:inline;stroke-width:0.83329999;enable-background:accumulate" />
-            <rect
-               id="rect20-3"
-               x="120"
-               y="678.40002"
-               width="272"
-               height="272"
-               display="inline"
-               style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate" />
-            <rect
-               id="rect22-6"
-               x="104"
-               y="694.40002"
-               width="304"
-               height="240"
-               display="inline"
-               style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate" />
-            <rect
-               id="rect24-0"
-               x="136"
-               y="662.40002"
-               width="240"
-               height="304"
-               display="inline"
-               style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate" />
-          </g>
+             d="m 166,576.4 h 179.9 c 145.3,0 166,20.74 166,165.9 v 144.2 c 0,145.2 -20.76,165.9 -166,165.9 H 166 C 20.8,1052.4 0,1032.4 0,887.2 V 743 C 0,597.9 20.76,577.1 166,577.1 Z"
+             display="inline"
+             id="path16-0" />
+          <circle
+             style="color:#000000;display:inline;stroke-width:0.83329999;enable-background:accumulate"
+             cx="256"
+             transform="matrix(1.2,0,0,1.2,-51.2,528.8)"
+             cy="238"
+             r="120"
+             display="inline"
+             id="circle18-9" />
+          <rect
+             style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate"
+             height="272"
+             width="272"
+             y="678.40002"
+             x="120"
+             display="inline"
+             id="rect20-3" />
+          <rect
+             style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate"
+             height="240"
+             width="304"
+             y="694.40002"
+             x="104"
+             display="inline"
+             id="rect22-6" />
+          <rect
+             style="color:#000000;display:inline;stroke-linecap:round;stroke-linejoin:round;enable-background:accumulate"
+             height="304"
+             width="240"
+             y="662.40002"
+             x="136"
+             display="inline"
+             id="rect24-0" />
         </g>
       </g>
     </g>
