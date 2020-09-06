@@ -123,7 +123,7 @@ UI.prototype.POIPanel = function(data) {
 	}
 
 	if (msgAutohide)
-		$.doTimeout('autohideMsg', 2000, function(){
+		$.doTimeout('autohideMsg', 3500, function(){
 			$('#topPanelMsg').slideUp();
 			$("#topPanelIcons").css("box-shadow", "0px 2px 2px 0px rgba(184,184,184,1)");
 		});
