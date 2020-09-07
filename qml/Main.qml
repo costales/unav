@@ -173,7 +173,7 @@ MainView {
 				settings.focusOnNavigationEnabled: true
 				settings.webGLEnabled: true
 				settings.allowWindowActivationFromJavaScript: true
-				onNavigationRequested:{
+				onNavigationRequested: {
 					var url = request.url.toString().toLowerCase().split("/");
 					switch (url[2]) {
 						case "sharepos":
@@ -250,7 +250,7 @@ MainView {
 		}
 	}
 	
-	// Pos import
+	// Marker import
 	Connections {
 		target: UriHandler
 		onOpened: {
@@ -335,11 +335,15 @@ MainView {
             }
         }
     }
+
     Connections {
         target: Qt.application
-        onStateChanged:
-            if (Qt.application.state !== Qt.ApplicationActive) {
+        onStateChanged: {
+            if (Qt.application.state !== Qt.ApplicationActive)
 				mainPageStack.executeJavaScript("qml_save_last_pos()");
-            }
+			console.log('webview state:',_webview.recommendedState);
+			if (_webview.recommendedState == 2) // Discarded, then reload
+				_webview.reload();
+		}
     }
 }
