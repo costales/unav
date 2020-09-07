@@ -91,20 +91,16 @@ WebAPI.prototype.KO_georeverseOffline = function(data) {
 }
 
 WebAPI.prototype.POIsOffline = function(tag_poi, icon) {
-	// Get radius current map view
-	var size = map.getSize();
-    var center = map.getView().getCenter();
-    var sourceProj = map.getView().getProjection(); 
-    var extent = map.getView().calculateExtent(size);
-    extent = ol.proj.transformExtent(extent, sourceProj, 'EPSG:4326');
-    var posSW = [extent[0], extent[1]];
-    center = ol.proj.transform(center, sourceProj, 'EPSG:4326'); 
-    var wgs84Sphere = new ol.Sphere(6378137);
-    var centerToSW = Math.trunc(wgs84Sphere.haversineDistance(center, posSW));
+	// Get radius from center to SW
+    var extent = ol.proj.transformExtent(map.getView().calculateExtent(map.getSize()), map.getView().getProjection(), 'EPSG:4326');
+    var center = ol.proj.transform(map.getView().getCenter(), map.getView().getProjection(), 'EPSG:4326'); 
+	var dist_center2SW = Math.trunc(turf.distance(turf.point(center), turf.point([extent[0], extent[1]])) * 1000);
+	console.log(dist_center2SW);
+
     $.ajax({
 		url: 'http://localhost:8553/v1/guide',
 		data: {
-			radius: centerToSW,
+			radius: dist_center2SW,
 			limit: 250,
 			lng: ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0],
 			lat: ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1],
