@@ -38,7 +38,7 @@
 		// Load locale
 		function UrlExists(url)
 		{
-			let http = new XMLHttpRequest();
+			var http = new XMLHttpRequest();
 			try {
 				http.open('HEAD', url, false);
 				http.send();
@@ -83,13 +83,13 @@
 			})
 		});
 		var scale_line = new ol.control.ScaleLine();
-		let view = new ol.View({
+		var view = new ol.View({
 			center: ol.proj.fromLonLat([4.666389, 50.009167]),
 			zoom: 4,
 			minZoom: 2,
 			maxZoom: 18
 		});
-		let interactions = ol.interaction.defaults({
+		var interactions = ol.interaction.defaults({
 			altShiftDragRotate: false,
 			pinchRotate: false
 		});
@@ -106,7 +106,7 @@
 		var poiClick = new ol.Overlay.Placemark({popupClass: "poiClick"});
 		map.addOverlay(poiClick);
 		$('.poiClick').click(function () { // map event doesn't capture this one
-			let coord = ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326');
+			var coord = ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326');
 			coord[0] = utils.fix_lng(coord[0]);
 			ui.set_center_pos(false);
 			mapUI.set_map_center(coord[0], coord[1], true);
@@ -115,7 +115,7 @@
 		var poiStart = new ol.Overlay.Placemark({ popupClass: 'flagv', color: '#080' });
 		map.addOverlay(poiStart);
 		$('.flagv').click(function () { // map event doesn't capture this one
-			let coord = ol.proj.transform(poiStart.getPosition(), 'EPSG:3857', 'EPSG:4326');
+			var coord = ol.proj.transform(poiStart.getPosition(), 'EPSG:3857', 'EPSG:4326');
 			coord[0] = utils.fix_lng(coord[0]);
 			ui.set_center_pos(false);
 			mapUI.set_map_center(coord[0], coord[1], true);
@@ -124,7 +124,7 @@
 		var poiEnd = new ol.Overlay.Placemark({ popupClass: 'flag finish', color: '#000' });
 		map.addOverlay(poiEnd);
 		$('.flag').click(function () { // map event doesn't capture this one
-			let coord = ol.proj.transform(poiEnd.getPosition(), 'EPSG:3857', 'EPSG:4326');
+			var coord = ol.proj.transform(poiEnd.getPosition(), 'EPSG:3857', 'EPSG:4326');
 			coord[0] = utils.fix_lng(coord[0]);
 			ui.set_center_pos(false);
 			mapUI.set_map_center(coord[0], coord[1], true);
@@ -160,7 +160,7 @@
 		var webapi   = new WebAPI();
 		var mapUI    = new MapUI();
 
-		let id_gps = 0;
+		var id_gps = 0;
 		function center_pos() {
 			if (ui.get_center_pos())
 				return;
@@ -192,10 +192,10 @@
 			}
 			/** TESTING BEGIN
 			**/
-			let route = [
+			var route = [
 			[43.52964291495124,-5.659250590269857], [43.529588464721115,-5.659379336302572], [43.5295184572102,-5.659550997679525], [43.52939399921233,-5.659733387892538], [43.529316212833265,-5.659819218581014], [43.52926954095767,-5.659872862761312], [43.52922286904595,-5.660044524138265], [43.52918397575859,-5.66017327017098], [43.52916841843663,-5.660355660383993], [43.52916841843663,-5.660527321760946], [43.52918397575859,-5.660656067793661], [43.52922286904595,-5.660795542662435], [43.52923680759756,-5.661649703979492], [43.52937066330915,-5.661868426268392], [43.52980626534662,-5.661846968596273], [43.53014852188334,-5.661696764891439], [43.530576339823085,-5.661535832350546], [43.5310430468418,-5.66141781515389], [43.531494193527,-5.661278340285116], [43.531929780227784,-5.6611388654163415], [43.53232647252165,-5.660999390547567], [43.53228661229405,-5.660849186842733], [43.532403286078676,-5.660752627318197], [43.53254329432227,-5.660634610121542], [43.53304887694023,-5.660591694777303], [43.53328222133438,-5.660774084990316] 			
 			]
-			let z1 = 0;
+			var z1 = 0;
 			id_gps = setInterval(function(){
 					accuracy = 300;
 					speed = 1;
@@ -224,7 +224,7 @@
 		}
 		
 		function set_new_pos() {
-			let nav_data = nav.get_data();
+			var nav_data = nav.get_data();
 			if (nav_data.lng_prev === null || nav_data.lat_prev === null)
 				return;
 			
@@ -273,8 +273,8 @@
 				case 'drawing':
 					ui.set_center_pos(false); // Needs for map.fit
 					mapUI.clear_layer('route');
-					let route_line = nav.get_data_line();
-					let coords_aux = [];
+					var route_line = nav.get_data_line();
+					var coords_aux = [];
 					for (k=0; k<route_line.points.length; k++)
 						for (l=0; l<route_line.points[k].length; l++)
 							coords_aux.push(route_line.points[k][l]);
@@ -285,14 +285,14 @@
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 					$("#panelConfirmRoute").show();
 				case 'route_confirm':
-					let nav_navigation= nav.get_data_navigation();
+					var nav_navigation= nav.get_data_navigation();
 					ui.set_confirm_btns(settings.get_route_mode());
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
 					break;
 				case 'route_driving':
 					nav.update();
-					let nav_navigation = nav.get_data_navigation();
+					var nav_navigation = nav.get_data_navigation();
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_navigation.percentage);
 					if (settings.get_speak())
@@ -323,8 +323,8 @@
 					break;
 				case 'route_out_drawing': // As drawing, but don't confirm
 					mapUI.clear_layer('route');
-					let route_line = nav.get_data_line();
-					let coords_aux = [];
+					var route_line = nav.get_data_line();
+					var coords_aux = [];
 					for (k=0; k<route_line.points.length; k++)
 						for (l=0; l<route_line.points[k].length; l++)
 							coords_aux.push(route_line.points[k][l]);
@@ -332,7 +332,7 @@
 					poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
 					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-					let nav_navigation = nav.get_data_navigation();
+					var nav_navigation = nav.get_data_navigation();
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
 					$("#panelsNav").show();
@@ -355,13 +355,13 @@
 		}
 
 		// Map events
-		let longtouch_id = 0; // Know when recovery georeverse data is the same point
-		let LongTouch = new ol.interaction.LongTouch({	
+		var longtouch_id = 0; // Know when recovery georeverse data is the same point
+		var LongTouch = new ol.interaction.LongTouch({	
 			handleLongTouchEvent: function(evt)	{
 				longtouch_id++;
 				if (longtouch_id > 20)
 					longtouch_id = 0;
-				let coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+				var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 				coord[0] = utils.fix_lng(coord[0]);
 				poiClick.show(evt.coordinate);
 				mapUI.clear_layer('poi');
@@ -382,17 +382,17 @@
 		});
 		map.on('singleclick', function(evt) {
 			// Attempt to find a feature in one of the visible vector layers
-			let feature = map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
+			var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
 				return feature;
 			});
 			if (feature) {
 				try {
-					let coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+					var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
 					coord[0] = utils.fix_lng(coord[0]);
-					let props = feature.getProperties();
+					var props = feature.getProperties();
 					if (props.name == 'pos') {
 						longtouch_id++;
-						let coords_aux = ol.proj.transform(mapUI.posFeature.getGeometry().getCoordinates(), 'EPSG:3857', 'EPSG:4326');
+						var coords_aux = ol.proj.transform(mapUI.posFeature.getGeometry().getCoordinates(), 'EPSG:3857', 'EPSG:4326');
 						mapUI.set_map_center(coords_aux[0], coords_aux[1], true);
 						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsClickedOwnPos: true, iconsLng: coords_aux[0], iconsLat: coords_aux[1]});
 					}
@@ -477,16 +477,16 @@
 
 		// Calls from QML
 		function import_marker(plng, plat, description, boundingbox, favorite) {
-			let lng = parseFloat(plng);
-			let lat = parseFloat(plat);
-			let title = description || "";
-			let bounding = boundingbox || "";
-			let is_favorite = favorite || false;
+			var lng = parseFloat(plng);
+			var lat = parseFloat(plat);
+			var title = description || "";
+			var bounding = boundingbox || "";
+			var is_favorite = favorite || false;
 
 			mapUI.clear_layer('poi');
 			ui.set_center_pos(false);
 			if (bounding) {
-				let coords_bound = boundingbox.split(',');
+				var coords_bound = boundingbox.split(',');
 				mapUI.set_map_fit_box(parseFloat(coords_bound[2]), parseFloat(coords_bound[0]), parseFloat(coords_bound[3]), parseFloat(coords_bound[1]));
 			}
 			else {
@@ -517,8 +517,8 @@
 		}
 
 		function parse_gpx(gpx_content) {
-			let coords = [];
-			let gpx = new gpxParser();
+			var coords = [];
+			var gpx = new gpxParser();
 			gpx.parse(gpx_content);
 			for (i = 0; i < gpx.tracks[0].points.length; i++)
 				coords.push([gpx.tracks[0].points[i].lon, gpx.tracks[0].points[i].lat]);
@@ -526,13 +526,13 @@
 			mapUI.clear_layer('gpx');
 			mapUI.show_route(coords, 'gpx', true);
 			if (settings.get_unit() == settings.KM)
-				let msg = parseFloat(maths.meter2km(gpx.tracks[0].distance.total)).toFixed(1) + 'km  ⬆' + Math.trunc(gpx.tracks[0].elevation.max) + 'm ' + ' ⬇' + Math.trunc(gpx.tracks[0].elevation.min) + 'm';
+				var msg = parseFloat(maths.meter2km(gpx.tracks[0].distance.total)).toFixed(1) + 'km  ⬆' + Math.trunc(gpx.tracks[0].elevation.max) + 'm ' + ' ⬇' + Math.trunc(gpx.tracks[0].elevation.min) + 'm';
 			else
-				let msg = parseFloat(maths.meter2mile(gpx.tracks[0].distance.total)).toFixed(1) + 'mi  ⬆' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.max)) + 'ft ' + ' ⬇' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.min)) + 'ft';
+				var msg = parseFloat(maths.meter2mile(gpx.tracks[0].distance.total)).toFixed(1) + 'mi  ⬆' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.max)) + 'ft ' + ' ⬇' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.min)) + 'ft';
 			ui.POIPanel({msgShow: 'yes', msgText: msg, iconsShow: 'no'});
 		}
 		function import_gpx(gpx) {
-			let xhr = new XMLHttpRequest;
+			var xhr = new XMLHttpRequest;
 			xhr.open("GET", gpx);
 			xhr.onreadystatechange = function() {
 				if (xhr.readyState == XMLHttpRequest.DONE) {
