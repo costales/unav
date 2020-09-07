@@ -501,7 +501,6 @@
 		}
 		function set_search_poi(POI, icon) {
 			mapUI.clear_layer('poi');
-			poiClick.hide();
 			if (mapUI.get_map_zoom() >= 7) {
 				if (settings.get_online())
 					webapi.POIsOnline(POI, icon);
