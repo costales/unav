@@ -378,15 +378,12 @@ Navigator.prototype.update = function() {
 	var percentage_step_remain = Math.trunc((distance_to_end_of_step * 100) / this.route.steps[this.route.ind].distance_step);
 	this.route.steps[this.route.ind].distance = distance_to_end_of_step;
 	this.route.distance = distance_to_end_of_step;
-	this.route.duration = (this.route.steps[this.route.ind].duration_step * percentage_step_remain) / 100;
+	this.route.duration = Math.trunc((this.route.steps[this.route.ind].duration_step * percentage_step_remain) / 100);
 	for (i=this.route.ind+1; i<this.route.steps.length; i++) {
 		this.route.distance = this.route.distance + this.route.steps[i].distance_step;
 		this.route.duration = this.route.duration + this.route.steps[i].duration_step;
 	}
 	this.route.percentage = Math.trunc(100 - ((this.route.distance * 100) / this.route.distance_total));
-	this.route.distance = this.route.distance;
-	this.route.duration = this.route.duration;
-	this.route.percentage = this.route.percentage;
 
 	// On route?
 	if (out_meters > this.IS_IN_ROUTE)
@@ -413,7 +410,7 @@ Navigator.prototype.update = function() {
 		case 'walk':
 			var speak4speed = 0.40;
 			break;
-		}
+	}
 	var dist4indication_aux = this.DIST4INDICATION * speak4speed;
 
 	// Speak?

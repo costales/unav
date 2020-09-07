@@ -250,7 +250,7 @@ WebAPI.prototype.route_online = function(lng_from, lat_from, lng_to, lat_to) {
 		case 'walk':
 			var routing_mode = 'foot-walking';
 			break;
-		}
+	}
 	$.ajax({
 		url: 'https://api.openrouteservice.org/v2/directions/' + routing_mode,
 		data: {
