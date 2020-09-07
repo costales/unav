@@ -262,9 +262,9 @@ Navigator.prototype.parse_name = function(type, name) {
 
 Navigator.prototype.parse_data_online = function(data) {
 	this.route.ind = 0;
-	this.route.distance = parseInt(data.features[0].properties.summary.distance);
+	this.route.distance = data.features[0].properties.summary.distance;
 	this.route.distance_total = this.route.distance;
-	this.route.duration = parseInt(data.features[0].properties.summary.duration);
+	this.route.duration = data.features[0].properties.summary.duration;
 	this.route.percentage = 0;
 
 	this.route.bbox = [];
@@ -277,7 +277,7 @@ Navigator.prototype.parse_data_online = function(data) {
 	this.route.steps = [];
 	for (i=0; i<data.features[0].properties.segments[0].steps.length; i++) { // For each step
 		var points_aux = [];
-		for (j=0; j<data.features[0].properties.segments[0].steps[i].way_points.length-1; j++) { // Get all way points
+		for (j=0; j<data.features[0].properties.segments[0].steps[i].way_points.length-1; j++) { // Get all way_points
 			var ind_aux = data.features[0].properties.segments[0].steps[i].way_points[j];
 			while (ind_aux <= data.features[0].properties.segments[0].steps[i].way_points[j+1]) {
 				points_aux.push(data.features[0].geometry.coordinates[ind_aux]);
@@ -292,12 +292,12 @@ Navigator.prototype.parse_data_online = function(data) {
 		var name_parsed = this.parse_name(type_parsed, data.features[0].properties.segments[0].steps[i].name);
 		this.route.steps.push({
 			type: type_parsed,
-			name: name_parsed,
 			instruction: data.features[0].properties.segments[0].steps[i].instruction,
-			distance: parseInt(data.features[0].properties.segments[0].steps[i].distance),
-			distance_step: parseInt(data.features[0].properties.segments[0].steps[i].distance),
-			duration: parseInt(data.features[0].properties.segments[0].steps[i].duration),
-			duration_step: parseInt(data.features[0].properties.segments[0].steps[i].duration),
+			name: name_parsed,
+			distance: data.features[0].properties.segments[0].steps[i].distance,
+			duration: data.features[0].properties.segments[0].steps[i].duration,
+			distance_step: data.features[0].properties.segments[0].steps[i].distance,
+			duration_step: data.features[0].properties.segments[0].steps[i].duration,
 			speaked: 0
 		});
 	}
@@ -309,8 +309,10 @@ Navigator.prototype.parse_data_online = function(data) {
 
 Navigator.prototype.parse_data_offline = function(data) {
 	this.route.ind = 0;
-	this.route.duration = parseInt(data.trip.summary.time);
-	this.route.distance = parseInt(data.trip.summary.length);
+	this.route.duration = data.trip.summary.time;
+	var length_aux = data.trip.summary.length;
+	length_aux = length_aux.toString().replace('.', '');
+	this.route.distance = Math.trunc(length_aux);
 	this.route.distance_total = this.route.distance;
 	this.route.percentage = 0;
 
@@ -325,7 +327,7 @@ Navigator.prototype.parse_data_offline = function(data) {
 	for (i=0; i<data.trip.legs[0].maneuvers.length; i++) { // For each step
 		var points_aux = [];
 		var ind_aux = data.trip.legs[0].maneuvers[i].begin_shape_index;
-		while (ind_aux <= data.trip.legs[0].maneuvers[i].end_shape_index) { // Get all way points
+		while (ind_aux <= data.trip.legs[0].maneuvers[i].end_shape_index) {
 			points_aux.push(coords_aux[ind_aux]);
 			ind_aux++;
 		}
@@ -337,15 +339,17 @@ Navigator.prototype.parse_data_offline = function(data) {
 		var name = "";
 		if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names'))
 			name = data.trip.legs[0].maneuvers[i].street_names[0];
+		length_aux = data.trip.legs[0].maneuvers[i].length;
+		length_aux = length_aux.toString().replace('.', '');
 		var name_parsed = this.parse_name(type_parsed, name);
 		this.route.steps.push({
 			type: type_parsed,
-			name: name_parsed, // Name could be empty, then use instruction
 			instruction: data.trip.legs[0].maneuvers[i].instruction,
-			distance: parseInt(data.trip.legs[0].maneuvers[i].length),
-			distance_step: parseInt(data.trip.legs[0].maneuvers[i].length),
-			duration: parseInt(data.trip.legs[0].maneuvers[i].time),
-			duration_step: parseInt(data.trip.legs[0].maneuvers[i].time),
+			name: name_parsed,
+			distance: Math.trunc(length_aux),
+			duration: data.trip.legs[0].maneuvers[i].time,
+			distance_step: Math.trunc(length_aux),
+			duration_step: data.trip.legs[0].maneuvers[i].time,
 			speaked: 0
 		});
 	}
@@ -375,15 +379,18 @@ Navigator.prototype.update = function() {
 	var distance_to_end_of_step = Math.trunc(turf.distance(pt_near, pt_end_of_step) * 1000);
 
 	// Get percentage of route done and update values
-	var percentage_step_remain = Math.trunc((distance_to_end_of_step * 100) / this.route.steps[this.route.ind].distance_step);
+	var percentage_step_remain = (distance_to_end_of_step * 100) / this.route.steps[this.route.ind].distance_step;
 	this.route.steps[this.route.ind].distance = distance_to_end_of_step;
 	this.route.distance = distance_to_end_of_step;
-	this.route.duration = Math.trunc((this.route.steps[this.route.ind].duration_step * percentage_step_remain) / 100);
+	this.route.duration = (this.route.steps[this.route.ind].duration_step * percentage_step_remain) / 100;
 	for (i=this.route.ind+1; i<this.route.steps.length; i++) {
 		this.route.distance = this.route.distance + this.route.steps[i].distance_step;
 		this.route.duration = this.route.duration + this.route.steps[i].duration_step;
 	}
-	this.route.percentage = Math.trunc(100 - ((this.route.distance * 100) / this.route.distance_total));
+	this.route.percentage = 100 - ((this.route.distance * 100) / this.route.distance_total);
+	this.route.distance = Math.trunc(this.route.distance);
+	this.route.duration = Math.trunc(this.route.duration);
+	this.route.percentage = Math.trunc(this.route.percentage);
 
 	// On route?
 	if (out_meters > this.IS_IN_ROUTE)
