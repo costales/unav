@@ -28,8 +28,8 @@ Item {
     property ListView flickable: listView
 
     Component.onCompleted: {
-        if (navApp.settings.lastSearchResultsOffline) {
-            var json = JSON.parse(navApp.settings.lastSearchResultsOffline);
+        if (mainPageStack.lastSearchResultsOffline) {
+            var json = JSON.parse(mainPageStack.lastSearchResultsOffline);
             searchModel.loadList(json.result);
         }
     }
@@ -97,7 +97,7 @@ Item {
             anchors { left: parent.left; right: parent.right; margins: units.gu(2) }
             hasClearButton: true
             inputMethodHints: Qt.ImhNoPredictiveText
-            text: navApp.settings.lastSearchString
+            text: mainPageStack.lastSearchStringOffline
             placeholderText: i18n.tr("Place or location")
 
             onTriggered: {
@@ -108,7 +108,7 @@ Item {
                 }
             }
             onTextChanged: {
-                navApp.settings.lastSearchString = text;
+                mainPageStack.lastSearchStringOffline = text;
                 searchModel.clear();
             }
         }
@@ -129,17 +129,17 @@ Item {
                 statusLabel.text = "";
                 var json = JSON.parse(request.responseText);
                 if (json.result.length > 0) {
-                    navApp.settings.lastSearchResultsOffline = request.responseText;
+                    mainPageStack.lastSearchResultsOffline = request.responseText;
                     searchModel.loadList(json.result);
                 }
                 else {
-                    navApp.settings.lastSearchResultsOffline = "";
+                    mainPageStack.lastSearchResultsOffline = "";
                     statusLabel.text = i18n.tr("Nothing found");
                 }
             }
         }
         request.onerror = function () {
-            navApp.settings.lastSearchResultsOffline = "";
+            mainPageStack.lastSearchResultsOffline = "";
             statusLabel.text = i18n.tr("Time out!");
         };
         request.send();

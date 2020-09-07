@@ -68,9 +68,6 @@ MainView {
         property string default_coord_3b: '6'
         property string default_coord_3c: '0.84'
         property string default_coord_3d: 'W'
-		property string lastSearchString: ''
-		property string lastSearchResultsOnline: ''
-		property string lastSearchResultsOffline: ''
 	}
 
 	ScreenSaver {
@@ -109,6 +106,10 @@ MainView {
 		property string favLng: ""
 		property string favLat: ""
 		property string favName: ""
+		property string lastSearchStringOnline: ''
+		property string lastSearchStringOffline: ''
+		property string lastSearchResultsOnline: ''
+		property string lastSearchResultsOffline: ''
 
 		property string usContext: "messaging://"
 		function executeJavaScript(code) {

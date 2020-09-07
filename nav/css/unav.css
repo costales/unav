@@ -7,7 +7,7 @@ html, body, .map {
 }
 
 body{
-  pointer-events:none;
+  pointer-events: none;
 }
 
 .ol-scale-line {
