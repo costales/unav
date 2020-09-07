@@ -335,4 +335,11 @@ MainView {
             }
         }
     }
+    Connections {
+        target: Qt.application
+        onStateChanged:
+            if (Qt.application.state !== Qt.ApplicationActive) {
+				mainPageStack.executeJavaScript("qml_save_last_pos()");
+            }
+    }
 }

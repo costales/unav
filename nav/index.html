@@ -443,7 +443,6 @@
 				nav.set_data({mode: 'calculating_call_API', lng_start: nav.get_data().lng, lat_start: nav.get_data().lat, lng_end: lng, lat_end: lat});
 				ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
 			}
-			qml_save_last_pos(lng, lat, mapUI.get_map_zoom());
 		}
 		function route_cancel() {
 			mapUI.clear_layer('route');
@@ -511,8 +510,8 @@
 				ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Use more zoom for POIs"), iconsShow: 'no'});
 			}
 		}
-		function qml_save_last_pos(lng, lat, zoom) {
-			window.location = 'http://savelastpos/' + parseFloat(lng).toFixed(6) + '/' + parseFloat(lat).toFixed(6) + '/' + zoom;
+		function qml_save_last_pos() {
+			window.location = 'http://savelastpos/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0] + '/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1] + '/' + map.getView().getZoom();
 		}
 
 		function parse_gpx(gpx_content) {
