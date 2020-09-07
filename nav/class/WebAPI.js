@@ -95,8 +95,6 @@ WebAPI.prototype.POIsOffline = function(tag_poi, icon) {
     var extent = ol.proj.transformExtent(map.getView().calculateExtent(map.getSize()), map.getView().getProjection(), 'EPSG:4326');
     var center = ol.proj.transform(map.getView().getCenter(), map.getView().getProjection(), 'EPSG:4326'); 
 	var dist_center2SW = Math.trunc(turf.distance(turf.point(center), turf.point([extent[0], extent[1]])) * 1000);
-	console.log(dist_center2SW);
-
     $.ajax({
 		url: 'http://localhost:8553/v1/guide',
 		data: {
