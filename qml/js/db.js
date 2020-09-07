@@ -74,7 +74,7 @@ function saveToNearByHistory(label, tag_online, tag_offline, enabled_offline) {
 	openDB();
 	db.transaction( function(tx){
 		tx.executeSql('INSERT OR REPLACE INTO poi_history(label, tag_online, tag_offline, enabled_offline) VALUES(?,?,?,?)', [label, tag_online, tag_offline, enabled_offline]);
-		tx.executeSql('DELETE FROM poi_history WHERE id IN (SELECT id FROM poi_history ORDER BY id DESC LIMIT -1 OFFSET 3)'); // Keep only 3 last
+		tx.executeSql('DELETE FROM poi_history WHERE id IN (SELECT id FROM poi_history ORDER BY id DESC LIMIT -1 OFFSET 5)'); // Keep only 5 last
 	});
 }
 

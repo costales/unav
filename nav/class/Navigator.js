@@ -396,7 +396,7 @@ Navigator.prototype.update = function() {
 	this.route.percentage = Math.trunc(this.route.percentage);
 
 	// On route?
-	if (out_meters > this.IS_IN_ROUTE)
+	if (out_meters > this.IS_IN_ROUTE && this.route.steps[this.route.ind].type != 11)
 		if (nav.get_data().mode.startsWith('route_driving'))
 			nav.set_data({mode: 'route_out'});
 	else // Return to the route
