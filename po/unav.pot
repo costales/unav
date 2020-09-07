@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-29 10:23+0200\n"
+"POT-Creation-Date: 2020-09-07 09:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,14 +170,14 @@ msgid "Favorite Name"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:318 nav/class/UI.js:167
-#: qml/Favorites.qml:192 qml/Main.qml:318
+#: build/all/app/install/qml/Main.qml:319 nav/class/UI.js:167
+#: qml/Favorites.qml:192 qml/Main.qml:319
 msgid "Cancel"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:199
-#: build/all/app/install/qml/Main.qml:325 qml/Favorites.qml:199
-#: qml/Main.qml:325
+#: build/all/app/install/qml/Main.qml:326 qml/Favorites.qml:199
+#: qml/Main.qml:326
 msgid "Overwrite"
 msgstr ""
 
@@ -185,15 +185,15 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:284 qml/Main.qml:284
+#: build/all/app/install/qml/Main.qml:285 qml/Main.qml:285
 msgid "Adding Favorite"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:304 qml/Main.qml:304
+#: build/all/app/install/qml/Main.qml:305 qml/Main.qml:305
 msgid "Insert name"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:325 qml/Main.qml:325
+#: build/all/app/install/qml/Main.qml:326 qml/Main.qml:326
 msgid "Add"
 msgstr ""
 
@@ -419,11 +419,7 @@ msgid "Waiting for GPS"
 msgstr ""
 
 #: nav/index.html:190
-msgid "ERROR: No geolocation"
-msgstr ""
-
-#: nav/index.html:220
-msgid "ERROR: Reading GPS"
+msgid "ERROR: Location disabled"
 msgstr ""
 
 #: nav/index.html:239 nav/index.html:246
@@ -454,7 +450,7 @@ msgstr ""
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:513
+#: nav/index.html:512
 msgid "Use more zoom for POIs"
 msgstr ""
 

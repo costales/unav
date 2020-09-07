@@ -187,7 +187,7 @@
 		function gps_start() {
 			console.log('Starting GPS...');
 			if (!navigator.geolocation) {
-				ui.POIPanel({msgShow: 'yes', msgText: t("ERROR: No geolocation"), msgBGColor: 'error', iconsShow: 'no'});
+				ui.POIPanel({msgShow: 'yes', msgText: t("ERROR: Location disabled"), msgBGColor: 'error', iconsShow: 'no'});
 				return;
 			}
 			/** TESTING BEGIN
@@ -217,7 +217,7 @@
 					set_new_pos();
 				},
 				function (error) {
-					ui.POIPanel({msgShow: 'yes', msgText: t("ERROR: Reading GPS"), msgAutohide: true, msgBGColor: 'error', iconsShow: 'no'});
+					console.log("ERROR: Reading GPS");
 				},
 				{ enableHighAccuracy: true }
 			);
