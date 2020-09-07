@@ -244,9 +244,11 @@
 					mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
 					nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
 					ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgBGColor: 'success', msgText: t("GPS is ready"), iconsShow: 'no'});
+					set_new_pos();
 					break;
 				case 'calculating_changed_mode':
 					nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
+					set_new_pos();
 					break;
 				case 'calculating_call_API':
 					poiStart.show(ol.proj.fromLonLat([nav_data.lng_start, nav_data.lat_start]));
@@ -442,6 +444,7 @@
 			else {
 				nav.set_data({mode: 'calculating_call_API', lng_start: nav.get_data().lng, lat_start: nav.get_data().lat, lng_end: lng, lat_end: lat});
 				ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+				set_new_pos();
 			}
 		}
 		function route_cancel() {
@@ -465,7 +468,7 @@
 			ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 			nav.set_data({mode: 'route_driving'});
 			ui.set_center_pos(true);
-			ui.update_map_view(nav.get_data());
+			set_new_pos();
 		}
 		function mode_navigation(value) {
 			settings.set_route_mode(value);
