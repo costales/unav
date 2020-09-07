@@ -149,8 +149,8 @@ WebAPI.prototype.OK_POIsOffline = function(data, icon) {
 				lng: data.results[i].lng, 
 				lat: data.results[i].lat,
 				icon: 'poi-emblem/'+icon+'.svg',
-				margin_height: 40, 
-				margin_width: 13
+				margin_height: 46, 
+				margin_width: 15
 			}], 'poi');
 		}
 		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("POIs loaded"), iconsShow: 'no'});
@@ -218,8 +218,8 @@ WebAPI.prototype.OK_POIsOnline = function(data, icon) {
 				lng: data.elements[i].lon, 
 				lat: data.elements[i].lat, 
 				icon: 'poi-emblem/'+icon+'.svg',
-				margin_height: 40, 
-				margin_width: 13
+				margin_height: 46, 
+				margin_width: 15
 			}], 'poi');
 		}
 		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("POIs loaded"), iconsShow: 'no'});
