@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-07 20:21+0200\n"
+"POT-Creation-Date: 2020-09-07 21:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,8 +201,8 @@ msgstr ""
 msgid "Last used"
 msgstr ""
 
-#: build/all/app/install/qml/POIs.qml:109
-msgid "Only online"
+#: build/all/app/install/qml/POIs.qml:109 qml/POIs.qml:109
+msgid "Available only online"
 msgstr ""
 
 #: build/all/app/install/qml/Search.qml:45 qml/Search.qml:45
@@ -452,10 +452,6 @@ msgstr ""
 
 #: nav/index.html:514
 msgid "Use more zoom for POIs"
-msgstr ""
-
-#: qml/POIs.qml:109
-msgid "Available only online"
 msgstr ""
 
 #: qml/js/PoiCategories.js:5
