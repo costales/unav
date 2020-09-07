@@ -518,7 +518,7 @@
 
 		function parse_gpx(gpx_content) {
 			var coords = [];
-			var gpx = new gpxParser();
+			let gpx = new gpxParser();
 			gpx.parse(gpx_content);
 			for (i = 0; i < gpx.tracks[0].points.length; i++)
 				coords.push([gpx.tracks[0].points[i].lon, gpx.tracks[0].points[i].lat]);
