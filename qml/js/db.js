@@ -23,7 +23,7 @@ function openDB() {
 		db = LocalStorage.openDatabaseSync("unav_db", "0.1", "Favorites", 1000);
 		db.transaction(function(tx){
 			tx.executeSql('CREATE TABLE IF NOT EXISTS favorites( key TEXT UNIQUE, lat TEXT, lng TEXT)');
-			tx.executeSql('CREATE TABLE IF NOT EXISTS pois_history( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, label TEXT UNIQUE, tag_online TEXT, tag_offline TEXT )');
+			tx.executeSql('CREATE TABLE IF NOT EXISTS poi_history( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, label TEXT UNIQUE, tag_online TEXT, tag_offline TEXT, enabled_offline TEXT )');
 		});
 	}
 }
@@ -70,11 +70,11 @@ function getFavorites() {
 }
 
 // nearByHistory
-function saveToNearByHistory(label, tag_online, tag_offline) {
+function saveToNearByHistory(label, tag_online, tag_offline, enabled_offline) {
 	openDB();
 	db.transaction( function(tx){
-		tx.executeSql('INSERT OR REPLACE INTO pois_history(label, tag_online, tag_offline) VALUES(?,?,?)', [label, tag_online, tag_offline]);
-		tx.executeSql('DELETE FROM pois_history WHERE id IN (SELECT id FROM pois_history ORDER BY id DESC LIMIT -1 OFFSET 3)'); // Keep only 3 last
+		tx.executeSql('INSERT OR REPLACE INTO poi_history(label, tag_online, tag_offline, enabled_offline) VALUES(?,?,?,?)', [label, tag_online, tag_offline, enabled_offline]);
+		tx.executeSql('DELETE FROM poi_history WHERE id IN (SELECT id FROM poi_history ORDER BY id DESC LIMIT -1 OFFSET 3)'); // Keep only 3 last
 	});
 }
 
@@ -82,14 +82,7 @@ function getNearByHistory() {
 	var res;
 	openDB();
 	db.transaction(function(tx) {
-		res = tx.executeSql('SELECT * FROM pois_history ORDER BY id DESC', []);
+		res = tx.executeSql('SELECT * FROM poi_history ORDER BY id DESC', []);
 	});
 	return res;
-}
-
-function removeHistoryNearby(key) {
-	openDB();
-	db.transaction( function(tx){
-		tx.executeSql('DELETE FROM pois_history WHERE label=?;', [key]);
-	});
 }
