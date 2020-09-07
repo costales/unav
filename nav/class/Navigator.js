@@ -305,6 +305,7 @@ Navigator.prototype.parse_data_online = function(data) {
 		nav.set_data({mode: 'drawing'});
 	else
 		nav.set_data({mode: 'route_out_drawing'});
+	set_new_pos();
 }
 
 Navigator.prototype.parse_data_offline = function(data) {
@@ -357,8 +358,10 @@ Navigator.prototype.parse_data_offline = function(data) {
 		nav.set_data({mode: 'drawing'});
 	else
 		nav.set_data({mode: 'route_out_drawing'});
+	set_new_pos();
 }
 
+// Dragons here!
 Navigator.prototype.update = function() {
 	// Nearest point to the route lines
 	var out_meters = 999999999;
