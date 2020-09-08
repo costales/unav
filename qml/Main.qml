@@ -173,6 +173,12 @@ MainView {
 				settings.focusOnNavigationEnabled: true
 				settings.webGLEnabled: true
 				settings.allowWindowActivationFromJavaScript: true
+				onLifecycleStateChanged: {
+					if (lifecycleState === LifecycleState.Discarded) {
+						_webview.reload();
+						console.log("Webview reloaded");
+					}
+				}
 				onNavigationRequested: {
 					var url = request.url.toString().toLowerCase().split("/");
 					switch (url[2]) {
@@ -339,11 +345,8 @@ MainView {
     Connections {
         target: Qt.application
         onStateChanged: {
-            if (Qt.application.state !== Qt.ApplicationActive)
+            if (mainPageStack.onLoadingExecuted && Qt.application.state !== Qt.ApplicationActive)
 				mainPageStack.executeJavaScript("qml_save_last_pos()");
-			console.log('webview state:',_webview.recommendedState);
-			if (_webview.recommendedState == 2) // Discarded, then reload
-				_webview.reload();
 		}
     }
 }

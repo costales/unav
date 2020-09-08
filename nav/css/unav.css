@@ -30,6 +30,7 @@ body{
   position: fixed;
   z-index: 10 !important;
   box-shadow: 1px 1px 0px 0px rgba(209,209,209,1);
+  user-select: none;
 }
 #posBtn img {
   width: 24px;
@@ -79,6 +80,7 @@ body{
   z-index: 10 !important;
   font-size: 8px;
   text-align: right;
+  user-select: none;
 }
 
 .topPanels {
@@ -86,6 +88,7 @@ body{
   position: absolute;
   margin-top: 50px;
   width: 100%;
+  user-select: none;
 }
 #topPanelMsg {
   top: 0px;
@@ -139,6 +142,7 @@ body{
   font-size: 16px;
   text-align: center;
   font-family: Ubuntu;
+  user-select: none;
 }
 #topPanelNav, #topPanelConfirm {
   position: absolute;

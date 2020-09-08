@@ -300,7 +300,7 @@
 					break;
 				case 'route_out':
 					$("#panelsNav").hide();
-					webapi.route_online(settings.get_online(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
+					webapi.route(settings.get_online(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
 					ui.POIPanel({msgShow: 'yes', msgText: t("Out of route. Recalculating"), iconsShow: 'no'});
 					nav.set_data({mode: 'route_out_waiting_result'});
 					break;

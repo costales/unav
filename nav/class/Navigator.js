@@ -122,7 +122,8 @@ Navigator.prototype.get_data_line = function() {
 	}
 }
 
-Navigator.prototype.parse_type_online = function(step) {
+Navigator.prototype.parse_type = function(step) {
+	// uNav types
 	// 0 Left
 	// 1 Right
 	// 2 Sharp left
@@ -131,40 +132,19 @@ Navigator.prototype.parse_type_online = function(step) {
 	// 5 Slight right
 	// 6 Straight
 	// 70 Enter roundabout
-	//   71 exit number 1
-	//   72 exit number 2
-	//   73 exit number 3
-	//   74 exit number 4
-	// 8 Exit roundabout (without voice)
+	//  71 exit number 1
+	//  72 exit number 2
+	//  73 exit number 3
+	//  74 exit number 4
+	// 8 Exit roundabout (without sound)
 	// 9 U-turn
 	// 10 Goal
 	// 11 Depart
 	// 12 Keep left
 	// 13 Keep right
-	// 99 Nothing (without voice)
-	var type_aux = step.type;
-	if (type_aux == 7)
-		switch(step.exit_number) {
-			case 1:
-				type_aux = 71;
-				break;
-			case 2:
-				type_aux = 72;
-				break;
-			case 3:
-				type_aux = 73;
-				break;
-			case 4:
-				type_aux = 74;
-				break;
-			default:
-				type_aux = 70;
-		}
-	return type_aux;
-}
+	// 99 Nothing (without sound)
 
-Navigator.prototype.parse_type_offline = function(step) {
-	// Convert valhalla types to openrouteservice types for using same voices and steps. Review kBecomes
+	// Valhalla types
 	switch(step.type) {
 		case 15: // kLeft
 			return 0; // Left
@@ -288,7 +268,7 @@ Navigator.prototype.parse_data = function(data) {
 			points_aux.push(points_aux[0]);
 		this.route.points.push(points_aux);
 		this.route.turf.push(turf.lineString(points_aux));
-		var type_parsed = this.parse_type_offline(data.trip.legs[0].maneuvers[i]);
+		var type_parsed = this.parse_type(data.trip.legs[0].maneuvers[i]);
 		var name = "";
 		if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names'))
 			name = data.trip.legs[0].maneuvers[i].street_names[0];
