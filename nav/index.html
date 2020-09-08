@@ -254,10 +254,7 @@
 				case 'calculating_call_API':
 					poiStart.show(ol.proj.fromLonLat([nav_data.lng_start, nav_data.lat_start]));
 					nav.set_data({mode: 'calculating_waiting_result'});
-					if (settings.get_online())
-						webapi.route_online(nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
-					else
-						webapi.route_offline(nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
+					webapi.route(settings.get_online(), nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
 					// Avoid animations
 					if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>')
 						ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
@@ -303,10 +300,7 @@
 					break;
 				case 'route_out':
 					$("#panelsNav").hide();
-					if (settings.get_online())
-						webapi.route_online(nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
-					else
-						webapi.route_offline(nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
+					webapi.route_online(settings.get_online(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
 					ui.POIPanel({msgShow: 'yes', msgText: t("Out of route. Recalculating"), iconsShow: 'no'});
 					nav.set_data({mode: 'route_out_waiting_result'});
 					break;
@@ -318,10 +312,7 @@
 					break;
 				case 'route_out_calculating_error':
 					nav.set_data({mode: 'route_out_waiting_result'});
-					if (settings.get_online())
-						webapi.route_online(nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
-					else
-						webapi.route_offline(nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
+					webapi.route(settings.get_online(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
 					break;
 				case 'route_out_drawing': // As drawing, but don't confirm

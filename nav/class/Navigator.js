@@ -260,55 +260,7 @@ Navigator.prototype.parse_name = function(type, name) {
 	}
 }
 
-Navigator.prototype.parse_data_online = function(data) {
-	this.route.ind = 0;
-	this.route.distance = data.features[0].properties.summary.distance;
-	this.route.distance_total = this.route.distance;
-	this.route.duration = data.features[0].properties.summary.duration;
-	this.route.percentage = 0;
-
-	this.route.bbox = [];
-	this.route.points = [];
-	this.route.turf = [];
-
-	for (i=0; i<(data.bbox.length); i=i+2)
-		this.route.bbox.push([data.bbox[i], data.bbox[i+1]]);
-	
-	this.route.steps = [];
-	for (i=0; i<data.features[0].properties.segments[0].steps.length; i++) { // For each step
-		var points_aux = [];
-		for (j=0; j<data.features[0].properties.segments[0].steps[i].way_points.length-1; j++) { // Get all way_points
-			var ind_aux = data.features[0].properties.segments[0].steps[i].way_points[j];
-			while (ind_aux <= data.features[0].properties.segments[0].steps[i].way_points[j+1]) {
-				points_aux.push(data.features[0].geometry.coordinates[ind_aux]);
-				ind_aux++;
-			}
-		}
-		if (points_aux.length < 2)
-			points_aux.push(points_aux[0]);
-		this.route.points.push(points_aux);
-		this.route.turf.push(turf.lineString(points_aux));
-		var type_parsed = this.parse_type_online(data.features[0].properties.segments[0].steps[i]);
-		var name_parsed = this.parse_name(type_parsed, data.features[0].properties.segments[0].steps[i].name);
-		this.route.steps.push({
-			type: type_parsed,
-			instruction: data.features[0].properties.segments[0].steps[i].instruction,
-			name: name_parsed,
-			distance: data.features[0].properties.segments[0].steps[i].distance,
-			duration: data.features[0].properties.segments[0].steps[i].duration,
-			distance_step: data.features[0].properties.segments[0].steps[i].distance,
-			duration_step: data.features[0].properties.segments[0].steps[i].duration,
-			speaked: 0
-		});
-	}
-	if (nav.get_data().mode.startsWith('calculating'))
-		nav.set_data({mode: 'drawing'});
-	else
-		nav.set_data({mode: 'route_out_drawing'});
-	set_new_pos();
-}
-
-Navigator.prototype.parse_data_offline = function(data) {
+Navigator.prototype.parse_data = function(data) {
 	this.route.ind = 0;
 	this.route.duration = data.trip.summary.time;
 	var length_aux = data.trip.summary.length;

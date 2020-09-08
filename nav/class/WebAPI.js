@@ -233,52 +233,11 @@ WebAPI.prototype.KO_POIsOnline = function(data) {
 	ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("There was an error"), msgBGColor: 'error', iconsShow: 'no'});
 }
 
-WebAPI.prototype.route_online = function(lng_from, lat_from, lng_to, lat_to) {
-	switch (settings.get_route_mode()) {
-		case 'car':
-			var routing_mode = 'driving-car';
-			break;
-		case 'bike':
-			var routing_mode = 'cycling-regular';
-			break;
-		case 'walk':
-			var routing_mode = 'foot-walking';
-			break;
-	}
-	$.ajax({
-		url: 'https://api.openrouteservice.org/v2/directions/' + routing_mode,
-		data: {
-			api_key: '58d904a497c67e00015b45fca1a64e1896454ed08c81a552841363bc',
-			start: lng_from + ',' + lat_from,
-			end: lng_to + ',' + lat_to
-		},
-		dataType: 'json',
-		timeout: 40000,
-		success: this.OK_route_online.bind(this),
-		error: this.KO_route_online.bind(this)
-	});
-}
-
-WebAPI.prototype.OK_route_online = function(data) {
-	if (data.hasOwnProperty('status') && data.status != 0) {
-		if (nav.get_data().mode.startsWith('calculating'))
-			nav.set_data({mode: 'calculating_error'});
-		else
-			nav.set_data({mode: 'route_out_calculating_error'});
-	}
-	else {
-		nav.parse_data_online(data);
-	}
-}
-
-WebAPI.prototype.KO_route_online = function(data) {
-	if (nav.get_data().mode.startsWith('calculating'))
-		nav.set_data({mode: 'calculating_error'});
+WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
+	if (online)
+		var url = 'https://route.stadiamaps.com/route';
 	else
-		nav.set_data({mode: 'route_out_calculating_error'});
-}
-
-WebAPI.prototype.route_offline = function(lng_from, lat_from, lng_to, lat_to) {
+		var url = 'http://localhost:8553/v2/route';
 	switch (settings.get_route_mode()) {
 		case 'car':
 			var routing_mode = ',"costing":"auto"';
@@ -291,18 +250,19 @@ WebAPI.prototype.route_offline = function(lng_from, lat_from, lng_to, lat_to) {
 			break;
 	}
 	$.ajax({
-		url: 'http://localhost:8553/v2/route',
+		url: url,
 		data: {
+			api_key: 'ad841e2f-f657-4ffa-b5f8-9ae24b668ee8',
 			json: '{"locations":[{"lat":'+lat_from+',"lon":'+lng_from+'},{"lat":'+lat_to+',"lon":'+lng_to+'}]'+routing_mode+'}'
 		},
 		dataType: 'json',
 		timeout: 40000,
-		success: this.OK_route_offline.bind(this),
-		error: this.KO_route_offline.bind(this)
+		success: this.OK_route.bind(this),
+		error: this.KO_route.bind(this)
 	});
 }
 
-WebAPI.prototype.OK_route_offline = function(data) {
+WebAPI.prototype.OK_route = function(data) {
 	if (data.trip.status != 0) {
 		if (nav.get_data().mode.startsWith('calculating'))
 			nav.set_data({mode: 'calculating_error'});
@@ -310,11 +270,11 @@ WebAPI.prototype.OK_route_offline = function(data) {
 			nav.set_data({mode: 'route_out_calculating_error'});
 	}
 	else {
-		nav.parse_data_offline(data);
+		nav.parse_data(data);
 	}
 }
 
-WebAPI.prototype.KO_route_offline = function(data) {
+WebAPI.prototype.KO_route = function(data) {
 	if (nav.get_data().mode.startsWith('calculating'))
 		nav.set_data({mode: 'calculating_error'});
 	else

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 09:00+0200\n"
+"POT-Creation-Date: 2020-09-08 09:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -185,8 +185,8 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: build/all/app/install/qml/GPX.qml:27
-msgid "Load GPX file"
+#: build/all/app/install/qml/GPX.qml:27 qml/GPX.qml:27
+msgid "Import GPX track"
 msgstr ""
 
 #: build/all/app/install/qml/Main.qml:285 qml/Main.qml:285
@@ -434,36 +434,32 @@ msgstr ""
 msgid "GPS is ready"
 msgstr ""
 
-#: nav/index.html:262 nav/index.html:263 nav/index.html:447
+#: nav/index.html:259 nav/index.html:260 nav/index.html:438
 msgid "Calculating route"
 msgstr ""
 
-#: nav/index.html:273
+#: nav/index.html:270
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:310
+#: nav/index.html:304
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:325
+#: nav/index.html:316
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:350
+#: nav/index.html:341
 msgid "You have arrived"
 msgstr ""
 
-#: nav/index.html:460
+#: nav/index.html:451
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:514
+#: nav/index.html:505
 msgid "Use more zoom for POIs"
-msgstr ""
-
-#: qml/GPX.qml:27
-msgid "Import GPX track"
 msgstr ""
 
 #: qml/js/PoiCategories.js:5
