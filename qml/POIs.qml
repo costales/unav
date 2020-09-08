@@ -128,4 +128,3 @@ Item {
         align: Qt.AlignTrailing
     }
 }
-

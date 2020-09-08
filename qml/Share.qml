@@ -30,7 +30,6 @@ Page {
 
     header: UNavHeader {
         title: i18n.tr("Share location to")
-
         trailingActionBar.actions: CloseHeaderAction {
             visible: mainPageStack.columns !== 1 && isParentPage
         }
