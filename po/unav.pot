@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 09:13+0200\n"
+"POT-Creation-Date: 2020-09-08 19:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,14 +170,14 @@ msgid "Favorite Name"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:319 nav/class/UI.js:167
-#: qml/Favorites.qml:192 qml/Main.qml:319
+#: build/all/app/install/qml/Main.qml:320 nav/class/UI.js:167
+#: qml/Favorites.qml:192 qml/Main.qml:320
 msgid "Cancel"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:199
-#: build/all/app/install/qml/Main.qml:326 qml/Favorites.qml:199
-#: qml/Main.qml:326
+#: build/all/app/install/qml/Main.qml:327 qml/Favorites.qml:199
+#: qml/Main.qml:327
 msgid "Overwrite"
 msgstr ""
 
@@ -185,19 +185,35 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: build/all/app/install/qml/GPX.qml:27 qml/GPX.qml:27
-msgid "Import GPX track"
+#: build/all/app/install/qml/GPX.qml:31 qml/GPX.qml:31
+msgid "Track imported into the map"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:285 qml/Main.qml:285
+#: build/all/app/install/qml/GPX.qml:31 qml/GPX.qml:31
+msgid "You can import a GPX file"
+msgstr ""
+
+#: build/all/app/install/qml/GPX.qml:36 qml/GPX.qml:36
+msgid "Import another one"
+msgstr ""
+
+#: build/all/app/install/qml/GPX.qml:36 qml/GPX.qml:36
+msgid "Import track"
+msgstr ""
+
+#: build/all/app/install/qml/GPXImport.qml:28 qml/GPXImport.qml:28
+msgid "Import GPX from"
+msgstr ""
+
+#: build/all/app/install/qml/Main.qml:286 qml/Main.qml:286
 msgid "Adding Favorite"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:305 qml/Main.qml:305
+#: build/all/app/install/qml/Main.qml:306 qml/Main.qml:306
 msgid "Insert name"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:326 qml/Main.qml:326
+#: build/all/app/install/qml/Main.qml:327 qml/Main.qml:327
 msgid "Add"
 msgstr ""
 
@@ -370,39 +386,39 @@ msgstr ""
 msgid "Now"
 msgstr ""
 
-#: nav/class/Navigator.js:240
+#: nav/class/Navigator.js:220
 msgid "Your destination is near"
 msgstr ""
 
-#: nav/class/Navigator.js:242
+#: nav/class/Navigator.js:222
 msgid "Enter the roundabout"
 msgstr ""
 
-#: nav/class/Navigator.js:244
+#: nav/class/Navigator.js:224
 msgid "Enter the roundabout and take 1st exit"
 msgstr ""
 
-#: nav/class/Navigator.js:246
+#: nav/class/Navigator.js:226
 msgid "Enter the roundabout and take 2nd exit"
 msgstr ""
 
-#: nav/class/Navigator.js:248
+#: nav/class/Navigator.js:228
 msgid "Enter the roundabout and take 3th exit"
 msgstr ""
 
-#: nav/class/Navigator.js:250
+#: nav/class/Navigator.js:230
 msgid "Enter the roundabout and take 4th exit"
 msgstr ""
 
-#: nav/class/Navigator.js:252
+#: nav/class/Navigator.js:232
 msgid "Follow the route line"
 msgstr ""
 
-#: nav/class/Navigator.js:255
+#: nav/class/Navigator.js:235
 msgid "Exit at"
 msgstr ""
 
-#: nav/class/Navigator.js:257
+#: nav/class/Navigator.js:237
 msgid "Exit the roundabout"
 msgstr ""
 
