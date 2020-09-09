@@ -24,6 +24,7 @@ import Qt.labs.settings 1.0
 import Ubuntu.Content 1.1
 import Ubuntu.Components.Popups 1.3
 import QtQuick.LocalStorage 2.0
+import QtPositioning 5.2
 import "components"
 import "js/utils.js" as QmlJs
 import "js/db.js" as UnavDB
@@ -75,6 +76,10 @@ MainView {
 	ScreenSaver {
 		screenSaverEnabled: !Qt.application.active
 	}
+
+	PositionSource {
+		active: true
+    }
 
 	AdaptivePageLayout {
 		id: mainPageStack
