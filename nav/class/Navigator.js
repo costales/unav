@@ -242,10 +242,8 @@ Navigator.prototype.parse_name = function(type, name) {
 
 Navigator.prototype.parse_data = function(data) {
 	this.route.ind = 0;
-	this.route.duration = data.trip.summary.time;
-	var length_aux = data.trip.summary.length;
-	length_aux = length_aux.toString().replace('.', '');
-	this.route.distance = Math.trunc(length_aux);
+	this.route.duration = parseInt(data.trip.summary.time);
+	this.route.distance = parseInt((data.trip.summary.length).toString().replace('.', ''));
 	this.route.distance_total = this.route.distance;
 	this.route.percentage = 0;
 
@@ -272,16 +270,14 @@ Navigator.prototype.parse_data = function(data) {
 		var name = "";
 		if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names'))
 			name = data.trip.legs[0].maneuvers[i].street_names[0];
-		length_aux = data.trip.legs[0].maneuvers[i].length;
-		length_aux = length_aux.toString().replace('.', '');
 		var name_parsed = this.parse_name(type_parsed, name);
 		this.route.steps.push({
 			type: type_parsed,
-			instruction: data.trip.legs[0].maneuvers[i].instruction,
 			name: name_parsed,
-			distance: Math.trunc(length_aux),
+			instruction: data.trip.legs[0].maneuvers[i].instruction,
+			distance: parseInt((data.trip.legs[0].maneuvers[i].length).toString().replace('.', '')),
+			distance_step: parseInt((data.trip.legs[0].maneuvers[i].length).toString().replace('.', '')),
 			duration: data.trip.legs[0].maneuvers[i].time,
-			distance_step: Math.trunc(length_aux),
 			duration_step: data.trip.legs[0].maneuvers[i].time,
 			speaked: 0
 		});
@@ -317,15 +313,12 @@ Navigator.prototype.update = function() {
 	var percentage_step_remain = (distance_to_end_of_step * 100) / this.route.steps[this.route.ind].distance_step;
 	this.route.steps[this.route.ind].distance = distance_to_end_of_step;
 	this.route.distance = distance_to_end_of_step;
-	this.route.duration = (this.route.steps[this.route.ind].duration_step * percentage_step_remain) / 100;
+	this.route.duration = Math.trunc((this.route.steps[this.route.ind].duration_step * percentage_step_remain) / 100);
 	for (i=this.route.ind+1; i<this.route.steps.length; i++) {
 		this.route.distance = this.route.distance + this.route.steps[i].distance_step;
 		this.route.duration = this.route.duration + this.route.steps[i].duration_step;
 	}
-	this.route.percentage = 100 - ((this.route.distance * 100) / this.route.distance_total);
-	this.route.distance = Math.trunc(this.route.distance);
-	this.route.duration = Math.trunc(this.route.duration);
-	this.route.percentage = Math.trunc(this.route.percentage);
+	this.route.percentage = Math.trunc(100 - ((this.route.distance * 100) / this.route.distance_total));
 
 	// On route?
 	if (out_meters > this.IS_IN_ROUTE && this.route.steps[this.route.ind].type != 11)
