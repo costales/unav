@@ -20,8 +20,8 @@ function Settings() {
 	this.online = true
 	this.unit = this.KM;
 	this.rotate_map = true;
-	this.route_tolls = true;
-	this.route_highways = true;
+	this.tolls = true;
+	this.highways = true;
 	this.speak = true;
 	this.speak_voice = "Nathan Haines";
 	this.route_mode = "car";
@@ -81,6 +81,20 @@ Settings.prototype.set_rotate_map = function(value) {
 	this.rotate_map = value;
 	mapUI.set_marker_rotate(0);
 	mapUI.set_map_rotate(0);
+}
+
+Settings.prototype.get_tolls = function() {
+	return this.tolls;
+}
+Settings.prototype.set_tolls = function(value) {
+	this.tolls = value;
+}
+
+Settings.prototype.get_highways = function() {
+	return this.highways;
+}
+Settings.prototype.set_highways = function(value) {
+	this.highways = value;
 }
 
 Settings.prototype.get_speak = function() {
