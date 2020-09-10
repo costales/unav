@@ -241,14 +241,10 @@ WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
 
 	switch (settings.get_route_mode()) {
 		case 'car':
-			if (settings.get_tolls() && settings.get_highways())
+			if (settings.get_tolls())
 				var routing_mode = ',"costing":"auto"';
-			if (!settings.get_tolls() && settings.get_highways())
+			else
 				var routing_mode = ',"costing":"auto","costing_options":{"auto":{"use_tolls":0}}';
-			if (settings.get_tolls() && !settings.get_highways())
-				var routing_mode = ',"costing":"auto","costing_options":{"auto":{"use_highways":0}}';
-			if (!settings.get_tolls() && !settings.get_highways())
-				var routing_mode = ',"costing":"auto","costing_options":{"auto":{"use_highways":0,"use_tolls":0}}';
 			break;
 		case 'bike':
 			var routing_mode = ',"costing":"bicycle"';

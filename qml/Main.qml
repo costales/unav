@@ -54,7 +54,6 @@ MainView {
 		property string routeModes: "car"
 		property bool speak: true
 		property bool tolls: true
-		property bool highways: true
 		property string speakVoice: 'Nathan Haines'
 		property int lastSearchTab: 0
 		property string lastLng: '4.666389'
@@ -229,7 +228,6 @@ MainView {
 							mainPageStack.executeJavaScript("settings.set_rotate_map(" + navApp.settings.rotateMap + ")");
 							mainPageStack.executeJavaScript("settings.set_route_mode(\"" + navApp.settings.routeModes + "\")");
 							mainPageStack.executeJavaScript("settings.set_tolls(" + navApp.settings.tolls + ")");
-							mainPageStack.executeJavaScript("settings.set_highways(" + navApp.settings.highways + ")");
 							mainPageStack.executeJavaScript("settings.set_speak(" + navApp.settings.speak + ")");
 							mainPageStack.executeJavaScript("settings.set_speak_voice(\"" + navApp.settings.speakVoice + "\")");
 							mainPageStack.executeJavaScript("mapUI.set_map_center(" + navApp.settings.lastLng + "," + navApp.settings.lastLat + ")");

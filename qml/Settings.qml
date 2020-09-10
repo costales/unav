@@ -213,23 +213,6 @@ Page {
             }
 
             ListItem {
-                height: navHighways.height + divider.height
-                ListItemLayout {
-                    id: navHighways
-                    title.text: i18n.tr("Use highways")
-                    Switch {
-                        id: navHighwaysSwitch
-                        checked: navApp.settings.highways
-                        onClicked: {
-                            navApp.settings.highways = checked;
-                            mainPageStack.executeJavaScript("settings.set_highways(" + navApp.settings.highways + ");");
-                        }
-                        SlotsLayout.position: SlotsLayout.Last
-                    }
-                }
-            }
-
-            ListItem {
                 height: navSpeak.height + divider.height
                 ListItemLayout {
                     id: navSpeak
