@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-11 17:53+0200\n"
+"POT-Creation-Date: 2020-09-11 21:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -92,9 +92,9 @@ msgstr ""
 msgid "Powered by"
 msgstr ""
 
-#: build/all/app/install/qml/About.qml:114
+#: build/all/app/install/qml/About.qml:114 qml/About.qml:114
 #, qt-format
-msgid "Version %1. Licensed under %2"
+msgid "Version %1 Licensed under %2"
 msgstr ""
 
 #: build/all/app/install/qml/About.qml:121 qml/About.qml:121
@@ -170,14 +170,14 @@ msgid "Favorite Name"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:322 nav/class/UI.js:178
-#: qml/Favorites.qml:192 qml/Main.qml:322
+#: build/all/app/install/qml/Main.qml:321 nav/class/UI.js:178
+#: qml/Favorites.qml:192 qml/Main.qml:321
 msgid "Cancel"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:199
-#: build/all/app/install/qml/Main.qml:329 qml/Favorites.qml:199
-#: qml/Main.qml:329
+#: build/all/app/install/qml/Main.qml:328 qml/Favorites.qml:199
+#: qml/Main.qml:328
 msgid "Overwrite"
 msgstr ""
 
@@ -185,19 +185,7 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: build/all/app/install/qml/GPX.qml:31 qml/GPX.qml:31
-msgid "Track imported into the map"
-msgstr ""
-
-#: build/all/app/install/qml/GPX.qml:31 qml/GPX.qml:31
-msgid "You can import a GPX file"
-msgstr ""
-
-#: build/all/app/install/qml/GPX.qml:36 qml/GPX.qml:36
-msgid "Import another one"
-msgstr ""
-
-#: build/all/app/install/qml/GPX.qml:36 qml/GPX.qml:36
+#: build/all/app/install/qml/GPX.qml:28 qml/GPX.qml:28
 msgid "Import track"
 msgstr ""
 
@@ -205,15 +193,15 @@ msgstr ""
 msgid "Import GPX from"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:288 qml/Main.qml:288
+#: build/all/app/install/qml/Main.qml:287 qml/Main.qml:287
 msgid "Adding Favorite"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:308 qml/Main.qml:308
+#: build/all/app/install/qml/Main.qml:307 qml/Main.qml:307
 msgid "Insert name"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:329 qml/Main.qml:329
+#: build/all/app/install/qml/Main.qml:328 qml/Main.qml:328
 msgid "Add"
 msgstr ""
 
@@ -337,11 +325,11 @@ msgstr ""
 msgid "Share location to"
 msgstr ""
 
-#: build/all/app/install/qml/Simulate.qml:27 qml/Simulate.qml:27
+#: build/all/app/install/qml/Simulate.qml:27
 msgid "Simulate a route picking positions on the map"
 msgstr ""
 
-#: build/all/app/install/qml/Simulate.qml:32 qml/Simulate.qml:32
+#: build/all/app/install/qml/Simulate.qml:32
 msgid "Pick positions"
 msgstr ""
 
@@ -502,9 +490,8 @@ msgstr ""
 msgid "Use more zoom for POIs"
 msgstr ""
 
-#: qml/About.qml:114
-#, qt-format
-msgid "Version %1 Licensed under %2"
+#: qml/Simulate.qml:28
+msgid "Pick origin & destination"
 msgstr ""
 
 #: qml/js/PoiCategories.js:5
