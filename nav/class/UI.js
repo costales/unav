@@ -18,6 +18,11 @@ UI.prototype.ZOOM = 17;
 function UI() {
 	this.center_pos = false;
 	this.searchPageWith2Columns = 1;
+	this.pickingPoint = 0;
+	this.pickingCoordLng1 = null;
+	this.pickingCoordLat1 = null;
+	this.pickingCoordLng2 = null;
+	this.pickingCoordLat2 = null;
 }
 
 UI.prototype.get_search2columns = function() {
@@ -77,6 +82,7 @@ UI.prototype.POIPanel = function(data) {
 	var iconsShow = data.iconsShow || 'auto';
 	var iconsClickedOwnPos = data.iconsClickedOwnPos || false;
 	var iconsIsFavorite = data.iconsIsFavorite || false;
+	var iconIsPickingPos = data.iconIsPickingPos || false;
 	var iconsPhone = data.iconsPhone || '';
 	var iconsWebsite = data.iconsWebsite || '';
 	var iconsEmail = data.iconsEmail || '';
@@ -90,17 +96,22 @@ UI.prototype.POIPanel = function(data) {
 
 	if (iconsShow == 'yes') {
 		var html_content = '<center>';
-		if (!iconsClickedOwnPos)
-			html_content = html_content + '<img src="img/panel/send.svg" onclick="event.stopPropagation();BtnGo(' + iconsLng + ',' + iconsLat + ')">';
-		if (!iconsIsFavorite)
-			html_content = html_content + '<img src="img/panel/non-starred.svg" onclick="event.stopPropagation();BtnFavorite(' + iconsLng + ',' + iconsLat + ')">';
-		html_content = html_content + '<img src="img/panel/share.svg" onclick="event.stopPropagation();BtnShare(' + iconsLng + ',' + iconsLat + ')">';
-		if (iconsPhone)
-			html_content = html_content + '<img src="img/panel/phone.svg" onclick="event.stopPropagation();BtnPhone(\'' + iconsPhone + '\')">';
-		if (iconsWebsite)
-			html_content = html_content + '<img src="img/panel/website.svg" onclick="event.stopPropagation();BtnWebsite(\'' + iconsWebsite + '\')">';
-		if (iconsEmail)
-			html_content = html_content + '<img src="img/panel/email.svg" onclick="event.stopPropagation();BtnEmail(\'' + iconsEmail + '\')">';
+		if (!iconIsPickingPos) {
+			if (!iconsClickedOwnPos)
+				html_content = html_content + '<img src="img/panel/send.svg" onclick="event.stopPropagation();BtnGo(' + iconsLng + ',' + iconsLat + ')">';
+			if (!iconsIsFavorite)
+				html_content = html_content + '<img src="img/panel/non-starred.svg" onclick="event.stopPropagation();BtnFavorite(' + iconsLng + ',' + iconsLat + ')">';
+			html_content = html_content + '<img src="img/panel/share.svg" onclick="event.stopPropagation();BtnShare(' + iconsLng + ',' + iconsLat + ')">';
+			if (iconsPhone)
+				html_content = html_content + '<img src="img/panel/phone.svg" onclick="event.stopPropagation();BtnPhone(\'' + iconsPhone + '\')">';
+			if (iconsWebsite)
+				html_content = html_content + '<img src="img/panel/website.svg" onclick="event.stopPropagation();BtnWebsite(\'' + iconsWebsite + '\')">';
+			if (iconsEmail)
+				html_content = html_content + '<img src="img/panel/email.svg" onclick="event.stopPropagation();BtnEmail(\'' + iconsEmail + '\')">';
+		}
+		else {
+			html_content = html_content + '<img src="img/panel/close.svg" onclick="event.stopPropagation();ui.set_pickingOnMap(0)"><img src="img/panel/tick.svg" onclick="event.stopPropagation();ui.set_pickingOnMap(' + (ui.get_pickingOnMap()+1) + ')">';
+		}
 		html_content = html_content + '</center>';
 		$('#topPanelIconsContent').html(html_content);
 	}
@@ -174,6 +185,34 @@ UI.prototype.topPanelsMargin = function(page, columns) {
 		$(".topPanels").css("margin-top", "84px");
 	else
 		$(".topPanels").css("margin-top", "50px");
+}
+
+UI.prototype.get_pickingOnMap = function() {
+	return this.pickingPoint;
+}
+UI.prototype.set_pickingOnMap = function(value) {
+	this.pickingPoint = value;
+	switch(value) {
+		case 0:
+			this.POIPanel({msgShow: 'no', iconsShow: 'no'});
+			break;
+		case 1:
+			this.POIPanel({msgShow: 'yes', msgText: t("Pick an origin"), iconsShow: 'no'});
+			break;
+		case 2:
+			this.pickingCoordLng1 = utils.fix_lng(ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326')[0]);
+			this.pickingCoordLat1 = ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326')[1];
+			this.POIPanel({msgShow: 'yes', msgText: t("Pick a destination"), iconsShow: 'no'});
+			break;
+		case 3:
+			this.pickingCoordLng2 = utils.fix_lng(ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326')[0]);
+			this.pickingCoordLat2 = ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326')[1];
+			this.set_pickingOnMap(0);
+			this.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+			console.log(this.pickingCoordLng1, this.pickingCoordLat1, this.pickingCoordLng2, this.pickingCoordLat2);
+			break;
+	}
+	poiClick.hide();
 }
 
 UI.prototype.update_lower_panel = function(duration, distance, percentage) {
