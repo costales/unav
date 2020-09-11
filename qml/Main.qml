@@ -111,7 +111,6 @@ MainView {
 		property string lastSearchStringOffline: ''
 		property string lastSearchResultsOnline: ''
 		property string lastSearchResultsOffline: ''
-		property bool importedGPX: false
 
 		property string usContext: "messaging://"
 		function executeJavaScript(code) {

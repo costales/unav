@@ -23,16 +23,11 @@ Item {
         id: simulate
         anchors.centerIn: parent
         spacing: units.gu(1)
-        Label {
-            text: i18n.tr("Simulate a route picking positions on the map")
-            anchors.horizontalCenter: parent.horizontalCenter
-       }
         Button {
             id: btnFrom
-            text: i18n.tr("Pick positions")
+            text: i18n.tr("Pick origin & destination")
             enabled: !mainPageStack.simulateRoute
             width: units.gu(30)
-            anchors.topMargin: units.gu(35)
             anchors.horizontalCenter: parent.horizontalCenter
             color: theme.palette.normal.positive
             onClicked: {

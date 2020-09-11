@@ -62,8 +62,10 @@ Page {
 				mainPageStack.importGPX = '';
 			}
 
-			mainPageStack.importedGPX = true;
-			mainPageStack.removePages(picker);
+			if (mainPageStack.columns === 1) {
+				mainPageStack.hideSideBar();
+				mainPageStack.removePages(mainPageStack.primaryPage);
+			}
 		 }
 	}
 }
