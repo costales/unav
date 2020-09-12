@@ -103,7 +103,6 @@ MainView {
 		]
 
 		property bool onLoadingExecuted: false
-		property string importGPX: ''
 		property string favLng: ""
 		property string favLat: ""
 		property string favName: ""
@@ -111,7 +110,6 @@ MainView {
 		property string lastSearchStringOffline: ''
 		property string lastSearchResultsOnline: ''
 		property string lastSearchResultsOffline: ''
-		property bool importedGPX: false
 
 		property string usContext: "messaging://"
 		function executeJavaScript(code) {
@@ -237,11 +235,6 @@ MainView {
 							if (coord['lat'] !== null && coord['lng'] !== null) {
 								mainPageStack.executeJavaScript("import_marker(" + coord['lng'] + "," + coord['lat'] + ")");
 							}
-							// Catching GPX
-							if (mainPageStack.importGPX) {
-								mainPageStack.executeJavaScript("import_gpx('" + mainPageStack.importGPX + "')");
-								mainPageStack.importGPX = '';
-							}
 						}
 					}
 					onFeaturePermissionRequested: {
@@ -261,22 +254,6 @@ MainView {
 				var coord = QmlJs.get_url_coord(uris[0]);
 				if (coord['lat'] !== null && coord['lng'] !== null)
 					mainPageStack.executeJavaScript("import_marker(" + coord['lng'] + "," + coord['lat'] + ")");
-			}
-		}
-	}
-	// GPX import
-	Connections {
-        target: ContentHub
-        onImportRequested: {
-			if (transfer.contentType == 0) {
-				var filePath = String(transfer.items[0].url).replace('file://', '');
-				if (filePath.toLowerCase().endsWith(".gpx")) {
-					mainPageStack.importGPX = filePath;
-					mainPageStack.executeJavaScript("import_gpx('" + mainPageStack.importGPX + "')");
-				}
-				else {
-					mainPageStack.importGPX = '';
-				}
 			}
 		}
 	}

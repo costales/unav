@@ -54,16 +54,13 @@ Page {
 
 		onImportRequested: {
 			var filePath = String(transfer.items[0].url).replace('file://', '')
-			if (filePath.toLowerCase().endsWith(".gpx")) {
-				mainPageStack.importGPX = filePath;
-				mainPageStack.executeJavaScript("import_gpx('" + mainPageStack.importGPX + "')");
-			}
-			else {
-				mainPageStack.importGPX = '';
-			}
+			if (filePath.toLowerCase().endsWith(".gpx"))
+				mainPageStack.executeJavaScript("import_gpx('" + filePath + "')");
 
-			mainPageStack.importedGPX = true;
-			mainPageStack.removePages(picker);
+			if (mainPageStack.columns === 1) {
+				mainPageStack.hideSideBar();
+				mainPageStack.removePages(mainPageStack.primaryPage);
+			}
 		 }
 	}
 }
