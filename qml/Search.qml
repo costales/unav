@@ -24,15 +24,12 @@ Page {
     id: searchPage
 
     Component.onCompleted: {
-        mainPageStack.executeJavaScript("ui.topPanelsMargin(\"search\", " + mainPageStack.columns + ")");
+        mainPageStack.executeJavaScript("ui.topPanelsMargin('search', " + mainPageStack.columns + ")");
     }
 
     Component.onDestruction: {
-        // Hide 2nd column when returning to the map to avoid an empty white column
-        if (mainPageStack.columns === 1) {
-            mainPageStack.executeJavaScript("ui.topPanelsMargin(\"search\", " + mainPageStack.columns + ")");
-            mainPageStack.hideSideBar();
-        }
+        mainPageStack.hideSideBar();
+        mainPageStack.executeJavaScript("ui.topPanelsMargin('search', 1)");
     }
 
     header: UNavHeader {

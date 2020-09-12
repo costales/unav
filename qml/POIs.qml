@@ -31,12 +31,6 @@ Item {
 
     property ListView flickable: categoryList
 
-    Component.onDestruction: {
-        // Hide 2nd column when returning to the map to avoid an empty white column
-        if (mainPageStack.columns === 1)
-            mainPageStack.hideSideBar()
-    }
-
     ListModel {
         id: categoryListModel
         function initialize() {
