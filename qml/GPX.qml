@@ -19,14 +19,23 @@ import Ubuntu.Components 1.3
 Item {
     id: gpx
     
+    Component.onCompleted: {
+        mainPageStack.importedGPX = false;
+    }
+
     Column {
         id: importGPX
         anchors.centerIn: parent
         spacing: units.gu(1)
+        Label {
+            text: mainPageStack.importedGPX ? i18n.tr("Track imported into the map") : i18n.tr("You can import a GPX file")
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
         Button {
             id: btnImport
-            text: i18n.tr("Import track")
+            text: mainPageStack.importedGPX ? i18n.tr("Import another one") : i18n.tr("Import track")
             width: units.gu(30)
+            anchors.topMargin: units.gu(35)
             anchors.horizontalCenter: parent.horizontalCenter
             color: theme.palette.normal.positive
             onClicked: {

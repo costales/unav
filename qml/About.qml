@@ -111,7 +111,7 @@ Page {
                     width: parent.width
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
-                    text: i18n.tr("Version %1 Licensed under %2").arg(navApp.applicationVersion).arg("<a href=\"http://www.gnu.org/licenses/gpl-3.0.en.html\">GPL3</a>")
+                    text: i18n.tr("Version %1. Licensed under %2").arg(navApp.applicationVersion).arg("<a href=\"http://www.gnu.org/licenses/gpl-3.0.en.html\">GPL3</a>")
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
                 Label {

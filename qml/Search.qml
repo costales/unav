@@ -24,12 +24,15 @@ Page {
     id: searchPage
 
     Component.onCompleted: {
-        mainPageStack.executeJavaScript("ui.topPanelsMargin('search', " + mainPageStack.columns + ")");
+        mainPageStack.executeJavaScript("ui.topPanelsMargin(\"search\", " + mainPageStack.columns + ")");
     }
 
     Component.onDestruction: {
-        mainPageStack.hideSideBar();
-        mainPageStack.executeJavaScript("ui.topPanelsMargin('search', 1)");
+        // Hide 2nd column when returning to the map to avoid an empty white column
+        if (mainPageStack.columns === 1) {
+            mainPageStack.executeJavaScript("ui.topPanelsMargin(\"search\", " + mainPageStack.columns + ")");
+            mainPageStack.hideSideBar();
+        }
     }
 
     header: UNavHeader {
@@ -59,7 +62,7 @@ Page {
 
             // TRANSLATORS: These are section headers. Please keep their translations short and not
             // longer than their original string lengths.
-            model: [i18n.tr("Places"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Simulate"), i18n.tr("Track"), i18n.tr("Coordinates")]
+            model: [i18n.tr("Places"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Coordinates"), i18n.tr("Track")]
             selectedIndex: navApp.settings.lastSearchTab
 
             onSelectedIndexChanged: {
@@ -89,13 +92,10 @@ Page {
                     return Qt.resolvedUrl("Favorites.qml")
                     break;
                 case 3:
-                    return Qt.resolvedUrl("Simulate.qml")
+                    return Qt.resolvedUrl("Coordinate.qml")
                     break;
                 case 4:
                     return Qt.resolvedUrl("GPX.qml")
-                    break;
-                case 5:
-                    return Qt.resolvedUrl("Coordinate.qml")
                     break;
                 default:
                     return '';

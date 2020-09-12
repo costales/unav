@@ -361,21 +361,11 @@
 				mapUI.clear_layer('poi');
 				ui.set_center_pos(false);
 				mapUI.set_map_center(coord[0], coord[1], true);
-				switch(ui.get_pickingOnMap()) {
-					case 0:
-						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
-						if (settings.get_online())
-							webapi.georeverse_online(coord[0], coord[1], longtouch_id);
-						else
-							webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
-						break;
-					case 1:
-						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
-						break;
-					case 2:
-						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
-						break;
-				}
+				ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+				if (settings.get_online())
+					webapi.georeverse_online(coord[0], coord[1], longtouch_id);
+				else
+					webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
 			}, delay: 350
 		});
 		map.addInteraction(LongTouch);
