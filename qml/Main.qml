@@ -234,7 +234,7 @@ MainView {
 							mainPageStack.executeJavaScript("mapUI.set_map_zoom(" + navApp.settings.lastZoom + ")");
 							mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
 							// Catching urls
-							var coord = QmlJs.get_url_coord(Qt.application.arguments[1]);
+							var coord = QmlJs.get_url_coord(Qt.application.arguments[2]);
 							if (coord['lat'] !== null && coord['lng'] !== null) {
 								mainPageStack.executeJavaScript("import_marker(" + coord['lng'] + "," + coord['lat'] + ")");
 							}
