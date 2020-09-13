@@ -22,7 +22,7 @@ Action {
     visible: mainPageStack.columns !== 1
     shortcut: "Escape"
     onTriggered: {
-        mainPageStack.hideSideBar()
-        mainPageStack.removePages(mainPageStack.primaryPage)
+        mainPageStack.hideSideBar();
+        mainPageStack.removePages(mainPageStack.primaryPage);
     }
 }

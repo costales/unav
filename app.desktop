@@ -1,10 +1,10 @@
 [Desktop Entry]
 Name=uNav
 Comment=Map viewer & turn-by-turn GPS navigator for car, bike & walking
-Keywords=GPS;navigator;map;POI;OSM;OpenStreetMap;
+Keywords=GPS;navigator;map;maps;navigation;OSM;OpenStreetMap;
 Type=Application
 Icon=icon.png
-Exec=qmlscene %u qml/Main.qml
+Exec=qmlscene --scaling %u qml/Main.qml
 Terminal=false
 X-Ubuntu-Touch=true
 
@@ -15,5 +15,3 @@ X-Ubuntu-Splash-Image=icon-splash.svg
 X-Ubuntu-Splash-Color-Header=#5846c5
 X-Ubuntu-Splash-Color=#5846c5
 X-Ubuntu-Splash-Color-Footer=#5846c5
-
-X-Ubuntu-Supported-Orientations=portrait
