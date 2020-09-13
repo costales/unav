@@ -46,6 +46,7 @@ function Navigator() {
 		this.route.duration = null;
 		this.route.percentage = 0;
 		this.route.distance_total = 0;
+		this.dist_btw_start_now = 0;
 		this.route.steps = []; // type + instruction + name + distance + time
 		this.route.points = [];
 		this.route.bbox = [];
@@ -253,6 +254,8 @@ Navigator.prototype.parse_data = function(data) {
 
 	this.route.bbox.push([data.trip.summary.min_lon, data.trip.summary.min_lat], [data.trip.summary.max_lon, data.trip.summary.max_lat]);
 	
+	this.route.dist_btw_start_now = Math.trunc(turf.distance(turf.point([this.pos_start.lng, this.pos_start.lat]), turf.point([this.pos.lng, this.pos.lat])) * 1000);
+	
 	this.route.steps = [];
 	var coords_aux = maths.decode_API_line(data.trip.legs[0].shape);
 	for (i=0; i<data.trip.legs[0].maneuvers.length; i++) { // For each step
@@ -277,11 +280,11 @@ Navigator.prototype.parse_data = function(data) {
 			instruction: data.trip.legs[0].maneuvers[i].instruction,
 			distance: parseInt((data.trip.legs[0].maneuvers[i].length).toString().replace('.', '')),
 			distance_step: parseInt((data.trip.legs[0].maneuvers[i].length).toString().replace('.', '')),
-			duration: data.trip.legs[0].maneuvers[i].time,
-			duration_step: data.trip.legs[0].maneuvers[i].time,
+			duration_step: parseInt(data.trip.legs[0].maneuvers[i].time),
 			speaked: 0
 		});
 	}
+	
 	if (nav.get_data().mode.startsWith('calculating'))
 		nav.set_data({mode: 'drawing'});
 	else
@@ -310,7 +313,7 @@ Navigator.prototype.update = function() {
 	var distance_to_end_of_step = Math.trunc(turf.distance(pt_near, pt_end_of_step) * 1000);
 
 	// Get percentage of route done and update values
-	var percentage_step_remain = (distance_to_end_of_step * 100) / this.route.steps[this.route.ind].distance_step;
+	var percentage_step_remain = Math.trunc((distance_to_end_of_step * 100) / this.route.steps[this.route.ind].distance_step);
 	this.route.steps[this.route.ind].distance = distance_to_end_of_step;
 	this.route.distance = distance_to_end_of_step;
 	this.route.duration = Math.trunc((this.route.steps[this.route.ind].duration_step * percentage_step_remain) / 100);
@@ -321,12 +324,17 @@ Navigator.prototype.update = function() {
 	this.route.percentage = Math.trunc(100 - ((this.route.distance * 100) / this.route.distance_total));
 
 	// On route?
-	if (out_meters > this.IS_IN_ROUTE && this.route.steps[this.route.ind].type != 11)
-		if (nav.get_data().mode.startsWith('route_driving'))
+	if (out_meters > this.IS_IN_ROUTE && nav.get_data().mode.startsWith('route_driving')) { // Out of route
+		if (this.route.steps[this.route.ind].type != 11) // Not at start point
 			nav.set_data({mode: 'route_out'});
-	else // Return to the route
-		if (nav.get_data().mode.startsWith('route_out'))
-			nav.set_data({mode: 'route_out_returned'});
+		if (this.route.steps[this.route.ind].type == 11) { // At start point
+			var dist_aux = Math.trunc(turf.distance(turf.point([this.pos_start.lng, this.pos_start.lat]), turf.point([this.pos.lng, this.pos.lat])) * 1000);
+			if (dist_aux > this.route.dist_btw_start_now + this.IS_IN_ROUTE) // Moving away from start
+				nav.set_data({mode: 'route_out'});
+		}
+	}
+	if (out_meters <= this.IS_IN_ROUTE && nav.get_data().mode.startsWith('route_out')) // Return to the route while calculating
+		nav.set_data({mode: 'route_out_returned'});
 
 	// Calculate distance to end of step for end of route and speak depeding of speed and mode route
 	switch(settings.get_route_mode()) {
