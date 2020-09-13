@@ -162,7 +162,6 @@ MainView {
 
 			WebEngineView {
 				id: _webview
-				zoomFactor: units.gu(1) / 8.4
 				anchors.fill: parent
 				profile: webcontext
 				url: navApp.mapUrl
