@@ -190,7 +190,7 @@ body{
 #stepTxt {
   position: absolute;
   top: 14px;
-  width: 65%;
+  right: 45px;
   height: 65px;
   left: 74px;
   font-size: 18px;
@@ -273,7 +273,6 @@ body{
 .ol-compassctrl.compass {
   width: 60px;
   height: 60px;
-  bottom: 390px;
   right: 18px;
   position: fixed;
   display: none;
@@ -308,4 +307,75 @@ body{
   text-align: left;
   font-family: Ubuntu;
   font-size: 16px;
+}
+
+@media screen and (orientation:portrait) {
+  #posBtn {
+    bottom: 56px;
+    right: 25px;
+  }
+
+  .ol-compassctrl.compass {
+    bottom: 410px;
+    right: 25px;
+  }
+  
+  #panelsNav {
+    height: 120px;
+  }
+  #topPanelNav {
+    height: 92px;
+  }
+  #btnCancelRoute {
+    top: 30px;
+  }
+  #stepImg {
+    top: 25px;
+  }
+  #distance {
+    bottom: 12px;
+    left: 0px;
+  }
+  #stepTxt {
+    top: 14px;
+    left: 74px;
+  }
+  #panelRecenterRoute {
+    bottom: 134px;
+  }
+}
+@media screen and (orientation:landscape) {
+  #posBtn {
+    bottom: 12px;
+    right: 5px;
+  }
+
+  .ol-compassctrl.compass {
+    right: 5px;
+    bottom: 220px;
+  }
+
+  #panelsNav {
+    height: 70px;
+  }
+  #topPanelNav {
+    height: 52px;
+  }
+  #btnCancelRoute {
+    top: 5px;
+  }
+  #stepImg {
+    top: 7px;
+  }
+  #distance {
+    bottom: 18px;
+    left: 45px;
+  }
+  #stepTxt {
+    top: -10px;
+    left: 110px;
+  }
+  #panelRecenterRoute {
+    bottom: 84px;
+  }
 }

@@ -17,14 +17,6 @@ UI.prototype.ZOOM = 17;
 
 function UI() {
 	this.center_pos = false;
-	this.searchPageWith2Columns = 1;
-}
-
-UI.prototype.get_search2columns = function() {
-	return this.searchPageWith2Columns;
-}
-UI.prototype.set_search2columns = function(columns) {
-	this.searchPageWith2Columns = columns;
 }
 
 UI.prototype.get_center_pos = function() {
@@ -169,11 +161,9 @@ UI.prototype.set_confirm_btns = function(mode) {
 }
 
 // Search page has a big height and the panels are hidden
-UI.prototype.topPanelsMargin = function(page, columns) {
-	if (columns > 1 && page == "search")
-		$(".topPanels").css("margin-top", "84px");
-	else
-		$(".topPanels").css("margin-top", "50px");
+UI.prototype.topPanelsMargin = function(header_height) {
+	console.log(header_height);
+	$(".topPanels").css("margin-top", header_height);
 }
 
 UI.prototype.update_lower_panel = function(duration, distance, percentage) {

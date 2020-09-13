@@ -654,7 +654,15 @@
 		
 		$(document).ready(function(){ // Disable clicks until page is loaded, this enables body{pointer-events:none;}
 			$('body').css('pointer-events','all');
-		})
+		});
+		var resizeWindowId;
+		$(window).resize(function() {
+			clearTimeout(resizeWindowId);
+			resizeWindowId = setTimeout(doneResizing, 500);
+		});
+		function doneResizing() {
+			window.location = 'http://settoppaneltop/';
+		}	
 	</script>
 
 </body>

@@ -23,13 +23,8 @@ import "components"
 Page {
     id: searchPage
 
-    Component.onCompleted: {
-        mainPageStack.executeJavaScript("ui.topPanelsMargin('search', " + mainPageStack.columns + ")");
-    }
-
     Component.onDestruction: {
         mainPageStack.hideSideBar();
-        mainPageStack.executeJavaScript("ui.topPanelsMargin('search', 1)");
     }
 
     header: UNavHeader {

@@ -28,11 +28,7 @@ Page {
     Component.onDestruction: {
         // Hide 2nd column when returning to the map to avoid an empty white column
         if (mainPageStack.columns === 1)
-            mainPageStack.hideSideBar()
-    }
-
-    Component.onCompleted: {
-        mainPageStack.executeJavaScript("ui.topPanelsMargin(\"settings\", " + mainPageStack.columns + ")");
+            mainPageStack.hideSideBar();
     }
 
     header: UNavHeader {

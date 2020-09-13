@@ -31,9 +31,9 @@ import "js/db.js" as UnavDB
 MainView {
 	id: navApp
 
-	width: units.gu(50)
-	height: units.gu(75)
-
+    width: units.gu(130)
+    height: units.gu(85)
+	
 	objectName: "navApp"
 	applicationName: "navigator.costales"
 
@@ -135,7 +135,7 @@ MainView {
 						Action {
 							id: actionSettings
 							iconName: "settings"
-							enabled: mainPageStack.onLoadingExecuted
+							enabled: mainPageStack.onLoadingExecuted && mainPageStack.columns == 1
 							onTriggered: {
 								mainPageStack.addPageToNextColumn(mainPageStack.primaryPage, Qt.resolvedUrl("Settings.qml"));
 								mainPageStack.showSideBar();
@@ -145,7 +145,7 @@ MainView {
 							id: searchAction
 							iconName: "find"
 							shortcut: "Ctrl+F"
-							enabled: mainPageStack.onLoadingExecuted
+							enabled: mainPageStack.onLoadingExecuted && mainPageStack.columns == 1
 							onTriggered: {
 								mainPageStack.addPageToNextColumn(mainPageStack.primaryPage, Qt.resolvedUrl("Search.qml"));
 								mainPageStack.showSideBar();
@@ -204,6 +204,9 @@ MainView {
 						case "routemode":
 							navApp.settings.routeModes = url[3];
 							break;
+						case "settoppaneltop":
+							mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
+							break;
 					}
 					// Allow loading of file:// but dissallow http because it's used for navigation
 					if (typeof url[0] != "undefined" && url[0].includes("http"))
@@ -230,6 +233,7 @@ MainView {
 							mainPageStack.executeJavaScript("settings.set_speak_voice(\"" + navApp.settings.speakVoice + "\")");
 							mainPageStack.executeJavaScript("mapUI.set_map_center(" + navApp.settings.lastLng + "," + navApp.settings.lastLat + ")");
 							mainPageStack.executeJavaScript("mapUI.set_map_zoom(" + navApp.settings.lastZoom + ")");
+							mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
 							// Catching urls
 							var coord = QmlJs.get_url_coord(Qt.application.arguments[1]);
 							if (coord['lat'] !== null && coord['lng'] !== null) {
