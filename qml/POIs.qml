@@ -74,14 +74,11 @@ Item {
         section.property: "theme"
         section.criteria: ViewSection.FullString
         section.labelPositioning: ViewSection.CurrentLabelAtStart + ViewSection.InlineLabels
-        section.delegate: Rectangle {
+        section.delegate: ListItemHeader {
             width: parent.width
             height: sectionHeader.height
-
-            ListItemHeader {
-                id: sectionHeader
-                title: section
-            }
+            id: sectionHeader
+            title: section
         }
 
         delegate: ListItem {
@@ -96,6 +93,8 @@ Item {
                     height: units.gu(3)
                     width: height
                     SlotsLayout.position: SlotsLayout.First
+                    color: theme.palette.normal.backgroundText
+                    keyColor: "#000000"
                 }
 
                 title.text: i18n.tr(model.label)

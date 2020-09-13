@@ -132,7 +132,7 @@ Page {
                 id: listItemVoice
 
                 title.text: model.lang
-                title.color: UbuntuColors.darkGrey
+                title.color: theme.palette.normal.backgroundSecondaryText
                 title.textFormat: Text.RichText
                 title.wrapMode: Text.WordWrap
 
@@ -205,7 +205,7 @@ Page {
         Row {
             Button {
                 text: i18n.tr("Cancel Download")
-                color: UbuntuColors.red
+                color: theme.palette.normal.negative
                 width: pgbar.width
                 onClicked: {
                     singleDownload.cancel
@@ -223,7 +223,7 @@ Page {
             title: i18n.tr("About the voices")
             Label {
                 width: parent.width
-                color: UbuntuColors.slate
+                color: theme.palette.normal.backgroundSecondaryText
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
                 text: i18n.tr("You can add a new voice to uNav following these steps:")
@@ -231,7 +231,7 @@ Page {
             }
             Label {
                 width: parent.width
-                color: UbuntuColors.slate
+                color: theme.palette.normal.backgroundSecondaryText
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
                 text: "<a href='http://people.ubuntu.com/~costales/unav/voices/'>" + i18n.tr("How to add a voice") + "</a>"
