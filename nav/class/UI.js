@@ -162,7 +162,6 @@ UI.prototype.set_confirm_btns = function(mode) {
 
 // Search page has a big height and the panels are hidden
 UI.prototype.topPanelsMargin = function(header_height) {
-	console.log(header_height);
 	$(".topPanels").css("margin-top", header_height);
 }
 
