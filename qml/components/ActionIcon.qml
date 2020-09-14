@@ -31,7 +31,7 @@ AbstractButton {
         width: units.gu(2)
         height: width
         anchors.centerIn: parent
-        color: UbuntuColors.porcelain
+        color: theme.palette.normal.foreground
     }
 }
 

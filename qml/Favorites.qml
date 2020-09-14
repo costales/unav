@@ -43,7 +43,7 @@ Item {
             favoritesModel.clear();
             var res = UnavDB.getFavorites();
             for (var i = 0; i < res.rows.length; ++i) {
-                favoritesModel.append({ 
+                favoritesModel.append({
                     name: res.rows.item(i).key,
                     lat:  res.rows.item(i).lat,
                     lng:  res.rows.item(i).lng
@@ -116,7 +116,7 @@ Item {
                     name: "starred"
                     width: units.gu(2.5)
                     height: width
-                    color: UbuntuColors.jet
+                    color: theme.palette.normal.backgroundText
                     SlotsLayout.position: SlotsLayout.First
                     SlotsLayout.overrideVerticalPositioning: true
                     anchors.verticalCenter: parent.verticalCenter
@@ -197,7 +197,7 @@ Item {
                     }
                     Button {
                         text: isOverwriteMode ? i18n.tr("Overwrite") : i18n.tr("Update")
-                        color: isOverwriteMode ? UbuntuColors.red : UbuntuColors.green
+                        color: isOverwriteMode ? theme.palette.normal.negative : theme.palette.normal.positive
                         enabled: favNameField.text.trim() && favoritesPage.favName_edit !== favNameField.text
                         onClicked: {
                             UnavDB.saveFavorite(favNameField.text, favoritesPage.lat, favoritesPage.lng);

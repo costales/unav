@@ -307,7 +307,7 @@ MainView {
                     }
                     Button {
                         text: isOverwriteMode ? i18n.tr("Overwrite") : i18n.tr("Add")
-                        color: isOverwriteMode ? UbuntuColors.red : UbuntuColors.green
+                        color: isOverwriteMode ? theme.palette.normal.negative : theme.palette.normal.positive
                         enabled: favNameField.text.trim()
                         onClicked: {
                             UnavDB.saveFavorite(favNameField.text, mainPageStack.favLat, mainPageStack.favLng);

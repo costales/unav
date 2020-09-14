@@ -33,7 +33,7 @@ Item {
                 id: buttonLabel
                 text: i18n.tr("Decimal")
                 anchors.centerIn: parent
-                color: coordinateLoader.sourceComponent === colCoordDecComponent ? theme.palette.normal.activity : UbuntuColors.slate
+                color: coordinateLoader.sourceComponent === colCoordDecComponent ? theme.palette.normal.activity : theme.palette.normal.backgroundTertiaryText
             }
             onClicked: coordinateLoader.sourceComponent = colCoordDecComponent
         }
@@ -45,7 +45,7 @@ Item {
                 id: buttonLabel2
                 text: i18n.tr("Sexagesimal")
                 anchors.centerIn: parent
-                color: coordinateLoader.sourceComponent === colCoordPolarComponent ? theme.palette.normal.activity : UbuntuColors.slate
+                color: coordinateLoader.sourceComponent === colCoordPolarComponent ? theme.palette.normal.activity : theme.palette.normal.backgroundTertiaryText
             }
             onClicked: coordinateLoader.sourceComponent = colCoordPolarComponent
         }
@@ -209,13 +209,13 @@ Item {
                 UbuntuShape {
                     width: units.gu(4)
                     height: lat2c.height
-                    backgroundColor: lat2dMouseArea.pressed ? UbuntuColors.blue : "White"
+                    backgroundColor: lat2dMouseArea.pressed ? theme.palette.normal.activity : theme.palette.normal.foreground
 
                     Label {
                         id: lat2d
                         anchors.centerIn: parent
                         text: navApp.settings.default_coord_2d
-                        color: lat2dMouseArea.pressed ? "White" : UbuntuColors.slate
+                        color: lat2dMouseArea.pressed ? theme.palette.normal.foreground :  theme.palette.normal.backgroundSecondaryText
                     }
 
                     MouseArea {
@@ -280,13 +280,13 @@ Item {
                 UbuntuShape {
                     width: units.gu(4)
                     height: lng2c.height
-                    backgroundColor: lng2dMouseArea.pressed ? UbuntuColors.blue : "White"
+                    backgroundColor: lng2dMouseArea.pressed ? theme.palette.normal.activity : theme.palette.normal.foreground
 
                     Label {
                         id: lng2d
                         anchors.centerIn: parent
                         text: navApp.settings.default_coord_3d
-                        color: lng2dMouseArea.pressed ? "White" : UbuntuColors.slate
+                        color: lng2dMouseArea.pressed ? theme.palette.normal.foreground :  theme.palette.normal.backgroundSecondaryText
                     }
 
                     MouseArea {

@@ -64,7 +64,7 @@ Page {
         id: flickable
         anchors.fill: parent
         contentHeight: settingsColumn.height
-        
+
         Column {
             id: settingsColumn
 
@@ -79,7 +79,7 @@ Page {
                 title: i18n.tr("Map")
                 color: theme.palette.normal.background
            }
-            
+
             ListItem {
                 height: navApp.settings.online ? mapOnline.height + divider.height : mapOnline.height + howToOfflineLabel.height + divider.height
                 ListItemLayout {
@@ -98,7 +98,7 @@ Page {
                         SlotsLayout.position: SlotsLayout.Last
                     }
                 }
-                
+
                 Label {
                     id: howToOfflineLabel
                     text: "<a href='#'>" + i18n.tr("Instructions for offline mode") + "</a>"
@@ -132,7 +132,7 @@ Page {
                     ListItemLayout {
                         id: unitListItemLayout
                         title.text: model.unit
-                        title.color: "#5D5D5D"
+                        title.color: theme.palette.normal.backgroundSecondaryText
                         padding { top: units.gu(1); bottom: units.gu(1) }
                         Icon {
                             SlotsLayout.position: SlotsLayout.Trailing
@@ -242,7 +242,7 @@ Page {
             title: i18n.tr("How to use uNav offline")
             Label {
                 width: parent.width
-                color: UbuntuColors.slate
+                color: theme.palette.normal.backgroundSecondaryText
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignLeft
                 text: i18n.tr("<b>Step 1</b> Install") + " <a href='https://open-store.io/app/osmscout-server.jonnius'>OSM Scout Server</a>: " + i18n.tr("In its wizard, set profile to <i>Default</i>, disable <i>Automatic activation</i> and download a map.")
@@ -250,7 +250,7 @@ Page {
             }
             Label {
                 width: parent.width
-                color: UbuntuColors.slate
+                color: theme.palette.normal.backgroundSecondaryText
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignLeft
                 text: i18n.tr("<b>Step 2</b> Install") + " <a href='https://open-store.io/app/ut-tweak-tool.sverzegnassi'>UT Tweak Tool</a>: " + i18n.tr("Set <i>Prevent app suspension</i> for OSM Scout Server.")
@@ -258,7 +258,7 @@ Page {
             }
             Label {
                 width: parent.width
-                color: UbuntuColors.slate
+                color: theme.palette.normal.backgroundSecondaryText
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignLeft
                 text: i18n.tr("<b>Step with each use</b>: Launch OSM Scout Server before uNav.")
