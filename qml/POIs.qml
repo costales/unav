@@ -74,11 +74,17 @@ Item {
         section.property: "theme"
         section.criteria: ViewSection.FullString
         section.labelPositioning: ViewSection.CurrentLabelAtStart + ViewSection.InlineLabels
-        section.delegate: ListItemHeader {
+        section.delegate: Rectangle {
             width: parent.width
             height: sectionHeader.height
-            id: sectionHeader
-            title: section
+            color: theme.palette.normal.background
+
+            ListItemHeader {
+                width: parent.width
+                height: sectionHeader.height
+                id: sectionHeader
+                title: section
+            }
         }
 
         delegate: ListItem {
