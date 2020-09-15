@@ -339,6 +339,9 @@ body{
   #stepTxt {
     top: 14px;
     left: 74px;
+    font-size: 18px;
+    line-height: 18px;
+    height: 65px;
   }
   #panelRecenterRoute {
     bottom: 134px;
@@ -372,8 +375,11 @@ body{
     left: 45px;
   }
   #stepTxt {
-    top: -10px;
+    top: 0px;
     left: 110px;
+    font-size: 17px;
+    line-height: 17px;
+    height: 45px;
   }
   #panelRecenterRoute {
     bottom: 84px;
