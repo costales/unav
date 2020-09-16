@@ -329,6 +329,9 @@ body{
   #btnCancelRoute {
     top: 30px;
   }
+  #totalProgress {
+    bottom: 0px;
+  }
   #stepImg {
     top: 25px;
   }
@@ -366,6 +369,9 @@ body{
   }
   #btnCancelRoute {
     top: 5px;
+  }
+  #totalProgress {
+    bottom: 10px;
   }
   #stepImg {
     top: 7px;
