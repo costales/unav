@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-16 19:08+0200\n"
+"POT-Creation-Date: 2020-09-16 19:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -144,8 +144,8 @@ msgstr ""
 #: build/all/app/install/qml/Coordinate.qml:375
 #: build/all/app/install/qml/Settings.qml:268
 #: build/all/app/install/qml/Voices.qml:241 nav/class/UI.js:181
-#: nav/index.html.strings:3 qml/Coordinate.qml:147 qml/Coordinate.qml:375
-#: qml/Settings.qml:268 qml/Voices.qml:241
+#: qml/Coordinate.qml:147 qml/Coordinate.qml:375 qml/Settings.qml:268
+#: qml/Voices.qml:241
 msgid "Close"
 msgstr ""
 
@@ -172,7 +172,7 @@ msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:192
 #: build/all/app/install/qml/Main.qml:302 nav/class/UI.js:179
-#: nav/index.html.strings:1 qml/Favorites.qml:192 qml/Main.qml:302
+#: qml/Favorites.qml:192 qml/Main.qml:302
 msgid "Cancel"
 msgstr ""
 
@@ -220,7 +220,7 @@ msgstr ""
 
 #. TRANSLATORS: These are section headers. Please keep their translations short and not
 #. longer than their original string lengths.
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:57
 msgid "Place"
 msgstr ""
 
@@ -423,11 +423,11 @@ msgstr ""
 msgid "Exit the roundabout"
 msgstr ""
 
-#: nav/class/UI.js:178 nav/index.html.strings:4
+#: nav/class/UI.js:178 nav/index.html.strings:1
 msgid "Center"
 msgstr ""
 
-#: nav/class/UI.js:180 nav/index.html.strings:2
+#: nav/class/UI.js:180
 msgid "Start"
 msgstr ""
 
@@ -451,40 +451,47 @@ msgstr ""
 msgid "There was an error"
 msgstr ""
 
-#: nav/index.html:174 nav/index.html:185
+#: nav/index.html:182 nav/index.html:193
 msgid "Waiting for GPS"
 msgstr ""
 
-#: nav/index.html:243 nav/index.html:267
+#: nav/index.html:251
 msgid "GPS is ready"
 msgstr ""
 
-#: nav/index.html:279 nav/index.html:280 nav/index.html:475 nav/index.html:484
+#: nav/index.html:275 nav/index.html:276 nav/index.html:281 nav/index.html:282
+#: nav/index.html:479 nav/index.html:488
 msgid "Calculating route"
 msgstr ""
 
-#: nav/index.html:291
+#: nav/index.html:299
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:328
+#: nav/index.html:334
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:342
+#: nav/index.html:348
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:367
+#: nav/index.html:373
 msgid "You have arrived"
 msgstr ""
 
-#: nav/index.html:497
+#: nav/index.html:501
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:556
+#: nav/index.html:560
 msgid "Use more zoom for POIs"
+msgstr ""
+
+#. TRANSLATORS: These are section headers. Please keep their translations short and not
+#. longer than their original string lengths.
+#: qml/Search.qml:57
+msgid "Places"
 msgstr ""
 
 #: qml/js/PoiCategories.js:5

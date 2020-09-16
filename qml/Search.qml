@@ -54,7 +54,7 @@ Page {
 
             // TRANSLATORS: These are section headers. Please keep their translations short and not
             // longer than their original string lengths.
-            model: [i18n.tr("Place"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Simulate"), i18n.tr("Track"), i18n.tr("Coordinate")]
+            model: [i18n.tr("Places"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Simulate"), i18n.tr("Track"), i18n.tr("Coordinate")]
             selectedIndex: navApp.settings.lastSearchTab
 
             onSelectedIndexChanged: {
