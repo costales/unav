@@ -54,7 +54,7 @@ Page {
 
             // TRANSLATORS: These are section headers. Please keep their translations short and not
             // longer than their original string lengths.
-            model: [i18n.tr("Places"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Coordinates"), i18n.tr("Track")]
+            model: [i18n.tr("Place"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Simulate"), i18n.tr("Track"), i18n.tr("Coordinate")]
             selectedIndex: navApp.settings.lastSearchTab
 
             onSelectedIndexChanged: {
@@ -84,10 +84,13 @@ Page {
                     return Qt.resolvedUrl("Favorites.qml")
                     break;
                 case 3:
-                    return Qt.resolvedUrl("Coordinate.qml")
+                    return Qt.resolvedUrl("Simulate.qml")
                     break;
                 case 4:
                     return Qt.resolvedUrl("GPX.qml")
+                    break;
+                case 5:
+                    return Qt.resolvedUrl("Coordinate.qml")
                     break;
                 default:
                     return '';

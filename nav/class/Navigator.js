@@ -102,7 +102,7 @@ Navigator.prototype.get_data = function() {
 		lat_start: this.pos_start.lat,
 		lng_end: this.pos_end.lng,
 		lat_end: this.pos_end.lat
-	};
+	}
 }
 
 Navigator.prototype.get_data_navigation = function() {
@@ -253,8 +253,9 @@ Navigator.prototype.parse_data = function(data) {
 	this.route.turf = [];
 
 	this.route.bbox.push([data.trip.summary.min_lon, data.trip.summary.min_lat], [data.trip.summary.max_lon, data.trip.summary.max_lat]);
-	
-	this.route.dist_btw_start_now = Math.trunc(turf.distance(turf.point([this.pos_start.lng, this.pos_start.lat]), turf.point([this.pos.lng, this.pos.lat])) * 1000);
+
+	if (nav.get_data().mode != 'calculating_simulating_call_API')
+		this.route.dist_btw_start_now = Math.trunc(turf.distance(turf.point([this.pos_start.lng, this.pos_start.lat]), turf.point([this.pos.lng, this.pos.lat])) * 1000);
 	
 	this.route.steps = [];
 	var coords_aux = maths.decode_API_line(data.trip.legs[0].shape);
@@ -284,11 +285,15 @@ Navigator.prototype.parse_data = function(data) {
 			speaked: 0
 		});
 	}
-	
-	if (nav.get_data().mode.startsWith('calculating'))
-		nav.set_data({mode: 'drawing'});
-	else
+	if (nav.get_data().mode.startsWith('calculating')) {
+		if (nav.get_data().mode == 'calculating_simulating_call_API')
+			nav.set_data({mode: 'drawing_simulating'});
+		else
+			nav.set_data({mode: 'drawing'});
+	}
+	else {
 		nav.set_data({mode: 'route_out_drawing'});
+	}
 	set_new_pos();
 }
 

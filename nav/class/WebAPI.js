@@ -269,10 +269,13 @@ WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
 
 WebAPI.prototype.OK_route = function(data) {
 	if (data.trip.status != 0) {
-		if (nav.get_data().mode.startsWith('calculating'))
+		if (nav.get_data().mode.startsWith('calculating')) {
 			nav.set_data({mode: 'calculating_error'});
-		else
+			set_new_pos();
+		}
+		else {
 			nav.set_data({mode: 'route_out_calculating_error'});
+		}
 	}
 	else {
 		nav.parse_data(data);
@@ -280,8 +283,11 @@ WebAPI.prototype.OK_route = function(data) {
 }
 
 WebAPI.prototype.KO_route = function(data) {
-	if (nav.get_data().mode.startsWith('calculating'))
+	if (nav.get_data().mode.startsWith('calculating')) {
 		nav.set_data({mode: 'calculating_error'});
-	else
+		set_new_pos();
+	}
+	else {
 		nav.set_data({mode: 'route_out_calculating_error'});
+	}
 }

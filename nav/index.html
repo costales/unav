@@ -113,7 +113,15 @@
 			coord[0] = utils.fix_lng(coord[0]);
 			ui.set_center_pos(false);
 			mapUI.set_map_center(coord[0], coord[1], true);
-			ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+			switch(ui.get_pickingOnMap()) {
+				case 0:
+					ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+					break;
+				case 1:
+				case 2:
+					ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
+					break;
+			}
 		});
 		var poiStart = new ol.Overlay.Placemark({ popupClass: 'flagv', color: '#080' });
 		map.addOverlay(poiStart);
@@ -229,7 +237,7 @@
 		// Dangerous dragons here :S
 		function set_new_pos() {
 			var nav_data = nav.get_data();
-			if (nav_data.lng_prev === null || nav_data.lat_prev === null)
+			if ((nav_data.lng_prev === null || nav_data.lat_prev === null) && !nav_data.mode.includes('simulating'))
 				return;
 			
 			switch(nav_data.mode) {
@@ -242,31 +250,49 @@
 					nav.set_data({mode: 'exploring'});
 					ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgBGColor: 'success', msgText: t("GPS is ready"), iconsShow: 'no'});
 					break;
+				case 'calculating_simulating_call_API':
+				case 'simulating':
+					break;
+				case 'drawing_simulating':
+					var route_line = nav.get_data_line();
+					var coords_aux = [];
+					for (k=0; k<route_line.points.length; k++)
+						for (l=0; l<route_line.points[k].length; l++)
+							coords_aux.push(route_line.points[k][l]);
+					poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
+					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
+					mapUI.show_route(coords_aux, 'route', true);
+					nav.set_data({mode: 'simulating'});
+					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
+					ui.set_confirm_btns(settings.get_route_mode());
+					$("#panelSimulateRoute").show();
+					break;
 				case 'GPS_waiting_for_calculating':
 					if (mapUI.get_map_zoom() < ui.ZOOM-3)
 						mapUI.set_map_zoom(ui.ZOOM-1);
 					mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
 					nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
-					ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgBGColor: 'success', msgText: t("GPS is ready"), iconsShow: 'no'});
+					if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>') // Avoid animations
+						ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
 					set_new_pos();
 					break;
 				case 'calculating_changed_mode':
 					nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
+					if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>') // Avoid animations
+						ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
 					set_new_pos();
 					break;
 				case 'calculating_call_API':
 					poiStart.show(ol.proj.fromLonLat([nav_data.lng_start, nav_data.lat_start]));
 					nav.set_data({mode: 'calculating_waiting_result'});
 					webapi.route(settings.get_online(), nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
-					// Avoid animations
-					if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>')
-						ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
 					break;
 				case 'calculating_waiting_result':
 					break;
 				case 'calculating_error':
 					mapUI.clear_layer('route');
 					$("#panelConfirmRoute").hide();
+					$("#panelSimulateRoute").hide();
 					$("#panelsNav").hide();
 					$("#panelRecenterRoute").hide();
 					poiStart.hide();
@@ -367,11 +393,19 @@
 				mapUI.clear_layer('poi');
 				ui.set_center_pos(false);
 				mapUI.set_map_center(coord[0], coord[1], true);
-				ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
-				if (settings.get_online())
-					webapi.georeverse_online(coord[0], coord[1], longtouch_id);
-				else
-					webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
+				switch(ui.get_pickingOnMap()) {
+					case 0:
+						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+						if (settings.get_online())
+							webapi.georeverse_online(coord[0], coord[1], longtouch_id);
+						else
+							webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
+						break;
+					case 1:
+					case 2:
+						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
+						break;
+				}
 			}, delay: 350
 		});
 		map.addInteraction(LongTouch);
@@ -430,6 +464,7 @@
 			mapUI.clear_layer('poi');
 			mapUI.clear_layer('route');
 			$("#panelConfirmRoute").hide();
+			$("#panelSimulateRoute").hide();
 			$("#panelsNav").hide();
 			$("#panelRecenterRoute").hide();
 			poiClick.hide();
@@ -445,23 +480,34 @@
 				set_new_pos();
 			}
 		}
-		function route_cancel() {
+		function BtnSimulate(lng1, lat1, lng2, lat2) {
+			mapUI.clear_layer('route');
+			poiStart.show(ol.proj.fromLonLat([lng1, lat1]));
+			poiEnd.show(ol.proj.fromLonLat([lng2, lat2]));
+			nav.set_data({mode: 'calculating_simulating_call_API'});
+			ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+			webapi.route(settings.get_online(), lng1, lat1, lng2, lat2);
+		}
+		function route_cancel(simulate) {
 			mapUI.clear_layer('route');
 			$("#panelConfirmRoute").hide();
+			$("#panelSimulateRoute").hide();
 			$("#panelsNav").hide();
 			$(".ol-compassctrl.compass").hide();
 			$("#panelRecenterRoute").hide();
 			poiEnd.hide();
 			poiStart.hide();
-			if (!nav.get_data().mode.startsWith('route_end'))
+			if (!nav.get_data().mode.startsWith('route_end') && !simulate)
 				ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Route canceled"), iconsShow: 'no'});
 			else
 				ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 			nav.set_data({mode: 'exploring'});
-			ui.update_map_view(nav.get_data());
+			if (!simulate)
+				ui.update_map_view(nav.get_data());
 		}
 		function route_start() {
 			$("#panelConfirmRoute").hide();
+			$("#panelSimulateRoute").hide();
 			$("#panelsNav").show();
 			ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 			nav.set_data({mode: 'route_driving'});
@@ -471,7 +517,10 @@
 		function mode_navigation(value) {
 			settings.set_route_mode(value);
 			ui.set_confirm_btns(value);
-			BtnGo(nav.get_data().lng_end, nav.get_data().lat_end);
+			if (nav.get_data().mode != "simulating")
+				BtnGo(nav.get_data().lng_end, nav.get_data().lat_end);
+			else
+				BtnSimulate(ui.get_picked_coords().lng1, ui.get_picked_coords().lat1, ui.get_picked_coords().lng2, ui.get_picked_coords().lat2);
 			window.location = 'http://routemode/' + value;
 		}
 
@@ -598,7 +647,7 @@
 			<div id="stepTxt"></div>
 			<div id="stepImg"></div>
 			<div id="distance"></div>
-			<div id="btnCancelRoute" onclick="route_cancel()"><img src="img/panel/cancel.svg" height="100%"></div>
+			<div id="btnCancelRoute" onclick="route_cancel(false)"><img src="img/panel/cancel.svg" height="100%"></div>
 		</div>
 		<div id="bottomPanelNav">
 			<div id="endTime"></div>
@@ -610,12 +659,12 @@
 	<div id="panelConfirmRoute">
 		<div id="topPanelConfirm">
 			<div id="modeConfirm">
-				<img class="btnsModeConfirm" id="btnModeCarConfirm" src="img/mode/car.svg" onClick='mode_navigation("car")'>
-				<img class="btnsModeConfirm" id="btnModeBikeConfirm" src="img/mode/bike.svg" onClick='mode_navigation("bike")'>
-				<img class="btnsModeConfirm" id="btnModeWalkConfirm" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
+				<img id="btnModeCarConfirm" src="img/mode/car.svg" onClick='mode_navigation("car")'>
+				<img id="btnModeBikeConfirm" src="img/mode/bike.svg" onClick='mode_navigation("bike")'>
+				<img id="btnModeWalkConfirm" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
 			</div>
 			<div id="btnsConfirm">
-				<button id="btnCancel" data-role='button' class='btns2_mode_route negative' onClick='route_cancel()'>Cancel</button>
+				<button id="btnCancel" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(false)'>Cancel</button>
 				<button id="btnStart" data-role='button' class='btns2_mode_route positive' onClick='route_start()'>Start</button>
 			</div>
 		</div>
@@ -623,6 +672,24 @@
 			<div id="confirmEndTime"></div>
 			<div id="confirmEndDistance"></div>
 			<div id="confirmEndHour"></div>
+		</div>
+	</div>
+	<!-- Simulate route panel -->
+	<div id="panelSimulateRoute">
+		<div id="topPanelSimulate">
+			<div id="modeSimulate">
+				<img id="btnModeCarSimulate" src="img/mode/car.svg" onClick='mode_navigation("car")'>
+				<img id="btnModeBikeSimulate" src="img/mode/bike.svg" onClick='mode_navigation("bike")'>
+				<img id="btnModeWalkSimulate" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
+			</div>
+			<div id="btnsSimulate">
+				<button id="btnCancelSimulate" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(true)'>Close</button>
+			</div>
+		</div>
+		<div id="bottomPanelSimulate">
+			<div id="simulateEndTime"></div>
+			<div id="simulateEndDistance"></div>
+			<div id="simulateEndHour"></div>
 		</div>
 	</div>
 	<!-- Recenter route panel -->

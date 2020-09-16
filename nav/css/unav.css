@@ -137,7 +137,7 @@ body{
   height: 32px;
 }
 
-#panelsNav, #panelConfirmRoute {
+#panelsNav, #panelConfirmRoute, #panelSimulateRoute {
   display: none;
   position: fixed;
   width: 100%;
@@ -149,7 +149,7 @@ body{
   font-family: Ubuntu;
   user-select: none;
 }
-#topPanelNav, #topPanelConfirm {
+#topPanelNav, #topPanelConfirm, #topPanelSimulate {
   position: absolute;
   top: 0px;
   background: white;
@@ -157,7 +157,7 @@ body{
   height: 92px;
   box-shadow: 0px -2px 2px 0px rgba(184,184,184,1);
 }
-#bottomPanelNav, #bottomPanelConfirm {
+#bottomPanelNav, #bottomPanelConfirm, #bottomPanelSimulate {
   position: absolute;
   bottom: 0px;
   background: #F7F7F7;
@@ -165,7 +165,7 @@ body{
   height: 28px;
 }
 
-#endTime, #confirmEndTime {
+#endTime, #confirmEndTime, #simulateEndTime {
   position: absolute;
   bottom: 5px;
   width: 100%;
@@ -173,14 +173,14 @@ body{
   text-align: left;
 
 }
-#endDistance, #confirmEndDistance {
+#endDistance, #confirmEndDistance, #simulateEndDistance {
   position: absolute;
   bottom: 5px;
   width: 100%;
   left: 10px;
   text-align: center;
 }
-#endHour, #confirmEndHour {
+#endHour, #confirmEndHour, #simulateEndHour {
   position: absolute;
   bottom: 5px;
   width: 100%;
@@ -235,30 +235,30 @@ body{
   position: absolute;
 }
 
-#panelConfirmRoute {
+#panelConfirmRoute, #panelSimulateRoute {
   height: 120px;
 }
-#topPanelConfirm {
+#topPanelConfirm, #topPanelSimulate {
   height: 100px;
 }
 
-#modeConfirm {
+#modeConfirm, #modeSimulate {
   height: 40%;
   width: 100%;
 }
-#btnsConfirm {
+#btnsConfirm, #btnsSimulate {
   height: 50%;
   width: 100%;
 }
-#modeConfirm img {
+#modeConfirm img, #modeSimulate img {
   width: 100px;
   height: 32px;
   margin-top: 9px;
 }
-#btnModeCarConfirm {
+#btnModeCarConfirm, #btnModeCarSimulate {
   border-radius: 45px 0px 0px 45px;
 }
-#btnModeWalkConfirm {
+#btnModeWalkConfirm, #btnModeWalkSimulate {
   border-radius: 0px 45px 45px 0px;
 }
 
