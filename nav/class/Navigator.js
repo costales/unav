@@ -248,19 +248,19 @@ Navigator.prototype.parse_data = function(data) {
 	this.route.distance_total = this.route.distance;
 	this.route.percentage = 0;
 
-	this.route.bbox = [];
-	this.route.points = [];
-	this.route.turf = [];
+	this.route.bbox.length = 0;
+	this.route.points.length = 0;
+	this.route.turf.length = 0;
+	this.route.steps.length = 0;
 
 	this.route.bbox.push([data.trip.summary.min_lon, data.trip.summary.min_lat], [data.trip.summary.max_lon, data.trip.summary.max_lat]);
 
 	if (nav.get_data().mode != 'calculating_simulating_call_API')
 		this.route.dist_btw_start_now = Math.trunc(turf.distance(turf.point([this.pos_start.lng, this.pos_start.lat]), turf.point([this.pos.lng, this.pos.lat])) * 1000);
 	
-	this.route.steps = [];
 	var coords_aux = maths.decode_API_line(data.trip.legs[0].shape);
 	for (i=0; i<data.trip.legs[0].maneuvers.length; i++) { // For each step
-		var points_aux = [];
+		var points_aux.length = 0;
 		var ind_aux = data.trip.legs[0].maneuvers[i].begin_shape_index;
 		while (ind_aux <= data.trip.legs[0].maneuvers[i].end_shape_index) {
 			points_aux.push(coords_aux[ind_aux]);
