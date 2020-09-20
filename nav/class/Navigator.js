@@ -260,7 +260,7 @@ Navigator.prototype.parse_data = function(data) {
 	
 	var coords_aux = maths.decode_API_line(data.trip.legs[0].shape);
 	for (i=0; i<data.trip.legs[0].maneuvers.length; i++) { // For each step
-		var points_aux.length = 0;
+		var points_aux = [];
 		var ind_aux = data.trip.legs[0].maneuvers[i].begin_shape_index;
 		while (ind_aux <= data.trip.legs[0].maneuvers[i].end_shape_index) {
 			points_aux.push(coords_aux[ind_aux]);
