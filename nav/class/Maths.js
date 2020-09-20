@@ -87,7 +87,7 @@ Maths.prototype.time2human = function(seconds, ETA) {
 		return (timeObject.getHours() + ':' + m);
 	}
 	
-	if (seconds > 0) { // Show seconds as hours:minutes
+	if (seconds > 0) { // Show seconds as Xh:Ymin
 		var h = Math.trunc(seconds / 3600);
 		var m = Math.trunc((seconds % 3600) / 60);
 		if (h == 0)
@@ -95,8 +95,9 @@ Maths.prototype.time2human = function(seconds, ETA) {
 				return (m.toString() + "min");
 			else
 				return ("< 1min");
-		else
-			return (h.toString() + 'h ' + m.toString() + 'min');
+		if (h > 0 && m == 0)
+			return (h.toString() + 'h');
+		return (h.toString() + 'h ' + m.toString() + 'min');
 	}
 }
 
