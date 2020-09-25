@@ -1,5 +1,5 @@
 /*
- * uNav http://launchpad.net/unav
+ * uNav https://github.com/costales/unav
  * Copyright (C) 2015-2020 Marcos Alvarez Costales https://costales.github.io
  * Copyright (C) 2015-2016 JkB https://launchpad.net/~joergberroth
  * Copyright (C) 2016 Nekhelesh Ramananthan https://launchpad.net/~nik90
@@ -52,9 +52,6 @@ Page {
             
             // Artwork
             creditsModel.append({ category: i18n.tr("Logo"), name: "Sam Hewitt", link: "http://samuelhewitt.com/" })
-            
-            // Translators
-            creditsModel.append({ category: i18n.tr("Translators"), name: "Ubuntu Translators Community", link: "https://translations.launchpad.net/unav" })
             
             // Powered By
             creditsModel.append({ category: i18n.tr("Powered by"), name: "OpenStreetMap & Contributors", link: "http://www.openstreetmap.org" })

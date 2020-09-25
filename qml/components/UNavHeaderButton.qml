@@ -1,5 +1,5 @@
 /*
- * uNav http://launchpad.net/unav
+ * uNav https://github.com/costales/unav
  * Copyright (C) 2016 Nekhelesh Ramananthan https://launchpad.net/~nik90
  *
  * uNav is free software; you can redistribute it and/or modify

@@ -1,5 +1,5 @@
 /*
- * uNav http://launchpad.net/unav
+ * uNav https://github.com/costales/unav
  * Copyright (C) 2015-2020 Marcos Alvarez Costales https://costales.github.io
  *
  * uNav is free software; you can redistribute it and/or modify

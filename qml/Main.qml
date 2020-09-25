@@ -1,5 +1,5 @@
 /*
-* uNav http://launchpad.net/unav
+* uNav https://github.com/costales/unav
 * Copyright (C) 2015-2020 Marcos Alvarez Costales https://costales.github.io
 * Copyright (C) 2015-2016 JkB https://launchpad.net/~joergberroth
 * Copyright (C) 2016 Nekhelesh Ramananthan https://launchpad.net/~nik90
@@ -42,7 +42,7 @@ MainView {
 		i18n.bindtextdomain("unav", "nav/locales/mo");
 	}
 
-	property string applicationVersion: "3.2"
+	property string applicationVersion: "3.3"
 	property string mapUrl: "../nav/index.html"
 	property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 

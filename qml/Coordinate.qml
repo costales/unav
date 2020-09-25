@@ -1,5 +1,5 @@
 /*
- * GPS Navigation http://launchpad.net/unav
+ * GPS Navigation https://github.com/costales/unav
  * Copyright (C) 2015-2020 Marcos Alvarez Costales https://costales.github.io
  * Copyright (C) 2016 Nekhelesh Ramananthan https://launchpad.net/~nik90
  *

@@ -1,5 +1,5 @@
 /*
- * uNav http://launchpad.net/unav
+ * uNav https://github.com/costales/unav
  * Copyright (C) 2015 JkB https://launchpad.net/~joergberroth
  * Copyright (C) 2015 Marcos Alvarez Costales https://costales.github.io
  *
