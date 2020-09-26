@@ -263,7 +263,7 @@ Navigator.prototype.parse_data = function(data) {
 		var points_aux = [];
 		var ind_aux = data.trip.legs[0].maneuvers[i].begin_shape_index;
 		while (ind_aux <= data.trip.legs[0].maneuvers[i].end_shape_index) {
-			points_aux.push(coords_aux[ind_aux]);
+			points_aux.push([coords_aux[ind_aux][0].toFixed(5), coords_aux[ind_aux][1].toFixed(5)]);
 			ind_aux++;
 		}
 		if (points_aux.length < 2)
