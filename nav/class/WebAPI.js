@@ -294,9 +294,8 @@ WebAPI.prototype.KO_route = function(data) {
 
 // Radars
 WebAPI.prototype.set_radars = function() {
-	// Refresh current radars
-	//this.nav.radars_clear();
-	//this.ui.markers_radar_clear();
+	// Clear current radars
+	mapUI.clear_layer('radar');
 	
 	// Search radars?
 	if (!settings.get_online() || settings.get_route_mode() != 'car' )
@@ -403,17 +402,18 @@ WebAPI.prototype.OK_callback_set_radars = function(xml) {
 		return;
 	
 	// For each radar...
+	var radars_aux = [];
 	$(xml).find('node').each(function() {
-		var xml_lat = parseFloat($(this).attr("lat"));
 		var xml_lng = parseFloat($(this).attr("lon"));
+		var xml_lat = parseFloat($(this).attr("lat"));
 		var xml_maxspeed = '!';
 		$(this).find('tag').each(function(){
 			if ($(this).attr("k") == 'maxspeed')
 				xml_maxspeed = $(this).attr("v");
 		});
-		// Set marker
-		console.log(xml_lat, xml_lng, xml_maxspeed);
+		radars_aux.push({lng: xml_lng, lat: xml_lat, speed: xml_maxspeed});
 	});
+	nav.set_radars(radars_aux);
 }
 
 WebAPI.prototype.KO_callback_set_radars = function() {

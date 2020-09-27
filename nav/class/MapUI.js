@@ -54,6 +54,12 @@ function MapUI() {
 	this.layerPOI.setZIndex(102);
 	this.layerPOI.set('name', 'poi');
 
+	this.markerRadarSource = new ol.source.Vector({});
+	this.layerRadar = new ol.layer.Vector({source: this.markerRadarSource});
+	map.addLayer(this.layerRadar);
+	this.layerRadar.setZIndex(103);
+	this.layerRadar.set('name', 'poi');
+
 	this.posFeature = new ol.Feature({
         geometry: new ol.geom.Point(ol.proj.fromLonLat([-5.7,43.533333])),
         name: 'pos'
@@ -70,7 +76,7 @@ function MapUI() {
 	this.markerPosSource = new ol.source.Vector({features: [this.posFeature]});
 	this.layerPos = new ol.layer.Vector({source: this.markerPosSource});
 	map.addLayer(this.layerPos);
-	this.layerPos.setZIndex(103);
+	this.layerPos.setZIndex(104);
 	this.layerPos.set('name', 'pos');
 	this.layerPos.setVisible(false);
 }
@@ -113,13 +119,16 @@ MapUI.prototype.set_map_fit_box = function(lng1, lat1, lng2, lat2) { // coords: 
 
 MapUI.prototype.add_marker = function(markers, layer) {
 	switch(layer) {
-		case 'poi': // POI
+		case 'poi':
 			var layer_aux = this.markerPOISource;
 			break;
-		case 'route': // Route
+		case 'radar':
+			var layer_aux = this.markerRadarSource;
+			break;
+		case 'route':
 			var layer_aux = this.RouteSource;
 			break;
-		case 'gpx': // GPX
+		case 'gpx':
 			var layer_aux = this.GPXSource;
 			break;
 	}
@@ -150,13 +159,16 @@ MapUI.prototype.add_marker = function(markers, layer) {
 
 MapUI.prototype.clear_layer = function(layer) {
 	switch(layer) {
-		case 'poi': // POI
+		case 'poi':
 			var layer_aux = this.markerPOISource;
 			break;
-		case 'route': // Route
+		case 'radar':
+			var layer_aux = this.markerRadarSource;
+			break;
+		case 'route':
 			var layer_aux = this.RouteSource;
 			break;
-		case 'gpx': // GPX
+		case 'gpx':
 			var layer_aux = this.GPXSource;
 			break;
 	}

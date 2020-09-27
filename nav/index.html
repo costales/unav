@@ -349,6 +349,7 @@
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
 					break;
 				case 'route_out_drawing': // As drawing, but don't confirm
+					webapi.set_radars();
 					mapUI.clear_layer('route');
 					var route_line = nav.get_data_line();
 					var coords_aux = [];
@@ -491,6 +492,7 @@
 		}
 		function route_cancel(simulate) {
 			mapUI.clear_layer('route');
+			mapUI.clear_layer('radar');
 			$("#panelConfirmRoute").hide();
 			$("#panelSimulateRoute").hide();
 			$("#panelsNav").hide();

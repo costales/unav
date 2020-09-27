@@ -51,6 +51,8 @@ function Navigator() {
 		this.route.points = [];
 		this.route.bbox = [];
 		this.route.turf = [];
+
+	this.radars = new Object();
 }
 
 Navigator.prototype.set_data = function(data) {
@@ -120,6 +122,61 @@ Navigator.prototype.get_data_line = function() {
 		bbox: this.route.bbox,
 		points: this.route.points,
 		turf: this.route.turf
+	}
+}
+
+Navigator.prototype.get_radars = function() {
+	return this.radars;
+}
+Navigator.prototype.set_radars = function(cameras) {
+	this.radars = []
+	for (i=0;i<cameras.length;i++) {
+		this.radars.push({
+			lng: cameras[i].lng,
+			lat: cameras[i].lat,
+			speaked: 0
+		});
+		switch(cameras[i].speed) {
+			case '10':
+			case '20':
+			case '30':
+			case '40':
+			case '50':
+			case '60':
+			case '70':
+			case '80':
+			case '90':
+			case '100':
+			case '110':
+			case '120':
+			case '130':
+				mapUI.add_marker([{
+					name: 'radar-'+i, 
+					title: 'none',
+					lng: cameras[i].lng, 
+					lat: cameras[i].lat,
+					phone: 'none',
+					website: 'none',
+					email: 'none',
+					icon: 'radars/radar-'+cameras[i].speed+'.svg',
+					margin_height: 20, 
+					margin_width: 20
+				}], 'radar');
+				break;
+			default:
+				mapUI.add_marker([{
+					name: 'radar-'+i, 
+					title: 'none',
+					lng: cameras[i].lng, 
+					lat: cameras[i].lat,
+					phone: 'none',
+					website: 'none',
+					email: 'none',
+					icon: 'radars/radar.svg',
+					margin_height: 20, 
+					margin_width: 20
+				}], 'radar');
+		}
 	}
 }
 
