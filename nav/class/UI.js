@@ -22,6 +22,7 @@ function UI() {
 	this.pickingCoordLat1 = null;
 	this.pickingCoordLng2 = null;
 	this.pickingCoordLat2 = null;
+	this.radar_beep = false;
 }
 
 UI.prototype.get_center_pos = function() {
@@ -254,6 +255,17 @@ UI.prototype.update_nav_panel = function(type, name, instruction, distance) {
 		$('#stepTxt').html(instruction);
 	$('#stepImg').html('<img src="img/steps/' + type + '.svg">');
 	$('#distance').html(maths.dist2human(distance, settings.get_unit()));
+}
+
+UI.prototype.get_radar_beep = function() {
+	return this.radar_beep;
+}
+UI.prototype.set_radar_beep = function(value) {
+	this.radar_beep = value;
+}
+UI.prototype.play_radar_beep = function() {
+	this.radar_beep = false;
+	$('#radar').trigger('play');
 }
 
 UI.prototype.speak = function(speak, type) {

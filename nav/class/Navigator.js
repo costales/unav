@@ -134,7 +134,7 @@ Navigator.prototype.set_radars = function(cameras) {
 		this.radars.push({
 			lng: cameras[i].lng,
 			lat: cameras[i].lat,
-			speaked: 0
+			spoke: false
 		});
 		switch(cameras[i].speed) {
 			case '10':
@@ -431,5 +431,16 @@ Navigator.prototype.update = function() {
 		nav.set_data({mode: 'route_end'});
 		if (this.route.steps[this.route.ind].speaked == 0)
 			this.route.steps[this.route.ind].speaked = 1;
+	}
+
+	// Radar?
+	for (i=0;i<this.radars.length;i++) {
+		if (this.radars[i].spoke)
+			continue;
+		var distance_to_radar = Math.trunc(turf.distance(pt_now, turf.point([this.radars[i].lng, this.radars[i].lat])) * 1000);
+		if (distance_to_radar < dist4indication_aux) {
+			this.radars[i].spoke = true;
+			ui.set_radar_beep(true);
+		}
 	}
 }

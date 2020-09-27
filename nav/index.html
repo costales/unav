@@ -327,6 +327,8 @@
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_navigation.percentage);
 					if (settings.get_speak())
 						ui.speak(nav_navigation.steps[nav_navigation.ind].speaked, nav_navigation.steps[nav_navigation.ind+1].type);
+					if (ui.get_radar_beep())
+						ui.play_radar_beep();
 					break;
 				case 'route_out':
 					$("#panelsNav").hide();
@@ -703,6 +705,7 @@
 	
 
 	<!-- Notifications -->
+	<audio id="radar" type="audio/ogg" src="voices/radar.ogg" preload="none"/>
 	<audio id="0"  type="audio/ogg" src="voices/0.ogg"  preload="none"/>
 	<audio id="1"  type="audio/ogg" src="voices/1.ogg"  preload="none"/>
 	<audio id="2"  type="audio/ogg" src="voices/2.ogg"  preload="none"/>
