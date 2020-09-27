@@ -220,22 +220,19 @@ Page {
          id: addVoiceComponent
          Dialog {
             id: addVoice
-            title: i18n.tr("About the voices")
+            title: i18n.tr("Custom voices")
             Label {
                 width: parent.width
                 color: theme.palette.normal.backgroundSecondaryText
                 wrapMode: Text.WordWrap
                 horizontalAlignment: Text.AlignHCenter
-                text: i18n.tr("You can add a new voice to uNav following these steps:")
+                text: i18n.tr("You can add a new voice to uNav")
                 onLinkActivated: Qt.openUrlExternally(link)
             }
-            Label {
-                width: parent.width
-                color: theme.palette.normal.backgroundSecondaryText
-                wrapMode: Text.WordWrap
-                horizontalAlignment: Text.AlignHCenter
-                text: "<a href='http://people.ubuntu.com/~costales/unav/voices/'>" + i18n.tr("How to add a voice") + "</a>"
-                onLinkActivated: Qt.openUrlExternally(link)
+            Button {
+                text: i18n.tr("How to add a voice")
+                color: theme.palette.normal.positive
+                onClicked: Qt.openUrlExternally('http://people.ubuntu.com/~costales/unav/voices/')
             }
             Button {
                 text: i18n.tr("Close")
