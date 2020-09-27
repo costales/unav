@@ -291,3 +291,132 @@ WebAPI.prototype.KO_route = function(data) {
 		nav.set_data({mode: 'route_out_calculating_error'});
 	}
 }
+
+// Radars
+WebAPI.prototype.set_radars = function() {
+	// Refresh current radars
+	//this.nav.radars_clear();
+	//this.ui.markers_radar_clear();
+	
+	// Search radars?
+	if (!settings.get_online() || settings.get_route_mode() != 'car' )
+		return;
+
+	var lng1, lat1, lng2, lat2, lng2_ext, lat2_ext, lng1_ext, lat1_ext;
+	var lng_rt, lat_rt, rt_l, lng_rt_n, lat_rt_n;
+	var n1, n2, n_l, n1_n, n2_n, k;
+
+	var routeBoundaryPolygon_1 = "";
+	var routeBoundaryPolygon_2 = "";
+
+	// MAXPOINTS: maximum fixpoints for the Polygon (2x +4).
+	// The higher the value, the higher the accuracy.
+	// the faster getting all relevant radars
+	// the closer to the route you are. might be limited by overpass.
+	var MAXPOINTS = 75;
+
+	//complete_line
+	var coords = nav.get_data_line().points;
+	var line = [];
+	for (k=0; k<coords.length; k++)
+		for (l=0; l<coords[k].length; l++)
+			line.push(coords[k][l]);
+	var iter = Math.ceil(line.length/MAXPOINTS);
+	lng1 = line[0][0];
+	lat1 = line[0][1];
+
+	//iterate over fixpoints:
+	for (i = 0; i < line.length; i+=iter) {
+
+		k = (i+iter).toFixed(0);
+		if (k >= line.length) {k = line.length-1;}
+		lng2 = line[k][0];
+		lat2 = line[k][1];
+
+		// route segment vector:
+		lng_rt = lng2 - lng1;
+		lat_rt = lat2 - lat1;
+		// normalized (|1|) vector components
+		rt_l = Math.sqrt(lat_rt*lat_rt + lng_rt*lng_rt);
+		lng_rt_n = lng_rt/rt_l
+		lat_rt_n = lat_rt/rt_l
+
+		//route segment normal vector components to line
+		n1 = lat2 - lat1; //lng
+		n2 = lng1 - lng2; //lat
+		// normalized (|1|) normal vector components
+		n_l = Math.sqrt(n1*n1 + n2*n2);
+		n1_n = n1/n_l;
+		n2_n = n2/n_l;
+
+		// init tolerance of route segment expansion:
+		var d_neg_min = -0.005;
+		var d_pos_max =  0.005;
+		// extent route segment start/end points
+		lng1_ext = lng1 - lng_rt_n*0.0005;
+		lat1_ext = lat1 - lat_rt_n*0.0005;
+		lng2_ext = lng2 + lng_rt_n*0.0005;
+		lat2_ext = lat2 + lat_rt_n*0.0005;
+
+		// iterate over route segment points to get max expansion of the route segment
+		for (j = i+1; j < k; j++) {
+			var lng_pt = line[j][0];
+			var lat_pt = line[j][1];
+			var lng_d_pt = lng1 - lng_pt;
+			var lat_d_pt = lat1 - lat_pt;
+			var distance_to_pt = (lng_rt*lat_d_pt - lng_d_pt*lat_rt) / Math.sqrt( lng_rt*lng_rt + lat_rt*lat_rt )
+			if (distance_to_pt <= 0 && distance_to_pt < d_neg_min) { d_neg_min = distance_to_pt - 0.001; }
+			if (distance_to_pt > 0 && distance_to_pt > d_pos_max) { d_pos_max = distance_to_pt + 0.001 ; }
+		}
+
+		// add fixpoints to polygon point set (routeBoundaryPolygon_x):
+		if (i==0) { routeBoundaryPolygon_1 = Number(lat1_ext + n2_n*d_pos_max - lat_rt_n*0.005).toFixed(5) +
+                    " " + Number(lng1_ext + n1_n*d_pos_max - lng_rt_n*0.005).toFixed(5) + " " ;
+					routeBoundaryPolygon_2 = Number(lat1_ext + n2_n*d_neg_min - lat_rt_n*0.005).toFixed(5) +
+                    " " + Number(lng1_ext + n1_n*d_neg_min- lng_rt_n*0.005).toFixed(5);
+		}
+		routeBoundaryPolygon_1 = //forward
+				routeBoundaryPolygon_1 +
+				Number(lat2_ext + n2_n*d_pos_max).toFixed(5) + " " + Number(lng2_ext + n1_n*d_pos_max).toFixed(5) + " " ;
+		routeBoundaryPolygon_2 = //backward
+				Number(lat2_ext + n2_n*d_neg_min).toFixed(5) + " " + Number(lng2_ext + n1_n*d_neg_min).toFixed(5) + " " +
+				routeBoundaryPolygon_2;
+
+		//set segment end to segment start
+		lat1 = lat2;
+		lng1 = lng2;
+	}
+
+	// Search radars POI http://wiki.openstreetmap.org/wiki/Overpass_API
+	var poly_box = '(poly:\"' + routeBoundaryPolygon_1 + routeBoundaryPolygon_2 + '\");out;'
+	$.ajax({
+		url: 'https://overpass-api.de/api/interpreter?data=node[highway=speed_camera]' + poly_box,
+		timeout: 120000,
+		dataType: 'xml',
+		success: this.OK_callback_set_radars.bind(this),
+		error: this.KO_callback_set_radars.bind(this)
+	});
+}
+
+WebAPI.prototype.OK_callback_set_radars = function(xml) {
+	if (nav.get_data().mode != 'drawing' && nav.get_data().mode != 'route_confirm' && nav.get_data().mode != 'route_driving')
+		return;
+	
+	// For each radar...
+	$(xml).find('node').each(function() {
+		var xml_lat = parseFloat($(this).attr("lat"));
+		var xml_lng = parseFloat($(this).attr("lon"));
+		var xml_maxspeed = '!';
+		$(this).find('tag').each(function(){
+			if ($(this).attr("k") == 'maxspeed')
+				xml_maxspeed = $(this).attr("v");
+		});
+		// Set marker
+		console.log(xml_lat, xml_lng, xml_maxspeed);
+	});
+}
+
+WebAPI.prototype.KO_callback_set_radars = function() {
+	if (nav.get_data().mode == 'drawing' || nav.get_data().mode == 'route_confirm' || nav.get_data().mode == 'route_driving')
+		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Error getting speed cameras"), msgBGColor: 'error', iconsShow: 'no'});
+}

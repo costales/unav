@@ -300,6 +300,7 @@
 					nav.set_data({mode: 'exploring'});
 					break;
 				case 'drawing':
+					webapi.set_radars();
 					ui.set_center_pos(false); // Needs for map.fit
 					mapUI.clear_layer('route');
 					var route_line = nav.get_data_line();
