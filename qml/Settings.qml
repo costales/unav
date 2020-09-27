@@ -158,6 +158,27 @@ Page {
             }
 
             ListItem {
+                height: navRadars.height + divider.height
+                ListItemLayout {
+                    id: navRadars
+                    title.text: i18n.tr("Alert speed cameras")
+                    Switch {
+                        id: navRadarsSwitch
+                        checked: navApp.settings.radars
+                        onClicked: {
+                            navApp.settings.radars = checked;
+                            mainPageStack.executeJavaScript("settings.set_radars(" + navApp.settings.radars + ")");
+                            if (navApp.settings.legalRadarShow) {
+                                navApp.settings.legalRadarShow = false;
+                                PopupUtils.open(confirmEnableRadar);
+                            }
+                        }
+                        SlotsLayout.position: SlotsLayout.Last
+                    }
+                }
+            }
+
+            ListItem {
                 height: navApp.settings.rotateMap ? navRotate.height + divider.height : navRotate.height + divider.height + navRotateLabel.height
                 ListItemLayout {
                     id: navRotate
@@ -235,6 +256,24 @@ Page {
         }
     }
 
+    Component {
+        id: confirmEnableRadar
+        Dialog {
+            id: dialogueRadars
+            title: i18n.tr("Law & speed camera alerts")
+            text: i18n.tr("uNav is getting the speed cameras from the OpenStreetMap database and it will beep and show a speed camera marker.\n\nIn a few countries speed camera alerts are illegal, then enable this option only if it's legal.")
+            Button {
+                text: i18n.tr("Check law in countries")
+                color: theme.palette.normal.negative
+                onClicked: Qt.openUrlExternally('http://people.ubuntu.com/~costales/unav/voices/speedcameras.html')
+            }
+            Button {
+                text: i18n.tr("Close")
+                onClicked: PopupUtils.close(dialogueRadars);
+            }
+        }
+    }
+    
     Component {
         id: stepsOfflineComponent
         Dialog {

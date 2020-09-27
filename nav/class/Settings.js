@@ -21,6 +21,7 @@ function Settings() {
 	this.unit = this.KM;
 	this.rotate_map = true;
 	this.tolls = true;
+	this.radars = false;
 	this.speak = true;
 	this.speak_voice = "Nathan Haines";
 	this.route_mode = "car";
@@ -87,6 +88,13 @@ Settings.prototype.get_tolls = function() {
 }
 Settings.prototype.set_tolls = function(value) {
 	this.tolls = value;
+}
+
+Settings.prototype.get_radars = function() {
+	return this.radars;
+}
+Settings.prototype.set_radars = function(value) {
+	this.radars = value;
 }
 
 Settings.prototype.get_speak = function() {
