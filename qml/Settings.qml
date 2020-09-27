@@ -261,7 +261,7 @@ Page {
         Dialog {
             id: dialogueRadars
             title: i18n.tr("Law & speed camera alerts")
-            text: i18n.tr("uNav is getting the speed cameras from the OpenStreetMap database and it will beep and show a speed camera marker.\n\nIn a few countries speed camera alerts are illegal, then enable this option only if it's legal.")
+            text: i18n.tr("uNav is getting the speed cameras from the OpenStreetMap database and it will beep and show the speed limit as marker.\n\nIn a few countries speed camera alerts are illegal!")
             Button {
                 text: i18n.tr("Check law in countries")
                 color: theme.palette.normal.negative
