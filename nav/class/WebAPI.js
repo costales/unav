@@ -385,9 +385,9 @@ WebAPI.prototype.set_radars = function() {
 		lat1 = lat2;
 		lng1 = lng2;
 	}
-
 	// Search radars POI http://wiki.openstreetmap.org/wiki/Overpass_API
 	var poly_box = '(poly:\"' + routeBoundaryPolygon_1 + routeBoundaryPolygon_2 + '\");out;'
+	console.log('https://overpass-api.de/api/interpreter?data=node[highway=speed_camera]' + poly_box);
 	$.ajax({
 		url: 'https://overpass-api.de/api/interpreter?data=node[highway=speed_camera]' + poly_box,
 		timeout: 120000,
