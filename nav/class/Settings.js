@@ -50,7 +50,7 @@ Settings.prototype.set_online = function(value) {
 	
 	if (this.online) {
 		map.addLayer(map_layer_online);
-		$('#mapCredits').text("© OpenStreetMap contributors © CARTO");
+		$('#mapCredits').text("© OpenStreetMap contributors © maptiler");
 	}
 	else {
 		olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');

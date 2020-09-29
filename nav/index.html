@@ -82,7 +82,9 @@
 		var map_layer_online = new ol.layer.Tile({
 			name: 'layer_online',
 			source: new ol.source.XYZ({
-				url: 'https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
+				url: 'https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=maptiler_api',
+				//url: 'https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
+				tileSize: 512
 			})
 		});
 		var scale_line = new ol.control.ScaleLine();
