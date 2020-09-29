@@ -54,7 +54,7 @@ MainView {
 		property string routeModes: "car"
 		property bool speak: true
 		property bool tolls: true
-		property bool radars: true
+		property bool radars: false
 		property bool legalRadarShow: true
 		property string speakVoice: 'Nathan Haines'
 		property int lastSearchTab: 0
