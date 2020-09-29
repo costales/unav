@@ -7,14 +7,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   viewBox="0 0 40 40"
+   viewBox="0 0 34 34"
    version="1.1"
    x="0px"
    y="0px"
    id="svg16"
    sodipodi:docname="radar-30.svg"
-   width="40"
-   height="40"
+   width="34"
+   height="34"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata22">
@@ -39,12 +39,12 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="824"
+     inkscape:window-width="1680"
+     inkscape:window-height="974"
      id="namedview18"
      showgrid="false"
      inkscape:zoom="10.680141"
-     inkscape:cx="4.8848713"
+     inkscape:cx="-7.3808844"
      inkscape:cy="23.376706"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -57,28 +57,28 @@
   <g
      id="g10"
      style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
-     transform="translate(0,-85)">
+     transform="translate(0,-91)">
     <circle
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:1"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.85196871"
        id="path132"
-       cx="20"
-       cy="105"
-       r="18.960424" />
+       cx="17"
+       cy="108"
+       r="16.153688" />
     <path
-       d="m 19.999999,124.6079 c -10.829145,0 -19.6079014,-8.77875 -19.6079014,-19.60789 0,-10.829153 8.7787564,-19.60791 19.6079014,-19.60791 10.829145,0 19.607903,8.778757 19.607903,19.60791 0,10.82914 -8.778758,19.60789 -19.607903,19.60789 z m 0,-0.46137 c 10.574342,0 19.14654,-8.57218 19.14654,-19.14652 0,-10.57435 -8.572198,-19.146548 -19.14654,-19.146548 -10.5743413,0 -19.14653893,8.572198 -19.14653893,19.146548 0,10.57434 8.57219763,19.14652 19.14653893,19.14652 z m 0,-4.89043 c 7.873427,0 14.256099,-6.38267 14.256099,-14.25609 0,-7.873434 -6.382672,-14.256106 -14.256099,-14.256106 -7.873426,0 -14.2560978,6.382672 -14.2560978,14.256106 0,7.87342 6.3826718,14.25609 14.2560978,14.25609 z m 0,4.15227 c -10.1666561,0 -18.4083591,-8.24171 -18.4083591,-18.40836 0,-10.166665 8.241703,-18.408368 18.4083591,-18.408368 10.166658,0 18.40836,8.241703 18.40836,18.408368 0,10.16665 -8.241702,18.40836 -18.40836,18.40836 z"
+       d="m 17,124.70532 c -9.2260931,0 -16.7053187,-7.47922 -16.7053187,-16.70531 0,-9.226101 7.4792256,-16.705327 16.7053187,-16.705327 9.226092,0 16.705319,7.479226 16.705319,16.705327 0,9.22609 -7.479227,16.70531 -16.705319,16.70531 z m 0,-0.39307 c 9.009008,0 16.312252,-7.30323 16.312252,-16.31224 0,-9.009017 -7.303244,-16.312261 -16.312252,-16.312261 -9.0090083,0 -16.31225232,7.303244 -16.31225232,16.312261 0,9.00901 7.30324402,16.31224 16.31225232,16.31224 z m 0,-4.1665 c 6.707913,0 12.14575,-5.43783 12.14575,-12.14574 0,-6.70792 -5.437837,-12.145757 -12.14575,-12.145757 -6.707913,0 -12.1457496,5.437837 -12.1457496,12.145757 0,6.70791 5.4378366,12.14574 12.1457496,12.14574 z m 0,3.53761 c -8.6616733,0 -15.6833462,-7.02168 -15.6833462,-15.68335 0,-8.661682 7.0216729,-15.683355 15.6833462,-15.683355 8.661674,0 15.683346,7.021673 15.683346,15.683355 0,8.66167 -7.021672,15.68335 -15.683346,15.68335 z"
        id="path8"
-       style="fill:#ff0000;fill-rule:nonzero;stroke-width:0.46685481"
+       style="fill:#ff0000;fill-rule:nonzero;stroke-width:0.39774567"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="19.655993"
-       y="110.552"
+       style="font-style:normal;font-weight:normal;font-size:34.0787468px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.85196871"
+       x="16.965916"
+       y="112.73013"
        id="text26"><tspan
          sodipodi:role="line"
          id="tspan24"
-         x="19.655993"
-         y="110.552"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle">30</tspan></text>
+         x="16.965916"
+         y="112.73013"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.63149929px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.85196871">30</tspan></text>
   </g>
 </svg>

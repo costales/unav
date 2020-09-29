@@ -159,8 +159,8 @@ Navigator.prototype.set_radars = function(cameras) {
 					website: 'none',
 					email: 'none',
 					icon: 'radars/radar-'+cameras[i].speed+'.svg',
-					margin_height: 20, 
-					margin_width: 20
+					margin_height: 17, 
+					margin_width: 17
 				}], 'radar');
 				break;
 			default:
@@ -173,8 +173,8 @@ Navigator.prototype.set_radars = function(cameras) {
 					website: 'none',
 					email: 'none',
 					icon: 'radars/radar.svg',
-					margin_height: 20, 
-					margin_width: 20
+					margin_height: 17, 
+					margin_width: 17
 				}], 'radar');
 		}
 	}
