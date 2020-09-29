@@ -300,6 +300,7 @@
 					nav.set_data({mode: 'exploring'});
 					break;
 				case 'drawing':
+					webapi.set_radars();
 					ui.set_center_pos(false); // Needs for map.fit
 					mapUI.clear_layer('route');
 					var route_line = nav.get_data_line();
@@ -326,6 +327,8 @@
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_navigation.percentage);
 					if (settings.get_speak())
 						ui.speak(nav_navigation.steps[nav_navigation.ind].speaked, nav_navigation.steps[nav_navigation.ind+1].type);
+					if (ui.get_radar_beep())
+						ui.play_radar_beep();
 					break;
 				case 'route_out':
 					$("#panelsNav").hide();
@@ -348,6 +351,7 @@
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
 					break;
 				case 'route_out_drawing': // As drawing, but don't confirm
+					webapi.set_radars();
 					mapUI.clear_layer('route');
 					var route_line = nav.get_data_line();
 					var coords_aux = [];
@@ -490,6 +494,7 @@
 		}
 		function route_cancel(simulate) {
 			mapUI.clear_layer('route');
+			mapUI.clear_layer('radar');
 			$("#panelConfirmRoute").hide();
 			$("#panelSimulateRoute").hide();
 			$("#panelsNav").hide();
@@ -700,6 +705,7 @@
 	
 
 	<!-- Notifications -->
+	<audio id="radar" type="audio/ogg" src="voices/radar.ogg" preload="none"/>
 	<audio id="0"  type="audio/ogg" src="voices/0.ogg"  preload="none"/>
 	<audio id="1"  type="audio/ogg" src="voices/1.ogg"  preload="none"/>
 	<audio id="2"  type="audio/ogg" src="voices/2.ogg"  preload="none"/>

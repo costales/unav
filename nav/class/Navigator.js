@@ -51,6 +51,8 @@ function Navigator() {
 		this.route.points = [];
 		this.route.bbox = [];
 		this.route.turf = [];
+
+	this.radars = new Object();
 }
 
 Navigator.prototype.set_data = function(data) {
@@ -120,6 +122,61 @@ Navigator.prototype.get_data_line = function() {
 		bbox: this.route.bbox,
 		points: this.route.points,
 		turf: this.route.turf
+	}
+}
+
+Navigator.prototype.get_radars = function() {
+	return this.radars;
+}
+Navigator.prototype.set_radars = function(cameras) {
+	this.radars = []
+	for (i=0;i<cameras.length;i++) {
+		this.radars.push({
+			lng: cameras[i].lng,
+			lat: cameras[i].lat,
+			spoke: false
+		});
+		switch(cameras[i].speed) {
+			case '10':
+			case '20':
+			case '30':
+			case '40':
+			case '50':
+			case '60':
+			case '70':
+			case '80':
+			case '90':
+			case '100':
+			case '110':
+			case '120':
+			case '130':
+				mapUI.add_marker([{
+					name: 'radar-'+i, 
+					title: 'none',
+					lng: cameras[i].lng, 
+					lat: cameras[i].lat,
+					phone: 'none',
+					website: 'none',
+					email: 'none',
+					icon: 'radars/radar-'+cameras[i].speed+'.svg',
+					margin_height: 20, 
+					margin_width: 20
+				}], 'radar');
+				break;
+			default:
+				mapUI.add_marker([{
+					name: 'radar-'+i, 
+					title: 'none',
+					lng: cameras[i].lng, 
+					lat: cameras[i].lat,
+					phone: 'none',
+					website: 'none',
+					email: 'none',
+					icon: 'radars/radar.svg',
+					margin_height: 20, 
+					margin_width: 20
+				}], 'radar');
+		}
 	}
 }
 
@@ -263,7 +320,7 @@ Navigator.prototype.parse_data = function(data) {
 		var points_aux = [];
 		var ind_aux = data.trip.legs[0].maneuvers[i].begin_shape_index;
 		while (ind_aux <= data.trip.legs[0].maneuvers[i].end_shape_index) {
-			points_aux.push([coords_aux[ind_aux][0].toFixed(5), coords_aux[ind_aux][1].toFixed(5)]);
+			points_aux.push([parseFloat(coords_aux[ind_aux][0].toFixed(5)), parseFloat(coords_aux[ind_aux][1].toFixed(5))]);
 			ind_aux++;
 		}
 		if (points_aux.length < 2)
@@ -374,5 +431,16 @@ Navigator.prototype.update = function() {
 		nav.set_data({mode: 'route_end'});
 		if (this.route.steps[this.route.ind].speaked == 0)
 			this.route.steps[this.route.ind].speaked = 1;
+	}
+
+	// Radar?
+	for (i=0;i<this.radars.length;i++) {
+		if (this.radars[i].spoke)
+			continue;
+		var distance_to_radar = Math.trunc(turf.distance(pt_now, turf.point([this.radars[i].lng, this.radars[i].lat])) * 1000);
+		if (distance_to_radar < dist4indication_aux) {
+			this.radars[i].spoke = true;
+			ui.set_radar_beep(true);
+		}
 	}
 }

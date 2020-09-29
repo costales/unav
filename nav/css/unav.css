@@ -191,7 +191,7 @@ body{
   position: absolute;
   top: 14px;
   right: 45px;
-  height: 65px;
+  height: 70px;
   left: 74px;
   font-size: 18px;
   line-height: 18px;
@@ -344,7 +344,7 @@ body{
     left: 74px;
     font-size: 18px;
     line-height: 18px;
-    height: 65px;
+    height: 70px;
   }
   #panelRecenterRoute {
     bottom: 134px;
