@@ -159,6 +159,7 @@ Page {
 
             ListItem {
                 height: navRadars.height + divider.height
+                enabled: navApp.settings.online
                 ListItemLayout {
                     id: navRadars
                     title.text: i18n.tr("Alert speed cameras")
@@ -247,7 +248,7 @@ Page {
             }
 
             ListItem {
-                visible: navApp.settings.speak
+                enabled: navApp.settings.speak
                 ListItemLayout {
                     title.text: i18n.tr("Download custom voices")
                 }
