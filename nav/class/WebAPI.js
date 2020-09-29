@@ -413,10 +413,14 @@ WebAPI.prototype.OK_callback_set_radars = function(xml) {
 		});
 		radars_aux.push({lng: xml_lng, lat: xml_lat, speed: xml_maxspeed});
 	});
-	nav.set_radars(radars_aux);
+
+	if (radars_aux.length > 0)
+		nav.set_radars(radars_aux);
+	else
+		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("No speed cameras were found"), iconsShow: 'no'});
 }
 
 WebAPI.prototype.KO_callback_set_radars = function() {
 	if (nav.get_data().mode == 'drawing' || nav.get_data().mode == 'route_confirm' || nav.get_data().mode == 'route_driving')
-		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Error getting speed cameras"), msgBGColor: 'error', iconsShow: 'no'});
+		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Error getting speed cameras"), iconsShow: 'no'});
 }
