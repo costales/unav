@@ -374,14 +374,14 @@ body{
     bottom: 10px;
   }
   #stepImg {
-    top: 7px;
+    top: 4px;
   }
   #distance {
-    bottom: 18px;
+    bottom: 21px;
     left: 45px;
   }
   #stepTxt {
-    top: 0px;
+    top: -3px;
     left: 110px;
     font-size: 17px;
     line-height: 17px;
