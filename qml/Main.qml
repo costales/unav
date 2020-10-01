@@ -79,7 +79,7 @@ MainView {
 
 	AdaptivePageLayout {
 		id: mainPageStack
-		property int maxWidth: units.gu(125)
+		property int maxWidth: units.gu(100)
 		property bool childPageOpened: false
 		function showSideBar() {
 			childPageOpened = true
@@ -99,7 +99,7 @@ MainView {
 				PageColumn { // Column 1
 					minimumWidth: units.gu(30)
 					maximumWidth: mainPageStack.maxWidth
-					preferredWidth: units.gu(50)
+					preferredWidth: units.gu(46)
 				}
 			}
 		]
