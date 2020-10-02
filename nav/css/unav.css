@@ -273,7 +273,8 @@ body{
 .ol-compassctrl.compass {
   width: 60px;
   height: 60px;
-  right: 18px;
+  right: 25px;
+  top: 80px;
   position: fixed;
   display: none;
 }
@@ -315,11 +316,6 @@ body{
     right: 25px;
   }
 
-  .ol-compassctrl.compass {
-    bottom: 410px;
-    right: 25px;
-  }
-  
   #panelsNav {
     height: 120px;
   }
@@ -354,11 +350,6 @@ body{
   #posBtn {
     bottom: 12px;
     right: 5px;
-  }
-
-  .ol-compassctrl.compass {
-    right: 5px;
-    bottom: 220px;
   }
 
   #panelsNav {
