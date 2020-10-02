@@ -33,7 +33,7 @@ var groups = [
 		label: i18n.tr("Food & Drink"),
 		elements: [
 			{label: "Bar", translators: i18n.tr("Bar"), tag_online: "amenity=bar", tag_offline: "amenity_bar", enabled_offline: "yes"},
-			{label: "Cafe", translators: i18n.tr("Cafe"), tag_online: "amenity=cafe", tag_offline: "amenity_cafe", enabled_offline: "yes"},
+			{label: "Coffee Shop", translators: i18n.tr("Coffee Shop"), tag_online: "amenity=cafe", tag_offline: "amenity_cafe", enabled_offline: "yes"},
 			{label: "Drinking Water", translators: i18n.tr("Drinking Water"), tag_online: "amenity=drinking_water", tag_offline: "amenity_drinking_water", enabled_offline: "no"},
 			{label: "Fast Food", translators: i18n.tr("Fast Food"), tag_online: "amenity=fast_food", tag_offline: "amenity_fast_food", enabled_offline: "yes"},
 			{label: "Ice Cream", translators: i18n.tr("Ice Cream"), tag_online: "amenity=ice_cream", tag_offline: "amenity_ice_cream", enabled_offline: "yes"},
