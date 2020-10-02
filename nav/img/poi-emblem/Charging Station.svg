@@ -12,7 +12,7 @@
    version="1.1"
    viewBox="0 0 29.988946 43.988056"
    id="svg16"
-   sodipodi:docname="new_Charging Station.svg"
+   sodipodi:docname="Charging Station.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata20">
@@ -39,9 +39,9 @@
      inkscape:window-height="974"
      id="namedview18"
      showgrid="false"
-     inkscape:zoom="4.0678609"
-     inkscape:cx="49.315661"
-     inkscape:cy="131.10823"
+     inkscape:zoom="16.271444"
+     inkscape:cx="21.126568"
+     inkscape:cy="29.773708"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -134,7 +134,7 @@
     .fil0 {fill:black;fill-rule:nonzero}
    
   </style></defs><g
-       transform="matrix(0.01611413,0,0,0.01611413,-0.32708128,-2.0619198)"
+       transform="matrix(0.01141996,0,0,0.01141996,1.6600899,0.40068396)"
        id="g8"><path
          style="fill:#000000;fill-rule:nonzero"
          inkscape:connector-curvature="0"
