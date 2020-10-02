@@ -1,8 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="46px" viewBox="0 0 30 46" version="1.1">
-<g id="surface1">
-<path style="fill-rule:nonzero;fill:rgb(100%,40.000001%,0%);fill-opacity:1;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(83.137256%,33.333334%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 13.040625 0.638587 C 6.25625 0.638587 0.609375 6.287364 0.609375 12.418478 C 0.609375 15.17663 2.224219 18.678668 3.388802 21.097147 L 13 38.828125 L 22.560417 21.097147 C 23.725 18.678668 25.383854 15.353261 25.383854 12.418478 C 25.383854 6.290761 19.828385 0.638587 13.04401 0.638587 Z M 13.040625 2.099185 C 18.934635 2.136549 23.721615 6.756114 23.721615 12.428668 C 23.721615 18.108016 18.938021 22.659647 13.040625 22.700408 C 7.146615 22.663043 2.369792 18.11481 2.369792 12.428668 C 2.369792 6.752717 7.15 2.129755 13.040625 2.099185 Z M 13.040625 2.099185 " transform="matrix(1.153846,0,0,1.15,0,0)"/>
-<path style="fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;stroke-width:1.00275;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:4;" d="M 23.010677 12.374321 C 23.010677 17.703804 18.528385 22.02106 13.003385 22.02106 C 7.478385 22.02106 2.996094 17.703804 2.996094 12.374321 C 2.996094 7.048234 7.478385 2.727582 13.003385 2.727582 C 18.528385 2.727582 23.010677 7.048234 23.010677 12.374321 Z M 23.010677 12.374321 " transform="matrix(1.153846,0,0,1.15,0,0)"/>
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 20.59375 8.828125 C 20.167969 8.402344 9.992188 8.402344 9.566406 8.828125 C 9.5 8.894531 9.515625 9.949219 9.515625 10.070312 L 9.515625 18.453125 L 10.0625 18.453125 L 10.0625 19.785156 L 12.074219 19.785156 L 12.074219 18.453125 L 18.050781 18.453125 L 18.050781 19.785156 L 20.097656 19.785156 L 20.097656 18.453125 L 20.644531 18.453125 L 20.644531 10.070312 C 20.644531 9.960938 20.648438 8.878906 20.59375 8.828125 Z M 12.199219 17.742188 L 10.304688 17.742188 L 10.304688 16.753906 L 12.199219 16.753906 Z M 15.070312 17.554688 C 14.875 17.554688 14.71875 17.398438 14.71875 17.207031 C 14.71875 17.011719 14.875 16.851562 15.070312 16.851562 C 15.265625 16.851562 15.425781 17.011719 15.425781 17.207031 C 15.425781 17.398438 15.265625 17.554688 15.070312 17.554688 Z M 19.855469 17.742188 L 17.964844 17.742188 L 17.964844 16.753906 L 19.855469 16.753906 Z M 20.09375 15.605469 L 10.09375 15.605469 L 10.09375 10.960938 L 20.09375 10.960938 Z M 20.09375 10.789062 L 10.09375 10.789062 L 10.09375 9.207031 L 20.09375 9.207031 Z M 20.09375 10.789062 "/>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="44px"
+   width="30px"
+   version="1.1"
+   viewBox="0 0 29.988946 43.988056"
+   id="svg542"
+   sodipodi:docname="new_Bus Station.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="974"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="4.0678609"
+     inkscape:cx="11.177821"
+     inkscape:cy="135.65582"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <defs
+     id="defs7">
+    <radialGradient
+       id="a"
+       gradientUnits="userSpaceOnUse"
+       cy="127.6"
+       cx="-42.75"
+       gradientTransform="matrix(4.2749643,0,0,0.98162997,197.99835,-82.088795)"
+       r="2.3840001">
+      <stop
+         stop-color="#010101"
+         offset="0"
+         id="stop2" />
+      <stop
+         stop-opacity="0"
+         stop-color="#090909"
+         offset="1"
+         id="stop4" />
+    </radialGradient>
+  </defs>
+  <g
+     id="g26"
+     transform="translate(-2.0760358e-7,-1.6181156)">
+    <path
+       style="fill:#5846c5;stroke-width:4.27539158"
+       inkscape:connector-curvature="0"
+       id="path9"
+       d="m 14.994475,1.7046139 c -8.2386814,0 -14.91684341,6.6781619 -14.91684341,14.9168421 0.008545,2.561815 0.67294669,5.079165 1.93504231,7.306643 L 15.595595,42.53888 27.955752,23.983679 c 1.277915,-2.243725 1.951716,-4.779887 1.955563,-7.362223 C 29.911273,8.3827758 23.233154,1.7046139 14.994475,1.7046139 Z" />
+    <circle
+       style="fill:#f9f3f3;stroke-width:4.27539158"
+       id="circle11"
+       r="9.4272394"
+       cx="14.994473"
+       cy="16.668474" />
+    <ellipse
+       style="opacity:0.4;fill:url(#a);stroke-width:4.27496433"
+       id="ellipse13"
+       cx="14.994473"
+       cy="43.18018"
+       ry="2.3394945"
+       rx="10.192533" />
+    <rect
+       style="fill:none;stroke-width:4.27539158"
+       x="8.2585926"
+       y="9.8278542"
+       width="13.471761"
+       height="13.36915"
+       ry="0"
+       rx="0"
+       id="replace" />
+    <svg
+       viewBox="0 0 60 60"
+       version="1.1"
+       x="8.5"
+       y="10"
+       id="svg16"
+       sodipodi:docname="Bus Station.svg"
+       width="60"
+       height="60"
+       inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+      <metadata
+         id="metadata22">
+        <rdf:RDF>
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title>bike black</dc:title>
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+      <defs
+         id="defs20" />
+      <sodipodi:namedview
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1"
+         objecttolerance="10"
+         gridtolerance="10"
+         guidetolerance="10"
+         inkscape:pageopacity="0"
+         inkscape:pageshadow="2"
+         inkscape:window-width="1440"
+         inkscape:window-height="824"
+         id="namedview535"
+         showgrid="false"
+         inkscape:zoom="5.2444444"
+         inkscape:cx="30"
+         inkscape:cy="22.5"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg16" />
+      <title
+         id="title2">bike black</title>
+      <desc
+         id="desc4">Created with Sketch.</desc>
+      <path
+         id="path6527"
+         d="M 11.968746,1.4360386 C 11.5472,1.0130217 1.4449019,1.0144921 1.0233555,1.4360386 0.9541345,1.5029976 0.9708745,2.55364 0.9708745,2.6731933 v 8.3524337 h 0.5416649 v 1.326169 h 1.9986979 v -1.326282 h 5.9336601 v 1.326169 H 11.47798 v -1.326169 h 0.541778 V 2.6731933 c 0,-0.1080162 0.0046,-1.1853521 -0.05101,-1.2371547 z M 3.6361062,10.31419 H 1.753116 V 9.3319756 h 1.8829902 z m 2.8508393,-0.183458 c -0.1931854,0 -0.3492717,-0.1566534 -0.3492717,-0.3499514 0,-0.193298 0.1559738,-0.350742 0.3492717,-0.350742 0.1940902,0 0.3522125,0.157444 0.3522125,0.350742 0,0.193298 -0.1581223,0.3499514 -0.3522125,0.3499514 z M 11.236837,10.31419 H 9.3583694 V 9.3319756 H 11.236724 V 10.31419 Z M 11.474246,8.1891509 H 1.5461319 V 3.561868 h 9.9281141 z m 0,-4.7993172 H 1.5461319 V 1.8149441 h 9.9281141 z"
+         inkscape:connector-curvature="0"
+         style="stroke-width:0.11310612" />
+    </svg>
+  </g>
 </svg>

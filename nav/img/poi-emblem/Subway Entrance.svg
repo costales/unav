@@ -1,15 +1,172 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="46px" viewBox="0 0 30 46" version="1.1">
-<defs>
-<clipPath id="clip1">
-  <path d="M 7.550781 6.921875 L 22.445312 6.921875 L 22.445312 21.769531 L 7.550781 21.769531 Z M 7.550781 6.921875 "/>
-</clipPath>
-</defs>
-<g id="surface1">
-<path style="fill-rule:nonzero;fill:rgb(100%,40.000001%,0%);fill-opacity:1;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(83.137256%,33.333334%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 13.040625 0.638587 C 6.25625 0.638587 0.609375 6.287364 0.609375 12.418478 C 0.609375 15.17663 2.224219 18.678668 3.388802 21.097147 L 13 38.828125 L 22.560417 21.097147 C 23.725 18.678668 25.383854 15.353261 25.383854 12.418478 C 25.383854 6.290761 19.828385 0.638587 13.04401 0.638587 Z M 13.040625 2.099185 C 18.934635 2.136549 23.721615 6.756114 23.721615 12.428668 C 23.721615 18.108016 18.938021 22.659647 13.040625 22.700408 C 7.146615 22.663043 2.369792 18.11481 2.369792 12.428668 C 2.369792 6.752717 7.15 2.129755 13.040625 2.099185 Z M 13.040625 2.099185 " transform="matrix(1.153846,0,0,1.15,0,0)"/>
-<path style="fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;stroke-width:1.00275;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:4;" d="M 23.010677 12.374321 C 23.010677 17.703804 18.528385 22.02106 13.003385 22.02106 C 7.478385 22.02106 2.996094 17.703804 2.996094 12.374321 C 2.996094 7.048234 7.478385 2.727582 13.003385 2.727582 C 18.528385 2.727582 23.010677 7.048234 23.010677 12.374321 Z M 23.010677 12.374321 " transform="matrix(1.153846,0,0,1.15,0,0)"/>
-<g clip-path="url(#clip1)" clip-rule="nonzero">
-<path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 22.304688 14.117188 C 22.304688 10.148438 19.050781 6.921875 15.046875 6.921875 C 11.046875 6.921875 7.792969 10.148438 7.792969 14.117188 C 7.792969 15.914062 8.453125 17.609375 9.660156 18.933594 L 7.691406 20.882812 L 8.21875 21.40625 L 10.609375 19.039062 L 12.976562 19.039062 L 12.402344 19.605469 L 10.984375 19.605469 L 10.984375 19.976562 L 12.03125 19.976562 L 11.4375 20.566406 L 10.023438 20.566406 L 10.023438 20.9375 L 11.0625 20.9375 L 10.558594 21.4375 L 10.824219 21.699219 L 11.589844 20.9375 L 18.277344 20.9375 L 19.085938 21.769531 L 19.355469 21.515625 L 18.796875 20.9375 L 19.742188 20.9375 L 19.742188 20.566406 L 18.4375 20.566406 L 17.867188 19.976562 L 18.953125 19.976562 L 18.953125 19.605469 L 17.507812 19.605469 L 16.960938 19.039062 L 19.203125 19.039062 L 21.472656 21.402344 L 22.015625 20.890625 L 20.289062 19.089844 C 21.59375 17.746094 22.304688 15.992188 22.304688 14.117188 Z M 17.917969 20.566406 L 11.964844 20.566406 L 12.558594 19.976562 L 17.351562 19.976562 Z M 16.992188 19.605469 L 12.933594 19.605469 L 13.503906 19.039062 L 16.441406 19.039062 Z M 16.640625 13.574219 L 15.984375 13.011719 L 15.984375 10.84375 L 17.691406 10.84375 L 18.023438 11.246094 L 18.210938 13.574219 Z M 17.671875 15.34375 C 17.671875 15.484375 17.433594 15.601562 17.144531 15.601562 C 16.851562 15.601562 16.617188 15.484375 16.617188 15.34375 C 16.617188 15.203125 16.851562 15.089844 17.144531 15.089844 C 17.433594 15.089844 17.671875 15.203125 17.671875 15.34375 Z M 16.03125 10.195312 L 14.167969 10.195312 L 14.167969 9.730469 C 14.167969 9.730469 14.402344 9.429688 15.097656 9.429688 C 15.796875 9.429688 16.03125 9.730469 16.03125 9.730469 Z M 15.765625 10.960938 L 15.765625 12.910156 L 14.40625 12.910156 L 14.40625 10.960938 Z M 15.949219 17.875 L 15.949219 18.484375 L 14.039062 18.484375 L 14.039062 17.875 Z M 14.167969 13.011719 L 13.511719 13.574219 L 11.941406 13.574219 L 12.128906 11.246094 L 12.457031 10.84375 L 14.167969 10.84375 Z M 12.929688 15.089844 C 13.21875 15.089844 13.457031 15.203125 13.457031 15.34375 C 13.457031 15.484375 13.21875 15.601562 12.929688 15.601562 C 12.636719 15.601562 12.402344 15.484375 12.402344 15.34375 C 12.402344 15.203125 12.636719 15.089844 12.929688 15.089844 Z M 19.3125 18.484375 L 16.597656 18.484375 L 16.597656 17.875 L 17.320312 17.875 L 17.320312 17.132812 L 17.902344 17.132812 L 17.902344 16.746094 L 18.730469 16.746094 L 18.730469 14.347656 L 18.480469 11.207031 C 18.480469 11.207031 17.585938 9.21875 15.097656 9.167969 C 15.082031 9.164062 15.066406 9.164062 15.046875 9.167969 C 15.03125 9.164062 15.015625 9.164062 14.996094 9.167969 C 12.507812 9.21875 11.664062 11.207031 11.664062 11.207031 L 11.363281 14.347656 L 11.363281 16.746094 L 12.195312 16.746094 L 12.195312 17.132812 L 12.777344 17.132812 L 12.777344 17.875 L 13.390625 17.875 L 13.390625 18.484375 L 10.777344 18.484375 L 10.710938 18.417969 L 10.710938 18.414062 C 9.554688 17.265625 8.914062 15.738281 8.914062 14.117188 C 8.914062 12.425781 9.613281 10.894531 10.742188 9.789062 C 10.890625 9.648438 11.042969 9.511719 11.203125 9.382812 C 12.257812 8.542969 13.59375 8.035156 15.046875 8.035156 C 16.503906 8.035156 17.839844 8.542969 18.894531 9.382812 C 19.078125 9.527344 19.25 9.6875 19.417969 9.851562 C 20.507812 10.949219 21.183594 12.457031 21.183594 14.117188 C 21.183594 15.6875 20.59375 17.152344 19.511719 18.285156 C 19.449219 18.351562 19.378906 18.417969 19.3125 18.484375 Z M 19.3125 18.484375 "/>
-</g>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="44px"
+   width="30px"
+   version="1.1"
+   viewBox="0 0 29.988946 43.988056"
+   id="svg16"
+   sodipodi:docname="Subway Entrance.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="974"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="16.271444"
+     inkscape:cx="9.8567153"
+     inkscape:cy="20.826625"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg20" />
+  <defs
+     id="defs7">
+    <radialGradient
+       id="a"
+       gradientUnits="userSpaceOnUse"
+       cy="127.6"
+       cx="-42.75"
+       gradientTransform="matrix(4.2749643,0,0,0.98162997,197.99835,-82.088795)"
+       r="2.3840001">
+      <stop
+         stop-color="#010101"
+         offset="0"
+         id="stop2" />
+      <stop
+         stop-opacity="0"
+         stop-color="#090909"
+         offset="1"
+         id="stop4" />
+    </radialGradient>
+  </defs>
+  <g
+     id="g26"
+     transform="translate(-2.0760358e-7,-1.6181156)">
+    <path
+       style="fill:#5846c5;stroke-width:4.27539158"
+       inkscape:connector-curvature="0"
+       id="path9"
+       d="m 14.994475,1.7046139 c -8.2386814,0 -14.91684341,6.6781619 -14.91684341,14.9168421 0.008545,2.561815 0.67294669,5.079165 1.93504231,7.306643 L 15.595595,42.53888 27.955752,23.983679 c 1.277915,-2.243725 1.951716,-4.779887 1.955563,-7.362223 C 29.911273,8.3827758 23.233154,1.7046139 14.994475,1.7046139 Z" />
+    <circle
+       style="fill:#f9f3f3;stroke-width:4.27539158"
+       id="circle11"
+       r="9.4272394"
+       cx="14.994473"
+       cy="16.668474" />
+    <ellipse
+       style="opacity:0.4;fill:url(#a);stroke-width:4.27496433"
+       id="ellipse13"
+       cx="14.994473"
+       cy="43.18018"
+       ry="2.3394945"
+       rx="10.192533" />
+    <rect
+       style="fill:none;stroke-width:4.27539158"
+       x="8.2585926"
+       y="9.8278542"
+       width="13.471761"
+       height="13.36915"
+       ry="0"
+       rx="0"
+       id="replace" />
+    <svg
+       viewBox="0 0 100 100"
+       version="1.1"
+       x="8.5"
+       y="10"
+       id="svg20"
+       sodipodi:docname="Subway Entrance.svg"
+       width="100"
+       height="100"
+       inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+      <metadata
+         id="metadata26">
+        <rdf:RDF>
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title>Underground 4.3</dc:title>
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+      <defs
+         id="defs24" />
+      <sodipodi:namedview
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1"
+         objecttolerance="10"
+         gridtolerance="10"
+         guidetolerance="10"
+         inkscape:pageopacity="0"
+         inkscape:pageshadow="2"
+         inkscape:window-width="691"
+         inkscape:window-height="480"
+         id="namedview22"
+         showgrid="false"
+         inkscape:zoom="1.888"
+         inkscape:cx="56.620763"
+         inkscape:cy="62.5"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="0"
+         inkscape:current-layer="svg20" />
+      <title
+         id="title2">Underground 4.3</title>
+      <desc
+         id="desc4">Created with Sketch.</desc>
+      <g
+         id="g14"
+         style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+         transform="matrix(0.35048421,0,0,0.35048421,-11.029737,-10.813557)">
+        <g
+           id="g12"
+           style="fill:#000000">
+          <path
+             d="M 33.411819,57 C 36.142845,63.463883 42.541689,68 50,68 57.458311,68 63.857154,63.463883 66.588182,57 H 58.485671 C 56.468092,59.443007 53.415874,61 50,61 46.584126,61 43.531908,59.443007 41.514324,57 Z"
+             id="path6"
+             inkscape:connector-curvature="0" />
+          <path
+             d="M 66.588182,43 C 63.857154,36.536117 57.458311,32 50,32 42.541689,32 36.142845,36.536117 33.411819,43 h 8.10251 C 43.531908,40.556993 46.584126,39 50,39 c 3.415874,0 6.468092,1.556993 8.485676,4 z"
+             id="path8"
+             inkscape:connector-curvature="0" />
+          <rect
+             x="29"
+             y="45.5"
+             width="42"
+             height="9"
+             id="rect10" />
+        </g>
+      </g>
+    </svg>
+  </g>
 </svg>
