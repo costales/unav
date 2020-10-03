@@ -430,7 +430,7 @@ WebAPI.prototype.OK_callback_set_radars = function(xml) {
 	if (radars_aux.length > 0)
 		nav.set_radars(radars_aux);
 	else
-		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("No speed cameras were found"), iconsShow: 'no'});
+		ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("No speed cameras"), iconsShow: 'no'});
 }
 
 WebAPI.prototype.KO_callback_set_radars = function() {

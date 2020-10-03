@@ -72,7 +72,7 @@ Page {
         source: {
             switch(typeSections.selectedIndex) {
                 case 0:
-                    if (navApp.settings.online)
+                    if (navApp.settings.onlineSearch)
                         return Qt.resolvedUrl("onlineLocation/Location.qml");
                     else
                         return Qt.resolvedUrl("offlineLocation/Location.qml");

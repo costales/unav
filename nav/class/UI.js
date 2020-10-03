@@ -182,6 +182,29 @@ UI.prototype.set_confirm_btns = function(mode) {
 		$("#btnCancelSimulate").html(t("Close"));
 }
 
+UI.prototype.show_panels = function(panel) {
+	mapUI.clear_layer('route');
+	mapUI.clear_layer('radar');
+	$("#panelConfirmRoute").hide();
+	$("#panelSimulateRoute").hide();
+	$("#panelsNav").hide();
+	$("#panelRecenterRoute").hide();
+	$(".ol-compassctrl.compass").hide();
+	
+	switch(panel) {
+		case 'navigate':
+			$("#panelsNav").show();
+			$(".ol-compassctrl.compass").show();
+			break;
+		case 'confirm':
+			$("#panelConfirmRoute").show();
+			break;
+		case 'simulate':
+			$("#panelSimulateRoute").show();
+			break;
+	}
+}
+
 // Search page has a big height and the panels are hidden
 UI.prototype.topPanelsMargin = function(header_height) {
 	$(".topPanels").css("margin-top", header_height);
@@ -209,14 +232,9 @@ UI.prototype.set_pickingOnMap = function(value) {
 			nav.set_data({mode: 'simulating'});
 			ui.set_center_pos(false);
 			mapUI.clear_layer('poi');
-			mapUI.clear_layer('route');
 			poiStart.hide();
 			poiEnd.hide();
-			$("#panelConfirmRoute").hide();
-			$("#panelSimulateRoute").hide();
-			$("#panelsNav").hide();
-			$(".ol-compassctrl.compass").hide();
-			$("#panelRecenterRoute").hide();
+			this.show_panels('none');
 			this.POIPanel({msgShow: 'yes', msgText: t("Long click on origin"), iconsShow: 'no'});
 			break;
 		case 2:

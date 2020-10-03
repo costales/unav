@@ -104,16 +104,16 @@ Item {
                 }
 
                 title.text: i18n.tr(model.label)
-                enabled: navApp.settings.online || model.enabled_offline == "yes"
+                enabled: navApp.settings.onlineSearch || model.enabled_offline == "yes"
                 subtitle.text: i18n.tr("Available only online")
-                subtitle.visible: !navApp.settings.online && model.enabled_offline == "no"
+                subtitle.visible: !navApp.settings.onlineSearch && model.enabled_offline == "no"
             }
             onClicked: {
-                if (navApp.settings.online || model.enabled_offline == "yes") {
+                if (navApp.settings.onlineSearch || model.enabled_offline == "yes") {
                     UnavDB.saveToNearByHistory(model.label, model.tag_online, model.tag_offline, model.enabled_offline);
                     if (mainPageStack.columns === 1)
                         mainPageStack.removePages(searchPage);
-                    if (navApp.settings.online)
+                    if (navApp.settings.onlineSearch)
                         mainPageStack.executeJavaScript("set_search_poi(\"" + model.tag_online + "\",\"" + model.label + "\")");
                     else
                         mainPageStack.executeJavaScript("set_search_poi(\"" + model.tag_offline + "\",\"" + model.label + "\")");

@@ -254,6 +254,7 @@
 				case 'simulating':
 					break;
 				case 'drawing_simulating':
+					ui.show_panels('simulate');
 					var route_line = nav.get_data_line();
 					var coords_aux = [];
 					for (k=0; k<route_line.points.length; k++)
@@ -265,7 +266,6 @@
 					nav.set_data({mode: 'simulating'});
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 					ui.set_confirm_btns(settings.get_route_mode());
-					$("#panelSimulateRoute").show();
 					break;
 				case 'GPS_waiting_for_calculating':
 					if (mapUI.get_map_zoom() < ui.ZOOM-3)
@@ -290,19 +290,14 @@
 				case 'calculating_waiting_result':
 					break;
 				case 'calculating_error':
-					mapUI.clear_layer('route');
-					$("#panelConfirmRoute").hide();
-					$("#panelSimulateRoute").hide();
-					$("#panelsNav").hide();
-					$("#panelRecenterRoute").hide();
+					ui.show_panels('none');
 					poiStart.hide();
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
 					nav.set_data({mode: 'exploring'});
 					break;
 				case 'drawing':
-					webapi.set_radars();
 					ui.set_center_pos(false); // Needs for map.fit
-					mapUI.clear_layer('route');
+					ui.show_panels('confirm');
 					var route_line = nav.get_data_line();
 					var coords_aux = [];
 					for (k=0; k<route_line.points.length; k++)
@@ -313,7 +308,7 @@
 					mapUI.show_route(coords_aux, 'route', true);
 					nav.set_data({mode: 'route_confirm'});
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-					$("#panelConfirmRoute").show();
+					webapi.set_radars();
 				case 'route_confirm':
 					var nav_navigation= nav.get_data_navigation();
 					ui.set_confirm_btns(settings.get_route_mode());
@@ -331,15 +326,14 @@
 						ui.play_radar_beep();
 					break;
 				case 'route_out':
-					$("#panelsNav").hide();
-					$("#panelRecenterRoute").hide();
+					ui.show_panels('none');
 					webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
 					ui.POIPanel({msgShow: 'yes', msgText: t("Out of route. Recalculating"), iconsShow: 'no'});
 					nav.set_data({mode: 'route_out_waiting_result'});
 					break;
 				case 'route_out_returned':
 					nav.set_data({mode: 'route_driving'});
-					$("#panelsNav").show();
+					ui.show_panels('navigate');
 					if (!ui.get_center_pos())
 						$("#panelRecenterRoute").show();
 					break;
@@ -352,7 +346,7 @@
 					break;
 				case 'route_out_drawing': // As drawing, but don't confirm
 					webapi.set_radars();
-					mapUI.clear_layer('route');
+					ui.show_panels('navigate');
 					var route_line = nav.get_data_line();
 					var coords_aux = [];
 					for (k=0; k<route_line.points.length; k++)
@@ -365,7 +359,6 @@
 					var nav_navigation = nav.get_data_navigation();
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
-					$("#panelsNav").show();
 					nav.set_data({mode: 'route_driving'});
 					break;
 				case 'route_end':
@@ -465,12 +458,8 @@
 		}
 		function BtnGo(lng, lat) {
 			longtouch_id++; // Avoid message after click
+			ui.show_panels('none');
 			mapUI.clear_layer('poi');
-			mapUI.clear_layer('route');
-			$("#panelConfirmRoute").hide();
-			$("#panelSimulateRoute").hide();
-			$("#panelsNav").hide();
-			$("#panelRecenterRoute").hide();
 			poiClick.hide();
 			poiStart.hide();
 			poiEnd.show(ol.proj.fromLonLat([lng, lat]));
@@ -493,13 +482,7 @@
 			webapi.route(settings.get_online_route(), lng1, lat1, lng2, lat2);
 		}
 		function route_cancel(simulate) {
-			mapUI.clear_layer('route');
-			mapUI.clear_layer('radar');
-			$("#panelConfirmRoute").hide();
-			$("#panelSimulateRoute").hide();
-			$("#panelsNav").hide();
-			$(".ol-compassctrl.compass").hide();
-			$("#panelRecenterRoute").hide();
+			ui.show_panels('none');
 			poiEnd.hide();
 			poiStart.hide();
 			if (!nav.get_data().mode.startsWith('route_end') && !simulate)
@@ -511,9 +494,7 @@
 				ui.update_map_view(nav.get_data());
 		}
 		function route_start() {
-			$("#panelConfirmRoute").hide();
-			$("#panelSimulateRoute").hide();
-			$("#panelsNav").show();
+			ui.show_panels('navigate');
 			ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 			nav.set_data({mode: 'route_driving'});
 			ui.set_center_pos(true);
