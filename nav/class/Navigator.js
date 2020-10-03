@@ -200,7 +200,7 @@ Navigator.prototype.parse_type = function(step) {
 	// 11 Depart
 	// 12 Keep left
 	// 13 Keep right
-	// 99 Nothing (without sound)
+	// 99 Nothing (beep)
 
 	// Valhalla types
 	switch(step.type) {

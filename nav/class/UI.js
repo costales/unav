@@ -287,10 +287,11 @@ UI.prototype.play_radar_beep = function() {
 }
 
 UI.prototype.speak = function(speak, type) {
+	if (type == 8)
+		return;
 	if (speak != 1)
 		return;
-	if (type != 8 && type != 99)
-		$('#'+type).trigger('play');
+	$('#'+type).trigger('play');
 }
 
 UI.prototype.update_pos = function(nav_data) {
