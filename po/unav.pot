@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-03 19:13+0200\n"
+"POT-Creation-Date: 2020-10-03 20:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -408,7 +408,7 @@ msgstr ""
 msgid "Time out!"
 msgstr ""
 
-#: nav/class/Maths.js:61 nav/class/Maths.js:76
+#: nav/class/Maths.js:64 nav/class/Maths.js:82
 msgid "Now"
 msgstr ""
 
@@ -493,31 +493,31 @@ msgid "GPS is ready"
 msgstr ""
 
 #: nav/index.html:275 nav/index.html:276 nav/index.html:281 nav/index.html:282
-#: nav/index.html:472 nav/index.html:481
+#: nav/index.html:479 nav/index.html:488
 msgid "Calculating route"
 msgstr ""
 
-#: nav/index.html:295
+#: nav/index.html:297
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:331
+#: nav/index.html:334
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:345
+#: nav/index.html:348
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:370
+#: nav/index.html:375
 msgid "You have arrived"
 msgstr ""
 
-#: nav/index.html:489
+#: nav/index.html:498
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:546
+#: nav/index.html:555
 msgid "Use more zoom for POIs"
 msgstr ""
 
