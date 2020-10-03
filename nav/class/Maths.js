@@ -48,32 +48,38 @@ Maths.prototype.get_angle = function(rotate_map, long1, lat1, long2, lat2) {
 Maths.prototype.dist2human = function(m, unit2convert) {
 	var distance_aux = ''
 	if (unit2convert == settings.KM) {
+		if (m > 5000) {
+			return Math.trunc(this.meter2km(m)).toString() + 'km';
+		}
 		if (m > 999) {
-			distance_aux = Math.trunc(this.meter2km(m)).toFixed(1).toString();
+			distance_aux = this.meter2km(m).toFixed(1).toString();
 			if (distance_aux.endsWith(".0"))
 				 distance_aux = distance_aux.slice(0, -2);
 			return distance_aux + 'km';
 		}
-		else {
-			if (Math.trunc(m) > 0)
-				return Math.trunc(m) + 'm';
-			else
-				return t("Now").substring(0, 7);
+		if (m > 0) {
+			return Math.trunc(m) + 'm';
+		}
+		if (m == 0) {
+			return t("Now").substring(0, 7);
 		}
 	}
 	else {
 		var feets = this.meter2feet(m);
+		if (feets > 9000) {
+			return Math.trunc(this.meter2mile(m)).toString() + 'mi';
+		}
 		if (feets > 3000) {
-			distance_aux = Math.trunc(this.meter2mile(m)).toFixed(1).toString();
+			distance_aux = this.meter2mile(m).toFixed(1).toString();
 			if (distance_aux.endsWith(".0"))
 				 distance_aux = distance_aux.slice(0, -2);
 			return distance_aux + 'mi';
 		}
-		else {
-			if (Math.trunc(feets) > 0)
-				return Math.trunc(feets) + 'ft';
-			else
-				return t("Now").substring(0, 7);
+		if (feets > 0) {
+			return Math.trunc(feets) + 'ft';
+		}
+		if (feets == 0) {
+			return t("Now").substring(0, 7);
 		}
 	}
 }

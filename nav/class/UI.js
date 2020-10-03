@@ -183,14 +183,12 @@ UI.prototype.set_confirm_btns = function(mode) {
 }
 
 UI.prototype.show_panels = function(panel) {
-	mapUI.clear_layer('route');
-	mapUI.clear_layer('radar');
 	$("#panelConfirmRoute").hide();
 	$("#panelSimulateRoute").hide();
 	$("#panelsNav").hide();
 	$("#panelRecenterRoute").hide();
 	$(".ol-compassctrl.compass").hide();
-	
+
 	switch(panel) {
 		case 'navigate':
 			$("#panelsNav").show();
@@ -232,6 +230,8 @@ UI.prototype.set_pickingOnMap = function(value) {
 			nav.set_data({mode: 'simulating'});
 			ui.set_center_pos(false);
 			mapUI.clear_layer('poi');
+			mapUI.clear_layer('route');
+			mapUI.clear_layer('radar');		
 			poiStart.hide();
 			poiEnd.hide();
 			this.show_panels('none');

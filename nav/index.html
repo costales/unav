@@ -291,13 +291,17 @@
 					break;
 				case 'calculating_error':
 					ui.show_panels('none');
+					mapUI.clear_layer('route');
+					mapUI.clear_layer('radar');		
 					poiStart.hide();
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
 					nav.set_data({mode: 'exploring'});
 					break;
 				case 'drawing':
 					ui.set_center_pos(false); // Needs for map.fit
+					mapUI.clear_layer('route');
 					ui.show_panels('confirm');
+					webapi.set_radars();
 					var route_line = nav.get_data_line();
 					var coords_aux = [];
 					for (k=0; k<route_line.points.length; k++)
@@ -308,7 +312,6 @@
 					mapUI.show_route(coords_aux, 'route', true);
 					nav.set_data({mode: 'route_confirm'});
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-					webapi.set_radars();
 				case 'route_confirm':
 					var nav_navigation= nav.get_data_navigation();
 					ui.set_confirm_btns(settings.get_route_mode());
@@ -345,8 +348,10 @@
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
 					break;
 				case 'route_out_drawing': // As drawing, but don't confirm
-					webapi.set_radars();
+					mapUI.clear_layer('route');
+					mapUI.clear_layer('radar');
 					ui.show_panels('navigate');
+					webapi.set_radars();
 					var route_line = nav.get_data_line();
 					var coords_aux = [];
 					for (k=0; k<route_line.points.length; k++)
@@ -460,6 +465,8 @@
 			longtouch_id++; // Avoid message after click
 			ui.show_panels('none');
 			mapUI.clear_layer('poi');
+			mapUI.clear_layer('route');
+			mapUI.clear_layer('radar');
 			poiClick.hide();
 			poiStart.hide();
 			poiEnd.show(ol.proj.fromLonLat([lng, lat]));
@@ -483,6 +490,8 @@
 		}
 		function route_cancel(simulate) {
 			ui.show_panels('none');
+			mapUI.clear_layer('route');
+			mapUI.clear_layer('radar');
 			poiEnd.hide();
 			poiStart.hide();
 			if (!nav.get_data().mode.startsWith('route_end') && !simulate)
