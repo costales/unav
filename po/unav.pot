@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-03 09:31+0200\n"
+"POT-Creation-Date: 2020-10-03 19:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -456,11 +456,11 @@ msgstr ""
 msgid "Start"
 msgstr ""
 
-#: nav/class/UI.js:220
+#: nav/class/UI.js:238
 msgid "Long click on origin"
 msgstr ""
 
-#: nav/class/UI.js:225
+#: nav/class/UI.js:243
 msgid "Long click on destination"
 msgstr ""
 
@@ -477,47 +477,47 @@ msgid "There was an error"
 msgstr ""
 
 #: nav/class/WebAPI.js:433
-msgid "No speed cameras were found"
+msgid "No speed cameras"
 msgstr ""
 
 #: nav/class/WebAPI.js:438
 msgid "Error getting speed cameras"
 msgstr ""
 
-#: nav/index.html:183 nav/index.html:194
+#: nav/index.html:182 nav/index.html:193
 msgid "Waiting for GPS"
 msgstr ""
 
-#: nav/index.html:252
+#: nav/index.html:251
 msgid "GPS is ready"
 msgstr ""
 
-#: nav/index.html:276 nav/index.html:277 nav/index.html:282 nav/index.html:283
-#: nav/index.html:484 nav/index.html:493
+#: nav/index.html:275 nav/index.html:276 nav/index.html:281 nav/index.html:282
+#: nav/index.html:472 nav/index.html:481
 msgid "Calculating route"
 msgstr ""
 
-#: nav/index.html:300
+#: nav/index.html:295
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:338
+#: nav/index.html:331
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:352
+#: nav/index.html:345
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:378
+#: nav/index.html:370
 msgid "You have arrived"
 msgstr ""
 
-#: nav/index.html:507
+#: nav/index.html:489
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:566
+#: nav/index.html:546
 msgid "Use more zoom for POIs"
 msgstr ""
 
