@@ -169,16 +169,15 @@ body{
   position: absolute;
   bottom: 5px;
   width: 100%;
-  left: 20px;
-  text-align: left;
-
+  left: 10px;
+  text-align: center;
 }
 #endDistance, #confirmEndDistance, #simulateEndDistance {
   position: absolute;
   bottom: 5px;
   width: 100%;
-  left: 10px;
-  text-align: center;
+  left: 20px;
+  text-align: left;
 }
 #endHour, #confirmEndHour, #simulateEndHour {
   position: absolute;
