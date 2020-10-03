@@ -48,7 +48,9 @@ MainView {
 
 	// Persistent settings:
 	property var settings: Settings {
-		property bool online: true
+		property bool onlineMap: true
+		property bool onlineSearch: true
+		property bool onlineRoute: true
 		property int unit: 0
 		property bool rotateMap: true
 		property string routeModes: "car"
@@ -225,7 +227,9 @@ MainView {
 							mainPageStack.onLoadingExecuted = true;
 							
 							// Restore settings into webview
-							mainPageStack.executeJavaScript("settings.set_online(" + navApp.settings.online + ")");
+							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + ")");
+							mainPageStack.executeJavaScript("settings.set_online_search(" + navApp.settings.onlineSearch + ")");
+							mainPageStack.executeJavaScript("settings.set_online_route(" + navApp.settings.onlineRoute + ")");
 							mainPageStack.executeJavaScript("settings.set_unit(" + navApp.settings.unit + ")");
 							mainPageStack.executeJavaScript("settings.set_rotate_map(" + navApp.settings.rotateMap + ")");
 							mainPageStack.executeJavaScript("settings.set_route_mode(\"" + navApp.settings.routeModes + "\")");

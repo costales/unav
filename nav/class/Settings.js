@@ -17,7 +17,9 @@ Settings.prototype.KM = 'km';
 Settings.prototype.MI = 'mi';
 
 function Settings() {
-	this.online = true
+	this.online_map = true
+	this.online_search = true
+	this.online_route = true
 	this.unit = this.KM;
 	this.rotate_map = true;
 	this.tolls = true;
@@ -27,11 +29,11 @@ function Settings() {
 	this.route_mode = "car";
 }
 
-Settings.prototype.get_online = function() {
-	return this.online;
+Settings.prototype.get_online_map = function() {
+	return this.online_map;
 }
-Settings.prototype.set_online = function(value) {
-	this.online = value;
+Settings.prototype.set_online_map = function(value) {
+	this.online_map = value;
 
 	// Remove all layers except someones, then append the right
 	try {
@@ -48,7 +50,7 @@ Settings.prototype.set_online = function(value) {
 		});
 	} catch (error) {}
 	
-	if (this.online) {
+	if (this.online_map) {
 		map.addLayer(map_layer_online);
 		$('#mapCredits').text("© OpenStreetMap contributors © maptiler");
 	}
@@ -56,6 +58,20 @@ Settings.prototype.set_online = function(value) {
 		olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');
 		$('#mapCredits').text("© OpenStreetMap contributors © OSM Scout Server");
 	}
+}
+
+Settings.prototype.get_online_search = function() {
+	return this.online_search;
+}
+Settings.prototype.set_online_search = function(value) {
+	this.online_search = value;
+}
+
+Settings.prototype.get_online_route = function() {
+	return this.online_route;
+}
+Settings.prototype.set_online_route = function(value) {
+	this.online_route = value;
 }
 
 Settings.prototype.get_unit = function() {

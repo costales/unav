@@ -80,44 +80,6 @@ Page {
                 color: theme.palette.normal.background
            }
 
-            ListItem {
-                height: navApp.settings.online ? mapOnline.height + divider.height : mapOnline.height + howToOfflineLabel.height + divider.height
-                ListItemLayout {
-                    id: mapOnline
-                    title.text: i18n.tr("Online")
-                    Switch {
-                        id: mapOnlineSwitch
-                        checked: navApp.settings.online
-                        onClicked: {
-                            navApp.settings.online = checked;
-                            if (navApp.settings.online)
-                                mainPageStack.executeJavaScript("settings.set_online(true);");
-                            else
-                                mainPageStack.executeJavaScript("settings.set_online(false);");
-                        }
-                        SlotsLayout.position: SlotsLayout.Last
-                    }
-                }
-
-                Label {
-                    id: howToOfflineLabel
-                    text: "<a href='#'>" + i18n.tr("Instructions for offline mode") + "</a>"
-                    visible: !navApp.settings.online
-                    width: parent.width
-                    height: units.gu(3)
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        leftMargin: units.gu(2)
-                        rightMargin: units.gu(2)
-                        bottom: parent.bottom
-                        bottomMargin: units.gu(1)
-                        topMargin: units.gu(2)
-                    }
-                    onLinkActivated: PopupUtils.open(stepsOfflineComponent);
-                }
-            }
-
            ExpandableListItem {
                id: unitList
 
@@ -159,7 +121,7 @@ Page {
 
             ListItem {
                 height: navRadars.height + divider.height
-                enabled: navApp.settings.online
+                enabled: navApp.settings.onlineRoute
                 ListItemLayout {
                     id: navRadars
                     title.text: i18n.tr("Alert speed cameras")
@@ -253,6 +215,93 @@ Page {
                     title.text: i18n.tr("Download custom voices")
                 }
                 onClicked: mainPageStack.addPageToNextColumn(mainPageStack.primaryPage, Qt.resolvedUrl("Voices.qml"))
+            }
+
+            ListItemHeader {
+                id: onlineListHeader
+                title: i18n.tr("Online Services")
+                color: theme.palette.normal.background
+            }
+
+            ListItem {
+                height: mapOnline.height
+                ListItemLayout {
+                    id: mapOnline
+                    title.text: i18n.tr("Map")
+                    Switch {
+                        id: mapOnlineSwitch
+                        checked: navApp.settings.onlineMap
+                        onClicked: {
+                            navApp.settings.onlineMap = checked;
+                            if (navApp.settings.onlineMap)
+                                mainPageStack.executeJavaScript("settings.set_online_map(true);");
+                            else
+                                mainPageStack.executeJavaScript("settings.set_online_map(false);");
+                        }
+                        SlotsLayout.position: SlotsLayout.Last
+                    }
+                }
+            }
+
+            ListItem {
+                height: searchOnline.height
+                ListItemLayout {
+                    id: searchOnline
+                    title.text: i18n.tr("Search")
+                    Switch {
+                        id: searchOnlineSwitch
+                        checked: navApp.settings.onlineSearch
+                        onClicked: {
+                            navApp.settings.onlineSearch = checked;
+                            if (navApp.settings.onlineSearch)
+                                mainPageStack.executeJavaScript("settings.set_online_search(true);");
+                            else
+                                mainPageStack.executeJavaScript("settings.set_online_search(false);");
+                        }
+                        SlotsLayout.position: SlotsLayout.Last
+                    }
+                }
+            }
+
+            ListItem {
+                height: routeOnline.height
+                ListItemLayout {
+                    id: routeOnline
+                    title.text: i18n.tr("Route")
+                    Switch {
+                        id: routeOnlineSwitch
+                        checked: navApp.settings.onlineRoute
+                        onClicked: {
+                            navApp.settings.onlineRoute = checked;
+                            if (navApp.settings.onlineRoute)
+                                mainPageStack.executeJavaScript("settings.set_online_route(true);");
+                            else
+                                mainPageStack.executeJavaScript("settings.set_online_route(false);");
+                        }
+                        SlotsLayout.position: SlotsLayout.Last
+                    }
+                }
+            }
+
+            ListItem {
+                height: instructionsOffline.height + divider.height + units.gu(3)
+                visible: !navApp.settings.onlineMap || !navApp.settings.onlineSearch || !navApp.settings.onlineRoute
+                Label {
+                    id: instructionsOffline
+                    text: "<a href='#'>" + i18n.tr("Instructions for offline mode") + "</a>"
+                    width: parent.width
+                    height: units.gu(3)
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        leftMargin: units.gu(2)
+                        rightMargin: units.gu(2)
+                        bottom: parent.bottom
+                        bottomMargin: units.gu(1)
+                        topMargin: units.gu(2)
+                    }
+                    onLinkActivated: PopupUtils.open(stepsOfflineComponent);
+                }
             }
         }
     }

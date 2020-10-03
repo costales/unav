@@ -286,7 +286,7 @@
 				case 'calculating_call_API':
 					poiStart.show(ol.proj.fromLonLat([nav_data.lng_start, nav_data.lat_start]));
 					nav.set_data({mode: 'calculating_waiting_result'});
-					webapi.route(settings.get_online(), nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
+					webapi.route(settings.get_online_route(), nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
 					break;
 				case 'calculating_waiting_result':
 					break;
@@ -334,7 +334,7 @@
 				case 'route_out':
 					$("#panelsNav").hide();
 					$("#panelRecenterRoute").hide();
-					webapi.route(settings.get_online(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
+					webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
 					ui.POIPanel({msgShow: 'yes', msgText: t("Out of route. Recalculating"), iconsShow: 'no'});
 					nav.set_data({mode: 'route_out_waiting_result'});
 					break;
@@ -348,7 +348,7 @@
 					break;
 				case 'route_out_calculating_error':
 					nav.set_data({mode: 'route_out_waiting_result'});
-					webapi.route(settings.get_online(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
+					webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
 					break;
 				case 'route_out_drawing': // As drawing, but don't confirm
@@ -401,7 +401,7 @@
 				switch(ui.get_pickingOnMap()) {
 					case 0:
 						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
-						if (settings.get_online())
+						if (settings.get_online_search())
 							webapi.georeverse_online(coord[0], coord[1], longtouch_id);
 						else
 							webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
@@ -491,7 +491,7 @@
 			poiEnd.show(ol.proj.fromLonLat([lng2, lat2]));
 			nav.set_data({mode: 'calculating_simulating_call_API'});
 			ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
-			webapi.route(settings.get_online(), lng1, lat1, lng2, lat2);
+			webapi.route(settings.get_online_route(), lng1, lat1, lng2, lat2);
 		}
 		function route_cancel(simulate) {
 			mapUI.clear_layer('route');
@@ -557,7 +557,7 @@
 		function set_search_poi(POI, icon) {
 			mapUI.clear_layer('poi');
 			if (mapUI.get_map_zoom() >= 7) {
-				if (settings.get_online())
+				if (settings.get_online_search())
 					webapi.POIsOnline(POI, icon);
 				else
 					webapi.POIsOffline(POI, icon);
