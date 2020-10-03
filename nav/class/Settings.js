@@ -52,7 +52,7 @@ Settings.prototype.set_online_map = function(value) {
 	
 	if (this.online_map) {
 		map.addLayer(map_layer_online);
-		$('#mapCredits').text("© OpenStreetMap contributors © maptiler");
+		$('#mapCredits').text("© OpenStreetMap contributors © CARTO");
 	}
 	else {
 		olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');
