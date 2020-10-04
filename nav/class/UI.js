@@ -285,11 +285,8 @@ UI.prototype.update_lower_panel = function(duration, distance, percentage) {
 	$('#confirmEndHour').html(txt_ETA);
 }
 
-UI.prototype.update_nav_panel = function(type, name, instruction, distance) {
-	if (name != '' && name != '-')
-		$('#stepTxt').html(name);
-	else
-		$('#stepTxt').html(instruction);
+UI.prototype.update_nav_panel = function(type, name, distance) {
+	$('#stepTxt').html(name);
 	$('#stepImg').html('<img src="img/steps/' + type + '.svg">');
 	$('#distance').html(maths.dist2human(distance, settings.get_unit()));
 }

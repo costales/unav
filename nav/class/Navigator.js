@@ -272,10 +272,22 @@ Navigator.prototype.parse_type = function(step) {
 	}
 }
 
-Navigator.prototype.parse_name = function(type, name) {
+Navigator.prototype.parse_name = function(type) {
 	switch(type) {
-		case 10:
-			return t("Your destination is near");
+		case 0:
+			return t("Turn left");
+		case 1:
+			return t("Turn right");
+		case 2:
+			return t("Make a sharp left");
+		case 3:
+			return t("Make a sharp right");
+		case 4:
+			return t("Bear left");
+		case 5:
+			return t("Bear right");
+		case 6:
+			return t("Continue on the road");
 		case 70:
 			return t("Enter the roundabout");
 		case 71:
@@ -286,15 +298,22 @@ Navigator.prototype.parse_name = function(type, name) {
 			return t("Enter the roundabout and take 3th exit");
 		case 74:
 			return t("Enter the roundabout and take 4th exit");
+		case 8:
+			return t("Exit the roundabout");
+		case 9:
+			return t("Make a U-turn");
+		case 10:
+			return t("Your destination is near");
+		case 11:
+			return t("Depart");
+		case 12:
+			return t("Keep left");
+		case 13:
+			return t("Keep right");
 		case 99:
 			return t("Follow the route line");
-		case 8:
-			if (name)
-				return t("Exit at") + " " + name;
-			else
-				return t("Exit the roundabout");
 		default:
-			return name;
+			return "";
 	}
 }
 
@@ -328,14 +347,14 @@ Navigator.prototype.parse_data = function(data) {
 		this.route.points.push(points_aux);
 		this.route.turf.push(turf.lineString(points_aux));
 		var type_parsed = this.parse_type(data.trip.legs[0].maneuvers[i]);
-		var name = "";
-		if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names'))
-			name = data.trip.legs[0].maneuvers[i].street_names[0];
 		var name_parsed = this.parse_name(type_parsed, name);
+		if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names')) {
+			//TRANSLATORS: Translate only the At at this sentence: <Turn right>. At <5th Street>
+			name_parsed = name_parsed + ". " + t("At") + " " + data.trip.legs[0].maneuvers[i].street_names[0];
+		}
 		this.route.steps.push({
 			type: type_parsed,
 			name: name_parsed,
-			instruction: data.trip.legs[0].maneuvers[i].instruction,
 			distance: parseInt((data.trip.legs[0].maneuvers[i].length).toString().replace('.', '')),
 			distance_step: parseInt((data.trip.legs[0].maneuvers[i].length).toString().replace('.', '')),
 			duration_step: parseInt(data.trip.legs[0].maneuvers[i].time),

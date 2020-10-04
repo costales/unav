@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-03 20:01+0200\n"
+"POT-Creation-Date: 2020-10-04 12:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: build/all/app/install/qml/About.qml:26
-#: build/all/app/install/qml/Settings.qml:44 qml/About.qml:26
-#: qml/Settings.qml:44
+#: build/all/app/install/qml/Settings.qml:49 qml/About.qml:26
+#: qml/Settings.qml:49
 msgid "About"
 msgstr ""
 
@@ -138,11 +138,11 @@ msgstr ""
 
 #: build/all/app/install/qml/Coordinate.qml:147
 #: build/all/app/install/qml/Coordinate.qml:375
-#: build/all/app/install/qml/Settings.qml:321
-#: build/all/app/install/qml/Settings.qml:357
-#: build/all/app/install/qml/Voices.qml:238 nav/class/UI.js:182
-#: qml/Coordinate.qml:147 qml/Coordinate.qml:375 qml/Settings.qml:321
-#: qml/Settings.qml:357 qml/Voices.qml:238
+#: build/all/app/install/qml/Settings.qml:326
+#: build/all/app/install/qml/Settings.qml:362
+#: build/all/app/install/qml/Voices.qml:238 nav/class/UI.js:173
+#: qml/Coordinate.qml:147 qml/Coordinate.qml:375 qml/Settings.qml:326
+#: qml/Settings.qml:362 qml/Voices.qml:238
 msgid "Close"
 msgstr ""
 
@@ -168,7 +168,7 @@ msgid "Favorite Name"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:309 nav/class/UI.js:180
+#: build/all/app/install/qml/Main.qml:309 nav/class/UI.js:171
 #: qml/Favorites.qml:192 qml/Main.qml:309
 msgid "Cancel"
 msgstr ""
@@ -211,105 +211,105 @@ msgstr ""
 msgid "Available only online"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:37
-#: build/all/app/install/qml/Settings.qml:250 qml/Search.qml:37
-#: qml/Settings.qml:250
+#: build/all/app/install/qml/Search.qml:42
+#: build/all/app/install/qml/Settings.qml:255 qml/Search.qml:42
+#: qml/Settings.qml:255
 msgid "Search"
 msgstr ""
 
 #. TRANSLATORS: These are section headers. Please keep their translations short and not
 #. longer than their original string lengths.
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:62 qml/Search.qml:62
 msgid "Places"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:62 qml/Search.qml:62
 msgid "POIs"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:62 qml/Search.qml:62
 msgid "Favorites"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:62 qml/Search.qml:62
 msgid "Simulate"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:62 qml/Search.qml:62
 msgid "Track"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:62 qml/Search.qml:62
 msgid "Coordinate"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:35 qml/Settings.qml:35
+#: build/all/app/install/qml/Settings.qml:40 qml/Settings.qml:40
 msgid "Settings"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:56 qml/Settings.qml:56
+#: build/all/app/install/qml/Settings.qml:61 qml/Settings.qml:61
 msgid "Kilometres"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:57 qml/Settings.qml:57
+#: build/all/app/install/qml/Settings.qml:62 qml/Settings.qml:62
 msgid "Miles"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:79
-#: build/all/app/install/qml/Settings.qml:230 qml/Settings.qml:79
-#: qml/Settings.qml:230
+#: build/all/app/install/qml/Settings.qml:84
+#: build/all/app/install/qml/Settings.qml:235 qml/Settings.qml:84
+#: qml/Settings.qml:235
 msgid "Map"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:87 qml/Settings.qml:87
+#: build/all/app/install/qml/Settings.qml:92 qml/Settings.qml:92
 msgid "Units"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:118 qml/Settings.qml:118
+#: build/all/app/install/qml/Settings.qml:123 qml/Settings.qml:123
 msgid "Navigation"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:127 qml/Settings.qml:127
+#: build/all/app/install/qml/Settings.qml:132 qml/Settings.qml:132
 msgid "Alert speed cameras"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:148 qml/Settings.qml:148
+#: build/all/app/install/qml/Settings.qml:153 qml/Settings.qml:153
 msgid "View optimized for car"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:161 qml/Settings.qml:161
+#: build/all/app/install/qml/Settings.qml:166 qml/Settings.qml:166
 msgid "Will rotate the marker and not the map"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:182 qml/Settings.qml:182
+#: build/all/app/install/qml/Settings.qml:187 qml/Settings.qml:187
 msgid "Use roads with tolls"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:199 qml/Settings.qml:199
+#: build/all/app/install/qml/Settings.qml:204 qml/Settings.qml:204
 msgid "Speak instructions"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:215 qml/Settings.qml:215
+#: build/all/app/install/qml/Settings.qml:220 qml/Settings.qml:220
 msgid "Download custom voices"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:222 qml/Settings.qml:222
+#: build/all/app/install/qml/Settings.qml:227 qml/Settings.qml:227
 msgid "Online Services"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:270 qml/Settings.qml:270
+#: build/all/app/install/qml/Settings.qml:275 qml/Settings.qml:275
 msgid "Route"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:291 qml/Settings.qml:291
+#: build/all/app/install/qml/Settings.qml:296 qml/Settings.qml:296
 msgid "Instructions for offline mode"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:313 qml/Settings.qml:313
+#: build/all/app/install/qml/Settings.qml:318 qml/Settings.qml:318
 msgid "Law & speed camera alerts"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:314 qml/Settings.qml:314
+#: build/all/app/install/qml/Settings.qml:319 qml/Settings.qml:319
 msgid ""
 "uNav is getting the speed cameras from the OpenStreetMap database and it "
 "will beep and show the speed limit as marker.\n"
@@ -317,33 +317,33 @@ msgid ""
 "In a few countries speed camera alerts are illegal!"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:316 qml/Settings.qml:316
+#: build/all/app/install/qml/Settings.qml:321 qml/Settings.qml:321
 msgid "Check law in countries"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:331 qml/Settings.qml:331
+#: build/all/app/install/qml/Settings.qml:336 qml/Settings.qml:336
 msgid "How to use uNav offline"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:337 qml/Settings.qml:337
+#: build/all/app/install/qml/Settings.qml:342 qml/Settings.qml:342
 msgid "<b>Step 1</b> Install"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:337 qml/Settings.qml:337
+#: build/all/app/install/qml/Settings.qml:342 qml/Settings.qml:342
 msgid ""
 "In its wizard, set profile to <i>Default</i>, disable <i>Automatic "
 "activation</i> and download a map."
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:345 qml/Settings.qml:345
+#: build/all/app/install/qml/Settings.qml:350 qml/Settings.qml:350
 msgid "<b>Step 2</b> Install"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:345 qml/Settings.qml:345
+#: build/all/app/install/qml/Settings.qml:350 qml/Settings.qml:350
 msgid "Set <i>Prevent app suspension</i> for OSM Scout Server."
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:353 qml/Settings.qml:353
+#: build/all/app/install/qml/Settings.qml:358 qml/Settings.qml:358
 msgid "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
 msgstr ""
 
@@ -413,54 +413,103 @@ msgid "Now"
 msgstr ""
 
 #: nav/class/Navigator.js:278
-msgid "Your destination is near"
+msgid "Turn left"
 msgstr ""
 
 #: nav/class/Navigator.js:280
-msgid "Enter the roundabout"
+msgid "Turn right"
 msgstr ""
 
 #: nav/class/Navigator.js:282
-msgid "Enter the roundabout and take 1st exit"
+msgid "Make a sharp left"
 msgstr ""
 
 #: nav/class/Navigator.js:284
-msgid "Enter the roundabout and take 2nd exit"
+msgid "Make a sharp right"
 msgstr ""
 
 #: nav/class/Navigator.js:286
-msgid "Enter the roundabout and take 3th exit"
+msgid "Bear left"
 msgstr ""
 
 #: nav/class/Navigator.js:288
-msgid "Enter the roundabout and take 4th exit"
+msgid "Bear right"
 msgstr ""
 
 #: nav/class/Navigator.js:290
-msgid "Follow the route line"
+msgid "Continue on the road"
 msgstr ""
 
-#: nav/class/Navigator.js:293
-msgid "Exit at"
+#: nav/class/Navigator.js:292
+msgid "Enter the roundabout"
 msgstr ""
 
-#: nav/class/Navigator.js:295
+#: nav/class/Navigator.js:294
+msgid "Enter the roundabout and take 1st exit"
+msgstr ""
+
+#: nav/class/Navigator.js:296
+msgid "Enter the roundabout and take 2nd exit"
+msgstr ""
+
+#: nav/class/Navigator.js:298
+msgid "Enter the roundabout and take 3th exit"
+msgstr ""
+
+#: nav/class/Navigator.js:300
+msgid "Enter the roundabout and take 4th exit"
+msgstr ""
+
+#: nav/class/Navigator.js:302
 msgid "Exit the roundabout"
 msgstr ""
 
-#: nav/class/UI.js:179 nav/index.html.strings:1
+#: nav/class/Navigator.js:304
+msgid "Make a U-turn"
+msgstr ""
+
+#: nav/class/Navigator.js:306
+msgid "Your destination is near"
+msgstr ""
+
+#: nav/class/Navigator.js:308
+msgid "Depart"
+msgstr ""
+
+#: nav/class/Navigator.js:310
+msgid "Keep left"
+msgstr ""
+
+#: nav/class/Navigator.js:312
+msgid "Keep right"
+msgstr ""
+
+#: nav/class/Navigator.js:314
+msgid "Follow the route line"
+msgstr ""
+
+#. TRANSLATORS: Translate only the At at this sentence: <Turn right>. At <5th Street>
+#: nav/class/Navigator.js:353
+msgid "At"
+msgstr ""
+
+#: nav/class/UI.js:170 nav/index.html.strings:1
 msgid "Center"
 msgstr ""
 
-#: nav/class/UI.js:181
+#: nav/class/UI.js:172
 msgid "Start"
 msgstr ""
 
-#: nav/class/UI.js:238
+#: nav/class/UI.js:206 nav/class/UI.js:219
+msgid "Try other route mode"
+msgstr ""
+
+#: nav/class/UI.js:257
 msgid "Long click on origin"
 msgstr ""
 
-#: nav/class/UI.js:243
+#: nav/class/UI.js:262
 msgid "Long click on destination"
 msgstr ""
 
@@ -476,11 +525,11 @@ msgstr ""
 msgid "There was an error"
 msgstr ""
 
-#: nav/class/WebAPI.js:433
+#: nav/class/WebAPI.js:439
 msgid "No speed cameras"
 msgstr ""
 
-#: nav/class/WebAPI.js:438
+#: nav/class/WebAPI.js:444
 msgid "Error getting speed cameras"
 msgstr ""
 
@@ -492,32 +541,32 @@ msgstr ""
 msgid "GPS is ready"
 msgstr ""
 
-#: nav/index.html:275 nav/index.html:276 nav/index.html:281 nav/index.html:282
-#: nav/index.html:479 nav/index.html:488
-msgid "Calculating route"
-msgstr ""
-
-#: nav/index.html:297
+#: nav/index.html:258 nav/index.html:305
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:334
+#: nav/index.html:283 nav/index.html:284 nav/index.html:289 nav/index.html:290
+#: nav/index.html:486 nav/index.html:495
+msgid "Calculating route"
+msgstr ""
+
+#: nav/index.html:341
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:348
+#: nav/index.html:355
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:375
+#: nav/index.html:382
 msgid "You have arrived"
 msgstr ""
 
-#: nav/index.html:498
+#: nav/index.html:505
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:555
+#: nav/index.html:562
 msgid "Use more zoom for POIs"
 msgstr ""
 

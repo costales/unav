@@ -322,13 +322,13 @@
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 				case 'route_confirm':
 					var nav_navigation= nav.get_data_navigation();
-					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
+					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
 					break;
 				case 'route_driving':
 					nav.update();
 					var nav_navigation = nav.get_data_navigation();
-					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
+					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_navigation.percentage);
 					if (settings.get_speak())
 						ui.speak(nav_navigation.steps[nav_navigation.ind].speaked, nav_navigation.steps[nav_navigation.ind+1].type);
@@ -369,7 +369,7 @@
 					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 					var nav_navigation = nav.get_data_navigation();
-					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
+					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
 					nav.set_data({mode: 'route_driving'});
 					break;
