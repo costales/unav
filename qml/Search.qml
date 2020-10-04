@@ -29,7 +29,7 @@ Page {
 
     Component.onDestruction: {
         mainPageStack.hideSideBar();
-        mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
+        mainPageStack.executeJavaScript("ui.topPanelsMargin(" + mainPageStack.defaultHeaderHeight + ")");
     }
 
     header: UNavHeader {

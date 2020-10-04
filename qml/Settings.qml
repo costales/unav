@@ -25,15 +25,9 @@ import "components"
 Page {
     id: settingsPage
 
-    Component.onCompleted: {
-        mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
-    }
-
     Component.onDestruction: {
-        // Hide 2nd column when returning to the map to avoid an empty white column
         if (mainPageStack.columns === 1)
             mainPageStack.hideSideBar();
-        mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
     }
 
     header: UNavHeader {
