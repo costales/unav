@@ -106,7 +106,6 @@ MainView {
 			}
 		]
 
-		property int defaultHeaderHeight: 0
 		property bool onLoadingExecuted: false
 		property string favLng: ""
 		property string favLat: ""
@@ -240,8 +239,7 @@ MainView {
 							mainPageStack.executeJavaScript("settings.set_speak_voice(\"" + navApp.settings.speakVoice + "\")");
 							mainPageStack.executeJavaScript("mapUI.set_map_center(" + navApp.settings.lastLng + "," + navApp.settings.lastLat + ")");
 							mainPageStack.executeJavaScript("mapUI.set_map_zoom(" + navApp.settings.lastZoom + ")");
-							mainPageStack.defaultHeaderHeight = header.height;
-							mainPageStack.executeJavaScript("ui.topPanelsMargin(" + mainPageStack.defaultHeaderHeight + ")");
+							mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
 							// Catching urls
 							var coord = QmlJs.get_url_coord(Qt.application.arguments[2]);
 							if (coord['lat'] !== null && coord['lng'] !== null) {

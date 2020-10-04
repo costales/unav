@@ -23,13 +23,8 @@ import "components"
 Page {
     id: searchPage
 
-    Component.onCompleted: {
-        mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
-    }
-
     Component.onDestruction: {
         mainPageStack.hideSideBar();
-        mainPageStack.executeJavaScript("ui.topPanelsMargin(" + mainPageStack.defaultHeaderHeight + ")");
     }
 
     header: UNavHeader {
