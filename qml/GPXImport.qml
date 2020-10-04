@@ -58,8 +58,7 @@ Page {
 				mainPageStack.executeJavaScript("import_gpx('" + filePath + "')");
 
 			if (mainPageStack.columns === 1) {
-				mainPageStack.hideSideBar();
-				mainPageStack.removePages(mainPageStack.primaryPage);
+				mainPageStack.removePages(searchPage);
 			}
 		 }
 	}

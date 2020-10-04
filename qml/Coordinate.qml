@@ -124,7 +124,7 @@ Item {
                         var aux_lng = lng1.text;
                         if (!isNaN(aux_lat) && aux_lat.toString().indexOf('.') != -1 && !isNaN(aux_lng) && aux_lng.toString().indexOf('.') != -1 && aux_lat >= -90 && aux_lat <= 90 && aux_lng >= -180 && aux_lng <= 180) { // It's a float
                             if (mainPageStack.columns === 1)
-                                mainPageStack.removePages(mainPageStack.primaryPage)
+                                mainPageStack.removePages(searchPage);
                             mainPageStack.executeJavaScript("import_marker(" + aux_lng + "," + aux_lat + ")");
                         }
                         else {
@@ -348,7 +348,7 @@ Item {
 
                             if (aux_lat >= -90 && aux_lat <= 90 && aux_lng >= -180 && aux_lng <= 180) {
                                 if (mainPageStack.columns === 1)
-                                    mainPageStack.removePages(mainPageStack.primaryPage)
+                                    mainPageStack.removePages(searchPage);
                                 mainPageStack.executeJavaScript("import_marker(" + aux_lng + "," + aux_lat + ")");
                             }
                             else {

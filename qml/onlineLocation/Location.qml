@@ -191,7 +191,7 @@ Item {
             height: resultsDelegateLayout.height + divider.height
             onClicked: {
                 if (mainPageStack.columns === 1)
-                    mainPageStack.removePages(mainPageStack.primaryPage)
+                    mainPageStack.removePages(searchPage);
                 mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.name + "\", \"" + model.boundingbox + "\")");
             }
 

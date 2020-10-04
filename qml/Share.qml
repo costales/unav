@@ -58,7 +58,7 @@ Page {
         onCancelPressed: {
             // Do not pop the share page when in a 2-column layout as it will leave an empty second column
             if (mainPageStack.columns === 1) {
-                mainPageStack.removePages(picker)
+                mainPageStack.removePages(picker);
             }
         }
 
@@ -70,7 +70,7 @@ Page {
             // Do not pop the share page when in a 2-column layout as it will leave
             // an empty second column
             if (mainPageStack.columns === 1) {
-                mainPageStack.removePages(picker)
+                mainPageStack.removePages(picker);
             }
         }
     }
