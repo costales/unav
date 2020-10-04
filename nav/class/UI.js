@@ -185,7 +185,7 @@ UI.prototype.show_panels = function(panel) {
 	$("#confirmEndTime").hide();
 	$("#confirmEndDistance").hide();
 	$("#confirmEndHour").hide();
-	$("#bottomMessage").hide();
+	$("#bottomConfirmMessage").hide();
 	this.set_confirm_btns(settings.get_route_mode());
 	switch(panel) {
 		case 'navigate':
@@ -203,8 +203,8 @@ UI.prototype.show_panels = function(panel) {
 		case 'confirm_error':
 			$("#panelConfirmRoute").show();
 			$("#btnCancel").show();
-			$("#bottomMessage").html(t("Try other route mode"));
-			$("#bottomMessage").show();
+			$("#bottomConfirmMessage").html(t("Try other route mode"));
+			$("#bottomConfirmMessage").show();
 			break;
 		case 'simulate':
 			$("#panelConfirmRoute").show();
@@ -216,8 +216,8 @@ UI.prototype.show_panels = function(panel) {
 		case 'simulate_error':
 			$("#panelConfirmRoute").show();
 			$("#btnCancelSimulate").show();
-			$("#bottomMessage").html(t("Try other route mode"));
-			$("#bottomMessage").show();
+			$("#bottomConfirmMessage").html(t("Try other route mode"));
+			$("#bottomConfirmMessage").show();
 			break;
 	}
 }

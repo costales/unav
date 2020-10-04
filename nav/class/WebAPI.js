@@ -408,7 +408,7 @@ WebAPI.prototype.set_radars = function() {
 	// Search radars POI http://wiki.openstreetmap.org/wiki/Overpass_API
 	var poly_box = '(poly:\"' + routeBoundaryPolygon_1_aux + routeBoundaryPolygon_2_aux + '\");out;'
 	$.ajax({
-		url: 'https://overpass-api.de/api/interpreter?data=node[highway=speed_camera]' + poly_box,
+		url: 'https://lz4.overpass-api.de/api/interpreter?data=node[highway=speed_camera]' + poly_box,
 		timeout: 90000,
 		dataType: 'xml',
 		success: this.OK_callback_set_radars.bind(this),

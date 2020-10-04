@@ -186,7 +186,7 @@ body{
   right: 20px;
   text-align: right;
 }
-#bottomMessage {
+#bottomConfirmMessage {
   position: absolute;
   bottom: 5px;
   width: 100%;
