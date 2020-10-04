@@ -247,7 +247,7 @@ WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
 				var routing_mode = ',"costing":"auto","costing_options":{"auto":{"use_tolls":0}}';
 			break;
 		case 'bike':
-			var routing_mode = ',"costing2":"bicycle"';
+			var routing_mode = ',"costing":"bicycle"';
 			break;
 		case 'walk':
 			var routing_mode = ',"costing":"pedestrian"';
