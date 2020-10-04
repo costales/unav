@@ -6,7 +6,6 @@ var groups = [
 		elements: [
 			{label: "Airport", translators: i18n.tr("Airport"), tag_online: "aeroway=aerodrome", tag_offline: "aeroway_aerodrome", enabled_offline: "no"},
 			{label: "Bicycle Shop", translators: i18n.tr("Bicycle Shop"), tag_online: "shop=bicycle", tag_offline: "shop_bicycle", enabled_offline: "yes"},
-			{label: "Bus Station", translators: i18n.tr("Bus Station"), tag_online: "amenity=bus_station", tag_offline: "amenity_bus_station", enabled_offline: "no"},
 			{label: "Car Rental", translators: i18n.tr("Car Rental"), tag_online: "amenity=car_rental", tag_offline: "amenity_car_rental", enabled_offline: "yes"},
 			{label: "Car Repair", translators: i18n.tr("Car Repair"), tag_online: "shop=car_repair", tag_offline: "shop_car_repair", enabled_offline: "yes"},
 			{label: "Car Wash", translators: i18n.tr("Car Wash"), tag_online: "amenity=car_wash", tag_offline: "amenity_car_wash", enabled_offline: "yes"},
@@ -14,8 +13,7 @@ var groups = [
 			{label: "Gas Station", translators: i18n.tr("Gas Station"), tag_online: "amenity=fuel", tag_offline: "amenity_fuel", enabled_offline: "yes"},
 			{label: "Parking", translators: i18n.tr("Parking"), tag_online: "amenity=parking", tag_offline: "amenity_parking", enabled_offline: "yes"},
 			{label: "Subway Entrance", translators: i18n.tr("Subway Entrance"), tag_online: "railway=subway_entrance", tag_offline: "railway_subway_entrance", enabled_offline: "no"},
-			{label: "Taxi", translators: i18n.tr("Taxi"), tag_online: "amenity=taxi", tag_offline: "amenity_taxi", enabled_offline: "yes"},
-			{label: "Train Station", translators: i18n.tr("Train Station"), tag_online: "building=train_station", tag_offline: "building_train_station", enabled_offline: "no"}
+			{label: "Taxi", translators: i18n.tr("Taxi"), tag_online: "amenity=taxi", tag_offline: "amenity_taxi", enabled_offline: "yes"}
 		]
 	},
 	{
@@ -56,7 +54,6 @@ var groups = [
 			{label: "Bank", translators: i18n.tr("Bank"), tag_online: "amenity=bank", tag_offline: "amenity_bank", enabled_offline: "yes"},
 			{label: "Bureau de Change", translators: i18n.tr("Bureau de Change"), tag_online: "amenity=bureau_de_change", tag_offline: "amenity_bureau_de_change", enabled_offline: "yes"},
 			{label: "Post Box", translators: i18n.tr("Post Box"), tag_online: "amenity=post_box", tag_offline: "amenity_post_box", enabled_offline: "no"},
-			{label: "Post Office", translators: i18n.tr("Post Office"), tag_online: "amenity=post_office", tag_offline: "amenity_post_office", enabled_offline: "yes"},
 			{label: "Toilet", translators: i18n.tr("Toilet"), tag_online: "amenity=toilets", tag_offline: "amenity_toilets", enabled_offline: "yes"}
 		]
 	},
@@ -80,16 +77,8 @@ var groups = [
 	{
 		label: i18n.tr("Culture"),
 		elements: [
-			{label: "Arts Centre", translators: i18n.tr("Arts Centre"), tag_online: "amenity=arts_centre", tag_offline: "amenity_arts_centre", enabled_offline: "no"},
-			{label: "Library", translators: i18n.tr("Library"), tag_online: "amenity=library", tag_offline: "amenity_library", enabled_offline: "no"},
 			{label: "Museum", translators: i18n.tr("Museum"), tag_online: "tourism=museum", tag_offline: "tourism_museum", enabled_offline: "no"},
-			{label: "Theatre", translators: i18n.tr("Theatre"), tag_online: "amenity=theatre", tag_offline: "amenity_theatre", enabled_offline: "yes"}
-		]
-	},
-	{
-		label: i18n.tr("Entertainment"),
-		elements: [
-			{label: "Casino", translators: i18n.tr("Casino"), tag_online: "amenity=casino", tag_offline: "amenity_casino", enabled_offline: "no"},
+			{label: "Theatre", translators: i18n.tr("Theatre"), tag_online: "amenity=theatre", tag_offline: "amenity_theatre", enabled_offline: "yes"},
 			{label: "Cinema", translators: i18n.tr("Cinema"), tag_online: "amenity=cinema", tag_offline: "amenity_cinema", enabled_offline: "yes"}
 		]
 	},
@@ -104,7 +93,6 @@ var groups = [
 		label: i18n.tr("Health"),
 		elements: [
 			{label: "Dentist", translators: i18n.tr("Dentist"), tag_online: "amenity=dentist", tag_offline: "amenity_dentist", enabled_offline: "yes"},
-			{label: "Doctor", translators: i18n.tr("Doctor"), tag_online: "amenity=doctors", tag_offline: "amenity_doctors", enabled_offline: "yes"},
 			{label: "Hospital", translators: i18n.tr("Hospital"), tag_online: "amenity=hospital", tag_offline: "amenity_hospital", enabled_offline: "yes"},
 			{label: "Pharmacy", translators: i18n.tr("Pharmacy"), tag_online: "amenity=pharmacy", tag_offline: "amenity_pharmacy", enabled_offline: "yes"},
 			{label: "Veterinary", translators: i18n.tr("Veterinary"), tag_online: "amenity=veterinary", tag_offline: "amenity_veterinary", enabled_offline: "no"}
@@ -126,10 +114,7 @@ var groups = [
 	{
 		label: i18n.tr("Sport"),
 		elements: [
-			{label: "Gym", translators: i18n.tr("Gym"), tag_online: "leisure=fitness_centre", tag_offline: "amenity_gym", enabled_offline: "no"},
-			{label: "Sports Centre", translators: i18n.tr("Sports Centre"), tag_online: "leisure=sports_centre", tag_offline: "leisure_sports_centre", enabled_offline: "no"},
-			{label: "Stadium", translators: i18n.tr("Stadium"), tag_online: "leisure=stadium", tag_offline: "building_stadium", enabled_offline: "no"},
-			{label: "Swimming Pool", translators: i18n.tr("Swimming Pool"), tag_online: "leisure=swimming_pool", tag_offline: "leisure_swimming_pool", enabled_offline: "no"}
+			{label: "Stadium", translators: i18n.tr("Stadium"), tag_online: "leisure=stadium", tag_offline: "building_stadium", enabled_offline: "no"}
 		]
 	}
 ];
