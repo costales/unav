@@ -137,7 +137,7 @@ body{
   height: 32px;
 }
 
-#panelsNav, #panelConfirmRoute, #panelSimulateRoute {
+#panelsNav, #panelConfirmRoute {
   display: none;
   position: fixed;
   width: 100%;
@@ -149,7 +149,7 @@ body{
   font-family: Ubuntu;
   user-select: none;
 }
-#topPanelNav, #topPanelConfirm, #topPanelSimulate {
+#topPanelNav, #topPanelConfirm {
   position: absolute;
   top: 0px;
   background: white;
@@ -157,7 +157,7 @@ body{
   height: 92px;
   box-shadow: 0px -2px 2px 0px rgba(184,184,184,1);
 }
-#bottomPanelNav, #bottomPanelConfirm, #bottomPanelSimulate {
+#bottomPanelNav, #bottomPanelConfirm {
   position: absolute;
   bottom: 0px;
   background: #F7F7F7;
@@ -165,26 +165,34 @@ body{
   height: 28px;
 }
 
-#endTime, #confirmEndTime, #simulateEndTime {
+#endTime, #confirmEndTime {
   position: absolute;
   bottom: 5px;
   width: 100%;
   left: 10px;
   text-align: center;
 }
-#endDistance, #confirmEndDistance, #simulateEndDistance {
+#endDistance, #confirmEndDistance {
   position: absolute;
   bottom: 5px;
   width: 100%;
   left: 20px;
   text-align: left;
 }
-#endHour, #confirmEndHour, #simulateEndHour {
+#endHour, #confirmEndHour {
   position: absolute;
   bottom: 5px;
   width: 100%;
   right: 20px;
   text-align: right;
+}
+#bottomMessage {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-align: center;
 }
 #stepTxt {
   position: absolute;
@@ -234,30 +242,30 @@ body{
   position: absolute;
 }
 
-#panelConfirmRoute, #panelSimulateRoute {
+#panelConfirmRoute {
   height: 120px;
 }
-#topPanelConfirm, #topPanelSimulate {
+#topPanelConfirm {
   height: 100px;
 }
 
-#modeConfirm, #modeSimulate {
+#modeConfirm {
   height: 40%;
   width: 100%;
 }
-#btnsConfirm, #btnsSimulate {
+#btnsConfirm {
   height: 50%;
   width: 100%;
 }
-#modeConfirm img, #modeSimulate img {
+#modeConfirm img {
   width: 100px;
   height: 32px;
   margin-top: 9px;
 }
-#btnModeCarConfirm, #btnModeCarSimulate {
+#btnModeCarConfirm {
   border-radius: 45px 0px 0px 45px;
 }
-#btnModeWalkConfirm, #btnModeWalkSimulate {
+#btnModeWalkConfirm {
   border-radius: 0px 45px 45px 0px;
 }
 

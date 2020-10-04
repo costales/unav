@@ -250,6 +250,14 @@
 					nav.set_data({mode: 'exploring'});
 					ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgBGColor: 'success', msgText: t("GPS is ready"), iconsShow: 'no'});
 					break;
+				case 'calculating_simulating_error':
+					mapUI.clear_layer('route');
+					mapUI.clear_layer('radar');		
+					poiStart.hide();
+					ui.show_panels('simulate_error');
+					ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
+					nav.set_data({mode: 'exploring_after_simulating_error'});
+					break;
 				case 'calculating_simulating_call_API':
 				case 'simulating':
 					break;
@@ -265,7 +273,7 @@
 					mapUI.show_route(coords_aux, 'route', true);
 					nav.set_data({mode: 'simulating'});
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-					ui.set_confirm_btns(settings.get_route_mode());
+					ui.update_lower_panel(nav.get_data_navigation().duration, nav.get_data_navigation().distance, 0);
 					break;
 				case 'GPS_waiting_for_calculating':
 					if (mapUI.get_map_zoom() < ui.ZOOM-3)
@@ -290,12 +298,12 @@
 				case 'calculating_waiting_result':
 					break;
 				case 'calculating_error':
-					ui.show_panels('none');
+					ui.show_panels('confirm_error');
 					mapUI.clear_layer('route');
 					mapUI.clear_layer('radar');		
 					poiStart.hide();
 					ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
-					nav.set_data({mode: 'exploring'});
+					nav.set_data({mode: 'exploring_after_calculating_error'});
 					break;
 				case 'drawing':
 					ui.set_center_pos(false); // Needs for map.fit
@@ -314,7 +322,6 @@
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 				case 'route_confirm':
 					var nav_navigation= nav.get_data_navigation();
-					ui.set_confirm_btns(settings.get_route_mode());
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind+1].instruction, nav_navigation.steps[nav_navigation.ind].distance);
 					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
 					break;
@@ -512,10 +519,10 @@
 		function mode_navigation(value) {
 			settings.set_route_mode(value);
 			ui.set_confirm_btns(value);
-			if (nav.get_data().mode != "simulating")
-				BtnGo(nav.get_data().lng_end, nav.get_data().lat_end);
-			else
+			if (nav.get_data().mode.includes("simulating"))
 				BtnSimulate(ui.get_picked_coords().lng1, ui.get_picked_coords().lat1, ui.get_picked_coords().lng2, ui.get_picked_coords().lat2);
+			else
+				BtnGo(nav.get_data().lng_end, nav.get_data().lat_end);
 			window.location = 'http://routemode/' + value;
 		}
 
@@ -658,6 +665,7 @@
 				<img id="btnModeWalkConfirm" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
 			</div>
 			<div id="btnsConfirm">
+				<button id="btnCancelSimulate" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(true)'>Close</button>
 				<button id="btnCancel" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(false)'>Cancel</button>
 				<button id="btnStart" data-role='button' class='btns2_mode_route positive' onClick='route_start()'>Start</button>
 			</div>
@@ -666,24 +674,7 @@
 			<div id="confirmEndTime"></div>
 			<div id="confirmEndDistance"></div>
 			<div id="confirmEndHour"></div>
-		</div>
-	</div>
-	<!-- Simulate route panel -->
-	<div id="panelSimulateRoute">
-		<div id="topPanelSimulate">
-			<div id="modeSimulate">
-				<img id="btnModeCarSimulate" src="img/mode/car.svg" onClick='mode_navigation("car")'>
-				<img id="btnModeBikeSimulate" src="img/mode/bike.svg" onClick='mode_navigation("bike")'>
-				<img id="btnModeWalkSimulate" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
-			</div>
-			<div id="btnsSimulate">
-				<button id="btnCancelSimulate" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(true)'>Close</button>
-			</div>
-		</div>
-		<div id="bottomPanelSimulate">
-			<div id="simulateEndTime"></div>
-			<div id="simulateEndDistance"></div>
-			<div id="simulateEndHour"></div>
+			<div id="bottomMessage"></div>
 		</div>
 	</div>
 	<!-- Recenter route panel -->

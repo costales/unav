@@ -155,25 +155,16 @@ UI.prototype.set_confirm_btns = function(mode) {
 			$("#btnModeCarConfirm").css("background-color", "#335280");
 			$("#btnModeBikeConfirm").css("background-color", "#CDCDCD");
 			$("#btnModeWalkConfirm").css("background-color", "#CDCDCD");
-			$("#btnModeCarSimulate").css("background-color", "#335280");
-			$("#btnModeBikeSimulate").css("background-color", "#CDCDCD");
-			$("#btnModeWalkSimulate").css("background-color", "#CDCDCD");
 			break;
 		case 'bike':
 			$("#btnModeCarConfirm").css("background-color", "#CDCDCD");
 			$("#btnModeBikeConfirm").css("background-color", "#335280");
 			$("#btnModeWalkConfirm").css("background-color", "#CDCDCD");
-			$("#btnModeCarSimulate").css("background-color", "#CDCDCD");
-			$("#btnModeBikeSimulate").css("background-color", "#335280");
-			$("#btnModeWalkSimulate").css("background-color", "#CDCDCD");
 			break;
 		case 'walk':
 			$("#btnModeCarConfirm").css("background-color", "#CDCDCD");
 			$("#btnModeBikeConfirm").css("background-color", "#CDCDCD");
 			$("#btnModeWalkConfirm").css("background-color", "#335280");
-			$("#btnModeCarSimulate").css("background-color", "#CDCDCD");
-			$("#btnModeBikeSimulate").css("background-color", "#CDCDCD");
-			$("#btnModeWalkSimulate").css("background-color", "#335280");
 			break;
 		}
 		$("#btnCenter").html(t("Center"));
@@ -188,7 +179,14 @@ UI.prototype.show_panels = function(panel) {
 	$("#panelsNav").hide();
 	$("#panelRecenterRoute").hide();
 	$(".ol-compassctrl.compass").hide();
-
+	$("#btnCancel").hide();
+	$("#btnStart").hide();
+	$("#btnCancelSimulate").hide();
+	$("#confirmEndTime").hide();
+	$("#confirmEndDistance").hide();
+	$("#confirmEndHour").hide();
+	$("#bottomMessage").hide();
+	this.set_confirm_btns(settings.get_route_mode());
 	switch(panel) {
 		case 'navigate':
 			$("#panelsNav").show();
@@ -196,9 +194,30 @@ UI.prototype.show_panels = function(panel) {
 			break;
 		case 'confirm':
 			$("#panelConfirmRoute").show();
+			$("#btnCancel").show();
+			$("#btnStart").show();
+			$("#confirmEndTime").show();
+			$("#confirmEndDistance").show();
+			$("#confirmEndHour").show();
+			break;
+		case 'confirm_error':
+			$("#panelConfirmRoute").show();
+			$("#btnCancel").show();
+			$("#bottomMessage").html(t("Try other route mode"));
+			$("#bottomMessage").show();
 			break;
 		case 'simulate':
-			$("#panelSimulateRoute").show();
+			$("#panelConfirmRoute").show();
+			$("#btnCancelSimulate").show();
+			$("#confirmEndTime").show();
+			$("#confirmEndDistance").show();
+			$("#confirmEndHour").show();
+			break;
+		case 'simulate_error':
+			$("#panelConfirmRoute").show();
+			$("#btnCancelSimulate").show();
+			$("#bottomMessage").html(t("Try other route mode"));
+			$("#bottomMessage").show();
 			break;
 	}
 }
@@ -295,6 +314,9 @@ UI.prototype.speak = function(speak, type) {
 }
 
 UI.prototype.update_pos = function(nav_data) {
+	if (nav_data.lng === null || nav_data.lat === null)
+		return;
+
 	if (!mapUI.layerPos.getVisible())
 		mapUI.layerPos.setVisible(true);
 
@@ -309,6 +331,9 @@ UI.prototype.map_resize = function(percentage) {
 }
 
 UI.prototype.update_map_view = function(nav_data) {
+	if (nav_data.lng === null || nav_data.lat === null)
+		return;
+	
 	// Center map?
 	if (this.get_center_pos())
 		mapUI.set_map_center(nav_data.lng, nav_data.lat);
@@ -323,6 +348,10 @@ UI.prototype.update_map_view = function(nav_data) {
 	switch(nav_data.mode) {
 		case 'exploring':
 		case 'GPS_waiting':
+		case 'calculating_simulating_error':
+		case 'calculating_simulating_call_API':
+		case 'simulating':
+		case 'drawing_simulating':
 		case 'GPS_waiting_for_calculating':
 		case 'calculating_changed_mode':
 		case 'calculating_call_API':
@@ -344,6 +373,7 @@ UI.prototype.update_map_view = function(nav_data) {
 		case 'route_out_returned':
 		case 'route_out_waiting_result':
 		case 'route_out_calculating_error':
+		case 'route_out_drawing':
 			// Rotate
 			if (settings.get_rotate_map() && this.get_center_pos()) {
 				this.map_resize("140%");

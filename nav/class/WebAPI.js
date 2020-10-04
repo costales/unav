@@ -247,7 +247,7 @@ WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
 				var routing_mode = ',"costing":"auto","costing_options":{"auto":{"use_tolls":0}}';
 			break;
 		case 'bike':
-			var routing_mode = ',"costing":"bicycle"';
+			var routing_mode = ',"costing2":"bicycle"';
 			break;
 		case 'walk':
 			var routing_mode = ',"costing":"pedestrian"';
@@ -270,7 +270,10 @@ WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
 WebAPI.prototype.OK_route = function(data) {
 	if (data.trip.status != 0) {
 		if (nav.get_data().mode.startsWith('calculating')) {
-			nav.set_data({mode: 'calculating_error'});
+			if (nav.get_data().mode == 'calculating_simulating_call_API')
+				nav.set_data({mode: 'calculating_simulating_error'});
+			else
+				nav.set_data({mode: 'calculating_error'});
 			set_new_pos();
 		}
 		else {
@@ -284,7 +287,10 @@ WebAPI.prototype.OK_route = function(data) {
 
 WebAPI.prototype.KO_route = function(data) {
 	if (nav.get_data().mode.startsWith('calculating')) {
-		nav.set_data({mode: 'calculating_error'});
+		if (nav.get_data().mode == 'calculating_simulating_call_API')
+			nav.set_data({mode: 'calculating_simulating_error'});
+		else
+			nav.set_data({mode: 'calculating_error'});
 		set_new_pos();
 	}
 	else {
