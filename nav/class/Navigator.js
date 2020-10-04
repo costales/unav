@@ -305,7 +305,7 @@ Navigator.prototype.parse_name = function(type) {
 		case 10:
 			return t("Your destination is near");
 		case 11:
-			return t("Depart");
+			return t("Depart of route");
 		case 12:
 			return t("Keep left");
 		case 13:
