@@ -422,6 +422,7 @@ WebAPI.prototype.OK_callback_set_radars = function(xml) {
 	
 	// For each radar...
 	var radars_aux = [];
+	const DIST_RADAR = 17;
 	$(xml).find('node').each(function() {
 		var xml_lng = parseFloat($(this).attr("lon"));
 		var xml_lat = parseFloat($(this).attr("lat"));
@@ -430,7 +431,21 @@ WebAPI.prototype.OK_callback_set_radars = function(xml) {
 			if ($(this).attr("k") == 'maxspeed')
 				xml_maxspeed = $(this).attr("v");
 		});
-		radars_aux.push({lng: xml_lng, lat: xml_lat, speed: xml_maxspeed});
+
+		// Distance radar to route
+		var line = nav.get_data_line();
+		var pt_radar = turf.point([xml_lng, xml_lat]);
+		var out_meters = 9999999;
+		for (i=0; i < line.turf.length; i++) {
+			var pt_near = turf.nearestPointOnLine(line.turf[i], pt_radar);
+			if ((pt_near.properties.dist * 1000) < out_meters)
+				out_meters = Math.trunc(pt_near.properties.dist * 1000);
+			// Append radar and continue with next one
+			if (out_meters < DIST_RADAR) {
+				radars_aux.push({lng: xml_lng, lat: xml_lat, speed: xml_maxspeed});
+				break;
+			}
+		}
 	});
 
 	if (radars_aux.length > 0)
