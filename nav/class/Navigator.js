@@ -350,7 +350,7 @@ Navigator.prototype.parse_data = function(data) {
 		var name_parsed = this.parse_name(type_parsed, name);
 		if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names')) {
 			//TRANSLATORS: Translate only the At at this sentence: <Turn right>. At <5th Street>
-			name_parsed = name_parsed + ". " + t("At") + " " + data.trip.legs[0].maneuvers[i].street_names[0];
+			name_parsed = name_parsed + ". " + t("Road") + " " + data.trip.legs[0].maneuvers[i].street_names[0];
 		}
 		this.route.steps.push({
 			type: type_parsed,
