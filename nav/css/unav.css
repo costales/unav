@@ -165,7 +165,8 @@ body{
   height: 28px;
 }
 
-#endTime, #confirmEndTime {
+
+#confirmEndTime {
   position: absolute;
   bottom: 5px;
   width: 100%;
@@ -177,6 +178,18 @@ body{
   bottom: 5px;
   width: 100%;
   left: 20px;
+  text-align: left;
+}
+#speed {
+  position: absolute;
+  bottom: 5px;
+  left: 33%;
+  text-align: left;
+}
+#endTime {
+  position: absolute;
+  bottom: 5px;
+  left: 66%;
   text-align: left;
 }
 #endHour, #confirmEndHour {

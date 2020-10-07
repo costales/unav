@@ -273,7 +273,7 @@
 					mapUI.show_route(coords_aux, 'route', true);
 					nav.set_data({mode: 'simulating'});
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-					ui.update_lower_panel(nav.get_data_navigation().duration, nav.get_data_navigation().distance, 0);
+					ui.update_lower_panel(nav.get_data_navigation().duration, nav.get_data_navigation().distance, nav_data.speed, 0);
 					break;
 				case 'GPS_waiting_for_calculating':
 					if (mapUI.get_map_zoom() < ui.ZOOM-3)
@@ -323,13 +323,13 @@
 				case 'route_confirm':
 					var nav_navigation= nav.get_data_navigation();
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
-					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
+					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, 0);
 					break;
 				case 'route_driving':
 					nav.update();
 					var nav_navigation = nav.get_data_navigation();
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
-					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_navigation.percentage);
+					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, nav_navigation.percentage);
 					if (settings.get_speak())
 						ui.speak(nav_navigation.steps[nav_navigation.ind].speaked, nav_navigation.steps[nav_navigation.ind+1].type);
 					if (ui.get_radar_beep())
@@ -370,13 +370,14 @@
 					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
 					var nav_navigation = nav.get_data_navigation();
 					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
-					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, 0);
+					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, 0);
 					nav.set_data({mode: 'route_driving'});
 					break;
 				case 'route_end':
 					nav.set_data({mode: 'route_ended'});
 					$('#endTime').html('');
-					$('#endDistance').html(':)');
+					$('#speed').html('');
+					$('#endDistance').html('');
 					$('#endHour').html('');
 					$("#totalProgress").css("width", "100%");
 					$('#stepTxt').html(t("You have arrived"));
@@ -652,7 +653,8 @@
 		</div>
 		<div id="bottomPanelNav">
 			<div id="endDistance"></div>
-			<div id="endTime"></div>
+			<div id="speed"></div>
+			<div id="endTime">a</div>
 			<div id="endHour"></div>
 		</div>
 	</div>

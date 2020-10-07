@@ -19,15 +19,21 @@ function Maths() {
 }
 
 Maths.prototype.meter2km = function(m) {
-	return turf.convertLength(m, 'meters', 'kilometers')
+	return turf.convertLength(m, 'meters', 'kilometers');
 }
 
 Maths.prototype.meter2feet = function(m) {
-	return turf.convertLength(m, 'meters', 'feet')
+	return turf.convertLength(m, 'meters', 'feet');
 }
 
-Maths.prototype.meter2mile = function(km) {
-	return turf.convertLength(m, 'meters', 'miles')
+Maths.prototype.meter2mile = function(m) {
+	return turf.convertLength(m, 'meters', 'miles');
+}
+
+Maths.prototype.km2mi = function(km) {
+	if (km === null)
+		return 0;
+	return turf.convertLength(km, 'kilometers', 'miles');
 }
 
 Maths.prototype.deg2rad = function(degrees) {

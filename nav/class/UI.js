@@ -271,12 +271,17 @@ UI.prototype.set_pickingOnMap = function(value) {
 	poiClick.hide();
 }
 
-UI.prototype.update_lower_panel = function(duration, distance, percentage) {
+UI.prototype.update_lower_panel = function(duration, distance, speed, percentage) {
 	var txt_time = maths.time2human(duration);
 	var txt_distance = maths.dist2human(distance, settings.get_unit());
 	var txt_ETA = maths.time2human(duration, true);
+	if (settings.get_unit() == 'km')
+		var txt_speed = Math.trunc(speed) + "km/h";
+	else
+		var txt_speed = Math.trunc(maths.km2mi(speed)) + "mi/h";
 	$("#totalProgress").css("width", percentage+"%");
 	$('#endTime').html(txt_time);
+	$("#speed").html(txt_speed);
 	$('#endDistance').html(txt_distance);
 	$('#endHour').html(txt_ETA);
 	$("#totalProgress").css("width", percentage+"%");
