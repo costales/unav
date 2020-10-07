@@ -320,7 +320,7 @@ Navigator.prototype.parse_name = function(type) {
 Navigator.prototype.parse_data = function(data) {
 	this.route.ind = 0;
 	this.route.duration = parseInt(data.trip.summary.time);
-	this.route.distance = parseInt(parseFloat(data.trip.summary.length) * 1000);
+	this.route.distance = Math.trunc(parseFloat(data.trip.summary.length) * 1000);
 	this.route.distance_total = this.route.distance;
 	this.route.percentage = 0;
 
@@ -355,8 +355,8 @@ Navigator.prototype.parse_data = function(data) {
 		this.route.steps.push({
 			type: type_parsed,
 			name: name_parsed,
-			distance: parseInt(parseFloat(data.trip.legs[0].maneuvers[i].length) * 1000),
-			distance_step: parseInt(parseFloat(data.trip.legs[0].maneuvers[i].length) * 1000),
+			distance: Math.trunc(parseFloat(data.trip.legs[0].maneuvers[i].length) * 1000),
+			distance_step: Math.trunc(parseFloat(data.trip.legs[0].maneuvers[i].length) * 1000),
 			duration_step: parseInt(data.trip.legs[0].maneuvers[i].time),
 			speaked: 0
 		});
