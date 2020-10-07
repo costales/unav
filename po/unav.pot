@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 22:02+0200\n"
+"POT-Creation-Date: 2020-10-07 22:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Follow the route line"
 msgstr ""
 
-#. TRANSLATORS: Translate only the At at this sentence: <Turn right>. At <5th Street>
+#. TRANSLATORS: Translate only the Road at this sentence: <Turn right>. Road <5th Street>
 #: nav/class/Navigator.js:353
 msgid "Road"
 msgstr ""
