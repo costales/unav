@@ -73,9 +73,9 @@ Page {
             switch(typeSections.selectedIndex) {
                 case 0:
                     if (navApp.settings.onlineSearch)
-                        return Qt.resolvedUrl("onlineLocation/Location.qml");
+                        return Qt.resolvedUrl("places/online.qml");
                     else
-                        return Qt.resolvedUrl("offlineLocation/Location.qml");
+                        return Qt.resolvedUrl("places/offline.qml");
                     break;
                 case 1:
                     return Qt.resolvedUrl("POIs.qml");
