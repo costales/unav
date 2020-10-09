@@ -19,6 +19,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QtQuick.XmlListModel 2.0
 import QtQuick.LocalStorage 2.0
+import "../js/db.js" as UnavDB
 import "../components"
 
 Item {
@@ -27,10 +28,26 @@ Item {
 
     property ListView flickable: listView
 
+    signal setSearchText(string text)
+
     Component.onCompleted: {
         if (mainPageStack.lastSearchResultsOffline) {
             var json = JSON.parse(mainPageStack.lastSearchResultsOffline);
             searchModel.loadList(json.result);
+        }
+        else {
+            searchModel.clear();
+            statusLabel.text = "";
+            var res = UnavDB.getSearchHistory();
+            var len = res.rows.length;
+            for (var i = 0; i < len; ++i) {
+                var item = {
+                    "title": res.rows.item(i).key,
+                    "lng": 0.0,
+                    "lat": 0.0
+                };
+                searchModel.append(item);
+            }
         }
     }
 
@@ -71,6 +88,22 @@ Item {
         model: searchModel
         delegate: ListItem {
             height: resultsDelegateLayout.height + divider.height
+            leadingActions: ListItemActions {
+                actions: [
+                    Action {
+                        iconName: "delete"
+                        visible: model.lng === 0.0
+                        onTriggered: {
+                            UnavDB.removeHistorySearch(model.title);
+                            searchModel.remove(index, 1);
+                        }
+                    }
+                ]
+            }
+            trailingActions: ListItemActions {
+                actions: [
+                ]
+            }
             ListItemLayout {
                 id: resultsDelegateLayout
                 title.text: model.title
@@ -78,13 +111,23 @@ Item {
                 title.wrapMode: Text.WordWrap
                 subtitle.text: " "
                 subtitle.visible: true
+                title.color: model.lng === 0.0 ? theme.palette.normal.backgroundTertiaryText : theme.palette.normal.backgroundText
             }
             onClicked: {
-                if (mainPageStack.columns === 1)
-                    mainPageStack.removePages(searchPage);
-                mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.title + "\")");
+                if (model.lng === 0.0) { // History
+                    var text_aux = model.title;
+                    container.setSearchText(text_aux);
+                    searchModel.clear();
+                    statusLabel.text = i18n.tr("Searching...");
+                    searchJSON(text_aux);
+                }
+                else { // Show marker
+                    if (mainPageStack.columns === 1)
+                        mainPageStack.removePages(searchPage);
+                    mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.title + "\")");
+                }
             }
-       }
+        }
 
         header: TextField {
             id: searchField
@@ -100,8 +143,16 @@ Item {
             text: mainPageStack.lastSearchStringOffline
             placeholderText: i18n.tr("Place or location")
 
+            Connections {
+                target: container
+                onSetSearchText: {
+                    searchField.text = text;
+                }
+            }
+
             onTriggered: {
                 if (text.trim()) {
+                    UnavDB.saveToSearchHistory(text);
                     searchModel.clear();
                     statusLabel.text = i18n.tr("Searching...");
                     searchJSON(text);
@@ -110,6 +161,20 @@ Item {
             onTextChanged: {
                 mainPageStack.lastSearchStringOffline = text;
                 searchModel.clear();
+                if (!text.trim()) {
+                    searchModel.clear();
+                    statusLabel.text = "";
+                    var res = UnavDB.getSearchHistory();
+                    var len = res.rows.length;
+                    for (var i = 0; i < len; ++i) {
+                        var item = {
+                            "title": res.rows.item(i).key,
+                            "lng": 0.0,
+                            "lat": 0.0
+                        };
+                        searchModel.append(item);
+                    }
+                }
             }
         }
     }
@@ -127,14 +192,19 @@ Item {
         request.onreadystatechange = function() {
             if (request.readyState == XMLHttpRequest.DONE) {
                 statusLabel.text = "";
-                var json = JSON.parse(request.responseText);
-                if (json.result.length > 0) {
-                    mainPageStack.lastSearchResultsOffline = request.responseText;
-                    searchModel.loadList(json.result);
-                }
-                else {
+                try {
+                    var json = JSON.parse(request.responseText);
+                    if (json.result.length > 0) {
+                        mainPageStack.lastSearchResultsOffline = request.responseText;
+                        searchModel.loadList(json.result);
+                    }
+                    else {
+                        mainPageStack.lastSearchResultsOffline = "";
+                        statusLabel.text = i18n.tr("Nothing found");
+                    }
+                } catch(e) {
                     mainPageStack.lastSearchResultsOffline = "";
-                    statusLabel.text = i18n.tr("Nothing found");
+                    statusLabel.text = i18n.tr("Error searching");
                 }
             }
         }

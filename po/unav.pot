@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-07 22:05+0200\n"
+"POT-Creation-Date: 2020-10-09 16:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -765,18 +765,22 @@ msgstr ""
 msgid "Stadium"
 msgstr ""
 
-#: qml/offlineLocation/Location.qml:101 qml/onlineLocation/Location.qml:167
-msgid "Place or location"
-msgstr ""
-
-#: qml/offlineLocation/Location.qml:106
+#: qml/places/offline.qml:121 qml/places/offline.qml:157
 msgid "Searching..."
 msgstr ""
 
-#: qml/offlineLocation/Location.qml:137 qml/onlineLocation/Location.qml:50
+#: qml/places/offline.qml:144 qml/places/online.qml:188
+msgid "Place or location"
+msgstr ""
+
+#: qml/places/offline.qml:203 qml/places/online.qml:71
 msgid "Nothing found"
 msgstr ""
 
-#: qml/offlineLocation/Location.qml:143 qml/onlineLocation/Location.qml:45
+#: qml/places/offline.qml:207
+msgid "Error searching"
+msgstr ""
+
+#: qml/places/offline.qml:213 qml/places/online.qml:66
 msgid "Time out!"
 msgstr ""

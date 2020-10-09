@@ -24,6 +24,7 @@ function openDB() {
 		db.transaction(function(tx){
 			tx.executeSql('CREATE TABLE IF NOT EXISTS favorites( key TEXT UNIQUE, lat TEXT, lng TEXT)');
 			tx.executeSql('CREATE TABLE IF NOT EXISTS poi_historial36( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, label TEXT UNIQUE, tag_online TEXT, tag_offline TEXT, enabled_offline TEXT )');
+			tx.executeSql('CREATE TABLE IF NOT EXISTS search_history37( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, key TEXT UNIQUE )');
 		});
 	}
 }
@@ -85,4 +86,29 @@ function getNearByHistory() {
 		res = tx.executeSql('SELECT * FROM poi_historial36 ORDER BY id DESC', []);
 	});
 	return res;
+}
+
+// searchHistory
+function saveToSearchHistory(key) {
+	openDB();
+	db.transaction( function(tx){
+		tx.executeSql('INSERT OR REPLACE INTO search_history37(key) VALUES(?)', [key]);
+		tx.executeSql('DELETE FROM search_history37 WHERE id IN (SELECT id FROM search_history37 ORDER BY id DESC LIMIT -1 OFFSET 7)'); // Keep last 7
+	});
+}
+
+function getSearchHistory() {
+	var res;
+	openDB();
+	db.transaction(function(tx) {
+		res = tx.executeSql('SELECT * FROM search_history37 ORDER BY id DESC', []);
+	});
+	return res;
+}
+
+function removeHistorySearch(key) {
+	openDB();
+	db.transaction( function(tx){
+		tx.executeSql('DELETE FROM search_history37 WHERE key=?;', [key]);
+	});
 }

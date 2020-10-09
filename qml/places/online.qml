@@ -19,6 +19,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QtQuick.XmlListModel 2.0
 import QtQuick.LocalStorage 2.0
+import "../js/db.js" as UnavDB
 import "../components"
 
 Item {
@@ -27,10 +28,30 @@ Item {
 
     property ListView flickable: listView
 
+    signal setSearchText(string text)
+
     Component.onCompleted: {
         if (mainPageStack.lastSearchResultsOnline) {
             var json = JSON.parse(mainPageStack.lastSearchResultsOnline);
             sortedSearchModel.loadLastResults(json.results);
+            listView.model = sortedSearchModel
+            listView.delegate = searchDelegateComponent
+        }
+        else {
+            sortedSearchModel.clear();
+            statusLabel.text = "";
+            var res = UnavDB.getSearchHistory();
+            var len = res.rows.length;
+            for (var i = 0; i < len; ++i) {
+                var item = {
+                    "name": res.rows.item(i).key,
+                    "lat": '',
+                    "lng": '',
+                    "boundingbox": '',
+                    "icon": ''
+                };
+                sortedSearchModel.append(item);
+            }
             listView.model = sortedSearchModel
             listView.delegate = searchDelegateComponent
         }
@@ -166,8 +187,16 @@ Item {
             text: mainPageStack.lastSearchStringOnline
             placeholderText: i18n.tr("Place or location")
 
+            Connections {
+                target: container
+                onSetSearchText: {
+                    searchField.text = text;
+                }
+            }
+
             onTriggered: {
                 if (text.trim()) {
+                    UnavDB.saveToSearchHistory(text);
                     statusLabel.text = "";
                     xmlSearchModel.searchString = text;
                     xmlSearchModel.search();
@@ -176,6 +205,21 @@ Item {
             onTextChanged: {
                 mainPageStack.lastSearchStringOnline = text;
                 sortedSearchModel.clear();
+                if (!text.trim()) {
+                    statusLabel.text = "";
+                    var res = UnavDB.getSearchHistory();
+                    var len = res.rows.length;
+                    for (var i = 0; i < len; ++i) {
+                        var item = {
+                            "name": res.rows.item(i).key,
+                            "lat": '',
+                            "lng": '',
+                            "boundingbox": '',
+                            "icon": ''
+                        };
+                        sortedSearchModel.append(item);
+                    }
+                }
             }
         }
     }
@@ -189,10 +233,35 @@ Item {
         id: searchDelegateComponent
         ListItem {
             height: resultsDelegateLayout.height + divider.height
+            leadingActions: ListItemActions {
+                actions: [
+                    Action {
+                        iconName: "delete"
+                        visible: model.lng === ''
+                        onTriggered: {
+                            UnavDB.removeHistorySearch(model.name);
+                            sortedSearchModel.remove(index, 1);
+                        }
+                    }
+                ]
+            }
+            trailingActions: ListItemActions {
+                actions: [
+                ]
+            }
             onClicked: {
-                if (mainPageStack.columns === 1)
-                    mainPageStack.removePages(searchPage);
-                mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.name + "\", \"" + model.boundingbox + "\")");
+                if (model.lng === '') { // History
+                    var text_aux = model.name;
+                    container.setSearchText(text_aux);
+                    statusLabel.text = "";
+                    xmlSearchModel.searchString = text_aux;
+                    xmlSearchModel.search();
+                }
+                else { // Show marker
+                    if (mainPageStack.columns === 1)
+                        mainPageStack.removePages(searchPage);
+                    mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.name + "\", \"" + model.boundingbox + "\")");
+                }
             }
 
             ListItemLayout {
@@ -201,6 +270,7 @@ Item {
                 title.text: model.name
                 title.maximumLineCount: 2
                 title.wrapMode: Text.WordWrap
+                title.color: model.lng === '' ? theme.palette.normal.backgroundTertiaryText : theme.palette.normal.backgroundText
 
                 Icon {
                     id: resIcon
