@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="44px"
+   width="30px"
+   version="1.1"
+   viewBox="0 0 29.988946 43.988056"
+   id="svg16"
+   sodipodi:docname="new_Laundry.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="974"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="16.271444"
+     inkscape:cx="9.8058024"
+     inkscape:cy="28.677688"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg26" />
+  <defs
+     id="defs7">
+    <radialGradient
+       id="a"
+       gradientUnits="userSpaceOnUse"
+       cy="127.6"
+       cx="-42.75"
+       gradientTransform="matrix(4.2749643,0,0,0.98162997,197.99835,-82.088795)"
+       r="2.3840001">
+      <stop
+         stop-color="#010101"
+         offset="0"
+         id="stop2" />
+      <stop
+         stop-opacity="0"
+         stop-color="#090909"
+         offset="1"
+         id="stop4" />
+    </radialGradient>
+  </defs>
+  <g
+     id="g26"
+     transform="translate(-2.0760358e-7,-1.6181156)">
+    <path
+       style="fill:#0066ff;stroke-width:4.27539158"
+       inkscape:connector-curvature="0"
+       id="path9"
+       d="m 14.994475,1.7046139 c -8.2386814,0 -14.91684341,6.6781619 -14.91684341,14.9168421 0.008545,2.561815 0.67294669,5.079165 1.93504231,7.306643 L 15.595595,42.53888 27.955752,23.983679 c 1.277915,-2.243725 1.951716,-4.779887 1.955563,-7.362223 C 29.911273,8.3827758 23.233154,1.7046139 14.994475,1.7046139 Z" />
+    <circle
+       style="fill:#f9f3f3;stroke-width:4.27539158"
+       id="circle11"
+       r="9.4272394"
+       cx="14.994473"
+       cy="16.668474" />
+    <ellipse
+       style="opacity:0.4;fill:url(#a);stroke-width:4.27496433"
+       id="ellipse13"
+       cx="14.994473"
+       cy="43.18018"
+       ry="2.3394945"
+       rx="10.192533" />
+    <rect
+       style="fill:none;stroke-width:4.27539158"
+       x="8.2585926"
+       y="9.8278542"
+       width="13.471761"
+       height="13.36915"
+       ry="0"
+       rx="0"
+       id="replace" />
+    <svg
+       viewBox="0 0 100 100"
+       x="8.5"
+       y="10"
+       version="1.1"
+       id="svg26"
+       sodipodi:docname="Laundry.svg"
+       width="100"
+       height="100"
+       inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+      <metadata
+         id="metadata32">
+        <rdf:RDF>
+          <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type
+               rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title>laundry</dc:title>
+          </cc:Work>
+        </rdf:RDF>
+      </metadata>
+      <defs
+         id="defs30" />
+      <sodipodi:namedview
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1"
+         objecttolerance="10"
+         gridtolerance="10"
+         guidetolerance="10"
+         inkscape:pageopacity="0"
+         inkscape:pageshadow="2"
+         inkscape:window-width="1680"
+         inkscape:window-height="884"
+         id="namedview28"
+         showgrid="false"
+         inkscape:zoom="2.95"
+         inkscape:cx="36.237288"
+         inkscape:cy="40"
+         inkscape:window-x="0"
+         inkscape:window-y="0"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="svg26" />
+      <title
+         id="title2">laundry</title>
+      <g
+         id="g43"
+         transform="matrix(0.15229534,0,0,0.15229534,-0.33337313,-4.0264846)">
+        <g
+           transform="matrix(1.6416465,0,0,1.6416465,-7.6997579,17.433414)"
+           id="g20">
+          <path
+             inkscape:connector-curvature="0"
+             id="path4"
+             d="M 50,4 H 14 a 2,2 0 0 0 -2,2 v 52 a 2,2 0 0 0 2,2 h 36 a 2,2 0 0 0 2,-2 V 6 A 2,2 0 0 0 50,4 Z M 14,14 H 50 V 50 H 14 Z M 50,6 v 6 H 14 V 6 Z M 14,58 v -6 h 36 v 6 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path6"
+             d="m 33.25,17.5 a 14.51,14.51 0 0 0 -13.77,10 h -2.23 a 1,1 0 0 0 -1,1 v 7 a 1,1 0 0 0 1,1 h 2.23 a 14.49,14.49 0 1 0 13.77,-19 z m -15,12 h 5.33 a 9.63,9.63 0 0 0 0,5 h -5.33 z m 7.63,5.62 v 0 a 7.94,7.94 0 0 1 0,-6.2 v 0 a 8,8 0 1 1 0,6.24 z m 7.37,9.38 a 12.52,12.52 0 0 1 -11.66,-8 h 2.74 a 10,10 0 1 0 0,-9 h -2.74 a 12.5,12.5 0 1 1 11.66,17 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path8"
+             d="m 47,10 v 0 a 1,1 0 1 0 -1,-1 1,1 0 0 0 1,1 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path10"
+             d="m 44,10 v 0 a 1,1 0 1 0 -1,-1 1,1 0 0 0 1,1 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path12"
+             d="m 41,10 v 0 a 1,1 0 1 0 -1,-1 1,1 0 0 0 1,1 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path14"
+             d="m 38,10 v 0 a 1,1 0 1 0 -1,-1 1,1 0 0 0 1,1 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path16"
+             d="m 22,55 h -6 a 1,1 0 0 0 0,2 h 6 a 1,1 0 0 0 0,-2 z" />
+          <path
+             inkscape:connector-curvature="0"
+             id="path18"
+             d="m 35,10 v 0 a 1,1 0 1 0 -1,-1 1,1 0 0 0 1,1 z" />
+        </g>
+      </g>
+    </svg>
+  </g>
+</svg>

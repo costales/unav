@@ -12,7 +12,7 @@
    version="1.1"
    viewBox="0 0 29.988946 43.988056"
    id="svg16"
-   sodipodi:docname="POIselected.svg"
+   sodipodi:docname="new_Car Rental.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata20">
@@ -39,13 +39,13 @@
      inkscape:window-height="974"
      id="namedview18"
      showgrid="false"
-     inkscape:zoom="11.505648"
-     inkscape:cx="10.632941"
-     inkscape:cy="25.400652"
+     inkscape:zoom="4.0678609"
+     inkscape:cx="51.780829"
+     inkscape:cy="121.64178"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g8" />
+     inkscape:current-layer="svg12" />
   <defs
      id="defs7">
     <radialGradient
@@ -70,7 +70,7 @@
      d="m 14.994475,0.0864983 c -8.2386816,0 -14.91684362,6.6781619 -14.91684362,14.9168417 0.008545,2.561815 0.67294669,5.079165 1.93504232,7.306643 L 15.595595,40.920764 27.955752,22.365563 C 29.233667,20.121838 29.907468,17.585676 29.911315,15.00334 29.911273,6.7646602 23.233154,0.0864983 14.994475,0.0864983 Z"
      id="path9"
      inkscape:connector-curvature="0"
-     style="fill:#5555ff;stroke-width:4.27539158" />
+     style="fill:#0066ff;stroke-width:4.27539158" />
   <circle
      cy="15.050359"
      cx="14.994473"
@@ -97,26 +97,26 @@
      inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
      height="100"
      width="100"
-     sodipodi:docname="Attraction.svg"
-     id="svg14"
+     sodipodi:docname="Car Rental.svg"
+     id="svg12"
      xml:space="preserve"
      viewBox="0 0 100 100"
      y="10"
      x="8.5"
      version="1.1"><metadata
-       id="metadata336"><rdf:RDF><cc:Work
+       id="metadata18"><rdf:RDF><cc:Work
            rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
              rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
-       id="defs18" /><sodipodi:namedview
-       inkscape:current-layer="svg14"
+       id="defs16" /><sodipodi:namedview
+       inkscape:current-layer="g6"
        inkscape:window-maximized="1"
        inkscape:window-y="0"
        inkscape:window-x="0"
-       inkscape:cy="93.75"
-       inkscape:cx="84.931144"
-       inkscape:zoom="1.2586667"
+       inkscape:cy="62.5"
+       inkscape:cx="-11.970339"
+       inkscape:zoom="1.888"
        showgrid="false"
-       id="namedview16"
+       id="namedview14"
        inkscape:window-height="884"
        inkscape:window-width="1680"
        inkscape:pageshadow="2"
@@ -127,5 +127,9 @@
        borderopacity="1"
        bordercolor="#666666"
        pagecolor="#ffffff" /><g
-       transform="matrix(0.14178549,0,0,0.14178549,-4.8048382,-4.2610171)"
-       id="g8" /></svg></svg>
+       transform="matrix(0.1500437,0,0,0.15459945,-0.99270756,-2.9781055)"
+       id="g6"><path
+         style="stroke-width:1.92531145"
+         inkscape:connector-curvature="0"
+         id="path4"
+         d="m 27.181325,24.72842 c -13.862241,0 -25.2215788,11.359337 -25.2215788,25.221581 0,13.862241 11.3593378,25.221579 25.2215788,25.221579 10.204151,0 19.060583,-6.160997 23.103737,-14.824897 H 86.480917 L 97.840254,48.987343 V 39.553318 H 50.285062 C 46.241908,30.889416 37.385476,24.72842 27.181325,24.72842 Z M 16.592113,56.110996 c -3.46556,0 -6.160997,-2.695435 -6.160997,-6.160995 0,-3.465562 2.695437,-6.160998 6.160997,-6.160998 3.465561,0 6.160997,2.695435 6.160997,6.160998 0,3.465561 -2.695436,6.160995 -6.160997,6.160995 z" /></g></svg></svg>

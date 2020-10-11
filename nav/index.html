@@ -457,7 +457,7 @@
 										anchor: [15, 41],
 										anchorXUnits: "pixels",
 										anchorYUnits: "pixels",
-										src: 'img/marker/POIselected.svg'
+										src: allPOIs[i].get('icon').replace('poi-emblem', 'poi-emblem-highlight')
 									})
 								});
 							allPOIs[i].setStyle(icon);

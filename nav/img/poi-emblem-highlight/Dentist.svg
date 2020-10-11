@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="44px"
+   width="30px"
+   version="1.1"
+   viewBox="0 0 29.988946 43.988056"
+   id="svg16"
+   sodipodi:docname="new_Dentist.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="974"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="4.0678609"
+     inkscape:cx="0.9366743"
+     inkscape:cy="83.987249"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs7">
+    <radialGradient
+       id="a"
+       gradientUnits="userSpaceOnUse"
+       cy="127.6"
+       cx="-42.75"
+       gradientTransform="matrix(4.2749643,0,0,0.98162997,197.99835,-83.706911)"
+       r="2.3840001">
+      <stop
+         stop-color="#010101"
+         offset="0"
+         id="stop2" />
+      <stop
+         stop-opacity="0"
+         stop-color="#090909"
+         offset="1"
+         id="stop4" />
+    </radialGradient>
+  </defs>
+  <path
+     d="m 14.994475,0.0864983 c -8.2386816,0 -14.91684362,6.6781619 -14.91684362,14.9168417 0.008545,2.561815 0.67294669,5.079165 1.93504232,7.306643 L 15.595595,40.920764 27.955752,22.365563 C 29.233667,20.121838 29.907468,17.585676 29.911315,15.00334 29.911273,6.7646602 23.233154,0.0864983 14.994475,0.0864983 Z"
+     id="path9"
+     inkscape:connector-curvature="0"
+     style="fill:#0066ff;stroke-width:4.27539158" />
+  <circle
+     cy="15.050359"
+     cx="14.994473"
+     r="9.4272394"
+     id="circle11"
+     style="fill:#f9f3f3;stroke-width:4.27539158" />
+  <ellipse
+     rx="10.192533"
+     ry="2.3394945"
+     cy="41.562065"
+     cx="14.994473"
+     id="ellipse13"
+     style="opacity:0.4;fill:url(#a);stroke-width:4.27496433" />
+  <rect
+     id="replace"
+     rx="0"
+     ry="0"
+     height="13.36915"
+     width="13.471761"
+     y="8.2097387"
+     x="8.2585926"
+     style="fill:none;stroke-width:4.27539158" />
+  <svg
+     sodipodi:docname="Dentist.svg"
+     height="13"
+     width="13"
+     inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+     id="svg2"
+     xml:space="preserve"
+     viewBox="-120 78.1 47.776087 52.814283"
+     y="10"
+     x="8.5"
+     version="1.1"><metadata
+       id="metadata18"><rdf:RDF><cc:Work
+           rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+             rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+       id="defs16" /><sodipodi:namedview
+       inkscape:current-layer="g4327"
+       inkscape:window-maximized="1"
+       inkscape:window-y="0"
+       inkscape:window-x="0"
+       inkscape:cy="24.353003"
+       inkscape:cx="-21.695112"
+       inkscape:zoom="3.776"
+       fit-margin-bottom="0"
+       fit-margin-right="0"
+       fit-margin-left="0"
+       fit-margin-top="0"
+       showgrid="false"
+       id="namedview14"
+       inkscape:window-height="824"
+       inkscape:window-width="1440"
+       inkscape:pageshadow="2"
+       inkscape:pageopacity="0"
+       guidetolerance="10"
+       gridtolerance="10"
+       objecttolerance="10"
+       borderopacity="1"
+       bordercolor="#666666"
+       pagecolor="#ffffff" /><g
+       transform="translate(-152.5862,74.186085)"
+       id="g3032"><g
+         transform="translate(-11.778449,-19.681681)"
+         id="g3082"><g
+           transform="translate(113.35527,48.840676)"
+           id="g3297"><g
+             transform="translate(-110.35024,-41.106017)"
+             id="g3451"><g
+               transform="translate(37.661621,37.801481)"
+               id="g3508"><g
+                 transform="translate(-33.173714,-53.557494)"
+                 id="g3556"><g
+                   transform="translate(1.6437441,2.3337983)"
+                   id="g3600"><g
+                     transform="translate(3.1326802,-1.9259882)"
+                     id="g3673"><g
+                       transform="translate(16.15499,5.0801784)"
+                       id="g3728"><g
+                         transform="matrix(1.3062103,0,0,1.1506075,-1.2423141,14.177607)"
+                         id="g3774"><g
+                           transform="matrix(0.76557355,0,0,0.86910615,-9.6088369,-25.571004)"
+                           id="g3814"><g
+                             transform="translate(-253.23308,-590.39679)"
+                             id="g3898"><g
+                               transform="translate(255.74688,596.01847)"
+                               id="g4071"><g
+                                 transform="translate(-2.9830857,2.4410756)"
+                                 id="g4160"><g
+                                   transform="matrix(0.87809547,0,0,0.86067766,11.546476,7.0690494)"
+                                   id="g4272"><g
+                                   transform="matrix(1.1388283,0,0,1.1618751,13.689337,21.712146)"
+                                   id="g4327"><g
+                                   transform="matrix(1.5079129,0,0,1.5079129,-38.334548,-33.946089)"
+                                   id="g4313"><path
+                                   inkscape:connector-curvature="0"
+                                   d="m 53.737,31.758 c -0.231,-0.693 -0.693,-2.465 -3.466,-2.465 -2.773,0 -4.236,1.155 -4.621,1.079 -0.385,0.077 -1.849,-1.079 -4.621,-1.079 -2.773,0 -3.235,1.771 -3.466,2.465 -0.231,0.693 -0.462,4.235 1.463,8.703 0,1.231 -2.002,7.855 -1.155,15.325 0.154,2.002 3.389,-1.232 4.158,-4.159 0.77,-2.926 1.926,-6.469 3.62,-6.855 1.694,0.385 2.85,3.928 3.62,6.855 0.77,2.927 4.004,6.161 4.158,4.159 0.848,-7.47 -1.155,-14.094 -1.155,-15.325 1.927,-4.467 1.696,-8.009 1.465,-8.703 z"
+                                   id="path4315" /></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></svg></svg>
