@@ -82,7 +82,7 @@ Page {
            ExpandableListItem {
                id: unitList
 
-               listViewHeight: units.gu(10)
+               listViewHeight: units.gu(11)
                titleText.text: i18n.tr("Units")
 
                model: unitModel
@@ -94,7 +94,7 @@ Page {
                         id: unitListItemLayout
                         title.text: model.unit
                         title.color: theme.palette.normal.backgroundSecondaryText
-                        padding { top: units.gu(1); bottom: units.gu(1) }
+                        padding { top: units.gu(0); bottom: units.gu(0) } // THis should not be necessary, but it is
                         Icon {
                             SlotsLayout.position: SlotsLayout.Trailing
                             width: units.gu(2)
