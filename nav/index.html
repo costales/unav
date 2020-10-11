@@ -439,6 +439,30 @@
 						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsClickedOwnPos: true, iconsLng: coords_aux[0], iconsLat: coords_aux[1]});
 					}
 					if (props.name.startsWith("poi-")) {
+
+						var allPOIs = mapUI.layerPOI.getSource().getFeatures();
+						for (i=0; i<allPOIs.length; i++) {
+							if (props.name != allPOIs[i].get('name'))
+								var icon = new ol.style.Style({
+									image: new ol.style.Icon({
+										anchor: [15, 41],
+										anchorXUnits: "pixels",
+										anchorYUnits: "pixels",
+										src: allPOIs[i].get('icon')
+									})
+								});
+							else
+								var icon = new ol.style.Style({
+									image: new ol.style.Icon({
+										anchor: [15, 41],
+										anchorXUnits: "pixels",
+										anchorYUnits: "pixels",
+										src: 'img/marker/POIselected.svg'
+									})
+								});
+							allPOIs[i].setStyle(icon);
+						}
+
 						longtouch_id++;
 						ui.set_center_pos(false);
 						mapUI.set_map_center(coord[0], coord[1], true);

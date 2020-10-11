@@ -136,6 +136,7 @@ MapUI.prototype.add_marker = function(markers, layer) {
 		var iconFeature = new ol.Feature({
 			geometry: new ol.geom.Point(ol.proj.fromLonLat([parseFloat(markers[z].lng), parseFloat(markers[z].lat)])),
 			name: markers[z].name,
+			icon: 'img/' + markers[z].icon,
 			lng: markers[z].lng,
 			lat: markers[z].lat,
 			title: markers[z].title,
