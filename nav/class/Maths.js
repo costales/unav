@@ -55,7 +55,7 @@ Maths.prototype.dist2human = function(m, unit2convert) {
 	var distance_aux = ''
 	if (unit2convert == settings.KM) {
 		if (m > 5000) {
-			return Math.trunc(this.meter2km(m)).toString() + 'km';
+			return Math.trunc(this.meter2km(m)) + 'km';
 		}
 		if (m > 999) {
 			distance_aux = this.meter2km(m).toFixed(1).toString();
@@ -71,18 +71,19 @@ Maths.prototype.dist2human = function(m, unit2convert) {
 		}
 	}
 	else {
-		var feets = this.meter2feet(m);
-		if (feets > 9000) {
-			return Math.trunc(this.meter2mile(m)).toString() + 'mi';
+		var miles = this.meter2mile(m).toFixed(1);
+		if (miles > 3) {
+			return Math.trunc(miles) + 'mi';
 		}
-		if (feets > 3000) {
-			distance_aux = this.meter2mile(m).toFixed(1).toString();
+		if (miles > 0.2) {
+			distance_aux = miles.toString();
 			if (distance_aux.endsWith(".0"))
 				 distance_aux = distance_aux.slice(0, -2);
 			return distance_aux + 'mi';
 		}
+		var feets = Math.trunc(this.meter2feet(m));
 		if (feets > 0) {
-			return Math.trunc(feets) + 'ft';
+			return feets + 'ft';
 		}
 		if (feets == 0) {
 			return t("Now").substring(0, 7);
