@@ -272,22 +272,22 @@ Navigator.prototype.parse_type = function(step) {
 	}
 }
 
-Navigator.prototype.parse_name = function(type) {
+Navigator.prototype.parse_name = function(type, instruction) {
 	switch(type) {
-		case 0:
-			return t("Turn left");
-		case 1:
-			return t("Turn right");
-		case 2:
-			return t("Make a sharp left");
-		case 3:
-			return t("Make a sharp right");
-		case 4:
-			return t("Bear left");
-		case 5:
-			return t("Bear right");
-		case 6:
-			return t("Continue on the road");
+		//case 0:
+		//	return t("Turn left");
+		//case 1:
+		//	return t("Turn right");
+		//case 2:
+		//	return t("Make a sharp left");
+		//case 3:
+		//	return t("Make a sharp right");
+		//case 4:
+		//	return t("Bear left");
+		//case 5:
+		//	return t("Bear right");
+		//case 6:
+		//	return t("Continue on the road");
 		case 70:
 			return t("Enter the roundabout");
 		case 71:
@@ -300,20 +300,23 @@ Navigator.prototype.parse_name = function(type) {
 			return t("Enter the roundabout and take 4th exit");
 		case 8:
 			return t("Exit the roundabout");
-		case 9:
-			return t("Make a U-turn");
-		case 10:
-			return t("Your destination is near");
-		case 11:
-			return t("Depart of route");
-		case 12:
-			return t("Keep left");
-		case 13:
-			return t("Keep right");
-		case 99:
-			return t("Follow the route line");
+		//case 9:
+		//	return t("Make a U-turn");
+		//case 10:
+		//	return t("Your destination is near");
+		//case 11:
+		//	return t("Depart of route");
+		//case 12:
+		//	return t("Keep left");
+		//case 13:
+		//	return t("Keep right");
+		//case 99:
+		//	return t("Follow the route line");
 		default:
-			return "";
+			if (instruction.endsWith("."))
+				return instruction.slice(0, -1);
+			else
+				return instruction;
 	}
 }
 
@@ -347,11 +350,12 @@ Navigator.prototype.parse_data = function(data) {
 		this.route.points.push(points_aux);
 		this.route.turf.push(turf.lineString(points_aux));
 		var type_parsed = this.parse_type(data.trip.legs[0].maneuvers[i]);
-		var name_parsed = this.parse_name(type_parsed, name);
-		if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names')) {
-			//TRANSLATORS: Translate only the Road at this sentence: <Turn right>. Road <5th Street>
-			name_parsed = name_parsed + ". " + t("Road") + " " + data.trip.legs[0].maneuvers[i].street_names[0];
-		}
+		var name_parsed = this.parse_name(type_parsed, data.trip.legs[0].maneuvers[i].instruction);
+		//var name_parsed = this.parse_name(type_parsed);
+		//if (data.trip.legs[0].maneuvers[i].hasOwnProperty('street_names')) {
+		//	//TRANSLATORS: Translate only the Road at this sentence: <Turn right>. Road <5th Street>
+		//	name_parsed = name_parsed + ". " + t("Road") + " " + data.trip.legs[0].maneuvers[i].street_names[0];
+		//}
 		this.route.steps.push({
 			type: type_parsed,
 			name: name_parsed,
