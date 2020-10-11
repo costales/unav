@@ -253,12 +253,13 @@ WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
 			var routing_mode = ',"costing":"pedestrian"';
 			break;
 	}
-
+	var language = ',"directions_options":{"language":"'+navigator.language.split('-')[0].toLowerCase()+'"}';
+	
 	$.ajax({
 		url: url,
 		data: {
 			api_key: 'ad841e2f-f657-4ffa-b5f8-9ae24b668ee8',
-			json: '{"locations":[{"lat":'+lat_from+',"lon":'+lng_from+'},{"lat":'+lat_to+',"lon":'+lng_to+'}]'+routing_mode+'}'
+			json: '{"locations":[{"lat":'+lat_from+',"lon":'+lng_from+'},{"lat":'+lat_to+',"lon":'+lng_to+'}]'+routing_mode+language+'}'
 		},
 		dataType: 'json',
 		timeout: 40000,
