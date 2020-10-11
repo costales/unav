@@ -191,6 +191,8 @@ UI.prototype.show_panels = function(panel) {
 		case 'navigate':
 			$("#panelsNav").show();
 			$(".ol-compassctrl.compass").show();
+			if (!ui.get_center_pos())
+				$("#panelRecenterRoute").show();
 			break;
 		case 'confirm':
 			$("#panelConfirmRoute").show();

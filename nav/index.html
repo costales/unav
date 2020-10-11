@@ -344,8 +344,6 @@
 				case 'route_out_returned':
 					nav.set_data({mode: 'route_driving'});
 					ui.show_panels('navigate');
-					if (!ui.get_center_pos())
-						$("#panelRecenterRoute").show();
 					break;
 				case 'route_out_waiting_result':
 					break;
