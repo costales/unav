@@ -254,7 +254,7 @@ WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {
 			break;
 	}
 	var language = ',"directions_options":{"language":"'+navigator.language.split('-')[0].toLowerCase()+'"}';
-	
+
 	$.ajax({
 		url: url,
 		data: {
@@ -305,7 +305,7 @@ WebAPI.prototype.set_radars = function() {
 	mapUI.clear_layer('radar');
 	
 	// Search radars?
-	if (!settings.get_online_route() || settings.get_route_mode() != 'car' )
+	if (!settings.get_radars() || !settings.get_online_route() || settings.get_route_mode() != 'car' )
 		return;
 
 	var lng1, lat1, lng2, lat2, lng2_ext, lat2_ext, lng1_ext, lat1_ext;
