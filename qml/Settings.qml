@@ -82,19 +82,18 @@ Page {
            ExpandableListItem {
                id: unitList
 
-               listViewHeight: units.gu(11)
+               listViewHeight: (units.gu(6) * unitModel.count) + units.gu(1)
                titleText.text: i18n.tr("Units")
 
                model: unitModel
 
                delegate: ListItem {
-                    divider.visible: false
+                   id: del
                     height: unitListItemLayout.height
                     ListItemLayout {
                         id: unitListItemLayout
                         title.text: model.unit
                         title.color: theme.palette.normal.backgroundSecondaryText
-                        padding { top: units.gu(0); bottom: units.gu(0) } // This should not be necessary, but it is
                         Icon {
                             SlotsLayout.position: SlotsLayout.Trailing
                             width: units.gu(2)
