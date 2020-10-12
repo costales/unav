@@ -378,7 +378,7 @@
 					$('#endDistance').html('');
 					$('#endHour').html('');
 					$("#totalProgress").css("width", "100%");
-					$('#stepTxt').html(t("You have arrived"));
+					$('#stepTxt').html(t("You have arrived at your destination"));
 					$('#stepImg').html('<img src="img/steps/10.svg">');
 					$('#distance').html('');
 				case 'route_ended': // Wait for user to cancel it or start another one
@@ -691,7 +691,7 @@
 			<div id="btnsConfirm">
 				<button id="btnCancelSimulate" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(true)'>Close</button>
 				<button id="btnCancel" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(false)'>Cancel</button>
-				<button id="btnStart" data-role='button' class='btns2_mode_route positive' onClick='route_start()'>Start</button>
+				<button id="btnStart" data-role='button' class='btns2_mode_route positive' onClick='route_start()' data-localize="Start">Start</button>
 			</div>
 		</div>
 		<div id="bottomPanelConfirm">
@@ -701,12 +701,6 @@
 			<div id="bottomConfirmMessage"></div>
 		</div>
 	</div>
-	<!-- Recenter route panel -->
-	<div id="panelRecenterRoute" onclick="center_pos()">
-		<img src="img/marker/car.svg">
-		<p id="btnCenter" data-localize="Center">Center</p>
-	</div>
-	
 
 	<!-- Notifications -->
 	<audio id="0"  type="audio/ogg" src="voices/0.ogg"  preload="none"/>
@@ -730,6 +724,7 @@
 	<audio id="radar" type="audio/ogg" src="voices/radar.ogg" preload="none"/>
 
 	<script>
+		ui.show_panels('none');
 		load_custom_voices(false);
 		
 		$(document).ready(function(){ // Disable clicks until page is loaded, this enables body{pointer-events:none;}
@@ -741,7 +736,8 @@
 			resizeWindowId = setTimeout(doneResizing, 500);
 		});
 		function doneResizing() {
-			window.location = 'http://settoppaneltop/';
+			ui.pos_btn_height(); // Pos PosBtn
+			window.location = 'http://settoppaneltop/'; // Pos top panel
 		}	
 	</script>
 

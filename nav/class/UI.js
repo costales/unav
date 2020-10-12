@@ -14,6 +14,7 @@
  */
 
 UI.prototype.ZOOM = 17;
+UI.prototype.POSBTN_HEIGHT = 50;
 
 function UI() {
 	this.center_pos = false;
@@ -36,7 +37,6 @@ UI.prototype.set_center_pos = function(status) {
 		$("#pulsePosBtn").css("background", "white");
 		$("#geo").attr("src", "img/ui/geoEnabled.svg");
 		$("#pulsePosBtn").css("animation", "pulse 3s infinite");
-		$("#panelRecenterRoute").hide();
 	}
 	else {
 		$("#pulsePosBtn").css("background", "#4d4d4d");
@@ -46,9 +46,6 @@ UI.prototype.set_center_pos = function(status) {
 		mapUI.set_map_rotate(0);
 		this.map_resize("100%");
 	}
-
-	if (!status && nav.get_data().mode.startsWith('route_'))
-		$("#panelRecenterRoute").show();
 }		
 
 UI.prototype.play_test = function() {
@@ -167,17 +164,23 @@ UI.prototype.set_confirm_btns = function(mode) {
 			$("#btnModeWalkConfirm").css("background-color", "#335280");
 			break;
 		}
-		$("#btnCenter").html(t("Center"));
 		$("#btnCancel").html(t("Cancel"));
 		$("#btnStart").html(t("Start"));
 		$("#btnCancelSimulate").html(t("Close"));
 }
 
+UI.prototype.pos_btn_height = function() {
+	if ($("#panelsNav").is(":visible"))
+		$("#posBtn").css('bottom', $("#panelsNav").height()+ui.POSBTN_HEIGHT+"px");
+	if ($("#panelConfirmRoute").is(":visible"))
+		$("#posBtn").css('bottom', $("#panelConfirmRoute").height()+ui.POSBTN_HEIGHT+"px");
+	if ($("#panelsNav").is(":hidden") && $("#panelConfirmRoute").is(":hidden"))
+		$("#posBtn").css('bottom', ui.POSBTN_HEIGHT+"px");
+}
 UI.prototype.show_panels = function(panel) {
 	$("#panelConfirmRoute").hide();
 	$("#panelSimulateRoute").hide();
 	$("#panelsNav").hide();
-	$("#panelRecenterRoute").hide();
 	$(".ol-compassctrl.compass").hide();
 	$("#btnCancel").hide();
 	$("#btnStart").hide();
@@ -191,8 +194,6 @@ UI.prototype.show_panels = function(panel) {
 		case 'navigate':
 			$("#panelsNav").show();
 			$(".ol-compassctrl.compass").show();
-			if (!ui.get_center_pos())
-				$("#panelRecenterRoute").show();
 			break;
 		case 'confirm':
 			$("#panelConfirmRoute").show();
@@ -222,6 +223,7 @@ UI.prototype.show_panels = function(panel) {
 			$("#bottomConfirmMessage").show();
 			break;
 	}
+	this.pos_btn_height();
 }
 
 // Search page has a big height and the panels are hidden

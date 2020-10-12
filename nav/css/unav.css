@@ -30,7 +30,7 @@ body{
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  bottom: 56px;
+  bottom: -100px;
   right: 25px;
   position: fixed;
   z-index: 10 !important;
@@ -293,48 +293,12 @@ body{
   width: 60px;
   height: 60px;
   right: 25px;
-  top: 80px;
+  top: 100px;
   position: fixed;
   display: none;
-}
-
-#panelRecenterRoute {
-  display: none;
-  background: white;
-  position: fixed;
-  width: 115px;
-  height: 40px;
-  bottom: 134px;
-  left: 12px;
-  border:1px solid #f0f0f0;
-  border-radius: 30px;
-}
-#panelRecenterRoute img {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 10px;
-  left: 14px;
-}
-#panelRecenterRoute p {
-  position: absolute;
-  width: 70px;
-  height: 30px;
-  top: 0px;
-  margin-top: 11px;
-  left: 0px;
-  margin-left: 40px;
-  text-align: left;
-  font-family: Ubuntu;
-  font-size: 16px;
 }
 
 @media screen and (orientation:portrait) {
-  #posBtn {
-    bottom: 56px;
-    right: 25px;
-  }
-
   #panelsNav {
     height: 120px;
   }
@@ -361,16 +325,8 @@ body{
     line-height: 18px;
     height: 70px;
   }
-  #panelRecenterRoute {
-    bottom: 134px;
-  }
 }
 @media screen and (orientation:landscape) {
-  #posBtn {
-    bottom: 12px;
-    right: 5px;
-  }
-
   #panelsNav {
     height: 70px;
   }
@@ -378,7 +334,7 @@ body{
     height: 52px;
   }
   #btnCancelRoute {
-    top: 5px;
+    top: 3px;
   }
   #totalProgress {
     bottom: 10px;
@@ -396,8 +352,5 @@ body{
     font-size: 17px;
     line-height: 17px;
     height: 45px;
-  }
-  #panelRecenterRoute {
-    bottom: 84px;
   }
 }
