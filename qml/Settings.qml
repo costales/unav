@@ -94,7 +94,7 @@ Page {
                         id: unitListItemLayout
                         title.text: model.unit
                         title.color: theme.palette.normal.backgroundSecondaryText
-                        padding { top: units.gu(0); bottom: units.gu(0) } // THis should not be necessary, but it is
+                        padding { top: units.gu(0); bottom: units.gu(0) } // This should not be necessary, but it is
                         Icon {
                             SlotsLayout.position: SlotsLayout.Trailing
                             width: units.gu(2)
@@ -113,9 +113,9 @@ Page {
             }
 
             ListItemHeader {
-                 id: navigationListHeader
-                 title: i18n.tr("Navigation")
-                 color: theme.palette.normal.background
+                id: navigationListHeader
+                title: i18n.tr("Navigation")
+                color: theme.palette.normal.background
             }
 
             ListItem {
@@ -134,6 +134,23 @@ Page {
                                 navApp.settings.legalRadarShow = false;
                                 PopupUtils.open(confirmEnableRadar);
                             }
+                        }
+                        SlotsLayout.position: SlotsLayout.Last
+                    }
+                }
+            }
+
+            ListItem {
+                height: navTolls.height + divider.height
+                ListItemLayout {
+                    id: navTolls
+                    title.text: i18n.tr("Use roads with tolls")
+                    Switch {
+                        id: navTollsSwitch
+                        checked: navApp.settings.tolls
+                        onClicked: {
+                            navApp.settings.tolls = checked;
+                            mainPageStack.executeJavaScript("settings.set_tolls(" + navApp.settings.tolls + ");");
                         }
                         SlotsLayout.position: SlotsLayout.Last
                     }
@@ -170,23 +187,6 @@ Page {
                         bottom: parent.bottom
                         bottomMargin: units.gu(1)
                         topMargin: units.gu(3)
-                    }
-                }
-            }
-
-            ListItem {
-                height: navTolls.height + divider.height
-                ListItemLayout {
-                    id: navTolls
-                    title.text: i18n.tr("Use roads with tolls")
-                    Switch {
-                        id: navTollsSwitch
-                        checked: navApp.settings.tolls
-                        onClicked: {
-                            navApp.settings.tolls = checked;
-                            mainPageStack.executeJavaScript("settings.set_tolls(" + navApp.settings.tolls + ");");
-                        }
-                        SlotsLayout.position: SlotsLayout.Last
                     }
                 }
             }
