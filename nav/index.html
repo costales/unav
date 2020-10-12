@@ -444,6 +444,7 @@
 						for (i=0; i<allPOIs.length; i++) {
 							if (props.name != allPOIs[i].get('name'))
 								var icon = new ol.style.Style({
+									zIndex: 1,
 									image: new ol.style.Icon({
 										anchor: [15, 41],
 										anchorXUnits: "pixels",
@@ -453,6 +454,7 @@
 								});
 							else
 								var icon = new ol.style.Style({
+									zIndex: 2,
 									image: new ol.style.Icon({
 										anchor: [15, 41],
 										anchorXUnits: "pixels",
