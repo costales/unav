@@ -170,8 +170,10 @@ UI.prototype.set_confirm_btns = function(mode) {
 }
 
 UI.prototype.pos_btn_height = function() {
-    if ($("#panelsNav").is(":visible"))
+    if ($("#panelsNav").is(":visible")) {
         $("#posBtn").css('bottom', $("#panelsNav").height()+ui.POSBTN_HEIGHT+"px");
+        $(".ol-compassctrl.compass").css('top', $("#posBtn").css('top'));
+    }
     if ($("#panelConfirmRoute").is(":visible"))
         $("#posBtn").css('bottom', $("#panelConfirmRoute").height()+ui.POSBTN_HEIGHT+"px");
     if ($("#panelsNav").is(":hidden") && $("#panelConfirmRoute").is(":hidden"))

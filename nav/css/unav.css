@@ -292,9 +292,9 @@ body{
 .ol-compassctrl.compass {
   width: 60px;
   height: 60px;
-  right: 25px;
-  top: 100px;
+  left: 25px;
   position: fixed;
+  user-select: none;
   display: none;
 }
 
