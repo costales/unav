@@ -23,195 +23,195 @@ import "../js/db.js" as UnavDB
 import "../components"
 
 Item {
-    id: container
-    anchors.fill: parent
+	id: container
+	anchors.fill: parent
 
-    property ListView flickable: listView
+	property ListView flickable: listView
 
-    signal setSearchText(string text)
+	signal setSearchText(string text)
 
-    Component.onCompleted: {
-        if (mainPageStack.lastSearchResultsOffline) {
-            var json = JSON.parse(mainPageStack.lastSearchResultsOffline);
-            searchModel.loadList(json.result);
-        }
-        else {
-            searchModel.clear();
-            statusLabel.text = "";
-            var res = UnavDB.getSearchHistory();
-            var len = res.rows.length;
-            for (var i = 0; i < len; ++i) {
-                var item = {
-                    "title": res.rows.item(i).key,
-                    "lng": 0.0,
-                    "lat": 0.0
-                };
-                searchModel.append(item);
-            }
-        }
-    }
+	Component.onCompleted: {
+		if (mainPageStack.lastSearchResultsOffline) {
+			var json = JSON.parse(mainPageStack.lastSearchResultsOffline);
+			searchModel.loadList(json.result);
+		}
+		else {
+			searchModel.clear();
+			statusLabel.text = "";
+			var res = UnavDB.getSearchHistory();
+			var len = res.rows.length;
+			for (var i = 0; i < len; ++i) {
+				var item = {
+					"title": res.rows.item(i).key,
+					"lng": 0.0,
+					"lat": 0.0
+				};
+				searchModel.append(item);
+			}
+		}
+	}
 
-    ListModel {
-        id: searchModel
+	ListModel {
+		id: searchModel
 
-        function loadList (json) {
-            searchModel.clear();
-            for (var i = 0; i < json.length; i++) {
-                var item = {
-                    "title": json[i].title,
-                    "lng": json[i].lng,
-                    "lat": json[i].lat
-                };
-                searchModel.append(item);
-            }
-        }
-    }
+		function loadList (json) {
+			searchModel.clear();
+			for (var i = 0; i < json.length; i++) {
+				var item = {
+					"title": json[i].title,
+					"lng": json[i].lng,
+					"lat": json[i].lat
+				};
+				searchModel.append(item);
+			}
+		}
+	}
 
-    Column {
-        id: notFound
-        visible: statusLabel.text != ""
-        anchors.centerIn: parent
-        spacing: units.gu(1)
-        Row {
-            anchors.horizontalCenter: notFound.horizontalCenter
-            Label {
-                id: statusLabel
-            }
-        }
-    }
+	Column {
+		id: notFound
+		visible: statusLabel.text != ""
+		anchors.centerIn: parent
+		spacing: units.gu(1)
+		Row {
+			anchors.horizontalCenter: notFound.horizontalCenter
+			Label {
+				id: statusLabel
+			}
+		}
+	}
 
-    ListView {
-        id: listView
+	ListView {
+		id: listView
 
-        clip: true
-        anchors { fill: parent; topMargin: units.gu(2) }
-        model: searchModel
-        delegate: ListItem {
-            height: resultsDelegateLayout.height + divider.height
-            leadingActions: ListItemActions {
-                actions: [
-                    Action {
-                        iconName: "delete"
-                        visible: model.lng === 0.0
-                        onTriggered: {
-                            UnavDB.removeHistorySearch(model.title);
-                            searchModel.remove(index, 1);
-                        }
-                    }
-                ]
-            }
-            trailingActions: ListItemActions {
-                actions: [
-                ]
-            }
-            ListItemLayout {
-                id: resultsDelegateLayout
-                title.text: model.title
-                title.maximumLineCount: 2
-                title.wrapMode: Text.WordWrap
-                subtitle.text: " "
-                subtitle.visible: true
-                title.color: model.lng === 0.0 ? theme.palette.normal.backgroundTertiaryText : theme.palette.normal.backgroundText
-            }
-            onClicked: {
-                if (model.lng === 0.0) { // History
-                    var text_aux = model.title;
-                    container.setSearchText(text_aux);
-                    searchModel.clear();
-                    statusLabel.text = i18n.tr("Searching...");
-                    searchJSON(text_aux);
-                }
-                else { // Show marker
-                    if (mainPageStack.columns === 1)
-                        mainPageStack.removePages(searchPage);
-                    mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.title + "\")");
-                }
-            }
-        }
+		clip: true
+		anchors { fill: parent; topMargin: units.gu(2) }
+		model: searchModel
+		delegate: ListItem {
+			height: resultsDelegateLayout.height + divider.height
+			leadingActions: ListItemActions {
+				actions: [
+					Action {
+						iconName: "delete"
+						visible: model.lng === 0.0
+						onTriggered: {
+							UnavDB.removeHistorySearch(model.title);
+							searchModel.remove(index, 1);
+						}
+					}
+				]
+			}
+			trailingActions: ListItemActions {
+				actions: [
+				]
+			}
+			ListItemLayout {
+				id: resultsDelegateLayout
+				title.text: model.title
+				title.maximumLineCount: 2
+				title.wrapMode: Text.WordWrap
+				subtitle.text: " "
+				subtitle.visible: true
+				title.color: model.lng === 0.0 ? theme.palette.normal.backgroundTertiaryText : theme.palette.normal.backgroundText
+			}
+			onClicked: {
+				if (model.lng === 0.0) { // History
+					var text_aux = model.title;
+					container.setSearchText(text_aux);
+					searchModel.clear();
+					statusLabel.text = i18n.tr("Searching...");
+					searchJSON(text_aux);
+				}
+				else { // Show marker
+					if (mainPageStack.columns === 1)
+						mainPageStack.removePages(searchPage);
+					mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.title + "\")");
+				}
+			}
+		}
 
-        header: TextField {
-            id: searchField
+		header: TextField {
+			id: searchField
 
-            primaryItem: Icon {
-                height: units.gu(2)
-                name: "find"
-            }
+			primaryItem: Icon {
+				height: units.gu(2)
+				name: "find"
+			}
 
-            anchors { left: parent.left; right: parent.right; margins: units.gu(2) }
-            hasClearButton: true
-            inputMethodHints: Qt.ImhNoPredictiveText
-            text: mainPageStack.lastSearchStringOffline
-            placeholderText: i18n.tr("Place or location")
+			anchors { left: parent.left; right: parent.right; margins: units.gu(2) }
+			hasClearButton: true
+			inputMethodHints: Qt.ImhNoPredictiveText
+			text: mainPageStack.lastSearchStringOffline
+			placeholderText: i18n.tr("Place or location")
 
-            Connections {
-                target: container
-                onSetSearchText: {
-                    searchField.text = text;
-                }
-            }
+			Connections {
+				target: container
+				onSetSearchText: {
+					searchField.text = text;
+				}
+			}
 
-            onTriggered: {
-                if (text.trim()) {
-                    UnavDB.saveToSearchHistory(text);
-                    searchModel.clear();
-                    statusLabel.text = i18n.tr("Searching...");
-                    searchJSON(text);
-                }
-            }
-            onTextChanged: {
-                mainPageStack.lastSearchStringOffline = text;
-                searchModel.clear();
-                if (!text.trim()) {
-                    searchModel.clear();
-                    statusLabel.text = "";
-                    var res = UnavDB.getSearchHistory();
-                    var len = res.rows.length;
-                    for (var i = 0; i < len; ++i) {
-                        var item = {
-                            "title": res.rows.item(i).key,
-                            "lng": 0.0,
-                            "lat": 0.0
-                        };
-                        searchModel.append(item);
-                    }
-                }
-            }
-        }
-    }
+			onTriggered: {
+				if (text.trim()) {
+					UnavDB.saveToSearchHistory(text);
+					searchModel.clear();
+					statusLabel.text = i18n.tr("Searching...");
+					searchJSON(text);
+				}
+			}
+			onTextChanged: {
+				mainPageStack.lastSearchStringOffline = text;
+				searchModel.clear();
+				if (!text.trim()) {
+					searchModel.clear();
+					statusLabel.text = "";
+					var res = UnavDB.getSearchHistory();
+					var len = res.rows.length;
+					for (var i = 0; i < len; ++i) {
+						var item = {
+							"title": res.rows.item(i).key,
+							"lng": 0.0,
+							"lat": 0.0
+						};
+						searchModel.append(item);
+					}
+				}
+			}
+		}
+	}
 
-    ScrollView {
-        anchors.fill: parent
-        contentItem: listView
-    }
+	ScrollView {
+		anchors.fill: parent
+		contentItem: listView
+	}
 
-    function searchJSON(text) {
-        var request = new XMLHttpRequest();
-        request.open("GET", "http://localhost:8553/v2/search?search="+text, false);
-        request.setRequestHeader("Content-Type", 'application/json');
+	function searchJSON(text) {
+		var request = new XMLHttpRequest();
+		request.open("GET", "http://localhost:8553/v2/search?search="+text, false);
+		request.setRequestHeader("Content-Type", 'application/json');
 
-        request.onreadystatechange = function() {
-            if (request.readyState == XMLHttpRequest.DONE) {
-                statusLabel.text = "";
-                try {
-                    var json = JSON.parse(request.responseText);
-                    if (json.result.length > 0) {
-                        mainPageStack.lastSearchResultsOffline = request.responseText;
-                        searchModel.loadList(json.result);
-                    }
-                    else {
-                        mainPageStack.lastSearchResultsOffline = "";
-                        statusLabel.text = i18n.tr("Nothing found");
-                    }
-                } catch(e) {
-                    mainPageStack.lastSearchResultsOffline = "";
-                    statusLabel.text = i18n.tr("Error searching");
-                }
-            }
-        }
-        request.onerror = function () {
-            mainPageStack.lastSearchResultsOffline = "";
-            statusLabel.text = i18n.tr("Time out!");
-        };
-        request.send();
-    }
+		request.onreadystatechange = function() {
+			if (request.readyState == XMLHttpRequest.DONE) {
+				statusLabel.text = "";
+				try {
+					var json = JSON.parse(request.responseText);
+					if (json.result.length > 0) {
+						mainPageStack.lastSearchResultsOffline = request.responseText;
+						searchModel.loadList(json.result);
+					}
+					else {
+						mainPageStack.lastSearchResultsOffline = "";
+						statusLabel.text = i18n.tr("Nothing found");
+					}
+				} catch(e) {
+					mainPageStack.lastSearchResultsOffline = "";
+					statusLabel.text = i18n.tr("Error searching");
+				}
+			}
+		}
+		request.onerror = function () {
+			mainPageStack.lastSearchResultsOffline = "";
+			statusLabel.text = i18n.tr("Time out!");
+		};
+		request.send();
+	}
 }

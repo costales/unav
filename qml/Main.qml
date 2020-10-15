@@ -31,8 +31,8 @@ import "js/db.js" as UnavDB
 MainView {
 	id: navApp
 
-    width: units.gu(130)
-    height: units.gu(85)
+	width: units.gu(130)
+	height: units.gu(85)
 	
 	objectName: "navApp"
 	applicationName: "navigator.costales"
@@ -63,16 +63,16 @@ MainView {
 		property string lastLng: '4.666389'
 		property string lastLat: '50.009167'
 		property string lastZoom: '4'
-        property string default_coord_0a: '51.506177'
-        property string default_coord_1a: '-0.100236'
-        property string default_coord_2a: '51'
-        property string default_coord_2b: '30'
-        property string default_coord_2c: '22.23'
-        property string default_coord_2d: 'N'
-        property string default_coord_3a: '0'
-        property string default_coord_3b: '6'
-        property string default_coord_3c: '0.84'
-        property string default_coord_3d: 'W'
+		property string default_coord_0a: '51.506177'
+		property string default_coord_1a: '-0.100236'
+		property string default_coord_2a: '51'
+		property string default_coord_2b: '30'
+		property string default_coord_2c: '22.23'
+		property string default_coord_2d: 'N'
+		property string default_coord_3a: '0'
+		property string default_coord_3b: '6'
+		property string default_coord_3c: '0.84'
+		property string default_coord_3d: 'W'
 	}
 
 	ScreenSaver {
@@ -194,10 +194,10 @@ MainView {
 							break;
 						case "openwebsite":
 							var website = request.url.toString().replace('http://openwebsite/','');
-                            Qt.openUrlExternally(website);
+							Qt.openUrlExternally(website);
 							break;
 						case "sendemail":
-                            Qt.openUrlExternally("mailto:" + url[3]);
+							Qt.openUrlExternally("mailto:" + url[3]);
 							break;
 						case "savelastpos":
 							navApp.settings.lastLng = url[3];
@@ -218,7 +218,7 @@ MainView {
 
 				onJavaScriptConsoleMessage: {
 					var msg = "[JS] (%1:%2) %3".arg(sourceID).arg(lineNumber).arg(message)
-				    console.log(msg)
+					console.log(msg)
 				}
 				
 				Connections {
@@ -268,69 +268,69 @@ MainView {
 		}
 	}
 
-    Component {
-         id: newFavDialog
-         Dialog {
-            id: newFav
-            title: i18n.tr("Adding Favorite")
-            
-            property bool isOverwriteMode: false
-         
+	Component {
+		 id: newFavDialog
+		 Dialog {
+			id: newFav
+			title: i18n.tr("Adding Favorite")
+			
+			property bool isOverwriteMode: false
+		 
 			Component.onCompleted: favNameField.forceActiveFocus()
 
 			function checkFavoriteExists() {
-                var exist_fav = UnavDB.getFavorite(favNameField.text);
-                if (exist_fav[0] === null || exist_fav[1] === null) {
-                    return false;
-                } else {
-                    return true;
-                }
-            }
+				var exist_fav = UnavDB.getFavorite(favNameField.text);
+				if (exist_fav[0] === null || exist_fav[1] === null) {
+					return false;
+				} else {
+					return true;
+				}
+			}
 
-            TextField {
-                id: favNameField
-                width: parent.width
-                hasClearButton: true
-                inputMethodHints: Qt.ImhNoPredictiveText
-                placeholderText: i18n.tr("Insert name")
-                onTextChanged: {
-                    if (favNameField.text.trim()) {
-                        isOverwriteMode = checkFavoriteExists();
-                    }
-                }
-            }
+			TextField {
+				id: favNameField
+				width: parent.width
+				hasClearButton: true
+				inputMethodHints: Qt.ImhNoPredictiveText
+				placeholderText: i18n.tr("Insert name")
+				onTextChanged: {
+					if (favNameField.text.trim()) {
+						isOverwriteMode = checkFavoriteExists();
+					}
+				}
+			}
 
-            Column {
-                width: parent.width
-                Row {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    spacing: units.gu(2)
-                    Button {
-                        text: i18n.tr("Cancel")
-                        onClicked: {
-                            favNameField.text = ''
+			Column {
+				width: parent.width
+				Row {
+					anchors.horizontalCenter: parent.horizontalCenter
+					spacing: units.gu(2)
+					Button {
+						text: i18n.tr("Cancel")
+						onClicked: {
+							favNameField.text = ''
 							PopupUtils.close(newFav);
-                        }
-                    }
-                    Button {
-                        text: isOverwriteMode ? i18n.tr("Overwrite") : i18n.tr("Add")
-                        color: isOverwriteMode ? theme.palette.normal.negative : theme.palette.normal.positive
-                        enabled: favNameField.text.trim()
-                        onClicked: {
-                            UnavDB.saveFavorite(favNameField.text, mainPageStack.favLat, mainPageStack.favLng);
+						}
+					}
+					Button {
+						text: isOverwriteMode ? i18n.tr("Overwrite") : i18n.tr("Add")
+						color: isOverwriteMode ? theme.palette.normal.negative : theme.palette.normal.positive
+						enabled: favNameField.text.trim()
+						onClicked: {
+							UnavDB.saveFavorite(favNameField.text, mainPageStack.favLat, mainPageStack.favLng);
 							PopupUtils.close(newFav);
-                        }
-                    }
-                }
-            }
-        }
-    }
+						}
+					}
+				}
+			}
+		}
+	}
 
-    Connections {
-        target: Qt.application
-        onStateChanged: {
-            if (mainPageStack.onLoadingExecuted && Qt.application.state !== Qt.ApplicationActive)
+	Connections {
+		target: Qt.application
+		onStateChanged: {
+			if (mainPageStack.onLoadingExecuted && Qt.application.state !== Qt.ApplicationActive)
 				mainPageStack.executeJavaScript("qml_save_last_pos()");
 		}
-    }
+	}
 }

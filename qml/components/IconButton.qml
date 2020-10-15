@@ -18,36 +18,36 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 AbstractButton {
-    id: button
+	id: button
 
-    readonly property string defaultColor: "#0F8B21"
-    property alias color: shape.backgroundColor
-    property alias icon: icon
+	readonly property string defaultColor: "#0F8B21"
+	property alias color: shape.backgroundColor
+	property alias icon: icon
 
-    width: units.gu(5)
-    height: units.gu(5)
-    opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
+	width: units.gu(5)
+	height: units.gu(5)
+	opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
 
-    Behavior on opacity {
-        UbuntuNumberAnimation { }
-    }
+	Behavior on opacity {
+		UbuntuNumberAnimation { }
+	}
 
-    UbuntuShape {
-        id: shape
+	UbuntuShape {
+		id: shape
 
-        aspect: UbuntuShape.Flat
-        anchors.fill: parent
-        backgroundColor: defaultColor
-        radius: "medium"
-    }
+		aspect: UbuntuShape.Flat
+		anchors.fill: parent
+		backgroundColor: defaultColor
+		radius: "medium"
+	}
 
-    Icon {
-        id: icon
+	Icon {
+		id: icon
 
-        anchors.centerIn: parent
-        width: units.gu(3)
-        height: units.gu(3)
-        color: "white"
-        z: 1
-    }
+		anchors.centerIn: parent
+		width: units.gu(3)
+		height: units.gu(3)
+		color: "white"
+		z: 1
+	}
 }

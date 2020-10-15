@@ -19,96 +19,96 @@
 var db = null;
 
 function openDB() {
-	if (db === null) {
-		db = LocalStorage.openDatabaseSync("unav_db", "0.1", "Favorites", 1000);
-		db.transaction(function(tx){
-			tx.executeSql('CREATE TABLE IF NOT EXISTS favorites( key TEXT UNIQUE, lat TEXT, lng TEXT)');
-			tx.executeSql('CREATE TABLE IF NOT EXISTS poi_historial36( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, label TEXT UNIQUE, tag_online TEXT, tag_offline TEXT, enabled_offline TEXT )');
-			tx.executeSql('CREATE TABLE IF NOT EXISTS search_history37( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, key TEXT UNIQUE )');
-		});
-	}
+    if (db === null) {
+        db = LocalStorage.openDatabaseSync("unav_db", "0.1", "Favorites", 1000);
+        db.transaction(function(tx){
+            tx.executeSql('CREATE TABLE IF NOT EXISTS favorites( key TEXT UNIQUE, lat TEXT, lng TEXT)');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS poi_historial36( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, label TEXT UNIQUE, tag_online TEXT, tag_offline TEXT, enabled_offline TEXT )');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS search_history37( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, key TEXT UNIQUE )');
+        });
+    }
 }
 
 function saveFavorite(name, lat, lng) {
-	openDB();
-	db.transaction( function(tx){
-		tx.executeSql('INSERT OR REPLACE INTO favorites VALUES(?, ?, ?);', [name, lat, lng]);
-	});
+    openDB();
+    db.transaction( function(tx){
+        tx.executeSql('INSERT OR REPLACE INTO favorites VALUES(?, ?, ?);', [name, lat, lng]);
+    });
 }
 
 function removeFavorite(key) {
-	openDB();
-	db.transaction( function(tx){
-		tx.executeSql('DELETE FROM favorites WHERE key=?;', [key]);
-	});
+    openDB();
+    db.transaction( function(tx){
+        tx.executeSql('DELETE FROM favorites WHERE key=?;', [key]);
+    });
 }
 
 function getFavorite(key) {
-	var fav_lat = "";
-	var fav_lng = "";
-	openDB();
-	db.transaction(function(tx) {
-		var rs = tx.executeSql('SELECT lat,lng FROM favorites WHERE key=? ORDER BY key COLLATE NOCASE;', [key]);
-		if (rs.rows.length > 0) {
-			fav_lat = rs.rows.item(0).lat;
-			fav_lng = rs.rows.item(0).lng;
-		}
-		else {
-			fav_lat = null;
-			fav_lng = null;
-		}
-	});
-	return [fav_lat, fav_lng];
+    var fav_lat = "";
+    var fav_lng = "";
+    openDB();
+    db.transaction(function(tx) {
+        var rs = tx.executeSql('SELECT lat,lng FROM favorites WHERE key=? ORDER BY key COLLATE NOCASE;', [key]);
+        if (rs.rows.length > 0) {
+            fav_lat = rs.rows.item(0).lat;
+            fav_lng = rs.rows.item(0).lng;
+        }
+        else {
+            fav_lat = null;
+            fav_lng = null;
+        }
+    });
+    return [fav_lat, fav_lng];
 }
 
 function getFavorites() {
-	var res;
-	openDB();
-	db.transaction(function(tx) {
-		res = tx.executeSql('SELECT * FROM favorites ORDER BY key COLLATE NOCASE;', []);
-	});
-	return res;
+    var res;
+    openDB();
+    db.transaction(function(tx) {
+        res = tx.executeSql('SELECT * FROM favorites ORDER BY key COLLATE NOCASE;', []);
+    });
+    return res;
 }
 
 // nearByHistory
 function saveToNearByHistory(label, tag_online, tag_offline, enabled_offline) {
-	openDB();
-	db.transaction( function(tx){
-		tx.executeSql('INSERT OR REPLACE INTO poi_historial36(label, tag_online, tag_offline, enabled_offline) VALUES(?,?,?,?)', [label, tag_online, tag_offline, enabled_offline]);
-		tx.executeSql('DELETE FROM poi_historial36 WHERE id IN (SELECT id FROM poi_historial36 ORDER BY id DESC LIMIT -1 OFFSET 5)'); // Keep only 5 last
-	});
+    openDB();
+    db.transaction( function(tx){
+        tx.executeSql('INSERT OR REPLACE INTO poi_historial36(label, tag_online, tag_offline, enabled_offline) VALUES(?,?,?,?)', [label, tag_online, tag_offline, enabled_offline]);
+        tx.executeSql('DELETE FROM poi_historial36 WHERE id IN (SELECT id FROM poi_historial36 ORDER BY id DESC LIMIT -1 OFFSET 5)'); // Keep only 5 last
+    });
 }
 
 function getNearByHistory() {
-	var res;
-	openDB();
-	db.transaction(function(tx) {
-		res = tx.executeSql('SELECT * FROM poi_historial36 ORDER BY id DESC', []);
-	});
-	return res;
+    var res;
+    openDB();
+    db.transaction(function(tx) {
+        res = tx.executeSql('SELECT * FROM poi_historial36 ORDER BY id DESC', []);
+    });
+    return res;
 }
 
 // searchHistory
 function saveToSearchHistory(key) {
-	openDB();
-	db.transaction( function(tx){
-		tx.executeSql('INSERT OR REPLACE INTO search_history37(key) VALUES(?)', [key]);
-		tx.executeSql('DELETE FROM search_history37 WHERE id IN (SELECT id FROM search_history37 ORDER BY id DESC LIMIT -1 OFFSET 7)'); // Keep last 7
-	});
+    openDB();
+    db.transaction( function(tx){
+        tx.executeSql('INSERT OR REPLACE INTO search_history37(key) VALUES(?)', [key]);
+        tx.executeSql('DELETE FROM search_history37 WHERE id IN (SELECT id FROM search_history37 ORDER BY id DESC LIMIT -1 OFFSET 7)'); // Keep last 7
+    });
 }
 
 function getSearchHistory() {
-	var res;
-	openDB();
-	db.transaction(function(tx) {
-		res = tx.executeSql('SELECT * FROM search_history37 ORDER BY id DESC', []);
-	});
-	return res;
+    var res;
+    openDB();
+    db.transaction(function(tx) {
+        res = tx.executeSql('SELECT * FROM search_history37 ORDER BY id DESC', []);
+    });
+    return res;
 }
 
 function removeHistorySearch(key) {
-	openDB();
-	db.transaction( function(tx){
-		tx.executeSql('DELETE FROM search_history37 WHERE key=?;', [key]);
-	});
+    openDB();
+    db.transaction( function(tx){
+        tx.executeSql('DELETE FROM search_history37 WHERE key=?;', [key]);
+    });
 }

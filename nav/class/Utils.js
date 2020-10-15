@@ -18,8 +18,8 @@ function Utils() {
 
 Utils.prototype.parse_poi_url = function(poi_website) {
     if (poi_website.trim() == '') // No website
-		return '';
-	var web = poi_website.replace(/ /g,'');
+        return '';
+    var web = poi_website.replace(/ /g,'');
     if (web.substring(0, 8) === "https://" || web.substring(0, 7) === "http://")
         return web;
     else

@@ -19,19 +19,19 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 AbstractButton {
-    id: abstractButton
+	id: abstractButton
 
-    property alias icon: _icon
+	property alias icon: _icon
 
-    width: _icon.width + units.gu(2)
-    height: width
+	width: _icon.width + units.gu(2)
+	height: width
 
-    Icon {
-        id: _icon
-        width: units.gu(2)
-        height: width
-        anchors.centerIn: parent
-        color: theme.palette.normal.foreground
-    }
+	Icon {
+		id: _icon
+		width: units.gu(2)
+		height: width
+		anchors.centerIn: parent
+		color: theme.palette.normal.foreground
+	}
 }
 

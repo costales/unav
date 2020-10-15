@@ -17,12 +17,12 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 Action {
-    id: closeButton
-    iconName: "close"
-    visible: mainPageStack.columns !== 1
-    shortcut: "Escape"
-    onTriggered: {
-        mainPageStack.hideSideBar();
-        mainPageStack.removePages(mainPageStack.primaryPage);
-    }
+	id: closeButton
+	iconName: "close"
+	visible: mainPageStack.columns !== 1
+	shortcut: "Escape"
+	onTriggered: {
+		mainPageStack.hideSideBar();
+		mainPageStack.removePages(mainPageStack.primaryPage);
+	}
 }

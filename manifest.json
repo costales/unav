@@ -7,7 +7,7 @@
 			"apparmor": "app-armor.json",
 			"desktop": "app.desktop",
 			"urls": "app-dispatcher.json",
-            "content-hub": "app-contenthub.json"
+			"content-hub": "app-contenthub.json"
 		}
 	},
 	"maintainer": "Marcos Costales <marcos.costales@gmail.com>",

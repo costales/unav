@@ -20,58 +20,58 @@ import Ubuntu.Components 1.3
 import "components"
 
 Page {
-    id: picker
+	id: picker
 
-    property var lat
-    property var lng
+	property var lat
+	property var lng
 
-    // Property to indicate if the share page was opened directly (from a popup) or as a child (from the search page)
-    property bool isParentPage: false
+	// Property to indicate if the share page was opened directly (from a popup) or as a child (from the search page)
+	property bool isParentPage: false
 
-    header: UNavHeader {
-        title: i18n.tr("Share location to")
-        trailingActionBar.actions: CloseHeaderAction {
-            visible: mainPageStack.columns !== 1 && isParentPage
-        }
-    }
+	header: UNavHeader {
+		title: i18n.tr("Share location to")
+		trailingActionBar.actions: CloseHeaderAction {
+			visible: mainPageStack.columns !== 1 && isParentPage
+		}
+	}
 
-    Component.onDestruction: {
-        // Hide 2nd column when returning to the map to avoid an empty white column
-        if (mainPageStack.columns === 1 && isParentPage)
-            mainPageStack.hideSideBar()
-    }
+	Component.onDestruction: {
+		// Hide 2nd column when returning to the map to avoid an empty white column
+		if (mainPageStack.columns === 1 && isParentPage)
+			mainPageStack.hideSideBar()
+	}
 
-    Component {
-        id: resultComponent
-        ContentItem {}
-    }
+	Component {
+		id: resultComponent
+		ContentItem {}
+	}
 
-    ContentPeerPicker {
-        id: peerPicker
+	ContentPeerPicker {
+		id: peerPicker
 
-        showTitle: false
-        contentType: ContentType.Links
-        handler: ContentHandler.Share
+		showTitle: false
+		contentType: ContentType.Links
+		handler: ContentHandler.Share
 
-        anchors.topMargin: picker.header.height
+		anchors.topMargin: picker.header.height
 
-        onCancelPressed: {
-            // Do not pop the share page when in a 2-column layout as it will leave an empty second column
-            if (mainPageStack.columns === 1) {
-                mainPageStack.removePages(picker);
-            }
-        }
+		onCancelPressed: {
+			// Do not pop the share page when in a 2-column layout as it will leave an empty second column
+			if (mainPageStack.columns === 1) {
+				mainPageStack.removePages(picker);
+			}
+		}
 
-        onPeerSelected: {
-            var request = peer.request();
-            var url2shared = 'https://map.unav.me?' + parseFloat(picker.lat).toFixed(5) + ',' + parseFloat(picker.lng).toFixed(5);
-            request.items = [ resultComponent.createObject(navApp.mainPageStack, {"url": url2shared}) ];
-            request.state = ContentTransfer.Charged;
-            // Do not pop the share page when in a 2-column layout as it will leave
-            // an empty second column
-            if (mainPageStack.columns === 1) {
-                mainPageStack.removePages(picker);
-            }
-        }
-    }
+		onPeerSelected: {
+			var request = peer.request();
+			var url2shared = 'https://map.unav.me?' + parseFloat(picker.lat).toFixed(5) + ',' + parseFloat(picker.lng).toFixed(5);
+			request.items = [ resultComponent.createObject(navApp.mainPageStack, {"url": url2shared}) ];
+			request.state = ContentTransfer.Charged;
+			// Do not pop the share page when in a 2-column layout as it will leave
+			// an empty second column
+			if (mainPageStack.columns === 1) {
+				mainPageStack.removePages(picker);
+			}
+		}
+	}
 }

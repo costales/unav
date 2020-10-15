@@ -25,63 +25,63 @@ import Ubuntu.Components 1.3
 */
 
 ListItem {
-    id: expandableListItem
+	id: expandableListItem
 
-    // Public APIs
-    property ListModel model
-    property Component delegate
-    property alias titleText: expandableHeader.title
-    property alias subText: expandableHeader.subtitle
-    property alias listViewHeight: expandableListLoader.height
+	// Public APIs
+	property ListModel model
+	property Component delegate
+	property alias titleText: expandableHeader.title
+	property alias subText: expandableHeader.subtitle
+	property alias listViewHeight: expandableListLoader.height
 
-    height: headerListItem.height
-    expansion.height: headerListItem.height + expandableListLoader.height
-    onClicked: toggleExpansion()
+	height: headerListItem.height
+	expansion.height: headerListItem.height + expandableListLoader.height
+	onClicked: toggleExpansion()
 
-    function toggleExpansion() {
-        expansion.expanded = !expansion.expanded
-    }
+	function toggleExpansion() {
+		expansion.expanded = !expansion.expanded
+	}
 
-    ListItem {
-        id: headerListItem
-        height: expandableHeader.height + divider.height
-        divider.visible: false
-        ListItemLayout {
-            id: expandableHeader
+	ListItem {
+		id: headerListItem
+		height: expandableHeader.height + divider.height
+		divider.visible: false
+		ListItemLayout {
+			id: expandableHeader
 
-            subtitle.textSize: Label.Medium
-            subtitle.visible: !expansion.expanded
-            Icon {
-                id: arrow
+			subtitle.textSize: Label.Medium
+			subtitle.visible: !expansion.expanded
+			Icon {
+				id: arrow
 
-                width: units.gu(2)
-                height: width
-                SlotsLayout.position: SlotsLayout.Trailing
-                name: "go-down"
-                rotation: expandableListItem.expansion.expanded ? 180 : 0
+				width: units.gu(2)
+				height: width
+				SlotsLayout.position: SlotsLayout.Trailing
+				name: "go-down"
+				rotation: expandableListItem.expansion.expanded ? 180 : 0
 
-                Behavior on rotation {
-                    UbuntuNumberAnimation {}
-                }
-            }
-        }
-    }
+				Behavior on rotation {
+					UbuntuNumberAnimation {}
+				}
+			}
+		}
+	}
 
-    Loader {
-        id: expandableListLoader
-        width: parent.width
-        asynchronous: true
-        anchors.top: headerListItem.bottom
-        sourceComponent: expandableListItem.expansion.expanded ? expandableListComponent : undefined
-    }
+	Loader {
+		id: expandableListLoader
+		width: parent.width
+		asynchronous: true
+		anchors.top: headerListItem.bottom
+		sourceComponent: expandableListItem.expansion.expanded ? expandableListComponent : undefined
+	}
 
-    Component {
-        id: expandableListComponent
-        ListView {
-            id: expandableList
-            interactive: false
-            model: expandableListItem.model
-            delegate: expandableListItem.delegate
-        }
-    }
+	Component {
+		id: expandableListComponent
+		ListView {
+			id: expandableList
+			interactive: false
+			model: expandableListItem.model
+			delegate: expandableListItem.delegate
+		}
+	}
 }

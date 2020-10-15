@@ -21,102 +21,102 @@ import Ubuntu.Components.Popups 1.3
 import "components"
 
 Page {
-    id: searchPage
+	id: searchPage
 
-    Component.onDestruction: {
-        mainPageStack.hideSideBar();
-    }
+	Component.onDestruction: {
+		mainPageStack.hideSideBar();
+	}
 
-    header: UNavHeader {
-        id: standardHeader
+	header: UNavHeader {
+		id: standardHeader
 
-        contents: Label {
-            textSize: Label.Large
-            color: "White"
-            font.weight: Font.Light
-            text: i18n.tr("Search")
-            verticalAlignment: Text.AlignVCenter
-            width: parent.width; height: units.gu(4)
-            anchors.verticalCenter: parent.verticalCenter
-        }
+		contents: Label {
+			textSize: Label.Large
+			color: "White"
+			font.weight: Font.Light
+			text: i18n.tr("Search")
+			verticalAlignment: Text.AlignVCenter
+			width: parent.width; height: units.gu(4)
+			anchors.verticalCenter: parent.verticalCenter
+		}
 
-        trailingActionBar.actions: [
-            CloseHeaderAction {}
-        ]
+		trailingActionBar.actions: [
+			CloseHeaderAction {}
+		]
 
-        extension: UNavPageSection {
-            id: typeSections
-            anchors {
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-            }
+		extension: UNavPageSection {
+			id: typeSections
+			anchors {
+				left: parent.left
+				right: parent.right
+				bottom: parent.bottom
+			}
 
-            // TRANSLATORS: These are section headers. Please keep their translations short and not
-            // longer than their original string lengths.
-            model: [i18n.tr("Places"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Simulate"), i18n.tr("Track"), i18n.tr("Coordinate")]
-            selectedIndex: navApp.settings.lastSearchTab
+			// TRANSLATORS: These are section headers. Please keep their translations short and not
+			// longer than their original string lengths.
+			model: [i18n.tr("Places"), i18n.tr("POIs"), i18n.tr("Favorites"), i18n.tr("Simulate"), i18n.tr("Track"), i18n.tr("Coordinate")]
+			selectedIndex: navApp.settings.lastSearchTab
 
-            onSelectedIndexChanged: {
-                navApp.settings.lastSearchTab = selectedIndex;
-                if (selectedIndex !== 1) {
-                    addActionList.hide()
-                }
-            }
-        }
-    }
+			onSelectedIndexChanged: {
+				navApp.settings.lastSearchTab = selectedIndex;
+				if (selectedIndex !== 1) {
+					addActionList.hide()
+				}
+			}
+		}
+	}
 
-    Loader {
-        id: mainLoader
-        anchors { top: (typeSections.selectedIndex == 3) ? standardHeader.bottom : standardHeader.bottom; left: parent.left; right: parent.right; bottom: parent.bottom }
-        source: {
-            switch(typeSections.selectedIndex) {
-                case 0:
-                    if (navApp.settings.onlineSearch)
-                        return Qt.resolvedUrl("places/online.qml");
-                    else
-                        return Qt.resolvedUrl("places/offline.qml");
-                    break;
-                case 1:
-                    return Qt.resolvedUrl("POIs.qml");
-                    break;
-                case 2:
-                    return Qt.resolvedUrl("Favorites.qml")
-                    break;
-                case 3:
-                    return Qt.resolvedUrl("Simulate.qml")
-                    break;
-                case 4:
-                    return Qt.resolvedUrl("GPX.qml")
-                    break;
-                case 5:
-                    return Qt.resolvedUrl("Coordinate.qml")
-                    break;
-                default:
-                    return '';
-            }
-        }
-    }
+	Loader {
+		id: mainLoader
+		anchors { top: (typeSections.selectedIndex == 3) ? standardHeader.bottom : standardHeader.bottom; left: parent.left; right: parent.right; bottom: parent.bottom }
+		source: {
+			switch(typeSections.selectedIndex) {
+				case 0:
+					if (navApp.settings.onlineSearch)
+						return Qt.resolvedUrl("places/online.qml");
+					else
+						return Qt.resolvedUrl("places/offline.qml");
+					break;
+				case 1:
+					return Qt.resolvedUrl("POIs.qml");
+					break;
+				case 2:
+					return Qt.resolvedUrl("Favorites.qml")
+					break;
+				case 3:
+					return Qt.resolvedUrl("Simulate.qml")
+					break;
+				case 4:
+					return Qt.resolvedUrl("GPX.qml")
+					break;
+				case 5:
+					return Qt.resolvedUrl("Coordinate.qml")
+					break;
+				default:
+					return '';
+			}
+		}
+	}
 
-    ActionSelectionPopover {
-        id: addActionList
+	ActionSelectionPopover {
+		id: addActionList
 
-        width: units.gu(25)
-        anchors {
-            top: parent.top
-            right: parent.right
-            rightMargin: units.gu(0.5)
-            topMargin: searchPage.header.height
-        }
+		width: units.gu(25)
+		anchors {
+			top: parent.top
+			right: parent.right
+			rightMargin: units.gu(0.5)
+			topMargin: searchPage.header.height
+		}
 
-        delegate: ListItem {
-            Label {
-                text: action.text
-                elide: Text.ElideMiddle
-                opacity: action.enabled ? 1.0 : 0.5
-                anchors { left: parent.left; right: parent.right; margins: units.gu(2); verticalCenter: parent.verticalCenter }
-            }
-        }
-    }
+		delegate: ListItem {
+			Label {
+				text: action.text
+				elide: Text.ElideMiddle
+				opacity: action.enabled ? 1.0 : 0.5
+				anchors { left: parent.left; right: parent.right; margins: units.gu(2); verticalCenter: parent.verticalCenter }
+			}
+		}
+	}
 }
 

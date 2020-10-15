@@ -23,265 +23,265 @@ import "../js/db.js" as UnavDB
 import "../components"
 
 Item {
-    id: container
-    anchors.fill: parent
+	id: container
+	anchors.fill: parent
 
-    property ListView flickable: listView
+	property ListView flickable: listView
 
-    signal setSearchText(string text)
+	signal setSearchText(string text)
 
-    Component.onCompleted: {
-        if (mainPageStack.lastSearchResultsOnline) {
-            var json = JSON.parse(mainPageStack.lastSearchResultsOnline);
-            sortedSearchModel.loadLastResults(json.results);
-            listView.model = sortedSearchModel
-            listView.delegate = searchDelegateComponent
-        }
-        else {
-            sortedSearchModel.clear();
-            statusLabel.text = "";
-            var res = UnavDB.getSearchHistory();
-            var len = res.rows.length;
-            for (var i = 0; i < len; ++i) {
-                var item = {
-                    "name": res.rows.item(i).key,
-                    "lat": '',
-                    "lng": '',
-                    "boundingbox": '',
-                    "icon": ''
-                };
-                sortedSearchModel.append(item);
-            }
-            listView.model = sortedSearchModel
-            listView.delegate = searchDelegateComponent
-        }
+	Component.onCompleted: {
+		if (mainPageStack.lastSearchResultsOnline) {
+			var json = JSON.parse(mainPageStack.lastSearchResultsOnline);
+			sortedSearchModel.loadLastResults(json.results);
+			listView.model = sortedSearchModel
+			listView.delegate = searchDelegateComponent
+		}
+		else {
+			sortedSearchModel.clear();
+			statusLabel.text = "";
+			var res = UnavDB.getSearchHistory();
+			var len = res.rows.length;
+			for (var i = 0; i < len; ++i) {
+				var item = {
+					"name": res.rows.item(i).key,
+					"lat": '',
+					"lng": '',
+					"boundingbox": '',
+					"icon": ''
+				};
+				sortedSearchModel.append(item);
+			}
+			listView.model = sortedSearchModel
+			listView.delegate = searchDelegateComponent
+		}
    }
 
-    XmlListModel {
-        id: xmlSearchModel
+	XmlListModel {
+		id: xmlSearchModel
 
-        onStatusChanged: {
-            if (status === XmlListModel.Error) {
-                mainPageStack.lastSearchResultsOnline = "";
-                statusLabel.text = i18n.tr("Time out!");
-                notFound.visible = true;
-            }
-            else if (status === XmlListModel.Ready && count === 0) {
-                mainPageStack.lastSearchResultsOnline = "";
-                statusLabel.text = i18n.tr("Nothing found")
-                notFound.visible = true;
-            }
-            else if (status === XmlListModel.Ready && count >> 0) {
-                notFound.visible = false;
-                sortedSearchModel.sortXmlList();
-                listView.model = sortedSearchModel
-                listView.delegate = searchDelegateComponent
-            }
-        }
+		onStatusChanged: {
+			if (status === XmlListModel.Error) {
+				mainPageStack.lastSearchResultsOnline = "";
+				statusLabel.text = i18n.tr("Time out!");
+				notFound.visible = true;
+			}
+			else if (status === XmlListModel.Ready && count === 0) {
+				mainPageStack.lastSearchResultsOnline = "";
+				statusLabel.text = i18n.tr("Nothing found")
+				notFound.visible = true;
+			}
+			else if (status === XmlListModel.Ready && count >> 0) {
+				notFound.visible = false;
+				sortedSearchModel.sortXmlList();
+				listView.model = sortedSearchModel
+				listView.delegate = searchDelegateComponent
+			}
+		}
 
-        readonly property string searchUrl: "https://nominatim.openstreetmap.org/search?format=xml&email=marcos.costales@gmail.com&q="
-        property string searchString
-        
-        source: ""
-        query: "/searchresults/place"
+		readonly property string searchUrl: "https://nominatim.openstreetmap.org/search?format=xml&email=marcos.costales@gmail.com&q="
+		property string searchString
+		
+		source: ""
+		query: "/searchresults/place"
 
-        XmlRole { name: "name"; query: "@display_name/string()"; isKey: true }
-        XmlRole { name: "lat"; query: "@lat/string()"; isKey: true }
-        XmlRole { name: "lng"; query: "@lon/string()"; isKey: true }
-        XmlRole { name: "boundingbox"; query: "@boundingbox/string()"; isKey: true }
-        XmlRole { name: "icon"; query: "@icon/string()"; isKey: true }
+		XmlRole { name: "name"; query: "@display_name/string()"; isKey: true }
+		XmlRole { name: "lat"; query: "@lat/string()"; isKey: true }
+		XmlRole { name: "lng"; query: "@lon/string()"; isKey: true }
+		XmlRole { name: "boundingbox"; query: "@boundingbox/string()"; isKey: true }
+		XmlRole { name: "icon"; query: "@icon/string()"; isKey: true }
 
-        function search() {
-            xmlSearchModel.clear();
-            sortedSearchModel.clear();
-            source = (searchUrl + searchString);
-        }
+		function search() {
+			xmlSearchModel.clear();
+			sortedSearchModel.clear();
+			source = (searchUrl + searchString);
+		}
 
-        function clear() {
-            source = "";
-        }
-    }
+		function clear() {
+			source = "";
+		}
+	}
 
-    ListModel {
-        id: sortedSearchModel
+	ListModel {
+		id: sortedSearchModel
 
-        function sortXmlList(){
-            sortedSearchModel.clear();
-            mainPageStack.lastSearchResultsOnline = '{ "results": [';
-            for (var i = 0; i < xmlSearchModel.count; i++) {
-                var item  = {
-                    "name": xmlSearchModel.get(i).name,
-                    "lat": xmlSearchModel.get(i).lat,
-                    "lng": xmlSearchModel.get(i).lng,
-                    "boundingbox": xmlSearchModel.get(i).boundingbox,
-                    "icon": (xmlSearchModel.get(i).icon).replace('.p.20.png', '.p.32.png')
-                };
-                sortedSearchModel.append(item);
-                if (i > 0)
-                    mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + ',';
-                mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + JSON.stringify(item);
-            }
-            xmlSearchModel.clear();
-            mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + "]}";
-        }
-        function loadLastResults(json_results) {
-            sortedSearchModel.clear();
-            for (var i = 0; i < json_results.length; i++) {
-                var item  = {
-                    "name": json_results[i].name,
-                    "lat": json_results[i].lat,
-                    "lng": json_results[i].lng,
-                    "boundingbox": json_results[i].boundingbox,
-                    "icon": json_results[i].icon
-                };
-                sortedSearchModel.append(item);
-                xmlSearchModel.clear();
-            }
-        }
-    }
+		function sortXmlList(){
+			sortedSearchModel.clear();
+			mainPageStack.lastSearchResultsOnline = '{ "results": [';
+			for (var i = 0; i < xmlSearchModel.count; i++) {
+				var item  = {
+					"name": xmlSearchModel.get(i).name,
+					"lat": xmlSearchModel.get(i).lat,
+					"lng": xmlSearchModel.get(i).lng,
+					"boundingbox": xmlSearchModel.get(i).boundingbox,
+					"icon": (xmlSearchModel.get(i).icon).replace('.p.20.png', '.p.32.png')
+				};
+				sortedSearchModel.append(item);
+				if (i > 0)
+					mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + ',';
+				mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + JSON.stringify(item);
+			}
+			xmlSearchModel.clear();
+			mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + "]}";
+		}
+		function loadLastResults(json_results) {
+			sortedSearchModel.clear();
+			for (var i = 0; i < json_results.length; i++) {
+				var item  = {
+					"name": json_results[i].name,
+					"lat": json_results[i].lat,
+					"lng": json_results[i].lng,
+					"boundingbox": json_results[i].boundingbox,
+					"icon": json_results[i].icon
+				};
+				sortedSearchModel.append(item);
+				xmlSearchModel.clear();
+			}
+		}
+	}
 
-    Column {
-        id: notFound
-        visible: false
-        anchors.centerIn: parent
-        spacing: units.gu(1)
-        Row {
-            anchors.horizontalCenter: notFound.horizontalCenter
-            Label {
-                id: statusLabel
-            }
-        }
-    }
+	Column {
+		id: notFound
+		visible: false
+		anchors.centerIn: parent
+		spacing: units.gu(1)
+		Row {
+			anchors.horizontalCenter: notFound.horizontalCenter
+			Label {
+				id: statusLabel
+			}
+		}
+	}
 
-    // Indicator to show search activity
-    ActivityIndicator {
-        id: searchActivity
-        anchors.centerIn: parent
-        running: xmlSearchModel.status === XmlListModel.Loading
-    }
+	// Indicator to show search activity
+	ActivityIndicator {
+		id: searchActivity
+		anchors.centerIn: parent
+		running: xmlSearchModel.status === XmlListModel.Loading
+	}
 
-    ListView {
-        id: listView
+	ListView {
+		id: listView
 
-        clip: true
-        anchors { fill: parent; topMargin: units.gu(2) }
-        model: xmlSearchModel
+		clip: true
+		anchors { fill: parent; topMargin: units.gu(2) }
+		model: xmlSearchModel
 
-        section.property: "title"
-        section.criteria: ViewSection.FullString
-        section.delegate: ListItemHeader {
-            title: section
-        }
+		section.property: "title"
+		section.criteria: ViewSection.FullString
+		section.delegate: ListItemHeader {
+			title: section
+		}
 
-        header: TextField {
-            id: searchField
+		header: TextField {
+			id: searchField
 
-            primaryItem: Icon {
-                height: units.gu(2)
-                name: "find"
-            }
+			primaryItem: Icon {
+				height: units.gu(2)
+				name: "find"
+			}
 
-            anchors { left: parent.left; right: parent.right; margins: units.gu(2) }
-            hasClearButton: true
-            inputMethodHints: Qt.ImhNoPredictiveText
-            text: mainPageStack.lastSearchStringOnline
-            placeholderText: i18n.tr("Place or location")
+			anchors { left: parent.left; right: parent.right; margins: units.gu(2) }
+			hasClearButton: true
+			inputMethodHints: Qt.ImhNoPredictiveText
+			text: mainPageStack.lastSearchStringOnline
+			placeholderText: i18n.tr("Place or location")
 
-            Connections {
-                target: container
-                onSetSearchText: {
-                    searchField.text = text;
-                }
-            }
+			Connections {
+				target: container
+				onSetSearchText: {
+					searchField.text = text;
+				}
+			}
 
-            onTriggered: {
-                if (text.trim()) {
-                    UnavDB.saveToSearchHistory(text);
-                    statusLabel.text = "";
-                    xmlSearchModel.searchString = text;
-                    xmlSearchModel.search();
-                }
-            }
-            onTextChanged: {
-                mainPageStack.lastSearchStringOnline = text;
-                sortedSearchModel.clear();
-                if (!text.trim()) {
-                    statusLabel.text = "";
-                    var res = UnavDB.getSearchHistory();
-                    var len = res.rows.length;
-                    for (var i = 0; i < len; ++i) {
-                        var item = {
-                            "name": res.rows.item(i).key,
-                            "lat": '',
-                            "lng": '',
-                            "boundingbox": '',
-                            "icon": ''
-                        };
-                        sortedSearchModel.append(item);
-                    }
-                }
-            }
-        }
-    }
+			onTriggered: {
+				if (text.trim()) {
+					UnavDB.saveToSearchHistory(text);
+					statusLabel.text = "";
+					xmlSearchModel.searchString = text;
+					xmlSearchModel.search();
+				}
+			}
+			onTextChanged: {
+				mainPageStack.lastSearchStringOnline = text;
+				sortedSearchModel.clear();
+				if (!text.trim()) {
+					statusLabel.text = "";
+					var res = UnavDB.getSearchHistory();
+					var len = res.rows.length;
+					for (var i = 0; i < len; ++i) {
+						var item = {
+							"name": res.rows.item(i).key,
+							"lat": '',
+							"lng": '',
+							"boundingbox": '',
+							"icon": ''
+						};
+						sortedSearchModel.append(item);
+					}
+				}
+			}
+		}
+	}
 
-    ScrollView {
-        anchors.fill: parent
-        contentItem: listView
-    }
+	ScrollView {
+		anchors.fill: parent
+		contentItem: listView
+	}
 
-    Component {
-        id: searchDelegateComponent
-        ListItem {
-            height: resultsDelegateLayout.height + divider.height
-            leadingActions: ListItemActions {
-                actions: [
-                    Action {
-                        iconName: "delete"
-                        visible: model.lng === ''
-                        onTriggered: {
-                            UnavDB.removeHistorySearch(model.name);
-                            sortedSearchModel.remove(index, 1);
-                        }
-                    }
-                ]
-            }
-            trailingActions: ListItemActions {
-                actions: [
-                ]
-            }
-            onClicked: {
-                if (model.lng === '') { // History
-                    var text_aux = model.name;
-                    container.setSearchText(text_aux);
-                    statusLabel.text = "";
-                    xmlSearchModel.searchString = text_aux;
-                    xmlSearchModel.search();
-                }
-                else { // Show marker
-                    if (mainPageStack.columns === 1)
-                        mainPageStack.removePages(searchPage);
-                    mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.name + "\", \"" + model.boundingbox + "\")");
-                }
-            }
+	Component {
+		id: searchDelegateComponent
+		ListItem {
+			height: resultsDelegateLayout.height + divider.height
+			leadingActions: ListItemActions {
+				actions: [
+					Action {
+						iconName: "delete"
+						visible: model.lng === ''
+						onTriggered: {
+							UnavDB.removeHistorySearch(model.name);
+							sortedSearchModel.remove(index, 1);
+						}
+					}
+				]
+			}
+			trailingActions: ListItemActions {
+				actions: [
+				]
+			}
+			onClicked: {
+				if (model.lng === '') { // History
+					var text_aux = model.name;
+					container.setSearchText(text_aux);
+					statusLabel.text = "";
+					xmlSearchModel.searchString = text_aux;
+					xmlSearchModel.search();
+				}
+				else { // Show marker
+					if (mainPageStack.columns === 1)
+						mainPageStack.removePages(searchPage);
+					mainPageStack.executeJavaScript("import_marker(" + model.lng + "," + model.lat + ",\"" + model.name + "\", \"" + model.boundingbox + "\")");
+				}
+			}
 
-            ListItemLayout {
-                id: resultsDelegateLayout
+			ListItemLayout {
+				id: resultsDelegateLayout
 
-                title.text: model.name
-                title.maximumLineCount: 2
-                title.wrapMode: Text.WordWrap
-                title.color: model.lng === '' ? theme.palette.normal.backgroundTertiaryText : theme.palette.normal.backgroundText
+				title.text: model.name
+				title.maximumLineCount: 2
+				title.wrapMode: Text.WordWrap
+				title.color: model.lng === '' ? theme.palette.normal.backgroundTertiaryText : theme.palette.normal.backgroundText
 
-                Icon {
-                    id: resIcon
-                    height: units.gu(2.5)
-                    width: height
-                    visible: model.icon !== ""
-                    source: model.icon ? model.icon : ""
-                    SlotsLayout.position: SlotsLayout.Last
-                }
-            }
-        }
-    }
+				Icon {
+					id: resIcon
+					height: units.gu(2.5)
+					width: height
+					visible: model.icon !== ""
+					source: model.icon ? model.icon : ""
+					SlotsLayout.position: SlotsLayout.Last
+				}
+			}
+		}
+	}
 }
 

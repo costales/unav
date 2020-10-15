@@ -16,732 +16,732 @@
 -->
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-	<link rel="stylesheet" type="text/css" href="css/UT_toolkit.css" />
-	<link rel="stylesheet" type="text/css" href="css/ol.css" />
-	<link rel="stylesheet" type="text/css" href="css/ol-ext.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/unav.css" />
+    <link rel="stylesheet" type="text/css" href="css/UT_toolkit.css" />
+    <link rel="stylesheet" type="text/css" href="css/ol.css" />
+    <link rel="stylesheet" type="text/css" href="css/ol-ext.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/unav.css" />
 
-	<script>
-		document.addEventListener("ExecuteJavascript", function (event) { eval(event.detail); });
-	</script>
+    <script>
+        document.addEventListener("ExecuteJavascript", function (event) { eval(event.detail); });
+    </script>
 </head>
 
 <body>
-	<script src="libraries/jquery.min.js"></script>
-	
-	<!-- i18n -->
-	<script src="libraries/i18n.js"></script>
-	<script>
-		// Load locale
-		function UrlExists(url)
-		{
-			var http = new XMLHttpRequest();
-			try {
-				http.open('HEAD', url, false);
-				http.send();
-				return true;
-			}
-			catch(err) {
-				return false;
-			}
-		}
-		// Locales are coming as 'ast' or 'en-us'
-		console.log('Trying locales:', navigator.language.toLowerCase(), "and", navigator.language.split('-')[0].toLowerCase());
-		if (UrlExists("locales/json/messages-"+navigator.language.toLowerCase()+".json")) {
-			$("[data-localize]").localize("locales/json/messages", { language: navigator.language.toLowerCase() });
-			console.log("Loaded locale 1:", navigator.language.toLowerCase());
-		}
-		else if (navigator.language.toLowerCase() != navigator.language.split('-')[0].toLowerCase() && UrlExists("locales/json/messages-"+navigator.language.split('-')[0].toLowerCase()+".json")) {
-			$("[data-localize]").localize("locales/json/messages", { language: navigator.language.split('-')[0].toLowerCase() });
-			console.log("Loaded locale 2:", navigator.language.split('-')[0].toLowerCase());
-		}
-		else {
-			$("[data-localize]").localize("locales/json/messages", { language: 'en' }); 											// Guarantee English
-			console.log("No locales found. Loaded 'en'");
-		}
-		// Localize strings
-		function t(key) {
-			if ($.localize.data["locales/json/messages"][key])
-				return $.localize.data["locales/json/messages"][key];
-			else
-				return key;
-		}
-	</script>
+    <script src="libraries/jquery.min.js"></script>
+    
+    <!-- i18n -->
+    <script src="libraries/i18n.js"></script>
+    <script>
+        // Load locale
+        function UrlExists(url)
+        {
+            var http = new XMLHttpRequest();
+            try {
+                http.open('HEAD', url, false);
+                http.send();
+                return true;
+            }
+            catch(err) {
+                return false;
+            }
+        }
+        // Locales are coming as 'ast' or 'en-us'
+        console.log('Trying locales:', navigator.language.toLowerCase(), "and", navigator.language.split('-')[0].toLowerCase());
+        if (UrlExists("locales/json/messages-"+navigator.language.toLowerCase()+".json")) {
+            $("[data-localize]").localize("locales/json/messages", { language: navigator.language.toLowerCase() });
+            console.log("Loaded locale 1:", navigator.language.toLowerCase());
+        }
+        else if (navigator.language.toLowerCase() != navigator.language.split('-')[0].toLowerCase() && UrlExists("locales/json/messages-"+navigator.language.split('-')[0].toLowerCase()+".json")) {
+            $("[data-localize]").localize("locales/json/messages", { language: navigator.language.split('-')[0].toLowerCase() });
+            console.log("Loaded locale 2:", navigator.language.split('-')[0].toLowerCase());
+        }
+        else {
+            $("[data-localize]").localize("locales/json/messages", { language: 'en' }); // Guarantee English
+            console.log("No locales found. Loaded 'en'");
+        }
+        // Localize strings
+        function t(key) {
+            if ($.localize.data["locales/json/messages"][key])
+                return $.localize.data["locales/json/messages"][key];
+            else
+                return key;
+        }
+    </script>
 
 
-	<!-- Map -->
-	<script src="libraries/ol.js"></script>
-	<script src="libraries/ol-ext.min.js"></script>
-	<script src="libraries/olms.js"></script>
-	<div id="map" class="map"></div>
-	<script>
-		// ol
-		var map_layer_online = new ol.layer.Tile({
-			name: 'layer_online',
-			source: new ol.source.XYZ({
-				url: 'https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
-			})
-		});
-		var scale_line = new ol.control.ScaleLine();
-		var view = new ol.View({
-			center: ol.proj.fromLonLat([4.666389, 50.009167]),
-			zoom: 4,
-			minZoom: 2,
-			maxZoom: 18
-		});
-		var interactions = ol.interaction.defaults({
-			altShiftDragRotate: false,
-			pinchRotate: false
-		});
-		var map = new ol.Map({
-			layers: [],
-			controls: [scale_line],
-			interactions: interactions, // Disable rotation because freeze movements dragging map
-			loadTilesWhileAnimating: true,
-			target: 'map',
-			view: view
-		});
-		
-		// ol-ext
-		var poiClick = new ol.Overlay.Placemark({popupClass: "poiClick"});
-		map.addOverlay(poiClick);
-		$('.poiClick').click(function () { // map event doesn't capture this one
-			var coord = ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326');
-			coord[0] = utils.fix_lng(coord[0]);
-			ui.set_center_pos(false);
-			mapUI.set_map_center(coord[0], coord[1], true);
-			switch(ui.get_pickingOnMap()) {
-				case 0:
-					ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
-					break;
-				case 1:
-				case 2:
-					ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
-					break;
-			}
-		});
-		var poiStart = new ol.Overlay.Placemark({ popupClass: 'flagv', color: '#080' });
-		map.addOverlay(poiStart);
-		$('.flagv').click(function () { // map event doesn't capture this one
-			var coord = ol.proj.transform(poiStart.getPosition(), 'EPSG:3857', 'EPSG:4326');
-			coord[0] = utils.fix_lng(coord[0]);
-			ui.set_center_pos(false);
-			mapUI.set_map_center(coord[0], coord[1], true);
-			ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
-		});
-		var poiEnd = new ol.Overlay.Placemark({ popupClass: 'flag finish', color: '#000' });
-		map.addOverlay(poiEnd);
-		$('.flag').click(function () { // map event doesn't capture this one
-			var coord = ol.proj.transform(poiEnd.getPosition(), 'EPSG:3857', 'EPSG:4326');
-			coord[0] = utils.fix_lng(coord[0]);
-			ui.set_center_pos(false);
-			mapUI.set_map_center(coord[0], coord[1], true);
-			ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
-		});
-		compass = new ol.control.Compass({
-			className: "compass",
-			src: "img/ui/compass.svg",
-			rotateWithView: true
+    <!-- Map -->
+    <script src="libraries/ol.js"></script>
+    <script src="libraries/ol-ext.min.js"></script>
+    <script src="libraries/olms.js"></script>
+    <div id="map" class="map"></div>
+    <script>
+        // ol
+        var map_layer_online = new ol.layer.Tile({
+            name: 'layer_online',
+            source: new ol.source.XYZ({
+                url: 'https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
+            })
+        });
+        var scale_line = new ol.control.ScaleLine();
+        var view = new ol.View({
+            center: ol.proj.fromLonLat([4.666389, 50.009167]),
+            zoom: 4,
+            minZoom: 2,
+            maxZoom: 18
+        });
+        var interactions = ol.interaction.defaults({
+            altShiftDragRotate: false,
+            pinchRotate: false
+        });
+        var map = new ol.Map({
+            layers: [],
+            controls: [scale_line],
+            interactions: interactions, // Disable rotation because freeze movements dragging map
+            loadTilesWhileAnimating: true,
+            target: 'map',
+            view: view
+        });
+        
+        // ol-ext
+        var poiClick = new ol.Overlay.Placemark({popupClass: "poiClick"});
+        map.addOverlay(poiClick);
+        $('.poiClick').click(function () { // map event doesn't capture this one
+            var coord = ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326');
+            coord[0] = utils.fix_lng(coord[0]);
+            ui.set_center_pos(false);
+            mapUI.set_map_center(coord[0], coord[1], true);
+            switch(ui.get_pickingOnMap()) {
+                case 0:
+                    ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+                    break;
+                case 1:
+                case 2:
+                    ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
+                    break;
+            }
+        });
+        var poiStart = new ol.Overlay.Placemark({ popupClass: 'flagv', color: '#080' });
+        map.addOverlay(poiStart);
+        $('.flagv').click(function () { // map event doesn't capture this one
+            var coord = ol.proj.transform(poiStart.getPosition(), 'EPSG:3857', 'EPSG:4326');
+            coord[0] = utils.fix_lng(coord[0]);
+            ui.set_center_pos(false);
+            mapUI.set_map_center(coord[0], coord[1], true);
+            ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+        });
+        var poiEnd = new ol.Overlay.Placemark({ popupClass: 'flag finish', color: '#000' });
+        map.addOverlay(poiEnd);
+        $('.flag').click(function () { // map event doesn't capture this one
+            var coord = ol.proj.transform(poiEnd.getPosition(), 'EPSG:3857', 'EPSG:4326');
+            coord[0] = utils.fix_lng(coord[0]);
+            ui.set_center_pos(false);
+            mapUI.set_map_center(coord[0], coord[1], true);
+            ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+        });
+        compass = new ol.control.Compass({
+            className: "compass",
+            src: "img/ui/compass.svg",
+            rotateWithView: true
         });
         map.addControl(compass);
-	</script>
+    </script>
 
-	<script src="UT_toolkit/buttons.js"></script>
-	<script src="libraries/turf.min.js"></script>
-	<script src="libraries/GPXParser.js"></script>
-	<script src="libraries/dotimeout.min.js"></script>
+    <script src="UT_toolkit/buttons.js"></script>
+    <script src="libraries/turf.min.js"></script>
+    <script src="libraries/GPXParser.js"></script>
+    <script src="libraries/dotimeout.min.js"></script>
 
-	<!-- Objects -->
-	<script src="class/Utils.js"></script>
-	<script src="class/Maths.js"></script>
-	<script src="class/Settings.js"></script>
-	<script src="class/UI.js"></script>
-	<script src="class/Navigator.js"></script>
-	<script src="class/WebAPI.js"></script>
-	<script src="class/MapUI.js"></script>
-	<script>
-		var utils	 = new Utils();
-		var maths	 = new Maths();
-		var settings = new Settings();
-		var ui	     = new UI();
-		var nav	     = new Navigator();
-		var webapi   = new WebAPI();
-		var mapUI    = new MapUI();
+    <!-- Objects -->
+    <script src="class/Utils.js"></script>
+    <script src="class/Maths.js"></script>
+    <script src="class/Settings.js"></script>
+    <script src="class/UI.js"></script>
+    <script src="class/Navigator.js"></script>
+    <script src="class/WebAPI.js"></script>
+    <script src="class/MapUI.js"></script>
+    <script>
+        var utils    = new Utils();
+        var maths    = new Maths();
+        var settings = new Settings();
+        var ui       = new UI();
+        var nav      = new Navigator();
+        var webapi   = new WebAPI();
+        var mapUI    = new MapUI();
 
-		var id_gps = 0;
-		function center_pos() {
-			if (ui.get_center_pos())
-				return;
-			
-			ui.set_center_pos(true);
-			if (id_gps) {
-				if (nav.get_data().lng === null) {
-					ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
-				}
-				else {
-					if (mapUI.get_map_zoom() < ui.ZOOM-2)
-						mapUI.set_map_zoom(ui.ZOOM-1);
-					ui.update_map_view(nav.get_data());
-				}
-			}
-			else {
-				if (nav.get_data().mode == 'exploring')
-					nav.set_data({mode: 'GPS_waiting'});
-				ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
-				gps_start();
-			}
-		}
-		
-		function gps_start() {
-			console.log('Starting GPS...');
-			if (!navigator.geolocation) {
-				console.log("ERROR: Location disabled");
-				return;
-			}
-			/** TESTING BEGIN
-			**/
-			var route = [
-			[43.52964291495124,-5.659250590269857], [43.529588464721115,-5.659379336302572], [43.5295184572102,-5.659550997679525], [43.52939399921233,-5.659733387892538], [43.529316212833265,-5.659819218581014], [43.52926954095767,-5.659872862761312], [43.52922286904595,-5.660044524138265], [43.52918397575859,-5.66017327017098], [43.52916841843663,-5.660355660383993], [43.52916841843663,-5.660527321760946], [43.52918397575859,-5.660656067793661], [43.52922286904595,-5.660795542662435], [43.52923680759756,-5.661649703979492], [43.52937066330915,-5.661868426268392], [43.52980626534662,-5.661846968596273], [43.53014852188334,-5.661696764891439], [43.530576339823085,-5.661535832350546], [43.5310430468418,-5.66141781515389], [43.531494193527,-5.661278340285116], [43.531929780227784,-5.6611388654163415], [43.53232647252165,-5.660999390547567], [43.53228661229405,-5.660849186842733], [43.532403286078676,-5.660752627318197], [43.53254329432227,-5.660634610121542], [43.53304887694023,-5.660591694777303], [43.53328222133438,-5.660774084990316] 			
-			]
-			var z1 = 0;
-			id_gps = setInterval(function(){
-					accuracy = 300;
-					speed = 1;
-					z1++;
-					if(typeof route[z1]!="undefined"){
-						latitude = route[z1][0];
-						longitude = route[z1][1];
-					}
-					nav.set_data({lng: longitude, lat: latitude, accuracy: accuracy, speed: speed});
-					set_new_pos();
-			}, 700);
-			return;
-			/** TESTING END **/
-			id_gps = navigator.geolocation.watchPosition(
-				function (pos) {
-					if (pos.coords.longitude == nav.pos.lng && pos.coords.latitude == nav.pos.lat) // Same as previous
-						return;
-					nav.set_data({lng: pos.coords.longitude, lat: pos.coords.latitude, accuracy: pos.coords.accuracy, speed: pos.coords.speed});
-					set_new_pos();
-				},
-				function (error) {
-					console.log("ERROR: Reading GPS");
-				},
-				{ enableHighAccuracy: true }
-			);
-		}
-		
-		// Dangerous dragons here :S
-		function set_new_pos() {
-			var nav_data = nav.get_data();
-			if ((nav_data.lng_prev === null || nav_data.lat_prev === null) && !nav_data.mode.includes('simulating'))
-				return;
-			
-			switch(nav_data.mode) {
-				case 'exploring':
-					break;
-				case 'GPS_waiting':
-					if (mapUI.get_map_zoom() < ui.ZOOM-3)
-						mapUI.set_map_zoom(ui.ZOOM-1);
-					mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
-					nav.set_data({mode: 'exploring'});
-					ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgBGColor: 'success', msgText: t("GPS is ready"), iconsShow: 'no'});
-					break;
-				case 'calculating_simulating_error':
-					mapUI.clear_layer('route');
-					mapUI.clear_layer('radar');		
-					poiStart.hide();
-					ui.show_panels('simulate_error');
-					ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
-					nav.set_data({mode: 'exploring_after_simulating_error'});
-					break;
-				case 'calculating_simulating_call_API':
-				case 'simulating':
-					break;
-				case 'drawing_simulating':
-					ui.show_panels('simulate');
-					var route_line = nav.get_data_line();
-					var coords_aux = [];
-					for (k=0; k<route_line.points.length; k++)
-						for (l=0; l<route_line.points[k].length; l++)
-							coords_aux.push(route_line.points[k][l]);
-					poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
-					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
-					mapUI.show_route(coords_aux, 'route', true);
-					nav.set_data({mode: 'simulating'});
-					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-					ui.update_lower_panel(nav.get_data_navigation().duration, nav.get_data_navigation().distance, nav_data.speed, 0);
-					break;
-				case 'GPS_waiting_for_calculating':
-					if (mapUI.get_map_zoom() < ui.ZOOM-3)
-						mapUI.set_map_zoom(ui.ZOOM-1);
-					mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
-					nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
-					if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>') // Avoid animations
-						ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
-					set_new_pos();
-					break;
-				case 'calculating_changed_mode':
-					nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
-					if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>') // Avoid animations
-						ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
-					set_new_pos();
-					break;
-				case 'calculating_call_API':
-					poiStart.show(ol.proj.fromLonLat([nav_data.lng_start, nav_data.lat_start]));
-					nav.set_data({mode: 'calculating_waiting_result'});
-					webapi.route(settings.get_online_route(), nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
-					break;
-				case 'calculating_waiting_result':
-					break;
-				case 'calculating_error':
-					ui.show_panels('confirm_error');
-					mapUI.clear_layer('route');
-					mapUI.clear_layer('radar');		
-					poiStart.hide();
-					ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
-					nav.set_data({mode: 'exploring_after_calculating_error'});
-					break;
-				case 'drawing':
-					ui.set_center_pos(false); // Needs for map.fit
-					mapUI.clear_layer('route');
-					ui.show_panels('confirm');
-					webapi.set_radars();
-					var route_line = nav.get_data_line();
-					var coords_aux = [];
-					for (k=0; k<route_line.points.length; k++)
-						for (l=0; l<route_line.points[k].length; l++)
-							coords_aux.push(route_line.points[k][l]);
-					poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
-					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
-					mapUI.show_route(coords_aux, 'route', true);
-					nav.set_data({mode: 'route_confirm'});
-					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-				case 'route_confirm':
-					var nav_navigation= nav.get_data_navigation();
-					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
-					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, 0);
-					break;
-				case 'route_driving':
-					nav.update();
-					var nav_navigation = nav.get_data_navigation();
-					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
-					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, nav_navigation.percentage);
-					if (settings.get_speak())
-						ui.speak(nav_navigation.steps[nav_navigation.ind].speaked, nav_navigation.steps[nav_navigation.ind+1].type);
-					if (ui.get_radar_beep())
-						ui.play_radar_beep();
-					break;
-				case 'route_out':
-					ui.show_panels('none');
-					webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
-					ui.POIPanel({msgShow: 'yes', msgText: t("Out of route. Recalculating"), iconsShow: 'no'});
-					nav.set_data({mode: 'route_out_waiting_result'});
-					break;
-				case 'route_out_returned':
-					nav.set_data({mode: 'route_driving'});
-					ui.show_panels('navigate');
-					break;
-				case 'route_out_waiting_result':
-					break;
-				case 'route_out_calculating_error':
-					nav.set_data({mode: 'route_out_waiting_result'});
-					webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
-					ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
-					break;
-				case 'route_out_drawing': // As drawing, but don't confirm
-					mapUI.clear_layer('route');
-					mapUI.clear_layer('radar');
-					ui.show_panels('navigate');
-					webapi.set_radars();
-					var route_line = nav.get_data_line();
-					var coords_aux = [];
-					for (k=0; k<route_line.points.length; k++)
-						for (l=0; l<route_line.points[k].length; l++)
-							coords_aux.push(route_line.points[k][l]);
-					mapUI.show_route(coords_aux, 'route');
-					poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
-					poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
-					ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-					var nav_navigation = nav.get_data_navigation();
-					ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
-					ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, 0);
-					nav.set_data({mode: 'route_driving'});
-					break;
-				case 'route_end':
-					nav.set_data({mode: 'route_ended'});
-					$('#endTime').html('');
-					$('#speed').html('');
-					$('#endDistance').html('');
-					$('#endHour').html('');
-					$("#totalProgress").css("width", "100%");
-					$('#stepTxt').html(t("You have arrived at your destination"));
-					$('#stepImg').html('<img src="img/steps/10.svg">');
-					$('#distance').html('');
-				case 'route_ended': // Wait for user to cancel it or start another one
-					break;
-			}
-			ui.update_pos(nav_data);
-			ui.update_map_view(nav_data);
-		}
+        var id_gps = 0;
+        function center_pos() {
+            if (ui.get_center_pos())
+                return;
+            
+            ui.set_center_pos(true);
+            if (id_gps) {
+                if (nav.get_data().lng === null) {
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
+                }
+                else {
+                    if (mapUI.get_map_zoom() < ui.ZOOM-2)
+                        mapUI.set_map_zoom(ui.ZOOM-1);
+                    ui.update_map_view(nav.get_data());
+                }
+            }
+            else {
+                if (nav.get_data().mode == 'exploring')
+                    nav.set_data({mode: 'GPS_waiting'});
+                ui.POIPanel({msgShow: 'yes', msgText: t("Waiting for GPS"), iconsShow: 'no'});
+                gps_start();
+            }
+        }
+        
+        function gps_start() {
+            console.log('Starting GPS...');
+            if (!navigator.geolocation) {
+                console.log("ERROR: Location disabled");
+                return;
+            }
+            /** TESTING BEGIN
+            **/
+            var route = [
+            [43.52964291495124,-5.659250590269857], [43.529588464721115,-5.659379336302572], [43.5295184572102,-5.659550997679525], [43.52939399921233,-5.659733387892538], [43.529316212833265,-5.659819218581014], [43.52926954095767,-5.659872862761312], [43.52922286904595,-5.660044524138265], [43.52918397575859,-5.66017327017098], [43.52916841843663,-5.660355660383993], [43.52916841843663,-5.660527321760946], [43.52918397575859,-5.660656067793661], [43.52922286904595,-5.660795542662435], [43.52923680759756,-5.661649703979492], [43.52937066330915,-5.661868426268392], [43.52980626534662,-5.661846968596273], [43.53014852188334,-5.661696764891439], [43.530576339823085,-5.661535832350546], [43.5310430468418,-5.66141781515389], [43.531494193527,-5.661278340285116], [43.531929780227784,-5.6611388654163415], [43.53232647252165,-5.660999390547567], [43.53228661229405,-5.660849186842733], [43.532403286078676,-5.660752627318197], [43.53254329432227,-5.660634610121542], [43.53304887694023,-5.660591694777303], [43.53328222133438,-5.660774084990316]             
+            ]
+            var z1 = 0;
+            id_gps = setInterval(function(){
+                    accuracy = 300;
+                    speed = 1;
+                    z1++;
+                    if(typeof route[z1]!="undefined"){
+                        latitude = route[z1][0];
+                        longitude = route[z1][1];
+                    }
+                    nav.set_data({lng: longitude, lat: latitude, accuracy: accuracy, speed: speed});
+                    set_new_pos();
+            }, 700);
+            return;
+            /** TESTING END **/
+            id_gps = navigator.geolocation.watchPosition(
+                function (pos) {
+                    if (pos.coords.longitude == nav.pos.lng && pos.coords.latitude == nav.pos.lat) // Same as previous
+                        return;
+                    nav.set_data({lng: pos.coords.longitude, lat: pos.coords.latitude, accuracy: pos.coords.accuracy, speed: pos.coords.speed});
+                    set_new_pos();
+                },
+                function (error) {
+                    console.log("ERROR: Reading GPS");
+                },
+                { enableHighAccuracy: true }
+            );
+        }
+        
+        // Dangerous dragons here :S
+        function set_new_pos() {
+            var nav_data = nav.get_data();
+            if ((nav_data.lng_prev === null || nav_data.lat_prev === null) && !nav_data.mode.includes('simulating'))
+                return;
+            
+            switch(nav_data.mode) {
+                case 'exploring':
+                    break;
+                case 'GPS_waiting':
+                    if (mapUI.get_map_zoom() < ui.ZOOM-3)
+                        mapUI.set_map_zoom(ui.ZOOM-1);
+                    mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
+                    nav.set_data({mode: 'exploring'});
+                    ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgBGColor: 'success', msgText: t("GPS is ready"), iconsShow: 'no'});
+                    break;
+                case 'calculating_simulating_error':
+                    mapUI.clear_layer('route');
+                    mapUI.clear_layer('radar');        
+                    poiStart.hide();
+                    ui.show_panels('simulate_error');
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
+                    nav.set_data({mode: 'exploring_after_simulating_error'});
+                    break;
+                case 'calculating_simulating_call_API':
+                case 'simulating':
+                    break;
+                case 'drawing_simulating':
+                    ui.show_panels('simulate');
+                    var route_line = nav.get_data_line();
+                    var coords_aux = [];
+                    for (k=0; k<route_line.points.length; k++)
+                        for (l=0; l<route_line.points[k].length; l++)
+                            coords_aux.push(route_line.points[k][l]);
+                    poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
+                    poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
+                    mapUI.show_route(coords_aux, 'route', true);
+                    nav.set_data({mode: 'simulating'});
+                    ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
+                    ui.update_lower_panel(nav.get_data_navigation().duration, nav.get_data_navigation().distance, nav_data.speed, 0);
+                    break;
+                case 'GPS_waiting_for_calculating':
+                    if (mapUI.get_map_zoom() < ui.ZOOM-3)
+                        mapUI.set_map_zoom(ui.ZOOM-1);
+                    mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
+                    nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
+                    if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>') // Avoid animations
+                        ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+                    set_new_pos();
+                    break;
+                case 'calculating_changed_mode':
+                    nav.set_data({mode: 'calculating_call_API', lng_start: nav_data.lng, lat_start: nav_data.lat});
+                    if ($("#topPanelMsgContent").html() != '<p>'+t("Calculating route")+'</p>') // Avoid animations
+                        ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+                    set_new_pos();
+                    break;
+                case 'calculating_call_API':
+                    poiStart.show(ol.proj.fromLonLat([nav_data.lng_start, nav_data.lat_start]));
+                    nav.set_data({mode: 'calculating_waiting_result'});
+                    webapi.route(settings.get_online_route(), nav_data.lng_start, nav_data.lat_start, nav_data.lng_end, nav_data.lat_end);
+                    break;
+                case 'calculating_waiting_result':
+                    break;
+                case 'calculating_error':
+                    ui.show_panels('confirm_error');
+                    mapUI.clear_layer('route');
+                    mapUI.clear_layer('radar');        
+                    poiStart.hide();
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
+                    nav.set_data({mode: 'exploring_after_calculating_error'});
+                    break;
+                case 'drawing':
+                    ui.set_center_pos(false); // Needs for map.fit
+                    mapUI.clear_layer('route');
+                    ui.show_panels('confirm');
+                    webapi.set_radars();
+                    var route_line = nav.get_data_line();
+                    var coords_aux = [];
+                    for (k=0; k<route_line.points.length; k++)
+                        for (l=0; l<route_line.points[k].length; l++)
+                            coords_aux.push(route_line.points[k][l]);
+                    poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
+                    poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
+                    mapUI.show_route(coords_aux, 'route', true);
+                    nav.set_data({mode: 'route_confirm'});
+                    ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
+                case 'route_confirm':
+                    var nav_navigation= nav.get_data_navigation();
+                    ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
+                    ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, 0);
+                    break;
+                case 'route_driving':
+                    nav.update();
+                    var nav_navigation = nav.get_data_navigation();
+                    ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
+                    ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, nav_navigation.percentage);
+                    if (settings.get_speak())
+                        ui.speak(nav_navigation.steps[nav_navigation.ind].speaked, nav_navigation.steps[nav_navigation.ind+1].type);
+                    if (ui.get_radar_beep())
+                        ui.play_radar_beep();
+                    break;
+                case 'route_out':
+                    ui.show_panels('none');
+                    webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Out of route. Recalculating"), iconsShow: 'no'});
+                    nav.set_data({mode: 'route_out_waiting_result'});
+                    break;
+                case 'route_out_returned':
+                    nav.set_data({mode: 'route_driving'});
+                    ui.show_panels('navigate');
+                    break;
+                case 'route_out_waiting_result':
+                    break;
+                case 'route_out_calculating_error':
+                    nav.set_data({mode: 'route_out_waiting_result'});
+                    webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
+                    break;
+                case 'route_out_drawing': // As drawing, but don't confirm
+                    mapUI.clear_layer('route');
+                    mapUI.clear_layer('radar');
+                    ui.show_panels('navigate');
+                    webapi.set_radars();
+                    var route_line = nav.get_data_line();
+                    var coords_aux = [];
+                    for (k=0; k<route_line.points.length; k++)
+                        for (l=0; l<route_line.points[k].length; l++)
+                            coords_aux.push(route_line.points[k][l]);
+                    mapUI.show_route(coords_aux, 'route');
+                    poiStart.show(ol.proj.fromLonLat(coords_aux[0]));
+                    poiEnd.show(ol.proj.fromLonLat(coords_aux[coords_aux.length-1]));
+                    ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
+                    var nav_navigation = nav.get_data_navigation();
+                    ui.update_nav_panel(nav_navigation.steps[nav_navigation.ind+1].type, nav_navigation.steps[nav_navigation.ind+1].name, nav_navigation.steps[nav_navigation.ind].distance);
+                    ui.update_lower_panel(nav_navigation.duration, nav_navigation.distance, nav_data.speed, 0);
+                    nav.set_data({mode: 'route_driving'});
+                    break;
+                case 'route_end':
+                    nav.set_data({mode: 'route_ended'});
+                    $('#endTime').html('');
+                    $('#speed').html('');
+                    $('#endDistance').html('');
+                    $('#endHour').html('');
+                    $("#totalProgress").css("width", "100%");
+                    $('#stepTxt').html(t("You have arrived at your destination"));
+                    $('#stepImg').html('<img src="img/steps/10.svg">');
+                    $('#distance').html('');
+                case 'route_ended': // Wait for user to cancel it or start another one
+                    break;
+            }
+            ui.update_pos(nav_data);
+            ui.update_map_view(nav_data);
+        }
 
-		// Map events
-		var longtouch_id = 0; // Know when recovery georeverse data is the same point
-		var LongTouch = new ol.interaction.LongTouch({	
-			handleLongTouchEvent: function(evt)	{
-				longtouch_id++;
-				if (longtouch_id > 20)
-					longtouch_id = 0;
-				var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
-				coord[0] = utils.fix_lng(coord[0]);
-				poiClick.show(evt.coordinate);
-				mapUI.clear_layer('poi');
-				ui.set_center_pos(false);
-				mapUI.set_map_center(coord[0], coord[1], true);
-				switch(ui.get_pickingOnMap()) {
-					case 0:
-						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
-						if (settings.get_online_search())
-							webapi.georeverse_online(coord[0], coord[1], longtouch_id);
-						else
-							webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
-						break;
-					case 1:
-					case 2:
-						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
-						break;
-				}
-			}, delay: 350
-		});
-		map.addInteraction(LongTouch);
-		map.on('pointerdrag', function(evt) {
-			if (!ui.get_center_pos())
-				return;
-			ui.set_center_pos(false);
-		});
-		map.on('singleclick', function(evt) {
-			// Attempt to find a feature in one of the visible vector layers
-			var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
-				return feature;
-			});
-			if (feature) {
-				try {
-					var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
-					coord[0] = utils.fix_lng(coord[0]);
-					var props = feature.getProperties();
-					if (props.name == 'pos') {
-						longtouch_id++;
-						var coords_aux = ol.proj.transform(mapUI.posFeature.getGeometry().getCoordinates(), 'EPSG:3857', 'EPSG:4326');
-						mapUI.set_map_center(coords_aux[0], coords_aux[1], true);
-						ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsClickedOwnPos: true, iconsLng: coords_aux[0], iconsLat: coords_aux[1]});
-					}
-					if (props.name.startsWith("poi-")) {
+        // Map events
+        var longtouch_id = 0; // Know when recovery georeverse data is the same point
+        var LongTouch = new ol.interaction.LongTouch({    
+            handleLongTouchEvent: function(evt) {
+                longtouch_id++;
+                if (longtouch_id > 20)
+                    longtouch_id = 0;
+                var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+                coord[0] = utils.fix_lng(coord[0]);
+                poiClick.show(evt.coordinate);
+                mapUI.clear_layer('poi');
+                ui.set_center_pos(false);
+                mapUI.set_map_center(coord[0], coord[1], true);
+                switch(ui.get_pickingOnMap()) {
+                    case 0:
+                        ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: coord[0], iconsLat: coord[1]});
+                        if (settings.get_online_search())
+                            webapi.georeverse_online(coord[0], coord[1], longtouch_id);
+                        else
+                            webapi.georeverse_offline(coord[0], coord[1], longtouch_id);
+                        break;
+                    case 1:
+                    case 2:
+                        ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconIsPickingPos: true});
+                        break;
+                }
+            }, delay: 350
+        });
+        map.addInteraction(LongTouch);
+        map.on('pointerdrag', function(evt) {
+            if (!ui.get_center_pos())
+                return;
+            ui.set_center_pos(false);
+        });
+        map.on('singleclick', function(evt) {
+            // Attempt to find a feature in one of the visible vector layers
+            var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature, layer) {
+                return feature;
+            });
+            if (feature) {
+                try {
+                    var coord = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+                    coord[0] = utils.fix_lng(coord[0]);
+                    var props = feature.getProperties();
+                    if (props.name == 'pos') {
+                        longtouch_id++;
+                        var coords_aux = ol.proj.transform(mapUI.posFeature.getGeometry().getCoordinates(), 'EPSG:3857', 'EPSG:4326');
+                        mapUI.set_map_center(coords_aux[0], coords_aux[1], true);
+                        ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsClickedOwnPos: true, iconsLng: coords_aux[0], iconsLat: coords_aux[1]});
+                    }
+                    if (props.name.startsWith("poi-")) {
 
-						var allPOIs = mapUI.layerPOI.getSource().getFeatures();
-						for (i=0; i<allPOIs.length; i++) {
-							if (props.name != allPOIs[i].get('name'))
-								var icon = new ol.style.Style({
-									zIndex: 1,
-									image: new ol.style.Icon({
-										anchor: [15, 41],
-										anchorXUnits: "pixels",
-										anchorYUnits: "pixels",
-										src: allPOIs[i].get('icon')
-									})
-								});
-							else
-								var icon = new ol.style.Style({
-									zIndex: 2,
-									image: new ol.style.Icon({
-										anchor: [15, 41],
-										anchorXUnits: "pixels",
-										anchorYUnits: "pixels",
-										src: allPOIs[i].get('icon').replace('poi-emblem', 'poi-emblem-highlight')
-									})
-								});
-							allPOIs[i].setStyle(icon);
-						}
+                        var allPOIs = mapUI.layerPOI.getSource().getFeatures();
+                        for (i=0; i<allPOIs.length; i++) {
+                            if (props.name != allPOIs[i].get('name'))
+                                var icon = new ol.style.Style({
+                                    zIndex: 1,
+                                    image: new ol.style.Icon({
+                                        anchor: [15, 41],
+                                        anchorXUnits: "pixels",
+                                        anchorYUnits: "pixels",
+                                        src: allPOIs[i].get('icon')
+                                    })
+                                });
+                            else
+                                var icon = new ol.style.Style({
+                                    zIndex: 2,
+                                    image: new ol.style.Icon({
+                                        anchor: [15, 41],
+                                        anchorXUnits: "pixels",
+                                        anchorYUnits: "pixels",
+                                        src: allPOIs[i].get('icon').replace('poi-emblem', 'poi-emblem-highlight')
+                                    })
+                                });
+                            allPOIs[i].setStyle(icon);
+                        }
 
-						longtouch_id++;
-						ui.set_center_pos(false);
-						mapUI.set_map_center(coord[0], coord[1], true);
-						if (props.title)
-							ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: props.title, iconsShow: 'yes', iconsLng: props.lng, iconsLat: props.lat, iconsPhone: props.phone, iconsWebsite: props.website, iconsEmail: props.email});
-						else
-							ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: props.lng, iconsLat: props.lat, iconsPhone: props.phone, iconsWebsite: props.website, iconsEmail: props.email});
-					}
-				} catch (error) {}
-			}
-		});
+                        longtouch_id++;
+                        ui.set_center_pos(false);
+                        mapUI.set_map_center(coord[0], coord[1], true);
+                        if (props.title)
+                            ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: props.title, iconsShow: 'yes', iconsLng: props.lng, iconsLat: props.lat, iconsPhone: props.phone, iconsWebsite: props.website, iconsEmail: props.email});
+                        else
+                            ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsLng: props.lng, iconsLat: props.lat, iconsPhone: props.phone, iconsWebsite: props.website, iconsEmail: props.email});
+                    }
+                } catch (error) {}
+            }
+        });
 
-		// Calls to QML
-		function BtnShare(lng, lat) {
-			window.location = 'http://sharepos/' + lng + '/' + lat;
-		}
-		function BtnFavorite(lng, lat) {
-			window.location = 'http://savefavorite/' + lng + '/' + lat;
-		}
-		function BtnPhone(phone) {
-			window.location = 'http://callphone/' + phone;
-		}
-		function BtnWebsite(web) {
-			window.location = 'http://openwebsite/' + web;
-		}
-		function BtnEmail(email) {
-			window.location = 'http://sendemail/' + email;
-		}
-		function BtnGo(lng, lat) {
-			longtouch_id++; // Avoid message after click
-			ui.show_panels('none');
-			mapUI.clear_layer('poi');
-			mapUI.clear_layer('route');
-			mapUI.clear_layer('radar');
-			poiClick.hide();
-			poiStart.hide();
-			poiEnd.show(ol.proj.fromLonLat([lng, lat]));
-			if (nav.get_data().lng === null) {
-				nav.set_data({mode: 'GPS_waiting_for_calculating', lng_end: lng, lat_end: lat});
-				center_pos();				
-			}
-			else {
-				nav.set_data({mode: 'calculating_call_API', lng_start: nav.get_data().lng, lat_start: nav.get_data().lat, lng_end: lng, lat_end: lat});
-				ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
-				set_new_pos();
-			}
-		}
-		function BtnSimulate(lng1, lat1, lng2, lat2) {
-			mapUI.clear_layer('route');
-			poiStart.show(ol.proj.fromLonLat([lng1, lat1]));
-			poiEnd.show(ol.proj.fromLonLat([lng2, lat2]));
-			nav.set_data({mode: 'calculating_simulating_call_API'});
-			ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
-			webapi.route(settings.get_online_route(), lng1, lat1, lng2, lat2);
-		}
-		function route_cancel(simulate) {
-			ui.show_panels('none');
-			mapUI.clear_layer('route');
-			mapUI.clear_layer('radar');
-			poiEnd.hide();
-			poiStart.hide();
-			if (!nav.get_data().mode.startsWith('route_end') && !simulate)
-				ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Route canceled"), iconsShow: 'no'});
-			else
-				ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-			nav.set_data({mode: 'exploring'});
-			if (!simulate)
-				ui.update_map_view(nav.get_data());
-		}
-		function route_start() {
-			ui.show_panels('navigate');
-			ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
-			nav.set_data({mode: 'route_driving'});
-			ui.set_center_pos(true);
-			set_new_pos();
-		}
-		function mode_navigation(value) {
-			settings.set_route_mode(value);
-			ui.set_confirm_btns(value);
-			if (nav.get_data().mode.includes("simulating"))
-				BtnSimulate(ui.get_picked_coords().lng1, ui.get_picked_coords().lat1, ui.get_picked_coords().lng2, ui.get_picked_coords().lat2);
-			else
-				BtnGo(nav.get_data().lng_end, nav.get_data().lat_end);
-			window.location = 'http://routemode/' + value;
-		}
+        // Calls to QML
+        function BtnShare(lng, lat) {
+            window.location = 'http://sharepos/' + lng + '/' + lat;
+        }
+        function BtnFavorite(lng, lat) {
+            window.location = 'http://savefavorite/' + lng + '/' + lat;
+        }
+        function BtnPhone(phone) {
+            window.location = 'http://callphone/' + phone;
+        }
+        function BtnWebsite(web) {
+            window.location = 'http://openwebsite/' + web;
+        }
+        function BtnEmail(email) {
+            window.location = 'http://sendemail/' + email;
+        }
+        function BtnGo(lng, lat) {
+            longtouch_id++; // Avoid message after click
+            ui.show_panels('none');
+            mapUI.clear_layer('poi');
+            mapUI.clear_layer('route');
+            mapUI.clear_layer('radar');
+            poiClick.hide();
+            poiStart.hide();
+            poiEnd.show(ol.proj.fromLonLat([lng, lat]));
+            if (nav.get_data().lng === null) {
+                nav.set_data({mode: 'GPS_waiting_for_calculating', lng_end: lng, lat_end: lat});
+                center_pos();                
+            }
+            else {
+                nav.set_data({mode: 'calculating_call_API', lng_start: nav.get_data().lng, lat_start: nav.get_data().lat, lng_end: lng, lat_end: lat});
+                ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+                set_new_pos();
+            }
+        }
+        function BtnSimulate(lng1, lat1, lng2, lat2) {
+            mapUI.clear_layer('route');
+            poiStart.show(ol.proj.fromLonLat([lng1, lat1]));
+            poiEnd.show(ol.proj.fromLonLat([lng2, lat2]));
+            nav.set_data({mode: 'calculating_simulating_call_API'});
+            ui.POIPanel({msgShow: 'yes', msgText: t("Calculating route"), iconsShow: 'no'});
+            webapi.route(settings.get_online_route(), lng1, lat1, lng2, lat2);
+        }
+        function route_cancel(simulate) {
+            ui.show_panels('none');
+            mapUI.clear_layer('route');
+            mapUI.clear_layer('radar');
+            poiEnd.hide();
+            poiStart.hide();
+            if (!nav.get_data().mode.startsWith('route_end') && !simulate)
+                ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Route canceled"), iconsShow: 'no'});
+            else
+                ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
+            nav.set_data({mode: 'exploring'});
+            if (!simulate)
+                ui.update_map_view(nav.get_data());
+        }
+        function route_start() {
+            ui.show_panels('navigate');
+            ui.POIPanel({msgShow: 'no', iconsShow: 'no'});
+            nav.set_data({mode: 'route_driving'});
+            ui.set_center_pos(true);
+            set_new_pos();
+        }
+        function mode_navigation(value) {
+            settings.set_route_mode(value);
+            ui.set_confirm_btns(value);
+            if (nav.get_data().mode.includes("simulating"))
+                BtnSimulate(ui.get_picked_coords().lng1, ui.get_picked_coords().lat1, ui.get_picked_coords().lng2, ui.get_picked_coords().lat2);
+            else
+                BtnGo(nav.get_data().lng_end, nav.get_data().lat_end);
+            window.location = 'http://routemode/' + value;
+        }
 
-		// Calls from QML
-		function import_marker(plng, plat, description, boundingbox, favorite) {
-			var lng = parseFloat(plng);
-			var lat = parseFloat(plat);
-			var title = description || "";
-			var bounding = boundingbox || "";
-			var is_favorite = favorite || false;
+        // Calls from QML
+        function import_marker(plng, plat, description, boundingbox, favorite) {
+            var lng = parseFloat(plng);
+            var lat = parseFloat(plat);
+            var title = description || "";
+            var bounding = boundingbox || "";
+            var is_favorite = favorite || false;
 
-			mapUI.clear_layer('poi');
-			ui.set_center_pos(false);
-			if (bounding) {
-				var coords_bound = boundingbox.split(',');
-				mapUI.set_map_fit_box(parseFloat(coords_bound[2]), parseFloat(coords_bound[0]), parseFloat(coords_bound[3]), parseFloat(coords_bound[1]));
-			}
-			else {
-				mapUI.set_map_center(lng, lat);
-				mapUI.set_map_zoom(16);
-			}
-			poiClick.show(ol.proj.fromLonLat([lng, lat]));
-			if (description)
-				ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: title, iconsShow: 'yes', iconsIsFavorite: is_favorite, iconsLng: lng, iconsLat: lat});
-			else
-				ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsIsFavorite: is_favorite, iconsLng: lng, iconsLat: lat});
-		}
-		function set_search_poi(POI, icon) {
-			mapUI.clear_layer('poi');
-			if (mapUI.get_map_zoom() >= 7) {
-				if (settings.get_online_search())
-					webapi.POIsOnline(POI, icon);
-				else
-					webapi.POIsOffline(POI, icon);
-			}
-			else {
-				ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Use more zoom for POIs"), iconsShow: 'no'});
-			}
-		}
-		function qml_save_last_pos() {
-			window.location = 'http://savelastpos/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0] + '/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1] + '/' + map.getView().getZoom();
-		}
+            mapUI.clear_layer('poi');
+            ui.set_center_pos(false);
+            if (bounding) {
+                var coords_bound = boundingbox.split(',');
+                mapUI.set_map_fit_box(parseFloat(coords_bound[2]), parseFloat(coords_bound[0]), parseFloat(coords_bound[3]), parseFloat(coords_bound[1]));
+            }
+            else {
+                mapUI.set_map_center(lng, lat);
+                mapUI.set_map_zoom(16);
+            }
+            poiClick.show(ol.proj.fromLonLat([lng, lat]));
+            if (description)
+                ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: title, iconsShow: 'yes', iconsIsFavorite: is_favorite, iconsLng: lng, iconsLat: lat});
+            else
+                ui.POIPanel({msgShow: 'no', iconsShow: 'yes', iconsIsFavorite: is_favorite, iconsLng: lng, iconsLat: lat});
+        }
+        function set_search_poi(POI, icon) {
+            mapUI.clear_layer('poi');
+            if (mapUI.get_map_zoom() >= 7) {
+                if (settings.get_online_search())
+                    webapi.POIsOnline(POI, icon);
+                else
+                    webapi.POIsOffline(POI, icon);
+            }
+            else {
+                ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("Use more zoom for POIs"), iconsShow: 'no'});
+            }
+        }
+        function qml_save_last_pos() {
+            window.location = 'http://savelastpos/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0] + '/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1] + '/' + map.getView().getZoom();
+        }
 
-		function parse_gpx(gpx_content) {
-			var coords = [];
-			let gpx = new gpxParser();
-			gpx.parse(gpx_content);
-			for (i = 0; i < gpx.tracks[0].points.length; i++)
-				coords.push([gpx.tracks[0].points[i].lon, gpx.tracks[0].points[i].lat]);
-			ui.set_center_pos(false);
-			mapUI.clear_layer('gpx');
-			mapUI.show_route(coords, 'gpx', true);
-			if (settings.get_unit() == settings.KM)
-				var msg = parseFloat(maths.meter2km(gpx.tracks[0].distance.total)).toFixed(1) + 'km  ⬆' + Math.trunc(gpx.tracks[0].elevation.max) + 'm ' + ' ⬇' + Math.trunc(gpx.tracks[0].elevation.min) + 'm';
-			else
-				var msg = parseFloat(maths.meter2mile(gpx.tracks[0].distance.total)).toFixed(1) + 'mi  ⬆' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.max)) + 'ft ' + ' ⬇' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.min)) + 'ft';
-			ui.POIPanel({msgShow: 'yes', msgText: msg, iconsShow: 'no'});
-		}
-		function import_gpx(gpx) {
-			var xhr = new XMLHttpRequest;
-			xhr.open("GET", gpx);
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState == XMLHttpRequest.DONE) {
-					parse_gpx(xhr.responseText);
-				}
-			};
-			xhr.send();
-		}
-		
-		function load_custom_voices(play) {
-			$.ajax({
-				url:"/home/phablet/.local/share/navigator.costales/0.ogg",
-				type:'HEAD',
-				error: function() {
-					console.log("No custom voices");
-					if (play)
-						$('#10').trigger('play');
-				},
-				success: function() {
-					$('#0').attr('src',  '/home/phablet/.local/share/navigator.costales/0.ogg'  + '?' + Date.now());
-					$('#1').attr('src',  '/home/phablet/.local/share/navigator.costales/1.ogg'  + '?' + Date.now());
-					$('#2').attr('src',  '/home/phablet/.local/share/navigator.costales/2.ogg'  + '?' + Date.now());
-					$('#3').attr('src',  '/home/phablet/.local/share/navigator.costales/3.ogg'  + '?' + Date.now());
-					$('#4').attr('src',  '/home/phablet/.local/share/navigator.costales/4.ogg'  + '?' + Date.now());
-					$('#5').attr('src',  '/home/phablet/.local/share/navigator.costales/5.ogg'  + '?' + Date.now());
-					$('#6').attr('src',  '/home/phablet/.local/share/navigator.costales/6.ogg'  + '?' + Date.now());
-					$('#9').attr('src',  '/home/phablet/.local/share/navigator.costales/9.ogg'  + '?' + Date.now());
-					$('#10').attr('src', '/home/phablet/.local/share/navigator.costales/10.ogg' + '?' + Date.now());
-					$('#12').attr('src', '/home/phablet/.local/share/navigator.costales/12.ogg' + '?' + Date.now());
-					$('#13').attr('src', '/home/phablet/.local/share/navigator.costales/13.ogg' + '?' + Date.now());
-					$('#70').attr('src', '/home/phablet/.local/share/navigator.costales/70.ogg' + '?' + Date.now());
-					$('#71').attr('src', '/home/phablet/.local/share/navigator.costales/71.ogg' + '?' + Date.now());
-					$('#72').attr('src', '/home/phablet/.local/share/navigator.costales/72.ogg' + '?' + Date.now());
-					$('#73').attr('src', '/home/phablet/.local/share/navigator.costales/73.ogg' + '?' + Date.now());
-					$('#74').attr('src', '/home/phablet/.local/share/navigator.costales/74.ogg' + '?' + Date.now());
-					console.log("Loaded custom voices");
-					if (play)
-						$('#10').trigger('play');
-				}
-			});
-		}
-	</script>
+        function parse_gpx(gpx_content) {
+            var coords = [];
+            let gpx = new gpxParser();
+            gpx.parse(gpx_content);
+            for (i = 0; i < gpx.tracks[0].points.length; i++)
+                coords.push([gpx.tracks[0].points[i].lon, gpx.tracks[0].points[i].lat]);
+            ui.set_center_pos(false);
+            mapUI.clear_layer('gpx');
+            mapUI.show_route(coords, 'gpx', true);
+            if (settings.get_unit() == settings.KM)
+                var msg = parseFloat(maths.meter2km(gpx.tracks[0].distance.total)).toFixed(1) + 'km  ⬆' + Math.trunc(gpx.tracks[0].elevation.max) + 'm ' + ' ⬇' + Math.trunc(gpx.tracks[0].elevation.min) + 'm';
+            else
+                var msg = parseFloat(maths.meter2mile(gpx.tracks[0].distance.total)).toFixed(1) + 'mi  ⬆' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.max)) + 'ft ' + ' ⬇' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.min)) + 'ft';
+            ui.POIPanel({msgShow: 'yes', msgText: msg, iconsShow: 'no'});
+        }
+        function import_gpx(gpx) {
+            var xhr = new XMLHttpRequest;
+            xhr.open("GET", gpx);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    parse_gpx(xhr.responseText);
+                }
+            };
+            xhr.send();
+        }
+        
+        function load_custom_voices(play) {
+            $.ajax({
+                url:"/home/phablet/.local/share/navigator.costales/0.ogg",
+                type:'HEAD',
+                error: function() {
+                    console.log("No custom voices");
+                    if (play)
+                        $('#10').trigger('play');
+                },
+                success: function() {
+                    $('#0').attr('src',  '/home/phablet/.local/share/navigator.costales/0.ogg'  + '?' + Date.now());
+                    $('#1').attr('src',  '/home/phablet/.local/share/navigator.costales/1.ogg'  + '?' + Date.now());
+                    $('#2').attr('src',  '/home/phablet/.local/share/navigator.costales/2.ogg'  + '?' + Date.now());
+                    $('#3').attr('src',  '/home/phablet/.local/share/navigator.costales/3.ogg'  + '?' + Date.now());
+                    $('#4').attr('src',  '/home/phablet/.local/share/navigator.costales/4.ogg'  + '?' + Date.now());
+                    $('#5').attr('src',  '/home/phablet/.local/share/navigator.costales/5.ogg'  + '?' + Date.now());
+                    $('#6').attr('src',  '/home/phablet/.local/share/navigator.costales/6.ogg'  + '?' + Date.now());
+                    $('#9').attr('src',  '/home/phablet/.local/share/navigator.costales/9.ogg'  + '?' + Date.now());
+                    $('#10').attr('src', '/home/phablet/.local/share/navigator.costales/10.ogg' + '?' + Date.now());
+                    $('#12').attr('src', '/home/phablet/.local/share/navigator.costales/12.ogg' + '?' + Date.now());
+                    $('#13').attr('src', '/home/phablet/.local/share/navigator.costales/13.ogg' + '?' + Date.now());
+                    $('#70').attr('src', '/home/phablet/.local/share/navigator.costales/70.ogg' + '?' + Date.now());
+                    $('#71').attr('src', '/home/phablet/.local/share/navigator.costales/71.ogg' + '?' + Date.now());
+                    $('#72').attr('src', '/home/phablet/.local/share/navigator.costales/72.ogg' + '?' + Date.now());
+                    $('#73').attr('src', '/home/phablet/.local/share/navigator.costales/73.ogg' + '?' + Date.now());
+                    $('#74').attr('src', '/home/phablet/.local/share/navigator.costales/74.ogg' + '?' + Date.now());
+                    console.log("Loaded custom voices");
+                    if (play)
+                        $('#10').trigger('play');
+                }
+            });
+        }
+    </script>
 
-	<!-- Panels -->
-	<!-- Geoposition -->
-	<div id="posBtn" onclick="center_pos()">
-		<img id="geo" src="img/ui/geoDisabled.svg">
-		<div id="pulsePosBtn" onclick="center_pos()"></div>
-	</div>
-	<!-- Map credits -->
-	<div id="mapCredits"></div>
-	<!-- Top panels -->
-	<div id="topPanelMsg" class="topPanels" onclick="ui.POIPanel({msgShow: 'no', iconsShow: 'no'})">
-		<div id="topPanelMsgContent"></div>
-	</div>
-	<div id="topPanelIcons" class="topPanels" onclick="ui.POIPanel({msgShow: 'no', iconsShow: 'no'})">
-		<div id="topPanelIconsContent"></div>
-	</div>
-	<!-- Navigation panels -->
-	<div id="panelsNav">
-		<div id="topPanelNav">
-			<div id="totalProgress"></div>
-			<div id="stepTxt"></div>
-			<div id="stepImg"></div>
-			<div id="distance"></div>
-			<div id="btnCancelRoute" onclick="route_cancel(false)"><img src="img/panel/cancel.svg" height="100%"></div>
-		</div>
-		<div id="bottomPanelNav">
-			<div id="endDistance"></div>
-			<div id="speed"></div>
-			<div id="endTime">a</div>
-			<div id="endHour"></div>
-		</div>
-	</div>
-	<!-- Confirm route panel -->
-	<div id="panelConfirmRoute">
-		<div id="topPanelConfirm">
-			<div id="modeConfirm">
-				<img id="btnModeCarConfirm" src="img/mode/car.svg" onClick='mode_navigation("car")'>
-				<img id="btnModeBikeConfirm" src="img/mode/bike.svg" onClick='mode_navigation("bike")'>
-				<img id="btnModeWalkConfirm" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
-			</div>
-			<div id="btnsConfirm">
-				<button id="btnCancelSimulate" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(true)'>Close</button>
-				<button id="btnCancel" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(false)'>Cancel</button>
-				<button id="btnStart" data-role='button' class='btns2_mode_route positive' onClick='route_start()' data-localize="Start">Start</button>
-			</div>
-		</div>
-		<div id="bottomPanelConfirm">
-			<div id="confirmEndTime"></div>
-			<div id="confirmEndDistance"></div>
-			<div id="confirmEndHour"></div>
-			<div id="bottomConfirmMessage"></div>
-		</div>
-	</div>
+    <!-- Panels -->
+    <!-- Geoposition -->
+    <div id="posBtn" onclick="center_pos()">
+        <img id="geo" src="img/ui/geoDisabled.svg">
+        <div id="pulsePosBtn" onclick="center_pos()"></div>
+    </div>
+    <!-- Map credits -->
+    <div id="mapCredits"></div>
+    <!-- Top panels -->
+    <div id="topPanelMsg" class="topPanels" onclick="ui.POIPanel({msgShow: 'no', iconsShow: 'no'})">
+        <div id="topPanelMsgContent"></div>
+    </div>
+    <div id="topPanelIcons" class="topPanels" onclick="ui.POIPanel({msgShow: 'no', iconsShow: 'no'})">
+        <div id="topPanelIconsContent"></div>
+    </div>
+    <!-- Navigation panels -->
+    <div id="panelsNav">
+        <div id="topPanelNav">
+            <div id="totalProgress"></div>
+            <div id="stepTxt"></div>
+            <div id="stepImg"></div>
+            <div id="distance"></div>
+            <div id="btnCancelRoute" onclick="route_cancel(false)"><img src="img/panel/cancel.svg" height="100%"></div>
+        </div>
+        <div id="bottomPanelNav">
+            <div id="endDistance"></div>
+            <div id="speed"></div>
+            <div id="endTime">a</div>
+            <div id="endHour"></div>
+        </div>
+    </div>
+    <!-- Confirm route panel -->
+    <div id="panelConfirmRoute">
+        <div id="topPanelConfirm">
+            <div id="modeConfirm">
+                <img id="btnModeCarConfirm" src="img/mode/car.svg" onClick='mode_navigation("car")'>
+                <img id="btnModeBikeConfirm" src="img/mode/bike.svg" onClick='mode_navigation("bike")'>
+                <img id="btnModeWalkConfirm" src="img/mode/walk.svg" onClick='mode_navigation("walk")'>
+            </div>
+            <div id="btnsConfirm">
+                <button id="btnCancelSimulate" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(true)'>Close</button>
+                <button id="btnCancel" data-role='button' class='btns2_mode_route negative' onClick='route_cancel(false)'>Cancel</button>
+                <button id="btnStart" data-role='button' class='btns2_mode_route positive' onClick='route_start()' data-localize="Start">Start</button>
+            </div>
+        </div>
+        <div id="bottomPanelConfirm">
+            <div id="confirmEndTime"></div>
+            <div id="confirmEndDistance"></div>
+            <div id="confirmEndHour"></div>
+            <div id="bottomConfirmMessage"></div>
+        </div>
+    </div>
 
-	<!-- Notifications -->
-	<audio id="0"  type="audio/ogg" src="voices/0.ogg"  preload="none"/>
-	<audio id="1"  type="audio/ogg" src="voices/1.ogg"  preload="none"/>
-	<audio id="2"  type="audio/ogg" src="voices/2.ogg"  preload="none"/>
-	<audio id="3"  type="audio/ogg" src="voices/3.ogg"  preload="none"/>
-	<audio id="4"  type="audio/ogg" src="voices/4.ogg"  preload="none"/>
-	<audio id="5"  type="audio/ogg" src="voices/5.ogg"  preload="none"/>
-	<audio id="6"  type="audio/ogg" src="voices/6.ogg"  preload="none"/>
-	<audio id="9"  type="audio/ogg" src="voices/9.ogg"  preload="none"/>
-	<audio id="10" type="audio/ogg" src="voices/10.ogg" preload="none"/>
-	<audio id="11" type="audio/ogg" src="voices/11.ogg" preload="none"/>
-	<audio id="12" type="audio/ogg" src="voices/12.ogg" preload="none"/>
-	<audio id="13" type="audio/ogg" src="voices/13.ogg" preload="none"/>
-	<audio id="70" type="audio/ogg" src="voices/70.ogg" preload="none"/>
-	<audio id="71" type="audio/ogg" src="voices/71.ogg" preload="none"/>
-	<audio id="72" type="audio/ogg" src="voices/72.ogg" preload="none"/>
-	<audio id="73" type="audio/ogg" src="voices/73.ogg" preload="none"/>
-	<audio id="74" type="audio/ogg" src="voices/74.ogg" preload="none"/>
-	<audio id="99" type="audio/ogg" src="voices/11.ogg" preload="none"/>
-	<audio id="radar" type="audio/ogg" src="voices/radar.ogg" preload="none"/>
+    <!-- Notifications -->
+    <audio id="0"  type="audio/ogg" src="voices/0.ogg"  preload="none"/>
+    <audio id="1"  type="audio/ogg" src="voices/1.ogg"  preload="none"/>
+    <audio id="2"  type="audio/ogg" src="voices/2.ogg"  preload="none"/>
+    <audio id="3"  type="audio/ogg" src="voices/3.ogg"  preload="none"/>
+    <audio id="4"  type="audio/ogg" src="voices/4.ogg"  preload="none"/>
+    <audio id="5"  type="audio/ogg" src="voices/5.ogg"  preload="none"/>
+    <audio id="6"  type="audio/ogg" src="voices/6.ogg"  preload="none"/>
+    <audio id="9"  type="audio/ogg" src="voices/9.ogg"  preload="none"/>
+    <audio id="10" type="audio/ogg" src="voices/10.ogg" preload="none"/>
+    <audio id="11" type="audio/ogg" src="voices/11.ogg" preload="none"/>
+    <audio id="12" type="audio/ogg" src="voices/12.ogg" preload="none"/>
+    <audio id="13" type="audio/ogg" src="voices/13.ogg" preload="none"/>
+    <audio id="70" type="audio/ogg" src="voices/70.ogg" preload="none"/>
+    <audio id="71" type="audio/ogg" src="voices/71.ogg" preload="none"/>
+    <audio id="72" type="audio/ogg" src="voices/72.ogg" preload="none"/>
+    <audio id="73" type="audio/ogg" src="voices/73.ogg" preload="none"/>
+    <audio id="74" type="audio/ogg" src="voices/74.ogg" preload="none"/>
+    <audio id="99" type="audio/ogg" src="voices/11.ogg" preload="none"/>
+    <audio id="radar" type="audio/ogg" src="voices/radar.ogg" preload="none"/>
 
-	<script>
-		ui.show_panels('none');
-		load_custom_voices(false);
-		
-		$(document).ready(function(){ // Disable clicks until page is loaded, this enables body{pointer-events:none;}
-			$('body').css('pointer-events','all');
-		});
-		var resizeWindowId;
-		$(window).resize(function() {
-			clearTimeout(resizeWindowId);
-			resizeWindowId = setTimeout(doneResizing, 500);
-		});
-		function doneResizing() {
-			ui.pos_btn_height(); // Pos PosBtn
-			window.location = 'http://settoppaneltop/'; // Pos top panel
-		}	
-	</script>
+    <script>
+        ui.show_panels('none');
+        load_custom_voices(false);
+        
+        $(document).ready(function(){ // Disable clicks until page is loaded, this enables body{pointer-events:none;}
+            $('body').css('pointer-events','all');
+        });
+        var resizeWindowId;
+        $(window).resize(function() {
+            clearTimeout(resizeWindowId);
+            resizeWindowId = setTimeout(doneResizing, 500);
+        });
+        function doneResizing() {
+            ui.pos_btn_height(); // Pos PosBtn
+            window.location = 'http://settoppaneltop/'; // Pos top panel
+        }    
+    </script>
 
 </body>
 </html>

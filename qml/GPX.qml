@@ -17,21 +17,21 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 Item {
-    id: gpx
-    
-    Column {
-        id: importGPX
-        anchors.centerIn: parent
-        spacing: units.gu(1)
-        Button {
-            id: btnImport
-            text: i18n.tr("Import track")
-            width: units.gu(30)
-            anchors.horizontalCenter: parent.horizontalCenter
-            color: theme.palette.normal.positive
-            onClicked: {
-                mainPageStack.addPageToCurrentColumn(searchPage, Qt.resolvedUrl("GPXImport.qml"));
-            }
-        }
-    }
+	id: gpx
+	
+	Column {
+		id: importGPX
+		anchors.centerIn: parent
+		spacing: units.gu(1)
+		Button {
+			id: btnImport
+			text: i18n.tr("Import track")
+			width: units.gu(30)
+			anchors.horizontalCenter: parent.horizontalCenter
+			color: theme.palette.normal.positive
+			onClicked: {
+				mainPageStack.addPageToCurrentColumn(searchPage, Qt.resolvedUrl("GPXImport.qml"));
+			}
+		}
+	}
 }

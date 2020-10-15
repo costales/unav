@@ -17,24 +17,24 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 Item {
-    id: gpx
-    
-    Column {
-        id: simulate
-        anchors.centerIn: parent
-        spacing: units.gu(1)
-        Button {
-            id: btnFrom
-            text: i18n.tr("Pick origin & destination")
-            enabled: !mainPageStack.simulateRoute
-            width: units.gu(30)
-            anchors.horizontalCenter: parent.horizontalCenter
-            color: theme.palette.normal.positive
-            onClicked: {
-                if (mainPageStack.columns === 1)
-                    mainPageStack.removePages(searchPage);
-                mainPageStack.executeJavaScript("ui.set_pickingOnMap(1)");
-            }
-        }
-    }
+	id: gpx
+	
+	Column {
+		id: simulate
+		anchors.centerIn: parent
+		spacing: units.gu(1)
+		Button {
+			id: btnFrom
+			text: i18n.tr("Pick origin & destination")
+			enabled: !mainPageStack.simulateRoute
+			width: units.gu(30)
+			anchors.horizontalCenter: parent.horizontalCenter
+			color: theme.palette.normal.positive
+			onClicked: {
+				if (mainPageStack.columns === 1)
+					mainPageStack.removePages(searchPage);
+				mainPageStack.executeJavaScript("ui.set_pickingOnMap(1)");
+			}
+		}
+	}
 }

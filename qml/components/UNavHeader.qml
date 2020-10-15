@@ -17,12 +17,12 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 
 PageHeader {
-    StyleHints {
-        backgroundColor: "#398DFF"
-        foregroundColor: "White"
-        dividerColor: "White"
-    }
+	StyleHints {
+		backgroundColor: "#398DFF"
+		foregroundColor: "White"
+		dividerColor: "White"
+	}
 
-    trailingActionBar.delegate: UNavHeaderButton {}
-    leadingActionBar.delegate: UNavHeaderButton {}
+	trailingActionBar.delegate: UNavHeaderButton {}
+	leadingActionBar.delegate: UNavHeaderButton {}
 }

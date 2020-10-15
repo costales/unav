@@ -17,8 +17,8 @@ I18N_FILES=$(sort $(QML_FILES) $(JS_FILES) $(HTML_JS_FILE) $(HTML_STRINGS_FILE).
 
 $(POT_FILE): $(I18N_FILES)
 	xgettext -o $@ --from-code=UTF-8 -C --qt --add-comments=TRANSLATORS \
-	    --keyword=tr --keyword=tr:1,2 --keyword=t --keyword=N_ \
-	    --package-name=unav -D . $^
+		--keyword=tr --keyword=tr:1,2 --keyword=t --keyword=N_ \
+		--package-name=unav -D . $^
 
 PO_FILES=$(wildcard po/*.po)
 

@@ -24,106 +24,106 @@ import "js/PoiCategories.js" as Categories
 import "js/db.js" as UnavDB
 
 Item {
-    id: poiPage
+	id: poiPage
 
-    property var lat
-    property var lng
+	property var lat
+	property var lng
 
-    property ListView flickable: categoryList
+	property ListView flickable: categoryList
 
-    ListModel {
-        id: categoryListModel
-        function initialize() {
-            categoryListModel.clear();
-            Categories.data.forEach( function(category) {
-                categoryListModel.append(category);
-            });
+	ListModel {
+		id: categoryListModel
+		function initialize() {
+			categoryListModel.clear();
+			Categories.data.forEach( function(category) {
+				categoryListModel.append(category);
+			});
 
-            var res = UnavDB.getNearByHistory();
-            var len = res.rows.length;
-            for ( var i = 0; i < len; ++i) {
-                categoryListModel.insert(
-                    i,
-                    {
-                        theme: i18n.tr("Last used"),
-                        label: res.rows.item(i).label,
-                        tag_online: res.rows.item(i).tag_online,
-                        tag_offline: res.rows.item(i).tag_offline,
-                        enabled_offline: res.rows.item(i).enabled_offline
-                    }
-                );
-            }
+			var res = UnavDB.getNearByHistory();
+			var len = res.rows.length;
+			for ( var i = 0; i < len; ++i) {
+				categoryListModel.insert(
+					i,
+					{
+						theme: i18n.tr("Last used"),
+						label: res.rows.item(i).label,
+						tag_online: res.rows.item(i).tag_online,
+						tag_offline: res.rows.item(i).tag_offline,
+						enabled_offline: res.rows.item(i).enabled_offline
+					}
+				);
+			}
 
-        }
-        Component.onCompleted: initialize()
-    }
+		}
+		Component.onCompleted: initialize()
+	}
 
 
-    SortFilterModel {
-        id: sortedCategoryListModel
-        model: categoryListModel
-    }
+	SortFilterModel {
+		id: sortedCategoryListModel
+		model: categoryListModel
+	}
 
-    ListView {
-        id: categoryList
+	ListView {
+		id: categoryList
 
-        model: sortedCategoryListModel
-        anchors.fill: parent
-        clip: true
+		model: sortedCategoryListModel
+		anchors.fill: parent
+		clip: true
 
-        section.property: "theme"
-        section.criteria: ViewSection.FullString
-        section.labelPositioning: ViewSection.CurrentLabelAtStart + ViewSection.InlineLabels
-        section.delegate: Rectangle {
-            width: parent.width
-            height: sectionHeader.height
-            color: theme.palette.normal.background
+		section.property: "theme"
+		section.criteria: ViewSection.FullString
+		section.labelPositioning: ViewSection.CurrentLabelAtStart + ViewSection.InlineLabels
+		section.delegate: Rectangle {
+			width: parent.width
+			height: sectionHeader.height
+			color: theme.palette.normal.background
 
-            ListItemHeader {
-                width: parent.width
-                height: sectionHeader.height
-                id: sectionHeader
-                title: section
-            }
-        }
+			ListItemHeader {
+				width: parent.width
+				height: sectionHeader.height
+				id: sectionHeader
+				title: section
+			}
+		}
 
-        delegate: ListItem {
-            id: poiItem
-            divider.visible: false
-            height: poiItemLayout.height
-            ListItemLayout {
-                id: poiItemLayout
+		delegate: ListItem {
+			id: poiItem
+			divider.visible: false
+			height: poiItemLayout.height
+			ListItemLayout {
+				id: poiItemLayout
 
-                Icon {
-                    source: Qt.resolvedUrl("../nav/img/poi/" + model.label + ".svg")
-                    height: units.gu(3)
-                    width: height
-                    SlotsLayout.position: SlotsLayout.First
-                    color: theme.palette.normal.backgroundText
-                    keyColor: "#000000"
-                }
+				Icon {
+					source: Qt.resolvedUrl("../nav/img/poi/" + model.label + ".svg")
+					height: units.gu(3)
+					width: height
+					SlotsLayout.position: SlotsLayout.First
+					color: theme.palette.normal.backgroundText
+					keyColor: "#000000"
+				}
 
-                title.text: i18n.tr(model.label)
-                enabled: navApp.settings.onlineSearch || model.enabled_offline == "yes"
-                subtitle.text: i18n.tr("Available only online")
-                subtitle.visible: !navApp.settings.onlineSearch && model.enabled_offline == "no"
-            }
-            onClicked: {
-                if (navApp.settings.onlineSearch || model.enabled_offline == "yes") {
-                    UnavDB.saveToNearByHistory(model.label, model.tag_online, model.tag_offline, model.enabled_offline);
-                    if (mainPageStack.columns === 1)
-                        mainPageStack.removePages(searchPage);
-                    if (navApp.settings.onlineSearch)
-                        mainPageStack.executeJavaScript("set_search_poi(\"" + model.tag_online + "\",\"" + model.label + "\")");
-                    else
-                        mainPageStack.executeJavaScript("set_search_poi(\"" + model.tag_offline + "\",\"" + model.label + "\")");
-                }
-            }
-        }
-    }
+				title.text: i18n.tr(model.label)
+				enabled: navApp.settings.onlineSearch || model.enabled_offline == "yes"
+				subtitle.text: i18n.tr("Available only online")
+				subtitle.visible: !navApp.settings.onlineSearch && model.enabled_offline == "no"
+			}
+			onClicked: {
+				if (navApp.settings.onlineSearch || model.enabled_offline == "yes") {
+					UnavDB.saveToNearByHistory(model.label, model.tag_online, model.tag_offline, model.enabled_offline);
+					if (mainPageStack.columns === 1)
+						mainPageStack.removePages(searchPage);
+					if (navApp.settings.onlineSearch)
+						mainPageStack.executeJavaScript("set_search_poi(\"" + model.tag_online + "\",\"" + model.label + "\")");
+					else
+						mainPageStack.executeJavaScript("set_search_poi(\"" + model.tag_offline + "\",\"" + model.label + "\")");
+				}
+			}
+		}
+	}
 
-    Scrollbar {
-        flickableItem: categoryList
-        align: Qt.AlignTrailing
-    }
+	Scrollbar {
+		flickableItem: categoryList
+		align: Qt.AlignTrailing
+	}
 }

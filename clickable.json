@@ -1,4 +1,4 @@
 {
-  "builder": "pure",
-  "kill": "qmlscene"
+	"builder": "pure",
+	"kill": "qmlscene"
 }
