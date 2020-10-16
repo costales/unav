@@ -18,7 +18,7 @@ import Ubuntu.Components 1.3
 
 PageHeader {
 	StyleHints {
-		backgroundColor: "#398DFF"
+		backgroundColor: "#0000FF"
 		foregroundColor: "White"
 		dividerColor: "White"
 	}
