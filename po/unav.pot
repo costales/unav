@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-12 17:35+0200\n"
+"POT-Creation-Date: 2020-10-16 17:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -421,15 +421,15 @@ msgstr ""
 msgid "Start"
 msgstr ""
 
-#: nav/class/UI.js:209 nav/class/UI.js:222
+#: nav/class/UI.js:211 nav/class/UI.js:224
 msgid "Try other route mode"
 msgstr ""
 
-#: nav/class/UI.js:261
+#: nav/class/UI.js:263
 msgid "Long click on origin"
 msgstr ""
 
-#: nav/class/UI.js:266
+#: nav/class/UI.js:268
 msgid "Long click on destination"
 msgstr ""
 
@@ -466,7 +466,7 @@ msgid "Error searching route"
 msgstr ""
 
 #: nav/index.html:283 nav/index.html:284 nav/index.html:289 nav/index.html:290
-#: nav/index.html:509 nav/index.html:518
+#: nav/index.html:511 nav/index.html:520
 msgid "Calculating route"
 msgstr ""
 
@@ -482,11 +482,11 @@ msgstr ""
 msgid "You have arrived at your destination"
 msgstr ""
 
-#: nav/index.html:528
+#: nav/index.html:530
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:585
+#: nav/index.html:587
 msgid "Use more zoom for POIs"
 msgstr ""
 
