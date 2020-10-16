@@ -38,7 +38,7 @@ function MapUI() {
         style: [
             new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: '#0000FF',
+                    color: '#3575db',
                     width: 5
                 })
             })
