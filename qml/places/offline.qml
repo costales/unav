@@ -23,10 +23,11 @@ import "../js/db.js" as UnavDB
 import "../components"
 
 Item {
-	id: container
+	id: searchOffline
 	anchors.fill: parent
 
 	property ListView flickable: listView
+	property bool searching: false
 
 	signal setSearchText(string text)
 
@@ -65,6 +66,13 @@ Item {
 				searchModel.append(item);
 			}
 		}
+	}
+
+	// Indicator to show search activity
+	ActivityIndicator {
+		id: searchActivity
+		anchors.centerIn: parent
+		running: searchOffline.searching
 	}
 
 	Column {
@@ -116,9 +124,9 @@ Item {
 			onClicked: {
 				if (model.lng === 0.0) { // History
 					var text_aux = model.title;
-					container.setSearchText(text_aux);
+					searchOffline.setSearchText(text_aux);
 					searchModel.clear();
-					statusLabel.text = i18n.tr("Searching...");
+					statusLabel.text = "";
 					searchJSON(text_aux);
 				}
 				else { // Show marker
@@ -144,7 +152,7 @@ Item {
 			placeholderText: i18n.tr("Place or location")
 
 			Connections {
-				target: container
+				target: searchOffline
 				onSetSearchText: {
 					searchField.text = text;
 				}
@@ -154,16 +162,15 @@ Item {
 				if (text.trim()) {
 					UnavDB.saveToSearchHistory(text);
 					searchModel.clear();
-					statusLabel.text = i18n.tr("Searching...");
+					statusLabel.text = "";
 					searchJSON(text);
 				}
 			}
 			onTextChanged: {
 				mainPageStack.lastSearchStringOffline = text;
 				searchModel.clear();
+				statusLabel.text = "";
 				if (!text.trim()) {
-					searchModel.clear();
-					statusLabel.text = "";
 					var res = UnavDB.getSearchHistory();
 					var len = res.rows.length;
 					for (var i = 0; i < len; ++i) {
@@ -185,16 +192,18 @@ Item {
 	}
 
 	function searchJSON(text) {
+		searchOffline.searching = true;
 		var request = new XMLHttpRequest();
-		request.open("GET", "http://localhost:8553/v2/search?search="+text, false);
+		request.open("GET", "http://localhost:8553/v2/search?search="+text, true);
 		request.setRequestHeader("Content-Type", 'application/json');
 
 		request.onreadystatechange = function() {
 			if (request.readyState == XMLHttpRequest.DONE) {
-				statusLabel.text = "";
+				searchOffline.searching = false;
 				try {
 					var json = JSON.parse(request.responseText);
 					if (json.result.length > 0) {
+						statusLabel.text = "";
 						mainPageStack.lastSearchResultsOffline = request.responseText;
 						searchModel.loadList(json.result);
 					}
@@ -209,6 +218,7 @@ Item {
 			}
 		}
 		request.onerror = function () {
+			searchOffline.searching = false;
 			mainPageStack.lastSearchResultsOffline = "";
 			statusLabel.text = i18n.tr("Time out!");
 		};

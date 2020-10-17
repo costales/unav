@@ -23,7 +23,7 @@ import "../js/db.js" as UnavDB
 import "../components"
 
 Item {
-	id: container
+	id: searchOnline
 	anchors.fill: parent
 
 	property ListView flickable: listView
@@ -92,6 +92,7 @@ Item {
 		XmlRole { name: "icon"; query: "@icon/string()"; isKey: true }
 
 		function search() {
+			statusLabel.text = "";
 			xmlSearchModel.clear();
 			sortedSearchModel.clear();
 			source = (searchUrl + searchString);
@@ -188,7 +189,7 @@ Item {
 			placeholderText: i18n.tr("Place or location")
 
 			Connections {
-				target: container
+				target: searchOnline
 				onSetSearchText: {
 					searchField.text = text;
 				}
@@ -205,8 +206,8 @@ Item {
 			onTextChanged: {
 				mainPageStack.lastSearchStringOnline = text;
 				sortedSearchModel.clear();
+				statusLabel.text = "";
 				if (!text.trim()) {
-					statusLabel.text = "";
 					var res = UnavDB.getSearchHistory();
 					var len = res.rows.length;
 					for (var i = 0; i < len; ++i) {
@@ -252,7 +253,7 @@ Item {
 			onClicked: {
 				if (model.lng === '') { // History
 					var text_aux = model.name;
-					container.setSearchText(text_aux);
+					searchOnline.setSearchText(text_aux);
 					statusLabel.text = "";
 					xmlSearchModel.searchString = text_aux;
 					xmlSearchModel.search();
