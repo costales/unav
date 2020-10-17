@@ -38,20 +38,22 @@ Item {
 			listView.delegate = searchDelegateComponent
 		}
 		else {
-			var res = UnavDB.getSearchHistory();
-			var len = res.rows.length;
-			for (var i = 0; i < len; ++i) {
-				var item = {
-					"name": res.rows.item(i).key,
-					"lat": '',
-					"lng": '',
-					"boundingbox": '',
-					"icon": ''
-				};
-				sortedSearchModel.append(item);
+			if (mainPageStack.lastSearchStringOnline == "") {
+				var res = UnavDB.getSearchHistory();
+				var len = res.rows.length;
+				for (var i = 0; i < len; ++i) {
+					var item = {
+						"name": res.rows.item(i).key,
+						"lat": '',
+						"lng": '',
+						"boundingbox": '',
+						"icon": ''
+					};
+					sortedSearchModel.append(item);
+				}
+				listView.model = sortedSearchModel
+				listView.delegate = searchDelegateComponent
 			}
-			listView.model = sortedSearchModel
-			listView.delegate = searchDelegateComponent
 		}
    }
 
@@ -204,9 +206,10 @@ Item {
 				}
 			}
 			onTextChanged: {
+				if (text != mainPageStack.lastSearchStringOnline)
+					mainPageStack.lastSearchResultsOnline = "";
 				mainPageStack.lastSearchStringOnline = text;
 				sortedSearchModel.clear();
-				mainPageStack.lastSearchResultsOnline = "";
 				statusLabel.text = "";
 				if (!text.trim()) {
 					var res = UnavDB.getSearchHistory();
@@ -221,6 +224,8 @@ Item {
 						};
 						sortedSearchModel.append(item);
 					}
+					listView.model = sortedSearchModel
+					listView.delegate = searchDelegateComponent
 				}
 			}
 		}

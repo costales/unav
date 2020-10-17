@@ -37,15 +37,17 @@ Item {
 			searchModel.loadList(json.result);
 		}
 		else {
-			var res = UnavDB.getSearchHistory();
-			var len = res.rows.length;
-			for (var i = 0; i < len; ++i) {
-				var item = {
-					"title": res.rows.item(i).key,
-					"lng": 0.0,
-					"lat": 0.0
-				};
-				searchModel.append(item);
+			if (mainPageStack.lastSearchStringOffline == "") {
+				var res = UnavDB.getSearchHistory();
+				var len = res.rows.length;
+				for (var i = 0; i < len; ++i) {
+					var item = {
+						"title": res.rows.item(i).key,
+						"lng": 0.0,
+						"lat": 0.0
+					};
+					searchModel.append(item);
+				}
 			}
 		}
 	}
@@ -167,9 +169,10 @@ Item {
 				}
 			}
 			onTextChanged: {
+				if (text != mainPageStack.lastSearchStringOffline)
+					mainPageStack.lastSearchResultsOffline = "";
 				mainPageStack.lastSearchStringOffline = text;
 				searchModel.clear();
-				mainPageStack.lastSearchResultsOffline = "";
 				statusLabel.text = "";
 				if (!text.trim()) {
 					var res = UnavDB.getSearchHistory();
