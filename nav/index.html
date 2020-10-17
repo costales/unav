@@ -106,7 +106,7 @@
         });
         
         // ol-ext
-        var poiClick = new ol.Overlay.Placemark({color: "#db4e35", popupClass: "poiClick"});
+        var poiClick = new ol.Overlay.Placemark({color: "#3575db", popupClass: "poiClick"});
         map.addOverlay(poiClick);
         $('.poiClick').click(function () { // map event doesn't capture this one
             var coord = ol.proj.transform(poiClick.getPosition(), 'EPSG:3857', 'EPSG:4326');
