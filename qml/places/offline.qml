@@ -37,8 +37,6 @@ Item {
 			searchModel.loadList(json.result);
 		}
 		else {
-			searchModel.clear();
-			statusLabel.text = "";
 			var res = UnavDB.getSearchHistory();
 			var len = res.rows.length;
 			for (var i = 0; i < len; ++i) {
@@ -126,6 +124,7 @@ Item {
 					var text_aux = model.title;
 					searchOffline.setSearchText(text_aux);
 					searchModel.clear();
+					mainPageStack.lastSearchResultsOffline = "";
 					statusLabel.text = "";
 					searchJSON(text_aux);
 				}
@@ -162,6 +161,7 @@ Item {
 				if (text.trim()) {
 					UnavDB.saveToSearchHistory(text);
 					searchModel.clear();
+					mainPageStack.lastSearchResultsOffline = "";
 					statusLabel.text = "";
 					searchJSON(text);
 				}
@@ -169,6 +169,7 @@ Item {
 			onTextChanged: {
 				mainPageStack.lastSearchStringOffline = text;
 				searchModel.clear();
+				mainPageStack.lastSearchResultsOffline = "";
 				statusLabel.text = "";
 				if (!text.trim()) {
 					var res = UnavDB.getSearchHistory();

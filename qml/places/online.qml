@@ -38,8 +38,6 @@ Item {
 			listView.delegate = searchDelegateComponent
 		}
 		else {
-			sortedSearchModel.clear();
-			statusLabel.text = "";
 			var res = UnavDB.getSearchHistory();
 			var len = res.rows.length;
 			for (var i = 0; i < len; ++i) {
@@ -92,6 +90,7 @@ Item {
 		XmlRole { name: "icon"; query: "@icon/string()"; isKey: true }
 
 		function search() {
+			mainPageStack.lastSearchResultsOnline = "";
 			statusLabel.text = "";
 			xmlSearchModel.clear();
 			sortedSearchModel.clear();
@@ -198,6 +197,7 @@ Item {
 			onTriggered: {
 				if (text.trim()) {
 					UnavDB.saveToSearchHistory(text);
+					mainPageStack.lastSearchResultsOnline = "";
 					statusLabel.text = "";
 					xmlSearchModel.searchString = text;
 					xmlSearchModel.search();
@@ -206,6 +206,7 @@ Item {
 			onTextChanged: {
 				mainPageStack.lastSearchStringOnline = text;
 				sortedSearchModel.clear();
+				mainPageStack.lastSearchResultsOnline = "";
 				statusLabel.text = "";
 				if (!text.trim()) {
 					var res = UnavDB.getSearchHistory();
@@ -254,6 +255,7 @@ Item {
 				if (model.lng === '') { // History
 					var text_aux = model.name;
 					searchOnline.setSearchText(text_aux);
+					mainPageStack.lastSearchResultsOnline = "";
 					statusLabel.text = "";
 					xmlSearchModel.searchString = text_aux;
 					xmlSearchModel.search();
