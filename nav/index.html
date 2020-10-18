@@ -590,6 +590,10 @@
         function qml_save_last_pos() {
             window.location = 'http://savelastpos/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[0] + '/' + ol.proj.transform(map.getView().getCenter(), 'EPSG:3857', 'EPSG:4326')[1] + '/' + map.getView().getZoom();
         }
+        function qml_current_pos() {
+            var nav_aux = nav.get_data();
+            window.location = 'http://currentpos/' + nav_aux.lng + '/' + nav_aux.lat;
+        }
 
         function parse_gpx(gpx_content) {
             var coords = [];

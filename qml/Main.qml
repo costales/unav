@@ -42,7 +42,7 @@ MainView {
 		i18n.bindtextdomain("unav", "nav/locales/mo");
 	}
 
-	property string applicationVersion: "3.8.4"
+	property string applicationVersion: "3.8.5"
 	property string mapUrl: "../nav/index.html"
 	property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 
@@ -114,6 +114,8 @@ MainView {
 		property string lastSearchStringOffline: ''
 		property string lastSearchResultsOnline: ''
 		property string lastSearchResultsOffline: ''
+		property string currentLng: ''
+		property string currentLat: ''
 
 		property string usContext: "messaging://"
 		function executeJavaScript(code) {
@@ -209,6 +211,10 @@ MainView {
 							break;
 						case "settoppaneltop":
 							mainPageStack.executeJavaScript("ui.topPanelsMargin(" + header.height + ")");
+							break;
+						case "currentpos":
+							mainPageStack.currentLng = url[3];
+							mainPageStack.currentLat = url[4];
 							break;
 					}
 					// Allow loading of file:// but dissallow http because it's used for navigation

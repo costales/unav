@@ -20,6 +20,7 @@ import Ubuntu.Components 1.3
 import QtQuick.XmlListModel 2.0
 import QtQuick.LocalStorage 2.0
 import "../js/db.js" as UnavDB
+import "../js/utils.js" as Utils
 import "../components"
 
 Item {
@@ -109,21 +110,35 @@ Item {
 
 		function sortXmlList(){
 			sortedSearchModel.clear();
-			mainPageStack.lastSearchResultsOnline = '{ "results": [';
+			var item = [];
 			for (var i = 0; i < xmlSearchModel.count; i++) {
-				var item  = {
+				item.push({
 					"name": xmlSearchModel.get(i).name,
 					"lat": xmlSearchModel.get(i).lat,
 					"lng": xmlSearchModel.get(i).lng,
 					"boundingbox": xmlSearchModel.get(i).boundingbox,
-					"icon": (xmlSearchModel.get(i).icon).replace('.p.20.png', '.p.32.png')
-				};
-				sortedSearchModel.append(item);
-				if (i > 0)
-					mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + ',';
-				mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + JSON.stringify(item);
+					"icon": (xmlSearchModel.get(i).icon).replace('.p.20.png', '.p.32.png'),
+					"distance": Utils.distance2points(
+                                    mainPageStack.currentLng,
+                                    mainPageStack.currentLat,
+                                    xmlSearchModel.get(i).lng,
+                                    xmlSearchModel.get(i).lat
+								)
+				});
 			}
 			xmlSearchModel.clear();
+			if (mainPageStack.currentLng != 'null' && mainPageStack.currentLat != 'null') {
+				item.sort(function(a, b) { // Sort by distance
+					return parseFloat(a.distance) - parseFloat(b.distance);
+				});
+			}
+			mainPageStack.lastSearchResultsOnline = '{ "results": [';
+			for (var i = 0; i < item.length; i++) {
+				sortedSearchModel.append(item[i]);
+				if (i > 0)
+					mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + ',';
+				mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + JSON.stringify(item[i]);
+			}
 			mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + "]}";
 		}
 		function loadLastResults(json_results) {
@@ -258,6 +273,7 @@ Item {
 			}
 			onClicked: {
 				if (model.lng === '') { // History
+					UnavDB.saveToSearchHistory(model.name);
 					var text_aux = model.name;
 					searchOnline.setSearchText(text_aux);
 					mainPageStack.lastSearchResultsOnline = "";

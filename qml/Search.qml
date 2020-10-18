@@ -23,6 +23,10 @@ import "components"
 Page {
 	id: searchPage
 
+    Component.onCompleted: {
+        mainPageStack.executeJavaScript("qml_current_pos()");
+    }
+
 	Component.onDestruction: {
 		mainPageStack.hideSideBar();
 	}

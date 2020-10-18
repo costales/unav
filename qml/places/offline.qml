@@ -20,6 +20,7 @@ import Ubuntu.Components 1.3
 import QtQuick.XmlListModel 2.0
 import QtQuick.LocalStorage 2.0
 import "../js/db.js" as UnavDB
+import "../js/utils.js" as Utils
 import "../components"
 
 Item {
@@ -55,15 +56,36 @@ Item {
 	ListModel {
 		id: searchModel
 
-		function loadList (json) {
+		function loadList(json) {
 			searchModel.clear();
+			var item = [];
 			for (var i = 0; i < json.length; i++) {
-				var item = {
+				item.push({
 					"title": json[i].title,
 					"lng": json[i].lng,
-					"lat": json[i].lat
-				};
-				searchModel.append(item);
+					"lat": json[i].lat,
+					"distance": Utils.distance2points(
+                                    mainPageStack.currentLng,
+                                    mainPageStack.currentLat,
+                                    parseFloat(json[i].lng),
+                                    parseFloat(json[i].lat)
+								)
+				});
+			}
+			if (mainPageStack.currentLng != 'null' && mainPageStack.currentLat != 'null') {
+				item.sort(function(a, b) { // Sort by distance
+					return parseFloat(a.distance) - parseFloat(b.distance);
+				});
+			}
+			for (var i = 0; i < item.length; i++) {
+				searchModel.append(item[i]);
+			}
+		}
+
+		function clear() {
+			for (var i=searchModel.count - 1; i >= 0; --i)
+			{
+				searchModel.remove(i);
 			}
 		}
 	}
@@ -123,6 +145,7 @@ Item {
 			}
 			onClicked: {
 				if (model.lng === 0.0) { // History
+					UnavDB.saveToSearchHistory(model.title);
 					var text_aux = model.title;
 					searchOffline.setSearchText(text_aux);
 					searchModel.clear();
