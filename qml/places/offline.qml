@@ -45,7 +45,9 @@ Item {
 					var item = {
 						"title": res.rows.item(i).key,
 						"lng": 0.0,
-						"lat": 0.0
+						"lat": 0.0,
+						"icon": '../../nav/img/search/history.svg',
+						"distance": 0
 					};
 					searchModel.append(item);
 				}
@@ -64,6 +66,7 @@ Item {
 					"title": json[i].title,
 					"lng": json[i].lng,
 					"lat": json[i].lat,
+					"icon": "",
 					"distance": Utils.distance2points(
                                     mainPageStack.currentLng,
                                     mainPageStack.currentLat,
@@ -142,6 +145,15 @@ Item {
 				subtitle.text: " "
 				subtitle.visible: true
 				title.color: model.lng === 0.0 ? theme.palette.normal.backgroundTertiaryText : theme.palette.normal.backgroundText
+
+				Icon {
+					id: resIcon
+					height: units.gu(2.5)
+					width: height
+					visible: model.icon !== ""
+					source: model.icon ? model.icon : ""
+					SlotsLayout.position: SlotsLayout.Last
+				}
 			}
 			onClicked: {
 				if (model.lng === 0.0) { // History
@@ -204,7 +216,9 @@ Item {
 						var item = {
 							"title": res.rows.item(i).key,
 							"lng": 0.0,
-							"lat": 0.0
+							"lat": 0.0,
+							"icon": '../../nav/img/search/history.svg',
+							"distance": 0
 						};
 						searchModel.append(item);
 					}

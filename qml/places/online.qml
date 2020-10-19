@@ -48,7 +48,7 @@ Item {
 						"lat": '',
 						"lng": '',
 						"boundingbox": '',
-						"icon": ''
+						"icon": '../../nav/img/search/history.svg'
 					};
 					sortedSearchModel.append(item);
 				}
@@ -235,7 +235,7 @@ Item {
 							"lat": '',
 							"lng": '',
 							"boundingbox": '',
-							"icon": ''
+							"icon": '../../nav/img/search/history.svg'
 						};
 						sortedSearchModel.append(item);
 					}
