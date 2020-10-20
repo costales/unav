@@ -42,7 +42,7 @@ MainView {
 		i18n.bindtextdomain("unav", "nav/locales/mo");
 	}
 
-	property string applicationVersion: "3.8.6"
+	property string applicationVersion: "3.8.7"
 	property string mapUrl: "../nav/index.html"
 	property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 
