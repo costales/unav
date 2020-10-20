@@ -67,8 +67,12 @@ Item {
 		id: colCoordDecComponent
 		Column {
 			id: colCoordDec
-
 			spacing: units.gu(2)
+
+			onVisibleChanged: {
+				if (visible && !lat1.text)
+					lat1.focus = true
+			}
 
 			Row {
 				spacing: units.gu(1)
@@ -157,7 +161,6 @@ Item {
 
 		Column {
 			id: colCoordPolar
-
 			spacing: units.gu(2)
 
 			Row {

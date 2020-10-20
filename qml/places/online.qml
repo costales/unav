@@ -192,7 +192,6 @@ Item {
 
 		header: TextField {
 			id: searchField
-
 			primaryItem: Icon {
 				height: units.gu(2)
 				name: "find"
@@ -203,6 +202,13 @@ Item {
 			inputMethodHints: Qt.ImhNoPredictiveText
 			text: mainPageStack.lastSearchStringOnline
 			placeholderText: i18n.tr("Place or location")
+
+			onVisibleChanged: {
+				if (visible) {
+					searchField.focus = true;
+					searchField.cursorPosition = searchField.text.length
+				}				
+			}
 
 			Connections {
 				target: searchOnline
@@ -216,6 +222,7 @@ Item {
 					UnavDB.saveToSearchHistory(text);
 					mainPageStack.lastSearchResultsOnline = "";
 					statusLabel.text = "";
+					xmlSearchModel.clear();
 					xmlSearchModel.searchString = text;
 					xmlSearchModel.search();
 				}
@@ -239,8 +246,9 @@ Item {
 						};
 						sortedSearchModel.append(item);
 					}
-					listView.model = sortedSearchModel
-					listView.delegate = searchDelegateComponent
+					listView.model = sortedSearchModel;
+					listView.delegate = searchDelegateComponent;
+					searchField.focus = true;
 				}
 			}
 		}

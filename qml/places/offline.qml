@@ -176,6 +176,13 @@ Item {
 		header: TextField {
 			id: searchField
 
+			onVisibleChanged: {
+				if (visible) {
+					searchField.focus = true;
+					searchField.cursorPosition = searchField.text.length
+				}				
+			}
+
 			primaryItem: Icon {
 				height: units.gu(2)
 				name: "find"
@@ -198,8 +205,8 @@ Item {
 				if (text.trim()) {
 					UnavDB.saveToSearchHistory(text);
 					searchModel.clear();
-					mainPageStack.lastSearchResultsOffline = "";
 					statusLabel.text = "";
+					mainPageStack.lastSearchResultsOffline = "";
 					searchJSON(text);
 				}
 			}
@@ -222,6 +229,7 @@ Item {
 						};
 						searchModel.append(item);
 					}
+					searchField.focus = true;
 				}
 			}
 		}
