@@ -242,6 +242,8 @@
             
             switch(nav_data.mode) {
                 case 'exploring':
+                case 'exploring_after_calculating_error':
+                case 'exploring_after_simulating_error':
                     break;
                 case 'GPS_waiting':
                     if (mapUI.get_map_zoom() < ui.ZOOM-3)
@@ -346,6 +348,7 @@
                     ui.show_panels('navigate');
                     break;
                 case 'route_out_waiting_result':
+                    nav.update(); // Return to route
                     break;
                 case 'route_out_calculating_error':
                     nav.set_data({mode: 'route_out_waiting_result'});
