@@ -605,9 +605,9 @@
             mapUI.clear_layer('gpx');
             mapUI.show_route(coords, 'gpx', true);
             if (settings.get_unit() == settings.KM)
-                var msg = parseFloat(maths.meter2km(gpx.tracks[0].distance.total)).toFixed(1) + 'km  ⬆' + Math.trunc(gpx.tracks[0].elevation.max) + 'm ' + ' ⬇' + Math.trunc(gpx.tracks[0].elevation.min) + 'm';
+                var msg = parseFloat(maths.meter2km(gpx.tracks[0].distance.total)).toFixed(1) + 'km  ⤒' + Math.trunc(gpx.tracks[0].elevation.max) + 'm ' + ' ⤓' + Math.trunc(gpx.tracks[0].elevation.min) + 'm';
             else
-                var msg = parseFloat(maths.meter2mile(gpx.tracks[0].distance.total)).toFixed(1) + 'mi  ⬆' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.max)) + 'ft ' + ' ⬇' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.min)) + 'ft';
+                var msg = parseFloat(maths.meter2mile(gpx.tracks[0].distance.total)).toFixed(1) + 'mi  ⤒' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.max)) + 'ft ' + ' ⤓' + Math.trunc(maths.meter2feet(gpx.tracks[0].elevation.min)) + 'ft';
             ui.POIPanel({msgShow: 'yes', msgText: msg, iconsShow: 'no'});
         }
         function import_gpx(gpx) {
