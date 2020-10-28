@@ -145,16 +145,21 @@ MapUI.prototype.add_marker = function(markers, layer) {
             email: markers[z].email // Add extra info marker fields here for read them at click on map
         });
 
-        var iconStyle = new ol.style.Style({
-            image: new ol.style.Icon({
-                anchor: [markers[z].margin_width, markers[z].margin_height],
-                anchorXUnits: "pixels",
-                anchorYUnits: "pixels",
-                src: 'img/' + markers[z].icon
-            })
+        const iconStyle= new ol.style.Icon({
+            anchor: [markers[z].margin_width, markers[z].margin_height],
+            anchorXUnits: "pixels",
+            anchorYUnits: "pixels",
+            src: 'img/' + markers[z].icon
+         });
+        iconStyle.load();
+        const style = new ol.style.Style({
+            image: iconStyle
         });
-        iconFeature.setStyle(iconStyle);
+
+        iconFeature.setStyle(style);
         layer_aux.addFeature(iconFeature);
+
+        this.layerPOI.animateFeature(iconFeature, new ol.featureAnimation['Zoom']({duration: 500}));
     }
 }
 
