@@ -64,14 +64,18 @@ function MapUI() {
         geometry: new ol.geom.Point(ol.proj.fromLonLat([-5.7,43.533333])),
         name: 'pos'
     });
-    this.posStyle = new ol.style.Style({
-        image: new ol.style.Icon({
-            anchor: [20, 20],
-            anchorXUnits: 'pixels',
-            anchorYUnits: 'pixels',
-            src: 'img/marker/car.svg'
-        })
+
+    this.posStyleIcon = new ol.style.Icon({
+        anchor: [20, 20],
+        anchorXUnits: 'pixels',
+        anchorYUnits: 'pixels',
+        src: 'img/marker/car.svg'
     });
+    this.posStyleIcon.load();
+    this.posStyle = new ol.style.Style({
+        image: this.posStyleIcon
+    });
+
     this.posFeature.setStyle(this.posStyle);
     this.markerPosSource = new ol.source.Vector({features: [this.posFeature]});
     this.layerPos = new ol.layer.Vector({source: this.markerPosSource});
@@ -145,21 +149,35 @@ MapUI.prototype.add_marker = function(markers, layer) {
             email: markers[z].email // Add extra info marker fields here for read them at click on map
         });
 
-        const iconStyle= new ol.style.Icon({
-            anchor: [markers[z].margin_width, markers[z].margin_height],
-            anchorXUnits: "pixels",
-            anchorYUnits: "pixels",
-            src: 'img/' + markers[z].icon
-         });
-        iconStyle.load();
-        const style = new ol.style.Style({
-            image: iconStyle
-        });
+        if (layer == 'poi') {
+            const iconStyle= new ol.style.Icon({
+                anchor: [markers[z].margin_width, markers[z].margin_height],
+                anchorXUnits: "pixels",
+                anchorYUnits: "pixels",
+                src: 'img/' + markers[z].icon
+            });
+            iconStyle.load();
+            const style = new ol.style.Style({
+                image: iconStyle
+            });
 
-        iconFeature.setStyle(style);
-        layer_aux.addFeature(iconFeature);
+            iconFeature.setStyle(style);
+            layer_aux.addFeature(iconFeature);
 
-        this.layerPOI.animateFeature(iconFeature, new ol.featureAnimation['Zoom']({duration: 500}));
+            this.layerPOI.animateFeature(iconFeature, [new ol.featureAnimation['Drop']({duration: 900}),new ol.featureAnimation['Bounce']({duration: 600})]);    
+        }
+        else {
+            var iconStyle = new ol.style.Style({
+                image: new ol.style.Icon({
+                    anchor: [markers[z].margin_width, markers[z].margin_height],
+                    anchorXUnits: "pixels",
+                    anchorYUnits: "pixels",
+                    src: 'img/' + markers[z].icon
+                })
+            });
+            iconFeature.setStyle(iconStyle);
+            layer_aux.addFeature(iconFeature);
+        }
     }
 }
 
