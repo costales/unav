@@ -327,7 +327,7 @@ UI.prototype.update_pos = function(nav_data) {
 
     if (!mapUI.layerPos.getVisible()) {
         mapUI.layerPos.setVisible(true);
-        mapUI.layerPos.animateFeature(mapUI.posFeature, new ol.featureAnimation['ZoomOut']({duration: 2500}));
+        mapUI.layerPos.animateFeature(mapUI.posFeature, new ol.featureAnimation['ZoomOut']({duration: 1500}));
     }
 
     mapUI.posFeature.getGeometry().setCoordinates(ol.proj.fromLonLat([nav_data.lng, nav_data.lat]));

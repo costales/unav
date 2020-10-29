@@ -164,7 +164,7 @@ MapUI.prototype.add_marker = function(markers, layer) {
             iconFeature.setStyle(style);
             layer_aux.addFeature(iconFeature);
 
-            this.layerPOI.animateFeature(iconFeature, [new ol.featureAnimation['Drop']({duration: 900}),new ol.featureAnimation['Bounce']({duration: 600})]);    
+            this.layerPOI.animateFeature(iconFeature, new ol.featureAnimation['Zoom']({duration: 1300}));    
         }
         else {
             var iconStyle = new ol.style.Style({
