@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unav\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-16 17:37+0200\n"
+"POT-Creation-Date: 2020-11-14 10:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,48 +105,48 @@ msgstr ""
 msgid "Sexagesimal"
 msgstr ""
 
-#: build/all/app/install/qml/Coordinate.qml:78
-#: build/all/app/install/qml/Coordinate.qml:166 qml/Coordinate.qml:78
-#: qml/Coordinate.qml:166
+#: build/all/app/install/qml/Coordinate.qml:82
+#: build/all/app/install/qml/Coordinate.qml:169 qml/Coordinate.qml:82
+#: qml/Coordinate.qml:169
 msgid "Lat:"
 msgstr ""
 
-#: build/all/app/install/qml/Coordinate.qml:95
-#: build/all/app/install/qml/Coordinate.qml:237 qml/Coordinate.qml:95
-#: qml/Coordinate.qml:237
+#: build/all/app/install/qml/Coordinate.qml:99
+#: build/all/app/install/qml/Coordinate.qml:240 qml/Coordinate.qml:99
+#: qml/Coordinate.qml:240
 msgid "Long:"
 msgstr ""
 
-#: build/all/app/install/qml/Coordinate.qml:110
-#: build/all/app/install/qml/Coordinate.qml:307 qml/Coordinate.qml:110
-#: qml/Coordinate.qml:307
+#: build/all/app/install/qml/Coordinate.qml:114
+#: build/all/app/install/qml/Coordinate.qml:310 qml/Coordinate.qml:114
+#: qml/Coordinate.qml:310
 msgid "Show on Map"
 msgstr ""
 
-#: build/all/app/install/qml/Coordinate.qml:144
-#: build/all/app/install/qml/Coordinate.qml:372 qml/Coordinate.qml:144
-#: qml/Coordinate.qml:372
+#: build/all/app/install/qml/Coordinate.qml:148
+#: build/all/app/install/qml/Coordinate.qml:375 qml/Coordinate.qml:148
+#: qml/Coordinate.qml:375
 msgid "Coordinates are not valid"
 msgstr ""
 
-#: build/all/app/install/qml/Coordinate.qml:145 qml/Coordinate.qml:145
+#: build/all/app/install/qml/Coordinate.qml:149 qml/Coordinate.qml:149
 msgid ""
 "Enter valid decimal coordinates\n"
 "\n"
 "Expected format is:"
 msgstr ""
 
-#: build/all/app/install/qml/Coordinate.qml:147
-#: build/all/app/install/qml/Coordinate.qml:375
-#: build/all/app/install/qml/Settings.qml:319
-#: build/all/app/install/qml/Settings.qml:355
+#: build/all/app/install/qml/Coordinate.qml:151
+#: build/all/app/install/qml/Coordinate.qml:378
+#: build/all/app/install/qml/Settings.qml:336
+#: build/all/app/install/qml/Settings.qml:372
 #: build/all/app/install/qml/Voices.qml:238 nav/class/UI.js:169
-#: qml/Coordinate.qml:147 qml/Coordinate.qml:375 qml/Settings.qml:319
-#: qml/Settings.qml:355 qml/Voices.qml:238
+#: qml/Coordinate.qml:151 qml/Coordinate.qml:378 qml/Settings.qml:336
+#: qml/Settings.qml:372 qml/Voices.qml:238
 msgid "Close"
 msgstr ""
 
-#: build/all/app/install/qml/Coordinate.qml:373 qml/Coordinate.qml:373
+#: build/all/app/install/qml/Coordinate.qml:376 qml/Coordinate.qml:376
 msgid ""
 "Enter valid sexagesimal coordinates\n"
 "\n"
@@ -168,14 +168,14 @@ msgid "Favorite Name"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:192
-#: build/all/app/install/qml/Main.qml:309 nav/class/UI.js:167
-#: qml/Favorites.qml:192 qml/Main.qml:309
+#: build/all/app/install/qml/Main.qml:317 nav/class/UI.js:167
+#: qml/Favorites.qml:192 qml/Main.qml:317
 msgid "Cancel"
 msgstr ""
 
 #: build/all/app/install/qml/Favorites.qml:199
-#: build/all/app/install/qml/Main.qml:316 qml/Favorites.qml:199
-#: qml/Main.qml:316
+#: build/all/app/install/qml/Main.qml:324 qml/Favorites.qml:199
+#: qml/Main.qml:324
 msgid "Overwrite"
 msgstr ""
 
@@ -191,15 +191,15 @@ msgstr ""
 msgid "Import GPX from"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:275 qml/Main.qml:275
+#: build/all/app/install/qml/Main.qml:283 qml/Main.qml:283
 msgid "Adding Favorite"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:295 qml/Main.qml:295
+#: build/all/app/install/qml/Main.qml:303 qml/Main.qml:303
 msgid "Insert name"
 msgstr ""
 
-#: build/all/app/install/qml/Main.qml:316 qml/Main.qml:316
+#: build/all/app/install/qml/Main.qml:324 qml/Main.qml:324
 msgid "Add"
 msgstr ""
 
@@ -211,35 +211,35 @@ msgstr ""
 msgid "Available only online"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:37
-#: build/all/app/install/qml/Settings.qml:248 qml/Search.qml:37
-#: qml/Settings.qml:248
+#: build/all/app/install/qml/Search.qml:41
+#: build/all/app/install/qml/Settings.qml:265 qml/Search.qml:41
+#: qml/Settings.qml:265
 msgid "Search"
 msgstr ""
 
 #. TRANSLATORS: These are section headers. Please keep their translations short and not
 #. longer than their original string lengths.
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:61 qml/Search.qml:61
 msgid "Places"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:61 qml/Search.qml:61
 msgid "POIs"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:61 qml/Search.qml:61
 msgid "Favorites"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:61 qml/Search.qml:61
 msgid "Simulate"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:61 qml/Search.qml:61
 msgid "Track"
 msgstr ""
 
-#: build/all/app/install/qml/Search.qml:57 qml/Search.qml:57
+#: build/all/app/install/qml/Search.qml:61 qml/Search.qml:61
 msgid "Coordinate"
 msgstr ""
 
@@ -256,8 +256,8 @@ msgid "Miles"
 msgstr ""
 
 #: build/all/app/install/qml/Settings.qml:78
-#: build/all/app/install/qml/Settings.qml:228 qml/Settings.qml:78
-#: qml/Settings.qml:228
+#: build/all/app/install/qml/Settings.qml:245 qml/Settings.qml:78
+#: qml/Settings.qml:245
 msgid "Map"
 msgstr ""
 
@@ -274,42 +274,46 @@ msgid "Alert speed cameras"
 msgstr ""
 
 #: build/all/app/install/qml/Settings.qml:146 qml/Settings.qml:146
-msgid "Use roads with tolls"
+msgid "Use highways"
 msgstr ""
 
 #: build/all/app/install/qml/Settings.qml:163 qml/Settings.qml:163
+msgid "Use roads with tolls"
+msgstr ""
+
+#: build/all/app/install/qml/Settings.qml:180 qml/Settings.qml:180
 msgid "View optimized for car"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:176 qml/Settings.qml:176
+#: build/all/app/install/qml/Settings.qml:193 qml/Settings.qml:193
 msgid "Will rotate the marker and not the map"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:197 qml/Settings.qml:197
+#: build/all/app/install/qml/Settings.qml:214 qml/Settings.qml:214
 msgid "Speak instructions"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:213 qml/Settings.qml:213
+#: build/all/app/install/qml/Settings.qml:230 qml/Settings.qml:230
 msgid "Download custom voices"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:220 qml/Settings.qml:220
+#: build/all/app/install/qml/Settings.qml:237 qml/Settings.qml:237
 msgid "Online Services"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:268 qml/Settings.qml:268
+#: build/all/app/install/qml/Settings.qml:285 qml/Settings.qml:285
 msgid "Route"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:289 qml/Settings.qml:289
+#: build/all/app/install/qml/Settings.qml:306 qml/Settings.qml:306
 msgid "Instructions for offline mode"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:311 qml/Settings.qml:311
+#: build/all/app/install/qml/Settings.qml:328 qml/Settings.qml:328
 msgid "Law & speed camera alerts"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:312 qml/Settings.qml:312
+#: build/all/app/install/qml/Settings.qml:329 qml/Settings.qml:329
 msgid ""
 "uNav is getting the speed cameras from the OpenStreetMap database and it "
 "will beep and show the speed limit as marker.\n"
@@ -317,33 +321,33 @@ msgid ""
 "In a few countries speed camera alerts are illegal!"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:314 qml/Settings.qml:314
+#: build/all/app/install/qml/Settings.qml:331 qml/Settings.qml:331
 msgid "Check law in countries"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:329 qml/Settings.qml:329
+#: build/all/app/install/qml/Settings.qml:346 qml/Settings.qml:346
 msgid "How to use uNav offline"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:335 qml/Settings.qml:335
+#: build/all/app/install/qml/Settings.qml:352 qml/Settings.qml:352
 msgid "<b>Step 1</b> Install"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:335 qml/Settings.qml:335
+#: build/all/app/install/qml/Settings.qml:352 qml/Settings.qml:352
 msgid ""
 "In its wizard, set profile to <i>Default</i>, disable <i>Automatic "
 "activation</i> and download a map."
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:343 qml/Settings.qml:343
+#: build/all/app/install/qml/Settings.qml:360 qml/Settings.qml:360
 msgid "<b>Step 2</b> Install"
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:343 qml/Settings.qml:343
+#: build/all/app/install/qml/Settings.qml:360 qml/Settings.qml:360
 msgid "Set <i>Prevent app suspension</i> for OSM Scout Server."
 msgstr ""
 
-#: build/all/app/install/qml/Settings.qml:351 qml/Settings.qml:351
+#: build/all/app/install/qml/Settings.qml:368 qml/Settings.qml:368
 msgid "<b>Step with each use</b>: Launch OSM Scout Server before uNav."
 msgstr ""
 
@@ -385,31 +389,25 @@ msgstr ""
 msgid "You can add a new voice to uNav"
 msgstr ""
 
-#: build/all/app/install/qml/places/offline.qml:121
-#: build/all/app/install/qml/places/offline.qml:157 qml/places/offline.qml:121
-#: qml/places/offline.qml:157
-msgid "Searching..."
-msgstr ""
-
-#: build/all/app/install/qml/places/offline.qml:144
-#: build/all/app/install/qml/places/online.qml:188 qml/places/offline.qml:144
-#: qml/places/online.qml:188
+#: build/all/app/install/qml/places/offline.qml:195
+#: build/all/app/install/qml/places/online.qml:204 qml/places/offline.qml:195
+#: qml/places/online.qml:204
 msgid "Place or location"
 msgstr ""
 
-#: build/all/app/install/qml/places/offline.qml:203
-#: build/all/app/install/qml/places/online.qml:71 qml/places/offline.qml:203
-#: qml/places/online.qml:71
+#: build/all/app/install/qml/places/offline.qml:261
+#: build/all/app/install/qml/places/online.qml:72 qml/places/offline.qml:261
+#: qml/places/online.qml:72
 msgid "Nothing found"
 msgstr ""
 
-#: build/all/app/install/qml/places/offline.qml:207 qml/places/offline.qml:207
+#: build/all/app/install/qml/places/offline.qml:265 qml/places/offline.qml:265
 msgid "Error searching"
 msgstr ""
 
-#: build/all/app/install/qml/places/offline.qml:213
-#: build/all/app/install/qml/places/online.qml:66 qml/places/offline.qml:213
-#: qml/places/online.qml:66
+#: build/all/app/install/qml/places/offline.qml:272
+#: build/all/app/install/qml/places/online.qml:67 qml/places/offline.qml:272
+#: qml/places/online.qml:67
 msgid "Time out!"
 msgstr ""
 
@@ -445,11 +443,11 @@ msgstr ""
 msgid "There was an error"
 msgstr ""
 
-#: nav/class/WebAPI.js:455
+#: nav/class/WebAPI.js:459
 msgid "No speed cameras"
 msgstr ""
 
-#: nav/class/WebAPI.js:460
+#: nav/class/WebAPI.js:464
 msgid "Error getting speed cameras"
 msgstr ""
 
@@ -457,36 +455,36 @@ msgstr ""
 msgid "Waiting for GPS"
 msgstr ""
 
-#: nav/index.html:251
+#: nav/index.html:253
 msgid "GPS is ready"
 msgstr ""
 
-#: nav/index.html:258 nav/index.html:305
+#: nav/index.html:260 nav/index.html:307
 msgid "Error searching route"
 msgstr ""
 
-#: nav/index.html:283 nav/index.html:284 nav/index.html:289 nav/index.html:290
-#: nav/index.html:511 nav/index.html:520
+#: nav/index.html:285 nav/index.html:286 nav/index.html:291 nav/index.html:292
+#: nav/index.html:514 nav/index.html:523
 msgid "Calculating route"
 msgstr ""
 
-#: nav/index.html:341
+#: nav/index.html:343
 msgid "Out of route. Recalculating"
 msgstr ""
 
-#: nav/index.html:353
+#: nav/index.html:356
 msgid "Error. Recalculating again"
 msgstr ""
 
-#: nav/index.html:381
+#: nav/index.html:384
 msgid "You have arrived at your destination"
 msgstr ""
 
-#: nav/index.html:530
+#: nav/index.html:533
 msgid "Route canceled"
 msgstr ""
 
-#: nav/index.html:587
+#: nav/index.html:590
 msgid "Use more zoom for POIs"
 msgstr ""
 

@@ -42,7 +42,7 @@ MainView {
 		i18n.bindtextdomain("unav", "nav/locales/mo");
 	}
 
-	property string applicationVersion: "3.8.9"
+	property string applicationVersion: "3.9"
 	property string mapUrl: "../nav/index.html"
 	property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 
@@ -56,6 +56,7 @@ MainView {
 		property string routeModes: "car"
 		property bool speak: true
 		property bool tolls: true
+		property bool highways: true
 		property bool radars: false
 		property bool legalRadarShow: true
 		property string speakVoice: 'Nathan Haines'
@@ -240,6 +241,7 @@ MainView {
 							mainPageStack.executeJavaScript("settings.set_rotate_map(" + navApp.settings.rotateMap + ")");
 							mainPageStack.executeJavaScript("settings.set_route_mode(\"" + navApp.settings.routeModes + "\")");
 							mainPageStack.executeJavaScript("settings.set_tolls(" + navApp.settings.tolls + ")");
+							mainPageStack.executeJavaScript("settings.set_highways(" + navApp.settings.highways + ")");
 							mainPageStack.executeJavaScript("settings.set_radars(" + navApp.settings.radars + ")");
 							mainPageStack.executeJavaScript("settings.set_speak(" + navApp.settings.speak + ")");
 							mainPageStack.executeJavaScript("settings.set_speak_voice(\"" + navApp.settings.speakVoice + "\")");
