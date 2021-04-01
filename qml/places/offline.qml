@@ -29,6 +29,8 @@ Item {
 
 	property ListView flickable: listView
 	property bool searching: false
+	property string currentSearch: ''
+	property string lastEnterSearch: ''
 
 	signal setSearchText(string text)
 
@@ -203,6 +205,8 @@ Item {
 
 			onTriggered: {
 				if (text.trim()) {
+					console.log('ENTER buscando '+text)
+					searchOffline.lastEnterSearch = text;
 					UnavDB.saveToSearchHistory(text);
 					searchModel.clear();
 					statusLabel.text = "";
@@ -231,7 +235,32 @@ Item {
 					}
 					searchField.focus = true;
 				}
+				if (text.length >= 3) {
+					searchOffline.currentSearch = text;
+					timer.setTimeout(function(){}, 3000, text); // Autosearch in 2 seconds
+				}
 			}
+		}
+	}
+
+	Timer {
+		id: timer
+		function setTimeout(cb, delayTime, textsearch) {
+			timer.interval = delayTime;
+			timer.repeat = false;
+			timer.triggered.connect(cb);
+			timer.triggered.connect(function release () {
+				if (textsearch == searchOffline.currentSearch && searchOffline.lastEnterSearch != searchOffline.currentSearch) {
+					console.log('buscando ' + searchOffline.currentSearch);
+					searchModel.clear();
+					statusLabel.text = "";
+					mainPageStack.lastSearchResultsOffline = "";
+					searchJSON(text);
+				}
+				timer.triggered.disconnect(cb); // This is important
+				timer.triggered.disconnect(release); // This is important as well
+			});
+			timer.start();
 		}
 	}
 
