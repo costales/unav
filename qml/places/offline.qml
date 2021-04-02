@@ -255,7 +255,7 @@ Item {
 					searchModel.clear();
 					statusLabel.text = "";
 					mainPageStack.lastSearchResultsOffline = "";
-					searchJSON(text);
+					searchJSON(textsearch);
 				}
 				timer.triggered.disconnect(cb); // This is important
 				timer.triggered.disconnect(release); // This is important as well
