@@ -232,6 +232,7 @@ Item {
 				}
 			}
 			onTextChanged: {
+				searchOnline.currentSearch = text;
 				searchOnline.lastEnterSearch = "";
 				if (text != mainPageStack.lastSearchStringOnline)
 					mainPageStack.lastSearchResultsOnline = "";
@@ -256,7 +257,6 @@ Item {
 					searchField.focus = true;
 				}
 				if (text.length >= 3) {
-					searchOnline.currentSearch = text;
 					timer.setTimeout(function(){}, 3000, text); // Autosearch in 2 seconds
 				}
 			}

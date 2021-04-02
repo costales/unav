@@ -88,8 +88,7 @@ Item {
 		}
 
 		function clear() {
-			for (var i=searchModel.count - 1; i >= 0; --i)
-			{
+			for (var i=searchModel.count - 1; i >= 0; --i) {
 				searchModel.remove(i);
 			}
 		}
@@ -215,6 +214,7 @@ Item {
 				}
 			}
 			onTextChanged: {
+				searchOffline.currentSearch = text;
 				searchOffline.lastEnterSearch = "";
 				if (text != mainPageStack.lastSearchStringOffline)
 					mainPageStack.lastSearchResultsOffline = "";
@@ -237,7 +237,6 @@ Item {
 					searchField.focus = true;
 				}
 				if (text.length >= 3) {
-					searchOffline.currentSearch = text;
 					timer.setTimeout(function(){}, 3000, text); // Autosearch in 2 seconds
 				}
 			}
