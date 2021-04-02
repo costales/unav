@@ -232,6 +232,7 @@ Item {
 				}
 			}
 			onTextChanged: {
+				searchOnline.lastEnterSearch = "";
 				if (text != mainPageStack.lastSearchStringOnline)
 					mainPageStack.lastSearchResultsOnline = "";
 				mainPageStack.lastSearchStringOnline = text;

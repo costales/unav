@@ -215,6 +215,7 @@ Item {
 				}
 			}
 			onTextChanged: {
+				searchOffline.lastEnterSearch = "";
 				if (text != mainPageStack.lastSearchStringOffline)
 					mainPageStack.lastSearchResultsOffline = "";
 				mainPageStack.lastSearchStringOffline = text;
