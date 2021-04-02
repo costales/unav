@@ -204,7 +204,6 @@ Item {
 
 			onTriggered: {
 				if (text.trim()) {
-					console.log('ENTER buscando '+text)
 					searchOffline.lastEnterSearch = text;
 					UnavDB.saveToSearchHistory(text);
 					searchModel.clear();
@@ -251,7 +250,6 @@ Item {
 			timer.triggered.connect(cb);
 			timer.triggered.connect(function release () {
 				if (textsearch == searchOffline.currentSearch && searchOffline.lastEnterSearch != searchOffline.currentSearch) {
-					console.log('buscando ' + searchOffline.currentSearch);
 					searchModel.clear();
 					statusLabel.text = "";
 					mainPageStack.lastSearchResultsOffline = "";

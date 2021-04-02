@@ -221,7 +221,6 @@ Item {
 
 			onTriggered: {
 				if (xmlSearchModel.status !== XmlListModel.Loading && text.trim()) {
-					console.log('ENTER buscando '+text)
 					searchOnline.lastEnterSearch = text;
 					UnavDB.saveToSearchHistory(text);
 					mainPageStack.lastSearchResultsOnline = "";
@@ -271,7 +270,6 @@ Item {
 			timer.triggered.connect(cb);
 			timer.triggered.connect(function release () {
 				if (textsearch == searchOnline.currentSearch && searchOnline.lastEnterSearch != searchOnline.currentSearch) {
-					console.log('buscando ' + searchOnline.currentSearch);
 					xmlSearchModel.clear();
 					xmlSearchModel.searchString = textsearch;
 					xmlSearchModel.search();
