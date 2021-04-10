@@ -242,7 +242,7 @@ Item {
 
 	Timer {
 		id: searchDelay
-		interval: 2500
+		interval: 3000
 		running: false
 		onTriggered: {
 			searchModel.clear();
