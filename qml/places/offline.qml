@@ -231,8 +231,23 @@ Item {
 					}
 					searchField.focus = true;
 				}
+
+				searchDelay.stop();
+				if (text.trim().length > 3) {
+					searchDelay.start();
+				}
 			}
 		}
+	}
+
+	Timer {
+		id: searchDelay
+		interval: 2500
+		running: false
+		onTriggered: {
+			searchModel.clear();
+			searchJSON(mainPageStack.lastSearchStringOffline);
+		} 
 	}
 
 	ScrollView {
@@ -241,6 +256,7 @@ Item {
 	}
 
 	function searchJSON(text) {
+		searchDelay.stop();
 		searchOffline.searching = true;
 		var request = new XMLHttpRequest();
 		request.open("GET", "http://localhost:8553/v2/search?search="+text, true);
