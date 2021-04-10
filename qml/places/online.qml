@@ -28,8 +28,6 @@ Item {
 	anchors.fill: parent
 
 	property ListView flickable: listView
-	property string currentSearch: ''
-	property string lastEnterSearch: ''
 
 	signal setSearchText(string text)
 
@@ -220,8 +218,7 @@ Item {
 			}
 
 			onTriggered: {
-				if (xmlSearchModel.status !== XmlListModel.Loading && text.trim()) {
-					searchOnline.lastEnterSearch = text;
+				if (text.trim()) {
 					UnavDB.saveToSearchHistory(text);
 					mainPageStack.lastSearchResultsOnline = "";
 					statusLabel.text = "";
@@ -231,8 +228,6 @@ Item {
 				}
 			}
 			onTextChanged: {
-				searchOnline.currentSearch = text;
-				searchOnline.lastEnterSearch = "";
 				if (text != mainPageStack.lastSearchStringOnline)
 					mainPageStack.lastSearchResultsOnline = "";
 				mainPageStack.lastSearchStringOnline = text;
@@ -255,29 +250,7 @@ Item {
 					listView.delegate = searchDelegateComponent;
 					searchField.focus = true;
 				}
-				if (text.length >= 3) {
-					timer.setTimeout(function(){}, 3000, text); // Autosearch in 2 seconds
-				}
 			}
-		}
-	}
-
-	Timer {
-		id: timer
-		function setTimeout(cb, delayTime, textsearch) {
-			timer.interval = delayTime;
-			timer.repeat = false;
-			timer.triggered.connect(cb);
-			timer.triggered.connect(function release () {
-				if (textsearch == searchOnline.currentSearch && searchOnline.lastEnterSearch != searchOnline.currentSearch) {
-					xmlSearchModel.clear();
-					xmlSearchModel.searchString = textsearch;
-					xmlSearchModel.search();
-				}
-				timer.triggered.disconnect(cb); // This is important
-				timer.triggered.disconnect(release); // This is important as well
-			});
-			timer.start();
 		}
 	}
 

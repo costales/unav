@@ -29,8 +29,6 @@ Item {
 
 	property ListView flickable: listView
 	property bool searching: false
-	property string currentSearch: ''
-	property string lastEnterSearch: ''
 
 	signal setSearchText(string text)
 
@@ -88,7 +86,8 @@ Item {
 		}
 
 		function clear() {
-			for (var i=searchModel.count - 1; i >= 0; --i) {
+			for (var i=searchModel.count - 1; i >= 0; --i)
+			{
 				searchModel.remove(i);
 			}
 		}
@@ -204,7 +203,6 @@ Item {
 
 			onTriggered: {
 				if (text.trim()) {
-					searchOffline.lastEnterSearch = text;
 					UnavDB.saveToSearchHistory(text);
 					searchModel.clear();
 					statusLabel.text = "";
@@ -213,8 +211,6 @@ Item {
 				}
 			}
 			onTextChanged: {
-				searchOffline.currentSearch = text;
-				searchOffline.lastEnterSearch = "";
 				if (text != mainPageStack.lastSearchStringOffline)
 					mainPageStack.lastSearchResultsOffline = "";
 				mainPageStack.lastSearchStringOffline = text;
@@ -235,30 +231,7 @@ Item {
 					}
 					searchField.focus = true;
 				}
-				if (text.length >= 3) {
-					timer.setTimeout(function(){}, 3000, text); // Autosearch in 2 seconds
-				}
 			}
-		}
-	}
-
-	Timer {
-		id: timer
-		function setTimeout(cb, delayTime, textsearch) {
-			timer.interval = delayTime;
-			timer.repeat = false;
-			timer.triggered.connect(cb);
-			timer.triggered.connect(function release () {
-				if (textsearch == searchOffline.currentSearch && searchOffline.lastEnterSearch != searchOffline.currentSearch) {
-					searchModel.clear();
-					statusLabel.text = "";
-					mainPageStack.lastSearchResultsOffline = "";
-					searchJSON(textsearch);
-				}
-				timer.triggered.disconnect(cb); // This is important
-				timer.triggered.disconnect(release); // This is important as well
-			});
-			timer.start();
 		}
 	}
 
