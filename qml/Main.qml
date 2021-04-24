@@ -161,7 +161,7 @@ MainView {
 						},
 						Action {
 							id: darkThemeAction
-							iconName: navApp.settings.dark_theme ? "night-mode" : "display-brightness-min"
+							iconName: navApp.settings.dark_theme ? "display-brightness-min" : "night-mode"
 							enabled: mainPageStack.onLoadingExecuted && mainPageStack.columns == 1
 							onTriggered: {
 								navApp.settings.dark_theme = !navApp.settings.dark_theme;
