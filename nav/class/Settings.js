@@ -35,12 +35,12 @@ Settings.prototype.set_dark_theme = function(dark_theme) {
     if (dark_theme) {
         $("body").css({"background-color": "black"});
         $(".topPanels, #panelsNav, #panelConfirmRoute").css({"filter": "invert(100%)"});
-        $("#posBtn").css({"background-color": "#282722"});
+        $("#posBtn").css({"background": "#282722"});
     }
     else {
         $("body").css({"background-color": "white"});
         $(".topPanels, #panelsNav, #panelConfirmRoute").css({"filter": "invert(0%)"});
-        $("#posBtn").css({"background-color": "white"});
+        $("#posBtn").css({"background": "white"});
     }
 }
 
