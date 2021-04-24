@@ -11,7 +11,7 @@ html, body, .map {
   position: fixed;
 }
 
-body{
+body {
   pointer-events: none;
 }
 

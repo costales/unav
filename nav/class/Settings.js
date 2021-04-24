@@ -31,6 +31,19 @@ function Settings() {
     this.route_mode = "car";
 }
 
+Settings.prototype.set_dark_theme = function(dark_theme) {
+    if (dark_theme) {
+        $("body").css({"background-color": "black"});
+        $(".topPanels, #panelsNav, #panelConfirmRoute").css({"filter": "invert(100%)"});
+        $("#posBtn").css({"background-color": "#282722"});
+    }
+    else {
+        $("body").css({"background-color": "white"});
+        $(".topPanels, #panelsNav, #panelConfirmRoute").css({"filter": "invert(0%)"});
+        $("#posBtn").css({"background-color": "white"});
+    }
+}
+
 Settings.prototype.set_online_map = function(online, dark) {
     // Remove all layers except someones, then append the right
     try {
@@ -61,6 +74,7 @@ Settings.prototype.set_online_map = function(online, dark) {
             olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');
         $('#mapCredits').text("© OpenStreetMap contributors © OSM Scout Server");
     }
+    this.set_dark_theme(dark);
 }
 
 Settings.prototype.get_online_search = function() {
