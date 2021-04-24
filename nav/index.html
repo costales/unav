@@ -79,10 +79,16 @@
     <div id="map" class="map"></div>
     <script>
         // ol
-        var map_layer_online = new ol.layer.Tile({
+        var map_layer_online_light = new ol.layer.Tile({
             name: 'layer_online',
             source: new ol.source.XYZ({
-                url: 'https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
+                url: 'https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
+            })
+        });
+        var map_layer_online_dark = new ol.layer.Tile({
+            name: 'layer_online',
+            source: new ol.source.XYZ({
+                url: 'https://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
             })
         });
         var scale_line = new ol.control.ScaleLine();

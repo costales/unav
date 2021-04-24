@@ -249,9 +249,9 @@ Page {
 						onClicked: {
 							navApp.settings.onlineMap = checked;
 							if (navApp.settings.onlineMap)
-								mainPageStack.executeJavaScript("settings.set_online_map(true);");
+								mainPageStack.executeJavaScript("settings.set_online_map(true, " + navApp.settings.dark_theme + ");");
 							else
-								mainPageStack.executeJavaScript("settings.set_online_map(false);");
+								mainPageStack.executeJavaScript("settings.set_online_map(false, " + navApp.settings.dark_theme + ");");
 						}
 						SlotsLayout.position: SlotsLayout.Last
 					}

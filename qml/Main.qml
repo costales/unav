@@ -165,6 +165,7 @@ MainView {
 							enabled: mainPageStack.onLoadingExecuted && mainPageStack.columns == 1
 							onTriggered: {
 								navApp.settings.dark_theme = !navApp.settings.dark_theme;
+								mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + ")");
 							}
 						}
 					]
@@ -243,7 +244,7 @@ MainView {
 							mainPageStack.onLoadingExecuted = true;
 							
 							// Restore settings into webview
-							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + ")");
+							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + ")");
 							mainPageStack.executeJavaScript("settings.set_online_search(" + navApp.settings.onlineSearch + ")");
 							mainPageStack.executeJavaScript("settings.set_online_route(" + navApp.settings.onlineRoute + ")");
 							mainPageStack.executeJavaScript("settings.set_unit(" + navApp.settings.unit + ")");

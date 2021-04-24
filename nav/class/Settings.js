@@ -18,6 +18,7 @@ Settings.prototype.MI = 'mi';
 
 function Settings() {
     this.online_map = true
+    this.dark_map = false;
     this.online_search = true
     this.online_route = true
     this.unit = this.KM;
@@ -30,12 +31,7 @@ function Settings() {
     this.route_mode = "car";
 }
 
-Settings.prototype.get_online_map = function() {
-    return this.online_map;
-}
-Settings.prototype.set_online_map = function(value) {
-    this.online_map = value;
-
+Settings.prototype.set_online_map = function(online, dark) {
     // Remove all layers except someones, then append the right
     try {
         map.getLayers().forEach(function(layer) {
@@ -51,12 +47,18 @@ Settings.prototype.set_online_map = function(value) {
         });
     } catch (error) {}
     
-    if (this.online_map) {
-        map.addLayer(map_layer_online);
+    if (online) {
+        if (dark)
+            map.addLayer(map_layer_online_dark);
+        else
+            map.addLayer(map_layer_online_light);
         $('#mapCredits').text("© OpenStreetMap contributors © CARTO");
     }
     else {
-        olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');
+        if (dark)
+            olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=mc');
+        else
+            olms.apply(map, 'http://localhost:8553/v1/mbgl/style?style=osmbright');
         $('#mapCredits').text("© OpenStreetMap contributors © OSM Scout Server");
     }
 }
