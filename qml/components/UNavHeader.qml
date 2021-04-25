@@ -18,7 +18,7 @@ import Ubuntu.Components 1.3
 
 PageHeader {
 	StyleHints {
-		backgroundColor: "#3575db"
+		backgroundColor: navApp.settings.dark_theme ? "#282722" : "#3575db"
 		foregroundColor: "White"
 		dividerColor: "White"
 	}

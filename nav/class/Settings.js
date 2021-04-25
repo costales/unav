@@ -34,13 +34,17 @@ function Settings() {
 Settings.prototype.set_dark_theme = function(dark_theme) {
     if (dark_theme) {
         $("body").css({"background-color": "black"});
-        $(".topPanels, #panelsNav, #panelConfirmRoute").css({"filter": "invert(100%)"});
+        $(".topPanels, #panelsNav, #panelConfirmRoute, .ol-scale-line-inner, #mapCredits").css({"filter": "invert(100%)"});
+        $("#btnsConfirm, #modeConfirm").css({"filter": "invert(100%)"});
         $("#posBtn").css({"background": "#282722", "box-shadow": "1px 1px 0px 0px rgba(0,0,0,1)"});
+        poiEnd.setColor("orange");
     }
     else {
         $("body").css({"background-color": "white"});
-        $(".topPanels, #panelsNav, #panelConfirmRoute").css({"filter": "invert(0%)"});
+        $(".topPanels, #panelsNav, #panelConfirmRoute, .ol-scale-line-inner, #mapCredits").css({"filter": "invert(0%)"});
+        $("#btnsConfirm, #modeConfirm").css({"filter": "invert(0%)"});
         $("#posBtn").css({"background": "white", "box-shadow": "1px 1px 0px 0px rgba(209,209,209,1)"});
+        poiEnd.setColor("black");
     }
 }
 
