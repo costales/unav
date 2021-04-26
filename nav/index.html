@@ -256,14 +256,14 @@
                         mapUI.set_map_zoom(ui.ZOOM-1);
                     mapUI.set_map_center(nav.get_data().lng, nav.get_data().lat);
                     nav.set_data({mode: 'exploring'});
-                    ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgBGColor: 'success', msgText: t("GPS is ready"), iconsShow: 'no'});
+                    ui.POIPanel({msgShow: 'yes', msgAutohide: 'yes', msgText: t("GPS is ready"), iconsShow: 'no'});
                     break;
                 case 'calculating_simulating_error':
                     mapUI.clear_layer('route');
                     mapUI.clear_layer('radar');        
                     poiStart.hide();
                     ui.show_panels('simulate_error');
-                    ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), iconsShow: 'no'});
                     nav.set_data({mode: 'exploring_after_simulating_error'});
                     break;
                 case 'calculating_simulating_call_API':
@@ -310,7 +310,7 @@
                     mapUI.clear_layer('route');
                     mapUI.clear_layer('radar');        
                     poiStart.hide();
-                    ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), msgBGColor: 'error', iconsShow: 'no'});
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Error searching route"), iconsShow: 'no'});
                     nav.set_data({mode: 'exploring_after_calculating_error'});
                     break;
                 case 'drawing':
@@ -359,7 +359,7 @@
                 case 'route_out_calculating_error':
                     nav.set_data({mode: 'route_out_waiting_result'});
                     webapi.route(settings.get_online_route(), nav_data.lng, nav_data.lat, nav_data.lng_end, nav_data.lat_end);
-                    ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), msgBGColor: 'error', iconsShow: 'no'});
+                    ui.POIPanel({msgShow: 'yes', msgText: t("Error. Recalculating again"), iconsShow: 'no'});
                     break;
                 case 'route_out_drawing': // As drawing, but don't confirm
                     mapUI.clear_layer('route');
@@ -388,7 +388,7 @@
                     $('#endHour').html('');
                     $("#totalProgress").css("width", "100%");
                     $('#stepTxt').html(t("You have arrived at your destination"));
-                    $('#stepImg').html('<img src="img/steps/10.svg">');
+                    $('#stepImg').html('<img class="images" src="img/steps/10.svg">');
                     $('#distance').html('');
                 case 'route_ended': // Wait for user to cancel it or start another one
                     break;
@@ -686,7 +686,7 @@
             <div id="stepTxt"></div>
             <div id="stepImg"></div>
             <div id="distance"></div>
-            <div id="btnCancelRoute" onclick="route_cancel(false)"><img src="img/panel/cancel.svg" height="100%"></div>
+            <div id="btnCancelRoute" onclick="route_cancel(false)"><img class="images" src="img/panel/cancel.svg" height="100%"></div>
         </div>
         <div id="bottomPanelNav">
             <div id="endDistance"></div>

@@ -1,3 +1,26 @@
+.theme-light {
+  --color-bg: #F7F7F7;
+  --color-bg2: #ffffff;
+  --color-fg: #000000;
+  --color-shadow: #d1d1d1;
+  --color-text: #222222;
+  --color-progress: #3575db;
+  --color-invert: 0%;
+}
+.theme-dark {
+  --color-bg: #282722;
+  --color-bg2: #000000;
+  --color-fg: #ffffff;
+  --color-shadow: #47463d;
+  --color-text: #cecece;
+  --color-progress: #FFA500;
+  --color-invert: 100%;
+}
+
+.images {
+  filter: invert(var(--color-invert));
+}
+
 :root {
   touch-action: pan-x pan-y;
   height: 100% 
@@ -13,6 +36,8 @@ html, body, .map {
 
 body {
   pointer-events: none;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 .ol-scale-line {
@@ -21,12 +46,12 @@ body {
   top: 'auto', bottom: '8px'
 }
 .ol-scale-line-inner {
-  color: #222222;
-  border-color: #222222;
+  color: var(--color-fg);
+  border-color: var(--color-fg);
 }
 
 #posBtn {
-  background: white;
+  background: var(--color-bg);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -34,7 +59,7 @@ body {
   right: 25px;
   position: fixed;
   z-index: 10 !important;
-  box-shadow: 1px 1px 0px 0px rgba(209,209,209,1);
+  box-shadow: 1px 1px 0px 0px var(--color-shadow);
   user-select: none;
 }
 #posBtn img {
@@ -45,7 +70,7 @@ body {
 }
 
 #pulsePosBtn {
-  background: #4d4d4d;
+  background: var(--color-fg);
   border-radius: 50%;
 
   width: 8px;
@@ -54,7 +79,7 @@ body {
   margin-left: 26px;
   z-index: 11 !important;
 
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  box-shadow: 0 0 0 0 var(--color-bg);
   transform: scale(1);
 }
 
@@ -97,10 +122,10 @@ body {
 }
 #topPanelMsg {
   top: 0px;
-  background: #F7F7F7;
+  background: var(--color-bg);
   height: 95px;
   z-index: 20 !important;
-  box-shadow: 0px 2px 2px 0px rgba(184,184,184,1);
+  box-shadow: 0px 2px 2px 0px var(--color-shadow);
 }
 #topPanelMsgContent {
   width: 100%;
@@ -120,9 +145,10 @@ body {
 }
 #topPanelIcons {
   top: 0px;
-  background: white;
+  background: var(--color-bg);
   height: 52px;
   z-index: 21 !important;
+  box-shadow: 0px 2px 2px 0px var(--color-shadow);
 }
 #topPanelIconsContent {
   width: 100%;
@@ -152,7 +178,7 @@ body {
 #topPanelNav, #topPanelConfirm {
   position: absolute;
   top: 0px;
-  background: white;
+  background: var(--color-bg2);
   width: 100%;
   height: 92px;
   box-shadow: 0px -2px 2px 0px rgba(184,184,184,1);
@@ -160,7 +186,7 @@ body {
 #bottomPanelNav, #bottomPanelConfirm {
   position: absolute;
   bottom: 0px;
-  background: #F7F7F7;
+  background: var(--color-bg);
   width: 100%;
   height: 28px;
 }
@@ -248,7 +274,7 @@ body {
 #totalProgress {
   height: 2px;
   width: 20%;
-  background-color: #3575db;
+  background-color: var(--color-progress);
   left: 0;
   bottom: 0;
   position: absolute;

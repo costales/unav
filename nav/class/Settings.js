@@ -33,17 +33,11 @@ function Settings() {
 
 Settings.prototype.set_dark_theme = function(dark_theme) {
     if (dark_theme) {
-        $("body").css({"background-color": "black"});
-        $(".topPanels, #panelsNav, #panelConfirmRoute, .ol-scale-line-inner, #mapCredits").css({"filter": "invert(100%)"});
-        $("#btnsConfirm, #modeConfirm").css({"filter": "invert(100%)"});
-        $("#posBtn").css({"background": "#282722", "box-shadow": "1px 1px 0px 0px rgba(0,0,0,1)"});
-        poiEnd.setColor("orange");
+        document.documentElement.className = 'theme-dark';
+        poiEnd.setColor("green");
     }
     else {
-        $("body").css({"background-color": "white"});
-        $(".topPanels, #panelsNav, #panelConfirmRoute, .ol-scale-line-inner, #mapCredits").css({"filter": "invert(0%)"});
-        $("#btnsConfirm, #modeConfirm").css({"filter": "invert(0%)"});
-        $("#posBtn").css({"background": "white", "box-shadow": "1px 1px 0px 0px rgba(209,209,209,1)"});
+        document.documentElement.className = 'theme-light';
         poiEnd.setColor("black");
     }
 }
