@@ -328,6 +328,8 @@ Item {
 					visible: model.icon !== ""
 					source: model.icon ? model.icon : ""
 					SlotsLayout.position: SlotsLayout.Last
+					keyColor: "#010101"
+    				color: theme.palette.normal.backgroundText
 				}
 			}
 		}

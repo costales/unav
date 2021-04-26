@@ -161,7 +161,7 @@ WebAPI.prototype.OK_POIsOffline = function(data, icon) {
     }
 }
 WebAPI.prototype.KO_POIsOffline = function(data) {
-    ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("There was an error"), msgBGColor: 'error', iconsShow: 'no'});
+    ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("There was an error"), iconsShow: 'no'});
 }
 
 WebAPI.prototype.POIsOnline = function(tag_poi, icon) {
@@ -230,7 +230,7 @@ WebAPI.prototype.OK_POIsOnline = function(data, icon) {
     }
 }
 WebAPI.prototype.KO_POIsOnline = function(data) {
-    ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("There was an error"), msgBGColor: 'error', iconsShow: 'no'});
+    ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("There was an error"), iconsShow: 'no'});
 }
 
 WebAPI.prototype.route = function(online, lng_from, lat_from, lng_to, lat_to) {

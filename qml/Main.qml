@@ -42,7 +42,7 @@ MainView {
 		i18n.bindtextdomain("unav", "nav/locales/mo");
 	}
 
-	property string applicationVersion: "3.10"
+	property string applicationVersion: "3.11"
 	property string mapUrl: "../nav/index.html"
 	property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 
@@ -74,6 +74,7 @@ MainView {
 		property string default_coord_3b: '6'
 		property string default_coord_3c: '0.84'
 		property string default_coord_3d: 'W'
+		property bool dark_theme: false
 	}
 
 	ScreenSaver {
@@ -137,7 +138,7 @@ MainView {
 				}
 
 				trailingActionBar {
-					numberOfSlots: 2
+					numberOfSlots: 3
 					actions: [
 						Action {
 							id: actionSettings
@@ -156,6 +157,19 @@ MainView {
 							onTriggered: {
 								mainPageStack.addPageToNextColumn(mainPageStack.primaryPage, Qt.resolvedUrl("Search.qml"));
 								mainPageStack.showSideBar();
+							}
+						},
+						Action {
+							id: darkThemeAction
+							iconName: navApp.settings.dark_theme ? "display-brightness-min" : "night-mode"
+							enabled: mainPageStack.onLoadingExecuted && mainPageStack.columns == 1
+							onTriggered: {
+								navApp.settings.dark_theme = !navApp.settings.dark_theme;
+								if (navApp.settings.dark_theme)
+									theme.name = "Ubuntu.Components.Themes.SuruDark"
+								else
+									theme.name = "Ubuntu.Components.Themes.Ambiance"
+								mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + ")");
 							}
 						}
 					]
@@ -234,7 +248,11 @@ MainView {
 							mainPageStack.onLoadingExecuted = true;
 							
 							// Restore settings into webview
-							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + ")");
+							if (navApp.settings.dark_theme)
+								theme.name = "Ubuntu.Components.Themes.SuruDark"
+							else
+								theme.name = "Ubuntu.Components.Themes.Ambiance"
+							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + ")");
 							mainPageStack.executeJavaScript("settings.set_online_search(" + navApp.settings.onlineSearch + ")");
 							mainPageStack.executeJavaScript("settings.set_online_route(" + navApp.settings.onlineRoute + ")");
 							mainPageStack.executeJavaScript("settings.set_unit(" + navApp.settings.unit + ")");

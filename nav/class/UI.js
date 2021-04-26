@@ -56,18 +56,6 @@ UI.prototype.POIPanel = function(data) {
     var msgShow = data.msgShow || 'default';
     var msgAutohide = data.msgAutohide || false;
     var msgText = data.msgText || '';
-    var msgBGColor = data.msgBGColor || '#F7F7F7';
-    switch(msgBGColor) {
-        case 'success':
-            msgBGColor = '#c9ffbb';
-            break;
-        case 'error':
-            msgBGColor = '#ffa3c2';
-            break;
-        case 'warning':
-            msgBGColor = '#fbffbb';
-            break;
-    }
 
     var iconsShow = data.iconsShow || 'auto';
     var iconsClickedOwnPos = data.iconsClickedOwnPos || false;
@@ -88,19 +76,19 @@ UI.prototype.POIPanel = function(data) {
         var html_content = '<center>';
         if (!iconIsPickingPos) {
             if (!iconsClickedOwnPos)
-                html_content = html_content + '<img src="img/panel/send.svg" onclick="event.stopPropagation();BtnGo(' + iconsLng + ',' + iconsLat + ')">';
+                html_content = html_content + '<img class="images" src="img/panel/send.svg" onclick="event.stopPropagation();BtnGo(' + iconsLng + ',' + iconsLat + ')">';
             if (!iconsIsFavorite)
-                html_content = html_content + '<img src="img/panel/non-starred.svg" onclick="event.stopPropagation();BtnFavorite(' + iconsLng + ',' + iconsLat + ')">';
-            html_content = html_content + '<img src="img/panel/share.svg" onclick="event.stopPropagation();BtnShare(' + iconsLng + ',' + iconsLat + ')">';
+                html_content = html_content + '<img class="images" src="img/panel/non-starred.svg" onclick="event.stopPropagation();BtnFavorite(' + iconsLng + ',' + iconsLat + ')">';
+            html_content = html_content + '<img class="images" src="img/panel/share.svg" onclick="event.stopPropagation();BtnShare(' + iconsLng + ',' + iconsLat + ')">';
             if (iconsPhone)
-                html_content = html_content + '<img src="img/panel/phone.svg" onclick="event.stopPropagation();BtnPhone(\'' + iconsPhone + '\')">';
+                html_content = html_content + '<img class="images" src="img/panel/phone.svg" onclick="event.stopPropagation();BtnPhone(\'' + iconsPhone + '\')">';
             if (iconsWebsite)
-                html_content = html_content + '<img src="img/panel/website.svg" onclick="event.stopPropagation();BtnWebsite(\'' + iconsWebsite + '\')">';
+                html_content = html_content + '<img class="images" src="img/panel/website.svg" onclick="event.stopPropagation();BtnWebsite(\'' + iconsWebsite + '\')">';
             if (iconsEmail)
-                html_content = html_content + '<img src="img/panel/email.svg" onclick="event.stopPropagation();BtnEmail(\'' + iconsEmail + '\')">';
+                html_content = html_content + '<img class="images" src="img/panel/email.svg" onclick="event.stopPropagation();BtnEmail(\'' + iconsEmail + '\')">';
         }
         else {
-            html_content = html_content + '<img src="img/panel/close.svg" onclick="event.stopPropagation();ui.set_pickingOnMap(0)"><img src="img/panel/tick.svg" onclick="event.stopPropagation();ui.set_pickingOnMap(' + (ui.get_pickingOnMap()+1) + ')">';
+            html_content = html_content + '<img class="images" src="img/panel/close.svg" onclick="event.stopPropagation();ui.set_pickingOnMap(0)"><img class="images" src="img/panel/tick.svg" onclick="event.stopPropagation();ui.set_pickingOnMap(' + (ui.get_pickingOnMap()+1) + ')">';
         }
         html_content = html_content + '</center>';
         $('#topPanelIconsContent').html(html_content);
@@ -126,19 +114,13 @@ UI.prototype.POIPanel = function(data) {
     if (msgAutohide)
         $.doTimeout('autohideMsg', 3500, function(){
             $('#topPanelMsg').slideUp();
-            $("#topPanelIcons").css("box-shadow", "0px 2px 2px 0px rgba(184,184,184,1)");
         });
 
-    $("#topPanelMsg").css("background", msgBGColor);
-
     if (msgShow == 'yes' && (iconsShow == 'yes' || iconsShow == 'auto')) {
-        $("#topPanelIcons").css("box-shadow", "");
         $("#topPanelMsg").css("height", "100px");
         $("#topPanelMsg").css("max-height", "100px");
         $("#topPanelMsg").css("min-height", "100px");
     }
-    if (msgShow == 'no' && (iconsShow == 'yes' || iconsShow == 'auto'))
-        $("#topPanelIcons").css("box-shadow", "0px 2px 2px 0px rgba(184,184,184,1)");
     if (msgShow == 'yes' && iconsShow == 'no') {
         $("#topPanelMsg").css("height", "48px");
         $("#topPanelMsg").css("max-height", "48px");
@@ -298,7 +280,7 @@ UI.prototype.update_lower_panel = function(duration, distance, speed, percentage
 
 UI.prototype.update_nav_panel = function(type, name, distance) {
     $('#stepTxt').html(name);
-    $('#stepImg').html('<img src="img/steps/' + type + '.svg">');
+    $('#stepImg').html('<img class="images" src="img/steps/' + type + '.svg">');
     $('#distance').html(maths.dist2human(distance, settings.get_unit()));
 }
 
