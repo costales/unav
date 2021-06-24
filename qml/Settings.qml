@@ -249,11 +249,46 @@ Page {
 						onClicked: {
 							navApp.settings.onlineMap = checked;
 							if (navApp.settings.onlineMap)
-								mainPageStack.executeJavaScript("settings.set_online_map(true, " + navApp.settings.dark_theme + ");");
+								mainPageStack.executeJavaScript("settings.set_online_map(true, " + navApp.settings.dark_theme + "," + navApp.settings.bicycleMap + ");");
 							else
-								mainPageStack.executeJavaScript("settings.set_online_map(false, " + navApp.settings.dark_theme + ");");
+								mainPageStack.executeJavaScript("settings.set_online_map(false, " + navApp.settings.dark_theme + "," + navApp.settings.bicycleMap + ");");
 						}
 						SlotsLayout.position: SlotsLayout.Last
+					}
+				}
+			}
+
+			ListItem {
+				enabled: navApp.settings.onlineMap
+				height: !navApp.settings.bicycleMap ? navBicycleMap.height + divider.height : navBicycleMap.height + divider.height + navBicycleMapLabel.height
+				ListItemLayout {
+					id: navBicycleMap
+					title.text: i18n.tr("Bicycle map")
+					Switch {
+						id: navBicycleMapSwitch
+						checked: navApp.settings.bicycleMap
+						onClicked: {
+							navApp.settings.bicycleMap = checked;
+							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + "," + navApp.settings.bicycleMap + ");");
+						}
+						SlotsLayout.position: SlotsLayout.Last
+					}
+				}
+				Label {
+					id: navBicycleMapLabel
+					text: i18n.tr("An useful online map for cyclists")
+					visible: navApp.settings.bicycleMap
+					width: parent.width
+					height: units.gu(3)
+					wrapMode: Text.WordWrap
+					anchors {
+						left: parent.left
+						right: parent.right
+						leftMargin: units.gu(2)
+						rightMargin: units.gu(2)
+						bottom: parent.bottom
+						bottomMargin: units.gu(1)
+						topMargin: units.gu(3)
 					}
 				}
 			}

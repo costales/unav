@@ -103,12 +103,12 @@ body {
 #mapCredits {
   border-radius: 50%;
   width: 350px;
-  height: 8px;
+  height: 10px;
   bottom:1px;
   right:2px;
   position: fixed;
   z-index: 10 !important;
-  font-size: 8px;
+  font-size: 10px;
   text-align: right;
   user-select: none;
 }

@@ -57,6 +57,7 @@ Page {
 			creditsModel.append({ category: i18n.tr("Powered by"), name: "OpenStreetMap & Contributors", link: "http://www.openstreetmap.org" })
 			creditsModel.append({ category: i18n.tr("Powered by"), name: "OSM Scout Server", link: "https://open-store.io/app/osmscout-server.jonnius" })
 			creditsModel.append({ category: i18n.tr("Powered by"), name: "Carto Maps", link: "https://carto.com" })
+			creditsModel.append({ category: i18n.tr("Powered by"), name: "CyclOSM", link: "https://cyclosm.org" })
 			creditsModel.append({ category: i18n.tr("Powered by"), name: "Stadia Maps", link: "https://stadiamaps.com" })
 			creditsModel.append({ category: i18n.tr("Powered by"), name: "OpenStreetMap Nominatin", link: "https://nominatim.org" })
 			creditsModel.append({ category: i18n.tr("Powered by"), name: "Photon", link: "http://photon.komoot.de" })
