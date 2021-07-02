@@ -57,7 +57,6 @@ Settings.prototype.set_online_map = function(online, dark, bicycle) {
             }
         });
     } catch (error) {}
-    console.log(online, dark, bicycle);
     
     if (online) {
         if (dark) {
