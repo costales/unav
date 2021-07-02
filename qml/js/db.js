@@ -23,8 +23,8 @@ function openDB() {
         db = LocalStorage.openDatabaseSync("unav_db", "0.1", "Favorites", 1000);
         db.transaction(function(tx){
             tx.executeSql('CREATE TABLE IF NOT EXISTS favorites( key TEXT UNIQUE, lat TEXT, lng TEXT)');
-            tx.executeSql('CREATE TABLE IF NOT EXISTS poi_historial36( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, label TEXT UNIQUE, tag_online TEXT, tag_offline TEXT, enabled_offline TEXT )');
-            tx.executeSql('CREATE TABLE IF NOT EXISTS search_history37( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, key TEXT UNIQUE )');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS poi_historial36( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, label TEXT UNIQUE, tag_online TEXT, tag_offline TEXT, enabled_offline TEXT)');
+            tx.executeSql('CREATE TABLE IF NOT EXISTS search_history37( id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, key TEXT UNIQUE)');
         });
     }
 }
@@ -75,7 +75,7 @@ function saveToNearByHistory(label, tag_online, tag_offline, enabled_offline) {
     openDB();
     db.transaction( function(tx){
         tx.executeSql('INSERT OR REPLACE INTO poi_historial36(label, tag_online, tag_offline, enabled_offline) VALUES(?,?,?,?)', [label, tag_online, tag_offline, enabled_offline]);
-        tx.executeSql('DELETE FROM poi_historial36 WHERE id IN (SELECT id FROM poi_historial36 ORDER BY id DESC LIMIT -1 OFFSET 5)'); // Keep only 5 last
+        tx.executeSql('DELETE FROM poi_historial36 WHERE id IN (SELECT id FROM poi_historial36 ORDER BY id DESC LIMIT -1 OFFSET 15)'); // Keep only last 15
     });
 }
 
@@ -93,7 +93,7 @@ function saveToSearchHistory(key) {
     openDB();
     db.transaction( function(tx){
         tx.executeSql('INSERT OR REPLACE INTO search_history37(key) VALUES(?)', [key]);
-        tx.executeSql('DELETE FROM search_history37 WHERE id IN (SELECT id FROM search_history37 ORDER BY id DESC LIMIT -1 OFFSET 7)'); // Keep last 7
+        tx.executeSql('DELETE FROM search_history37 WHERE id IN (SELECT id FROM search_history37 ORDER BY id DESC LIMIT -1 OFFSET 10)'); // Keep last 10
     });
 }
 
