@@ -42,7 +42,7 @@ MainView {
 		i18n.bindtextdomain("unav", "nav/locales/mo");
 	}
 
-	property string applicationVersion: "3.11"
+	property string applicationVersion: "3.12"
 	property string mapUrl: "../nav/index.html"
 	property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 
@@ -51,6 +51,7 @@ MainView {
 		property bool onlineMap: true
 		property bool onlineSearch: true
 		property bool onlineRoute: true
+		property bool bicycleMap: false
 		property int unit: 0
 		property bool rotateMap: true
 		property string routeModes: "car"
@@ -169,7 +170,7 @@ MainView {
 									theme.name = "Ubuntu.Components.Themes.SuruDark"
 								else
 									theme.name = "Ubuntu.Components.Themes.Ambiance"
-								mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + ")");
+								mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + "," + navApp.settings.bicycleMap +")");
 							}
 						}
 					]
@@ -252,7 +253,7 @@ MainView {
 								theme.name = "Ubuntu.Components.Themes.SuruDark"
 							else
 								theme.name = "Ubuntu.Components.Themes.Ambiance"
-							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + ")");
+							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + "," + navApp.settings.bicycleMap + ")");
 							mainPageStack.executeJavaScript("settings.set_online_search(" + navApp.settings.onlineSearch + ")");
 							mainPageStack.executeJavaScript("settings.set_online_route(" + navApp.settings.onlineRoute + ")");
 							mainPageStack.executeJavaScript("settings.set_unit(" + navApp.settings.unit + ")");

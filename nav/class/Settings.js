@@ -17,10 +17,10 @@ Settings.prototype.KM = 'km';
 Settings.prototype.MI = 'mi';
 
 function Settings() {
-    this.online_map = true
+    this.online_map = true;
     this.dark_map = false;
-    this.online_search = true
-    this.online_route = true
+    this.online_search = true;
+    this.online_route = true;
     this.unit = this.KM;
     this.rotate_map = true;
     this.tolls = true;
@@ -42,7 +42,7 @@ Settings.prototype.set_dark_theme = function(dark_theme) {
     }
 }
 
-Settings.prototype.set_online_map = function(online, dark) {
+Settings.prototype.set_online_map = function(online, dark, bicycle) {
     // Remove all layers except someones, then append the right
     try {
         map.getLayers().forEach(function(layer) {
@@ -59,11 +59,19 @@ Settings.prototype.set_online_map = function(online, dark) {
     } catch (error) {}
     
     if (online) {
-        if (dark)
+        if (dark) {
             map.addLayer(map_layer_online_dark);
-        else
-            map.addLayer(map_layer_online_light);
-        $('#mapCredits').text("© OpenStreetMap contributors © CARTO");
+        }
+        else {
+            if (!bicycle) {
+                map.addLayer(map_layer_online_light);
+                $('#mapCredits').text("© OpenStreetMap contributors © CARTO");
+            }
+            else {
+                map.addLayer(map_layer_online_bicycle);
+                $('#mapCredits').text("© OpenStreetMap contributors © CyclOSM");
+            }
+        }
     }
     else {
         if (dark)

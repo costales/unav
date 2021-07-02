@@ -80,15 +80,21 @@
     <script>
         // ol
         var map_layer_online_light = new ol.layer.Tile({
-            name: 'layer_online',
+            name: 'layer_online_light',
             source: new ol.source.XYZ({
                 url: 'https://{a-c}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
             })
         });
         var map_layer_online_dark = new ol.layer.Tile({
-            name: 'layer_online',
+            name: 'layer_online_dark',
             source: new ol.source.XYZ({
                 url: 'https://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
+            })
+        });
+        var map_layer_online_bicycle = new ol.layer.Tile({
+            name: 'layer_online_bicycle',
+            source: new ol.source.XYZ({
+                url: 'https://{a-c}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png'
             })
         });
         var scale_line = new ol.control.ScaleLine();
