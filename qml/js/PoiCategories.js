@@ -43,6 +43,7 @@ var groups = [
         label: i18n.tr("Tourism"),
         elements: [
             {label: "Museum", translators: i18n.tr("Museum"), tag_online: "tourism=museum", tag_offline: "tourism_museum", enabled_offline: "no"},
+            {label: "Picnic Site", translators: i18n.tr("Picnic Site"), tag_online: "leisure=picnic_table", tag_offline: "picnic_table", enabled_offline: "no"},
             {label: "Tourism Information", translators: i18n.tr("Tourism Information"), tag_online: "tourism=information", tag_offline: "tourism_information", enabled_offline: "yes"},
             {label: "Town Hall", translators: i18n.tr("Town Hall"), tag_online: "amenity=townhall", tag_offline: "amenity_townhall", enabled_offline: "yes"}
         ]
