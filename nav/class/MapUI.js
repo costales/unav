@@ -19,6 +19,8 @@ function MapUI() {
     this.GPXSource = new ol.source.Vector({});
     this.layerGPX = new ol.layer.Vector({
         source: this.GPXSource,
+        updateWhileAnimating: false,
+        updateWhileInteracting: false,
         style: [
             new ol.style.Style({
                 stroke: new ol.style.Stroke({
@@ -35,6 +37,8 @@ function MapUI() {
     this.RouteSource = new ol.source.Vector({});
     this.layerRoute = new ol.layer.Vector({
         source: this.RouteSource,
+        updateWhileAnimating: false,
+        updateWhileInteracting: false,
         style: [
             new ol.style.Style({
                 stroke: new ol.style.Stroke({
@@ -49,13 +53,24 @@ function MapUI() {
     this.layerRoute.set('name', 'route');
 
     this.markerPOISource = new ol.source.Vector({});
-    this.layerPOI = new ol.layer.Vector({source: this.markerPOISource});
+    this.layerPOI = new ol.layer.Vector({
+        source: this.markerPOISource,
+        updateWhileAnimating: false,
+        updateWhileInteracting: false
+    });
     map.addLayer(this.layerPOI);
     this.layerPOI.setZIndex(102);
     this.layerPOI.set('name', 'poi');
 
-    this.markerRadarSource = new ol.source.Vector({});
-    this.layerRadar = new ol.layer.Vector({source: this.markerRadarSource});
+    this.markerRadarSource = new ol.source.Vector({
+        updateWhileAnimating: false,
+        updateWhileInteracting: false
+    });
+    this.layerRadar = new ol.layer.Vector({
+        source: this.markerRadarSource,
+        updateWhileAnimating: false,
+        updateWhileInteracting: false
+    });
     map.addLayer(this.layerRadar);
     this.layerRadar.setZIndex(103);
     this.layerRadar.set('name', 'poi');
@@ -78,7 +93,11 @@ function MapUI() {
 
     this.posFeature.setStyle(this.posStyle);
     this.markerPosSource = new ol.source.Vector({features: [this.posFeature]});
-    this.layerPos = new ol.layer.Vector({source: this.markerPosSource});
+    this.layerPos = new ol.layer.Vector({
+        source: this.markerPosSource,
+        updateWhileAnimating: false,
+        updateWhileInteracting: false
+    });
     map.addLayer(this.layerPos);
     this.layerPos.setZIndex(104);
     this.layerPos.set('name', 'pos');
