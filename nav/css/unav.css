@@ -62,7 +62,7 @@ body {
   box-shadow: 1px 1px 0px 0px var(--color-shadow);
   user-select: none;
 
-  animation: 1.5s ease-out 0s 1 posBtnSlideInFromRight;
+  animation: 0.35s ease-out 0s 1 posBtnSlideInFromRight;
 }
 #posBtn img {
   width: 24px;
