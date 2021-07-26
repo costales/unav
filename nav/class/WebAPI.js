@@ -170,7 +170,7 @@ WebAPI.prototype.POIsOnline = function(tag_poi, icon) {
     var coords = map.getView().calculateExtent(map.getSize());
     var coord1 = ol.proj.transform([coords[0], coords[1]], 'EPSG:3857', 'EPSG:4326');
     var coord2 = ol.proj.transform([coords[2], coords[3]], 'EPSG:3857', 'EPSG:4326');
-    var url = 'https://lz4.overpass-api.de/api/interpreter?data=[out:json];node['+tag_poi+']('+coord1[1]+','+coord1[0]+','+coord2[1]+','+coord2[0]+');out 250;';
+    var url = 'https://lz4.overpass-api.de/api/interpreter?data=[out:json];(node['+tag_poi+']('+coord1[1]+','+coord1[0]+','+coord2[1]+','+coord2[0]+');way['+tag_poi+']('+coord1[1]+','+coord1[0]+','+coord2[1]+','+coord2[0]+'););out center 250;';
     $.ajax({
         url: url,
         dataType: 'json',
@@ -209,18 +209,34 @@ WebAPI.prototype.OK_POIsOnline = function(data, icon) {
                 email = email2;
             }
 
-            mapUI.add_marker([{
-                name: 'poi-'+data.elements[i].id, 
-                title: name, 
-                phone: phone, 
-                website: website, 
-                email: email, 
-                lng: data.elements[i].lon, 
-                lat: data.elements[i].lat, 
-                icon: 'poi-emblem/'+icon+'.svg',
-                margin_height: 41, 
-                margin_width: 15
-            }], 'poi');
+            if (data.elements[i].hasOwnProperty('center')) { // It's a way
+                mapUI.add_marker([{
+                    name: 'poi-'+data.elements[i].id, 
+                    title: name, 
+                    phone: phone, 
+                    website: website, 
+                    email: email, 
+                    lng: data.elements[i].center.lon, 
+                    lat: data.elements[i].center.lat, 
+                    icon: 'poi-emblem/'+icon+'.svg',
+                    margin_height: 41, 
+                    margin_width: 15
+                }], 'poi');
+            }
+            else { // It's a node
+                mapUI.add_marker([{
+                    name: 'poi-'+data.elements[i].id, 
+                    title: name, 
+                    phone: phone, 
+                    website: website, 
+                    email: email, 
+                    lng: data.elements[i].lon, 
+                    lat: data.elements[i].lat, 
+                    icon: 'poi-emblem/'+icon+'.svg',
+                    margin_height: 41, 
+                    margin_width: 15
+                }], 'poi');
+            }
         }
         ui.POIPanel({msgShow: 'yes', msgAutohide: true, msgText: t("POIs loaded"), iconsShow: 'no'});
         ui.set_center_pos(false);
