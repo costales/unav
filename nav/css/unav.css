@@ -61,12 +61,22 @@ body {
   z-index: 10 !important;
   box-shadow: 1px 1px 0px 0px var(--color-shadow);
   user-select: none;
+
+  animation: 1.5s ease-out 0s 1 posBtnSlideInFromRight;
 }
 #posBtn img {
   width: 24px;
   height: 24px;
   margin-top: 18px;
   margin-left: 18px;
+}
+@keyframes posBtnSlideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 #pulsePosBtn {
