@@ -93,7 +93,6 @@ Item {
 		XmlRole { name: "icon"; query: "@icon/string()"; isKey: true }
 
 		function search() {
-			searchDelay.stop();
 			mainPageStack.lastSearchResultsOnline = "";
 			statusLabel.text = "";
 			xmlSearchModel.clear();
@@ -251,24 +250,8 @@ Item {
 					listView.delegate = searchDelegateComponent;
 					searchField.focus = true;
 				}
-
-				searchDelay.stop();
-				if (text.trim().length > 3) {
-					searchDelay.start();
-				}
 			}
 		}
-	}
-
-	Timer {
-		id: searchDelay
-		interval: 3000
-		running: false
-		onTriggered: {
-			xmlSearchModel.clear();
-			xmlSearchModel.searchString = mainPageStack.lastSearchStringOnline;
-			xmlSearchModel.search();
-		} 
 	}
 
 	ScrollView {
