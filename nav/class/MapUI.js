@@ -62,10 +62,7 @@ function MapUI() {
     this.layerPOI.setZIndex(102);
     this.layerPOI.set('name', 'poi');
 
-    this.markerRadarSource = new ol.source.Vector({
-        updateWhileAnimating: false,
-        updateWhileInteracting: false
-    });
+    this.markerRadarSource = new ol.source.Vector({});
     this.layerRadar = new ol.layer.Vector({
         source: this.markerRadarSource,
         updateWhileAnimating: false,
