@@ -14,10 +14,10 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.XmlListModel 2.0
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.DownloadManager 1.2
+import Lomiri.Components.Popups 1.3
+import Lomiri.DownloadManager 1.2
 import io.thp.pyotherside 1.4
 import "components"
 
@@ -136,15 +136,15 @@ Page {
 				title.textFormat: Text.RichText
 				title.wrapMode: Text.WordWrap
 
-				UbuntuShape {
-					aspect: UbuntuShape.Flat
+				LomiriShape {
+					aspect: LomiriShape.Flat
 					height: units.gu(3); width: height
 					sourceScale: Qt.vector2d(0.8, 0.8)
 					radius: "small"
 					source: Image {
 						source: model.author === navApp.settings.speakVoice ? Qt.resolvedUrl("../nav/img/voices/tick.svg") : Qt.resolvedUrl("../nav/img/voices/no-tick.svg")
 					}
-					sourceHorizontalAlignment: UbuntuShape.AlignHCenter
+					sourceHorizontalAlignment: LomiriShape.AlignHCenter
 					SlotsLayout.position: SlotsLayout.Leading
 				}
 				Item {

@@ -16,13 +16,13 @@
 */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtMultimedia 5.0
 import QtSystemInfo 5.0
 import QtWebEngine 1.6
 import Qt.labs.settings 1.0
-import Ubuntu.Content 1.1
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Content 1.1
+import Lomiri.Components.Popups 1.3
 import QtQuick.LocalStorage 2.0
 import "components"
 import "js/utils.js" as QmlJs
@@ -42,7 +42,7 @@ MainView {
 		i18n.bindtextdomain("unav", "nav/locales/mo");
 	}
 
-	property string applicationVersion: "3.16"
+	property string applicationVersion: "3.17"
 	property string mapUrl: "../nav/index.html"
 	property string appUA: "Mozilla/5.0 (Linux; Android 5.0; Nexus 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.102 Mobile Safari/537.36 Project uNav"
 
@@ -167,9 +167,9 @@ MainView {
 							onTriggered: {
 								navApp.settings.dark_theme = !navApp.settings.dark_theme;
 								if (navApp.settings.dark_theme)
-									theme.name = "Ubuntu.Components.Themes.SuruDark"
+									theme.name = "Lomiri.Components.Themes.SuruDark"
 								else
-									theme.name = "Ubuntu.Components.Themes.Ambiance"
+									theme.name = "Lomiri.Components.Themes.Ambiance"
 								mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + "," + navApp.settings.bicycleMap +")");
 							}
 						}
@@ -250,9 +250,9 @@ MainView {
 							
 							// Restore settings into webview
 							if (navApp.settings.dark_theme)
-								theme.name = "Ubuntu.Components.Themes.SuruDark"
+								theme.name = "Lomiri.Components.Themes.SuruDark"
 							else
-								theme.name = "Ubuntu.Components.Themes.Ambiance"
+								theme.name = "Lomiri.Components.Themes.Ambiance"
 							mainPageStack.executeJavaScript("settings.set_online_map(" + navApp.settings.onlineMap + "," + navApp.settings.dark_theme + "," + navApp.settings.bicycleMap + ")");
 							mainPageStack.executeJavaScript("settings.set_online_search(" + navApp.settings.onlineSearch + ")");
 							mainPageStack.executeJavaScript("settings.set_online_route(" + navApp.settings.onlineRoute + ")");

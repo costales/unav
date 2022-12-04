@@ -16,8 +16,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtQuick.LocalStorage 2.0
 import "js/db.js" as UnavDB
 import "components"
@@ -60,7 +60,7 @@ Item {
 		clip: true
 
 		displaced: Transition {
-			UbuntuNumberAnimation { property: "y"; duration: UbuntuAnimation.BriskDuration }
+			LomiriNumberAnimation { property: "y"; duration: UbuntuAnimation.BriskDuration }
 		}
 
 		delegate: ListItem {
