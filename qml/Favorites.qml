@@ -59,10 +59,6 @@ Item {
 		anchors.fill: parent
 		clip: true
 
-		displaced: Transition {
-			LomiriNumberAnimation { property: "y"; duration: UbuntuAnimation.BriskDuration }
-		}
-
 		delegate: ListItem {
 			id: delegate
 
