@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 AbstractButton {
 	id: button
@@ -29,13 +29,13 @@ AbstractButton {
 	opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
 
 	Behavior on opacity {
-		UbuntuNumberAnimation { }
+		LomiriNumberAnimation { }
 	}
 
-	UbuntuShape {
+	LomiriShape {
 		id: shape
 
-		aspect: UbuntuShape.Flat
+		aspect: LomiriShape.Flat
 		anchors.fill: parent
 		backgroundColor: defaultColor
 		radius: "medium"
