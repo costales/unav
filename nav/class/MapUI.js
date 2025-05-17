@@ -180,7 +180,7 @@ MapUI.prototype.add_marker = function(markers, layer) {
             iconFeature.setStyle(style);
             layer_aux.addFeature(iconFeature);
 
-            this.layerPOI.animateFeature(iconFeature, new ol.featureAnimation['Zoom']({duration: 1300}));    
+            this.layerPOI.animateFeature(iconFeature, new ol.featureAnimation['Zoom']({duration: 500}));
         }
         else {
             var iconStyle = new ol.style.Style({

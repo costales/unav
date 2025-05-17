@@ -1,7 +1,7 @@
 import QtQuick 2.9
-import Ubuntu.Components 1.3
-import Ubuntu.Content 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Content 1.3
+import Lomiri.Components.Popups 1.3
 import "../components"
 
 Item {

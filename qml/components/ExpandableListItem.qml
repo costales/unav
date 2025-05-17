@@ -16,7 +16,7 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 
 /*
  Component which extends the SDK Expandable list item and provides a easy
@@ -61,7 +61,7 @@ ListItem {
 				rotation: expandableListItem.expansion.expanded ? 180 : 0
 
 				Behavior on rotation {
-					UbuntuNumberAnimation {}
+					LomiriNumberAnimation {}
 				}
 			}
 		}

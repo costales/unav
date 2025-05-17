@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 
 Item {
 	id: coordPage
@@ -209,7 +209,7 @@ Item {
 					width: units.gu(1)
 				}
 
-				UbuntuShape {
+				LomiriShape {
 					width: units.gu(4)
 					height: lat2c.height
 					backgroundColor: lat2dMouseArea.pressed ? theme.palette.normal.activity : theme.palette.normal.foreground
@@ -280,7 +280,7 @@ Item {
 					width: units.gu(1)
 				}
 
-				UbuntuShape {
+				LomiriShape {
 					width: units.gu(4)
 					height: lng2c.height
 					backgroundColor: lng2dMouseArea.pressed ? theme.palette.normal.activity : theme.palette.normal.foreground
