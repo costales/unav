@@ -32,7 +32,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gettext intltool
           python -m pip install --upgrade pip
-          python -m pip install requests clickable-ut
+          python -m pip install polib requests clickable-ut
 
       - name: Download translations from POEditor
         working-directory: ./po
