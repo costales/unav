@@ -75,7 +75,7 @@ jobs:
       - name: Rename package for release
         id: package
         run: |
-          package_path="$(find . -maxdepth 3 -name '*.click' | head -n 1)"
+          package_path="$(find . -type f -name '*.click' ! -name 'unav_*.click' | head -n 1)"
           test -n "$package_path"
           release_package="unav_${GITHUB_REF_NAME}.click"
           mv "$package_path" "$release_package"
