@@ -1,0 +1,80 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      CLICKABLE_FRAMEWORK: ubuntu-sdk-20.04
+      POEDITOR_API: ${{ secrets.POEDITOR_API }}
+      POEDITOR_PROJECT_ID: ${{ secrets.POEDITOR_PROJECT_ID }}
+      WEBAPI_ID_FROM: ${{ secrets.WEBAPI_ID_FROM }}
+      WEBAPI_ID_TO: ${{ secrets.WEBAPI_ID_TO }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gettext intltool
+          python -m pip install --upgrade pip
+          python -m pip install requests clickable-ut
+
+      - name: Download translations from POEditor
+        working-directory: ./po
+        env:
+          poeditor_api: ${{ env.POEDITOR_API }}
+          poeditor_id: ${{ env.POEDITOR_PROJECT_ID }}
+        run: |
+          cp ../nav/locales/3rdparty/poeditor_pull.py .
+          python poeditor_pull.py
+          rm -f poeditor_pull.py
+
+      - name: Apply release patches
+        run: |
+          sed -i -- "s/${WEBAPI_ID_FROM}/${WEBAPI_ID_TO}/g" nav/class/WebAPI.js
+
+      - name: Remove test navigation
+        run: |
+          sed -i '/TESTING BEGIN/,/TESTING END/d' nav/index.html
+
+      - name: Build translations
+        run: make translations
+
+      - name: Clean intermediate files
+        run: |
+          make clean
+          rm -rf nav/locales/3rdparty
+
+      - name: Build click package
+        run: clickable
+
+      - name: Rename package for release
+        id: package
+        run: |
+          package_path="$(find . -maxdepth 3 -name '*.click' | head -n 1)"
+          test -n "$package_path"
+          release_package="unav_${GITHUB_REF_NAME}.click"
+          mv "$package_path" "$release_package"
+          echo "path=$release_package" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: uNav ${{ github.ref_name }}
+          generate_release_notes: true
+          files: ${{ steps.package.outputs.path }}
