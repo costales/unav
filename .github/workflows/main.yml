@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -20,10 +23,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -75,9 +78,9 @@ jobs:
       - name: Rename package for release
         id: package
         run: |
-          package_path="$(find . -type f -name '*.click' ! -name 'unav_*.click' | head -n 1)"
+          package_path="$(find . -type f -name '*.click' ! -name 'navigator.costales_*_all.click' | head -n 1)"
           test -n "$package_path"
-          release_package="unav_${GITHUB_REF_NAME}.click"
+          release_package="navigator.costales_${GITHUB_REF_NAME}_all.click"
           mv "$package_path" "$release_package"
           echo "path=$release_package" >> "$GITHUB_OUTPUT"
 
