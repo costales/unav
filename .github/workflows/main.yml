@@ -30,9 +30,12 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y adb gettext intltool
+          sudo apt-get install -y adb gettext intltool software-properties-common
+          sudo add-apt-repository -y ppa:bhdouglass/clickable
+          sudo apt-get update
+          sudo apt-get install -y clickable
           python -m pip install --upgrade pip
-          python -m pip install polib requests clickable-ut
+          python -m pip install polib requests
 
       - name: Download translations from POEditor
         working-directory: ./po
@@ -61,7 +64,7 @@ jobs:
           rm -rf nav/locales/3rdparty
 
       - name: Build click package
-        run: clickable build
+        run: CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable
 
       - name: Rename package for release
         id: package
