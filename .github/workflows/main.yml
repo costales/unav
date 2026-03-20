@@ -30,7 +30,7 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y gettext intltool
+          sudo apt-get install -y adb gettext intltool
           python -m pip install --upgrade pip
           python -m pip install polib requests clickable-ut
 
