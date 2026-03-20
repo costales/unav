@@ -63,8 +63,11 @@ jobs:
           make clean
           rm -rf nav/locales/3rdparty
 
+      - name: Start adb
+        run: adb start-server
+
       - name: Build click package
-        run: CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable
+        run: CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable build
 
       - name: Rename package for release
         id: package
