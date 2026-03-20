@@ -2,6 +2,9 @@ name: Release Tag
 
 on:
   push:
+    # GitHub Actions no permite filtrar tags por rama en `on:`.
+    # El control real se hace al principio del job comprobando que
+    # el commit etiquetado pertenece a `master`.
     tags:
       - "*"
 
@@ -24,6 +27,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Ensure tag commit is on master
+        run: |
+          git fetch origin master --depth=1
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/master
 
       - name: Set up Python
         uses: actions/setup-python@v6
