@@ -61,7 +61,7 @@ jobs:
           rm -rf nav/locales/3rdparty
 
       - name: Build click package
-        run: clickable
+        run: clickable build
 
       - name: Rename package for release
         id: package
