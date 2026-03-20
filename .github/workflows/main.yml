@@ -63,6 +63,9 @@ jobs:
           make clean
           rm -rf nav/locales/3rdparty
 
+      - name: Remove CI metadata from package sources
+        run: rm -rf .github
+
       - name: Start adb
         run: adb start-server
 
