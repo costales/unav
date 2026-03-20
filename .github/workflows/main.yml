@@ -1,4 +1,4 @@
-name: Release
+name: Release Tag
 
 on:
   push:
@@ -80,14 +80,12 @@ jobs:
       - name: Build click package
         run: CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable build
 
-      - name: Rename package for release
+      - name: Collect package for release
         id: package
         run: |
-          package_path="$(find . -type f -name '*.click' ! -name 'navigator.costales_*_all.click' | head -n 1)"
+          package_path="$(find ./build/all/app -type f -name 'navigator.costales_*_all.click' | head -n 1)"
           test -n "$package_path"
-          release_package="navigator.costales_${GITHUB_REF_NAME}_all.click"
-          mv "$package_path" "$release_package"
-          echo "path=$release_package" >> "$GITHUB_OUTPUT"
+          echo "path=$package_path" >> "$GITHUB_OUTPUT"
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
