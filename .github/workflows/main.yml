@@ -58,6 +58,11 @@ jobs:
         run: |
           sed -i '/TESTING BEGIN/,/TESTING END/d' nav/index.html
 
+      - name: Set version from tag
+        run: |
+          sed -i -E 's/"version": "[^"]+"/"version": "'"${GITHUB_REF_NAME}"'"/' manifest.json
+          sed -i -E 's/(property string applicationVersion: )"[^"]+"/\1"'"${GITHUB_REF_NAME}"'"/' qml/Main.qml
+
       - name: Build translations
         run: make translations
 
