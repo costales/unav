@@ -1,6 +1,10 @@
 [
 	{
 		"protocol": "https",
+		"domain-suffix": "www.openstreetmap.org"
+	},
+	{
+		"protocol": "https",
 		"domain-suffix": "map.unav.me"
 	},
 	{

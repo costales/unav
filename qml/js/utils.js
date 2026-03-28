@@ -35,6 +35,13 @@ function validate_lng(lng) {
         return null;
     }
 }
+function split_osm_url(url) {
+    // Example: https://www.openstreetmap.org/?mlat=40.41677&mlon=-3.70379#map=17/40.416770/-3.703790
+    var aux_url = url.replace('https://www.openstreetmap.org/?mlat=', '').replace('&mlon=', ',');
+    var aux_url_clean = aux_url.split('#')[0];
+    var params = aux_url_clean.split(',');
+    return {lng: validate_lng(params[1]), lat: validate_lat(params[0])};
+}
 function split_unav_url(url) {
     var aux_url = url.replace('https://map.unav.me/?', '').replace('https://map.unav.me?', '').replace('%2C', ',');
     var params = aux_url.split(',');
@@ -47,6 +54,9 @@ function split_geo_url(url) {
 }
 function get_url_coord(url_shared) {
     var url = url_shared.toLowerCase();
+    if (url.startsWith("https://www.openstreetmap.org")) {
+        return split_osm_url(url);
+    }
     if (url.startsWith("https://map.unav.me")) {
         return split_unav_url(url);
     }
