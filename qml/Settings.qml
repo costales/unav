@@ -224,14 +224,6 @@ Page {
 				}
 			}
 
-			ListItem {
-				enabled: navApp.settings.speak
-				ListItemLayout {
-					title.text: i18n.tr("Download custom voices")
-				}
-				onClicked: mainPageStack.addPageToNextColumn(mainPageStack.primaryPage, Qt.resolvedUrl("Voices.qml"))
-			}
-
 			ListItemHeader {
 				id: onlineListHeader
 				title: i18n.tr("Online Services")
