@@ -64,7 +64,8 @@ Page {
 
 		onPeerSelected: {
 			var request = peer.request();
-			var url2shared = 'https://map.unav.me?' + parseFloat(picker.lat).toFixed(5) + ',' + parseFloat(picker.lng).toFixed(5);
+			// Example: https://www.openstreetmap.org/?mlat=40.416775&mlon=-3.703790#map=17/40.416775/-3.703790
+			var url2shared = 'https://www.openstreetmap.org/?mlat=' + parseFloat(picker.lat).toFixed(5) + '&mlon=' + parseFloat(picker.lng).toFixed(5) + '#map=17/' parseFloat(picker.lat).toFixed(5) + '/' + parseFloat(picker.lng).toFixed(5);
 			request.items = [ resultComponent.createObject(navApp.mainPageStack, {"url": url2shared}) ];
 			request.state = ContentTransfer.Charged;
 			// Do not pop the share page when in a 2-column layout as it will leave
