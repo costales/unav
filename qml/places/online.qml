@@ -58,50 +58,109 @@ Item {
 		}
    }
 
-	XmlListModel {
+	Item {
 		id: xmlSearchModel
-
-		onStatusChanged: {
-			if (status === XmlListModel.Error) {
-				mainPageStack.lastSearchResultsOnline = "";
-				statusLabel.text = i18n.tr("Time out!");
-				notFound.visible = true;
-			}
-			else if (status === XmlListModel.Ready && count === 0) {
-				mainPageStack.lastSearchResultsOnline = "";
-				statusLabel.text = i18n.tr("Nothing found")
-				notFound.visible = true;
-			}
-			else if (status === XmlListModel.Ready && count >> 0) {
-				notFound.visible = false;
-				sortedSearchModel.sortXmlList();
-				listView.model = sortedSearchModel
-				listView.delegate = searchDelegateComponent
-			}
-		}
-
-		readonly property string searchUrl: "https://nominatim.openstreetmap.org/search?format=xml&email=marcos.costales@gmail.com&q="
+		
+		readonly property string searchUrl: "https://photon.komoot.io/api?q="
 		property string searchString
 		
-		source: ""
-		query: "/searchresults/place"
-
-		XmlRole { name: "name"; query: "@display_name/string()"; isKey: true }
-		XmlRole { name: "lat"; query: "@lat/string()"; isKey: true }
-		XmlRole { name: "lng"; query: "@lon/string()"; isKey: true }
-		XmlRole { name: "boundingbox"; query: "@boundingbox/string()"; isKey: true }
-		XmlRole { name: "icon"; query: "@icon/string()"; isKey: true }
-
 		function search() {
 			mainPageStack.lastSearchResultsOnline = "";
 			statusLabel.text = "";
-			xmlSearchModel.clear();
 			sortedSearchModel.clear();
-			source = (searchUrl + searchString);
+			searchActivity.running = true;
+			
+			var encodedSearch = encodeURIComponent(searchString);
+			var fullUrl = searchUrl + encodedSearch + "&limit=50";
+			console.log("Buscando con Photon API:", fullUrl);
+			
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === XMLHttpRequest.DONE) {
+					searchActivity.running = false;
+					console.log("XHR Status:", xhr.status);
+					if (xhr.status === 200) {
+						try {
+							var responseText = xhr.responseText;
+							console.log("Response length:", responseText.length);
+							
+							var json = JSON.parse(responseText);
+							var features = json.features || [];
+							console.log("Found features:", features.length);
+							
+							if (features.length === 0) {
+								statusLabel.text = i18n.tr("Nothing found");
+								notFound.visible = true;
+							} else {
+								notFound.visible = false;
+								var items = [];
+								for (var i = 0; i < features.length; i++) {
+									var feature = features[i];
+									var props = feature.properties;
+									var coords = feature.geometry.coordinates;
+									var displayName = props.name || "";
+									if (props.city) displayName += ", " + props.city;
+									if (props.state) displayName += ", " + props.state;
+									if (props.country) displayName += ", " + props.country;
+									
+									items.push({
+										"name": displayName,
+										"lat": String(coords[1]),
+										"lng": String(coords[0]),
+										"boundingbox": "",
+										"icon": ""
+									});
+								}
+								
+								// Sort by distance if we have current position
+								if (mainPageStack.currentLng != 'null' && mainPageStack.currentLat != 'null') {
+									items.sort(function(a, b) {
+										var distA = Utils.distance2points(
+											mainPageStack.currentLng,
+											mainPageStack.currentLat,
+											a.lng,
+											a.lat
+										);
+										var distB = Utils.distance2points(
+											mainPageStack.currentLng,
+											mainPageStack.currentLat,
+											b.lng,
+											b.lat
+										);
+										return parseFloat(distA) - parseFloat(distB);
+									});
+								}
+								
+								mainPageStack.lastSearchResultsOnline = '{ "results": [';
+								for (var i = 0; i < items.length; i++) {
+									sortedSearchModel.append(items[i]);
+									if (i > 0)
+										mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + ',';
+									mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + JSON.stringify(items[i]);
+								}
+								mainPageStack.lastSearchResultsOnline = mainPageStack.lastSearchResultsOnline + "]}";
+								
+								listView.model = sortedSearchModel;
+								listView.delegate = searchDelegateComponent;
+							}
+						} catch(e) {
+							console.log("Error parseando respuesta:", e);
+							statusLabel.text = i18n.tr("Time out!");
+							notFound.visible = true;
+						}
+					} else {
+						console.log("Error HTTP:", xhr.status);
+						statusLabel.text = i18n.tr("Time out!");
+						notFound.visible = true;
+					}
+				}
+			};
+			
+			xhr.open("GET", fullUrl, true);
+			xhr.send();
 		}
-
+		
 		function clear() {
-			source = "";
 		}
 	}
 
