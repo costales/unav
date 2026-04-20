@@ -170,14 +170,50 @@ WebAPI.prototype.POIsOnline = function(tag_poi, icon) {
     var coords = map.getView().calculateExtent(map.getSize());
     var coord1 = ol.proj.transform([coords[0], coords[1]], 'EPSG:3857', 'EPSG:4326');
     var coord2 = ol.proj.transform([coords[2], coords[3]], 'EPSG:3857', 'EPSG:4326');
-    var url = 'https://lz4.overpass-api.de/api/interpreter?data=[out:json];(node['+tag_poi+']('+coord1[1]+','+coord1[0]+','+coord2[1]+','+coord2[0]+');way['+tag_poi+']('+coord1[1]+','+coord1[0]+','+coord2[1]+','+coord2[0]+'););out center 250;';
-    $.ajax({
-        url: url,
-        dataType: 'json',
-        timeout: 12000,
-        success: function(data){ webapi.OK_POIsOnline(data, icon) },
-        error: this.KO_POIsOnline.bind(this)
-    });
+    var bbox = coord1[1] + ',' + coord1[0] + ',' + coord2[1] + ',' + coord2[0];
+    var tag_parts = tag_poi.split('=');
+    if (tag_parts.length !== 2) {
+        this.KO_POIsOnline();
+        return;
+    }
+    var tag_key = tag_parts[0];
+    var tag_value = tag_parts[1];
+    var query = '[out:json][timeout:12];' +
+        '(node["' + tag_key + '"="' + tag_value + '"](' + bbox + ');' +
+        'way["' + tag_key + '"="' + tag_value + '"](' + bbox + '););' +
+        'out center 250;';
+    var endpoints = [
+        'https://overpass-api.de/api/interpreter',
+        'https://overpass.kumi.systems/api/interpreter',
+        'https://overpass.private.coffee/api/interpreter'
+    ];
+    var endpoint_index = 0;
+    var onSuccess = function(data) {
+        webapi.OK_POIsOnline(data, icon);
+    };
+    var onError = function(err) {
+        endpoint_index++;
+        if (endpoint_index >= endpoints.length) {
+            console.log('POIsOnline error:', err);
+            webapi.KO_POIsOnline(err);
+            return;
+        }
+        requestPOIs();
+    };
+    var requestPOIs = function() {
+        $.ajax({
+            url: endpoints[endpoint_index],
+            type: 'POST',
+            data: {
+                data: query
+            },
+            dataType: 'json',
+            timeout: 25000,
+            success: onSuccess,
+            error: onError
+        });
+    };
+    requestPOIs();
 }
 WebAPI.prototype.OK_POIsOnline = function(data, icon) {
     if (data.elements.length > 0) {
