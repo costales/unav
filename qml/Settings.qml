@@ -376,23 +376,7 @@ Page {
 				color: theme.palette.normal.backgroundSecondaryText
 				wrapMode: Text.WordWrap
 				horizontalAlignment: Text.AlignLeft
-				text: i18n.tr("<b>Step 1</b> Install") + " <a href='https://open-store.io/app/osmscout-server.jonnius'>OSM Scout Server</a>: " + i18n.tr("In its wizard, set profile to <i>Default</i>, disable <i>Automatic activation</i> and download a map.")
-				onLinkActivated: Qt.openUrlExternally(link)
-			}
-			Label {
-				width: parent.width
-				color: theme.palette.normal.backgroundSecondaryText
-				wrapMode: Text.WordWrap
-				horizontalAlignment: Text.AlignLeft
-				text: i18n.tr("<b>Step 2</b> Install") + " <a href='https://open-store.io/app/ut-tweak-tool.sverzegnassi'>UT Tweak Tool</a>: " + i18n.tr("Set <i>Prevent app suspension</i> for OSM Scout Server.")
-				onLinkActivated: Qt.openUrlExternally(link)
-			}
-			Label {
-				width: parent.width
-				color: theme.palette.normal.backgroundSecondaryText
-				wrapMode: Text.WordWrap
-				horizontalAlignment: Text.AlignLeft
-				text: i18n.tr("<b>Step with each use</b>: Launch OSM Scout Server before uNav.")
+				text: i18n.tr("Install") + " <a href='https://open-store.io/app/osmscout-server.jonnius'>OSM Scout Server</a>: " + i18n.tr("In its wizard, set profile to <i>Default</i> and download a map.")
 				onLinkActivated: Qt.openUrlExternally(link)
 			}
 			Button {
